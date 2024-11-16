@@ -2,14 +2,6 @@
 import { ref, watch } from "vue";
 
 import AutoComplete from "primevue/autocomplete";
-import FloatLabel from "primevue/floatlabel";
-import Button from "primevue/button";
-import SelectButton from "primevue/selectbutton";
-import Tabs from "primevue/tabs";
-import TabList from "primevue/tablist";
-import Tab from "primevue/tab";
-import TabPanels from "primevue/tabpanels";
-import TabPanel from "primevue/tabpanel";
 
 const componentName = "term-filter";
 const props = defineProps({
@@ -20,14 +12,23 @@ const props = defineProps({
 });
 // const emit = defineEmits(["update:filter"]);
 
-const terms = ref([]);
 const items = ref([]);
-let filter = {"terms": terms};
+const filter = ref({"terms": []});
 
-watch(filter.terms, (newValue, oldValue) => {
-  console.log("Something has changed from", oldValue, "to", newValue);
-  updateQuery();
-});
+// watch(filter.value.terms, (newValue, oldValue) => {
+//   console.log("Something has changed from", oldValue, "to", newValue);
+//   updateQuery();
+// });
+// watch(filter.value.terms, (newValue, oldValue) => {
+//     console.log("Something has changed from", oldValue, "to", newValue);
+//     updateQuery();    
+//  }, { deep: true });    
+
+watch(()=>filter.value.terms, (newValue, oldValue) => {
+    console.log("Something has changed from", oldValue, "to", newValue);
+    updateQuery();    
+ }, { deep: true });
+
 
 watch(items, (newValue, oldValue) => {
   console.log("Item has changed from", oldValue, "to", newValue);
@@ -42,6 +43,11 @@ const search = function(event) {
     fetch("search/terms" + "?" + queryString.toString())
         .then(response => response.json())
         .then(data => {
+            Object.keys(data).forEach(key => {
+                data[key].forEach(item => {
+                    item.inverted = false;
+                });
+            });
             let ret = [
                 { label: "Terms", items: data.terms },
                 { label: "Concepts", items: data.concepts } 
@@ -51,19 +57,19 @@ const search = function(event) {
 };
 
 const updateQuery = function() {
-    var terms = filter.terms.value.filter(function(term){
+    var terms = filter.value.terms.filter(function(term){
         return term.type === "string" || term.type === "concept" || term.type === "term";
     }, this);
 
-    const query = {};// JSON.parse(props.queryString);
-    if (terms.length > 0){
-        query[componentName] = terms;
-        // queryObj["language"] = this.language();
-    } 
+    // const query = {};// JSON.parse(props.queryString);
+    // // if (terms.length > 0){
+    //     query[componentName] = terms;
+    //     // queryObj["language"] = this.language();
+    // // } 
     // else {
     //     delete query[componentName];
     // }
-    props.updateFilter(query);
+    props.updateFilter(componentName, terms);
     // props.queryString.value = JSON.stringify(query);
 };
 
@@ -71,54 +77,35 @@ const updateQuery = function() {
 
 <template>
     <div class="search-bar" >
-        <FloatLabel variant="on">
-            <AutoComplete v-model="terms" id="term-search-filter" multiple fluid 
-                :suggestions="items" 
-                optionLabel="text" 
-                optionGroupLabel="label" 
-                optionGroupChildren="items" 
-                @complete="search"
-            >
-                <template #optiongroup="slotProps">
-                    <div class="option-group">
-                        <div class="pi pi-flag">{{ slotProps.option.label }}</div>
-                    </div>
-                </template>
-                <template #option="slotProps">
-                    <div class="">
-                        <div>{{ slotProps.option.text }}</div>
-                    </div>
-                </template>
-            </AutoComplete>
-            <label for="term-search-filter">Search for collections...</label>
-
-        </FloatLabel>
-
-        <button type="submit">Search</button>
+        <AutoComplete 
+            v-model="filter.terms" 
+            multiple 
+            fluid 
+            :suggestions="items" 
+            option-label="text" 
+            option-group-label="label" 
+            option-group-children="items" 
+            placeholder="find ..."
+            @complete="search"
+        >
+            <template #optiongroup="slotProps">
+                <div class="option-group">
+                    <div class="pi pi-flag">{{ slotProps.option.label }}</div>
+                </div>
+            </template>
+            <template #option="slotProps">
+                <div class="">
+                    <div>{{ slotProps.option.text }}</div>
+                </div>
+            </template>
+        </AutoComplete>
     </div>
 </template>
 
 <style scoped>
 .search-bar {
-    display: flex;
-    margin-bottom: 1.25rem;
-}
-.search-bar span {
-    flex: 1;
-    padding: 0.625rem; /* 10px */
+    width: 100%;
     font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 0.3125rem 0 0 0.3125rem; /* 5px */
-}
-.search-bar button {
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 0.625rem 1.25rem; /* 10px 20px */
-    font-size: 1rem;
-    border: none;
-    background-color: #ffcc33;
-    color: #333;
-    cursor: pointer;
-    border-radius: 0 0.3125rem 0.3125rem 0;
 }
 .--p-autocomplete-option-group-background { 
     background-color: lightgray;
