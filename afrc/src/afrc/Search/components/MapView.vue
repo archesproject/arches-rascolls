@@ -6,7 +6,7 @@
     <div class="map-view">
         <p>Map goes here</p>
         <!-- Integrate your map library or component here -->
-    </div>        
+    </div>
 </template>
 
 <style scoped>
