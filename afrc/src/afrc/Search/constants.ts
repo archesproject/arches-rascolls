@@ -1,0 +1,34 @@
+import type { InjectionKey } from "vue";
+
+import type { UserRefAndSetter } from "@/afrc/Search/types.ts";
+
+export const ACTIVE_LANGUAGE_DIRECTION = "ACTIVE_LANGUAGE_DIRECTION";
+export const ANONYMOUS = "anonymous";
+export const BUFFER_LAYER_ID = "buffer-layer";
+export const CLICK_EVENT = "click";
+export const DEFAULT_ERROR_TOAST_LIFE = 8000;
+export const DIRECT_SELECT = "direct_select";
+export const DRAW_CREATE_EVENT = "draw.create";
+export const DRAW_DELETE_EVENT = "draw.delete";
+export const DRAW_UPDATE_EVENT = "draw.update";
+export const DRAW_SELECTION_CHANGE_EVENT = "draw.selectionchange";
+export const DRAW_LINE_STRING = "draw_line_string";
+export const DRAW_POINT = "draw_point";
+export const DRAW_POLYGON = "draw_polygon";
+export const ERROR = "error";
+export const GEOMETRY_TYPE_LINESTRING = "LineString";
+export const GEOMETRY_TYPE_POINT = "Point";
+export const GEOMETRY_TYPE_POLYGON = "Polygon";
+export const IDLE = "idle";
+export const LEFT = "left";
+export const LINE = "line";
+export const LTR = "ltr";
+export const METERS = "meters";
+export const POINT = "point";
+export const POLYGON = "polygon";
+export const RIGHT = "right";
+export const SIMPLE_SELECT = "simple_select";
+export const STYLE_LOAD_EVENT = "style.load";
+export const TOP_LEFT = "top-left";
+export const TOP_RIGHT = "top-right";
+export const USER_KEY = Symbol() as InjectionKey<UserRefAndSetter>;
