@@ -1,0 +1,15 @@
+{% extends "arches_urls.htm" %}
+
+{% load static %}
+{% load l10n %}
+{% load i18n %}
+
+{% block arches_urls %}
+{{ block.super }}
+<div class="arches-urls"
+    api-settings="{% url 'api-settings' %}"
+    api-map-data="{% url 'api-map-data' %}"
+    api-feature-buffer="{% url 'api-feature-buffer' %}"
+    api-geojson-bounds="{% url 'api-geojson-bounds' %}"
+></div>
+{% endblock arches_urls %}

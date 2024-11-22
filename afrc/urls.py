@@ -2,9 +2,15 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.conf.urls.i18n import i18n_patterns
 from django.urls import include, path
+from afrc.views.settings_api import SettingsAPI
+from afrc.views.map_api import MapDataAPI, FeatureBufferAPI, GeoJSONBoundsAPI
 
 urlpatterns = [
     # project-level urls
+    path("api-settings", SettingsAPI.as_view(), name="api-settings"),
+    path("api-map-data", MapDataAPI.as_view(), name="api-map-data"),
+    path("api-feature-buffer", FeatureBufferAPI.as_view(), name="api-feature-buffer"),
+    path("api-geojson-bounds", GeoJSONBoundsAPI.as_view(), name="api-geojson-bounds"),
 ]
 
 # Ensure Arches core urls are superseded by project-level urls
