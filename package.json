@@ -18,7 +18,8 @@
         "vitest": "vitest --run --coverage"
     },
     "dependencies": {
-        "arches": "archesproject/arches#stable/7.6.2"
+        "arches": "archesproject/arches#stable/7.6.2",
+        "maplibre-gl": "^4.6.0"
     },
     "devDependencies": {
         "arches-dev-dependencies": "archesproject/arches-dev-dependencies#stable/7.6.2"
