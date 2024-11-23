@@ -1,19 +1,38 @@
 <script setup lang="ts">
 import { onMounted, ref, watch } from "vue";
+import type { Ref } from "vue";
+import { useGettext } from "vue3-gettext";
 
 import Toast from "primevue/toast";
+import { useToast } from "primevue/usetoast";
 import Button from "primevue/button";
+import {
+    DEFAULT_ERROR_TOAST_LIFE,
+    ERROR,
+} from "@/afrc/Search/constants.ts";
 
 import SimpleSearchFilter from "@/afrc/Search/components/SimpleSearchFilter.vue";
 import SearchResultItem from "@/afrc/Search/components/SearchResultItem.vue";
-import MapView from "@/afrc/Search/components/MapView.vue";
+import InteractiveMap from "@/afrc/Search/components/InteractiveMap/InteractiveMap.vue";
+import { fetchMapData } from "@/afrc/Search/api.ts";
 import type { GenericObject } from "@/afrc/Search/types";
+import type {
+    Basemap,
+    MapLayer,
+    MapSource,
+} from "@/afrc/Search/types.ts";
 
 let query = getQueryObject(null);
 let queryString = ref(JSON.stringify(query));
 let searchResults = ref([]);
 let resultsCount = ref("calculating...");
 const showMap = ref(false);
+const basemaps: Ref<Basemap[]> = ref([]);
+const overlays: Ref<MapLayer[]> = ref([]);
+const sources: Ref<MapSource[]> = ref([]);
+const dataLoaded = ref(false);
+const toast = useToast();
+const { $gettext } = useGettext();
 
 watch(queryString, () => {
     doQuery();
@@ -118,8 +137,38 @@ const doQuery = function () {
     // });
 };
 
-onMounted(() => {
+async function fetchSystemMapData() {
+    try {
+        const mapData = await fetchMapData();
+        const layers = mapData.map_layers;
+
+        // omit search results layer for now
+        overlays.value = layers.filter(
+            (layer: MapLayer) =>
+                layer.isoverlay &&
+                layer.maplayerid !== "6b9d3c6a-60a4-4630-b4f8-4c5159b68cec",
+        );
+
+        layers.filter((layer: MapLayer) => !layer.isoverlay).forEach((layer: MapLayer) => {
+            basemaps.value.push({name: layer.name, active: layer.addtomap, value: layer.name, id: layer.name});
+        });
+
+        sources.value = mapData.map_sources;
+
+    } catch (error) {
+        toast.add({
+            severity: ERROR,
+            life: DEFAULT_ERROR_TOAST_LIFE,
+            summary: $gettext("Unable to fetch map data."),
+            detail: error instanceof Error ? error.message : undefined,
+        });
+    }
+}
+
+onMounted(async () =>{
     doQuery();
+    await fetchSystemMapData();
+    dataLoaded.value = true;
 });
 </script>
 
@@ -163,7 +212,16 @@ onMounted(() => {
                 </div>
             </section>
 
-            <MapView v-if="showMap" />
+            <div
+                v-if="showMap && dataLoaded"
+                style="width: 100%; height: 100%"
+            >
+                <InteractiveMap
+                    :basemaps="basemaps"
+                    :overlays="overlays"
+                    :sources="sources"
+                />
+            </div>
 
             <aside v-if="!showMap">
                 <div>Search Facets</div>
