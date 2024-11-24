@@ -250,7 +250,7 @@ function createMap() {
     map.value = new maplibregl.Map({
         container: mapContainer.value!,
         zoom: 10,
-        center: [-118.805, 34.027],
+        center: [-122.105, 37.027],
     });
 
     emits("mapInitialized", map.value);
@@ -260,7 +260,7 @@ function updateBasemap(basemap: Basemap) {
     console.log(basemap);
     console.log(overlays);
     map.value!.setStyle(
-        'https://demotiles.maplibre.org/style.json',
+        basemap.url,
     );
 
     map.value!.once(IDLE, () => {
@@ -334,8 +334,9 @@ function addOverlayToMap(overlay: MapLayer) {
                 );
             }
         }
-
+        console.log('adding layer object');
         if (!map.value!.getLayer(layerDefinition.id)) {
+            console.log('adding layer object2');
             map.value!.addLayer(layerDefinition as AddLayerObject);
         }
     });

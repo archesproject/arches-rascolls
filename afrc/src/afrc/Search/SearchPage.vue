@@ -150,7 +150,13 @@ async function fetchSystemMapData() {
         );
 
         layers.filter((layer: MapLayer) => !layer.isoverlay).forEach((layer: MapLayer) => {
-            basemaps.value.push({name: layer.name, active: layer.addtomap, value: layer.name, id: layer.name});
+            basemaps.value.push({
+                name: layer.name, 
+                active: layer.addtomap, 
+                value: layer.name, 
+                id: layer.name,
+                url: "https://tiles.openfreemap.org/styles/positron"
+            });
         });
 
         sources.value = mapData.map_sources;

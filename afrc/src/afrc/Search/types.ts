@@ -20,6 +20,7 @@ export interface Basemap {
     name: string;
     value: string;
     active: boolean;
+    url: string;
 }
 export interface MapLayer {
     activated?: boolean;

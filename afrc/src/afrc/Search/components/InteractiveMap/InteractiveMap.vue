@@ -66,7 +66,7 @@ const basemap: Ref<Basemap | null> = ref(null);
 const selectedDrawnFeature: Ref<Feature | null> = ref(null);
 
 const emits = defineEmits(["drawnFeatureSelected", "drawnFeaturesUpdated"]);
-console.log(props);
+
 provide("overlays", props.overlays);
 provide("basemaps", props.basemaps);
 provide("selectedDrawnFeature", selectedDrawnFeature);
