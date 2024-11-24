@@ -90,7 +90,6 @@ onMounted(async () => {
 
 async function fetchSystemSettings() {
     try {
-        console.log("Fetching settings");
         settings.value = await fetchSettings();
     } catch (error) {
         toast.add({

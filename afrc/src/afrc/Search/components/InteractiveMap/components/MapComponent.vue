@@ -257,8 +257,6 @@ function createMap() {
 }
 
 function updateBasemap(basemap: Basemap) {
-    console.log(basemap);
-    console.log(overlays);
     map.value!.setStyle(
         basemap.url,
     );
@@ -334,9 +332,7 @@ function addOverlayToMap(overlay: MapLayer) {
                 );
             }
         }
-        console.log('adding layer object');
         if (!map.value!.getLayer(layerDefinition.id)) {
-            console.log('adding layer object2');
             map.value!.addLayer(layerDefinition as AddLayerObject);
         }
     });
