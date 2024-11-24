@@ -3,10 +3,10 @@ from http import HTTPStatus
 
 from django.utils.translation import gettext as _
 from django.views.generic import View
+from django.http import HttpResponse
+from django.db import connection
 
-from arches.app.datatypes.datatypes import DataTypeFactory
 from arches.app.models import models
-from arches.app.models.concept import Concept
 from arches.app.models.system_settings import settings
 from arches.app.search.search_engine_factory import SearchEngineFactory
 from arches.app.search.mappings import RESOURCES_INDEX
@@ -130,3 +130,31 @@ class GeoJSONParseIntoCollectionAPI(View):
         geojson_obj = json.load(feature_file)
 
         return JSONResponse(GeoUtils.shape_geojson_as_feature_collection(geojson_obj))
+    
+class ReferenceCollectionMVT(View):
+    def get(self, request, zoom, x, y):
+        system_settings_resourceid = settings.SYSTEM_SETTINGS_RESOURCE_ID
+        with connection.cursor() as cursor:
+            result = cursor.execute(
+                """
+                SELECT ST_AsMVT(tile, 'referencecollections', 4096, 'geom', 'id')
+                FROM (
+                SELECT
+                    id,
+                    resourceinstanceid,
+                    nodeid,
+                    ST_AsMVTGeom(
+                        geom,
+                        TileBBox(%s, %s, %s, 3857),
+                        4096,
+                        256,
+                        false
+                    ) geom
+                FROM geojson_geometries gg
+                WHERE resourceinstanceid != %s and (gg.geom && ST_TileEnvelope(%s, %s, %s, margin => (64.0 / 4096)))
+                ) tile
+                """,
+                [zoom, x, y, system_settings_resourceid, zoom, x, y],
+            )
+            result = bytes(cursor.fetchone()[0]) if result is None else result
+        return HttpResponse(result, content_type="application/x-protobuf")
