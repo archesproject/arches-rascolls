@@ -1439,6 +1439,32 @@ class Migration(migrations.Migration):
                 },
                 "layers": [
                     {
+                        "id": "referencecollections-point-stroke",
+                        "source": "referencecollections",
+                        "source-layer": "referencecollections",
+                        "type": "circle",
+                        "filter": ['all',[
+                            "==", "$type", "Point"
+                        ]],
+                        "paint": {
+                            "circle-radius": 6,
+                            "circle-opacity": 1,
+                            "circle-color": "#00f"
+                        }
+                    }, {
+                        "id": "referencecollections-point",
+                        "source": "referencecollections",
+                        "source-layer": "referencecollections",
+                        "type": "circle",
+                        "filter": ['all',[
+                            "==", "$type", "Point"
+                        ]],
+                        "paint": {
+                            "circle-radius": 3,
+                            "circle-color": "#aaf"
+                        }
+                    },
+                    {
                         "id": "referencecollections-line",
                         "type": "line",
                         "paint": {
