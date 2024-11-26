@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import Button from "primevue/button";
+import { inject } from "vue";
+
+let resultsSelected = inject("resultsSelected");
 
 const props = defineProps({
     searchResult: {

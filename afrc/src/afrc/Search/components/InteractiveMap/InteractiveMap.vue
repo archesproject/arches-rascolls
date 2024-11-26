@@ -71,7 +71,6 @@ provide("overlays", props.overlays);
 provide("basemaps", props.basemaps);
 provide("selectedDrawnFeature", selectedDrawnFeature);
 
-let resultsSelected = defineModel();
 
 watch(
     () => props.basemaps,
@@ -82,14 +81,6 @@ watch(
                 break;
             }
         }
-    },
-    { deep: true, immediate: true },
-);
-
-watch(
-    () => resultsSelected,
-    (x) => {
-        console.log("resultsSelected", x);
     },
     { deep: true, immediate: true },
 );
@@ -123,7 +114,6 @@ function updateSelectedDrawnFeature(feature: Feature) {
         style="display: flex; height: 100%; width: 100%"
     >
         <MapComponent
-            v-model="resultsSelected"
             :settings="settings"
             :basemap="basemap"
             :overlays="overlays"
