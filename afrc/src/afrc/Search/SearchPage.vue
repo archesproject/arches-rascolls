@@ -30,6 +30,7 @@ const showMap = ref(false);
 const basemaps: Ref<Basemap[]> = ref([]);
 const overlays: Ref<MapLayer[]> = ref([]);
 const sources: Ref<MapSource[]> = ref([]);
+const resultsSelected: Ref<string[]> = ref([]);
 const dataLoaded = ref(false);
 const toast = useToast();
 const { $gettext } = useGettext();
@@ -97,6 +98,7 @@ const doQuery = function () {
             console.log(data);
             searchResults.value = data.results.hits.hits;
             resultsCount.value = data.total_results;
+            resultsSelected.value = [];
         });
 
     // self.updateRequest = $.ajax({
@@ -223,6 +225,7 @@ onMounted(async () =>{
                 style="width: 100%; height: 100%"
             >
                 <InteractiveMap
+                    v-model="resultsSelected"
                     :basemaps="basemaps"
                     :overlays="overlays"
                     :sources="sources"
