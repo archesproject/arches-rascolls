@@ -88,7 +88,7 @@ const {
     drawnFeaturesBuffer,
 } = props;
 
-let resultsSelected = inject("resultsSelected");
+let resultsSelected = inject("resultsSelected") as Ref<string[]>;
 
 const emits = defineEmits([
     "mapInitialized",
@@ -129,7 +129,9 @@ watch(
 watch(
     () => resultsSelected,
     (selected) => {
-        updateFeatureSelection(selected);
+        if (selected) {
+            updateFeatureSelection(selected as Ref<string[]>);
+        }
     }, {deep: true}
 );
 
@@ -204,7 +206,7 @@ function updateFeatureSelection(selected: Ref<string[]>) {
     const features = map.value!.queryRenderedFeatures({layers:layers});
     features.forEach(feature => {
         const featureSelected = selected.value.includes(feature.properties?.resourceinstanceid);
-        map.value.setFeatureState(
+        map.value!.setFeatureState(
             {
                 source: "referencecollections",
                 sourceLayer: "referencecollections",
