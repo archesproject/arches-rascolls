@@ -88,6 +88,8 @@ const {
     drawnFeaturesBuffer,
 } = props;
 
+let resultsSelected = defineModel();
+
 const emits = defineEmits([
     "mapInitialized",
     "drawnFeatureSelected",
@@ -337,9 +339,7 @@ function addOverlayToMap(overlay: MapLayer) {
         }
     });
 
-    if (
-        overlay.maplayerid === "8914d88e-ac00-4140-a7d8-81893099b0ad" // Cultural Resource - Primary
-    ) {
+    if (overlay.maplayerid && resultsSelected) {
         resourceOverlaysClickHandlers[overlay.maplayerid] = function (
             e: MapMouseEvent,
         ) {
@@ -352,6 +352,11 @@ function addOverlayToMap(overlay: MapLayer) {
                 popupContainerRerenderKey.value += 1;
                 clickedCoordinates.value = [e.lngLat.lng, e.lngLat.lat];
                 clickedFeatures.value = features;
+                resultsSelected.value = [];
+                const uniqueResourceIds = new Set(features.map((feature) => feature.properties?.resourceinstanceid as string));
+                resultsSelected.value = Array.from(uniqueResourceIds);
+            } else {
+                resultsSelected.value = [];
             }
         };
 
