@@ -35,6 +35,7 @@ const props = defineProps<{
     overlays: MapLayer[];
     basemaps: Basemap[];
     sources: MapSource[];
+    includeDrawer: boolean;
 }>();
 
 const map: Ref<Map | null> = ref(null);
@@ -132,7 +133,7 @@ function updateSelectedDrawnFeature(feature: Feature) {
             @drawn-feature-selected="updateSelectedDrawnFeature"
         />
         <InteractionsDrawer
-            v-if="map"
+            v-if="map && includeDrawer"
             :map="map"
             :settings="settings"
             :items="mapInteractionItems"
