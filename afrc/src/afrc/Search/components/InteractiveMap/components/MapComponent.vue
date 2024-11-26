@@ -195,7 +195,7 @@ async function fitBoundsOfFeatures(features: FeatureCollection) {
 }
 
 function updateFeatureSelection(selected: Ref<string[]>) {
-    const layers = []
+    const layers: Array<string> = [];
     overlays.forEach((overlay) => {
         layers.push(...overlay.layerdefinitions.map(
             (layerDefinition) => layerDefinition.id,
