@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, ref, useTemplateRef, watch } from "vue";
+import { onMounted, ref, useTemplateRef, watch, inject } from "vue";
 
 import MapboxDraw from "@mapbox/mapbox-gl-draw";
 import maplibregl from "maplibre-gl";
@@ -88,7 +88,7 @@ const {
     drawnFeaturesBuffer,
 } = props;
 
-let resultsSelected = defineModel();
+let resultsSelected = inject("resultsSelected");
 
 const emits = defineEmits([
     "mapInitialized",

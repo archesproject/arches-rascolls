@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, ref, watch } from "vue";
+import { onMounted, ref, watch, provide } from "vue";
 import type { Ref } from "vue";
 import { useGettext } from "vue3-gettext";
 
@@ -34,6 +34,8 @@ const resultsSelected: Ref<string[]> = ref([]);
 const dataLoaded = ref(false);
 const toast = useToast();
 const { $gettext } = useGettext();
+
+provide("resultsSelected", resultsSelected);
 
 watch(queryString, () => {
     doQuery();
@@ -225,7 +227,6 @@ onMounted(async () =>{
                 style="width: 100%; height: 100%"
             >
                 <InteractiveMap
-                    v-model="resultsSelected"
                     :basemaps="basemaps"
                     :overlays="overlays"
                     :sources="sources"
