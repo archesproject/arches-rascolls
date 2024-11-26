@@ -1447,9 +1447,14 @@ class Migration(migrations.Migration):
                             "==", "$type", "Point"
                         ]],
                         "paint": {
-                            "circle-radius": 6,
+                            "circle-radius": [
+                                "case",
+                                ["boolean", ["feature-state", "selected"], False],
+                                6,
+                                4
+                            ],
                             "circle-opacity": 1,
-                            "circle-color": "#00f"
+                            "circle-color": "#00f",
                         }
                     }, {
                         "id": "referencecollections-point",
@@ -1469,7 +1474,12 @@ class Migration(migrations.Migration):
                         "type": "line",
                         "paint": {
                             "line-color": "#00f",
-                            "line-width": 3
+                            "line-width": [
+                                "case",
+                                ["boolean", ["feature-state", "selected"], False],
+                                3,
+                                1
+                            ]
                         },
                         "layout": {
                             "line-cap": "round",
@@ -1483,7 +1493,12 @@ class Migration(migrations.Migration):
                         "type": "line",
                         "paint": {
                             "line-color": "#00f",
-                            "line-width": 3
+                            "line-width": [
+                                "case",
+                                ["boolean", ["feature-state", "selected"], False],
+                                3,
+                                1
+                            ],
                         },
                         "filter": [
                             "==",
@@ -1503,7 +1518,7 @@ class Migration(migrations.Migration):
                         "paint": {
                             "fill-color": "#00f",
                             "fill-opacity": 0.1,
-                            "fill-outline-color": "#0ff"
+                            "fill-outline-color": "#00f"
                         },
                         "filter": [
                             "==",

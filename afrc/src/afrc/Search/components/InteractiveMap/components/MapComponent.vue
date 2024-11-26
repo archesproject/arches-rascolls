@@ -127,6 +127,13 @@ watch(
 );
 
 watch(
+    () => resultsSelected,
+    (selected) => {
+        updateFeatureSelection(selected);
+    }, {deep: true}
+);
+
+watch(
     () => drawnFeaturesBuffer,
     () => {
         updateDrawnFeatures();
@@ -186,6 +193,28 @@ async function fitBoundsOfFeatures(features: FeatureCollection) {
         padding: { top: 50, right: 100, bottom: 50, left: 50 },
     });
 }
+
+function updateFeatureSelection(selected: Ref<string[]>) {
+    const layers = []
+    overlays.forEach((overlay) => {
+        layers.push(...overlay.layerdefinitions.map(
+            (layerDefinition) => layerDefinition.id,
+        ));
+    });
+    const features = map.value!.queryRenderedFeatures({layers:layers});
+    features.forEach(feature => {
+        const featureSelected = selected.value.includes(feature.properties?.resourceinstanceid);
+        map.value.setFeatureState(
+            {
+                source: "referencecollections",
+                sourceLayer: "referencecollections",
+                id: feature.id,
+            },
+            { selected: featureSelected }
+        );
+    });
+}
+
 
 function addBufferLayer() {
     map.value!.addSource(BUFFER_LAYER_ID, {
