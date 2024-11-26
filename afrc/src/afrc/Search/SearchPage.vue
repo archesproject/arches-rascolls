@@ -226,6 +226,7 @@ onMounted(async () =>{
                     :basemaps="basemaps"
                     :overlays="overlays"
                     :sources="sources"
+                    :include-drawer="false"
                 />
             </div>
 
