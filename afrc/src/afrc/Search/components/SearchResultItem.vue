@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import Button from "primevue/button";
 import { inject } from "vue";
+import type { Ref } from "vue";
 
-let resultsSelected = inject("resultsSelected");
+const resultsSelected = inject("resultsSelected") as Ref<string[]>;
 
 const props = defineProps({
     searchResult: {
@@ -11,20 +12,25 @@ const props = defineProps({
     },
 });
 
-function selectResult(resourceid) {
+function selectResult(resourceid: string) {
     resultsSelected.value = [resourceid];
 }
 
-function clearResult(e) {
+function clearResult() {
     resultsSelected.value = [];
 }
 
 </script>
 
 <template>
-    <section class="result" :class="{ hovered: resultsSelected.includes(searchResult._source.resourceinstanceid)}"
-            @mouseenter="selectResult(searchResult._source.resourceinstanceid)" 
-            @mouseleave="clearResult">
+    <section 
+        class="result" 
+        :class="{ 
+            hovered: resultsSelected.includes(searchResult._source.resourceinstanceid)
+        }"
+        @mouseenter="selectResult(searchResult._source.resourceinstanceid)" 
+        @mouseleave="clearResult"
+    >
         <div class="image-placeholder">
             <img src="https://picsum.photos/160" />
         </div>
