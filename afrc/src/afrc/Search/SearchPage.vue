@@ -6,21 +6,16 @@ import { useGettext } from "vue3-gettext";
 import Toast from "primevue/toast";
 import { useToast } from "primevue/usetoast";
 import Button from "primevue/button";
-import {
-    DEFAULT_ERROR_TOAST_LIFE,
-    ERROR,
-} from "@/afrc/Search/constants.ts";
+import { DEFAULT_ERROR_TOAST_LIFE, ERROR } from "@/afrc/Search/constants.ts";
+
+import arches from "arches";
 
 import SimpleSearchFilter from "@/afrc/Search/components/SimpleSearchFilter.vue";
 import SearchResultItem from "@/afrc/Search/components/SearchResultItem.vue";
 import InteractiveMap from "@/afrc/Search/components/InteractiveMap/InteractiveMap.vue";
 import { fetchMapData } from "@/afrc/Search/api.ts";
 import type { GenericObject } from "@/afrc/Search/types";
-import type {
-    Basemap,
-    MapLayer,
-    MapSource,
-} from "@/afrc/Search/types.ts";
+import type { Basemap, MapLayer, MapSource } from "@/afrc/Search/types.ts";
 
 let query = getQueryObject(null);
 let queryString = ref(JSON.stringify(query));
@@ -94,7 +89,7 @@ const doQuery = function () {
 
     const qs = new URLSearchParams(queryObj);
 
-    fetch("search/resources" + "?" + qs.toString())
+    fetch(arches.urls.search_results + "?" + qs.toString())
         .then((response) => response.json())
         .then((data) => {
             console.log(data);
@@ -153,18 +148,19 @@ async function fetchSystemMapData() {
                 layer.maplayerid !== "6b9d3c6a-60a4-4630-b4f8-4c5159b68cec",
         );
 
-        layers.filter((layer: MapLayer) => !layer.isoverlay).forEach((layer: MapLayer) => {
-            basemaps.value.push({
-                name: layer.name, 
-                active: layer.addtomap, 
-                value: layer.name, 
-                id: layer.name,
-                url: "https://tiles.openfreemap.org/styles/positron"
+        layers
+            .filter((layer: MapLayer) => !layer.isoverlay)
+            .forEach((layer: MapLayer) => {
+                basemaps.value.push({
+                    name: layer.name,
+                    active: layer.addtomap,
+                    value: layer.name,
+                    id: layer.name,
+                    url: "https://tiles.openfreemap.org/styles/positron",
+                });
             });
-        });
 
         sources.value = mapData.map_sources;
-
     } catch (error) {
         toast.add({
             severity: ERROR,
@@ -175,7 +171,7 @@ async function fetchSystemMapData() {
     }
 }
 
-onMounted(async () =>{
+onMounted(async () => {
     doQuery();
     await fetchSystemMapData();
     dataLoaded.value = true;

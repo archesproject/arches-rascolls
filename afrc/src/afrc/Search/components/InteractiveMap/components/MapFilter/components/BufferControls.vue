@@ -6,10 +6,7 @@ import MapboxDraw from "@mapbox/mapbox-gl-draw";
 
 import type { Feature, Map } from "maplibre-gl";
 import type { PropType, Ref } from "vue";
-import {
-    DRAW_UPDATE_EVENT,
-    METERS,
-} from "@/afrc/Search/constants.ts";
+import { DRAW_UPDATE_EVENT, METERS } from "@/afrc/Search/constants.ts";
 
 const { $gettext } = useGettext();
 
