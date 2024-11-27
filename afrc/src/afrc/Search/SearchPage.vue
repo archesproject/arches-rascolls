@@ -179,7 +179,7 @@ onMounted(async () => {
 </script>
 
 <template>
-    <div class="container">
+    <div class="afrc-container">
         <!-- Main Content Section -->
         <header>
             <SimpleSearchFilter
@@ -189,25 +189,27 @@ onMounted(async () => {
             <div class="view-buttons">
                 <Button
                     :class="{ active: !showMap }"
-                    variant="outlined"
                     label="terms"
+                    severity="secondary"
                     icon="pi pi-file"
                     icon-pos="top"
+                    :outlined="!showMap"
                     @click="showMap = false"
                 />
                 <Button
                     :class="{ active: showMap }"
-                    variant="outlined"
                     label="map"
+                    severity="secondary"
                     icon="pi pi-map"
                     icon-pos="top"
+                    :outlined="showMap"
                     @click="showMap = true"
                 />
             </div>
         </header>
 
         <main>
-            <section class="search-results-panel">
+            <section class="afrc-search-results-panel">
                 <div class="result-count">{{ resultsCount }} Results</div>
                 <div class="search-result-list">
                     <SearchResultItem
@@ -266,12 +268,13 @@ onMounted(async () => {
 :root {
     font-size: 16px;
 }
-.container {
+.afrc-container {
     font-family: Arial, sans-serif;
     background-color: #f8f8f8;
     line-height: 1.6;
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
 }
 main {
     display: flex;
@@ -289,7 +292,7 @@ header {
     gap: 5px;
     margin-left: 20px;
 }
-.search-results-panel {
+section.afrc-search-results-panel {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -302,7 +305,7 @@ header {
     gap: 20px;
 }
 .result-count {
-    font-size: 1rem;
+    font-size: 1.6rem;
     margin: 0px;
     margin-bottom: 15px;
 }

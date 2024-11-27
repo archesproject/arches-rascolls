@@ -87,6 +87,7 @@ const updateQuery = function () {
             option-group-label="label"
             option-group-children="items"
             placeholder="find ..."
+            input-class="autocomplete-input"
             @complete="search"
         >
             <template #optiongroup="slotProps">
@@ -111,5 +112,9 @@ const updateQuery = function () {
 .--p-autocomplete-option-group-background {
     background-color: lightgray;
     font-family: Arial, Helvetica, sans-serif;
+}
+:deep(.autocomplete-input) {
+    height: 3rem;
+    font-size: 1.5rem;
 }
 </style>
