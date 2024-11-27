@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, ref, watch } from "vue";
+import { onMounted, ref, watch, provide } from "vue";
 import type { Ref } from "vue";
 import { useGettext } from "vue3-gettext";
 
@@ -30,9 +30,12 @@ const showMap = ref(false);
 const basemaps: Ref<Basemap[]> = ref([]);
 const overlays: Ref<MapLayer[]> = ref([]);
 const sources: Ref<MapSource[]> = ref([]);
+const resultsSelected: Ref<string[]> = ref([]);
 const dataLoaded = ref(false);
 const toast = useToast();
 const { $gettext } = useGettext();
+
+provide("resultsSelected", resultsSelected);
 
 watch(queryString, () => {
     doQuery();
@@ -97,6 +100,7 @@ const doQuery = function () {
             console.log(data);
             searchResults.value = data.results.hits.hits;
             resultsCount.value = data.total_results;
+            resultsSelected.value = [];
         });
 
     // self.updateRequest = $.ajax({
@@ -150,7 +154,13 @@ async function fetchSystemMapData() {
         );
 
         layers.filter((layer: MapLayer) => !layer.isoverlay).forEach((layer: MapLayer) => {
-            basemaps.value.push({name: layer.name, active: layer.addtomap, value: layer.name, id: layer.name});
+            basemaps.value.push({
+                name: layer.name, 
+                active: layer.addtomap, 
+                value: layer.name, 
+                id: layer.name,
+                url: "https://tiles.openfreemap.org/styles/positron"
+            });
         });
 
         sources.value = mapData.map_sources;
@@ -220,6 +230,7 @@ onMounted(async () =>{
                     :basemaps="basemaps"
                     :overlays="overlays"
                     :sources="sources"
+                    :include-drawer="false"
                 />
             </div>
 

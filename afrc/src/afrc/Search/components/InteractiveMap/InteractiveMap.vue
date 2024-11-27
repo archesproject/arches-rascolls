@@ -35,6 +35,7 @@ const props = defineProps<{
     overlays: MapLayer[];
     basemaps: Basemap[];
     sources: MapSource[];
+    includeDrawer: boolean;
 }>();
 
 const map: Ref<Map | null> = ref(null);
@@ -66,10 +67,11 @@ const basemap: Ref<Basemap | null> = ref(null);
 const selectedDrawnFeature: Ref<Feature | null> = ref(null);
 
 const emits = defineEmits(["drawnFeatureSelected", "drawnFeaturesUpdated"]);
-console.log(props);
+
 provide("overlays", props.overlays);
 provide("basemaps", props.basemaps);
 provide("selectedDrawnFeature", selectedDrawnFeature);
+
 
 watch(
     () => props.basemaps,
@@ -90,7 +92,6 @@ onMounted(async () => {
 
 async function fetchSystemSettings() {
     try {
-        console.log("Fetching settings");
         settings.value = await fetchSettings();
     } catch (error) {
         toast.add({
@@ -132,7 +133,7 @@ function updateSelectedDrawnFeature(feature: Feature) {
             @drawn-feature-selected="updateSelectedDrawnFeature"
         />
         <InteractionsDrawer
-            v-if="map"
+            v-if="map && includeDrawer"
             :map="map"
             :settings="settings"
             :items="mapInteractionItems"

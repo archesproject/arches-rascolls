@@ -1,5 +1,9 @@
 <script setup lang="ts">
 import Button from "primevue/button";
+import { inject } from "vue";
+import type { Ref } from "vue";
+
+const resultsSelected = inject("resultsSelected") as Ref<string[]>;
 
 const props = defineProps({
     searchResult: {
@@ -7,10 +11,26 @@ const props = defineProps({
         required: true,
     },
 });
+
+function selectResult(resourceid: string) {
+    resultsSelected.value = [resourceid];
+}
+
+function clearResult() {
+    resultsSelected.value = [];
+}
+
 </script>
 
 <template>
-    <section class="result">
+    <section 
+        class="result" 
+        :class="{ 
+            hovered: resultsSelected.includes(searchResult._source.resourceinstanceid)
+        }"
+        @mouseenter="selectResult(searchResult._source.resourceinstanceid)" 
+        @mouseleave="clearResult"
+    >
         <div class="image-placeholder">
             <img src="https://picsum.photos/160" />
         </div>
@@ -43,6 +63,10 @@ const props = defineProps({
     border: 1px solid #ddd;
     display: flex;
     flex-direction: row;
+}
+.result.hovered {
+    background-color: rgb(239 245 252);
+    border: 1px solid rgb(139 145 252);
 }
 .result .result-content {
     height: 10rem;

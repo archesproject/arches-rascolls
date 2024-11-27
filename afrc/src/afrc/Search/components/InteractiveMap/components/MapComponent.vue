@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, ref, useTemplateRef, watch } from "vue";
+import { onMounted, ref, useTemplateRef, watch, inject } from "vue";
 
 import MapboxDraw from "@mapbox/mapbox-gl-draw";
 import maplibregl from "maplibre-gl";
@@ -88,6 +88,8 @@ const {
     drawnFeaturesBuffer,
 } = props;
 
+let resultsSelected = inject("resultsSelected") as Ref<string[]>;
+
 const emits = defineEmits([
     "mapInitialized",
     "drawnFeatureSelected",
@@ -122,6 +124,15 @@ watch(
         updateMapOverlays(overlays as MapLayer[]);
     },
     { deep: true },
+);
+
+watch(
+    () => resultsSelected,
+    (selected) => {
+        if (selected) {
+            updateFeatureSelection(selected as Ref<string[]>);
+        }
+    }, {deep: true}
 );
 
 watch(
@@ -184,6 +195,28 @@ async function fitBoundsOfFeatures(features: FeatureCollection) {
         padding: { top: 50, right: 100, bottom: 50, left: 50 },
     });
 }
+
+function updateFeatureSelection(selected: Ref<string[]>) {
+    const layers: Array<string> = [];
+    overlays.forEach((overlay) => {
+        layers.push(...overlay.layerdefinitions.map(
+            (layerDefinition) => layerDefinition.id,
+        ));
+    });
+    const features = map.value!.queryRenderedFeatures({layers:layers});
+    features.forEach(feature => {
+        const featureSelected = selected.value.includes(feature.properties?.resourceinstanceid);
+        map.value!.setFeatureState(
+            {
+                source: "referencecollections",
+                sourceLayer: "referencecollections",
+                id: feature.id,
+            },
+            { selected: featureSelected }
+        );
+    });
+}
+
 
 function addBufferLayer() {
     map.value!.addSource(BUFFER_LAYER_ID, {
@@ -250,17 +283,15 @@ function createMap() {
     map.value = new maplibregl.Map({
         container: mapContainer.value!,
         zoom: 10,
-        center: [-118.805, 34.027],
+        center: [-122.105, 37.027],
     });
 
     emits("mapInitialized", map.value);
 }
 
 function updateBasemap(basemap: Basemap) {
-    console.log(basemap);
-    console.log(overlays);
     map.value!.setStyle(
-        'https://demotiles.maplibre.org/style.json',
+        basemap.url,
     );
 
     map.value!.once(IDLE, () => {
@@ -334,15 +365,12 @@ function addOverlayToMap(overlay: MapLayer) {
                 );
             }
         }
-
         if (!map.value!.getLayer(layerDefinition.id)) {
             map.value!.addLayer(layerDefinition as AddLayerObject);
         }
     });
 
-    if (
-        overlay.maplayerid === "8914d88e-ac00-4140-a7d8-81893099b0ad" // Cultural Resource - Primary
-    ) {
+    if (overlay.maplayerid && resultsSelected) {
         resourceOverlaysClickHandlers[overlay.maplayerid] = function (
             e: MapMouseEvent,
         ) {
@@ -355,6 +383,11 @@ function addOverlayToMap(overlay: MapLayer) {
                 popupContainerRerenderKey.value += 1;
                 clickedCoordinates.value = [e.lngLat.lng, e.lngLat.lat];
                 clickedFeatures.value = features;
+                resultsSelected.value = [];
+                const uniqueResourceIds = new Set(features.map((feature) => feature.properties?.resourceinstanceid as string));
+                resultsSelected.value = Array.from(uniqueResourceIds);
+            } else {
+                resultsSelected.value = [];
             }
         };
 
