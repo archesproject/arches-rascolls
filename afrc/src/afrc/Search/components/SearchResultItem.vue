@@ -1,7 +1,10 @@
 <script setup lang="ts">
-import Button from "primevue/button";
 import { inject } from "vue";
 import type { Ref } from "vue";
+
+import Button from "primevue/button";
+
+import arches from "arches";
 
 const resultsSelected = inject("resultsSelected") as Ref<string[]>;
 
@@ -47,13 +50,16 @@ function clearResult() {
             <div class="actions">
                 <Button
                     label="...show more"
-                    variant="link"
+                    severity="secondary"
+                    text
                 />
                 <Button
                     label="edit"
-                    variant="link"
+                    severity="secondary"
+                    text
                     as="a"
-                    :href="searchResult._id"
+                    target="_blank"
+                    :href="'./' + arches.urls.resource + '/' + searchResult._id"
                 />
             </div>
         </div>
@@ -72,7 +78,7 @@ function clearResult() {
     border: 1px solid rgb(139 145 252);
 }
 .result .result-content {
-    height: 10rem;
+    height: 16rem;
     overflow: hidden;
     padding-inline-start: 10px;
 }
@@ -86,9 +92,9 @@ function clearResult() {
     margin-bottom: 10px;
 }
 .result .image-placeholder {
-    width: 10rem;
-    height: 10rem;
-    min-width: 10rem;
+    width: 16rem;
+    height: 16rem;
+    min-width: 16rem;
     background-color: #eee;
 }
 .actions {
