@@ -132,7 +132,8 @@ watch(
         if (selected) {
             updateFeatureSelection(selected as Ref<string[]>);
         }
-    }, {deep: true}
+    },
+    { deep: true },
 );
 
 watch(
@@ -199,24 +200,27 @@ async function fitBoundsOfFeatures(features: FeatureCollection) {
 function updateFeatureSelection(selected: Ref<string[]>) {
     const layers: Array<string> = [];
     overlays.forEach((overlay) => {
-        layers.push(...overlay.layerdefinitions.map(
-            (layerDefinition) => layerDefinition.id,
-        ));
+        layers.push(
+            ...overlay.layerdefinitions.map(
+                (layerDefinition) => layerDefinition.id,
+            ),
+        );
     });
-    const features = map.value!.queryRenderedFeatures({layers:layers});
-    features.forEach(feature => {
-        const featureSelected = selected.value.includes(feature.properties?.resourceinstanceid);
+    const features = map.value!.queryRenderedFeatures({ layers: layers });
+    features.forEach((feature) => {
+        const featureSelected = selected.value.includes(
+            feature.properties?.resourceinstanceid,
+        );
         map.value!.setFeatureState(
             {
                 source: "referencecollections",
                 sourceLayer: "referencecollections",
                 id: feature.id,
             },
-            { selected: featureSelected }
+            { selected: featureSelected },
         );
     });
 }
-
 
 function addBufferLayer() {
     map.value!.addSource(BUFFER_LAYER_ID, {
@@ -290,9 +294,7 @@ function createMap() {
 }
 
 function updateBasemap(basemap: Basemap) {
-    map.value!.setStyle(
-        basemap.url,
-    );
+    map.value!.setStyle(basemap.url);
 
     map.value!.once(IDLE, () => {
         updateMapOverlays(overlays);
@@ -384,7 +386,12 @@ function addOverlayToMap(overlay: MapLayer) {
                 clickedCoordinates.value = [e.lngLat.lng, e.lngLat.lat];
                 clickedFeatures.value = features;
                 resultsSelected.value = [];
-                const uniqueResourceIds = new Set(features.map((feature) => feature.properties?.resourceinstanceid as string));
+                const uniqueResourceIds = new Set(
+                    features.map(
+                        (feature) =>
+                            feature.properties?.resourceinstanceid as string,
+                    ),
+                );
                 resultsSelected.value = Array.from(uniqueResourceIds);
             } else {
                 resultsSelected.value = [];

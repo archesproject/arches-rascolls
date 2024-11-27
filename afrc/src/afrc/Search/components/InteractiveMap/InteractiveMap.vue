@@ -12,10 +12,7 @@ import BasemapControls from "@/afrc/Search/components/InteractiveMap/components/
 
 import { fetchSettings } from "@/afrc/Search/api.ts";
 
-import {
-    DEFAULT_ERROR_TOAST_LIFE,
-    ERROR,
-} from "@/afrc/Search/constants.ts";
+import { DEFAULT_ERROR_TOAST_LIFE, ERROR } from "@/afrc/Search/constants.ts";
 
 import type { Ref } from "vue";
 import type { Feature, Map } from "maplibre-gl";
@@ -71,7 +68,6 @@ const emits = defineEmits(["drawnFeatureSelected", "drawnFeaturesUpdated"]);
 provide("overlays", props.overlays);
 provide("basemaps", props.basemaps);
 provide("selectedDrawnFeature", selectedDrawnFeature);
-
 
 watch(
     () => props.basemaps,

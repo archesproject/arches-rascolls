@@ -11,10 +11,7 @@ import {
 
 import type { Component, Ref } from "vue";
 import type { Map } from "maplibre-gl";
-import type {
-    MapInteractionItem,
-    Settings,
-} from "@/afrc/Search/types.ts";
+import type { MapInteractionItem, Settings } from "@/afrc/Search/types.ts";
 
 const props = defineProps<{
     map: Map;

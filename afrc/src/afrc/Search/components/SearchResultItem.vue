@@ -19,16 +19,17 @@ function selectResult(resourceid: string) {
 function clearResult() {
     resultsSelected.value = [];
 }
-
 </script>
 
 <template>
-    <section 
-        class="result" 
-        :class="{ 
-            hovered: resultsSelected.includes(searchResult._source.resourceinstanceid)
+    <section
+        class="result"
+        :class="{
+            hovered: resultsSelected.includes(
+                searchResult._source.resourceinstanceid,
+            ),
         }"
-        @mouseenter="selectResult(searchResult._source.resourceinstanceid)" 
+        @mouseenter="selectResult(searchResult._source.resourceinstanceid)"
         @mouseleave="clearResult"
     >
         <div class="image-placeholder">
@@ -51,6 +52,8 @@ function clearResult() {
                 <Button
                     label="edit"
                     variant="link"
+                    as="a"
+                    :href="searchResult._id"
                 />
             </div>
         </div>

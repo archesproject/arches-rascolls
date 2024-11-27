@@ -62,5 +62,3 @@ export const createRequest = (url: string) => {
 
 export const fetchSettings = createRequest(arches.urls["api-settings"]);
 export const fetchMapData = createRequest(arches.urls["api-map-data"]);
-
-

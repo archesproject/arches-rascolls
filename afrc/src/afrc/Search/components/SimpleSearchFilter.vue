@@ -4,6 +4,8 @@ import { ref, watch } from "vue";
 import AutoComplete from "primevue/autocomplete";
 import type { AutoCompleteCompleteEvent } from "primevue/autocomplete";
 
+import arches from "arches";
+
 import type { GenericObject } from "@/afrc/Search/types";
 
 const componentName = "term-filter";
@@ -36,7 +38,7 @@ function search(event: AutoCompleteCompleteEvent) {
     var queryString = new URLSearchParams();
     queryString.set("q", event.query);
     queryString.set("lang", "*");
-    fetch("search/terms" + "?" + queryString.toString())
+    fetch(arches.urls.search_terms + "?" + queryString.toString())
         .then((response) => response.json())
         .then((data) => {
             Object.keys(data).forEach((key) => {
