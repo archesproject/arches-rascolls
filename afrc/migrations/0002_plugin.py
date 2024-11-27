@@ -4,7 +4,7 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ("models", "11499_add_editlog_resourceinstance_idx"),
+        ("afrc", "0001_initial"),
     ]
 
     forward_sql = """
@@ -26,5 +26,5 @@ class Migration(migrations.Migration):
     """
 
     operations = [
-        migrations.RunPython(forward_sql, reverse_sql),
+        migrations.RunSQL(forward_sql, reverse_sql),
     ]
