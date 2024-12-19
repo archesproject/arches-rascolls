@@ -17,62 +17,21 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 """
 
 import logging
-import os
 import json
 
 from django.views.generic import View
-from django.contrib.gis.geos import GEOSGeometry
-from django.core.cache import cache
 from django.db import connection
-from django.http import Http404
-from django.shortcuts import render
 from django.utils.translation import get_language, gettext as _
-from django.db.models import Q, OuterRef, Subquery
-from arches.app.models.models import (
-    MapMarker,
-    GraphModel,
-    DDataType,
-    Widget,
-    ReportTemplate,
-    CardComponent,
-    Geocoder,
-    Node,
-    SearchExportHistory,
-    ResourceXResource,
-)
-from arches.app.search.components.search_results import get_localized_descriptor
-from arches.app.search.mappings import RESOURCES_INDEX
-from arches.app.models.concept import Concept, get_preflabel_from_conceptid
-from arches.app.utils.response import JSONResponse, JSONErrorResponse
-from arches.app.utils.betterJSONSerializer import JSONSerializer, JSONDeserializer
-from arches.app.search.search_engine_factory import SearchEngineFactory
-from arches.app.search.elasticsearch_dsl_builder import (
-    Bool,
-    Match,
-    Query,
-    Ids,
-    Term,
-    Terms,
-    MaxAgg,
-    Aggregation,
-)
-from arches.app.search.search_export import SearchResultsExporter
-from arches.app.search.time_wheel import TimeWheel
-from arches.app.search.components.base import SearchFilterFactory
-from arches.app.views.base import MapBaseManagerView
-from arches.app.utils import permission_backend
-from arches.app.utils.permission_backend import (
-    get_nodegroups_by_perm,
-    user_is_resource_reviewer,
-)
-from arches.app.utils.decorators import group_required
-import arches.app.utils.zip as zip_utils
-import arches.app.utils.task_management as task_management
-from arches.app.utils.data_management.resources.formats.htmlfile import HtmlWriter
-import arches.app.tasks as tasks
-from io import StringIO
-from tempfile import NamedTemporaryFile
+from django.db.models import Q
+
+from arches.app.models.models import ResourceXResource
 from arches.app.models.system_settings import settings
+from arches.app.search.components.base import SearchFilterFactory
+from arches.app.search.components.search_results import get_localized_descriptor
+from arches.app.search.elasticsearch_dsl_builder import Query, Ids
+from arches.app.search.mappings import RESOURCES_INDEX
+from arches.app.search.search_engine_factory import SearchEngineFactory
+from arches.app.utils.response import JSONResponse, JSONErrorResponse
 
 logger = logging.getLogger(__name__)
 
