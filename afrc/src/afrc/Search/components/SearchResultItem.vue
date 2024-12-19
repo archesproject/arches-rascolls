@@ -39,19 +39,22 @@ function clearResult() {
             <img src="https://picsum.photos/160" />
         </div>
         <div class="result-content">
-            <h2>{{ props.searchResult._source.displayname }}</h2>
-            <p class="breadcrumb">
+            <div class="result-displayname">
+                {{ props.searchResult._source.displayname }}
+            </div>
+            <div class="breadcrumb">
                 (North and Central America &gt; United States &gt; Missouri &gt;
                 Greene)
-            </p>
-            <p class="scope-note">
+            </div>
+            <div class="scope-note">
                 {{ searchResult._source.displaydescription }}
-            </p>
+            </div>
             <div class="actions">
                 <Button
                     label="...show more"
                     severity="secondary"
                     text
+                    size="large"
                 />
                 <Button
                     label="edit"
@@ -59,6 +62,8 @@ function clearResult() {
                     text
                     as="a"
                     target="_blank"
+                    size="large"
+                    icon="pi pi-pen-to-square"
                     :href="'./' + arches.urls.resource + '/' + searchResult._id"
                 />
             </div>
@@ -81,21 +86,30 @@ function clearResult() {
     height: 16rem;
     overflow: hidden;
     padding-inline-start: 10px;
+    padding: 15px;
 }
 .result h2 {
     margin: 0 0 10px;
     font-size: 1.2rem;
 }
 .result .breadcrumb {
-    color: #888;
-    font-size: 0.9rem;
+    color: #415790;
+    font-size: 1.1rem;
     margin-bottom: 10px;
+    padding: unset;
 }
 .result .image-placeholder {
     width: 16rem;
     height: 16rem;
     min-width: 16rem;
     background-color: #eee;
+}
+.result-displayname {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.scope-note {
+    font-size: 1.2rem;
 }
 .actions {
     display: flex;

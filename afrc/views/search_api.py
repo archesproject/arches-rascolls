@@ -120,8 +120,7 @@ class SearchAPI(View):
 
         base_resource_type_filter = [
             {
-                "graphid": "d6774bfc-b4b4-11ea-84f7-3af9d3b32b71",
-                "name": "Group",
+                "graphid": settings.COLLECTIONS_GRAPHID,
                 "inverted": False,
             }
         ]
@@ -162,7 +161,11 @@ class SearchAPI(View):
             ]
 
             related_resource_ids = list(
-                search_relationships_via_ORM(resourceinstanceids, depth=3)
+                search_relationships_via_ORM(
+                    resourceinstanceids,
+                    target_graphid=settings.COLLECTIONS_GRAPHID,
+                    depth=3,
+                )
             )
 
             se = SearchEngineFactory().create()
@@ -193,7 +196,7 @@ class SearchAPI(View):
 
 def search_relationships_via_ORM(
     resourceinstanceids=None,
-    target_graphid="d6774bfc-b4b4-11ea-84f7-3af9d3b32b71",
+    target_graphid=None,
     depth=1,
 ):
     hits = set()
@@ -236,9 +239,7 @@ def search_relationships_via_ORM(
     return get_related_resourceinstanceids(resourceinstanceids, depth=depth)
 
 
-def search_relationships(
-    resourceinstanceids=None, target_graphid="d6774bfc-b4b4-11ea-84f7-3af9d3b32b71"
-):
+def search_relationships(resourceinstanceids=None, target_graphid=None):
     with connection.cursor() as cursor:
         sql = """
             WITH RECURSIVE resource_traversal_from(resourcexid, resourceid, graphid, depth) AS (

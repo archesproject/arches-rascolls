@@ -320,13 +320,13 @@ aside {
     gap: 10px;
 }
 .facet-item {
-    font-size: 0.7rem;
+    font-size: 1rem;
     padding: 16px;
     border: 1px solid #ddd;
     text-align: center;
     cursor: pointer;
-    max-width: 11rem;
-    min-height: 11rem;
+    max-width: 15rem;
+    min-height: 15rem;
 }
 .facet-item.selected {
     background-color: #f0f8ff;
