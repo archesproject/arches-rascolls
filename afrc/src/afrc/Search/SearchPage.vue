@@ -39,8 +39,7 @@ watch(queryString, () => {
 function updateFilter(componentName: string, value: object) {
     console.log(value);
     // Test for an empty object
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    function isEmpty(value: any) {
+    function isEmpty(value: unknown) {
         if (value === null || value === undefined) {
             return true;
         }
@@ -89,7 +88,7 @@ const doQuery = function () {
 
     const qs = new URLSearchParams(queryObj);
 
-    fetch(arches.urls.search_results + "?" + qs.toString())
+    fetch(arches.urls["api-search"] + "?" + qs.toString())
         .then((response) => response.json())
         .then((data) => {
             console.log(data);
