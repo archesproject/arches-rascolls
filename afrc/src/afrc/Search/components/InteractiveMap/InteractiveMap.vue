@@ -33,6 +33,7 @@ const props = defineProps<{
     basemaps: Basemap[];
     sources: MapSource[];
     includeDrawer: boolean;
+    query: string;
 }>();
 
 const map: Ref<Map | null> = ref(null);
@@ -68,6 +69,7 @@ const emits = defineEmits(["drawnFeatureSelected", "drawnFeaturesUpdated"]);
 provide("overlays", props.overlays);
 provide("basemaps", props.basemaps);
 provide("selectedDrawnFeature", selectedDrawnFeature);
+provide("query", props.query);
 
 watch(
     () => props.basemaps,
@@ -115,6 +117,7 @@ function updateSelectedDrawnFeature(feature: Feature) {
             :basemap="basemap"
             :overlays="overlays"
             :sources="sources"
+            :query="query"
             :is-drawing-enabled="true"
             @map-initialized="
                 (mapInstance) => {

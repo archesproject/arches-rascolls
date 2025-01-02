@@ -62,6 +62,7 @@ interface Props {
     settings: Settings | null;
     basemap: Basemap | null;
     overlays: MapLayer[];
+    query: string;
     sources: MapSource[];
     isDrawingEnabled?: boolean;
     drawnFeatures?: Feature[];
@@ -72,6 +73,7 @@ const props = withDefaults(defineProps<Props>(), {
     settings: null,
     basemap: null,
     overlays: () => [],
+    query: "",
     sources: () => [],
     isDrawingEnabled: false,
     drawnFeatures: () => [],
@@ -82,6 +84,7 @@ const {
     settings,
     basemap,
     overlays,
+    query,
     sources,
     isDrawingEnabled,
     drawnFeatures,
@@ -134,6 +137,18 @@ watch(
         }
     },
     { deep: true },
+);
+
+watch(
+    () => props.query,
+    (query) => {
+        const overlay = overlays[0];
+        if (map.value) {
+            removeOverlayFromMap(overlays[0]);
+            addOverlayToMap(overlay);
+        }
+    },
+    { deep: true, immediate: true },
 );
 
 watch(

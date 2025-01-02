@@ -258,7 +258,8 @@ SESSION_COOKIE_NAME = "afrc"
 # For more info on configuring your cache: https://docs.djangoproject.com/en/2.2/topics/cache/
 CACHES = {
     "default": {
-        "BACKEND": "django.core.cache.backends.dummy.DummyCache",
+        "BACKEND": "django.core.cache.backends.locmem.LocMemCache",
+        "LOCATION": "unique-snowflake",
     },
     "user_permission": {
         "BACKEND": "django.core.cache.backends.db.DatabaseCache",
@@ -309,7 +310,7 @@ EMAIL_HOST_USER = "xxxx@xxx.com"
 
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
-CELERY_BROKER_URL = ""  # RabbitMQ --> "amqp://guest:guest@localhost",  Redis --> "redis://localhost:6379/0"
+CELERY_BROKER_URL = "amqp://guest:guest@localhost"  #Redis --> "redis://localhost:6379/0"
 CELERY_ACCEPT_CONTENT = ["json"]
 CELERY_RESULT_BACKEND = (
     "django-db"  # Use 'django-cache' if you want to use your cache as your backend

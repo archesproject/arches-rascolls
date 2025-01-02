@@ -229,6 +229,7 @@ onMounted(async () => {
                     :overlays="overlays"
                     :sources="sources"
                     :include-drawer="false"
+                    :query="searchResults"
                 />
             </div>
 
