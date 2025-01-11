@@ -113,6 +113,10 @@ const updateQuery = function () {
     background-color: lightgray;
     font-family: Arial, Helvetica, sans-serif;
 }
+.p-autocomplete-token-label {
+    font-size: 1.3rem;
+}
+
 :deep(.autocomplete-input) {
     height: 3rem;
     font-size: 1.5rem;

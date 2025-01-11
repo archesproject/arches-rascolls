@@ -39,8 +39,7 @@ watch(queryString, () => {
 function updateFilter(componentName: string, value: object) {
     console.log(value);
     // Test for an empty object
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    function isEmpty(value: any) {
+    function isEmpty(value: unknown) {
         if (value === null || value === undefined) {
             return true;
         }
@@ -89,7 +88,7 @@ const doQuery = function () {
 
     const qs = new URLSearchParams(queryObj);
 
-    fetch(arches.urls.search_results + "?" + qs.toString())
+    fetch(arches.urls["api-search"] + "?" + qs.toString())
         .then((response) => response.json())
         .then((data) => {
             console.log(data);
@@ -97,43 +96,6 @@ const doQuery = function () {
             resultsCount.value = data.total_results;
             resultsSelected.value = [];
         });
-
-    // self.updateRequest = $.ajax({
-    //     type: "GET",
-    //     url: arches.urls.search_results,
-    //     data: queryObj,
-    //     context: this,
-    //     success: function(response) {
-    //         _.each(this.sharedStateObject.searchResults, function(value, key, results) {
-    //             if (key !== "timestamp") {
-    //                 delete this.sharedStateObject.searchResults[key];
-    //             }
-    //         }, this);
-    //         _.each(response, function(value, key, response) {
-    //             if (key !== "timestamp") {
-    //                 this.sharedStateObject.searchResults[key] = value;
-    //             }
-    //         }, this);
-    //         this.sharedStateObject.searchResults.timestamp(response.timestamp);
-    //         this.sharedStateObject.userIsReviewer(response.reviewer);
-    //         this.sharedStateObject.userid(response.userid);
-    //         this.sharedStateObject.total(response.total_results);
-    //         this.sharedStateObject.hits(response.results.hits.hits.length);
-    //         this.sharedStateObject.alert(false);
-    //     },
-    //     error: function(response, status, error) {
-    //         const alert = new AlertViewModel("ep-alert-red", arches.translations.requestFailed.title, response.responseJSON?.message);
-    //         if(self.updateRequest.statusText !== "abort"){
-    //             this.alert(alert);
-    //         }
-    //         this.sharedStateObject.loading(false);
-    //     },
-    //     complete: function(request, status) {
-    //         self.updateRequest = undefined;
-    //         window.history.pushState({}, "", "?" + $.param(queryObj).split("+").join("%20"));
-    //         this.sharedStateObject.loading(false);
-    //     }
-    // });
 };
 
 async function fetchSystemMapData() {
@@ -321,13 +283,13 @@ aside {
     gap: 10px;
 }
 .facet-item {
-    font-size: 0.7rem;
+    font-size: 1rem;
     padding: 16px;
     border: 1px solid #ddd;
     text-align: center;
     cursor: pointer;
-    max-width: 11rem;
-    min-height: 11rem;
+    max-width: 15rem;
+    min-height: 15rem;
 }
 .facet-item.selected {
     background-color: #f0f8ff;

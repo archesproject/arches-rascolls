@@ -3,17 +3,26 @@ from django.conf.urls.static import static
 from django.conf.urls.i18n import i18n_patterns
 from django.urls import include, path, re_path
 from afrc.views.settings_api import SettingsAPI
-from afrc.views.map_api import MapDataAPI, FeatureBufferAPI, GeoJSONBoundsAPI, ReferenceCollectionMVT
+from afrc.views.search_api import SearchAPI
+from afrc.views.map_api import (
+    MapDataAPI,
+    FeatureBufferAPI,
+    GeoJSONBoundsAPI,
+    ReferenceCollectionMVT,
+)
 
 urlpatterns = [
     # project-level urls
+    path("api-search", SearchAPI.as_view(), name="api-search"),
     path("api-settings", SettingsAPI.as_view(), name="api-settings"),
     path("api-map-data", MapDataAPI.as_view(), name="api-map-data"),
     path("api-feature-buffer", FeatureBufferAPI.as_view(), name="api-feature-buffer"),
     path("api-geojson-bounds", GeoJSONBoundsAPI.as_view(), name="api-geojson-bounds"),
-    re_path(r"^api-reference-collection-mvt/(?P<zoom>[0-9]+|\{z\})/(?P<x>[0-9]+|\{x\})/(?P<y>[0-9]+|\{y\}).pbf$",
+    re_path(
+        r"^api-reference-collection-mvt/(?P<zoom>[0-9]+|\{z\})/(?P<x>[0-9]+|\{x\})/(?P<y>[0-9]+|\{y\}).pbf$",
         ReferenceCollectionMVT.as_view(),
-        name="api-reference-collection-mvt"),
+        name="api-reference-collection-mvt",
+    ),
 ]
 
 # Ensure Arches core urls are superseded by project-level urls
