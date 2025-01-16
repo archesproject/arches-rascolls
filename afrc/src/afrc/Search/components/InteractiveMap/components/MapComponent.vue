@@ -104,7 +104,7 @@ const resourceOverlaysClickHandlers: {
     [key: string]: (e: MapMouseEvent) => void;
 } = {};
 
-const popupInstance: Ref<Popup | null> = ref(null);
+// const popupInstance: Ref<Popup | null> = ref(null);
 const clickedFeatures: Ref<Feature[]> = ref([]);
 const clickedCoordinates: Ref<[number, number]> = ref([0, 0]);
 const popupContainerRerenderKey = ref(0);
@@ -143,15 +143,15 @@ watch(
     },
 );
 
-watch(clickedFeatures, () => {
-    if (popupInstance.value) {
-        popupInstance.value.remove();
-    }
-    popupInstance.value = new maplibregl.Popup()
-        .setLngLat(clickedCoordinates.value)
-        .setDOMContent(popupContainer.value!.$el)
-        .addTo(map.value!);
-});
+// watch(clickedFeatures, () => {
+//     if (popupInstance.value) {
+//         popupInstance.value.remove();
+//     }
+//     popupInstance.value = new maplibregl.Popup()
+//         .setLngLat(clickedCoordinates.value)
+//         .setDOMContent(popupContainer.value!.$el)
+//         .addTo(map.value!);
+// });
 
 onMounted(() => {
     createMap();
