@@ -260,6 +260,7 @@ section.afrc-search-results-panel {
     flex-grow: 1;
     margin: 15px;
     overflow-y: auto;
+    min-width: 350px;
 }
 .search-result-list {
     display: flex;
