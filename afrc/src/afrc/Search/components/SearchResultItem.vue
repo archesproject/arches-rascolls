@@ -7,6 +7,7 @@ import Button from "primevue/button";
 import arches from "arches";
 
 const resultsSelected = inject("resultsSelected") as Ref<string[]>;
+const resultSelected = inject("resultSelected") as Ref<string>;
 
 const props = defineProps({
     searchResult: {
@@ -15,13 +16,19 @@ const props = defineProps({
     },
 });
 
+function highlightResult(resourceid: string) {
+    if (!resultSelected.value) {
+        resultsSelected.value = [];
+        resultsSelected.value = [resourceid];
+    }
+}
+
 function selectResult(resourceid: string) {
+    resultSelected.value = "";
+    resultSelected.value = resourceid;
     resultsSelected.value = [resourceid];
 }
 
-function clearResult() {
-    resultsSelected.value = [];
-}
 </script>
 
 <template>
@@ -32,8 +39,7 @@ function clearResult() {
                 searchResult._source.resourceinstanceid,
             ),
         }"
-        @mouseenter="selectResult(searchResult._source.resourceinstanceid)"
-        @mouseleave="clearResult"
+        @mouseenter="highlightResult(searchResult._source.resourceinstanceid)"
     >
         <div class="image-placeholder">
             <img src="https://picsum.photos/160" />
@@ -55,6 +61,7 @@ function clearResult() {
                     severity="secondary"
                     text
                     size="large"
+                    @click="selectResult(searchResult._source.resourceinstanceid)"
                 />
                 <Button
                     label="edit"

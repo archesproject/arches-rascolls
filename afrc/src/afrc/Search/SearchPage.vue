@@ -12,6 +12,7 @@ import arches from "arches";
 
 import SimpleSearchFilter from "@/afrc/Search/components/SimpleSearchFilter.vue";
 import SearchResultItem from "@/afrc/Search/components/SearchResultItem.vue";
+import SearchItemDetails from "@/afrc/Search/components/SearchItemDetails.vue";
 import InteractiveMap from "@/afrc/Search/components/InteractiveMap/InteractiveMap.vue";
 import { fetchMapData } from "@/afrc/Search/api.ts";
 import type { GenericObject } from "@/afrc/Search/types";
@@ -21,6 +22,7 @@ let query = getQueryObject(null);
 let queryString = ref(JSON.stringify(query));
 let searchResults = ref([]);
 let resultsCount = ref("calculating...");
+let resultSelected = ref("");
 const showMap = ref(false);
 const basemaps: Ref<Basemap[]> = ref([]);
 const overlays: Ref<MapLayer[]> = ref([]);
@@ -31,6 +33,7 @@ const toast = useToast();
 const { $gettext } = useGettext();
 
 provide("resultsSelected", resultsSelected);
+provide("resultSelected", resultSelected);
 
 watch(queryString, () => {
     doQuery();
@@ -181,7 +184,11 @@ onMounted(async () => {
                     />
                 </div>
             </section>
-
+            <section
+                v-if="dataLoaded && resultSelected"
+            >
+                <SearchItemDetails :instanceId="resultSelected"/>
+            </section>
             <div
                 v-if="showMap && dataLoaded"
                 style="width: 100%; height: 100%"
