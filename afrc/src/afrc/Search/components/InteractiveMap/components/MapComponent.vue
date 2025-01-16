@@ -89,6 +89,7 @@ const {
 } = props;
 
 let resultsSelected = inject("resultsSelected") as Ref<string[]>;
+let resultSelected = inject("resultSelected") as Ref<string>;
 
 const emits = defineEmits([
     "mapInitialized",
@@ -386,6 +387,7 @@ function addOverlayToMap(overlay: MapLayer) {
                 clickedCoordinates.value = [e.lngLat.lng, e.lngLat.lat];
                 clickedFeatures.value = features;
                 resultsSelected.value = [];
+                resultSelected.value = "";
                 const uniqueResourceIds = new Set(
                     features.map(
                         (feature) =>
@@ -393,8 +395,10 @@ function addOverlayToMap(overlay: MapLayer) {
                     ),
                 );
                 resultsSelected.value = Array.from(uniqueResourceIds);
+                resultSelected.value = resultsSelected.value[0];
             } else {
                 resultsSelected.value = [];
+                resultSelected.value = "";
             }
         };
 
