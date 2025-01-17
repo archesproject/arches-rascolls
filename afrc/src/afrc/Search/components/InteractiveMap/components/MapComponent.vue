@@ -66,6 +66,7 @@ interface Props {
     isDrawingEnabled?: boolean;
     drawnFeatures?: Feature[];
     drawnFeaturesBuffer?: Buffer;
+    isPopupEnabled?: boolean;
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -76,6 +77,7 @@ const props = withDefaults(defineProps<Props>(), {
     isDrawingEnabled: false,
     drawnFeatures: () => [],
     drawnFeaturesBuffer: undefined,
+    isPopupEnabled: false,
 });
 
 const {
@@ -86,6 +88,7 @@ const {
     isDrawingEnabled,
     drawnFeatures,
     drawnFeaturesBuffer,
+    isPopupEnabled,
 } = props;
 
 let resultsSelected = inject("resultsSelected") as Ref<string[]>;
@@ -105,7 +108,7 @@ const resourceOverlaysClickHandlers: {
     [key: string]: (e: MapMouseEvent) => void;
 } = {};
 
-// const popupInstance: Ref<Popup | null> = ref(null);
+const popupInstance: Ref<Popup | null> = ref(null);
 const clickedFeatures: Ref<Feature[]> = ref([]);
 const clickedCoordinates: Ref<[number, number]> = ref([0, 0]);
 const popupContainerRerenderKey = ref(0);
@@ -144,15 +147,17 @@ watch(
     },
 );
 
-// watch(clickedFeatures, () => {
-//     if (popupInstance.value) {
-//         popupInstance.value.remove();
-//     }
-//     popupInstance.value = new maplibregl.Popup()
-//         .setLngLat(clickedCoordinates.value)
-//         .setDOMContent(popupContainer.value!.$el)
-//         .addTo(map.value!);
-// });
+if (isPopupEnabled) {
+    watch(clickedFeatures, () => {
+        if (popupInstance.value) {
+            popupInstance.value.remove();
+        }
+        popupInstance.value = new maplibregl.Popup()
+            .setLngLat(clickedCoordinates.value)
+            .setDOMContent(popupContainer.value!.$el)
+            .addTo(map.value!);
+    });
+}
 
 onMounted(() => {
     createMap();

@@ -198,6 +198,7 @@ onMounted(async () => {
                     :overlays="overlays"
                     :sources="sources"
                     :include-drawer="false"
+                    :popup-enabled="false"
                 />
             </div>
 
