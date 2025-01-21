@@ -8,11 +8,9 @@ import Carousel from 'primevue/carousel';
 const resultSelected = inject("resultSelected") as Ref<string>;
 const resultsSelected = inject("resultsSelected") as Ref<string[]>;
 
-let displayname = ref("")
-let displaydescription = ref("")
-let images = ref([])
-
-
+let displayname: Ref<string> = ref("")
+let displaydescription: Ref<string> = ref("")
+let images: Ref<string[]> = ref([])
 
 onMounted(async () => {
     getData();
