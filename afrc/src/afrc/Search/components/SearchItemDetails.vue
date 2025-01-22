@@ -8,16 +8,16 @@ import Carousel from 'primevue/carousel';
 const resultSelected = inject("resultSelected") as Ref<string>;
 const resultsSelected = inject("resultsSelected") as Ref<string[]>;
 
-let displayname: Ref<string> = ref("")
-let displaydescription: Ref<string> = ref("")
-let images: Ref<string[]> = ref([])
+let displayname: Ref<string> = ref("");
+let displaydescription: Ref<string> = ref("");
+let images: Ref<string[]> = ref([]);
 
 onMounted(async () => {
     getData();
 });
 
 watch(resultSelected, () => {
-    getData()
+    getData();
 });
 
 async function getData() {
@@ -69,17 +69,17 @@ function clearResult() {
         </div>
         <div class="images">
         <Carousel :value="images" :numVisible="2" :numScroll="1" containerClass="flex items-center">
-        <template #item="image">
-            <div class="border border-surface-200 dark:border-surface-700 rounded m-2  p-4">
-                <div class="mb-4">
-                    <div class="relative mx-auto">
-                        <div style="padding: 3px">
-                        <img :src="image.data" height="120px" width="120px" class="w-full rounded" />
+            <template #item="image">
+                <div class="border border-surface-200 dark:border-surface-700 rounded m-2  p-4">
+                    <div class="mb-4">
+                        <div class="relative mx-auto">
+                            <div style="padding: 3px">
+                            <img :src="image.data" height="120px" width="120px" class="w-full rounded" />
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </template>
+            </template>
         </Carousel>
         </div>
         <div class="resource-details">

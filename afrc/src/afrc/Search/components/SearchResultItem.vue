@@ -18,13 +18,11 @@ const props = defineProps({
 
 function highlightResult(resourceid: string) {
     if (!resultSelected.value) {
-        resultsSelected.value = [];
         resultsSelected.value = [resourceid];
     }
 }
 
 function selectResult(resourceid: string) {
-    resultSelected.value = "";
     resultSelected.value = resourceid;
     resultsSelected.value = [resourceid];
 }
