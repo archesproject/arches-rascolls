@@ -4215,7 +4215,7 @@
             "isresource": true,
             "jsonldcontext": "https://linked.art/ns/v1/linked-art.json",
             "name": {
-                "en": "Instrument - Clone"
+                "en": "Instrument"
             },
             "nodegroups": [
                 {
@@ -6407,7 +6407,7 @@
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": true,
-                    "name": "Instrument - Clone",
+                    "name": "Instrument",
                     "nodegroup_id": null,
                     "nodeid": "a390a546-d834-11ef-b730-0275dc2ded29",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E22_Human-Made_Object",
@@ -7248,7 +7248,7 @@
                 "isrequired": false,
                 "issearchable": true,
                 "istopnode": true,
-                "name": "Instrument - Clone",
+                "name": "Instrument",
                 "nodegroup_id": null,
                 "nodeid": "a390a546-d834-11ef-b730-0275dc2ded29",
                 "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E22_Human-Made_Object",

@@ -3449,7 +3449,7 @@
             "isresource": true,
             "jsonldcontext": "",
             "name": {
-                "en": "Observation - Clone"
+                "en": "Observation"
             },
             "nodegroups": [
                 {
@@ -4626,7 +4626,7 @@
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": true,
-                    "name": "Observation - Clone",
+                    "name": "Observation",
                     "nodegroup_id": null,
                     "nodeid": "04f8f65e-d834-11ef-a75a-0275dc2ded29",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
@@ -5886,7 +5886,7 @@
                 "isrequired": false,
                 "issearchable": true,
                 "istopnode": true,
-                "name": "Observation - Clone",
+                "name": "Observation",
                 "nodegroup_id": null,
                 "nodeid": "04f8f65e-d834-11ef-a75a-0275dc2ded29",
                 "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
