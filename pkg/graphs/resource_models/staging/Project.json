@@ -3492,7 +3492,7 @@
             "isresource": true,
             "jsonldcontext": "https://linked.art/ns/v1/linked-art.json",
             "name": {
-                "en": "Project - Clone"
+                "en": "Project"
             },
             "nodegroups": [
                 {
@@ -5149,7 +5149,7 @@
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": true,
-                    "name": "Project - Clone",
+                    "name": "Project",
                     "nodegroup_id": null,
                     "nodeid": "eaace89c-d832-11ef-a368-0275dc2ded29",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
@@ -6031,7 +6031,7 @@
                 "isrequired": false,
                 "issearchable": true,
                 "istopnode": true,
-                "name": "Project - Clone",
+                "name": "Project",
                 "nodegroup_id": null,
                 "nodeid": "eaace89c-d832-11ef-a368-0275dc2ded29",
                 "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
