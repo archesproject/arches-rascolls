@@ -40,14 +40,14 @@ function clearResult() {
         </div>
         <div class="result-content">
             <div class="result-displayname">
-                {{ props.searchResult._source.displayname }}
+                {{ props.searchResult?._source.displayname }}
             </div>
             <div class="breadcrumb">
                 (North and Central America &gt; United States &gt; Missouri &gt;
                 Greene)
             </div>
             <div class="scope-note">
-                {{ searchResult._source.displaydescription }}
+                {{ searchResult?._source.displaydescription }}
             </div>
             <div class="actions">
                 <Button
@@ -64,7 +64,9 @@ function clearResult() {
                     target="_blank"
                     size="large"
                     icon="pi pi-pen-to-square"
-                    :href="'./' + arches.urls.resource + '/' + searchResult._id"
+                    :href="
+                        './' + arches.urls.resource + '/' + searchResult?._id
+                    "
                 />
             </div>
         </div>

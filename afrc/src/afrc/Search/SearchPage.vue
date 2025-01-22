@@ -6,6 +6,8 @@ import { useGettext } from "vue3-gettext";
 import Toast from "primevue/toast";
 import { useToast } from "primevue/usetoast";
 import Button from "primevue/button";
+import Paginator from "primevue/paginator";
+
 import { DEFAULT_ERROR_TOAST_LIFE, ERROR } from "@/afrc/Search/constants.ts";
 
 import arches from "arches";
@@ -27,6 +29,7 @@ const overlays: Ref<MapLayer[]> = ref([]);
 const sources: Ref<MapSource[]> = ref([]);
 const resultsSelected: Ref<string[]> = ref([]);
 const dataLoaded = ref(false);
+const newQuery = ref(false);
 const toast = useToast();
 const { $gettext } = useGettext();
 
@@ -38,6 +41,7 @@ watch(queryString, () => {
 
 function updateFilter(componentName: string, value: object) {
     console.log(value);
+    newQuery.value = true;
     // Test for an empty object
     function isEmpty(value: unknown) {
         if (value === null || value === undefined) {
@@ -79,24 +83,31 @@ function getQueryObject(uri: string | null): GenericObject {
     return obj;
 }
 
-const doQuery = function () {
+async function doQuery() {
     const queryObj = JSON.parse(queryString.value ?? "{}");
 
     Object.keys(queryObj).forEach((key) => {
         queryObj[key] = JSON.stringify(queryObj[key]);
     });
 
+    if (newQuery.value) {
+        const componentName = "paging-filter";
+        delete queryObj[componentName];
+        newQuery.value = false;
+    }
+
     const qs = new URLSearchParams(queryObj);
 
-    fetch(arches.urls["api-search"] + "?" + qs.toString())
+    return fetch(arches.urls["api-search"] + "?" + qs.toString())
         .then((response) => response.json())
         .then((data) => {
+            console.log(data.total_results);
             console.log(data);
             searchResults.value = data.results.hits.hits;
             resultsCount.value = data.total_results;
             resultsSelected.value = [];
         });
-};
+}
 
 async function fetchSystemMapData() {
     try {
@@ -131,6 +142,20 @@ async function fetchSystemMapData() {
             detail: error instanceof Error ? error.message : undefined,
         });
     }
+}
+
+async function onPageChange(event: {
+    first: number;
+    rows: number;
+    page: number;
+    pageCount: number;
+}) {
+    console.log("onPageChange");
+    console.log(queryString.value);
+    const componentName = "paging-filter";
+    query[componentName] = event.page + 1;
+    queryString.value = JSON.stringify(query);
+    console.log(queryString.value);
 }
 
 onMounted(async () => {
@@ -174,11 +199,17 @@ onMounted(async () => {
             <section class="afrc-search-results-panel">
                 <div class="result-count">{{ resultsCount }} Results</div>
                 <div class="search-result-list">
+                    <!-- <div style="height: 50px">{{ item?._source.displayname }}</div> -->
                     <SearchResultItem
-                        v-for="searchResult in searchResults"
-                        :key="searchResult"
-                        :search-result
+                        v-for="item in searchResults"
+                        :key="item"
+                        :search-result="item"
                     />
+                    <Paginator
+                        rows="10"
+                        :total-records="resultsCount"
+                        @page="onPageChange"
+                    ></Paginator>
                 </div>
             </section>
 
@@ -230,6 +261,7 @@ onMounted(async () => {
 :root {
     font-size: 16px;
 }
+
 .afrc-container {
     font-family: Arial, sans-serif;
     background-color: #f8f8f8;
@@ -238,50 +270,61 @@ onMounted(async () => {
     flex-direction: column;
     flex-grow: 1;
 }
+
 main {
     display: flex;
     flex-direction: row;
-    height: 100vh;
+    flex-grow: 1;
 }
+
 header {
     font-size: 2rem;
     display: flex;
     border-bottom: 1px #ccc solid;
     padding: 5px;
 }
+
 .view-buttons {
     display: flex;
     gap: 5px;
     margin-left: 20px;
 }
+
 section.afrc-search-results-panel {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
     margin: 15px;
     overflow-y: auto;
+    height: calc(100vh - 150px);
 }
+
 .search-result-list {
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
     gap: 20px;
 }
+
 .result-count {
     font-size: 1.6rem;
     margin: 0px;
     margin-bottom: 15px;
 }
+
 aside {
     max-width: 25%;
     border-left: 1px #ccc solid;
     padding: 15px;
 }
+
 .facets {
     padding: 16px;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
 }
+
 .facet-item {
     font-size: 1rem;
     padding: 16px;
@@ -291,6 +334,7 @@ aside {
     max-width: 15rem;
     min-height: 15rem;
 }
+
 .facet-item.selected {
     background-color: #f0f8ff;
     border-color: #007bff;

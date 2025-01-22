@@ -24,14 +24,17 @@ from django.db import connection
 from django.utils.translation import get_language, gettext as _
 from django.db.models import Q
 
-from arches.app.models.models import ResourceXResource
+from arches.app.models.models import ResourceXResource, ResourceInstance
 from arches.app.models.system_settings import settings
 from arches.app.search.components.base import SearchFilterFactory
 from arches.app.search.components.search_results import get_localized_descriptor
-from arches.app.search.elasticsearch_dsl_builder import Query, Ids
+from arches.app.search.elasticsearch_dsl_builder import Query, Ids, Bool, Match, Nested
 from arches.app.search.mappings import RESOURCES_INDEX
 from arches.app.search.search_engine_factory import SearchEngineFactory
 from arches.app.utils.response import JSONResponse, JSONErrorResponse
+
+from arches.app.search.es_mapping_modifier import EsMappingModifier
+
 
 logger = logging.getLogger(__name__)
 
@@ -76,7 +79,6 @@ def search_results(request, returnDsl=False):
 
 class SearchAPI(View):
     def get(self, request):
-
         base_resource_type_filter = [
             {
                 "graphid": settings.COLLECTIONS_GRAPHID,
@@ -84,7 +86,11 @@ class SearchAPI(View):
             }
         ]
 
-        current_page = request.GET.get("paging-filter", 1)
+        # import ipdb
+
+        # ipdb.sset_trace()
+
+        current_page = int(request.GET.get("paging-filter", 1))
         page_size = int(settings.SEARCH_ITEMS_PER_PAGE)
         print(page_size)
 
@@ -93,9 +99,10 @@ class SearchAPI(View):
         request.GET = request_copy
         direct_results = search_results(request)
         print(current_page * page_size)
+        # print(direct_results)
         print(direct_results["total_results"])
 
-        if direct_results["total_results"] >= current_page * page_size:
+        if int(direct_results["total_results"]) >= current_page * page_size:
             print("we have direct hits on collections")
             return JSONResponse(content=search_results(request))
         else:
@@ -111,7 +118,11 @@ class SearchAPI(View):
             request_copy["resource-type-filter"] = json.dumps(base_resource_type_filter)
             request_copy["paging-filter"] = 1
             request.GET = request_copy
+
             backfill_results = search_results(request)
+            # import ipdb
+
+            # ipdb.sset_trace()
 
             # first page of hits of potentially related resources
             resourceinstanceids = [
@@ -123,7 +134,7 @@ class SearchAPI(View):
                 search_relationships_via_ORM(
                     resourceinstanceids,
                     target_graphid=settings.COLLECTIONS_GRAPHID,
-                    depth=3,
+                    depth=2,
                 )
             )
 
@@ -198,98 +209,157 @@ def search_relationships_via_ORM(
     return get_related_resourceinstanceids(resourceinstanceids, depth=depth)
 
 
-def search_relationships(resourceinstanceids=None, target_graphid=None):
-    with connection.cursor() as cursor:
-        sql = """
-            WITH RECURSIVE resource_traversal_from(resourcexid, resourceid, graphid, depth) AS (
-                -- Anchor member: start with the given list of starting resource IDs
-                SELECT 
-                    resource_x_resource.resourcexid, resourceinstanceidto AS resourceid, resourceinstanceto_graphid AS graphid, 0 AS depth
-                FROM 
-                    resource_x_resource
-                WHERE 
-                    resourceinstanceidfrom = ANY(%s::uuid[])
+def search_direct_relationships_via_ORM(
+    resourceinstanceids=None,
+    target_graphid=None,
+    depth=1,
+):
+    hits = set()
 
-                UNION ALL
+    # This is a placeholder for the ORM version of the search_relationships function
+    # This function should return a list of resourceinstanceids of reference collections
+    # that are related to the given list of resourceinstanceids
+    def get_related_resourceinstanceids(resourceinstanceids, depth=1):
+        depth -= 1
+        to_crawl = set()
 
-                -- Recursive member: traverse the table bidirectionally
-                SELECT 
-                    resource_x_resource.resourcexid, resource_x_resource.resourceinstanceidto AS resourceid, resourceinstanceto_graphid AS graphid, rt.depth + 1
-                FROM 
-                    resource_x_resource
-                INNER JOIN 
-                    resource_traversal_from rt
-                ON 
-                    resource_x_resource.resourceinstanceidfrom = rt.resourceid
-                WHERE 
-                    rt.graphid != %s::uuid
-                
-            ) CYCLE resourcexid SET is_cycle USING path
-
-            SELECT DISTINCT resourceid
-            FROM resource_traversal_from
-            WHERE graphid = %s::uuid
-            AND DEPTH < 3
-
-            UNION (
-                WITH RECURSIVE resource_traversal_to(resourcexid, resourceid, graphid, depth) AS (
-                    -- Anchor member: start with the given list of starting resource IDs
-                    SELECT 
-                        resource_x_resource.resourcexid, resourceinstanceidfrom AS resourceid, resourceinstancefrom_graphid AS graphid, 0 AS depth
-                    FROM 
-                        resource_x_resource
-                    WHERE 
-                        resourceinstanceidto = ANY(%s::uuid[])
-                    
-                    UNION ALL
-                
-                    SELECT 
-                        resource_x_resource.resourcexid, resource_x_resource.resourceinstanceidfrom AS resourceid, resourceinstancefrom_graphid AS graphid, rt.depth + 1
-                    FROM 
-                        resource_x_resource
-                    INNER JOIN 
-                        resource_traversal_to rt
-                    ON 
-                        resource_x_resource.resourceinstanceidto = rt.resourceid
-                    WHERE 
-                        rt.graphid != %s::uuid
-                
-                ) CYCLE resourcexid SET is_cycle USING path
-
-                SELECT DISTINCT resourceid
-                FROM resource_traversal_to
-                WHERE graphid = %s::uuid
-                AND DEPTH < 3
-            )
-        """
-        print(
-            sql
-            % (
-                resourceinstanceids,
-                target_graphid,
-                target_graphid,
-                resourceinstanceids,
-                target_graphid,
-                target_graphid,
-            )
+        # This is a placeholder for the ORM version of the get_related_resourceinstanceids function
+        # This function should return a list of resourceinstanceids of resources that are related to
+        # the given list of resourceinstanceids
+        instances_query = Q(resourceinstanceidfrom__in=resourceinstanceids) | Q(
+            resourceinstanceidto__in=resourceinstanceids
         )
-        cursor.execute(
-            sql,
-            [
-                resourceinstanceids,
-                target_graphid,
-                target_graphid,
-                resourceinstanceids,
-                target_graphid,
-                target_graphid,
-            ],
-        )
-        hits = []
-        # hits = [str(row[0]) for row in cursor.fetchall()]
-        for row in cursor.fetchall():
-            hits.append(str(row[0]))
-        print(len(hits))
+
+        for res in ResourceXResource.objects.filter(instances_query).values_list(
+            "resourceinstanceidfrom",
+            "resourceinstancefrom_graphid",
+            "resourceinstanceidto",
+            "resourceinstanceto_graphid",
+        ):
+            if res[0] not in resourceinstanceids and res[0] not in hits:
+                hits.add(res[0])
+
+            if res[3] not in resourceinstanceids and res[3] not in hits:
+                hits.add(res[3])
+            # if str(res[1]) != target_graphid:
+            # else:
+            #     hits.add(res[0])
+
+            # if str(res[3]) != target_graphid:
+            #     to_crawl.add(res[2])
+            # else:
+            #     hits.add(res[2])
+
+        if depth > 0:
+            get_related_resourceinstanceids(list(hits), depth=depth)
+
         return hits
 
+    return get_related_resourceinstanceids(resourceinstanceids, depth=depth)
 
-# {"query": {"ids": {"values": ["fba9bdb3-29a6-3cc2-bd7e-2d3fa7a08c78"]}}, "start": 0, "limit": 0}
+
+class RREsMappingModifier(EsMappingModifier):
+
+    counter = 1
+
+    def __init__(self):
+        pass
+
+    @staticmethod
+    def get_data_from_function(resourceinstanceids):
+        with connection.cursor() as cursor:
+            cursor.execute(
+                "SELECT * FROM __arches_get_values_for_resourceinstances(%s)",
+                [resourceinstanceids],
+            )
+            rows = cursor.fetchall()
+        return rows
+
+    @staticmethod
+    def add_search_terms(resourceinstance, document, terms):
+        if str(resourceinstance.graph_id) != settings.COLLECTIONS_GRAPHID:
+            return
+
+        if RREsMappingModifier.get_mapping_property() not in document:
+            document[RREsMappingModifier.get_mapping_property()] = []
+
+        related_resource_ids = list(
+            search_direct_relationships_via_ORM(
+                resourceinstanceids=[resourceinstance.resourceinstanceid],
+                target_graphid=settings.COLLECTIONS_GRAPHID,
+                depth=2,
+            )
+        )
+        # print(related_resource_ids)
+
+        # Example usage
+        for item in RREsMappingModifier.get_data_from_function(related_resource_ids):
+            # print(item)
+            document[RREsMappingModifier.get_mapping_property()].append(item[0])
+
+    @staticmethod
+    def create_nested_custom_filter(term, original_element):
+        if "nested" not in original_element:
+            return original_element
+        document_key = RREsMappingModifier.get_mapping_property()
+        custom_filter = Bool()
+        # custom_filter.should(
+        #     Match(
+        #         field="%s.custom_value" % document_key,
+        #         query=term["value"],
+        #         type="phrase_prefix",
+        #     )
+        # )
+        custom_filter.should(
+            Match(
+                field=document_key,
+                query=term["value"],
+                type="phrase_prefix",
+            )
+        )
+        nested_custom_filter = Nested(path=document_key, query=custom_filter)
+        new_must_element = Bool()
+        new_must_element.should(original_element)
+        new_must_element.should(nested_custom_filter)
+        new_must_element.dsl["bool"]["minimum_should_match"] = 1
+        return new_must_element
+
+    @staticmethod
+    def add_search_filter(search_query, term):
+        document_key = RREsMappingModifier.get_mapping_property()
+        # original_must_filter = search_query.dsl["bool"]["must"]
+        search_query.dsl["bool"]["must"] = []
+        search_query.must(
+            Match(
+                field=document_key,
+                query=term["value"],
+                type="phrase_prefix",
+            )
+        )
+        # for must_element in original_must_filter:
+        #     search_query.must(
+        #         RREsMappingModifier.create_nested_custom_filter(term, must_element)
+        #     )
+
+        # original_must_filter = search_query.dsl["bool"]["must_not"]
+        # search_query.dsl["bool"]["must_not"] = []
+        # for must_element in original_must_filter:
+        #     search_query.must_not(
+        #         RREsMappingModifier.create_nested_custom_filter(term, must_element)
+        #     )
+
+    @staticmethod
+    def get_mapping_definition():
+        """
+        Defines the ES structure of the custom search document section. Called when the initial ES resources index is created.
+
+        :return: dict of the custom document section
+        :rtype dict
+        """
+        return {
+            "type": "text",
+            "fields": {
+                "raw": {"type": "keyword", "ignore_above": 256},
+                "folded": {"type": "text", "analyzer": "folding"},
+            },
+        }
