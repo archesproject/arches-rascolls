@@ -2,6 +2,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.conf.urls.i18n import i18n_patterns
 from django.urls import include, path, re_path
+from afrc.views.file_api import FileAPI
 from afrc.views.settings_api import SettingsAPI
 from afrc.views.search_api import SearchAPI
 from afrc.views.map_api import (
@@ -16,6 +17,7 @@ urlpatterns = [
     path("api-search", SearchAPI.as_view(), name="api-search"),
     path("api-settings", SettingsAPI.as_view(), name="api-settings"),
     path("api-map-data", MapDataAPI.as_view(), name="api-map-data"),
+    path("api-file-data", FileAPI.as_view(), name="api-file-data"),
     path("api-feature-buffer", FeatureBufferAPI.as_view(), name="api-feature-buffer"),
     path("api-geojson-bounds", GeoJSONBoundsAPI.as_view(), name="api-geojson-bounds"),
     re_path(
