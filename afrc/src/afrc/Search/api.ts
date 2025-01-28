@@ -65,5 +65,10 @@ export const fetchResourceData = (resourceId: string) => {
     return createRequest(url)();
 };
 
+export const fetchImageData = (imageResourceIds: string[]) => { 
+    const url = `${arches.urls["api-file-data"]}?resourceids=${imageResourceIds.join(",")}`;
+    return createRequest(url)();
+};
+
 export const fetchSettings = createRequest(arches.urls["api-settings"]);
 export const fetchMapData = createRequest(arches.urls["api-map-data"]);

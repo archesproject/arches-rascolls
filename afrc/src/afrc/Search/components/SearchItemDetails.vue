@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { onMounted, inject, ref, watch } from "vue";
-import { fetchResourceData } from "@/afrc/Search/api.ts";
+import { fetchResourceData, fetchImageData } from "@/afrc/Search/api.ts";
 import type { Ref } from "vue";
 import Button from "primevue/button";
 import Carousel from 'primevue/carousel';
@@ -21,17 +21,17 @@ watch(resultSelected, () => {
 });
 
 async function getData() {
+    let imageData: string[] = [];
     const resp = await fetchResourceData(resultSelected.value);
+    const imageResourceids = resp.resource["Digital Reference"]?.map((tile: { [key: string]: any; }) => tile["Digital Source"]["resourceId"]);
     displayname.value = resp.displayname;
     displaydescription.value = resp.displaydescription;
-    images.value = [
-        'http://www.minisimmonssurfboards.com/wp-content/uploads/2012/07/mini_simmons_round_tail.jpg',
-        'https://www.minisimmonssurfboards.com/wp-content/uploads/2013/08/DOC-Mini-Simmons-1.jpg',
-        'https://www.minisimmonssurfboards.com/wp-content/uploads/2013/06/20130606-222901.jpg',
-        'https://www.surfboardsbygrantnewby.com/wp-content/uploads/2020/12/Traditional-Mini-Simmons.jpg',
-        'https://i0.wp.com/www.minisimmonssurfboards.com/wp-content/uploads/2015/11/5_mandala_doubleRainbow_PinotNoir_1024x1024.jpg?resize=600%2C800',
-        'https://3.bp.blogspot.com/-O0s9gHdDs-c/TW0i1DgLfBI/AAAAAAAAEMc/p3gwEQ9fziE/s1600/mini-simmons.jpg',
-        ];
+    if (imageResourceids) {
+        imageData = await fetchImageData(imageResourceids);
+        images.value = imageData;
+    } else {
+        images.value = [];
+    }
 }
 
 function clearResult() {
