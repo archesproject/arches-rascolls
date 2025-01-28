@@ -70,7 +70,7 @@ function selectResult(resourceid: string) {
                     target="_blank"
                     size="large"
                     icon="pi pi-pen-to-square"
-                    :href="'./' + arches.urls.resource + '/' + searchResult._id"
+                    :href="arches.urls.resource + '/' + searchResult._id"
                 />
             </div>
         </div>
