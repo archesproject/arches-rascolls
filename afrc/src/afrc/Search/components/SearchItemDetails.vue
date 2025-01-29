@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { onMounted, inject, ref, watch } from "vue";
+import type { GenericObject, Acquisition } from "@/afrc/Search/types";
 import { fetchResourceData, fetchImageData } from "@/afrc/Search/api.ts";
 import type { Ref } from "vue";
 import Button from "primevue/button";
@@ -11,6 +12,8 @@ const resultsSelected = inject("resultsSelected") as Ref<string[]>;
 let displayname: Ref<string> = ref("");
 let displaydescription: Ref<string> = ref("");
 let images: Ref<string[]> = ref([]);
+let acquisitions: Ref<Acquisition[]> = ref([]);
+let identifier: Ref<string> = ref("");
 
 onMounted(async () => {
     getData();
@@ -24,8 +27,18 @@ async function getData() {
     let imageData: string[] = [];
     const resp = await fetchResourceData(resultSelected.value);
     const imageResourceids = resp.resource["Digital Reference"]?.map((tile: { [key: string]: any; }) => tile["Digital Source"]["resourceId"]);
+    const accessionNumber = resp.resource['Identifier']?.find((x: {[key: string]: any;}) => x["Identifier_type"]["@display_value"]==="Accession Number")
+
+    acquisitions.value = resp.resource["Addition to Collection"]?.map((x: { [key: string]: any; }) => (
+        {
+            "person": x["Addition to Collection_carried out by"]["@display_value"],
+            "date": x["Addition to Collection_time"]["Addition to Collection_time_begin of the begin"]["@display_value"],
+            "details": x["Addition to Collection_Statement"]?.map((y: {[key: string]: any;}) => (y["Addition to Collection_Statement_content"]["@display_value"])).join(" ")
+        }));
     displayname.value = resp.displayname;
     displaydescription.value = resp.displaydescription;
+    identifier.value = accessionNumber ? accessionNumber["Identifier_content"]["@display_value"] : ""
+
     if (imageResourceids) {
         imageData = await fetchImageData(imageResourceids);
         images.value = imageData;
@@ -49,7 +62,7 @@ function clearResult() {
                 {{ displayname || "No name provided" }}
                 </div>
                 <div style="font-size: 0.7em; color: steelblue; font-style: italic; font-weight: 400;">
-                    (Room 32, Row 2, Shelf 3)
+                    {{ identifier }}
                 </div>
             </div>
             <div>
@@ -65,9 +78,10 @@ function clearResult() {
             </div>
         </div>
         <div class="description">
-            {{ displaydescription || "No description provided" }} <span>Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit</span>
+            <div v-if="displaydescription && displaydescription != 'Undefined'">{{ displaydescription }}</div>
+            <div v-else>No description provided</div> 
         </div>
-        <div class="images">
+        <div class="images" v-if="images.length">
         <Carousel :value="images" :numVisible="2" :numScroll="1" containerClass="flex items-center">
             <template #item="image">
                 <div class="border border-surface-200 dark:border-surface-700 rounded m-2  p-4">
@@ -82,18 +96,20 @@ function clearResult() {
             </template>
         </Carousel>
         </div>
-        <div class="resource-details">
-            <div class="value-header">Chemical Information</div>
+        <div class="resource-details"  style="color: grey">
+            <div class="value-header">Material Information</div>
             <div class="value-entry">Chemical (CAS) Number:<span class="resource-details-value">1309-36-0</span></div>
             <div class="value-entry">Chemical Formula:<span class="resource-details-value">FeS2</span></div>
             <div class="value-entry">Chemical Name:<span class="resource-details-value">Iron Disulfide</span></div>
             <div class="value-entry">Common Name:<span class="resource-details-value">Pyrite, Fool's Gold</span></div>
         </div>
-        <div class="resource-details">
-            <div class="value-header">Aquisition Information</div>
-            <div class="value-entry">Acquired by:<span class="resource-details-value">Art Kaplan</span></div>
-            <div class="value-entry">Acquired from:<span class="resource-details-value">Minerals-R-Us</span></div>
-            <div class="value-entry">Acquired on:<span class="resource-details-value">Feb 18, 2001</span></div>
+        <div class="resource-details" v-if="acquisitions">
+            <div class="value-header">Acquisition Information</div>
+            <div v-for="acquisition in acquisitions">
+                <div class="value-entry">Acquired by:<span class="resource-details-value">{{ acquisition.person }}</span></div>
+                <div class="value-entry">Acquired on:<span class="resource-details-value">{{ acquisition.date }}</span></div>
+                <div class="value-entry">Acquisition Details:<span class="resource-details-value">{{ acquisition.details }}</span></div>
+            </div>
         </div>
         
     </div>
