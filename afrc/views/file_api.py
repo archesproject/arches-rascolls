@@ -6,7 +6,7 @@ from django.db.models.fields.json import KT
 
 class FileAPI(View):
     def get(self, request):
-        file_node_id = file_node_id
+        file_node_id = "8713d9ca-d860-11ef-98f5-0275dc2ded29"
         resource_ids = request.GET.get("resourceids")
         if resource_ids:
             resource_ids = resource_ids.split(",")
