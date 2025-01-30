@@ -9091,12 +9091,8 @@
                     "config": {
                         "graphs": [
                             {
-                                "graphid": "52c40a30-b25c-11e9-92cf-a4d18cec433a",
-                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
-                                "name": "Period",
-                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
-                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
-                                "useOntologyRelationship": false
+                                "graphid": "c7b359d8-d833-11ef-a368-0275dc2ded29",
+                                "name": "Period"
                             }
                         ],
                         "searchDsl": "",
@@ -9717,12 +9713,8 @@
                     "config": {
                         "graphs": [
                             {
-                                "graphid": "d5093dfb-ea22-4ad5-8d46-86da9cbfba58",
-                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
-                                "name": "Digital Resources",
-                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
-                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
-                                "useOntologyRelationship": false
+                                "graphid": "8713965e-d860-11ef-98f5-0275dc2ded29",
+                                "name": "Digital Resources - New Clone"
                             }
                         ],
                         "searchDsl": "",
@@ -9858,8 +9850,12 @@
                     "config": {
                         "graphs": [
                             {
-                                "graphid": "52c40a30-b25c-11e9-92cf-a4d18cec433a",
-                                "name": "Period"
+                                "graphid": "c7b359d8-d833-11ef-a368-0275dc2ded29",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Period",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "useOntologyRelationship": false
                             }
                         ],
                         "searchDsl": "",
@@ -9888,12 +9884,8 @@
                     "config": {
                         "graphs": [
                             {
-                                "graphid": "52c40a30-b25c-11e9-92cf-a4d18cec433a",
-                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
-                                "name": "Period",
-                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
-                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
-                                "useOntologyRelationship": false
+                                "graphid": "c7b359d8-d833-11ef-a368-0275dc2ded29",
+                                "name": "Period"
                             }
                         ],
                         "searchDsl": "",
@@ -10370,8 +10362,12 @@
                     "config": {
                         "graphs": [
                             {
-                                "graphid": "52c40a30-b25c-11e9-92cf-a4d18cec433a",
-                                "name": "Period"
+                                "graphid": "c7b359d8-d833-11ef-a368-0275dc2ded29",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Period",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "useOntologyRelationship": false
                             }
                         ],
                         "searchDsl": "",
@@ -10843,12 +10839,8 @@
                     "config": {
                         "graphs": [
                             {
-                                "graphid": "52c40a30-b25c-11e9-92cf-a4d18cec433a",
-                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
-                                "name": "Period",
-                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
-                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
-                                "useOntologyRelationship": false
+                                "graphid": "c7b359d8-d833-11ef-a368-0275dc2ded29",
+                                "name": "Period"
                             }
                         ],
                         "searchDsl": "",
@@ -10900,8 +10892,12 @@
                     "config": {
                         "graphs": [
                             {
-                                "graphid": "52c40a30-b25c-11e9-92cf-a4d18cec433a",
-                                "name": "Period"
+                                "graphid": "c7b359d8-d833-11ef-a368-0275dc2ded29",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Period",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "useOntologyRelationship": false
                             }
                         ],
                         "searchDsl": "",
@@ -11163,7 +11159,7 @@
                     "config": {
                         "graphs": [
                             {
-                                "graphid": "52c40a30-b25c-11e9-92cf-a4d18cec433a",
+                                "graphid": "c7b359d8-d833-11ef-a368-0275dc2ded29",
                                 "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "name": "Period",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
@@ -11388,7 +11384,7 @@
                     "config": {
                         "graphs": [
                             {
-                                "graphid": "52c40a30-b25c-11e9-92cf-a4d18cec433a",
+                                "graphid": "c7b359d8-d833-11ef-a368-0275dc2ded29",
                                 "name": "Period"
                             }
                         ],
@@ -12046,8 +12042,8 @@
             "publication": {
                 "graph_id": "26a55ac6-d772-11ef-825b-0275dc2ded29",
                 "notes": null,
-                "publicationid": "51ebfd9a-d806-11ef-b730-0275dc2ded29",
-                "published_time": "2025-01-21T06:45:12.759"
+                "publicationid": "9f44bd3c-d8c6-11ef-acd8-0275dc2ded29",
+                "published_time": "2025-01-22T05:41:45.898"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
