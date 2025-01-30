@@ -24,24 +24,25 @@ watch(resultSelected, () => {
 });
 
 async function getData() {
-    let imageData: string[] = [];
     const resp = await fetchResourceData(resultSelected.value);
-    const imageResourceids = resp.resource["Digital Reference"]?.map((tile: { [key: string]: any; }) => tile["Digital Source"]["resourceId"]); // eslint-disable-line @typescript-eslint/no-explicit-any
-    const accessionNumber = resp.resource['Identifier']?.find((x: {[key: string]: any;}) => x["Identifier_type"]["@display_value"]==="Accession Number"); // eslint-disable-line @typescript-eslint/no-explicit-any
+    const imageResourceids = resp.resource["Digital Reference"]?.map((tile: { [key: string]: any; }) => // eslint-disable-line @typescript-eslint/no-explicit-any
+        tile["Digital Source"]["resourceId"]); 
+    const accessionNumber = resp.resource['Identifier']?.find((identifier: {[key: string]: any;}) => // eslint-disable-line @typescript-eslint/no-explicit-any
+        identifier["Identifier_type"]["@display_value"]==="Accession Number"); 
 
-    acquisitions.value = resp.resource["Addition to Collection"]?.map((x: { [key: string]: any; }) => ( // eslint-disable-line @typescript-eslint/no-explicit-any
-        {
-            "person": x["Addition to Collection_carried out by"]["@display_value"],
-            "date": x["Addition to Collection_time"]["Addition to Collection_time_begin of the begin"]["@display_value"],
-            "details": x["Addition to Collection_Statement"]?.map((y: {[key: string]: any;}) => (y["Addition to Collection_Statement_content"]["@display_value"])).join(" ") // eslint-disable-line @typescript-eslint/no-explicit-any
-        })); // eslint-disable-line @typescript-eslint/no-explicit-any
+    acquisitions.value = resp.resource["Addition to Collection"]?.map((tile: { [key: string]: any; }) => // eslint-disable-line @typescript-eslint/no-explicit-any
+        ({ 
+            "person": tile["Addition to Collection_carried out by"]["@display_value"],
+            "date": tile["Addition to Collection_time"]["Addition to Collection_time_begin of the begin"]["@display_value"],
+            "details": tile["Addition to Collection_Statement"]?.map((statement: {[key: string]: any;}) => // eslint-disable-line @typescript-eslint/no-explicit-any
+                (statement["Addition to Collection_Statement_content"]["@display_value"])).join(" ") 
+        }));
     displayname.value = resp.displayname;
     displaydescription.value = resp.displaydescription;
     identifier.value = accessionNumber ? accessionNumber["Identifier_content"]["@display_value"] : "";
 
     if (imageResourceids) {
-        imageData = await fetchImageData(imageResourceids);
-        images.value = imageData;
+        images.value = await fetchImageData(imageResourceids);
     } else {
         images.value = [];
     }
