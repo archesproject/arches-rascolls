@@ -211,7 +211,6 @@ def search_relationships_via_ORM(
 
 def search_direct_relationships_via_ORM(
     resourceinstanceids=None,
-    target_graphid=None,
     depth=1,
 ):
     hits = set()
@@ -221,7 +220,6 @@ def search_direct_relationships_via_ORM(
     # that are related to the given list of resourceinstanceids
     def get_related_resourceinstanceids(resourceinstanceids, depth=1):
         depth -= 1
-        to_crawl = set()
 
         # This is a placeholder for the ORM version of the get_related_resourceinstanceids function
         # This function should return a list of resourceinstanceids of resources that are related to
@@ -232,23 +230,13 @@ def search_direct_relationships_via_ORM(
 
         for res in ResourceXResource.objects.filter(instances_query).values_list(
             "resourceinstanceidfrom",
-            "resourceinstancefrom_graphid",
             "resourceinstanceidto",
-            "resourceinstanceto_graphid",
         ):
             if res[0] not in resourceinstanceids and res[0] not in hits:
                 hits.add(res[0])
 
-            if res[3] not in resourceinstanceids and res[3] not in hits:
-                hits.add(res[3])
-            # if str(res[1]) != target_graphid:
-            # else:
-            #     hits.add(res[0])
-
-            # if str(res[3]) != target_graphid:
-            #     to_crawl.add(res[2])
-            # else:
-            #     hits.add(res[2])
+            if res[2] not in resourceinstanceids and res[2] not in hits:
+                hits.add(res[2])
 
         if depth > 0:
             get_related_resourceinstanceids(list(hits), depth=depth)
@@ -286,7 +274,6 @@ class RREsMappingModifier(EsMappingModifier):
         related_resource_ids = list(
             search_direct_relationships_via_ORM(
                 resourceinstanceids=[resourceinstance.resourceinstanceid],
-                target_graphid=settings.COLLECTIONS_GRAPHID,
                 depth=2,
             )
         )

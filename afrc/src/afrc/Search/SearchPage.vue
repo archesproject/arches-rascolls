@@ -6,7 +6,7 @@ import { useGettext } from "vue3-gettext";
 import Toast from "primevue/toast";
 import { useToast } from "primevue/usetoast";
 import Button from "primevue/button";
-import Paginator from "primevue/paginator";
+import DataView from "primevue/dataview";
 
 import { DEFAULT_ERROR_TOAST_LIFE, ERROR } from "@/afrc/Search/constants.ts";
 
@@ -200,16 +200,26 @@ onMounted(async () => {
                 <div class="result-count">{{ resultsCount }} Results</div>
                 <div class="search-result-list">
                     <!-- <div style="height: 50px">{{ item?._source.displayname }}</div> -->
-                    <SearchResultItem
-                        v-for="item in searchResults"
-                        :key="item"
-                        :search-result="item"
-                    />
-                    <Paginator
+                    <DataView
+                        paginator
+                        rows="10"
+                        :value="searchResults"
+                        :total-records="resultsCount"
+                        @page="onPageChange"
+                    >
+                        <template>
+                            <SearchResultItem
+                                v-for="item in searchResults"
+                                :key="item"
+                                :search-result="item"
+                            />
+                        </template>
+                    </DataView>
+                    <!-- <Paginator
                         rows="10"
                         :total-records="resultsCount"
                         @page="onPageChange"
-                    ></Paginator>
+                    ></Paginator> -->
                 </div>
             </section>
 
