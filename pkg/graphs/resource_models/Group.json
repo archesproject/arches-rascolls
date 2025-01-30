@@ -4394,7 +4394,7 @@
             "isresource": true,
             "jsonldcontext": "https://linked.art/ns/v1/linked-art.json",
             "name": {
-                "en": "Group"
+                "en": "Group "
             },
             "nodegroups": [
                 {
@@ -5519,9 +5519,9 @@
                     "config": {
                         "graphs": [
                             {
-                                "graphid": "d5093dfb-ea22-4ad5-8d46-86da9cbfba58",
+                                "graphid": "8713965e-d860-11ef-98f5-0275dc2ded29",
                                 "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
-                                "name": "Digital Resources",
+                                "name": "Digital Resources - New Clone",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
                                 "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
@@ -5553,43 +5553,43 @@
                     "config": {
                         "graphs": [
                             {
-                                "graphid": "26a55ac6-d772-11ef-825b-0275dc2ded29",
+                                "graphid": "42fb8480-d834-11ef-a75a-0275dc2ded29",
                                 "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
-                                "name": "Provenance Activity",
+                                "name": "Modification",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
                                 "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
                             },
                             {
-                                "graphid": "03357848-1d9d-11eb-a29f-024e0d439fdb",
-                                "inverseRelationshipConcept": "843aadc8-5a29-412b-badd-b6261650f21b",
-                                "name": "Sampling Activity",
-                                "relationshipCollection": "54414cde-b8e6-4ab7-8b9e-cd3694f178d8",
-                                "relationshipConcept": "34ceb7f3-807d-4e6d-bb0b-1f9ea89d8456",
-                                "useOntologyRelationship": false
-                            },
-                            {
-                                "graphid": "0b9235d9-ca85-11e9-9fa2-a4d18cec433a",
-                                "inverseRelationshipConcept": "843aadc8-5a29-412b-badd-b6261650f21b",
-                                "name": "Project",
-                                "relationshipCollection": "54414cde-b8e6-4ab7-8b9e-cd3694f178d8",
-                                "relationshipConcept": "34ceb7f3-807d-4e6d-bb0b-1f9ea89d8456",
-                                "useOntologyRelationship": false
-                            },
-                            {
-                                "graphid": "615b11ee-c457-11e9-910c-a4d18cec433a",
-                                "inverseRelationshipConcept": "843aadc8-5a29-412b-badd-b6261650f21b",
+                                "graphid": "04f87da0-d834-11ef-a75a-0275dc2ded29",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "name": "Observation",
-                                "relationshipCollection": "54414cde-b8e6-4ab7-8b9e-cd3694f178d8",
-                                "relationshipConcept": "34ceb7f3-807d-4e6d-bb0b-1f9ea89d8456",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
                             },
                             {
-                                "graphid": "5bece219-c456-11e9-8dcd-a4d18cec433a",
-                                "inverseRelationshipConcept": "843aadc8-5a29-412b-badd-b6261650f21b",
-                                "name": "Modification",
-                                "relationshipCollection": "54414cde-b8e6-4ab7-8b9e-cd3694f178d8",
-                                "relationshipConcept": "34ceb7f3-807d-4e6d-bb0b-1f9ea89d8456",
+                                "graphid": "eaac4efa-d832-11ef-a368-0275dc2ded29",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Project",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "useOntologyRelationship": false
+                            },
+                            {
+                                "graphid": "57d7b38e-d833-11ef-ab38-0275dc2ded29",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Sampling Activity",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "useOntologyRelationship": false
+                            },
+                            {
+                                "graphid": "26a55ac6-d772-11ef-825b-0275dc2ded29",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Provenance Activity",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
                             }
                         ],
@@ -5694,7 +5694,7 @@
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": true,
-                    "name": "Group",
+                    "name": "Group ",
                     "nodegroup_id": null,
                     "nodeid": "3695ea42-d770-11ef-8f5d-0275dc2ded29",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E74_Group",
@@ -6763,9 +6763,9 @@
                     "config": {
                         "graphs": [
                             {
-                                "graphid": "d5093dfb-ea22-4ad5-8d46-86da9cbfba58",
+                                "graphid": "8713965e-d860-11ef-98f5-0275dc2ded29",
                                 "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
-                                "name": "Digital Resources",
+                                "name": "Digital Resources - New Clone",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
                                 "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
@@ -7679,8 +7679,8 @@
             "publication": {
                 "graph_id": "36956e50-d770-11ef-8f5d-0275dc2ded29",
                 "notes": null,
-                "publicationid": "2875a634-d7f5-11ef-8ff3-0275dc2ded29",
-                "published_time": "2025-01-21T04:42:21.753"
+                "publicationid": "3fd6e10e-d8c6-11ef-9ef7-0275dc2ded29",
+                "published_time": "2025-01-22T05:39:05.794"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -7697,7 +7697,7 @@
                 "isrequired": false,
                 "issearchable": true,
                 "istopnode": true,
-                "name": "Group",
+                "name": "Group ",
                 "nodegroup_id": null,
                 "nodeid": "3695ea42-d770-11ef-8f5d-0275dc2ded29",
                 "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E74_Group",
