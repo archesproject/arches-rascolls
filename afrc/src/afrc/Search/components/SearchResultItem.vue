@@ -26,7 +26,6 @@ function selectResult(resourceid: string) {
     resultSelected.value = resourceid;
     resultsSelected.value = [resourceid];
 }
-
 </script>
 
 <template>
@@ -59,7 +58,9 @@ function selectResult(resourceid: string) {
                     severity="secondary"
                     text
                     size="large"
-                    @click="selectResult(searchResult._source.resourceinstanceid)"
+                    @click="
+                        selectResult(searchResult._source.resourceinstanceid)
+                    "
                 />
                 <Button
                     label="edit"

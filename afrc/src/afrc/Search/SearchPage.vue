@@ -184,10 +184,8 @@ onMounted(async () => {
                     />
                 </div>
             </section>
-            <section
-                v-if="dataLoaded && resultSelected"
-            >
-                <SearchItemDetails :instanceId="resultSelected"/>
+            <section v-if="dataLoaded && resultSelected">
+                <SearchItemDetails :instance-id="resultSelected" />
             </section>
             <div
                 v-if="showMap && dataLoaded"
