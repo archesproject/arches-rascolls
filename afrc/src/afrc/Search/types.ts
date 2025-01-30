@@ -104,5 +104,5 @@ export interface UserRefAndSetter {
 export interface Acquisition {
     person: string;
     date: number;
-    details: string
+    details: string;
   }
