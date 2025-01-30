@@ -25,6 +25,7 @@ classifiers = [
 requires-python = ">=3.10"
 dependencies = [
     "arches>=7.6.2,<7.7.0",
+    "django_csp==3.8",
 ]
 version = "0.0.1"
 
