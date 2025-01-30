@@ -66,6 +66,7 @@ interface Props {
     isDrawingEnabled?: boolean;
     drawnFeatures?: Feature[];
     drawnFeaturesBuffer?: Buffer;
+    isPopupEnabled?: boolean;
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -76,6 +77,7 @@ const props = withDefaults(defineProps<Props>(), {
     isDrawingEnabled: false,
     drawnFeatures: () => [],
     drawnFeaturesBuffer: undefined,
+    isPopupEnabled: false,
 });
 
 const {
@@ -86,9 +88,11 @@ const {
     isDrawingEnabled,
     drawnFeatures,
     drawnFeaturesBuffer,
+    isPopupEnabled,
 } = props;
 
 let resultsSelected = inject("resultsSelected") as Ref<string[]>;
+let resultSelected = inject("resultSelected") as Ref<string>;
 
 const emits = defineEmits([
     "mapInitialized",
@@ -143,15 +147,17 @@ watch(
     },
 );
 
-watch(clickedFeatures, () => {
-    if (popupInstance.value) {
-        popupInstance.value.remove();
-    }
-    popupInstance.value = new maplibregl.Popup()
-        .setLngLat(clickedCoordinates.value)
-        .setDOMContent(popupContainer.value!.$el)
-        .addTo(map.value!);
-});
+if (isPopupEnabled) {
+    watch(clickedFeatures, () => {
+        if (popupInstance.value) {
+            popupInstance.value.remove();
+        }
+        popupInstance.value = new maplibregl.Popup()
+            .setLngLat(clickedCoordinates.value)
+            .setDOMContent(popupContainer.value!.$el)
+            .addTo(map.value!);
+    });
+}
 
 onMounted(() => {
     createMap();
@@ -386,6 +392,7 @@ function addOverlayToMap(overlay: MapLayer) {
                 clickedCoordinates.value = [e.lngLat.lng, e.lngLat.lat];
                 clickedFeatures.value = features;
                 resultsSelected.value = [];
+                resultSelected.value = "";
                 const uniqueResourceIds = new Set(
                     features.map(
                         (feature) =>
@@ -393,8 +400,10 @@ function addOverlayToMap(overlay: MapLayer) {
                     ),
                 );
                 resultsSelected.value = Array.from(uniqueResourceIds);
+                resultSelected.value = resultsSelected.value[0];
             } else {
                 resultsSelected.value = [];
+                resultSelected.value = "";
             }
         };
 
