@@ -29,7 +29,7 @@
                         "en": "Identifier for Production Event"
                     },
                     "nodegroup_id": "a39010a4-d834-11ef-b730-0275dc2ded29",
-                    "sortorder": 2,
+                    "sortorder": 1,
                     "visible": true
                 },
                 {
@@ -232,7 +232,7 @@
                         "en": "TimeSpan of Production Event"
                     },
                     "nodegroup_id": "a3902e9a-d834-11ef-b730-0275dc2ded29",
-                    "sortorder": 3,
+                    "sortorder": 2,
                     "visible": true
                 },
                 {
@@ -290,7 +290,7 @@
                         "en": "Statement about Production Event"
                     },
                     "nodegroup_id": "a39036a6-d834-11ef-b730-0275dc2ded29",
-                    "sortorder": 1,
+                    "sortorder": 3,
                     "visible": true
                 },
                 {
@@ -377,7 +377,7 @@
                         "en": "Dimension of TimeSpan of Production Event"
                     },
                     "nodegroup_id": "a3904312-d834-11ef-b730-0275dc2ded29",
-                    "sortorder": null,
+                    "sortorder": 0,
                     "visible": true
                 },
                 {
@@ -522,7 +522,7 @@
                         "en": "Name for TimeSpan of Production Event"
                     },
                     "nodegroup_id": "a3905582-d834-11ef-b730-0275dc2ded29",
-                    "sortorder": null,
+                    "sortorder": 1,
                     "visible": true
                 },
                 {
@@ -742,7 +742,7 @@
                         "en": "Name Label"
                     },
                     "node_id": "a3907ff8-d834-11ef-b730-0275dc2ded29",
-                    "sortorder": 3,
+                    "sortorder": 4,
                     "visible": false,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
@@ -816,7 +816,7 @@
                         "en": "Source Reference Work for Name"
                     },
                     "node_id": "a390a938-d834-11ef-b730-0275dc2ded29",
-                    "sortorder": 4,
+                    "sortorder": 3,
                     "visible": false,
                     "widget_id": "ff3c400a-76ec-11e7-a793-784f435179ea"
                 },
@@ -880,7 +880,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "_label",
+                        "label": "Name Label",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -890,7 +890,7 @@
                     },
                     "id": "a390c436-d834-11ef-b730-0275dc2ded29",
                     "label": {
-                        "en": "_label"
+                        "en": "Name Label"
                     },
                     "node_id": "a3908a16-d834-11ef-b730-0275dc2ded29",
                     "sortorder": 4,
@@ -904,14 +904,14 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "source",
+                        "label": "Source Reference Work for Name",
                         "placeholder": {
                             "en": ""
                         }
                     },
                     "id": "a390c4b8-d834-11ef-b730-0275dc2ded29",
                     "label": {
-                        "en": "source"
+                        "en": "Source Reference Work for Name"
                     },
                     "node_id": "a390ae06-d834-11ef-b730-0275dc2ded29",
                     "sortorder": 3,
@@ -957,7 +957,7 @@
                             "prefix",
                             "suffix"
                         ],
-                        "label": "Lowest possible value",
+                        "label": "Dimension Lowest possible value",
                         "max": "",
                         "min": "",
                         "placeholder": {
@@ -976,7 +976,7 @@
                     },
                     "id": "a390c5bc-d834-11ef-b730-0275dc2ded29",
                     "label": {
-                        "en": "Lowest possible value"
+                        "en": "Dimension Lowest possible value"
                     },
                     "node_id": "a390bd2e-d834-11ef-b730-0275dc2ded29",
                     "sortorder": 1,
@@ -990,7 +990,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Unit",
+                        "label": "Dimension Unit",
                         "options": [],
                         "placeholder": {
                             "en": "Select an option"
@@ -998,7 +998,7 @@
                     },
                     "id": "a390c634-d834-11ef-b730-0275dc2ded29",
                     "label": {
-                        "en": "Unit"
+                        "en": "Dimension Unit"
                     },
                     "node_id": "a390ac6c-d834-11ef-b730-0275dc2ded29",
                     "sortorder": 3,
@@ -1017,7 +1017,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "_label",
+                        "label": "Dimension Label",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -1027,7 +1027,7 @@
                     },
                     "id": "a390c6b6-d834-11ef-b730-0275dc2ded29",
                     "label": {
-                        "en": "_label"
+                        "en": "Dimension Label"
                     },
                     "node_id": "a3907a44-d834-11ef-b730-0275dc2ded29",
                     "sortorder": 6,
@@ -1044,7 +1044,7 @@
                             "prefix",
                             "suffix"
                         ],
-                        "label": "Highest possible value",
+                        "label": "Dimension Highest possible value",
                         "max": "",
                         "min": "",
                         "placeholder": {
@@ -1063,7 +1063,7 @@
                     },
                     "id": "a390c738-d834-11ef-b730-0275dc2ded29",
                     "label": {
-                        "en": "Highest possible value"
+                        "en": "Dimension Highest possible value"
                     },
                     "node_id": "a390a870-d834-11ef-b730-0275dc2ded29",
                     "sortorder": 2,
@@ -1077,7 +1077,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "type",
+                        "label": "Dimension Type",
                         "options": [],
                         "placeholder": {
                             "en": "Select an option"
@@ -1085,7 +1085,7 @@
                     },
                     "id": "a390c7b0-d834-11ef-b730-0275dc2ded29",
                     "label": {
-                        "en": "type"
+                        "en": "Dimension Type"
                     },
                     "node_id": "a3909bfa-d834-11ef-b730-0275dc2ded29",
                     "sortorder": 4,
@@ -1099,14 +1099,14 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "source",
+                        "label": "Source Reference Work for Dimension",
                         "placeholder": {
                             "en": ""
                         }
                     },
                     "id": "a390c832-d834-11ef-b730-0275dc2ded29",
                     "label": {
-                        "en": "source"
+                        "en": "Source Reference Work for Dimension"
                     },
                     "node_id": "a390ad3e-d834-11ef-b730-0275dc2ded29",
                     "sortorder": 5,
@@ -1123,7 +1123,7 @@
                             "prefix",
                             "suffix"
                         ],
-                        "label": "Value",
+                        "label": "Dimension Value",
                         "max": "",
                         "min": "",
                         "placeholder": {
@@ -1142,7 +1142,7 @@
                     },
                     "id": "a390c8b4-d834-11ef-b730-0275dc2ded29",
                     "label": {
-                        "en": "Value"
+                        "en": "Dimension Value"
                     },
                     "node_id": "a390a7a8-d834-11ef-b730-0275dc2ded29",
                     "sortorder": 0,
@@ -1214,7 +1214,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "_label [dimension/name]",
+                        "label": "Name Label ",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -1224,10 +1224,10 @@
                     },
                     "id": "a390ca44-d834-11ef-b730-0275dc2ded29",
                     "label": {
-                        "en": "_label [dimension/name]"
+                        "en": "Name Label "
                     },
                     "node_id": "a390871e-d834-11ef-b730-0275dc2ded29",
-                    "sortorder": 3,
+                    "sortorder": 4,
                     "visible": false,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
@@ -1262,17 +1262,17 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "source [dimension/name]",
+                        "label": "Source Reference Work for Name",
                         "placeholder": {
                             "en": ""
                         }
                     },
                     "id": "a390cb52-d834-11ef-b730-0275dc2ded29",
                     "label": {
-                        "en": "source [dimension/name]"
+                        "en": "Source Reference Work for Name"
                     },
                     "node_id": "a390bdf6-d834-11ef-b730-0275dc2ded29",
-                    "sortorder": 4,
+                    "sortorder": 3,
                     "visible": false,
                     "widget_id": "ff3c400a-76ec-11e7-a793-784f435179ea"
                 },
@@ -1283,17 +1283,17 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "source",
+                        "label": "Source Reference Work for Name",
                         "placeholder": {
                             "en": ""
                         }
                     },
                     "id": "a390cbd4-d834-11ef-b730-0275dc2ded29",
                     "label": {
-                        "en": "source"
+                        "en": "Source Reference Work for Name"
                     },
                     "node_id": "a3908dc2-d834-11ef-b730-0275dc2ded29",
-                    "sortorder": 4,
+                    "sortorder": 3,
                     "visible": false,
                     "widget_id": "ff3c400a-76ec-11e7-a793-784f435179ea"
                 },
@@ -1309,7 +1309,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "_label",
+                        "label": "Name Label",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -1319,10 +1319,10 @@
                     },
                     "id": "a390cc4c-d834-11ef-b730-0275dc2ded29",
                     "label": {
-                        "en": "_label"
+                        "en": "Name Label"
                     },
                     "node_id": "a39091c8-d834-11ef-b730-0275dc2ded29",
-                    "sortorder": 3,
+                    "sortorder": 4,
                     "visible": false,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
@@ -1410,14 +1410,14 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "source",
+                        "label": "Source Reference Work for Statement",
                         "placeholder": {
                             "en": ""
                         }
                     },
                     "id": "a390ce90-d834-11ef-b730-0275dc2ded29",
                     "label": {
-                        "en": "source"
+                        "en": "Source Reference Work for Statement"
                     },
                     "node_id": "a390bc66-d834-11ef-b730-0275dc2ded29",
                     "sortorder": 3,
@@ -1480,7 +1480,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "_label",
+                        "label": "Statement Label",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -1490,7 +1490,7 @@
                     },
                     "id": "a390d084-d834-11ef-b730-0275dc2ded29",
                     "label": {
-                        "en": "_label"
+                        "en": "Statement Label"
                     },
                     "node_id": "a39083cc-d834-11ef-b730-0275dc2ded29",
                     "sortorder": 4,
@@ -1587,7 +1587,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "_label",
+                        "label": "Statement Label",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -1597,7 +1597,7 @@
                     },
                     "id": "a390d2a0-d834-11ef-b730-0275dc2ded29",
                     "label": {
-                        "en": "_label"
+                        "en": "Statement Label"
                     },
                     "node_id": "a390a0aa-d834-11ef-b730-0275dc2ded29",
                     "sortorder": 3,
@@ -1645,7 +1645,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "_label",
+                        "label": "Identifier Label",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -1655,7 +1655,7 @@
                     },
                     "id": "a390d39a-d834-11ef-b730-0275dc2ded29",
                     "label": {
-                        "en": "_label"
+                        "en": "Identifier Label"
                     },
                     "node_id": "a3907f26-d834-11ef-b730-0275dc2ded29",
                     "sortorder": 3,
@@ -1720,14 +1720,14 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "source",
+                        "label": "Source Reference Work for Identifier",
                         "placeholder": {
                             "en": ""
                         }
                     },
                     "id": "a390d52a-d834-11ef-b730-0275dc2ded29",
                     "label": {
-                        "en": "source"
+                        "en": "Source Reference Work for Identifier"
                     },
                     "node_id": "a390902e-d834-11ef-b730-0275dc2ded29",
                     "sortorder": 2,
@@ -1792,14 +1792,14 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "source",
+                        "label": "Source Reference Work for Identifier",
                         "placeholder": {
                             "en": ""
                         }
                     },
                     "id": "a390d7be-d834-11ef-b730-0275dc2ded29",
                     "label": {
-                        "en": "source"
+                        "en": "Source Reference Work for Identifier"
                     },
                     "node_id": "a39095b0-d834-11ef-b730-0275dc2ded29",
                     "sortorder": 2,
@@ -1840,7 +1840,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Internal Label",
+                        "label": "Identifier Label",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -1850,7 +1850,7 @@
                     },
                     "id": "a390d8d6-d834-11ef-b730-0275dc2ded29",
                     "label": {
-                        "en": "Internal Label"
+                        "en": "Identifier Label"
                     },
                     "node_id": "a390aa00-d834-11ef-b730-0275dc2ded29",
                     "sortorder": 3,
@@ -1869,7 +1869,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "_label",
+                        "label": "Timespan Label",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -1879,7 +1879,7 @@
                     },
                     "id": "a390d958-d834-11ef-b730-0275dc2ded29",
                     "label": {
-                        "en": "_label"
+                        "en": "Timespan Label"
                     },
                     "node_id": "a390a2e4-d834-11ef-b730-0275dc2ded29",
                     "sortorder": 5,
@@ -1893,7 +1893,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "type",
+                        "label": "Timespan Type",
                         "options": [],
                         "placeholder": {
                             "en": "Select an option"
@@ -1901,7 +1901,7 @@
                     },
                     "id": "a390d9da-d834-11ef-b730-0275dc2ded29",
                     "label": {
-                        "en": "type"
+                        "en": "Timespan Type"
                     },
                     "node_id": "a3908f5c-d834-11ef-b730-0275dc2ded29",
                     "sortorder": 4,
@@ -2058,7 +2058,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "_label [dimension]",
+                        "label": "Dimension Label ",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -2068,7 +2068,7 @@
                     },
                     "id": "a390dd68-d834-11ef-b730-0275dc2ded29",
                     "label": {
-                        "en": "_label [dimension]"
+                        "en": "Dimension Label "
                     },
                     "node_id": "a39084a8-d834-11ef-b730-0275dc2ded29",
                     "sortorder": 6,
@@ -2140,14 +2140,14 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "source [dimension]",
+                        "label": "Source Reference Work for Dimension",
                         "placeholder": {
                             "en": ""
                         }
                     },
                     "id": "a390deda-d834-11ef-b730-0275dc2ded29",
                     "label": {
-                        "en": "source [dimension]"
+                        "en": "Source Reference Work for Dimension"
                     },
                     "node_id": "a3907e4a-d834-11ef-b730-0275dc2ded29",
                     "sortorder": 5,
@@ -2613,7 +2613,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Statement_creation_time_type",
+                        "label": "Statement Creation Time Type",
                         "options": [],
                         "placeholder": {
                             "en": "Select an option"
@@ -2621,7 +2621,7 @@
                     },
                     "id": "a390e98e-d834-11ef-b730-0275dc2ded29",
                     "label": {
-                        "en": "Statement_creation_time_type"
+                        "en": "Statement Creation Time Type"
                     },
                     "node_id": "a3907332-d834-11ef-b730-0275dc2ded29",
                     "sortorder": 5,
@@ -2640,7 +2640,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Statement_creation_time_label",
+                        "label": "Statement Creation Time Label",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -2650,7 +2650,7 @@
                     },
                     "id": "a390ea10-d834-11ef-b730-0275dc2ded29",
                     "label": {
-                        "en": "Statement_creation_time_label"
+                        "en": "Statement Creation Time Label"
                     },
                     "node_id": "a39073fa-d834-11ef-b730-0275dc2ded29",
                     "sortorder": 6,
@@ -2662,7 +2662,7 @@
                     "config": {
                         "dateFormat": "YYYY-MM-DD",
                         "defaultValue": "",
-                        "label": "Statement_creation_time_begin of the end",
+                        "label": "Statement Creation Time Begin of the End",
                         "maxDate": false,
                         "minDate": false,
                         "placeholder": "Enter date",
@@ -2670,7 +2670,7 @@
                     },
                     "id": "a390ea88-d834-11ef-b730-0275dc2ded29",
                     "label": {
-                        "en": "Statement_creation_time_begin of the end"
+                        "en": "Statement Creation Time Begin of the End"
                     },
                     "node_id": "a39076d4-d834-11ef-b730-0275dc2ded29",
                     "sortorder": 7,
@@ -2682,7 +2682,7 @@
                     "config": {
                         "dateFormat": "YYYY-MM-DD",
                         "defaultValue": "",
-                        "label": "Statement_creation_time_end of the begin",
+                        "label": "Statement Creation Time End of the Begin",
                         "maxDate": false,
                         "minDate": false,
                         "placeholder": "Enter date",
@@ -2690,7 +2690,7 @@
                     },
                     "id": "a390eb0a-d834-11ef-b730-0275dc2ded29",
                     "label": {
-                        "en": "Statement_creation_time_end of the begin"
+                        "en": "Statement Creation Time End of the Begin"
                     },
                     "node_id": "a39077b0-d834-11ef-b730-0275dc2ded29",
                     "sortorder": 8,
@@ -2725,14 +2725,14 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "source",
+                        "label": "Source Reference Work for Name",
                         "placeholder": {
                             "en": ""
                         }
                     },
                     "id": "a390ebfa-d834-11ef-b730-0275dc2ded29",
                     "label": {
-                        "en": "source"
+                        "en": "Source Reference Work for Name"
                     },
                     "node_id": "a390b0ea-d834-11ef-b730-0275dc2ded29",
                     "sortorder": 3,
@@ -2828,7 +2828,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "_label",
+                        "label": "Name Label",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -2838,7 +2838,7 @@
                     },
                     "id": "a390ee34-d834-11ef-b730-0275dc2ded29",
                     "label": {
-                        "en": "_label"
+                        "en": "Name Label"
                     },
                     "node_id": "a390b1d0-d834-11ef-b730-0275dc2ded29",
                     "sortorder": 4,
@@ -2852,14 +2852,14 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "source [name]",
+                        "label": "Source Reference Work for Name",
                         "placeholder": {
                             "en": ""
                         }
                     },
                     "id": "a390eec0-d834-11ef-b730-0275dc2ded29",
                     "label": {
-                        "en": "source [name]"
+                        "en": "Source Reference Work for Name"
                     },
                     "node_id": "a390b374-d834-11ef-b730-0275dc2ded29",
                     "sortorder": 3,
@@ -2902,7 +2902,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "_label [name]",
+                        "label": "Name Label ",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -2912,7 +2912,7 @@
                     },
                     "id": "a390efba-d834-11ef-b730-0275dc2ded29",
                     "label": {
-                        "en": "_label [name]"
+                        "en": "Name Label "
                     },
                     "node_id": "a390812e-d834-11ef-b730-0275dc2ded29",
                     "sortorder": 4,
@@ -3032,17 +3032,17 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "source [statement/name]",
+                        "label": "Source Reference Work for Name",
                         "placeholder": {
                             "en": ""
                         }
                     },
                     "id": "a390f226-d834-11ef-b730-0275dc2ded29",
                     "label": {
-                        "en": "source [statement/name]"
+                        "en": "Source Reference Work for Name"
                     },
                     "node_id": "a390b91e-d834-11ef-b730-0275dc2ded29",
-                    "sortorder": 4,
+                    "sortorder": 3,
                     "visible": false,
                     "widget_id": "ff3c400a-76ec-11e7-a793-784f435179ea"
                 },
@@ -3082,7 +3082,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "_label [statement/name]",
+                        "label": "Name Label ",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -3092,10 +3092,10 @@
                     },
                     "id": "a390f32a-d834-11ef-b730-0275dc2ded29",
                     "label": {
-                        "en": "_label [statement/name]"
+                        "en": "Name Label "
                     },
                     "node_id": "a3907972-d834-11ef-b730-0275dc2ded29",
-                    "sortorder": 3,
+                    "sortorder": 4,
                     "visible": false,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 }
@@ -4495,12 +4495,11 @@
                     "config": {
                         "graphs": [
                             {
-                                "graphid": "b6c819b8-99f6-11ea-a9b7-3af9d3b32b71",
-                                "inverseOntologyProperty": "",
-                                "inverseRelationshipConcept": "f2b461a8-8200-4256-b017-e45c95932191",
-                                "ontologyProperty": "",
-                                "relationshipCollection": "67f13f49-946d-4eb7-acf9-1bea91c30874",
-                                "relationshipConcept": "882a6c54-f441-4c28-bae7-6399a62c2da9",
+                                "graphid": "a3900eec-d834-11ef-b730-0275dc2ded29",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Instrument",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
                             }
                         ],
@@ -4593,12 +4592,11 @@
                     "config": {
                         "graphs": [
                             {
-                                "graphid": "cc8ed633-b25b-11e9-a13a-a4d18cec433a",
-                                "inverseOntologyProperty": "",
-                                "inverseRelationshipConcept": "b9ecd075-f34a-4112-add5-c19c61e85eba",
-                                "ontologyProperty": "",
-                                "relationshipCollection": "67f13f49-946d-4eb7-acf9-1bea91c30874",
-                                "relationshipConcept": "9e0df260-01b2-4449-b3f2-7fad4379e80f",
+                                "graphid": "3dda9f54-d771-11ef-825b-0275dc2ded29",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Place",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
                             }
                         ],
@@ -4628,21 +4626,19 @@
                     "config": {
                         "graphs": [
                             {
-                                "graphid": "07883c9e-b25c-11e9-975a-a4d18cec433a",
-                                "inverseOntologyProperty": "",
-                                "inverseRelationshipConcept": "293c9c67-3c42-4c72-99cf-75c91ed25944",
-                                "ontologyProperty": "",
-                                "relationshipCollection": "67f13f49-946d-4eb7-acf9-1bea91c30874",
-                                "relationshipConcept": "dc3c55b2-03b0-40bd-a729-7463c618b641",
+                                "graphid": "36956e50-d770-11ef-8f5d-0275dc2ded29",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Group",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
                             },
                             {
-                                "graphid": "f71f7b9c-b25b-11e9-901e-a4d18cec433a",
-                                "inverseOntologyProperty": "",
-                                "inverseRelationshipConcept": "293c9c67-3c42-4c72-99cf-75c91ed25944",
-                                "ontologyProperty": "",
-                                "relationshipCollection": "67f13f49-946d-4eb7-acf9-1bea91c30874",
-                                "relationshipConcept": "dc3c55b2-03b0-40bd-a729-7463c618b641",
+                                "graphid": "e1d0ea1a-d770-11ef-8c40-0275dc2ded29",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Person",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
                             }
                         ],
@@ -4842,11 +4838,11 @@
                     "config": {
                         "graphs": [
                             {
-                                "graphid": "1b210ef3-b25c-11e9-a037-a4d18cec433a",
-                                "inverseRelationshipConcept": null,
+                                "graphid": "da0ed58e-d771-11ef-af99-0275dc2ded29",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "name": "Collection or Set",
-                                "relationshipCollection": "67f13f49-946d-4eb7-acf9-1bea91c30874",
-                                "relationshipConcept": "31327077-8af5-4398-bbcc-e75675a9d37e",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
                             }
                         ],
@@ -4939,12 +4935,20 @@
                     "config": {
                         "graphs": [
                             {
-                                "graphid": "07883c9e-b25c-11e9-975a-a4d18cec433a",
-                                "name": "Group"
+                                "graphid": "e1d0ea1a-d770-11ef-8c40-0275dc2ded29",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Person",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "useOntologyRelationship": false
                             },
                             {
-                                "graphid": "f71f7b9c-b25b-11e9-901e-a4d18cec433a",
-                                "name": "Person"
+                                "graphid": "36956e50-d770-11ef-8f5d-0275dc2ded29",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Group",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "useOntologyRelationship": false
                             }
                         ],
                         "searchDsl": "",
@@ -5063,8 +5067,12 @@
                     "config": {
                         "graphs": [
                             {
-                                "graphid": "707cbd78-ca7a-11e9-990b-a4d18cec433a",
-                                "name": "Digital Resources"
+                                "graphid": "8713965e-d860-11ef-98f5-0275dc2ded29",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Digital Resources - New Clone",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "useOntologyRelationship": false
                             }
                         ],
                         "searchDsl": "",
@@ -5083,7 +5091,7 @@
                     "name": "Statement_creation_digital reference",
                     "nodegroup_id": "a3906cca-d834-11ef-b730-0275dc2ded29",
                     "nodeid": "a39074c2-d834-11ef-b730-0275dc2ded29",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object",
+                    "ontologyclass": "http://www.ics.forth.gr/isl/CRMdig/D1_Digital_Object",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P16_used_specific_object",
                     "sortorder": 0,
                     "sourcebranchpublication_id": null
@@ -5093,8 +5101,12 @@
                     "config": {
                         "graphs": [
                             {
-                                "graphid": "a7b1a7c5-b25b-11e9-8a4e-a4d18cec433a",
-                                "name": "Textual Work"
+                                "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Textual Work",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "useOntologyRelationship": false
                             }
                         ],
                         "searchDsl": "",
@@ -5320,12 +5332,11 @@
                     "config": {
                         "graphs": [
                             {
-                                "graphid": "a7b1a7c5-b25b-11e9-8a4e-a4d18cec433a",
-                                "inverseOntologyProperty": "",
-                                "inverseRelationshipConcept": "46c04c03-139e-4850-8762-a6ee49489d1c",
-                                "ontologyProperty": "",
-                                "relationshipCollection": "67f13f49-946d-4eb7-acf9-1bea91c30874",
-                                "relationshipConcept": "b8abd95a-4a81-4b08-8b63-9be0d729c0b9",
+                                "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Textual Work",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
                             }
                         ],
@@ -5592,12 +5603,11 @@
                     "config": {
                         "graphs": [
                             {
-                                "graphid": "a7b1a7c5-b25b-11e9-8a4e-a4d18cec433a",
-                                "inverseOntologyProperty": "",
-                                "inverseRelationshipConcept": "5e3c06e0-0dc8-4100-a6ee-93b4cce34ce1",
-                                "ontologyProperty": "",
-                                "relationshipCollection": "67f13f49-946d-4eb7-acf9-1bea91c30874",
-                                "relationshipConcept": "05dd703e-ad1e-4e75-9dc2-b6bb7cfd41d4",
+                                "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Textual Work",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
                             }
                         ],
@@ -5673,10 +5683,12 @@
                     "config": {
                         "graphs": [
                             {
-                                "graphid": "a7b1a7c5-b25b-11e9-8a4e-a4d18cec433a",
-                                "inverseOntologyProperty": "",
-                                "ontologyProperty": "",
-                                "useOntologyRelationship": true
+                                "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Textual Work",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "useOntologyRelationship": false
                             }
                         ],
                         "searchDsl": "",
@@ -5751,10 +5763,12 @@
                     "config": {
                         "graphs": [
                             {
-                                "graphid": "a7b1a7c5-b25b-11e9-8a4e-a4d18cec433a",
-                                "inverseOntologyProperty": "",
-                                "ontologyProperty": "",
-                                "useOntologyRelationship": true
+                                "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Textual Work",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "useOntologyRelationship": false
                             }
                         ],
                         "searchDsl": "",
@@ -5916,12 +5930,11 @@
                     "config": {
                         "graphs": [
                             {
-                                "graphid": "a7b1a7c5-b25b-11e9-8a4e-a4d18cec433a",
-                                "inverseOntologyProperty": "",
-                                "inverseRelationshipConcept": "e9a643a2-2b21-4e0b-aba7-2d53933e26a2",
-                                "ontologyProperty": "",
-                                "relationshipCollection": "67f13f49-946d-4eb7-acf9-1bea91c30874",
-                                "relationshipConcept": "b5adee9e-a5f5-414d-a9a1-48a122baa9df",
+                                "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Textual Work",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
                             }
                         ],
@@ -6016,12 +6029,11 @@
                     "config": {
                         "graphs": [
                             {
-                                "graphid": "52c40a30-b25c-11e9-92cf-a4d18cec433a",
-                                "inverseOntologyProperty": "",
-                                "inverseRelationshipConcept": "e9e8649c-a246-4be8-bedc-634024c3f6d4",
-                                "ontologyProperty": "",
-                                "relationshipCollection": "67f13f49-946d-4eb7-acf9-1bea91c30874",
-                                "relationshipConcept": "6f8dad8f-f6e4-4e3a-8aac-eb837e7047cf",
+                                "graphid": "c7b359d8-d833-11ef-a368-0275dc2ded29",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Period",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
                             }
                         ],
@@ -6185,12 +6197,11 @@
                     "config": {
                         "graphs": [
                             {
-                                "graphid": "cc8ed633-b25b-11e9-a13a-a4d18cec433a",
-                                "inverseOntologyProperty": "",
-                                "inverseRelationshipConcept": "c81ff9ef-d6dc-429e-8598-2559333f3e8d",
-                                "ontologyProperty": "",
-                                "relationshipCollection": "67f13f49-946d-4eb7-acf9-1bea91c30874",
-                                "relationshipConcept": "2406a100-4b43-4e45-9da5-70aaed255f4c",
+                                "graphid": "3dda9f54-d771-11ef-825b-0275dc2ded29",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Place",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
                             }
                         ],
@@ -6508,10 +6519,12 @@
                     "config": {
                         "graphs": [
                             {
-                                "graphid": "a7b1a7c5-b25b-11e9-8a4e-a4d18cec433a",
-                                "inverseOntologyProperty": "",
-                                "ontologyProperty": "",
-                                "useOntologyRelationship": true
+                                "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Textual Work",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "useOntologyRelationship": false
                             }
                         ],
                         "searchDsl": "",
@@ -6630,10 +6643,12 @@
                     "config": {
                         "graphs": [
                             {
-                                "graphid": "a7b1a7c5-b25b-11e9-8a4e-a4d18cec433a",
-                                "inverseOntologyProperty": "",
-                                "ontologyProperty": "",
-                                "useOntologyRelationship": true
+                                "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Textual Work",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "useOntologyRelationship": false
                             }
                         ],
                         "searchDsl": "",
@@ -6662,10 +6677,12 @@
                     "config": {
                         "graphs": [
                             {
-                                "graphid": "a7b1a7c5-b25b-11e9-8a4e-a4d18cec433a",
-                                "inverseOntologyProperty": "",
-                                "ontologyProperty": "",
-                                "useOntologyRelationship": true
+                                "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Textual Work",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "useOntologyRelationship": false
                             }
                         ],
                         "searchDsl": "",
@@ -6694,21 +6711,19 @@
                     "config": {
                         "graphs": [
                             {
-                                "graphid": "07883c9e-b25c-11e9-975a-a4d18cec433a",
-                                "inverseOntologyProperty": "",
-                                "inverseRelationshipConcept": "ba9467f7-df0c-49bf-9578-4c2dd6dc95e9",
-                                "ontologyProperty": "",
-                                "relationshipCollection": "67f13f49-946d-4eb7-acf9-1bea91c30874",
-                                "relationshipConcept": "af99c6cd-6169-4e45-87b2-25a369ed880e",
+                                "graphid": "e1d0ea1a-d770-11ef-8c40-0275dc2ded29",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Person",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
                             },
                             {
-                                "graphid": "f71f7b9c-b25b-11e9-901e-a4d18cec433a",
-                                "inverseOntologyProperty": "",
-                                "inverseRelationshipConcept": "ba9467f7-df0c-49bf-9578-4c2dd6dc95e9",
-                                "ontologyProperty": "",
-                                "relationshipCollection": "67f13f49-946d-4eb7-acf9-1bea91c30874",
-                                "relationshipConcept": "af99c6cd-6169-4e45-87b2-25a369ed880e",
+                                "graphid": "36956e50-d770-11ef-8f5d-0275dc2ded29",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Group",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
                             }
                         ],
@@ -6738,10 +6753,12 @@
                     "config": {
                         "graphs": [
                             {
-                                "graphid": "a7b1a7c5-b25b-11e9-8a4e-a4d18cec433a",
-                                "inverseOntologyProperty": "",
-                                "ontologyProperty": "",
-                                "useOntologyRelationship": true
+                                "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Textual Work",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "useOntologyRelationship": false
                             }
                         ],
                         "searchDsl": "",
@@ -6814,12 +6831,11 @@
                     "config": {
                         "graphs": [
                             {
-                                "graphid": "a7b1a7c5-b25b-11e9-8a4e-a4d18cec433a",
-                                "inverseOntologyProperty": "",
-                                "inverseRelationshipConcept": "d9bf1253-2246-4006-a540-b1ac70481d78",
-                                "ontologyProperty": "",
-                                "relationshipCollection": "67f13f49-946d-4eb7-acf9-1bea91c30874",
-                                "relationshipConcept": "36e577b4-febe-4029-8cd7-34829405fb57",
+                                "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Textual Work",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
                             }
                         ],
@@ -6893,13 +6909,11 @@
                     "config": {
                         "graphs": [
                             {
-                                "graphid": "707cbd78-ca7a-11e9-990b-a4d18cec433a",
-                                "inverseOntologyProperty": "http://www.cidoc-crm.org/cidoc-crm/P67_refers_to",
-                                "inverseRelationshipConcept": "ff6a0510-6c91-4c45-8c67-dbbcf8d7d7fa",
-                                "name": "Digital Resources",
-                                "ontologyProperty": "http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by",
-                                "relationshipCollection": "67f13f49-946d-4eb7-acf9-1bea91c30874",
-                                "relationshipConcept": "be3f33e9-216d-4355-8766-aced1e95616c",
+                                "graphid": "8713965e-d860-11ef-98f5-0275dc2ded29",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Digital Resources - New Clone",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
                             }
                         ],
@@ -6919,7 +6933,7 @@
                     "name": "Digital Source",
                     "nodegroup_id": "a390652c-d834-11ef-b730-0275dc2ded29",
                     "nodeid": "a390b5d6-d834-11ef-b730-0275dc2ded29",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object",
+                    "ontologyclass": "http://www.ics.forth.gr/isl/CRMdig/D1_Digital_Object",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P01_has_domain",
                     "sortorder": 0,
                     "sourcebranchpublication_id": null
@@ -6992,10 +7006,12 @@
                     "config": {
                         "graphs": [
                             {
-                                "graphid": "a7b1a7c5-b25b-11e9-8a4e-a4d18cec433a",
-                                "inverseOntologyProperty": "",
-                                "ontologyProperty": "",
-                                "useOntologyRelationship": true
+                                "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Textual Work",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "useOntologyRelationship": false
                             }
                         ],
                         "searchDsl": "",
@@ -7024,13 +7040,11 @@
                     "config": {
                         "graphs": [
                             {
-                                "graphid": "a7b1a7c5-b25b-11e9-8a4e-a4d18cec433a",
-                                "inverseOntologyProperty": "http://www.cidoc-crm.org/cidoc-crm/P01i_is_domain_of",
-                                "inverseRelationshipConcept": "0f2fd170-d9f4-4d52-a40f-58a3ec7895c3",
+                                "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "name": "Textual Work",
-                                "ontologyProperty": "http://www.cidoc-crm.org/cidoc-crm/P01_has_domain",
-                                "relationshipCollection": "67f13f49-946d-4eb7-acf9-1bea91c30874",
-                                "relationshipConcept": "3a7099c1-5e10-4ad8-83ec-7e2106f752e0",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
                             }
                         ],
@@ -7050,7 +7064,7 @@
                     "name": "Textual Source",
                     "nodegroup_id": "a3906914-d834-11ef-b730-0275dc2ded29",
                     "nodeid": "a390b9e6-d834-11ef-b730-0275dc2ded29",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P01_has_domain",
                     "sortorder": 0,
                     "sourcebranchpublication_id": null
@@ -7104,10 +7118,12 @@
                     "config": {
                         "graphs": [
                             {
-                                "graphid": "a7b1a7c5-b25b-11e9-8a4e-a4d18cec433a",
-                                "inverseOntologyProperty": "",
-                                "ontologyProperty": "",
-                                "useOntologyRelationship": true
+                                "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Textual Work",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "useOntologyRelationship": false
                             }
                         ],
                         "searchDsl": "",
@@ -7157,10 +7173,12 @@
                     "config": {
                         "graphs": [
                             {
-                                "graphid": "a7b1a7c5-b25b-11e9-8a4e-a4d18cec433a",
-                                "inverseOntologyProperty": "",
-                                "ontologyProperty": "",
-                                "useOntologyRelationship": true
+                                "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Textual Work",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "useOntologyRelationship": false
                             }
                         ],
                         "searchDsl": "",

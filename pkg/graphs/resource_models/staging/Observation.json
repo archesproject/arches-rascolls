@@ -813,7 +813,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Statement_creation_time_type",
+                        "label": "Statement Creation Time Type",
                         "options": [],
                         "placeholder": {
                             "en": "Select an option"
@@ -821,7 +821,7 @@
                     },
                     "id": "04f923a4-d834-11ef-a75a-0275dc2ded29",
                     "label": {
-                        "en": "Statement_creation_time_type"
+                        "en": "Statement Creation Time Type"
                     },
                     "node_id": "04f8f186-d834-11ef-a75a-0275dc2ded29",
                     "sortorder": 5,
@@ -840,7 +840,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Statement_creation_time_label",
+                        "label": "Statement Creation Time Label",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -850,7 +850,7 @@
                     },
                     "id": "04f92426-d834-11ef-a75a-0275dc2ded29",
                     "label": {
-                        "en": "Statement_creation_time_label"
+                        "en": "Statement Creation Time Label"
                     },
                     "node_id": "04f8f24e-d834-11ef-a75a-0275dc2ded29",
                     "sortorder": 6,
@@ -862,7 +862,7 @@
                     "config": {
                         "dateFormat": "YYYY-MM-DD",
                         "defaultValue": "",
-                        "label": "Statement_creation_time_begin of the end",
+                        "label": "Statement Creation Time Begin of the End",
                         "maxDate": false,
                         "minDate": false,
                         "placeholder": "Enter date",
@@ -870,7 +870,7 @@
                     },
                     "id": "04f924b2-d834-11ef-a75a-0275dc2ded29",
                     "label": {
-                        "en": "Statement_creation_time_begin of the end"
+                        "en": "Statement Creation Time Begin of the End"
                     },
                     "node_id": "04f8f4b0-d834-11ef-a75a-0275dc2ded29",
                     "sortorder": 7,
@@ -882,7 +882,7 @@
                     "config": {
                         "dateFormat": "YYYY-MM-DD",
                         "defaultValue": "",
-                        "label": "Statement_creation_time_end of the begin",
+                        "label": "Statement Creation Time End of the Begin",
                         "maxDate": false,
                         "minDate": false,
                         "placeholder": "Enter date",
@@ -890,7 +890,7 @@
                     },
                     "id": "04f92534-d834-11ef-a75a-0275dc2ded29",
                     "label": {
-                        "en": "Statement_creation_time_end of the begin"
+                        "en": "Statement Creation Time End of the Begin"
                     },
                     "node_id": "04f8f578-d834-11ef-a75a-0275dc2ded29",
                     "sortorder": 8,
@@ -1487,7 +1487,7 @@
                         "en": "Name Label"
                     },
                     "node_id": "04f909b4-d834-11ef-a75a-0275dc2ded29",
-                    "sortorder": 3,
+                    "sortorder": 4,
                     "visible": false,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
@@ -1508,7 +1508,7 @@
                         "en": "Source Reference Work for Name for Statement about TimeSpan"
                     },
                     "node_id": "04f90748-d834-11ef-a75a-0275dc2ded29",
-                    "sortorder": 4,
+                    "sortorder": 3,
                     "visible": false,
                     "widget_id": "ff3c400a-76ec-11e7-a793-784f435179ea"
                 },
@@ -3630,11 +3630,11 @@
                     "config": {
                         "graphs": [
                             {
-                                "graphid": "b6c819b8-99f6-11ea-a9b7-3af9d3b32b71",
-                                "inverseRelationshipConcept": "c643ce0e-ccfa-4980-9346-abb2a959ee39",
+                                "graphid": "a3900eec-d834-11ef-b730-0275dc2ded29",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "name": "Instrument",
-                                "relationshipCollection": "3a0ceee3-fe65-408c-970d-357dc535c594",
-                                "relationshipConcept": "a0ed3c16-7b69-4db1-b2a1-2872ca8288d0",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
                             }
                         ],
@@ -3664,12 +3664,11 @@
                     "config": {
                         "graphs": [
                             {
-                                "graphid": "707cbd78-ca7a-11e9-990b-a4d18cec433a",
-                                "inverseOntologyProperty": "",
-                                "inverseRelationshipConcept": "10bb36bc-683c-4e99-9878-6b28040b0089",
-                                "ontologyProperty": "",
-                                "relationshipCollection": "3a0ceee3-fe65-408c-970d-357dc535c594",
-                                "relationshipConcept": "bf7873de-6898-4036-9f80-77ab8ff941ef",
+                                "graphid": "8713965e-d860-11ef-98f5-0275dc2ded29",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Digital Resources - New Clone",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
                             }
                         ],
@@ -3689,7 +3688,7 @@
                     "name": "used digital resource",
                     "nodegroup_id": "04f888b8-d834-11ef-a75a-0275dc2ded29",
                     "nodeid": "04f888b8-d834-11ef-a75a-0275dc2ded29",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object",
+                    "ontologyclass": "http://www.ics.forth.gr/isl/CRMdig/D1_Digital_Object",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P16_used_specific_object",
                     "sortorder": 0,
                     "sourcebranchpublication_id": null
@@ -3699,12 +3698,11 @@
                     "config": {
                         "graphs": [
                             {
-                                "graphid": "a7b1a7c5-b25b-11e9-8a4e-a4d18cec433a",
-                                "inverseOntologyProperty": "",
-                                "inverseRelationshipConcept": "8808d1e5-49ad-4d47-bf4d-9301ceeb8d68",
-                                "ontologyProperty": "",
-                                "relationshipCollection": "3a0ceee3-fe65-408c-970d-357dc535c594",
-                                "relationshipConcept": "e495c9a4-013b-43d2-8992-4a9912834a49",
+                                "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Textual Work",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
                             }
                         ],
@@ -3755,13 +3753,11 @@
                     "config": {
                         "graphs": [
                             {
-                                "graphid": "0b9235d9-ca85-11e9-9fa2-a4d18cec433a",
-                                "inverseOntologyProperty": "http://www.cidoc-crm.org/cidoc-crm/P9_consists_of",
-                                "inverseRelationshipConcept": "4c1e9d1a-76a7-4555-8faa-f11d5796ac99",
+                                "graphid": "eaac4efa-d832-11ef-a368-0275dc2ded29",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "name": "Project",
-                                "ontologyProperty": "http://www.cidoc-crm.org/cidoc-crm/P9i_forms_part_of",
-                                "relationshipCollection": "3a0ceee3-fe65-408c-970d-357dc535c594",
-                                "relationshipConcept": "5d7372a0-f802-4a94-a03e-4f7c7586dc04",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
                             }
                         ],
@@ -4066,21 +4062,19 @@
                     "config": {
                         "graphs": [
                             {
-                                "graphid": "07883c9e-b25c-11e9-975a-a4d18cec433a",
-                                "inverseOntologyProperty": "",
-                                "inverseRelationshipConcept": "2cc7dbf5-b625-4ac7-81d6-39623280b24d",
-                                "ontologyProperty": "",
-                                "relationshipCollection": "3a0ceee3-fe65-408c-970d-357dc535c594",
-                                "relationshipConcept": "3c71b902-5542-456a-83c0-e884c9971383",
+                                "graphid": "e1d0ea1a-d770-11ef-8c40-0275dc2ded29",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Person",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
                             },
                             {
-                                "graphid": "f71f7b9c-b25b-11e9-901e-a4d18cec433a",
-                                "inverseOntologyProperty": "",
-                                "inverseRelationshipConcept": "2cc7dbf5-b625-4ac7-81d6-39623280b24d",
-                                "ontologyProperty": "",
-                                "relationshipCollection": "3a0ceee3-fe65-408c-970d-357dc535c594",
-                                "relationshipConcept": "3c71b902-5542-456a-83c0-e884c9971383",
+                                "graphid": "36956e50-d770-11ef-8f5d-0275dc2ded29",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Group",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
                             }
                         ],
@@ -4110,12 +4104,11 @@
                     "config": {
                         "graphs": [
                             {
-                                "graphid": "cc8ed633-b25b-11e9-a13a-a4d18cec433a",
-                                "inverseOntologyProperty": "",
-                                "inverseRelationshipConcept": "b9ecd075-f34a-4112-add5-c19c61e85eba",
-                                "ontologyProperty": "",
-                                "relationshipCollection": "3a0ceee3-fe65-408c-970d-357dc535c594",
-                                "relationshipConcept": "9e0df260-01b2-4449-b3f2-7fad4379e80f",
+                                "graphid": "3dda9f54-d771-11ef-825b-0275dc2ded29",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Place",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
                             }
                         ],
@@ -4168,12 +4161,11 @@
                     "config": {
                         "graphs": [
                             {
-                                "graphid": "9519cb4f-b25b-11e9-8c7b-a4d18cec433a",
-                                "inverseOntologyProperty": "",
-                                "inverseRelationshipConcept": "abe1b5f1-a8e3-42c5-b5a6-3382b75967d2",
-                                "ontologyProperty": "",
-                                "relationshipCollection": "3a0ceee3-fe65-408c-970d-357dc535c594",
-                                "relationshipConcept": "efc8f0f4-ddb8-4e75-ae36-c7908b77fe7c",
+                                "graphid": "bda239c6-d376-11ef-a239-0275dc2ded29",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Reference and Sample Collection Item",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
                             }
                         ],
@@ -4203,11 +4195,11 @@
                     "config": {
                         "graphs": [
                             {
-                                "graphid": "707cbd78-ca7a-11e9-990b-a4d18cec433a",
-                                "inverseRelationshipConcept": "9566b743-b23e-41df-bddb-af75f22edcc5",
-                                "name": "Digital Resources",
-                                "relationshipCollection": "3a0ceee3-fe65-408c-970d-357dc535c594",
-                                "relationshipConcept": "96a4e8f5-6214-4af3-b4cc-b79c206d00f0",
+                                "graphid": "8713965e-d860-11ef-98f5-0275dc2ded29",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Digital Resources - New Clone",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
                             }
                         ],
@@ -4227,7 +4219,7 @@
                     "name": "recorded value",
                     "nodegroup_id": "04f8e2e0-d834-11ef-a75a-0275dc2ded29",
                     "nodeid": "04f8e2e0-d834-11ef-a75a-0275dc2ded29",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object",
+                    "ontologyclass": "http://www.ics.forth.gr/isl/CRMdig/D1_Digital_Object",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P141_assigned",
                     "sortorder": 0,
                     "sourcebranchpublication_id": null
@@ -4237,12 +4229,11 @@
                     "config": {
                         "graphs": [
                             {
-                                "graphid": "707cbd78-ca7a-11e9-990b-a4d18cec433a",
-                                "inverseOntologyProperty": "",
-                                "inverseRelationshipConcept": "d3da7628-3286-4217-8480-f064f80be699",
-                                "ontologyProperty": "",
-                                "relationshipCollection": "3a0ceee3-fe65-408c-970d-357dc535c594",
-                                "relationshipConcept": "54192d5d-f00d-440c-99fe-e788941f3b6a",
+                                "graphid": "8713965e-d860-11ef-98f5-0275dc2ded29",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Digital Resources - New Clone",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
                             }
                         ],
@@ -4262,7 +4253,7 @@
                     "name": "described by digital object",
                     "nodegroup_id": "04f8e754-d834-11ef-a75a-0275dc2ded29",
                     "nodeid": "04f8e754-d834-11ef-a75a-0275dc2ded29",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object",
+                    "ontologyclass": "http://www.ics.forth.gr/isl/CRMdig/D1_Digital_Object",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P129i_is_subject_of",
                     "sortorder": 0,
                     "sourcebranchpublication_id": null
@@ -4272,13 +4263,11 @@
                     "config": {
                         "graphs": [
                             {
-                                "graphid": "a7b1a7c5-b25b-11e9-8a4e-a4d18cec433a",
-                                "inverseOntologyProperty": "http://www.cidoc-crm.org/cidoc-crm/P01i_is_domain_of",
-                                "inverseRelationshipConcept": "0f2fd170-d9f4-4d52-a40f-58a3ec7895c3",
+                                "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "name": "Textual Work",
-                                "ontologyProperty": "http://www.cidoc-crm.org/cidoc-crm/P01_has_domain",
-                                "relationshipCollection": "3a0ceee3-fe65-408c-970d-357dc535c594",
-                                "relationshipConcept": "3a7099c1-5e10-4ad8-83ec-7e2106f752e0",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
                             }
                         ],
@@ -4298,7 +4287,7 @@
                     "name": "Textual Source",
                     "nodegroup_id": "04f87f4e-d834-11ef-a75a-0275dc2ded29",
                     "nodeid": "04f8eb64-d834-11ef-a75a-0275dc2ded29",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P01_has_domain",
                     "sortorder": 0,
                     "sourcebranchpublication_id": null
@@ -4331,13 +4320,11 @@
                     "config": {
                         "graphs": [
                             {
-                                "graphid": "707cbd78-ca7a-11e9-990b-a4d18cec433a",
-                                "inverseOntologyProperty": "http://www.cidoc-crm.org/cidoc-crm/P67_refers_to",
-                                "inverseRelationshipConcept": "ff6a0510-6c91-4c45-8c67-dbbcf8d7d7fa",
-                                "name": "Digital Resources",
-                                "ontologyProperty": "http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by",
-                                "relationshipCollection": "3a0ceee3-fe65-408c-970d-357dc535c594",
-                                "relationshipConcept": "be3f33e9-216d-4355-8766-aced1e95616c",
+                                "graphid": "8713965e-d860-11ef-98f5-0275dc2ded29",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Digital Resources - New Clone",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
                             }
                         ],
@@ -4357,7 +4344,7 @@
                     "name": "Digital Reference_Digital Source",
                     "nodegroup_id": "04f8ba68-d834-11ef-a75a-0275dc2ded29",
                     "nodeid": "04f8ed76-d834-11ef-a75a-0275dc2ded29",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object",
+                    "ontologyclass": "http://www.ics.forth.gr/isl/CRMdig/D1_Digital_Object",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P01_has_domain",
                     "sortorder": 0,
                     "sourcebranchpublication_id": null
@@ -4367,12 +4354,20 @@
                     "config": {
                         "graphs": [
                             {
-                                "graphid": "07883c9e-b25c-11e9-975a-a4d18cec433a",
-                                "name": "Group"
+                                "graphid": "e1d0ea1a-d770-11ef-8c40-0275dc2ded29",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Person",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "useOntologyRelationship": false
                             },
                             {
-                                "graphid": "f71f7b9c-b25b-11e9-901e-a4d18cec433a",
-                                "name": "Person"
+                                "graphid": "36956e50-d770-11ef-8f5d-0275dc2ded29",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Group",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "useOntologyRelationship": false
                             }
                         ],
                         "searchDsl": "",
@@ -4512,8 +4507,12 @@
                     "config": {
                         "graphs": [
                             {
-                                "graphid": "707cbd78-ca7a-11e9-990b-a4d18cec433a",
-                                "name": "Digital Resources"
+                                "graphid": "8713965e-d860-11ef-98f5-0275dc2ded29",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Digital Resources - New Clone",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "useOntologyRelationship": false
                             }
                         ],
                         "searchDsl": "",
@@ -4532,7 +4531,7 @@
                     "name": "Statement_creation_digital reference",
                     "nodegroup_id": "04f8be78-d834-11ef-a75a-0275dc2ded29",
                     "nodeid": "04f8f320-d834-11ef-a75a-0275dc2ded29",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object",
+                    "ontologyclass": "http://www.ics.forth.gr/isl/CRMdig/D1_Digital_Object",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P16_used_specific_object",
                     "sortorder": 0,
                     "sourcebranchpublication_id": null
@@ -4542,8 +4541,12 @@
                     "config": {
                         "graphs": [
                             {
-                                "graphid": "a7b1a7c5-b25b-11e9-8a4e-a4d18cec433a",
-                                "name": "Textual Work"
+                                "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Textual Work",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "useOntologyRelationship": false
                             }
                         ],
                         "searchDsl": "",
@@ -4662,12 +4665,11 @@
                     "config": {
                         "graphs": [
                             {
-                                "graphid": "a7b1a7c5-b25b-11e9-8a4e-a4d18cec433a",
-                                "inverseOntologyProperty": "",
-                                "inverseRelationshipConcept": "d9bf1253-2246-4006-a540-b1ac70481d78",
-                                "ontologyProperty": "",
-                                "relationshipCollection": "3a0ceee3-fe65-408c-970d-357dc535c594",
-                                "relationshipConcept": "36e577b4-febe-4029-8cd7-34829405fb57",
+                                "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Textual Work",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
                             }
                         ],
@@ -4892,10 +4894,8 @@
                     "config": {
                         "graphs": [
                             {
-                                "graphid": "a7b1a7c5-b25b-11e9-8a4e-a4d18cec433a",
-                                "inverseOntologyProperty": "",
-                                "ontologyProperty": "",
-                                "useOntologyRelationship": true
+                                "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
+                                "name": "Textual Work"
                             }
                         ],
                         "searchDsl": "",
@@ -4970,10 +4970,12 @@
                     "config": {
                         "graphs": [
                             {
-                                "graphid": "a7b1a7c5-b25b-11e9-8a4e-a4d18cec433a",
-                                "inverseOntologyProperty": "",
-                                "ontologyProperty": "",
-                                "useOntologyRelationship": true
+                                "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Textual Work",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "useOntologyRelationship": false
                             }
                         ],
                         "searchDsl": "",
@@ -5092,10 +5094,12 @@
                     "config": {
                         "graphs": [
                             {
-                                "graphid": "a7b1a7c5-b25b-11e9-8a4e-a4d18cec433a",
-                                "inverseOntologyProperty": "",
-                                "ontologyProperty": "",
-                                "useOntologyRelationship": true
+                                "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Textual Work",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "useOntologyRelationship": false
                             }
                         ],
                         "searchDsl": "",
@@ -5212,10 +5216,12 @@
                     "config": {
                         "graphs": [
                             {
-                                "graphid": "a7b1a7c5-b25b-11e9-8a4e-a4d18cec433a",
-                                "inverseOntologyProperty": "",
-                                "ontologyProperty": "",
-                                "useOntologyRelationship": true
+                                "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Textual Work",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "useOntologyRelationship": false
                             }
                         ],
                         "searchDsl": "",
@@ -5311,10 +5317,8 @@
                     "config": {
                         "graphs": [
                             {
-                                "graphid": "a7b1a7c5-b25b-11e9-8a4e-a4d18cec433a",
-                                "inverseOntologyProperty": "",
-                                "ontologyProperty": "",
-                                "useOntologyRelationship": true
+                                "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
+                                "name": "Textual Work"
                             }
                         ],
                         "searchDsl": "",
@@ -5741,10 +5745,12 @@
                     "config": {
                         "graphs": [
                             {
-                                "graphid": "a7b1a7c5-b25b-11e9-8a4e-a4d18cec433a",
-                                "inverseOntologyProperty": "",
-                                "ontologyProperty": "",
-                                "useOntologyRelationship": true
+                                "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Textual Work",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "useOntologyRelationship": false
                             }
                         ],
                         "searchDsl": "",
@@ -5838,12 +5844,11 @@
                     "config": {
                         "graphs": [
                             {
-                                "graphid": "a7b1a7c5-b25b-11e9-8a4e-a4d18cec433a",
-                                "inverseOntologyProperty": "",
-                                "inverseRelationshipConcept": "e9a643a2-2b21-4e0b-aba7-2d53933e26a2",
-                                "ontologyProperty": "",
-                                "relationshipCollection": "3a0ceee3-fe65-408c-970d-357dc535c594",
-                                "relationshipConcept": "b5adee9e-a5f5-414d-a9a1-48a122baa9df",
+                                "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Textual Work",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
                             }
                         ],

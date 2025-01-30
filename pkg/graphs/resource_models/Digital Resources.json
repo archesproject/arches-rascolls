@@ -4022,7 +4022,7 @@
                     "parentnodegroup_id": "8713fe14-d860-11ef-98f5-0275dc2ded29"
                 },
                 {
-                    "cardinality": "1",
+                    "cardinality": "n",
                     "legacygroupid": null,
                     "nodegroupid": "8713d9ca-d860-11ef-98f5-0275dc2ded29",
                     "parentnodegroup_id": null
@@ -4385,9 +4385,12 @@
                 {
                     "alias": "file",
                     "config": {
-                        "en": ""
+                        "activateMax": false,
+                        "imagesOnly": false,
+                        "maxFileSize": null,
+                        "maxFiles": 1
                     },
-                    "datatype": "semantic",
+                    "datatype": "file-list",
                     "description": null,
                     "exportable": false,
                     "fieldname": null,
@@ -6909,8 +6912,8 @@
             "publication": {
                 "graph_id": "8713965e-d860-11ef-98f5-0275dc2ded29",
                 "notes": null,
-                "publicationid": "2a38e5e0-d8c6-11ef-8e6b-0275dc2ded29",
-                "published_time": "2025-01-22T05:38:29.527"
+                "publicationid": "b47db404-dea4-11ef-b6bd-0275dc2ded29",
+                "published_time": "2025-01-29T16:54:05.591"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],

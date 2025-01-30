@@ -17321,6 +17321,14 @@
                     "config": {
                         "graphs": [
                             {
+                                "graphid": "a3900eec-d834-11ef-b730-0275dc2ded29",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Instrument",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "useOntologyRelationship": false
+                            },
+                            {
                                 "graphid": "e1d0ea1a-d770-11ef-8c40-0275dc2ded29",
                                 "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "name": "Person",
@@ -17358,16 +17366,6 @@
                                 "name": "Reference and Sample Collection Item",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
                                 "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
-                                "useOntologyRelationship": false
-                            },
-                            {
-                                "graphid": "b6c819b8-99f6-11ea-a9b7-3af9d3b32b71",
-                                "inverseOntologyProperty": "http://www.cidoc-crm.org/cidoc-crm/P62i_is_depicted_by",
-                                "inverseRelationshipConcept": "2a80e895-b0d6-41a4-aa51-275326658a64",
-                                "name": "Instrument",
-                                "ontologyProperty": "http://www.cidoc-crm.org/cidoc-crm/P62_depicts",
-                                "relationshipCollection": "a3f6f8fc-2391-4559-9f0e-63aa5c4b7843",
-                                "relationshipConcept": "c5a63709-c85b-4adc-8e2f-e043f6b7b23e",
                                 "useOntologyRelationship": false
                             }
                         ],
@@ -18263,7 +18261,7 @@
                     "config": {
                         "graphs": [
                             {
-                                "graphid": "52c40a30-b25c-11e9-92cf-a4d18cec433a",
+                                "graphid": "c7b359d8-d833-11ef-a368-0275dc2ded29",
                                 "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "name": "Period",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
@@ -19386,9 +19384,9 @@
                     "config": {
                         "graphs": [
                             {
-                                "graphid": "d5093dfb-ea22-4ad5-8d46-86da9cbfba58",
+                                "graphid": "8713965e-d860-11ef-98f5-0275dc2ded29",
                                 "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
-                                "name": "Digital Resources",
+                                "name": "Digital Resources - New Clone",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
                                 "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
@@ -20515,13 +20513,8 @@
                     "config": {
                         "graphs": [
                             {
-                                "graphid": "52c40a30-b25c-11e9-92cf-a4d18cec433a",
-                                "inverseOntologyProperty": "",
-                                "inverseRelationshipConcept": "e9e8649c-a246-4be8-bedc-634024c3f6d4",
-                                "ontologyProperty": "",
-                                "relationshipCollection": "a3f6f8fc-2391-4559-9f0e-63aa5c4b7843",
-                                "relationshipConcept": "6f8dad8f-f6e4-4e3a-8aac-eb837e7047cf",
-                                "useOntologyRelationship": false
+                                "graphid": "c7b359d8-d833-11ef-a368-0275dc2ded29",
+                                "name": "Period"
                             }
                         ],
                         "searchDsl": "",
@@ -20832,43 +20825,43 @@
                     "config": {
                         "graphs": [
                             {
-                                "graphid": "26a55ac6-d772-11ef-825b-0275dc2ded29",
+                                "graphid": "42fb8480-d834-11ef-a75a-0275dc2ded29",
                                 "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
-                                "name": "Provenance Activity",
+                                "name": "Modification",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
                                 "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
                             },
                             {
-                                "graphid": "03357848-1d9d-11eb-a29f-024e0d439fdb",
-                                "inverseRelationshipConcept": "8ce530d1-548e-4a2f-bdb7-b31e2dae72b9",
-                                "name": "Sampling Activity",
-                                "relationshipCollection": "a3f6f8fc-2391-4559-9f0e-63aa5c4b7843",
-                                "relationshipConcept": "3970de4a-0cda-46ba-8aec-5d00fbf0283a",
-                                "useOntologyRelationship": false
-                            },
-                            {
-                                "graphid": "0b9235d9-ca85-11e9-9fa2-a4d18cec433a",
-                                "inverseRelationshipConcept": "8ce530d1-548e-4a2f-bdb7-b31e2dae72b9",
-                                "name": "Project",
-                                "relationshipCollection": "a3f6f8fc-2391-4559-9f0e-63aa5c4b7843",
-                                "relationshipConcept": "3970de4a-0cda-46ba-8aec-5d00fbf0283a",
-                                "useOntologyRelationship": false
-                            },
-                            {
-                                "graphid": "615b11ee-c457-11e9-910c-a4d18cec433a",
-                                "inverseRelationshipConcept": "8ce530d1-548e-4a2f-bdb7-b31e2dae72b9",
+                                "graphid": "04f87da0-d834-11ef-a75a-0275dc2ded29",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "name": "Observation",
-                                "relationshipCollection": "a3f6f8fc-2391-4559-9f0e-63aa5c4b7843",
-                                "relationshipConcept": "3970de4a-0cda-46ba-8aec-5d00fbf0283a",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
                             },
                             {
-                                "graphid": "5bece219-c456-11e9-8dcd-a4d18cec433a",
-                                "inverseRelationshipConcept": "8ce530d1-548e-4a2f-bdb7-b31e2dae72b9",
-                                "name": "Modification",
-                                "relationshipCollection": "a3f6f8fc-2391-4559-9f0e-63aa5c4b7843",
-                                "relationshipConcept": "3970de4a-0cda-46ba-8aec-5d00fbf0283a",
+                                "graphid": "eaac4efa-d832-11ef-a368-0275dc2ded29",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Project",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "useOntologyRelationship": false
+                            },
+                            {
+                                "graphid": "57d7b38e-d833-11ef-ab38-0275dc2ded29",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Sampling Activity",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "useOntologyRelationship": false
+                            },
+                            {
+                                "graphid": "26a55ac6-d772-11ef-825b-0275dc2ded29",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Provenance Activity",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
                             }
                         ],
@@ -22107,8 +22100,12 @@
                     "config": {
                         "graphs": [
                             {
-                                "graphid": "52c40a30-b25c-11e9-92cf-a4d18cec433a",
-                                "name": "Period"
+                                "graphid": "c7b359d8-d833-11ef-a368-0275dc2ded29",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Period",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "useOntologyRelationship": false
                             }
                         ],
                         "searchDsl": "",
@@ -24086,39 +24083,43 @@
                     "config": {
                         "graphs": [
                             {
-                                "graphid": "26a55ac6-d772-11ef-825b-0275dc2ded29",
-                                "name": "Provenance Activity"
-                            },
-                            {
-                                "graphid": "0b9235d9-ca85-11e9-9fa2-a4d18cec433a",
-                                "inverseRelationshipConcept": "f7294b25-f50e-4062-ad08-c1f31e52a9aa",
-                                "name": "Project",
-                                "relationshipCollection": "a3f6f8fc-2391-4559-9f0e-63aa5c4b7843",
-                                "relationshipConcept": "2c9ff401-1fa0-45db-b9d4-7de19cb7e672",
-                                "useOntologyRelationship": false
-                            },
-                            {
-                                "graphid": "03357848-1d9d-11eb-a29f-024e0d439fdb",
-                                "inverseRelationshipConcept": "f7294b25-f50e-4062-ad08-c1f31e52a9aa",
-                                "name": "Sampling Activity",
-                                "relationshipCollection": "a3f6f8fc-2391-4559-9f0e-63aa5c4b7843",
-                                "relationshipConcept": "2c9ff401-1fa0-45db-b9d4-7de19cb7e672",
-                                "useOntologyRelationship": false
-                            },
-                            {
-                                "graphid": "615b11ee-c457-11e9-910c-a4d18cec433a",
-                                "inverseRelationshipConcept": "f7294b25-f50e-4062-ad08-c1f31e52a9aa",
-                                "name": "Observation",
-                                "relationshipCollection": "a3f6f8fc-2391-4559-9f0e-63aa5c4b7843",
-                                "relationshipConcept": "2c9ff401-1fa0-45db-b9d4-7de19cb7e672",
-                                "useOntologyRelationship": false
-                            },
-                            {
-                                "graphid": "5bece219-c456-11e9-8dcd-a4d18cec433a",
-                                "inverseRelationshipConcept": "f7294b25-f50e-4062-ad08-c1f31e52a9aa",
+                                "graphid": "42fb8480-d834-11ef-a75a-0275dc2ded29",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "name": "Modification",
-                                "relationshipCollection": "a3f6f8fc-2391-4559-9f0e-63aa5c4b7843",
-                                "relationshipConcept": "2c9ff401-1fa0-45db-b9d4-7de19cb7e672",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "useOntologyRelationship": false
+                            },
+                            {
+                                "graphid": "04f87da0-d834-11ef-a75a-0275dc2ded29",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Observation",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "useOntologyRelationship": false
+                            },
+                            {
+                                "graphid": "57d7b38e-d833-11ef-ab38-0275dc2ded29",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Sampling Activity",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "useOntologyRelationship": false
+                            },
+                            {
+                                "graphid": "eaac4efa-d832-11ef-a368-0275dc2ded29",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Project",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "useOntologyRelationship": false
+                            },
+                            {
+                                "graphid": "26a55ac6-d772-11ef-825b-0275dc2ded29",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Provenance Activity",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
                             }
                         ],
@@ -24169,12 +24170,8 @@
                     "config": {
                         "graphs": [
                             {
-                                "graphid": "d5093dfb-ea22-4ad5-8d46-86da9cbfba58",
-                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
-                                "name": "Digital Resources",
-                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
-                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
-                                "useOntologyRelationship": false
+                                "graphid": "8713965e-d860-11ef-98f5-0275dc2ded29",
+                                "name": "Digital Resources - New Clone"
                             }
                         ],
                         "searchDsl": "",
@@ -24487,10 +24484,8 @@
                     "config": {
                         "graphs": [
                             {
-                                "graphid": "52c40a30-b25c-11e9-92cf-a4d18cec433a",
-                                "inverseOntologyProperty": "",
-                                "ontologyProperty": "",
-                                "useOntologyRelationship": true
+                                "graphid": "c7b359d8-d833-11ef-a368-0275dc2ded29",
+                                "name": "Period"
                             }
                         ],
                         "searchDsl": "",
@@ -24727,12 +24722,11 @@
                     "config": {
                         "graphs": [
                             {
-                                "graphid": "1b210ef3-b25c-11e9-a037-a4d18cec433a",
-                                "inverseOntologyProperty": "",
-                                "inverseRelationshipConcept": "f301351b-d058-410d-ad69-fb0c11b82d34",
-                                "ontologyProperty": "",
-                                "relationshipCollection": "a3f6f8fc-2391-4559-9f0e-63aa5c4b7843",
-                                "relationshipConcept": "4589f31d-6b54-41b2-8493-9d9e7cbaee0f",
+                                "graphid": "da0ed58e-d771-11ef-af99-0275dc2ded29",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Collection or Set",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
                             }
                         ],
@@ -24956,23 +24950,15 @@
                     "config": {
                         "graphs": [
                             {
-                                "graphid": "5bece219-c456-11e9-8dcd-a4d18cec433a",
+                                "graphid": "eaac4efa-d832-11ef-a368-0275dc2ded29",
                                 "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
-                                "name": "Modification",
+                                "name": "Project",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
                                 "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
                             },
                             {
-                                "graphid": "615b11ee-c457-11e9-910c-a4d18cec433a",
-                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
-                                "name": "Observation",
-                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
-                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
-                                "useOntologyRelationship": false
-                            },
-                            {
-                                "graphid": "03357848-1d9d-11eb-a29f-024e0d439fdb",
+                                "graphid": "57d7b38e-d833-11ef-ab38-0275dc2ded29",
                                 "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "name": "Sampling Activity",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
@@ -24980,9 +24966,17 @@
                                 "useOntologyRelationship": false
                             },
                             {
-                                "graphid": "0b9235d9-ca85-11e9-9fa2-a4d18cec433a",
+                                "graphid": "04f87da0-d834-11ef-a75a-0275dc2ded29",
                                 "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
-                                "name": "Project",
+                                "name": "Observation",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "useOntologyRelationship": false
+                            },
+                            {
+                                "graphid": "42fb8480-d834-11ef-a75a-0275dc2ded29",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Modification",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
                                 "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
@@ -25348,8 +25342,8 @@
             "publication": {
                 "graph_id": "bda239c6-d376-11ef-a239-0275dc2ded29",
                 "notes": null,
-                "publicationid": "a4ea5a7a-d7f0-11ef-a75a-0275dc2ded29",
-                "published_time": "2025-01-21T04:10:03.072"
+                "publicationid": "d52d9284-d8c1-11ef-8e6b-0275dc2ded29",
+                "published_time": "2025-01-22T05:07:28.859"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
