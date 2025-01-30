@@ -33,6 +33,7 @@ const props = defineProps<{
     basemaps: Basemap[];
     sources: MapSource[];
     includeDrawer: boolean;
+    popupEnabled: boolean;
 }>();
 
 const map: Ref<Map | null> = ref(null);
@@ -116,6 +117,7 @@ function updateSelectedDrawnFeature(feature: Feature) {
             :overlays="overlays"
             :sources="sources"
             :is-drawing-enabled="true"
+            :is-popup-enabled="popupEnabled"
             @map-initialized="
                 (mapInstance) => {
                     map = mapInstance;

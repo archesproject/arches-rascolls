@@ -14,6 +14,7 @@ import arches from "arches";
 
 import SimpleSearchFilter from "@/afrc/Search/components/SimpleSearchFilter.vue";
 import SearchResultItem from "@/afrc/Search/components/SearchResultItem.vue";
+import SearchItemDetails from "@/afrc/Search/components/SearchItemDetails.vue";
 import InteractiveMap from "@/afrc/Search/components/InteractiveMap/InteractiveMap.vue";
 import { fetchMapData } from "@/afrc/Search/api.ts";
 import type { GenericObject } from "@/afrc/Search/types";
@@ -23,6 +24,7 @@ let query = getQueryObject(null);
 let queryString = ref(JSON.stringify(query));
 let searchResults = ref([]);
 let resultsCount = ref("calculating...");
+let resultSelected = ref("");
 const showMap = ref(false);
 const basemaps: Ref<Basemap[]> = ref([]);
 const overlays: Ref<MapLayer[]> = ref([]);
@@ -34,6 +36,7 @@ const toast = useToast();
 const { $gettext } = useGettext();
 
 provide("resultsSelected", resultsSelected);
+provide("resultSelected", resultSelected);
 
 watch(queryString, () => {
     doQuery();
@@ -98,7 +101,7 @@ async function doQuery() {
 
     const qs = new URLSearchParams(queryObj);
 
-    return fetch(arches.urls["api-search"] + "?" + qs.toString())
+    fetch(arches.urls["api-search"] + "?" + qs.toString())
         .then((response) => response.json())
         .then((data) => {
             console.log(data.total_results);
@@ -222,7 +225,9 @@ onMounted(async () => {
                     ></Paginator> -->
                 </div>
             </section>
-
+            <section v-if="dataLoaded && resultSelected">
+                <SearchItemDetails :instance-id="resultSelected" />
+            </section>
             <div
                 v-if="showMap && dataLoaded"
                 style="width: 100%; height: 100%"
@@ -232,6 +237,7 @@ onMounted(async () => {
                     :overlays="overlays"
                     :sources="sources"
                     :include-drawer="false"
+                    :popup-enabled="false"
                 />
             </div>
 
@@ -307,6 +313,7 @@ section.afrc-search-results-panel {
     margin: 15px;
     overflow-y: auto;
     height: calc(100vh - 150px);
+    min-width: 350px;
 }
 
 .search-result-list {

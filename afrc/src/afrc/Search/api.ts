@@ -60,5 +60,10 @@ export const createRequest = (url: string) => {
     };
 };
 
+export const fetchResourceData = (resourceId: string) => {
+    const url = `${arches.urls["api_resources"](resourceId)}?format=json&v=beta`;
+    return createRequest(url)();
+};
+
 export const fetchSettings = createRequest(arches.urls["api-settings"]);
 export const fetchMapData = createRequest(arches.urls["api-map-data"]);

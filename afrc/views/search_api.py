@@ -118,11 +118,7 @@ class SearchAPI(View):
             request_copy["resource-type-filter"] = json.dumps(base_resource_type_filter)
             request_copy["paging-filter"] = 1
             request.GET = request_copy
-
             backfill_results = search_results(request)
-            # import ipdb
-
-            # ipdb.sset_trace()
 
             # first page of hits of potentially related resources
             resourceinstanceids = [
