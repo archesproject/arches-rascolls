@@ -3,6 +3,7 @@ import { onMounted, ref, useTemplateRef, watch, inject } from "vue";
 
 import MapboxDraw from "@mapbox/mapbox-gl-draw";
 import maplibregl from "maplibre-gl";
+import geojsonExtent from "@mapbox/geojson-extent";
 
 import "@mapbox/mapbox-gl-draw/dist/mapbox-gl-draw.css";
 import "maplibre-gl/dist/maplibre-gl.css";
@@ -165,6 +166,10 @@ onMounted(() => {
         updateBasemap(basemap as Basemap);
     }
     addMapControls();
+
+    if (settings) {
+            map.value!.fitBounds(geojsonExtent(settings.DEFAULT_BOUNDS));
+        }
 
     map.value!.once(STYLE_LOAD_EVENT, () => {
         if (isDrawingEnabled || drawnFeatures) {
