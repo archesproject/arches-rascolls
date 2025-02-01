@@ -78,7 +78,7 @@ function clearResult() {
             </div>
         </div>
         <div class="description">
-            <div v-if="displaydescription && displaydescription != 'Undefined'">{{ displaydescription }}</div>
+            <div v-if="displaydescription && displaydescription != 'Undefined'" v-html="displaydescription"></div>
             <div v-else>No description provided</div> 
         </div>
         <div v-if="images.length" class="images">

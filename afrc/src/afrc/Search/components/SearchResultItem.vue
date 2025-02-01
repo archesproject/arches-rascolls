@@ -49,9 +49,7 @@ function selectResult(resourceid: string) {
                 (North and Central America &gt; United States &gt; Missouri &gt;
                 Greene)
             </div>
-            <div class="scope-note">
-                {{ searchResult._source.displaydescription }}
-            </div>
+            <div v-html="searchResult._source.displaydescription" class="scope-note"></div>
             <div class="actions">
                 <Button
                     label="...show more"
