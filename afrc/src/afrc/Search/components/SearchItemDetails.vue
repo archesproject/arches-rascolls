@@ -34,8 +34,8 @@ async function getData() {
         ({ 
             "person": tile?.["Addition to Collection_carried out by"]["@display_value"],
             "date": tile?.["Addition to Collection_time"]["Addition to Collection_time_begin of the begin"]["@display_value"],
-            "details": tile?.["Addition to Collection_Statement"]?.map((statement: UnspecifiedObject) =>
-                (statement?.["Addition to Collection_Statement_content"] as UnspecifiedObject ["@display_value"])).join(" ") 
+            "details": tile?.["Addition to Collection_Statement"]?.map((statement: GenericObject) =>
+            (statement?.["Addition to Collection_Statement_content"]?.["@display_value"])).join(" ") 
         }));
     displayname.value = resp.displayname;
     displaydescription.value = resp.displaydescription;
