@@ -1,5 +1,6 @@
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type GenericObject = { [key: string]: any };
+export type UnspecifiedObject = { [key: string]: UnspecifiedObject | unknown };
 import type { Component, Ref } from "vue";
 import type { Feature, FeatureCollection, Geometry, GeoJSON } from "geojson";
 import type { FilterSpecification } from "maplibre-gl";

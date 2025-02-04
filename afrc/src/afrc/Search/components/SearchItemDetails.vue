@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { onMounted, inject, ref, watch } from "vue";
-import type { Acquisition } from "@/afrc/Search/types";
+import type { Acquisition, UnspecifiedObject, GenericObject } from "@/afrc/Search/types";
 import { fetchResourceData, fetchImageData } from "@/afrc/Search/api.ts";
 import type { Ref } from "vue";
 import Button from "primevue/button";
@@ -25,17 +25,17 @@ watch(resultSelected, () => {
 
 async function getData() {
     const resp = await fetchResourceData(resultSelected.value);
-    const imageResourceids = resp.resource["Digital Reference"]?.map((tile: { [key: string]: any; }) => // eslint-disable-line @typescript-eslint/no-explicit-any
-        tile["Digital Source"]["resourceId"]); 
-    const accessionNumber = resp.resource['Identifier']?.find((identifier: {[key: string]: any;}) => // eslint-disable-line @typescript-eslint/no-explicit-any
-        identifier["Identifier_type"]["@display_value"]==="Accession Number"); 
+    const imageResourceids = resp.resource["Digital Reference"]?.map((tile: UnspecifiedObject) => 
+        (tile["Digital Source"] as UnspecifiedObject)?.["resourceId"]);
+    const accessionNumber = resp.resource['Identifier']?.find((identifier: UnspecifiedObject) =>
+        identifier["Identifier_type"] as UnspecifiedObject["@display_value"]==="Accession Number"); 
 
-    acquisitions.value = resp.resource["Addition to Collection"]?.map((tile: { [key: string]: any; }) => // eslint-disable-line @typescript-eslint/no-explicit-any
+    acquisitions.value = resp.resource["Addition to Collection"]?.map((tile: GenericObject) =>
         ({ 
             "person": tile?.["Addition to Collection_carried out by"]["@display_value"],
             "date": tile?.["Addition to Collection_time"]["Addition to Collection_time_begin of the begin"]["@display_value"],
-            "details": tile?.["Addition to Collection_Statement"]?.map((statement: {[key: string]: any;}) => // eslint-disable-line @typescript-eslint/no-explicit-any
-                (statement?.["Addition to Collection_Statement_content"]["@display_value"])).join(" ") 
+            "details": tile?.["Addition to Collection_Statement"]?.map((statement: UnspecifiedObject) =>
+                (statement?.["Addition to Collection_Statement_content"] as UnspecifiedObject ["@display_value"])).join(" ") 
         }));
     displayname.value = resp.displayname;
     displaydescription.value = resp.displaydescription;
