@@ -50,6 +50,12 @@ function search(event: AutoCompleteCompleteEvent) {
                 { label: "Terms", items: data.terms },
                 { label: "Concepts", items: data.concepts },
             ];
+            ret[0].items.unshift({
+                text: event.query,
+                type: "term",
+                value: event.query,
+                inverted: false,
+            });
             items.value = ret;
         });
 }

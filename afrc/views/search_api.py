@@ -77,6 +77,16 @@ def search_results(request, returnDsl=False):
         )
 
 
+def get_related_resources_by_text(search_query):
+    with connection.cursor() as cursor:
+        cursor.execute(
+            "SELECT * FROM __afrc_get_related_resources_by_searchable_values(ARRAY[%s], '1810d182-b4b5-11ea-84f7-3af9d3b32b71')",
+            [search_query],
+        )
+        rows = cursor.fetchall()
+    return rows
+
+
 class SearchAPI(View):
     def get(self, request):
         base_resource_type_filter = [
@@ -94,17 +104,28 @@ class SearchAPI(View):
         page_size = int(settings.SEARCH_ITEMS_PER_PAGE)
         print(page_size)
 
-        request_copy = request.GET.copy()
-        request_copy["resource-type-filter"] = json.dumps(base_resource_type_filter)
-        request.GET = request_copy
-        direct_results = search_results(request)
-        print(current_page * page_size)
-        # print(direct_results)
-        print(direct_results["total_results"])
+        if "term-filter" in request.GET:
+            term = json.loads(request.GET.get("term-filter"))[0]["value"]
+            results = get_related_resources_by_text(term)
+            print(f"len of results: {len(results)}")
+            ret = get_search_results_by_resourceids(
+                [str(row[0]) for row in results],
+                start=(current_page - 1) * page_size,
+                limit=page_size,
+            )
+            return JSONResponse({"results": ret, "total_results": len(results)})
+        else:
+            request_copy = request.GET.copy()
+            request_copy["resource-type-filter"] = json.dumps(base_resource_type_filter)
+            request.GET = request_copy
+            direct_results = search_results(request)
+            print(current_page * page_size)
+            # print(direct_results)
+            print(direct_results["total_results"])
 
+            return JSONResponse(content=search_results(request))
         if int(direct_results["total_results"]) >= current_page * page_size:
             print("we have direct hits on collections")
-            return JSONResponse(content=search_results(request))
         else:
             # we have no more direct hits on reference collections and we need to
             # backfill with results of hits based on potential resources related to reference collections
@@ -158,6 +179,29 @@ class SearchAPI(View):
             direct_results["results"]["hits"]["hits"] += results["hits"]["hits"]
             direct_results["total_results"] += int(len(results["hits"]["hits"]))
             return JSONResponse(direct_results)
+
+
+def get_search_results_by_resourceids(resourceids, start=0, limit=30):
+    se = SearchEngineFactory().create()
+    query = Query(se, start=start, limit=limit)
+    query.add_query(Ids(ids=resourceids))
+    results = query.search(index=RESOURCES_INDEX)
+
+    descriptor_types = ("displaydescription", "displayname")
+    active_and_default_language_codes = (get_language(), settings.LANGUAGE_CODE)
+    for result in results["hits"]["hits"]:
+        for descriptor_type in descriptor_types:
+            descriptor = get_localized_descriptor(
+                result, descriptor_type, active_and_default_language_codes
+            )
+            if descriptor:
+                print(descriptor)
+                result["_source"][descriptor_type] = descriptor["value"]
+                if descriptor_type == "displayname":
+                    result["_source"]["displayname_language"] = descriptor["language"]
+            else:
+                result["_source"][descriptor_type] = _("Undefined")
+    return results
 
 
 def search_relationships_via_ORM(
@@ -231,8 +275,8 @@ def search_direct_relationships_via_ORM(
             if res[0] not in resourceinstanceids and res[0] not in hits:
                 hits.add(res[0])
 
-            if res[2] not in resourceinstanceids and res[2] not in hits:
-                hits.add(res[2])
+            if res[1] not in resourceinstanceids and res[1] not in hits:
+                hits.add(res[1])
 
         if depth > 0:
             get_related_resourceinstanceids(list(hits), depth=depth)
@@ -253,7 +297,7 @@ class RREsMappingModifier(EsMappingModifier):
     def get_data_from_function(resourceinstanceids):
         with connection.cursor() as cursor:
             cursor.execute(
-                "SELECT * FROM __arches_get_values_for_resourceinstances(%s)",
+                "SELECT * FROM __arches_get_searchable_values_for_resourceinstances(%s)",
                 [resourceinstanceids],
             )
             rows = cursor.fetchall()
@@ -273,12 +317,23 @@ class RREsMappingModifier(EsMappingModifier):
                 depth=2,
             )
         )
-        # print(related_resource_ids)
+
+        def agg(items):
+            ret = set()
+            for item in items:
+                # print(item[0])
+                for ii in item[0].split():
+                    # print(f"--> {ii}")
+                    if len(ii) > 2:
+                        ret.add(ii)
+            return ret
 
         # Example usage
-        for item in RREsMappingModifier.get_data_from_function(related_resource_ids):
-            # print(item)
-            document[RREsMappingModifier.get_mapping_property()].append(item[0])
+        # print(related_resource_ids[0])
+        for item in agg(
+            RREsMappingModifier.get_data_from_function(related_resource_ids)
+        ):
+            document[RREsMappingModifier.get_mapping_property()].append(item)
 
     @staticmethod
     def create_nested_custom_filter(term, original_element):
@@ -319,6 +374,7 @@ class RREsMappingModifier(EsMappingModifier):
                 type="phrase_prefix",
             )
         )
+        print(search_query.dsl)
         # for must_element in original_must_filter:
         #     search_query.must(
         #         RREsMappingModifier.create_nested_custom_filter(term, must_element)

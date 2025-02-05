@@ -106,7 +106,16 @@ async function doQuery() {
         .then((data) => {
             console.log(data.total_results);
             console.log(data);
-            searchResults.value = data.results.hits.hits;
+            // const items_per_page = 5;
+            // const page: number = parseInt(queryObj?.['paging-filter'] ?? 1);
+            // const myArray: never[] = new Array((page-1)*items_per_page);
+
+            // // Insert an element at a specific index
+            const hits: never[] = data.results.hits.hits;
+            // myArray.splice((page-1)*items_per_page, 0, ...hits);
+            // //myArray[(page-1)*items_per_page] = [...hits];
+
+            searchResults.value = hits;
             resultsCount.value = data.total_results;
             resultsSelected.value = [];
         });
@@ -204,25 +213,21 @@ onMounted(async () => {
                 <div class="search-result-list">
                     <!-- <div style="height: 50px">{{ item?._source.displayname }}</div> -->
                     <DataView
+                        lazy
                         paginator
                         rows="10"
                         :value="searchResults"
                         :total-records="resultsCount"
                         @page="onPageChange"
                     >
-                        <template>
+                        <template #list="slotProps">
                             <SearchResultItem
-                                v-for="item in searchResults"
+                                v-for="item in slotProps.items"
                                 :key="item"
                                 :search-result="item"
                             />
                         </template>
                     </DataView>
-                    <!-- <Paginator
-                        rows="10"
-                        :total-records="resultsCount"
-                        @page="onPageChange"
-                    ></Paginator> -->
                 </div>
             </section>
             <section v-if="dataLoaded && resultSelected">
