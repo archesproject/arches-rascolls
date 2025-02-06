@@ -1160,9 +1160,40 @@
             "color": "rgba(38,70,83,0.75)",
             "config": {
                 "activeTabIndex": 1,
+                "basemap": "streets",
+                "bearing": 0,
+                "centerX": -122.3979693,
+                "centerY": 37.79,
+                "featureColor": "#FF0000",
+                "featureEditingDisabled": true,
+                "featureLineWidth": 1,
+                "featurePointSize": 3,
+                "geocodePlaceholder": "Search",
+                "geocodeProvider": "10000000-0000-0000-0000-010000000000",
+                "geocoderVisible": true,
+                "geometryTypes": [
+                    {
+                        "id": "Point",
+                        "text": "Point"
+                    },
+                    {
+                        "id": "Line",
+                        "text": "Line"
+                    },
+                    {
+                        "id": "Polygon",
+                        "text": "Polygon"
+                    }
+                ],
+                "mapControlsHidden": false,
+                "maxZoom": 20,
+                "minZoom": 0,
+                "overlayConfigs": [],
+                "overlayOpacity": 0,
+                "pitch": 0,
                 "tabs": [
                     {
-                        "icon": "fa-info",
+                        "icon": "fa fa-adjust",
                         "name": "Identity",
                         "nodegroup_ids": [
                             "1be4c387-c071-11e9-ba22-a4d18cec433a",
@@ -1173,7 +1204,7 @@
                         ]
                     },
                     {
-                        "icon": "fa-chain",
+                        "icon": "fa fa-adjust",
                         "name": "Links",
                         "nodegroup_ids": [
                             "43ea673d-c071-11e9-a4af-a4d18cec433a",
@@ -1181,7 +1212,8 @@
                             "6c874bcf-c071-11e9-9605-a4d18cec433a"
                         ]
                     }
-                ]
+                ],
+                "zoom": 10
             },
             "deploymentdate": null,
             "deploymentfile": null,
@@ -1559,8 +1591,8 @@
                                 "string_template": "<content>"
                             },
                             "map_popup": {
-                                "nodegroup_id": "3ddabeda-d771-11ef-825b-0275dc2ded29",
-                                "string_template": "<defined by>"
+                                "nodegroup_id": "",
+                                "string_template": ""
                             },
                             "name": {
                                 "nodegroup_id": "3ddab19c-d771-11ef-825b-0275dc2ded29",
@@ -1571,7 +1603,7 @@
                     },
                     "function_id": "60000000-0000-0000-0000-000000000001",
                     "graph_id": "3dda9f54-d771-11ef-825b-0275dc2ded29",
-                    "id": "1c10133d-d678-49a2-aeca-2c759fc18c4c"
+                    "id": "366eb558-53b5-4d1c-9a33-1bbcfd549853"
                 }
             ],
             "graphid": "3dda9f54-d771-11ef-825b-0275dc2ded29",
@@ -2702,8 +2734,8 @@
             "publication": {
                 "graph_id": "3dda9f54-d771-11ef-825b-0275dc2ded29",
                 "notes": null,
-                "publicationid": "83309a26-d8c6-11ef-8e6b-0275dc2ded29",
-                "published_time": "2025-01-22T05:40:58.789"
+                "publicationid": "aaddf0d6-e416-11ef-a492-0275dc2ded29",
+                "published_time": "2025-02-05T15:12:27.886"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -2731,7 +2763,7 @@
             "subtitle": {
                 "en": "A geographic space on a map"
             },
-            "template_id": "50000000-0000-0000-0000-000000000004",
+            "template_id": "50000000-0000-0000-0000-000000000002",
             "version": ""
         }
     ],

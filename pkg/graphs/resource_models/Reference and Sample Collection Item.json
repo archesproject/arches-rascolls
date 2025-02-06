@@ -1529,7 +1529,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Name of Object"
                     },
@@ -1902,7 +1902,7 @@
                     "instructions": {
                         "en": ""
                     },
-                    "is_editable": true,
+                    "is_editable": false,
                     "name": {
                         "en": "Statement or Interpretation about Object"
                     },
@@ -2027,7 +2027,7 @@
                 {
                     "active": true,
                     "cardid": "bda4d12c-d376-11ef-a239-0275dc2ded29",
-                    "component_id": "2ed3f508-4e8e-11ea-b975-5b976cab10db",
+                    "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
                     "config": {
                         "defaultManifest": ""
                     },
@@ -10564,6 +10564,37 @@
             "color": "rgba(42,157,143,0.5)",
             "config": {
                 "activeTabIndex": 0,
+                "basemap": "streets",
+                "bearing": 0,
+                "centerX": -122.3979693,
+                "centerY": 37.79,
+                "featureColor": "#FF0000",
+                "featureEditingDisabled": true,
+                "featureLineWidth": 1,
+                "featurePointSize": 3,
+                "geocodePlaceholder": "Search",
+                "geocodeProvider": "10000000-0000-0000-0000-010000000000",
+                "geocoderVisible": true,
+                "geometryTypes": [
+                    {
+                        "id": "Point",
+                        "text": "Point"
+                    },
+                    {
+                        "id": "Line",
+                        "text": "Line"
+                    },
+                    {
+                        "id": "Polygon",
+                        "text": "Polygon"
+                    }
+                ],
+                "mapControlsHidden": false,
+                "maxZoom": 20,
+                "minZoom": 0,
+                "overlayConfigs": [],
+                "overlayOpacity": 0,
+                "pitch": 0,
                 "tabs": [
                     {
                         "icon": "fa fa-info",
@@ -10602,7 +10633,8 @@
                             "a1490580-d2bd-11e9-af41-a4d18cec433a"
                         ]
                     }
-                ]
+                ],
+                "zoom": 10
             },
             "deploymentdate": null,
             "deploymentfile": null,
@@ -14333,8 +14365,8 @@
                     "config": {
                         "descriptor_types": {
                             "description": {
-                                "nodegroup_id": "bda499a0-d376-11ef-a239-0275dc2ded29",
-                                "string_template": "<statement_content>"
+                                "nodegroup_id": "bda3962c-d376-11ef-a239-0275dc2ded29",
+                                "string_template": "<Identifier_content>"
                             },
                             "map_popup": {
                                 "nodegroup_id": "",
@@ -14342,19 +14374,19 @@
                             },
                             "name": {
                                 "nodegroup_id": "bda409e0-d376-11ef-a239-0275dc2ded29",
-                                "string_template": "<name_content>"
+                                "string_template": "<Name_content>"
                             }
                         },
                         "triggering_nodegroups": []
                     },
                     "function_id": "60000000-0000-0000-0000-000000000001",
                     "graph_id": "bda239c6-d376-11ef-a239-0275dc2ded29",
-                    "id": "414a06d8-dc48-497d-a374-0518e5ca690b"
+                    "id": "81bdba25-a6d0-43a0-a9d0-fcb3affec6d2"
                 }
             ],
             "graphid": "bda239c6-d376-11ef-a239-0275dc2ded29",
             "iconclass": "fa fa-asterisk",
-            "is_editable": true,
+            "is_editable": false,
             "isresource": true,
             "jsonldcontext": "https://linked.art/ns/v1/linked-art.json",
             "name": {
@@ -25342,8 +25374,8 @@
             "publication": {
                 "graph_id": "bda239c6-d376-11ef-a239-0275dc2ded29",
                 "notes": null,
-                "publicationid": "d52d9284-d8c1-11ef-8e6b-0275dc2ded29",
-                "published_time": "2025-01-22T05:07:28.859"
+                "publicationid": "a352ee96-e418-11ef-8235-0275dc2ded29",
+                "published_time": "2025-02-05T15:26:34.224"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -25371,7 +25403,7 @@
             "subtitle": {
                 "en": "A physical object that can be touched"
             },
-            "template_id": "50000000-0000-0000-0000-000000000001",
+            "template_id": "50000000-0000-0000-0000-000000000002",
             "version": ""
         }
     ],

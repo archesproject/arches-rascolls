@@ -3467,8 +3467,8 @@
                     "config": {
                         "descriptor_types": {
                             "description": {
-                                "nodegroup_id": "eaaca88c-d832-11ef-a368-0275dc2ded29",
-                                "string_template": "<statement_content>"
+                                "nodegroup_id": "",
+                                "string_template": ""
                             },
                             "map_popup": {
                                 "nodegroup_id": "",
@@ -3476,14 +3476,14 @@
                             },
                             "name": {
                                 "nodegroup_id": "eaac7efc-d832-11ef-a368-0275dc2ded29",
-                                "string_template": "<name_content>"
+                                "string_template": "<Name_content>"
                             }
                         },
                         "triggering_nodegroups": []
                     },
                     "function_id": "60000000-0000-0000-0000-000000000001",
                     "graph_id": "eaac4efa-d832-11ef-a368-0275dc2ded29",
-                    "id": "5043d044-321b-4532-b2a3-71cf67de252b"
+                    "id": "b83bec35-9072-41eb-a2cf-6cf76bf9e2a6"
                 }
             ],
             "graphid": "eaac4efa-d832-11ef-a368-0275dc2ded29",
@@ -6053,7 +6053,7 @@
             "subtitle": {
                 "en": "Projects, Research Tasks and Experiments"
             },
-            "template_id": "2b124304-6e42-4c0c-8161-14c010dcef71",
+            "template_id": "50000000-0000-0000-0000-000000000001",
             "version": ""
         }
     ],
