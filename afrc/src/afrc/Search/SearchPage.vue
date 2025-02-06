@@ -25,6 +25,7 @@ let queryString = ref(JSON.stringify(query));
 let searchResults = ref([]);
 let resultsCount = ref("calculating...");
 let resultSelected = ref("");
+let forcePaginatorRepaint = ref(0);
 const showMap = ref(false);
 const basemaps: Ref<Basemap[]> = ref([]);
 const overlays: Ref<MapLayer[]> = ref([]);
@@ -39,7 +40,7 @@ provide("resultsSelected", resultsSelected);
 provide("resultSelected", resultSelected);
 
 watch(queryString, () => {
-    doQuery();
+    performSearch();
 });
 
 function updateFilter(componentName: string, value: object) {
@@ -86,7 +87,7 @@ function getQueryObject(uri: string | null): GenericObject {
     return obj;
 }
 
-async function doQuery() {
+async function performSearch() {
     const queryObj = JSON.parse(queryString.value ?? "{}");
 
     Object.keys(queryObj).forEach((key) => {
@@ -96,6 +97,7 @@ async function doQuery() {
     if (newQuery.value) {
         const componentName = "paging-filter";
         delete queryObj[componentName];
+        forcePaginatorRepaint.value += 1;
         newQuery.value = false;
     }
 
@@ -104,17 +106,7 @@ async function doQuery() {
     fetch(arches.urls["api-search"] + "?" + qs.toString())
         .then((response) => response.json())
         .then((data) => {
-            console.log(data.total_results);
-            console.log(data);
-            // const items_per_page = 5;
-            // const page: number = parseInt(queryObj?.['paging-filter'] ?? 1);
-            // const myArray: never[] = new Array((page-1)*items_per_page);
-
-            // // Insert an element at a specific index
             const hits: never[] = data.results.hits.hits;
-            // myArray.splice((page-1)*items_per_page, 0, ...hits);
-            // //myArray[(page-1)*items_per_page] = [...hits];
-
             searchResults.value = hits;
             resultsCount.value = data.total_results;
             resultsSelected.value = [];
@@ -171,7 +163,7 @@ async function onPageChange(event: {
 }
 
 onMounted(async () => {
-    doQuery();
+    performSearch();
     await fetchSystemMapData();
     dataLoaded.value = true;
 });
@@ -213,6 +205,7 @@ onMounted(async () => {
                 <div class="search-result-list">
                     <!-- <div style="height: 50px">{{ item?._source.displayname }}</div> -->
                     <DataView
+                        :key="forcePaginatorRepaint"
                         lazy
                         paginator
                         rows="10"
