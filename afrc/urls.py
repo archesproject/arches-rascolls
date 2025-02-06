@@ -11,6 +11,7 @@ from afrc.views.map_api import (
     GeoJSONBoundsAPI,
     ReferenceCollectionMVT,
 )
+from afrc.views.rascoll_search import RascollSearchView
 
 urlpatterns = [
     # project-level urls
@@ -25,6 +26,7 @@ urlpatterns = [
         ReferenceCollectionMVT.as_view(),
         name="api-reference-collection-mvt",
     ),
+    re_path(r"^rascoll-search$", RascollSearchView.as_view(), name="rascoll-search"),
 ]
 
 # Ensure Arches core urls are superseded by project-level urls

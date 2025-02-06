@@ -167,6 +167,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "arches.app.utils.middleware.SetAnonymousUser",
     # "silk.middleware.SilkyMiddleware",
+    # "csp.middleware.CSPMiddleware",
 ]
 
 MIDDLEWARE.insert(  # this must resolve to first MIDDLEWARE entry

@@ -5476,22 +5476,22 @@
                         "descriptor_types": {
                             "description": {
                                 "nodegroup_id": "7ce1e2ec-d772-11ef-825b-0275dc2ded29",
-                                "string_template": "<content>"
+                                "string_template": "<Statement (top)_content>"
                             },
                             "map_popup": {
                                 "nodegroup_id": "",
                                 "string_template": ""
                             },
                             "name": {
-                                "nodegroup_id": "7ce1d612-d772-11ef-825b-0275dc2ded29",
-                                "string_template": "<name_top__content>"
+                                "nodegroup_id": "7ce1d19e-d772-11ef-825b-0275dc2ded29",
+                                "string_template": "<Dimension_Name_content>"
                             }
                         },
                         "triggering_nodegroups": []
                     },
                     "function_id": "60000000-0000-0000-0000-000000000001",
                     "graph_id": "7ce192f6-d772-11ef-825b-0275dc2ded29",
-                    "id": "769c96d5-bbb6-403a-a8ae-dbd3e3077e72"
+                    "id": "7123d0c4-ccc3-4d76-838f-2de2a84e3331"
                 }
             ],
             "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
@@ -9693,8 +9693,8 @@
             "publication": {
                 "graph_id": "7ce192f6-d772-11ef-825b-0275dc2ded29",
                 "notes": null,
-                "publicationid": "c75ef63e-d8c6-11ef-94f2-0275dc2ded29",
-                "published_time": "2025-01-22T05:42:53.178"
+                "publicationid": "fe7787b2-e41a-11ef-956e-0275dc2ded29",
+                "published_time": "2025-02-05T15:43:26.130"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
