@@ -4191,7 +4191,7 @@
                         "descriptor_types": {
                             "description": {
                                 "nodegroup_id": "a390592e-d834-11ef-b730-0275dc2ded29",
-                                "string_template": "<statement_content>"
+                                "string_template": "<content >"
                             },
                             "map_popup": {
                                 "nodegroup_id": "",
@@ -4199,14 +4199,14 @@
                             },
                             "name": {
                                 "nodegroup_id": "a3902332-d834-11ef-b730-0275dc2ded29",
-                                "string_template": "<name_content>"
+                                "string_template": "<Name_content>"
                             }
                         },
                         "triggering_nodegroups": []
                     },
                     "function_id": "60000000-0000-0000-0000-000000000001",
                     "graph_id": "a3900eec-d834-11ef-b730-0275dc2ded29",
-                    "id": "f0640a5a-20c1-49c2-8af9-0db23655f8d5"
+                    "id": "c2fa0e78-b7d2-40bb-aaea-0ae88de1094b"
                 }
             ],
             "graphid": "a3900eec-d834-11ef-b730-0275dc2ded29",
@@ -7277,7 +7277,7 @@
             "subtitle": {
                 "en": "An instrument used in an experiment"
             },
-            "template_id": "c2edf720-9db0-4029-a102-48e6762ded79",
+            "template_id": "50000000-0000-0000-0000-000000000001",
             "version": ""
         }
     ],

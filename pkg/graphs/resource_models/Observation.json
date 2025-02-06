@@ -3425,7 +3425,7 @@
                         "descriptor_types": {
                             "description": {
                                 "nodegroup_id": "04f8c648-d834-11ef-a75a-0275dc2ded29",
-                                "string_template": "<statement_content>"
+                                "string_template": "<Statement_content>"
                             },
                             "map_popup": {
                                 "nodegroup_id": "",
@@ -3433,14 +3433,14 @@
                             },
                             "name": {
                                 "nodegroup_id": "04f89e20-d834-11ef-a75a-0275dc2ded29",
-                                "string_template": "<name_content>"
+                                "string_template": "<Name_content>"
                             }
                         },
                         "triggering_nodegroups": []
                     },
                     "function_id": "60000000-0000-0000-0000-000000000001",
                     "graph_id": "04f87da0-d834-11ef-a75a-0275dc2ded29",
-                    "id": "f6d30654-d188-423c-96f4-6498609af2c2"
+                    "id": "6560a0c6-d110-49ca-9ad6-2dbaa673d81d"
                 }
             ],
             "graphid": "04f87da0-d834-11ef-a75a-0275dc2ded29",
@@ -5902,7 +5902,7 @@
             "subtitle": {
                 "en": "Observation, comparison, measurement or other describing activity"
             },
-            "template_id": "e581f911-185b-4456-873d-f83b46fd89ec",
+            "template_id": "50000000-0000-0000-0000-000000000001",
             "version": ""
         }
     ],
