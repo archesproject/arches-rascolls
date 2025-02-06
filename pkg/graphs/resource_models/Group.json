@@ -4370,7 +4370,7 @@
                         "descriptor_types": {
                             "description": {
                                 "nodegroup_id": "3695a01e-d770-11ef-8f5d-0275dc2ded29",
-                                "string_template": "<statement_content>"
+                                "string_template": "<Statement_content>"
                             },
                             "map_popup": {
                                 "nodegroup_id": "",
@@ -4378,14 +4378,14 @@
                             },
                             "name": {
                                 "nodegroup_id": "3695cff8-d770-11ef-8f5d-0275dc2ded29",
-                                "string_template": "<name_content>"
+                                "string_template": "<Name_content>"
                             }
                         },
                         "triggering_nodegroups": []
                     },
                     "function_id": "60000000-0000-0000-0000-000000000001",
                     "graph_id": "36956e50-d770-11ef-8f5d-0275dc2ded29",
-                    "id": "5405fe06-88f3-40fa-bed9-40b447a3463a"
+                    "id": "969eaf57-4710-4717-87ee-7a4c15f566f2"
                 }
             ],
             "graphid": "36956e50-d770-11ef-8f5d-0275dc2ded29",
@@ -4394,7 +4394,7 @@
             "isresource": true,
             "jsonldcontext": "https://linked.art/ns/v1/linked-art.json",
             "name": {
-                "en": "Group "
+                "en": "Group"
             },
             "nodegroups": [
                 {
@@ -4682,7 +4682,7 @@
                             {
                                 "graphid": "3dda9f54-d771-11ef-825b-0275dc2ded29",
                                 "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
-                                "name": "Place",
+                                "name": "Place - Clone",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
                                 "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
@@ -4865,7 +4865,7 @@
                             {
                                 "graphid": "36956e50-d770-11ef-8f5d-0275dc2ded29",
                                 "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
-                                "name": "Group",
+                                "name": "Group - Clone",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
                                 "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
@@ -5134,7 +5134,7 @@
                             {
                                 "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
                                 "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
-                                "name": "Textual Work",
+                                "name": "Textual Work - Clone",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
                                 "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
@@ -5191,7 +5191,7 @@
                             {
                                 "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
                                 "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
-                                "name": "Textual Work",
+                                "name": "Textual Work - Clone",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
                                 "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
@@ -5376,7 +5376,7 @@
                             {
                                 "graphid": "36956e50-d770-11ef-8f5d-0275dc2ded29",
                                 "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
-                                "name": "Group",
+                                "name": "Group - Clone",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
                                 "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
@@ -5384,7 +5384,7 @@
                             {
                                 "graphid": "e1d0ea1a-d770-11ef-8c40-0275dc2ded29",
                                 "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
-                                "name": "Person",
+                                "name": "Person - Clone",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
                                 "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
@@ -5464,7 +5464,7 @@
                             {
                                 "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
                                 "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
-                                "name": "Textual Work",
+                                "name": "Textual Work - Clone",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
                                 "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
@@ -5555,7 +5555,7 @@
                             {
                                 "graphid": "42fb8480-d834-11ef-a75a-0275dc2ded29",
                                 "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
-                                "name": "Modification",
+                                "name": "Modification - Clone",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
                                 "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
@@ -5563,7 +5563,7 @@
                             {
                                 "graphid": "04f87da0-d834-11ef-a75a-0275dc2ded29",
                                 "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
-                                "name": "Observation",
+                                "name": "Observation - Clone",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
                                 "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
@@ -5571,7 +5571,7 @@
                             {
                                 "graphid": "eaac4efa-d832-11ef-a368-0275dc2ded29",
                                 "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
-                                "name": "Project",
+                                "name": "Project - Clone",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
                                 "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
@@ -5579,7 +5579,7 @@
                             {
                                 "graphid": "57d7b38e-d833-11ef-ab38-0275dc2ded29",
                                 "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
-                                "name": "Sampling Activity",
+                                "name": "Sampling Activity - Clone",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
                                 "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
@@ -5587,7 +5587,7 @@
                             {
                                 "graphid": "26a55ac6-d772-11ef-825b-0275dc2ded29",
                                 "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
-                                "name": "Provenance Activity",
+                                "name": "Provenance Activity - Clone",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
                                 "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
@@ -5694,7 +5694,7 @@
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": true,
-                    "name": "Group ",
+                    "name": "Group",
                     "nodegroup_id": null,
                     "nodeid": "3695ea42-d770-11ef-8f5d-0275dc2ded29",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E74_Group",
@@ -5753,7 +5753,7 @@
                             {
                                 "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
                                 "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
-                                "name": "Textual Work",
+                                "name": "Textual Work - Clone",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
                                 "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
@@ -6079,7 +6079,7 @@
                             {
                                 "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
                                 "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
-                                "name": "Textual Work",
+                                "name": "Textual Work - Clone",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
                                 "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
@@ -6205,7 +6205,7 @@
                             {
                                 "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
                                 "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
-                                "name": "Textual Work",
+                                "name": "Textual Work - Clone",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
                                 "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
@@ -6372,7 +6372,7 @@
                             {
                                 "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
                                 "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
-                                "name": "Textual Work",
+                                "name": "Textual Work - Clone",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
                                 "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
@@ -6574,7 +6574,7 @@
                             {
                                 "graphid": "3dda9f54-d771-11ef-825b-0275dc2ded29",
                                 "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
-                                "name": "Place",
+                                "name": "Place - Clone",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
                                 "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
@@ -6654,7 +6654,7 @@
                             {
                                 "graphid": "e1d0ea1a-d770-11ef-8c40-0275dc2ded29",
                                 "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
-                                "name": "Person",
+                                "name": "Person - Clone",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
                                 "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
@@ -6662,7 +6662,7 @@
                             {
                                 "graphid": "36956e50-d770-11ef-8f5d-0275dc2ded29",
                                 "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
-                                "name": "Group",
+                                "name": "Group - Clone",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
                                 "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
@@ -6998,7 +6998,7 @@
                             {
                                 "graphid": "3dda9f54-d771-11ef-825b-0275dc2ded29",
                                 "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
-                                "name": "Place",
+                                "name": "Place - Clone",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
                                 "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
@@ -7032,7 +7032,7 @@
                             {
                                 "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
                                 "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
-                                "name": "Textual Work",
+                                "name": "Textual Work - Clone",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
                                 "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
@@ -7087,7 +7087,7 @@
                             {
                                 "graphid": "3dda9f54-d771-11ef-825b-0275dc2ded29",
                                 "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
-                                "name": "Place",
+                                "name": "Place - Clone",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
                                 "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
@@ -7142,7 +7142,7 @@
                             {
                                 "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
                                 "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
-                                "name": "Textual Work",
+                                "name": "Textual Work - Clone",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
                                 "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
@@ -7197,7 +7197,7 @@
                             {
                                 "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
                                 "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
-                                "name": "Textual Work",
+                                "name": "Textual Work - Clone",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
                                 "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
@@ -7273,7 +7273,7 @@
                             {
                                 "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
                                 "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
-                                "name": "Textual Work",
+                                "name": "Textual Work - Clone",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
                                 "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
@@ -7374,7 +7374,7 @@
                             {
                                 "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
                                 "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
-                                "name": "Textual Work",
+                                "name": "Textual Work - Clone",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
                                 "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
@@ -7408,7 +7408,7 @@
                             {
                                 "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
                                 "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
-                                "name": "Textual Work",
+                                "name": "Textual Work - Clone",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
                                 "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
@@ -7626,7 +7626,7 @@
                             {
                                 "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
                                 "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
-                                "name": "Textual Work",
+                                "name": "Textual Work - Clone",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
                                 "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
@@ -7679,8 +7679,8 @@
             "publication": {
                 "graph_id": "36956e50-d770-11ef-8f5d-0275dc2ded29",
                 "notes": null,
-                "publicationid": "3fd6e10e-d8c6-11ef-9ef7-0275dc2ded29",
-                "published_time": "2025-01-22T05:39:05.794"
+                "publicationid": "6b0d8c30-e41d-11ef-b8f5-0275dc2ded29",
+                "published_time": "2025-02-05T16:00:47.300"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -7697,7 +7697,7 @@
                 "isrequired": false,
                 "issearchable": true,
                 "istopnode": true,
-                "name": "Group ",
+                "name": "Group",
                 "nodegroup_id": null,
                 "nodeid": "3695ea42-d770-11ef-8f5d-0275dc2ded29",
                 "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E74_Group",
