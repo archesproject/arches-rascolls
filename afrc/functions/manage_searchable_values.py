@@ -28,8 +28,12 @@ class ManageSearchableValues(BaseFunction):
                 [tile.tileid],
             )
 
-    def delete(self, *args, **kwargs):
-        raise NotImplementedError
+    def delete(self, tile, request):
+        with connection.cursor() as cursor:
+            cursor.execute(
+                "DELETE FROM afrc_searchable_values WHERE tileid = %s",
+                [tile.tileid],
+            )
 
     def on_import(self, *args, **kwargs):
         raise NotImplementedError
