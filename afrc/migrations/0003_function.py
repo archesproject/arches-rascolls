@@ -68,10 +68,10 @@ class Migration(migrations.Migration):
     """
 
     create_function_to_update_searchable_values = """
-        CREATE OR REPLACE FUNCTION __afrc_update_searchable_values_for_tile(tileid UUID)
+        CREATE OR REPLACE FUNCTION __afrc_update_searchable_values_for_tile(_tileid UUID)
         RETURNS VOID AS $$
         BEGIN
-            DELETE FROM afrc_searchable_values WHERE tileid = tileid;
+            DELETE FROM afrc_searchable_values WHERE afrc_searchable_values.tileid = _tileid;
             INSERT INTO afrc_searchable_values (tileid, resourceinstanceid, value)
             SELECT DISTINCT
                 t.tileid,
@@ -92,7 +92,7 @@ class Migration(migrations.Migration):
                     (n.datatype = 'string' AND data.value::jsonb->'en'->>'value' IS NOT NULL) OR
                     (n.datatype IN ('concept', 'concept-list') AND data.value IS NOT NULL)
                 )
-                AND t.tileid = tileid;
+                AND t.tileid = _tileid;
         END; 
 
         $$ LANGUAGE plpgsql;
@@ -188,6 +188,33 @@ class Migration(migrations.Migration):
         DROP FUNCTION IF EXISTS __afrc_get_related_resources_by_searchable_values(TEXT[], UUID);
     """
 
+    register_searchable_values_function = """
+        INSERT INTO public.functions(
+            functionid, 
+            functiontype, 
+            name, 
+            description, 
+            defaultconfig, 
+            modulename, 
+            classname, 
+            component
+        )
+        VALUES (
+            'c75ebc8d-7aae-4c99-981d-4219dbb4b789', 
+            'search', 
+            'Manage Searchable Values Function', 
+            'Makes a tiles searchable values available for search', 
+            '{}', 
+            'manage_searchable_values.py', 
+            'ManageSearchableValues', 
+            'views/components/functions/manage-searchable-values'
+        );
+    """
+
+    reverse_register_searchable_values_function = """
+        DELETE FROM public.functions WHERE functionid = 'c75ebc8d-7aae-4c99-981d-4219dbb4b789';
+    """
+
     operations = [
         migrations.RunSQL(
             create_searchable_values_table, reverse_create_searchable_values_table
@@ -202,5 +229,9 @@ class Migration(migrations.Migration):
         migrations.RunSQL(
             create_function_to_do_through_search,
             reverse_create_function_to_do_through_search,
+        ),
+        migrations.RunSQL(
+            register_searchable_values_function,
+            reverse_register_searchable_values_function,
         ),
     ]
