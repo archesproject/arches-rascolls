@@ -148,25 +148,27 @@ onMounted(async () => {
         <!-- Main Content Section -->
         <header>
             <SimpleSearchFilter
-                style="flex-grow: 1; max-width: 800px"
+                style="flex-grow: 1; max-width: 800px;"
                 :update-filter
             />
             <div class="view-buttons">
                 <Button
                     :class="{ active: !showMap }"
-                    label="terms"
+                    :style="{ fontSize: '.75em', borderRadius: '3px' }"
+                    label="Terms"
                     severity="secondary"
                     icon="pi pi-file"
-                    icon-pos="top"
+                    icon-pos="left"
                     :outlined="!showMap"
                     @click="showMap = false"
                 />
                 <Button
                     :class="{ active: showMap }"
-                    label="map"
+                    :style="{ fontSize: '.75em', borderRadius: '3px' }"
+                    label="Map"
                     severity="secondary"
                     icon="pi pi-map"
-                    icon-pos="top"
+                    icon-pos="left"
                     :outlined="showMap"
                     @click="showMap = true"
                 />
@@ -175,7 +177,7 @@ onMounted(async () => {
 
         <main>
             <section class="afrc-search-results-panel">
-                <div class="result-count">{{ resultsCount }} Results</div>
+                <div class="section-header">{{ resultsCount }} Results</div>
                 <div class="search-result-list">
                     <SearchResultItem
                         v-for="searchResult in searchResults"
@@ -201,28 +203,34 @@ onMounted(async () => {
             </div>
 
             <aside v-if="!showMap">
-                <div>Search Facets</div>
+                <div>
+                    <h1 class="section-header">Search Facets</h1>
+                    <p class="section-tag">Select the Collections that you want to include in your search</p>
+                </div>
                 <section class="facets">
                     <div class="facet-item selected">
-                        <p>Reference Objects</p>
-                        <p>
+                        <div class="facet-item-icon pi pi-address-book"></div>
+                        <h2 class="facet-item-title">Reference Objects</h2>
+                        <p class="facet-item-tag">
                             Items in our reference collection, such as papers,
                             paints, textiles, and other items
                         </p>
-                        <a href="#">click to unselect</a>
+                        <a class="facet-item-toggle" href="#">(click to unselect)</a>
                     </div>
                     <div class="facet-item">
-                        <p>Samples</p>
-                        <p>
+                        <div class="facet-item-icon pi pi-chart-line"></div>
+                        <h2 class="facet-item-title">Samples</h2>
+                        <p class="facet-item-tag">
                             Materials removed from works of art or other
                             reference objects
                         </p>
-                        <a href="#">click to select</a>
+                        <a class="facet-item-toggle" href="#">(click to select)</a>
                     </div>
                     <div class="facet-item">
-                        <p>Building Materials</p>
-                        <p>Construction materials and related objects</p>
-                        <a href="#">click to select</a>
+                        <div class="facet-item-icon pi pi-building"></div>
+                        <h2 class="facet-item-title">Building Materials</h2>
+                        <p class="facet-item-tag">Construction materials and related objects</p>
+                        <a class="facet-item-toggle" href="#">(click to select)</a>
                     </div>
                 </section>
             </aside>
@@ -254,32 +262,59 @@ header {
     display: flex;
     border-bottom: 1px #ccc solid;
     padding: 5px;
+    background: #fafafa;
+}
+
+.section-header {
+    font-size: 1.33em;
+    font-weight: 500;
+    color: #25476a;
+    margin: 0px;
+}
+
+.section-tag {
+    font-size: 1em;
+    font-weight: 300;
+    color: #888;
+    line-height: 1.5;
+    margin: 0px;
+}
+.p-autocomplete-input-multiple {
+    border-radius: 3px;
 }
 .view-buttons {
     display: flex;
     gap: 5px;
     margin-left: 20px;
 }
+.view-buttons button {
+    border-color: #ddd;
+    width: 100px;
+}
+.view-buttons button.active {
+    background: #fff;
+}
+.p-button-label {
+    font-size: .5em;
+}
 section.afrc-search-results-panel {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    margin: 15px;
+    padding: 15px;
     overflow-y: auto;
     min-width: 350px;
+    background: #fff;
 }
 .search-result-list {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-.result-count {
-    font-size: 1.6rem;
-    margin: 0px;
-    margin-bottom: 15px;
-}
+
 aside {
-    max-width: 25%;
+    width: 480px;
+    background: #fdfdfd;
     border-left: 1px #ccc solid;
     padding: 15px;
 }
@@ -290,16 +325,47 @@ aside {
     gap: 10px;
 }
 .facet-item {
-    font-size: 1rem;
-    padding: 16px;
+    padding: 15px;
     border: 1px solid #ddd;
+    background: #fdfdfd;
     text-align: center;
     cursor: pointer;
-    max-width: 15rem;
-    min-height: 15rem;
+    width: 200px;
+    min-height: 200px;
+    border-radius: 3px;
+}
+.facet-item:hover {
+    background-color: #f0f8ff;
+    border-color: #007bff;
 }
 .facet-item.selected {
     background-color: #f0f8ff;
     border-color: #007bff;
+}
+.facet-item-title {
+    font-size: 1.25em;
+    font-weight: 300;
+    color: #25476a;
+    margin: 0px;
+}
+.facet-item-icon {
+    font-size: 30px;
+    padding: 15px;
+    border: 1px solid #244768;
+    border-radius: 50%;
+    color: #244768;
+    background: #98ADC2;
+    margin-bottom: 10px;
+    height: 60px;
+    width: 60px;
+}
+.facet-item-tag {
+    font-size: 0.9em;
+    color: #aaa;
+    line-height: 1.25;
+    margin: 0px;
+}
+.facet-item-toggle {
+    color:#007bff;
 }
 </style>

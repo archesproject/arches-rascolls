@@ -92,7 +92,7 @@ const updateQuery = function () {
         >
             <template #optiongroup="slotProps">
                 <div class="option-group">
-                    <div class="pi pi-flag">{{ slotProps.option.label }}</div>
+                    <div style="font-size: 14px; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">{{ slotProps.option.label }}</div>
                 </div>
             </template>
             <template #option="slotProps">
