@@ -156,6 +156,7 @@ onMounted(async () => {
                     :class="{ active: !showMap }"
                     :style="{ fontSize: '.75em', borderRadius: '3px' }"
                     label="Terms"
+                    size="large"
                     severity="secondary"
                     icon="pi pi-file"
                     icon-pos="left"
@@ -166,6 +167,7 @@ onMounted(async () => {
                     :class="{ active: showMap }"
                     :style="{ fontSize: '.75em', borderRadius: '3px' }"
                     label="Map"
+                    size="large"
                     severity="secondary"
                     icon="pi pi-map"
                     icon-pos="left"
@@ -341,6 +343,7 @@ aside {
 .facet-item.selected {
     background-color: #f0f8ff;
     border-color: #007bff;
+    filter: drop-shadow(2px 2px 3px #ccc);
 }
 .facet-item-title {
     font-size: 1.25em;
@@ -349,6 +352,17 @@ aside {
     margin: 0px;
 }
 .facet-item-icon {
+    font-size: 30px;
+    padding: 15px;
+    border: 1px solid #aaa;
+    border-radius: 50%;
+    color: #aaa;
+    background: #eee;
+    margin-bottom: 10px;
+    height: 60px;
+    width: 60px;
+}
+.facet-item.selected .facet-item-icon {
     font-size: 30px;
     padding: 15px;
     border: 1px solid #244768;
