@@ -87,7 +87,7 @@
                 {
                     "active": true,
                     "cardid": "57d7c7d4-d833-11ef-ab38-0275dc2ded29",
-                    "component_id": "10ae2f00-cbda-4a0d-8ca2-5af3b46b37ad",
+                    "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
                     "config": {
                         "defaultManifest": ""
                     },
@@ -2457,7 +2457,7 @@
                         ],
                         "label": "Sampled Area Name",
                         "placeholder": {
-                            "en": null
+                            "en": ""
                         }
                     },
                     "id": "57d8938a-d833-11ef-ab38-0275dc2ded29",
@@ -3657,8 +3657,8 @@
                     "config": {
                         "descriptor_types": {
                             "description": {
-                                "nodegroup_id": "57d7f920-d833-11ef-ab38-0275dc2ded29",
-                                "string_template": "<statement_content>"
+                                "nodegroup_id": "",
+                                "string_template": ""
                             },
                             "map_popup": {
                                 "nodegroup_id": "",
@@ -3666,14 +3666,14 @@
                             },
                             "name": {
                                 "nodegroup_id": "57d80168-d833-11ef-ab38-0275dc2ded29",
-                                "string_template": "<name_content>"
+                                "string_template": "<Name_content>"
                             }
                         },
                         "triggering_nodegroups": []
                     },
                     "function_id": "60000000-0000-0000-0000-000000000001",
                     "graph_id": "57d7b38e-d833-11ef-ab38-0275dc2ded29",
-                    "id": "4eacfe2b-c7cd-4e50-9a1e-91b6be00c32b"
+                    "id": "4ed84626-a91a-45f1-b4d9-fc6aa490f5a0"
                 }
             ],
             "graphid": "57d7b38e-d833-11ef-ab38-0275dc2ded29",
@@ -6415,7 +6415,7 @@
             "subtitle": {
                 "en": "Projects, Research Tasks and Experiments"
             },
-            "template_id": "4c864659-fc0d-45ec-a4da-c8fb8a7ec24e",
+            "template_id": "50000000-0000-0000-0000-000000000001",
             "version": ""
         }
     ],
