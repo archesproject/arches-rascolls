@@ -108,7 +108,6 @@ class SearchAPI(View):
             terms = json.loads(request.GET.get("term-filter", None))
             if terms:
                 terms = [term["value"] for term in terms]
-            print(f"term: {terms}")
             results = get_related_resources_by_text(terms)
             print(f"len of results: {len(results)}")
             ret = get_search_results_by_resourceids(
