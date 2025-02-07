@@ -45,16 +45,16 @@ function selectResult(resourceid: string) {
             <div class="result-displayname">
                 {{ props.searchResult._source.displayname }}
             </div>
-            <div class="breadcrumb">
-                (North and Central America &gt; United States &gt; Missouri &gt;
-                Greene)
+            <div class="item-current-location">
+                <span class="breadcrumb-title">Current location:</span>
+                <span class="breadcrumb">CGI Room 222, Aisle 3, Level B, Case 3</span>
             </div>
             <div class="scope-note">
-                {{ searchResult._source.displaydescription }}
+                <span class="scope-note-title">Item description:</span><span class="scope-note-content">{{ searchResult._source.displaydescription }}</span>
             </div>
             <div class="actions">
                 <Button
-                    label="...show more"
+                    label="show more"
                     severity="secondary"
                     text
                     size="large"
@@ -83,6 +83,7 @@ function selectResult(resourceid: string) {
     border: 1px solid #ddd;
     display: flex;
     flex-direction: row;
+    border-radius: 3px;
 }
 .result.hovered {
     background-color: rgb(239 245 252);
@@ -92,18 +93,30 @@ function selectResult(resourceid: string) {
     height: 16rem;
     overflow: hidden;
     padding-inline-start: 10px;
-    padding: 15px;
+    padding: 10px 10px 0px 15px;
 }
 .result h2 {
     margin: 0 0 10px;
     font-size: 1.2rem;
 }
+.item-current-location {
+    line-height: 1;
+}
+
+.result .breadcrumb-title {
+    color: #454545;
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    padding-right: 5px;
+}
+
 .result .breadcrumb {
-    color: #415790;
-    font-size: 1.1rem;
+    color: #25476a;
+    font-size: 1.25rem;
     margin-bottom: 10px;
     padding: unset;
 }
+
 .result .image-placeholder {
     width: 16rem;
     height: 16rem;
@@ -111,12 +124,26 @@ function selectResult(resourceid: string) {
     background-color: #eee;
 }
 .result-displayname {
-    font-size: 1.5rem;
-    font-weight: bold;
+    font-size: 1.33em;
+    font-weight: 500;
+    color: #25476a;
+    margin: 0px;
+    line-height: 1.05;
 }
 .scope-note {
-    font-size: 1.2rem;
+    margin-top: 5px;
+    font-size: 1.125em;
 }
+
+.scope-note-title {
+    color: #777;
+    padding-right: ;
+}
+
+.scope-note-content {
+    color: #25476a;
+}
+
 .actions {
     display: flex;
     gap: 10px;

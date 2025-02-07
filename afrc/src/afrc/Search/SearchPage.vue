@@ -309,9 +309,10 @@ section.afrc-search-results-panel {
     background: #fff;
 }
 .search-result-list {
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
 }
 
 aside {
