@@ -214,8 +214,8 @@ onMounted(async () => {
                         <div class="facet-item-icon pi pi-address-book"></div>
                         <h2 class="facet-item-title">Reference Objects</h2>
                         <p class="facet-item-tag">
-                            Items in our reference collection, such as papers,
-                            paints, textiles, and other items
+                            Reference collection items such as papers,
+                            paints, textiles
                         </p>
                         <a class="facet-item-toggle" href="#">(click to unselect)</a>
                     </div>
@@ -315,7 +315,7 @@ section.afrc-search-results-panel {
 }
 
 aside {
-    width: 480px;
+    width: 420px;
     background: #fdfdfd;
     border-left: 1px #ccc solid;
     padding: 15px;
@@ -332,8 +332,8 @@ aside {
     background: #fdfdfd;
     text-align: center;
     cursor: pointer;
-    width: 200px;
-    min-height: 200px;
+    width: 170px;
+    height: 170px;
     border-radius: 3px;
 }
 .facet-item:hover {
@@ -346,40 +346,36 @@ aside {
     filter: drop-shadow(2px 2px 3px #ccc);
 }
 .facet-item-title {
-    font-size: 1.25em;
+    font-size: 1.05em;
     font-weight: 300;
     color: #25476a;
     margin: 0px;
 }
 .facet-item-icon {
-    font-size: 30px;
-    padding: 15px;
+    font-size: 18px;
+    padding: 11px;
     border: 1px solid #aaa;
     border-radius: 50%;
     color: #aaa;
     background: #eee;
     margin-bottom: 10px;
-    height: 60px;
-    width: 60px;
+    height: 40px;
+    width: 40px;
 }
 .facet-item.selected .facet-item-icon {
-    font-size: 30px;
-    padding: 15px;
     border: 1px solid #244768;
     border-radius: 50%;
     color: #244768;
     background: #98ADC2;
-    margin-bottom: 10px;
-    height: 60px;
-    width: 60px;
 }
 .facet-item-tag {
-    font-size: 0.9em;
+    font-size: 0.85em;
     color: #aaa;
-    line-height: 1.25;
+    line-height: 1.15;
     margin: 0px;
 }
 .facet-item-toggle {
     color:#007bff;
+    font-size: 0.75em;
 }
 </style>
