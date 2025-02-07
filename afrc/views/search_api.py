@@ -80,7 +80,7 @@ def search_results(request, returnDsl=False):
 def get_related_resources_by_text(search_query):
     with connection.cursor() as cursor:
         cursor.execute(
-            "SELECT * FROM __afrc_get_related_resources_by_searchable_values(ARRAY[%s], '1810d182-b4b5-11ea-84f7-3af9d3b32b71')",
+            "SELECT DISTINCT * FROM __afrc_get_related_resources_by_searchable_values(%s, '1810d182-b4b5-11ea-84f7-3af9d3b32b71')",
             [search_query],
         )
         rows = cursor.fetchall()
@@ -105,8 +105,11 @@ class SearchAPI(View):
         print(page_size)
 
         if "term-filter" in request.GET:
-            term = json.loads(request.GET.get("term-filter"))[0]["value"]
-            results = get_related_resources_by_text(term)
+            terms = json.loads(request.GET.get("term-filter", None))
+            if terms:
+                terms = [term["value"] for term in terms]
+            print(f"term: {terms}")
+            results = get_related_resources_by_text(terms)
             print(f"len of results: {len(results)}")
             ret = get_search_results_by_resourceids(
                 [str(row[0]) for row in results],

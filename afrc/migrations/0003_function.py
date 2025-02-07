@@ -109,37 +109,39 @@ class Migration(migrations.Migration):
         )
         RETURNS TABLE(resourceinstance UUID) AS $$
         DECLARE
-            initial_ids UUID[];
+            searchable_ids UUID[];
             second_level_ids UUID[];
         BEGIN
-            -- Step 1: Retrieve initial resourceinstanceid values based on the text search
-            
-            -- Should probably return resourceinstances that match our target graph here as well
-            -- as those are direct hits of search values
-
-            SELECT ARRAY(
-                SELECT resourceinstanceid
-                FROM afrc_searchable_values sv
-                JOIN LATERAL (
-                    SELECT term FROM unnest(search_terms) term 
-                    WHERE sv.value ILIKE '%' || term || '%'
-                ) matched_terms ON true
-                GROUP BY sv.resourceinstanceid
-                HAVING COUNT(DISTINCT matched_terms.term) = array_length(search_terms, 1)
-            ) INTO initial_ids;
-
-            -- If no matches found, return empty result
-            IF initial_ids IS NULL OR array_length(initial_ids, 1) = 0 THEN
-                RETURN;
-            END IF;
-
-            -- Step 2: Create a temporary table to store categorized first-level results
+            -- Step 1: Create a temporary table to store categorized first and second-level results
             CREATE TEMP TABLE temp_related_resources (
                 resourceinstanceid UUID,
                 graphid UUID,
                 is_matching BOOLEAN -- TRUE if it matches the target_graphid
             ) ON COMMIT DROP;
 
+            -- Step 2: Retrieve initial resourceinstanceid values based on the text search
+            INSERT INTO temp_related_resources (resourceinstanceid, graphid, is_matching)
+            SELECT sv.resourceinstanceid, r.graphid, r.graphid = target_graphid AS is_matching
+            FROM afrc_searchable_values sv
+            JOIN LATERAL (
+                SELECT term FROM unnest(search_terms) term 
+                WHERE sv.value ILIKE '%' || term || '%'
+            ) matched_terms ON true
+            JOIN resource_instances r on r.resourceinstanceid = sv.resourceinstanceid
+            GROUP BY sv.resourceinstanceid, r.graphid
+            HAVING COUNT(DISTINCT matched_terms.term) = array_length(search_terms, 1);
+
+            -- Isolate non-matching results for further searching
+            SELECT ARRAY(
+                SELECT resourceinstanceid FROM temp_related_resources
+                WHERE is_matching = FALSE
+            ) INTO searchable_ids;
+
+            -- Remove results that do not match the target graphid so that 
+            -- we don't search on them again in step 4
+            DELETE FROM temp_related_resources WHERE is_matching = FALSE;
+            
+            -- Step 3: Retrieve second-level resourceinstanceid values based on the initial results
             -- Insert first-level relationships into the temp table with categorization
             INSERT INTO temp_related_resources (resourceinstanceid, graphid, is_matching)
             SELECT DISTINCT 
@@ -147,7 +149,7 @@ class Migration(migrations.Migration):
                 r.resourceinstancefrom_graphid AS graphid,
                 r.resourceinstancefrom_graphid = target_graphid AS is_matching
             FROM resource_x_resource r
-            WHERE r.resourceinstanceidto = ANY(initial_ids)
+            WHERE r.resourceinstanceidto = ANY(searchable_ids)
             
             UNION
 
@@ -156,13 +158,13 @@ class Migration(migrations.Migration):
                 r.resourceinstanceto_graphid AS graphid,
                 r.resourceinstanceto_graphid = target_graphid AS is_matching
             FROM resource_x_resource r
-            WHERE r.resourceinstanceidfrom = ANY(initial_ids);
+            WHERE r.resourceinstanceidfrom = ANY(searchable_ids);
 
-            -- Step 2.5: Return matching results immediately
+            -- Step 3.5: Return matching results immediately
             RETURN QUERY 
             SELECT resourceinstanceid FROM temp_related_resources WHERE is_matching = TRUE;
 
-            -- Step 3: Find second-level related resourceinstanceids using only non-matching first-level IDs
+            -- Step 4: Find second-level related resourceinstanceids using only non-matching first-level IDs
             RETURN QUERY
             SELECT DISTINCT r.resourceinstanceidfrom 
             FROM resource_x_resource r

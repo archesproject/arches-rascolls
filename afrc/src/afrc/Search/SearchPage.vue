@@ -208,7 +208,7 @@ onMounted(async () => {
                         :key="forcePaginatorRepaint"
                         lazy
                         paginator
-                        rows="10"
+                        rows="5"
                         :value="searchResults"
                         :total-records="resultsCount"
                         @page="onPageChange"
