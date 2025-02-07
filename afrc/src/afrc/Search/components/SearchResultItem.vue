@@ -42,36 +42,40 @@ function selectResult(resourceid: string) {
             <img src="https://picsum.photos/160" />
         </div>
         <div class="result-content">
-            <div class="result-displayname">
-                {{ props.searchResult._source.displayname }}
+            <div>
+                <div class="result-displayname">
+                    {{ props.searchResult._source.displayname }}
+                </div>
+                <div class="item-current-location">
+                    <span class="breadcrumb-title">Current location:</span>
+                    <span class="breadcrumb">CGI Room 222, Aisle 3, Level B, Case 3</span>
+                </div>
+                <div class="scope-note">
+                    <span class="scope-note-title">Item description:</span><span class="scope-note-content">{{ searchResult._source.displaydescription }}</span>
+                </div>
             </div>
-            <div class="item-current-location">
-                <span class="breadcrumb-title">Current location:</span>
-                <span class="breadcrumb">CGI Room 222, Aisle 3, Level B, Case 3</span>
-            </div>
-            <div class="scope-note">
-                <span class="scope-note-title">Item description:</span><span class="scope-note-content">{{ searchResult._source.displaydescription }}</span>
-            </div>
-            <div class="actions">
-                <Button
-                    label="show more"
-                    severity="secondary"
-                    text
-                    size="large"
-                    @click="
-                        selectResult(searchResult._source.resourceinstanceid)
-                    "
-                />
-                <Button
-                    label="edit"
-                    severity="secondary"
-                    text
-                    as="a"
-                    target="_blank"
-                    size="large"
-                    icon="pi pi-pen-to-square"
-                    :href="'./' + arches.urls.resource + '/' + searchResult._id"
-                />
+            <div>
+                <div class="actions">
+                    <Button class="action-button"
+                        label="show more"
+                        severity="secondary"
+                        text
+                        size="large"
+                        @click="
+                            selectResult(searchResult._source.resourceinstanceid)
+                        "
+                    />
+                    <Button class="action-button"
+                        label="edit"
+                        severity="secondary"
+                        text
+                        as="a"
+                        target="_blank"
+                        size="large"
+                        icon="pi pi-pen-to-square"
+                        :href="'./' + arches.urls.resource + '/' + searchResult._id"
+                    />
+                </div>
             </div>
         </div>
     </section>
@@ -94,6 +98,9 @@ function selectResult(resourceid: string) {
     overflow: hidden;
     padding-inline-start: 10px;
     padding: 10px 10px 0px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .result h2 {
     margin: 0 0 10px;
@@ -148,5 +155,14 @@ function selectResult(resourceid: string) {
     display: flex;
     gap: 10px;
     margin-top: 10px;
+    padding-bottom: 5px;
+}
+.p-button-text.p-button-secondary.action-button {
+    border-radius: 2px;
+}
+
+.p-button-text.p-button-secondary.action-button:hover {
+    background: #f9f9f9;
+    color: #25476a;
 }
 </style>
