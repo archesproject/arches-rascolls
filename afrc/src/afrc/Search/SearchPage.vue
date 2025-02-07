@@ -305,7 +305,8 @@ section.afrc-search-results-panel {
     flex-grow: 1;
     padding: 15px;
     overflow-y: auto;
-    min-width: 350px;
+    width: 400px;
+    min-width: 400px;
     background: #fff;
 }
 .search-result-list {

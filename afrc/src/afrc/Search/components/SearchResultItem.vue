@@ -8,6 +8,7 @@ import arches from "arches";
 
 const resultsSelected = inject("resultsSelected") as Ref<string[]>;
 const resultSelected = inject("resultSelected") as Ref<string>;
+const showMap = inject("showMap") as Ref<boolean>;
 
 const props = defineProps({
     searchResult: {
@@ -29,52 +30,47 @@ function selectResult(resourceid: string) {
 </script>
 
 <template>
-    <section
-        class="result"
-        :class="{
-            hovered: resultsSelected.includes(
-                searchResult._source.resourceinstanceid,
-            ),
-        }"
-        @mouseenter="highlightResult(searchResult._source.resourceinstanceid)"
-    >
-        <div class="image-placeholder">
-            <img src="https://picsum.photos/160" />
-        </div>
-        <div class="result-content">
-            <div>
-                <div class="result-displayname">
-                    {{ props.searchResult._source.displayname }}
-                </div>
-                <div class="item-current-location">
-                    <span class="breadcrumb-title">Current location:</span>
-                    <span class="breadcrumb">CGI Room 222, Aisle 3, Level B, Case 3</span>
-                </div>
-                <div class="scope-note">
-                    <span class="scope-note-title">Item description:</span><span class="scope-note-content">{{ searchResult._source.displaydescription }}</span>
-                </div>
+    Show Map = {{ showMap }}
+    <section>
+        <div class="result">
+            <div class="image-placeholder">
+                <img src="https://picsum.photos/160" />
             </div>
-            <div>
-                <div class="actions">
-                    <Button class="action-button"
-                        label="show more"
-                        severity="secondary"
-                        text
-                        size="large"
-                        @click="
-                            selectResult(searchResult._source.resourceinstanceid)
-                        "
-                    />
-                    <Button class="action-button"
-                        label="edit"
-                        severity="secondary"
-                        text
-                        as="a"
-                        target="_blank"
-                        size="large"
-                        icon="pi pi-pen-to-square"
-                        :href="'./' + arches.urls.resource + '/' + searchResult._id"
-                    />
+            <div class="result-content">
+                <div>
+                    <div class="result-displayname">
+                        {{ props.searchResult._source.displayname }}
+                    </div>
+                    <div class="item-current-location">
+                        <span class="breadcrumb-title">Current location:</span>
+                        <span class="breadcrumb">CGI Room 222, Aisle 3, Level B, Case 3</span>
+                    </div>
+                    <div class="scope-note">
+                        <span class="scope-note-title">Item description:</span><span class="scope-note-content">{{ searchResult._source.displaydescription }}</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="actions">
+                        <Button class="action-button"
+                            label="show more"
+                            severity="secondary"
+                            text
+                            size="large"
+                            @click="
+                                selectResult(searchResult._source.resourceinstanceid)
+                            "
+                        />
+                        <Button class="action-button"
+                            label="edit"
+                            severity="secondary"
+                            text
+                            as="a"
+                            target="_blank"
+                            size="large"
+                            icon="pi pi-pen-to-square"
+                            :href="'./' + arches.urls.resource + '/' + searchResult._id"
+                        />
+                    </div>
                 </div>
             </div>
         </div>
@@ -89,10 +85,11 @@ function selectResult(resourceid: string) {
     flex-direction: row;
     border-radius: 3px;
 }
-.result.hovered {
-    background-color: rgb(239 245 252);
+.result:hover {
+    background: #f7f6fa;
     border: 1px solid rgb(139 145 252);
 }
+
 .result .result-content {
     height: 16rem;
     overflow: hidden;
@@ -144,7 +141,7 @@ function selectResult(resourceid: string) {
 
 .scope-note-title {
     color: #777;
-    padding-right: ;
+    padding-right: 5px;
 }
 
 .scope-note-content {
@@ -162,7 +159,7 @@ function selectResult(resourceid: string) {
 }
 
 .p-button-text.p-button-secondary.action-button:hover {
-    background: #f9f9f9;
+    background: #DFDBEB;
     color: #25476a;
 }
 </style>
