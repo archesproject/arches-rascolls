@@ -178,7 +178,9 @@ onMounted(async () => {
         </header>
 
         <main>
-            <section class="afrc-search-results-panel">
+            <section class="afrc-search-results-panel"
+                :class="{ 'map-sidebar' : showMap}"
+            >
                 <div class="section-header">{{ resultsCount }} Results</div>
                 <div class="search-result-list">
                     <SearchResultItem
@@ -274,6 +276,12 @@ header {
     margin: 0px;
 }
 
+.afrc-search-results-panel.map-sidebar .search-result-list {
+    margin-left: -15px;
+    margin-right: -15px;
+    gap: 0px;
+}
+
 .section-tag {
     font-size: 1em;
     font-weight: 300;
@@ -314,6 +322,10 @@ section.afrc-search-results-panel {
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+.map-sidebar .search-result-list {
+    border-top: 1px solid #ddd;
 }
 
 aside {

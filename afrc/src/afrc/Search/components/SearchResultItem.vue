@@ -30,7 +30,6 @@ function selectResult(resourceid: string) {
 </script>
 
 <template>
-    Show Map = {{ showMap }}
     <section>
         <div class="result">
             <div class="image-placeholder">
@@ -85,13 +84,24 @@ function selectResult(resourceid: string) {
     flex-direction: row;
     border-radius: 3px;
 }
+
+.map-sidebar .result {
+    border: none;
+    border-bottom: 1px solid #ddd;
+}
+
 .result:hover {
     background: #f7f6fa;
     border: 1px solid rgb(139 145 252);
 }
 
+.map-sidebar .result:hover {
+    border: none;
+    border-bottom: 1px solid #ddd;
+    background: #f7f6fa;
+}
+
 .result .result-content {
-    height: 16rem;
     overflow: hidden;
     padding-inline-start: 10px;
     padding: 10px 10px 0px 15px;
@@ -99,6 +109,12 @@ function selectResult(resourceid: string) {
     flex-direction: column;
     justify-content: space-between;
 }
+
+.map-sidebar .result .result-content {
+    justify-content: flex-start;
+    padding-left: 25px;
+}
+
 .result h2 {
     margin: 0 0 10px;
     font-size: 1.2rem;
@@ -127,6 +143,11 @@ function selectResult(resourceid: string) {
     min-width: 16rem;
     background-color: #eee;
 }
+
+.map-sidebar .result .image-placeholder {
+    display: none;
+}
+
 .result-displayname {
     font-size: 1.33em;
     font-weight: 500;
@@ -144,8 +165,16 @@ function selectResult(resourceid: string) {
     padding-right: 5px;
 }
 
+.map-sidebar .result .scope-note-title {
+    display: none;
+}
+
 .scope-note-content {
     color: #25476a;
+}
+
+.map-sidebar .result .scope-note-content {
+    font-size: 0.9em;
 }
 
 .actions {
