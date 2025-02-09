@@ -273,12 +273,20 @@ header {
     font-size: 1.33em;
     font-weight: 500;
     color: #25476a;
-    margin: 0px;
+    margin-bottom: 3px;
+}
+
+.afrc-search-results-panel.map-sidebar .section-header {
+    font-size: 1.33em;
+    font-weight: 500;
+    color: #25476a;
+    margin-bottom: 0px;
 }
 
 .afrc-search-results-panel.map-sidebar .search-result-list {
     margin-left: -15px;
     margin-right: -15px;
+    margin-top: 13px;
     gap: 0px;
 }
 
@@ -319,9 +327,12 @@ section.afrc-search-results-panel {
 }
 .search-result-list {
     margin-top: 10px;
+    margin-left: -15px;
+    margin-right: -15px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    border-top: 1px solid #ddd;
+    gap: 0px;
 }
 
 .map-sidebar .search-result-list {

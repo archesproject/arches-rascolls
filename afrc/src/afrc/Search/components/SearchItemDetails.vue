@@ -196,11 +196,12 @@ function clearResult() {
 }
 .value-entry {
     font-size: 1em;
+    color: #888;
     padding: 0px 3px;
     line-height: 1.15;
 }
 .resource-details-value {
-    color: steelblue;
+    color: #25476a;
     padding: 0px 3px;
 }
 

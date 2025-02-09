@@ -8,7 +8,7 @@ import arches from "arches";
 
 const resultsSelected = inject("resultsSelected") as Ref<string[]>;
 const resultSelected = inject("resultSelected") as Ref<string>;
-const showMap = inject("showMap") as Ref<boolean>;
+
 
 const props = defineProps({
     searchResult: {
@@ -17,11 +17,11 @@ const props = defineProps({
     },
 });
 
-function highlightResult(resourceid: string) {
+/* function highlightResult(resourceid: string) {
     if (!resultSelected.value) {
         resultsSelected.value = [resourceid];
     }
-}
+} */
 
 function selectResult(resourceid: string) {
     resultSelected.value = resourceid;
@@ -33,7 +33,7 @@ function selectResult(resourceid: string) {
     <section>
         <div class="result">
             <div class="image-placeholder">
-                <img src="https://picsum.photos/160" />
+                <img class="item-image" src="https://picsum.photos/160" />
             </div>
             <div class="result-content">
                 <div>
@@ -54,6 +54,7 @@ function selectResult(resourceid: string) {
                             label="show more"
                             severity="secondary"
                             text
+                            icon="pi pi-plus-circle"
                             size="large"
                             @click="
                                 selectResult(searchResult._source.resourceinstanceid)
@@ -79,10 +80,9 @@ function selectResult(resourceid: string) {
 <style scoped>
 .result {
     background-color: #fff;
-    border: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
     display: flex;
     flex-direction: row;
-    border-radius: 3px;
 }
 
 .map-sidebar .result {
@@ -92,7 +92,6 @@ function selectResult(resourceid: string) {
 
 .result:hover {
     background: #f7f6fa;
-    border: 1px solid rgb(139 145 252);
 }
 
 .map-sidebar .result:hover {
@@ -112,7 +111,7 @@ function selectResult(resourceid: string) {
 
 .map-sidebar .result .result-content {
     justify-content: flex-start;
-    padding-left: 25px;
+    padding-left: 15px;
 }
 
 .result h2 {
@@ -138,10 +137,17 @@ function selectResult(resourceid: string) {
 }
 
 .result .image-placeholder {
-    width: 16rem;
-    height: 16rem;
-    min-width: 16rem;
+    width: 120px;
+    height: 120px;
+    min-width: 120px;
     background-color: #eee;
+    margin: 5px;
+    margin-left: 15px;
+}
+
+.item-image {
+    height: 118px;
+    margin: 1px;
 }
 
 .map-sidebar .result .image-placeholder {
