@@ -273,6 +273,7 @@ header {
     font-size: 1.33em;
     font-weight: 500;
     color: #25476a;
+    margin-top: 0px;
     margin-bottom: 3px;
 }
 
