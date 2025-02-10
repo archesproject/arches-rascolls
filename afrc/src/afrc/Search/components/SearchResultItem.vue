@@ -1,13 +1,22 @@
 <script setup lang="ts">
-import { inject } from "vue";
+import { onMounted, inject, ref } from "vue";
 import type { Ref } from "vue";
 
 import Button from "primevue/button";
 
 import arches from "arches";
+import { fetchImageData } from "@/afrc/Search/api.ts";
 
 const resultsSelected = inject("resultsSelected") as Ref<string[]>;
 const resultSelected = inject("resultSelected") as Ref<string>;
+const image: Ref<string> = ref("");
+
+onMounted(async () => {
+    const res = await fetchImageData([props.searchResult._source.resourceinstanceid], true);
+    if (res.length > 0) {
+        image.value = res[0];
+    }
+});
 
 const props = defineProps({
     searchResult: {
@@ -39,7 +48,8 @@ function selectResult(resourceid: string) {
         @mouseenter="highlightResult(searchResult._source.resourceinstanceid)"
     >
         <div class="image-placeholder">
-            <img src="https://picsum.photos/160" />
+            <img v-if="image" :src="image" class="image" />
+            <div v-else class="no-image">No image available</div>
         </div>
         <div class="result-content">
             <div class="result-displayname">
@@ -49,7 +59,7 @@ function selectResult(resourceid: string) {
                 (North and Central America &gt; United States &gt; Missouri &gt;
                 Greene)
             </div>
-            <div v-html="searchResult._source.displaydescription" class="scope-note"></div>
+            <div class="scope-note" v-html="searchResult._source.displaydescription"></div>
             <div class="actions">
                 <Button
                     label="...show more"
@@ -119,5 +129,18 @@ function selectResult(resourceid: string) {
     display: flex;
     gap: 10px;
     margin-top: 10px;
+}
+.no-image { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 158px;
+    width: 160px;
+    color: #555;
+    background-color: rgb(236, 236, 236);
+}
+.image {
+    height: 158px; 
+    width: 160px;
 }
 </style>
