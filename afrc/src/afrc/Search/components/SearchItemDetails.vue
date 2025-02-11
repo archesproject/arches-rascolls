@@ -61,12 +61,12 @@ function clearResult() {
                 <div>
                     {{ displayname || "No name provided" }}
                 </div>
-                <div style="font-size: 0.7em; color: steelblue; font-style: italic; font-weight: 400;">
+                <div class="current-location">
                     {{ identifier }}
                 </div>
             </div>
             <div>
-                <Button
+                <Button class="close-button"
                     label="Close"
                     severity="secondary"
                     icon="pi pi-times-circle"
@@ -111,6 +111,12 @@ function clearResult() {
                 <div class="value-entry">Acquisition Details:<span class="resource-details-value">{{ acquisition.details }}</span></div>
             </div>
         </div>
+        <div class="resource-details">
+            <div class="value-header">Analytic Data</div>
+            <div class="value-entry">
+                <span class="resource-details-value">raman spectrum</span>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -127,16 +133,28 @@ function clearResult() {
 }
 .title {
     display: flex;
-    font-size: 1.2em;
-    font-weight: bold;
-    margin-bottom: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 1.33em;
+    font-weight: 500;
+    color: #25476a;
+    line-height: 1.05;
+    margin-bottom: 0px;
     justify-content: space-between;
     border-bottom: #ddd solid 1px;
 }
+
+.current-location {
+    color: #25476a;
+    font-size: 1.25rem;
+}
+
 .description {
-    font-size: 1em;
+    font-size: 1.05em;
+    color: #25476a;
     margin-bottom: 15px;
     padding: 10px;
+    line-height: 1.25;
 }
 .resource-details {
     padding: 10px;
@@ -148,10 +166,16 @@ function clearResult() {
 }
 .value-entry {
     font-size: 1em;
+    color: #888;
     padding: 0px 3px;
+    line-height: 1.15;
 }
 .resource-details-value {
-    color: steelblue;
+    color: #25476a;
     padding: 0px 3px;
+}
+
+.close-button:hover {
+    color: #25476a;
 }
 </style>
