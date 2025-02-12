@@ -61,7 +61,18 @@ export const createRequest = (url: string) => {
 };
 
 export const fetchResourceData = (resourceId: string) => {
-    const url = `${arches.urls["api_resources"](resourceId)}?format=json&v=beta`;
+    const url = `${arches.urls["api_resources"](resourceId)}?format=json&v=beta&compact=false`;
+    return createRequest(url)();
+};
+
+export const fetchImageData = (
+    imageResourceIds: string[],
+    isItem?: boolean,
+) => {
+    let url = `${arches.urls["api-file-data"]}?resourceids=${imageResourceIds.join(",")}`;
+    if (isItem) {
+        url += `&item=${isItem}`;
+    }
     return createRequest(url)();
 };
 

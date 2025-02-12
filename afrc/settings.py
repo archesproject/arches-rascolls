@@ -422,7 +422,7 @@ LANGUAGES = [
 # override this to permenantly display/hide the language switcher
 SHOW_LANGUAGE_SWITCH = len(LANGUAGES) > 1
 
-COLLECTIONS_GRAPHID = ""
+COLLECTIONS_GRAPHID = "bda239c6-d376-11ef-a239-0275dc2ded29"
 
 # Implement this class to associate custom documents to the ES resource index
 # See tests.views.search_tests.TestEsMappingModifier class for example

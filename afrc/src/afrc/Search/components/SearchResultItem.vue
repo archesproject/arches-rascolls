@@ -1,13 +1,25 @@
 <script setup lang="ts">
-import { inject } from "vue";
+import { onMounted, inject, ref } from "vue";
 import type { Ref } from "vue";
 
 import Button from "primevue/button";
 
 import arches from "arches";
+import { fetchImageData } from "@/afrc/Search/api.ts";
 
 const resultsSelected = inject("resultsSelected") as Ref<string[]>;
 const resultSelected = inject("resultSelected") as Ref<string>;
+const image: Ref<string> = ref("");
+
+onMounted(async () => {
+    const res = await fetchImageData(
+        [props.searchResult._source.resourceinstanceid],
+        true,
+    );
+    if (res.length > 0) {
+        image.value = res[0];
+    }
+});
 
 const props = defineProps({
     searchResult: {
@@ -16,11 +28,11 @@ const props = defineProps({
     },
 });
 
-function highlightResult(resourceid: string) {
+/* function highlightResult(resourceid: string) {
     if (!resultSelected.value) {
         resultsSelected.value = [resourceid];
     }
-}
+} */
 
 function selectResult(resourceid: string) {
     resultSelected.value = resourceid;
@@ -29,51 +41,62 @@ function selectResult(resourceid: string) {
 </script>
 
 <template>
-    <section
-        class="result"
-        :class="{
-            hovered: resultsSelected.includes(
-                searchResult._source.resourceinstanceid,
-            ),
-        }"
-        @mouseenter="highlightResult(searchResult._source.resourceinstanceid)"
-    >
-        <div class="image-placeholder">
-            <img src="https://picsum.photos/160" />
-        </div>
-        <div class="result-content">
-            <div class="result-displayname">
-                {{ props.searchResult?._source.displayname }}
-            </div>
-            <div class="breadcrumb">
-                (North and Central America &gt; United States &gt; Missouri &gt;
-                Greene)
-            </div>
-            <div class="scope-note">
-                {{ searchResult?._source.displaydescription }}
-            </div>
-            <div class="actions">
-                <Button
-                    label="...show more"
-                    severity="secondary"
-                    text
-                    size="large"
-                    @click="
-                        selectResult(searchResult._source.resourceinstanceid)
-                    "
+    <section>
+        <div class="result">
+            <div class="image-placeholder">
+                <img
+                    class="item-image"
+                    src="https://picsum.photos/160"
                 />
-                <Button
-                    label="edit"
-                    severity="secondary"
-                    text
-                    as="a"
-                    target="_blank"
-                    size="large"
-                    icon="pi pi-pen-to-square"
-                    :href="
-                        './' + arches.urls.resource + '/' + searchResult?._id
-                    "
-                />
+            </div>
+            <div class="result-content">
+                <div>
+                    <div class="result-displayname">
+                        {{ props.searchResult._source.displayname }}
+                    </div>
+                    <div class="item-current-location">
+                        <span class="breadcrumb-title">Current location:</span>
+                        <span class="breadcrumb"
+                            >CGI Room 222, Aisle 3, Level B, Case 3</span
+                        >
+                    </div>
+                    <div class="scope-note">
+                        <span class="scope-note-title">Item description:</span
+                        ><span class="scope-note-content">{{
+                            searchResult._source.displaydescription
+                        }}</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="actions">
+                        <Button
+                            class="action-button"
+                            label="show more"
+                            severity="secondary"
+                            text
+                            icon="pi pi-plus-circle"
+                            size="large"
+                            @click="
+                                selectResult(
+                                    searchResult._source.resourceinstanceid,
+                                )
+                            "
+                        />
+                        <Button
+                            class="action-button"
+                            label="edit"
+                            severity="secondary"
+                            text
+                            as="a"
+                            target="_blank"
+                            size="large"
+                            icon="pi pi-pen-to-square"
+                            :href="
+                                arches.urls.resource + '/' + searchResult._id
+                            "
+                        />
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -82,46 +105,134 @@ function selectResult(resourceid: string) {
 <style scoped>
 .result {
     background-color: #fff;
-    border: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
     display: flex;
     flex-direction: row;
 }
-.result.hovered {
-    background-color: rgb(239 245 252);
-    border: 1px solid rgb(139 145 252);
+
+.map-sidebar .result {
+    border: none;
+    border-bottom: 1px solid #ddd;
 }
+
+.result:hover {
+    background: #f7f6fa;
+}
+
+.map-sidebar .result:hover {
+    border: none;
+    border-bottom: 1px solid #ddd;
+    background: #f7f6fa;
+}
+
 .result .result-content {
-    height: 16rem;
     overflow: hidden;
     padding-inline-start: 10px;
-    padding: 15px;
+    padding: 10px 10px 0px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
+
+.map-sidebar .result .result-content {
+    justify-content: flex-start;
+    padding-left: 15px;
+}
+
 .result h2 {
     margin: 0 0 10px;
     font-size: 1.2rem;
 }
+.item-current-location {
+    line-height: 1;
+}
+
+.result .breadcrumb-title {
+    color: #454545;
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    padding-right: 5px;
+}
+
 .result .breadcrumb {
-    color: #415790;
-    font-size: 1.1rem;
+    color: #25476a;
+    font-size: 1.25rem;
     margin-bottom: 10px;
     padding: unset;
 }
+
 .result .image-placeholder {
-    width: 16rem;
-    height: 16rem;
-    min-width: 16rem;
+    width: 120px;
+    height: 120px;
+    min-width: 120px;
     background-color: #eee;
+    margin: 5px;
+    margin-left: 15px;
 }
+
+.item-image {
+    height: 118px;
+    margin: 1px;
+}
+
+.map-sidebar .result .image-placeholder {
+    display: none;
+}
+
 .result-displayname {
-    font-size: 1.5rem;
-    font-weight: bold;
+    font-size: 1.33em;
+    font-weight: 500;
+    color: #25476a;
+    margin: 0px;
+    line-height: 1.05;
 }
 .scope-note {
-    font-size: 1.2rem;
+    margin-top: 5px;
+    font-size: 1.125em;
 }
+
+.scope-note-title {
+    color: #777;
+    padding-right: 5px;
+}
+
+.map-sidebar .result .scope-note-title {
+    display: none;
+}
+
+.scope-note-content {
+    color: #25476a;
+}
+
+.map-sidebar .result .scope-note-content {
+    font-size: 0.9em;
+}
+
 .actions {
     display: flex;
     gap: 10px;
     margin-top: 10px;
+    padding-bottom: 5px;
+}
+.p-button-text.p-button-secondary.action-button {
+    border-radius: 2px;
+}
+
+.p-button-text.p-button-secondary.action-button:hover {
+    background: #dfdbeb;
+    color: #25476a;
+}
+.no-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 158px;
+    width: 160px;
+    color: #555;
+    background-color: rgb(236, 236, 236);
+}
+.image {
+    height: 158px;
+    width: 160px;
 }
 </style>

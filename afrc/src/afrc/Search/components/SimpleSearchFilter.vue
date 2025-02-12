@@ -98,7 +98,18 @@ const updateQuery = function () {
         >
             <template #optiongroup="slotProps">
                 <div class="option-group">
-                    <div class="pi pi-flag">{{ slotProps.option.label }}</div>
+                    <div
+                        style="
+                            font-size: 14px;
+                            font-family: &quot;Lucida Sans&quot;,
+                                &quot;Lucida Sans Regular&quot;,
+                                &quot;Lucida Grande&quot;,
+                                &quot;Lucida Sans Unicode&quot;, Geneva, Verdana,
+                                sans-serif;
+                        "
+                    >
+                        {{ slotProps.option.label }}
+                    </div>
                 </div>
             </template>
             <template #option="slotProps">
@@ -122,7 +133,6 @@ const updateQuery = function () {
 .p-autocomplete-token-label {
     font-size: 1.3rem;
 }
-
 :deep(.autocomplete-input) {
     height: 3rem;
     font-size: 1.5rem;
