@@ -23,7 +23,7 @@ import type { Basemap, MapLayer, MapSource } from "@/afrc/Search/types.ts";
 let query = getQueryObject(null);
 let queryString = ref(JSON.stringify(query));
 let searchResults = ref([]);
-let resultsCount = ref("calculating...");
+let resultsCount = ref();
 let resultSelected = ref("");
 let forcePaginatorRepaint = ref(0);
 const showMap = ref(false);
@@ -32,6 +32,7 @@ const overlays: Ref<MapLayer[]> = ref([]);
 const sources: Ref<MapSource[]> = ref([]);
 const resultsSelected: Ref<string[]> = ref([]);
 const dataLoaded = ref(false);
+const loadingSearchResults = ref(true);
 const newQuery = ref(false);
 const toast = useToast();
 const { $gettext } = useGettext();
@@ -88,6 +89,7 @@ function getQueryObject(uri: string | null): GenericObject {
 }
 
 async function performSearch() {
+    loadingSearchResults.value = true;
     const queryObj = JSON.parse(queryString.value ?? "{}");
 
     Object.keys(queryObj).forEach((key) => {
@@ -110,6 +112,7 @@ async function performSearch() {
             searchResults.value = hits;
             resultsCount.value = data.total_results;
             resultsSelected.value = [];
+            loadingSearchResults.value = false;
         });
 }
 
@@ -208,9 +211,19 @@ onMounted(async () => {
                 class="afrc-search-results-panel"
                 :class="{ 'map-sidebar': showMap }"
             >
-                <div class="section-header">{{ resultsCount }} Results</div>
+                <div
+                    v-if="loadingSearchResults"
+                    class="section-header"
+                >
+                    {{ $gettext("Loading Results...") }}
+                </div>
+                <div
+                    v-else
+                    class="section-header"
+                >
+                    {{ resultsCount }} Results
+                </div>
                 <div class="search-result-list">
-                    <!-- <div style="height: 50px">{{ item?._source.displayname }}</div> -->
                     <DataView
                         :key="forcePaginatorRepaint"
                         lazy

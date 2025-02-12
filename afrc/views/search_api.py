@@ -96,7 +96,7 @@ class SearchAPI(View):
             terms = json.loads(request.GET.get("term-filter", None))
             if terms:
                 terms = [term["value"] for term in terms]
-            results = get_related_resources_by_text(terms)
+            results = get_related_resources_by_text(terms, settings.COLLECTIONS_GRAPHID)
             print(f"len of results: {len(results)}")
             ret = get_search_results_by_resourceids(
                 [str(row[0]) for row in results],
@@ -116,11 +116,11 @@ class SearchAPI(View):
             return JSONResponse(content=search_results(request))
 
 
-def get_related_resources_by_text(search_query):
+def get_related_resources_by_text(search_query, graphid):
     with connection.cursor() as cursor:
         cursor.execute(
-            "SELECT DISTINCT * FROM __afrc_get_related_resources_by_searchable_values(%s, '1810d182-b4b5-11ea-84f7-3af9d3b32b71')",
-            [search_query],
+            "SELECT DISTINCT * FROM __afrc_get_related_resources_by_searchable_values(%s, %s)",
+            [search_query, graphid],
         )
         rows = cursor.fetchall()
     return rows
