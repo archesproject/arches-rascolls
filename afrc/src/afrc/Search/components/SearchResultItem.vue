@@ -3,6 +3,7 @@ import { onMounted, inject, ref } from "vue";
 import type { Ref } from "vue";
 
 import Button from "primevue/button";
+import Skeleton from "primevue/skeleton";
 
 import arches from "arches";
 import { fetchImageData } from "@/afrc/Search/api.ts";
@@ -12,18 +13,24 @@ const resultSelected = inject("resultSelected") as Ref<string>;
 const image: Ref<string> = ref("");
 
 onMounted(async () => {
-    const res = await fetchImageData(
-        [props.searchResult._source.resourceinstanceid],
-        true,
-    );
-    if (res.length > 0) {
-        image.value = res[0];
+    if (props.searchResult) {
+        const res = await fetchImageData(
+            [props.searchResult._source.resourceinstanceid],
+            true,
+        );
+        if (res.length > 0) {
+            image.value = res[0];
+        }
     }
 });
 
 const props = defineProps({
     searchResult: {
         type: Object,
+        required: true,
+    },
+    loading: {
+        type: Boolean,
         required: true,
     },
 });
@@ -41,7 +48,34 @@ function selectResult(resourceid: string) {
 </script>
 
 <template>
-    <section>
+    <section v-if="loading">
+        <div
+            class="result"
+            style="display: flex"
+        >
+            <div class="image-placeholder">
+                <Skeleton
+                    class="item-image"
+                    height="100%"
+                ></Skeleton>
+            </div>
+            <div
+                class="result-content"
+                width="100%"
+                style="justify-content: unset; row-gap: 2rem; flex-grow: 1"
+            >
+                <Skeleton
+                    width="100%"
+                    height="4rem"
+                ></Skeleton>
+                <Skeleton
+                    width="100%"
+                    height="4rem"
+                ></Skeleton>
+            </div>
+        </div>
+    </section>
+    <section v-else>
         <div class="result">
             <div class="image-placeholder">
                 <img

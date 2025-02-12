@@ -234,11 +234,22 @@ onMounted(async () => {
                         @page="onPageChange"
                     >
                         <template #list="slotProps">
-                            <SearchResultItem
-                                v-for="item in slotProps.items"
-                                :key="item"
-                                :search-result="item"
-                            />
+                            <div v-if="loadingSearchResults">
+                                <SearchResultItem
+                                    v-for="i in 5"
+                                    :key="i"
+                                    :search-result="{}"
+                                    :loading="true"
+                                />
+                            </div>
+                            <div v-else>
+                                <SearchResultItem
+                                    v-for="item in slotProps.items"
+                                    :key="item"
+                                    :search-result="item"
+                                    :loading="false"
+                                />
+                            </div>
                         </template>
                     </DataView>
                 </div>
