@@ -1,13 +1,22 @@
 <script setup lang="ts">
-import { inject } from "vue";
+import { onMounted, inject, ref } from "vue";
 import type { Ref } from "vue";
 
 import Button from "primevue/button";
 
 import arches from "arches";
+import { fetchImageData } from "@/afrc/Search/api.ts";
 
 const resultsSelected = inject("resultsSelected") as Ref<string[]>;
 const resultSelected = inject("resultSelected") as Ref<string>;
+const image: Ref<string> = ref("");
+
+onMounted(async () => {
+    const res = await fetchImageData([props.searchResult._source.resourceinstanceid], true);
+    if (res.length > 0) {
+        image.value = res[0];
+    }
+});
 
 
 const props = defineProps({
@@ -68,7 +77,7 @@ function selectResult(resourceid: string) {
                             target="_blank"
                             size="large"
                             icon="pi pi-pen-to-square"
-                            :href="'./' + arches.urls.resource + '/' + searchResult._id"
+                            :href="arches.urls.resource + '/' + searchResult._id"
                         />
                     </div>
                 </div>
@@ -196,5 +205,18 @@ function selectResult(resourceid: string) {
 .p-button-text.p-button-secondary.action-button:hover {
     background: #DFDBEB;
     color: #25476a;
+}
+.no-image { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 158px;
+    width: 160px;
+    color: #555;
+    background-color: rgb(236, 236, 236);
+}
+.image {
+    height: 158px; 
+    width: 160px;
 }
 </style>

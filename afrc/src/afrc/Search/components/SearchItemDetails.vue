@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { onMounted, inject, ref, watch } from "vue";
-import { fetchResourceData } from "@/afrc/Search/api.ts";
+import type { Acquisition, UnspecifiedObject, GenericObject } from "@/afrc/Search/types";
+import { fetchResourceData, fetchImageData } from "@/afrc/Search/api.ts";
 import type { Ref } from "vue";
 import Button from "primevue/button";
 import Carousel from "primevue/carousel";
@@ -8,9 +9,11 @@ import Carousel from "primevue/carousel";
 const resultSelected = inject("resultSelected") as Ref<string>;
 const resultsSelected = inject("resultsSelected") as Ref<string[]>;
 
-let displayname: Ref<string> = ref("");
-let displaydescription: Ref<string> = ref("");
-let images: Ref<string[]> = ref([]);
+const displayname: Ref<string> = ref("");
+const displaydescription: Ref<string> = ref("");
+const images: Ref<string[]> = ref([]);
+const acquisitions: Ref<Acquisition[]> = ref([]);
+const identifier: Ref<string> = ref("");
 
 onMounted(async () => {
     getData();
@@ -22,16 +25,27 @@ watch(resultSelected, () => {
 
 async function getData() {
     const resp = await fetchResourceData(resultSelected.value);
+    const imageResourceids = resp.resource["Digital Reference"]?.map((tile: UnspecifiedObject) => 
+        (tile["Digital Source"] as UnspecifiedObject)?.["resourceId"]);
+    const accessionNumber = resp.resource['Identifier']?.find((identifier: UnspecifiedObject) =>
+        identifier["Identifier_type"] as UnspecifiedObject["@display_value"]==="Accession Number"); 
+
+    acquisitions.value = resp.resource["Addition to Collection"]?.map((tile: GenericObject) =>
+        ({ 
+            "person": tile?.["Addition to Collection_carried out by"]["@display_value"],
+            "date": tile?.["Addition to Collection_time"]["Addition to Collection_time_begin of the begin"]["@display_value"],
+            "details": tile?.["Addition to Collection_Statement"]?.map((statement: GenericObject) =>
+            (statement?.["Addition to Collection_Statement_content"]?.["@display_value"])).join(" ") 
+        }));
     displayname.value = resp.displayname;
     displaydescription.value = resp.displaydescription;
-    images.value = [
-        "http://www.minisimmonssurfboards.com/wp-content/uploads/2012/07/mini_simmons_round_tail.jpg",
-        "https://www.minisimmonssurfboards.com/wp-content/uploads/2013/08/DOC-Mini-Simmons-1.jpg",
-        "https://www.minisimmonssurfboards.com/wp-content/uploads/2013/06/20130606-222901.jpg",
-        "https://www.surfboardsbygrantnewby.com/wp-content/uploads/2020/12/Traditional-Mini-Simmons.jpg",
-        "https://i0.wp.com/www.minisimmonssurfboards.com/wp-content/uploads/2015/11/5_mandala_doubleRainbow_PinotNoir_1024x1024.jpg?resize=600%2C800",
-        "https://3.bp.blogspot.com/-O0s9gHdDs-c/TW0i1DgLfBI/AAAAAAAAEMc/p3gwEQ9fziE/s1600/mini-simmons.jpg",
-    ];
+    identifier.value = accessionNumber ? accessionNumber["Identifier_content"]["@display_value"] : "";
+
+    if (imageResourceids) {
+        images.value = await fetchImageData(imageResourceids);
+    } else {
+        images.value = [];
+    }
 }
 
 function clearResult() {
@@ -48,7 +62,7 @@ function clearResult() {
                     {{ displayname || "No name provided" }}
                 </div>
                 <div class="current-location">
-                    (Room 32, Row 2, Shelf 3)
+                    {{ identifier }}
                 </div>
             </div>
             <div>
@@ -64,81 +78,37 @@ function clearResult() {
             </div>
         </div>
         <div class="description">
-            {{ displaydescription || "No description provided" }}
-            <span
-                >Sed ut perspiciatis, unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam eaque ipsa,
-                quae ab illo inventore veritatis et quasi architecto beatae
-                vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia
-                voluptas sit, aspernatur aut odit aut fugit</span
-            >
+            <div v-if="displaydescription && displaydescription != 'Undefined'" v-html="displaydescription"></div>
+            <div v-else>No description provided</div> 
         </div>
-        <div class="images">
-            <Carousel
-                :value="images"
-                :num-visible="2"
-                :num-scroll="1"
-                container-class="flex items-center"
-            >
-                <template #item="image">
-                    <div
-                        class="border border-surface-200 dark:border-surface-700 rounded m-2 p-4"
-                    >
-                        <div class="mb-4">
-                            <div class="relative mx-auto">
-                                <div style="padding: 3px">
-                                    <img
-                                        :src="image.data"
-                                        height="120px"
-                                        width="120px"
-                                        class="w-full rounded"
-                                    />
-                                </div>
+        <div v-if="images.length" class="images">
+        <Carousel :value="images" :numVisible="2" :numScroll="1" containerClass="flex items-center">
+            <template #item="image">
+                <div class="border border-surface-200 dark:border-surface-700 rounded m-2  p-4">
+                    <div class="mb-4">
+                        <div class="relative mx-auto">
+                            <div style="padding: 3px">
+                            <img :src="image.data" height="120px" width="120px" class="w-full rounded" />
                             </div>
                         </div>
                     </div>
-                </template>
-            </Carousel>
+                </div>
+            </template>
+        </Carousel>
         </div>
-        <div class="resource-details">
-            <div class="value-header">Chemical Information</div>
-            <div class="value-entry">
-                Chemical (CAS) Number:<span class="resource-details-value"
-                    >1309-36-0</span
-                >
-            </div>
-            <div class="value-entry">
-                Chemical Formula:<span class="resource-details-value"
-                    >FeS2</span
-                >
-            </div>
-            <div class="value-entry">
-                Chemical Name:<span class="resource-details-value"
-                    >Iron Disulfide</span
-                >
-            </div>
-            <div class="value-entry">
-                Common Name:<span class="resource-details-value"
-                    >Pyrite, Fool's Gold</span
-                >
-            </div>
+        <div class="resource-details"  style="color: grey">
+            <div class="value-header">Material Information</div>
+            <div class="value-entry">Chemical (CAS) Number:<span class="resource-details-value">1309-36-0</span></div>
+            <div class="value-entry">Chemical Formula:<span class="resource-details-value">FeS2</span></div>
+            <div class="value-entry">Chemical Name:<span class="resource-details-value">Iron Disulfide</span></div>
+            <div class="value-entry">Common Name:<span class="resource-details-value">Pyrite, Fool's Gold</span></div>
         </div>
-        <div class="resource-details">
-            <div class="value-header">Aquisition Information</div>
-            <div class="value-entry">
-                Acquired by:<span class="resource-details-value"
-                    >Art Kaplan</span
-                >
-            </div>
-            <div class="value-entry">
-                Acquired from:<span class="resource-details-value"
-                    >Minerals-R-Us</span
-                >
-            </div>
-            <div class="value-entry">
-                Acquired on:<span class="resource-details-value"
-                    >Feb 18, 2001</span
-                >
+        <div  v-if="acquisitions"  class="resource-details">
+            <div class="value-header">Acquisition Information</div>
+            <div v-for="(acquisition, index) in acquisitions" :key="index">
+                <div class="value-entry">Acquired by:<span class="resource-details-value">{{ acquisition.person }}</span></div>
+                <div class="value-entry">Acquired on:<span class="resource-details-value">{{ acquisition.date }}</span></div>
+                <div class="value-entry">Acquisition Details:<span class="resource-details-value">{{ acquisition.details }}</span></div>
             </div>
         </div>
         <div class="resource-details">
