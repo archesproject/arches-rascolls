@@ -75,7 +75,7 @@ const props = withDefaults(defineProps<Props>(), {
     basemap: null,
     overlays: () => [],
     sources: () => [],
-    isDrawingEnabled: false,
+    isDrawingEnabled: true,
     drawnFeatures: () => [],
     drawnFeaturesBuffer: undefined,
     isPopupEnabled: false,
@@ -341,11 +341,12 @@ function addDrawControls() {
         controls: {
             point: false,
             line_string: false,
-            polygon: false,
+            polygon: true,
+            trash: true
         },
     });
 
-    map.value!.addControl(draw);
+    map.value!.addControl(draw, 'top-right');
 
     map.value!.on(DRAW_CREATE_EVENT, selectNewlyDrawnFeature);
 
