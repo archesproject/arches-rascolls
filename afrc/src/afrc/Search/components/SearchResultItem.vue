@@ -162,7 +162,6 @@ function selectResult(resourceid: string) {
 
 .no-image { 
     display: flex;
-    justify-content: center;
     text-align: center;
     align-items: center;
     color: #555;
