@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { computed, ref, shallowRef } from "vue";
-import Button from "primevue/button";
 import Divider from 'primevue/divider';
 
 import {
@@ -46,9 +45,9 @@ const openDrawer = (item: MapInteractionItem) => {
                 v-for="item in items"
                 :key="item.name"
             >
-                <Button
-                    :icon="item.icon"
-                    @click="
+
+                <div class="sidebar-item"
+                @click="
                         () => {
                             if (selectedComponent === item.component) {
                                 isOverlayVisible = !isOverlayVisible;
@@ -57,7 +56,10 @@ const openDrawer = (item: MapInteractionItem) => {
                             }
                         }
                     "
-                />
+                ><i :class="item.icon"></i>
+                    <span style="font-size: 1.2rem">{{ item.name }}</span>
+                </div>
+                <Divider :pt="{ root: 'sidebar-item-divider' }" />
             </div>
         </aside>
 
@@ -97,7 +99,7 @@ const openDrawer = (item: MapInteractionItem) => {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 3rem;
+    width: 6rem;
     border-right: 1px solid var(--p-menubar-border-color);
     z-index: 1;
 }
@@ -106,7 +108,7 @@ const openDrawer = (item: MapInteractionItem) => {
     position: absolute;
     top: 0;
     bottom: 0;
-    width: 42rem;
+    width: 36rem;
     padding: 15px;
     background-color: var(--p-content-background);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -144,7 +146,7 @@ const openDrawer = (item: MapInteractionItem) => {
 .close-button {
     background: none;
     border: none;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     line-height: 1;
     cursor: pointer;
     color: var(--p-content-color);
@@ -155,4 +157,24 @@ const openDrawer = (item: MapInteractionItem) => {
 .close-button:focus {
     outline: none;
 }
+
+.sidebar-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    width: 6rem;
+    height: 6rem;
+}
+
+.sidebar-item:hover {
+    background: var(--p-button-secondary-hover-background);
+    color: var(--p-button-secondary-hover-color);
+}
+
+.sidebar-item-divider {
+    margin: 0
+}
+
 </style>
