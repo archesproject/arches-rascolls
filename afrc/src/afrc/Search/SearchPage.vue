@@ -105,6 +105,7 @@ const doQuery = function () {
 
 const updateDrawnFeaturesGeometry = function (features: Feature[]) {
     spatialFilter.value = features;
+    console.log("update the query with these feature(s): ", features);
 };
 
 async function fetchSystemMapData() {
