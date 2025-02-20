@@ -13,7 +13,7 @@ from arches.app.search.mappings import RESOURCES_INDEX
 from arches.app.utils.file_validator import FileValidator
 from arches.app.utils.response import JSONResponse, JSONErrorResponse
 from arches.app.utils.permission_backend import user_can_read_map_layers
-from arches.app.utils.geo_utils import GeoUtils
+from afrc.utils.geo_utils import GeoUtils
 
 
 class MapDataAPI(View):
@@ -95,7 +95,8 @@ class FeatureBufferAPI(View):
         data = json.loads(request.body)
         features = data["features"]
         geo_utils = GeoUtils()
-        return JSONResponse(features)
+        buffered = geo_utils.buffer_feature_collection(features)
+        return JSONResponse(buffered)
 
 
 class GeoJSONBoundsAPI(View):

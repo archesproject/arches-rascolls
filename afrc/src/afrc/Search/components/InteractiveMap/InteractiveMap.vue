@@ -7,8 +7,8 @@ import { useToast } from "primevue/usetoast";
 import MapComponent from "@/afrc/Search/components/InteractiveMap/components/MapComponent.vue";
 import MapFilter from "@/afrc/Search/components/InteractiveMap/components/MapFilter/MapFilter.vue";
 import InteractionsDrawer from "@/afrc/Search/components/InteractiveMap/components/InteractionsDrawer.vue";
-import OverlayControls from "@/afrc/Search/components/InteractiveMap/components/OverlayControls.vue";
-import BasemapControls from "@/afrc/Search/components/InteractiveMap/components/BasemapControls.vue";
+// import OverlayControls from "@/afrc/Search/components/InteractiveMap/components/OverlayControls.vue";
+// import BasemapControls from "@/afrc/Search/components/InteractiveMap/components/BasemapControls.vue";
 
 import { fetchSettings } from "@/afrc/Search/api.ts";
 
@@ -41,23 +41,23 @@ const settings: Ref<Settings | null> = ref(null);
 
 const mapInteractionItems: MapInteractionItem[] = [
     {
-        name: "Foo",
-        header: "Map Foo",
+        name: "MapFilter",
+        header: "Map Filter",
         component: MapFilter,
         icon: "pi pi-star",
     },
-    {
-        name: "Bar",
-        header: "Map Bar",
-        component: OverlayControls,
-        icon: "pi pi-hashtag",
-    },
-    {
-        name: "Baz",
-        header: "Map Baz",
-        component: BasemapControls,
-        icon: "pi pi-globe",
-    },
+    // {
+    //     name: "Bar",
+    //     header: "Map Bar",
+    //     component: OverlayControls,
+    //     icon: "pi pi-hashtag",
+    // },
+    // {
+    //     name: "Baz",
+    //     header: "Map Baz",
+    //     component: BasemapControls,
+    //     icon: "pi pi-globe",
+    // },
 ];
 
 const basemap: Ref<Basemap | null> = ref(null);

@@ -193,7 +193,6 @@ async function bufferFeatures(features: FeatureCollection) {
     };
 
     const bufferedFeatures = await fetchDrawnFeaturesBuffer(featuresToBuffer);
-
     const source = map.value!.getSource(BUFFER_LAYER_ID) as GeoJSONSource;
     source.setData(bufferedFeatures);
 
@@ -248,8 +247,8 @@ function addBufferLayer() {
         source: BUFFER_LAYER_ID,
         layout: {},
         paint: {
-            "fill-color": "#888888",
-            "fill-opacity": 0.5,
+            "fill-color": "#ea7f08",
+            "fill-opacity": 0.3,
         },
     });
 }
@@ -284,7 +283,7 @@ async function updateDrawnFeatures() {
 
     const bufferedFeatures = await bufferFeatures(drawnFeatures);
 
-    emits("drawnFeaturesUpdated", drawnFeatures);
+    emits("drawnFeaturesUpdated", [...drawnFeatures.features, ...bufferedFeatures.features]);
 
     if (drawnFeatures.features.length) {
         fitBoundsOfFeatures({
@@ -341,12 +340,12 @@ function addDrawControls() {
         controls: {
             point: false,
             line_string: false,
-            polygon: true,
-            trash: true
+            polygon: false,
+            trash: false
         },
     });
 
-    map.value!.addControl(draw, 'top-right');
+    map.value!.addControl(draw);
 
     map.value!.on(DRAW_CREATE_EVENT, selectNewlyDrawnFeature);
 
@@ -498,5 +497,9 @@ function updateMapOverlays(overlays: Array<MapLayer>) {
     padding-top: 2rem;
     width: 20rem;
     height: 20rem;
+}
+
+.map .mapboxgl-ctrl {
+    margin: 10px;
 }
 </style>

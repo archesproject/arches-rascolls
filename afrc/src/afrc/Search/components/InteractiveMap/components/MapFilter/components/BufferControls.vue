@@ -6,6 +6,8 @@ import MapboxDraw from "@mapbox/mapbox-gl-draw";
 
 import type { Feature, Map } from "maplibre-gl";
 import type { PropType, Ref } from "vue";
+import Select from 'primevue/select';
+import InputNumber from 'primevue/inputnumber';
 import { DRAW_UPDATE_EVENT, METERS } from "@/afrc/Search/constants.ts";
 
 const { $gettext } = useGettext();
@@ -20,7 +22,15 @@ const props = defineProps({
 const selectedDrawnFeature = inject("selectedDrawnFeature", ref(null));
 
 const bufferDistance: Ref<number | ""> = ref(0);
-const selectedUnits: Ref<string> = ref(METERS);
+    
+const options = ref([
+    { label: $gettext("meters"), code: "meters" },
+    { label: $gettext("feet"), code: "feet" },
+    { label: $gettext("miles"), code: "miles" },
+    { label: $gettext("kilometers"), code: "kilometers" },
+]);
+
+const selectedUnits: Ref<any> = ref(options.value[0]);
 
 watch([bufferDistance, selectedUnits], () => {
     if (bufferDistance.value === "" || bufferDistance.value < 0) {
@@ -67,36 +77,21 @@ watch(
 </script>
 
 <template>
+    <div class="buffer-controls">
+        <label for="buffDistance">Distance</label>
+        <InputNumber v-model="bufferDistance" size="small" min="0" step="1" id="buffDistance" :inputStyle="{ fontSize: '1.4rem' }" />
+        <Select v-model="selectedUnits" :options="options" id="unit" optionValue="code" placeholder="Units" optionLabel="label" class="w-full md:w-56" size="small" fluid />
+    </div>
     <div>
-        <label for="bufferDistance">{{ $gettext("Buffer Distance:") }}</label>
-        <input
-            id="bufferDistance"
-            v-model.number="bufferDistance"
-            type="number"
-            min="0"
-            step="1"
-        />
-
-        <label for="unit">{{ $gettext("Unit:") }}</label>
-        <select
-            id="unit"
-            v-model="selectedUnits"
-        >
-            <option value="meters">{{ $gettext("Meters") }}</option>
-            <option value="feet">{{ $gettext("Feet") }}</option>
-            <option value="miles">{{ $gettext("Miles") }}</option>
-            <option value="kilometers">{{ $gettext("Kilometers") }}</option>
-        </select>
     </div>
 </template>
 
 <style scoped>
-label {
-    margin-right: 10px;
-}
-
-input {
-    padding: 5px;
-    width: 100px;
+.buffer-controls {
+    align-items: baseline;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding-top: 15px;
 }
 </style>

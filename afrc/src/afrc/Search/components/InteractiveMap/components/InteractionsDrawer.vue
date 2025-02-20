@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, ref, shallowRef } from "vue";
 import Button from "primevue/button";
+import Divider from 'primevue/divider';
 
 import {
     ACTIVE_LANGUAGE_DIRECTION,
@@ -74,6 +75,7 @@ const openDrawer = (item: MapInteractionItem) => {
                     ×
                 </button>
             </div>
+            <Divider />
 
             <component
                 :is="selectedComponent"
@@ -104,7 +106,8 @@ const openDrawer = (item: MapInteractionItem) => {
     position: absolute;
     top: 0;
     bottom: 0;
-    width: 18rem;
+    width: 42rem;
+    padding: 15px;
     background-color: var(--p-content-background);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
@@ -136,7 +139,6 @@ const openDrawer = (item: MapInteractionItem) => {
     justify-content: space-between;
     padding: 1rem;
     font-weight: bold;
-    border-bottom: 1px solid var(--p-content-color);
 }
 
 .close-button {

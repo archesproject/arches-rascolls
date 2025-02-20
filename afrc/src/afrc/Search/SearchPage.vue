@@ -17,12 +17,14 @@ import InteractiveMap from "@/afrc/Search/components/InteractiveMap/InteractiveM
 import { fetchMapData } from "@/afrc/Search/api.ts";
 import type { GenericObject } from "@/afrc/Search/types";
 import type { Basemap, MapLayer, MapSource } from "@/afrc/Search/types.ts";
+import type { Feature } from "maplibre-gl/dist/maplibre-gl";
 
 let query = getQueryObject(null);
 let queryString = ref(JSON.stringify(query));
 let searchResults = ref([]);
 let resultsCount = ref("calculating...");
 let resultSelected = ref("");
+let spatialFilter: Ref<Feature[]> = ref([]);
 const showMap = ref(false);
 const basemaps: Ref<Basemap[]> = ref([]);
 const overlays: Ref<MapLayer[]> = ref([]);
@@ -99,6 +101,10 @@ const doQuery = function () {
             resultsCount.value = data.total_results;
             resultsSelected.value = [];
         });
+};
+
+const updateDrawnFeaturesGeometry = function (features: Feature[]) {
+    spatialFilter.value = features;
 };
 
 async function fetchSystemMapData() {
@@ -201,8 +207,15 @@ onMounted(async () => {
                     :basemaps="basemaps"
                     :overlays="overlays"
                     :sources="sources"
-                    :include-drawer="false"
+                    :include-drawer="true"
                     :popup-enabled="false"
+                    @drawn-features-updated="
+                    (features) => {
+                        updateDrawnFeaturesGeometry(
+                            features,
+                        );
+                    }
+                "
                 />
             </div>
 
