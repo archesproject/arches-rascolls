@@ -4,10 +4,9 @@ import { ref } from "vue";
 import { useGettext } from "vue3-gettext";
 
 import DrawControls from "@/afrc/Search/components/InteractiveMap/components/MapFilter/components/DrawControls.vue";
-import FeatureUploader from "@/afrc/Search/components/InteractiveMap/components/MapFilter/components/FeatureUploader.vue";
+// import FeatureUploader from "@/afrc/Search/components/InteractiveMap/components/MapFilter/components/FeatureUploader.vue";
 import BufferControls from "@/afrc/Search/components/InteractiveMap/components/MapFilter/components/BufferControls.vue";
 import Button from 'primevue/button';
-
 
 import type { Map } from "maplibre-gl";
 import type { PropType } from "vue";
