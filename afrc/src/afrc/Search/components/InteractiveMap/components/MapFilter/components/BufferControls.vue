@@ -9,6 +9,8 @@ import type { PropType, Ref } from "vue";
 import Select from 'primevue/select';
 import InputNumber from 'primevue/inputnumber';
 import { DRAW_UPDATE_EVENT, METERS } from "@/afrc/Search/constants.ts";
+import Panel from 'primevue/panel';
+import type { GenericObject } from "@/afrc/Search/types.ts";
 
 const { $gettext } = useGettext();
 
@@ -21,7 +23,7 @@ const props = defineProps({
 
 const selectedDrawnFeature = inject("selectedDrawnFeature", ref(null));
 
-const bufferDistance: Ref<number | ""> = ref(0);
+const bufferDistance: Ref<number | 0> = ref(0);
     
 const options = ref([
     { label: $gettext("meters"), code: "meters" },
@@ -30,10 +32,10 @@ const options = ref([
     { label: $gettext("kilometers"), code: "kilometers" },
 ]);
 
-const selectedUnits: Ref<any> = ref(options.value[0]);
+const selectedUnits: Ref<string> = ref(options.value[0].code);
 
 watch([bufferDistance, selectedUnits], () => {
-    if (bufferDistance.value === "" || bufferDistance.value < 0) {
+    if (bufferDistance.value < 0) {
         bufferDistance.value = 0;
     }
 
@@ -76,14 +78,30 @@ watch(
 );
 </script>
 
-<template>
-    <div class="buffer-controls">
-        <label for="buffDistance">Distance</label>
-        <InputNumber v-model="bufferDistance" size="small" min="0" step="1" id="buffDistance" :inputStyle="{ fontSize: '1.4rem' }" />
-        <Select v-model="selectedUnits" :options="options" id="unit" optionValue="code" placeholder="Units" optionLabel="label" class="w-full md:w-56" size="small" fluid />
-    </div>
-    <div>
-    </div>
+<template>  
+    <Panel :pt="{title: { style: { 'font-weight': 500 }}}" header="Buffer Selected Feature" style="margin-top: 12px">
+        <div class="buffer-controls">
+            <label for="buffDistance">Distance</label>
+            <InputNumber 
+                v-model="bufferDistance"
+                :min="0"
+                id="buffDistance"
+                :inputStyle="{ fontSize: '1.4rem' }" 
+                fluid @input="(e: GenericObject) => bufferDistance = e.value" 
+                />
+            <Select 
+                v-model="selectedUnits" 
+                :options="options" 
+                id="unit" 
+                optionValue="code" 
+                placeholder="Units" 
+                optionLabel="label" 
+                class="w-full md:w-56"
+                size="small"
+                fluid 
+            />
+        </div>
+    </Panel>
 </template>
 
 <style scoped>
@@ -92,6 +110,5 @@ watch(
     display: flex;
     flex-direction: row;
     gap: 1rem;
-    padding-top: 15px;
 }
 </style>
