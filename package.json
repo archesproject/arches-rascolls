@@ -19,7 +19,8 @@
     },
     "dependencies": {
         "arches": "archesproject/arches#stable/7.6.6",
-        "maplibre-gl": "^4.6.0"
+        "maplibre-gl": "^4.6.0",
+        "primevue": "4.2.0"
     },
     "devDependencies": {
         "arches-dev-dependencies": "archesproject/arches-dev-dependencies#stable/7.6.6"
