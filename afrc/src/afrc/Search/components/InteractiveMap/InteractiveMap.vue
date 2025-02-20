@@ -41,23 +41,23 @@ const settings: Ref<Settings | null> = ref(null);
 
 const mapInteractionItems: MapInteractionItem[] = [
     {
-        name: "MapFilter",
+        name: "Filter",
         header: "Map Filter",
         component: MapFilter,
-        icon: "pi pi-star",
+        icon: "pi pi-filter",
     },
-    // {
-    //     name: "Bar",
-    //     header: "Map Bar",
-    //     component: OverlayControls,
-    //     icon: "pi pi-hashtag",
-    // },
-    // {
-    //     name: "Baz",
-    //     header: "Map Baz",
-    //     component: BasemapControls,
-    //     icon: "pi pi-globe",
-    // },
+    {
+        name: "Basemap",
+        header: "Map Filter",
+        component: MapFilter,
+        icon: "pi pi-map",
+    },
+    {
+        name: "Overlays",
+        header: "Map Filter",
+        component: MapFilter,
+        icon: "pi pi-globe",
+    },
 ];
 
 const basemap: Ref<Basemap | null> = ref(null);
