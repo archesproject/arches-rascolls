@@ -105,85 +105,103 @@ class Migration(migrations.Migration):
     create_function_to_do_through_search = """
         CREATE OR REPLACE FUNCTION __afrc_get_related_resources_by_searchable_values(
             search_terms TEXT[],
-            target_graphid UUID -- Graph ID to filter results
+            target_graphid UUID
         )
         RETURNS TABLE(resourceinstance UUID) AS $$
         DECLARE
-            searchable_ids UUID[];
-            second_level_ids UUID[];
+            term TEXT;
         BEGIN
-            -- Step 1: Create a temporary table to store categorized first and second-level results
-            CREATE TEMP TABLE temp_related_resources (
-                resourceinstanceid UUID,
-                graphid UUID,
-                is_matching BOOLEAN -- TRUE if it matches the target_graphid
+            -- Create a temporary table to store intersection results
+            CREATE TEMP TABLE temp_final_results (
+                resourceinstanceid UUID PRIMARY KEY
             ) ON COMMIT DROP;
 
-            -- Step 2: Retrieve initial resourceinstanceid values based on the text search
-            INSERT INTO temp_related_resources (resourceinstanceid, graphid, is_matching)
-            SELECT sv.resourceinstanceid, r.graphid, r.graphid = target_graphid AS is_matching
-            FROM afrc_searchable_values sv
-            JOIN LATERAL (
-                SELECT term FROM unnest(search_terms) term 
+            -- Process each search term separately
+            FOR term IN SELECT unnest(search_terms) LOOP
+                -- Create a temporary table for this search term's results
+                
+                CREATE TEMP TABLE temp_related_resources (
+                    resourceinstanceid UUID PRIMARY KEY,
+                    graphid UUID,
+                    is_matching BOOLEAN
+                ) ON COMMIT DROP;
+
+                -- Retrieve initial resourceinstanceid values based on the text search
+                INSERT INTO temp_related_resources (resourceinstanceid, graphid, is_matching)
+                SELECT sv.resourceinstanceid, r.graphid, r.graphid = target_graphid AS is_matching
+                FROM afrc_searchable_values sv
+                JOIN resource_instances r ON r.resourceinstanceid = sv.resourceinstanceid
                 WHERE sv.value ILIKE '%' || term || '%'
-            ) matched_terms ON true
-            JOIN resource_instances r on r.resourceinstanceid = sv.resourceinstanceid
-            GROUP BY sv.resourceinstanceid, r.graphid
-            HAVING COUNT(DISTINCT matched_terms.term) = array_length(search_terms, 1);
+                ON CONFLICT (resourceinstanceid) DO NOTHING;
 
-            -- Isolate non-matching results for further searching
-            SELECT ARRAY(
-                SELECT resourceinstanceid FROM temp_related_resources
-                WHERE is_matching = FALSE
-            ) INTO searchable_ids;
+                WITH first_level AS (
+                    SELECT DISTINCT r.resourceinstanceidfrom AS resourceinstanceid, 
+                        r.resourceinstancefrom_graphid AS graphid,
+                        r.resourceinstancefrom_graphid = target_graphid AS is_matching
+                    FROM resource_x_resource r
+                    JOIN temp_related_resources tr ON r.resourceinstanceidto = tr.resourceinstanceid
+                    WHERE tr.is_matching = FALSE
+                
+                    UNION
+                
+                    SELECT DISTINCT r.resourceinstanceidto as resourceinstanceid, 
+                        r.resourceinstanceto_graphid AS graphid,
+                        r.resourceinstanceto_graphid = target_graphid AS is_matching
+                    FROM resource_x_resource r
+                    JOIN temp_related_resources tr ON r.resourceinstanceidfrom = tr.resourceinstanceid
+                    WHERE tr.is_matching = FALSE
+                ),
+                second_level AS (
+                    SELECT DISTINCT r.resourceinstanceidfrom AS resourceinstanceid, 
+                        r.resourceinstancefrom_graphid AS graphid
+                    FROM resource_x_resource r
+                    JOIN first_level fl ON r.resourceinstanceidto = fl.resourceinstanceid
+                    WHERE fl.is_matching = FALSE
+                
+                    UNION
+                
+                    SELECT DISTINCT r.resourceinstanceidto AS resourceinstanceid, 
+                        r.resourceinstanceto_graphid AS graphid
+                    FROM resource_x_resource r
+                    JOIN first_level fl ON r.resourceinstanceidfrom = fl.resourceinstanceid
+                    WHERE fl.is_matching = FALSE
 
-            -- Remove results that do not match the target graphid so that 
-            -- we don't search on them again in step 4
-            DELETE FROM temp_related_resources WHERE is_matching = FALSE;
-            
-            -- Step 3: Retrieve second-level resourceinstanceid values based on the initial results
-            -- Insert first-level relationships into the temp table with categorization
-            INSERT INTO temp_related_resources (resourceinstanceid, graphid, is_matching)
-            SELECT DISTINCT 
-                r.resourceinstanceidfrom AS resourceinstanceid,
-                r.resourceinstancefrom_graphid AS graphid,
-                r.resourceinstancefrom_graphid = target_graphid AS is_matching
-            FROM resource_x_resource r
-            WHERE r.resourceinstanceidto = ANY(searchable_ids)
-            
-            UNION
+                    UNION 
+                    -- Make sure we gather the first level results here too so that we can add those matches later
+                    SELECT resourceinstanceid, graphid
+                    FROM first_level fl
+                )		
+                INSERT INTO temp_related_resources
+                SELECT resourceinstanceid, target_graphid, TRUE 
+                FROM second_level
+                WHERE graphid = target_graphid
+                ON CONFLICT (resourceinstanceid) DO NOTHING;
 
-            SELECT DISTINCT 
-                r.resourceinstanceidto AS resourceinstanceid,
-                r.resourceinstanceto_graphid AS graphid,
-                r.resourceinstanceto_graphid = target_graphid AS is_matching
-            FROM resource_x_resource r
-            WHERE r.resourceinstanceidfrom = ANY(searchable_ids);
+                -- Intersect results across search terms
+                IF term = search_terms[1] THEN
+                    INSERT INTO temp_final_results 
+                    SELECT DISTINCT resourceinstanceid FROM temp_related_resources WHERE is_matching = TRUE;
+                ELSE
+                    CREATE TEMP TABLE temp_intersection AS
+                    SELECT resourceinstanceid FROM temp_final_results
+                    INTERSECT
+                    SELECT resourceinstanceid FROM temp_related_resources WHERE is_matching = TRUE;
+                    
+                    -- Replace the old table with the new one
+                    TRUNCATE temp_final_results;
+                    INSERT INTO temp_final_results SELECT * FROM temp_intersection;
+                    DROP TABLE temp_intersection;
+                END IF;
 
-            -- Step 3.5: Return matching results immediately
-            RETURN QUERY 
-            SELECT resourceinstanceid FROM temp_related_resources WHERE is_matching = TRUE;
+                -- Drop temporary table for this term
+                DROP TABLE temp_related_resources;
+            END LOOP;
 
-            -- Step 4: Find second-level related resourceinstanceids using only non-matching first-level IDs
-            RETURN QUERY
-            SELECT DISTINCT r.resourceinstanceidfrom 
-            FROM resource_x_resource r
-            WHERE r.resourceinstanceidto IN (
-                SELECT resourceinstanceid FROM temp_related_resources WHERE is_matching = FALSE
-            )
-            AND r.resourceinstancefrom_graphid = target_graphid
-            
-            UNION
-            
-            SELECT DISTINCT r.resourceinstanceidto
-            FROM resource_x_resource r
-            WHERE r.resourceinstanceidfrom IN (
-                SELECT resourceinstanceid FROM temp_related_resources WHERE is_matching = FALSE
-            )
-            AND r.resourceinstanceto_graphid = target_graphid;
-
+            -- Return final intersected results
+            RETURN QUERY SELECT resourceinstanceid FROM temp_final_results;
         END;
         $$ LANGUAGE plpgsql;
+
     """
 
     reverse_create_function_to_do_through_search = """
