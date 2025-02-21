@@ -42,7 +42,8 @@ function selectResult(resourceid: string) {
     <section>
         <div class="result">
             <div class="image-placeholder">
-                <img class="item-image" src="https://picsum.photos/160" />
+                <img v-if="image" :src="image" class="item-image" />
+                <div v-else class="item-image no-image"><div>No image available</div></div>
             </div>
             <div class="result-content">
                 <div>
@@ -159,6 +160,15 @@ function selectResult(resourceid: string) {
     margin: 1px;
 }
 
+.no-image { 
+    display: flex;
+    text-align: center;
+    align-items: center;
+    color: #555;
+    width: 118px;
+    background-color: rgb(236, 236, 236);
+}
+
 .map-sidebar .result .image-placeholder {
     display: none;
 }
@@ -206,17 +216,5 @@ function selectResult(resourceid: string) {
     background: #DFDBEB;
     color: #25476a;
 }
-.no-image { 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 158px;
-    width: 160px;
-    color: #555;
-    background-color: rgb(236, 236, 236);
-}
-.image {
-    height: 158px; 
-    width: 160px;
-}
+
 </style>
