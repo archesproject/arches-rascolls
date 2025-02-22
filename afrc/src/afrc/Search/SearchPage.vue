@@ -210,13 +210,7 @@ onMounted(async () => {
                     :sources="sources"
                     :include-drawer="true"
                     :popup-enabled="false"
-                    @drawn-features-updated="
-                    (features) => {
-                        updateDrawnFeaturesGeometry(
-                            features,
-                        );
-                    }
-                "
+                    @drawn-features-updated="updateDrawnFeaturesGeometry"
                 />
             </div>
 
