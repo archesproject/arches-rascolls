@@ -50,6 +50,12 @@ function search(event: AutoCompleteCompleteEvent) {
                 { label: "Terms", items: data.terms },
                 { label: "Concepts", items: data.concepts },
             ];
+            ret[0].items.unshift({
+                text: event.query,
+                type: "term",
+                value: event.query,
+                inverted: false,
+            });
             items.value = ret;
         });
 }
@@ -92,7 +98,18 @@ const updateQuery = function () {
         >
             <template #optiongroup="slotProps">
                 <div class="option-group">
-                    <div style="font-size: 14px; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">{{ slotProps.option.label }}</div>
+                    <div
+                        style="
+                            font-size: 14px;
+                            font-family: &quot;Lucida Sans&quot;,
+                                &quot;Lucida Sans Regular&quot;,
+                                &quot;Lucida Grande&quot;,
+                                &quot;Lucida Sans Unicode&quot;, Geneva, Verdana,
+                                sans-serif;
+                        "
+                    >
+                        {{ slotProps.option.label }}
+                    </div>
                 </div>
             </template>
             <template #option="slotProps">
