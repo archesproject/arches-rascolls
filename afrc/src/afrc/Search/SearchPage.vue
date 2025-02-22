@@ -226,9 +226,10 @@ onMounted(async () => {
                 <div class="search-result-list">
                     <DataView
                         :key="forcePaginatorRepaint"
+                        data-key="id"
                         lazy
                         paginator
-                        rows="5"
+                        :rows="5"
                         :value="searchResults"
                         :total-records="resultsCount"
                         @page="onPageChange"
