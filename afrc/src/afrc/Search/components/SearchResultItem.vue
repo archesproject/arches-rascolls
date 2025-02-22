@@ -3,6 +3,7 @@ import { onMounted, inject, ref } from "vue";
 import type { Ref } from "vue";
 
 import Button from "primevue/button";
+import Skeleton from "primevue/skeleton";
 
 import arches from "arches";
 import { fetchImageData } from "@/afrc/Search/api.ts";
@@ -12,16 +13,24 @@ const resultSelected = inject("resultSelected") as Ref<string>;
 const image: Ref<string> = ref("");
 
 onMounted(async () => {
-    const res = await fetchImageData([props.searchResult._source.resourceinstanceid], true);
-    if (res.length > 0) {
-        image.value = res[0];
+    if (props.searchResult) {
+        const res = await fetchImageData(
+            [props.searchResult._source.resourceinstanceid],
+            true,
+        );
+        if (res.length > 0) {
+            image.value = res[0];
+        }
     }
 });
-
 
 const props = defineProps({
     searchResult: {
         type: Object,
+        required: true,
+    },
+    loading: {
+        type: Boolean,
         required: true,
     },
 });
@@ -39,11 +48,47 @@ function selectResult(resourceid: string) {
 </script>
 
 <template>
-    <section>
+    <section v-if="loading">
+        <div
+            class="result"
+            style="display: flex"
+        >
+            <div class="image-placeholder">
+                <Skeleton
+                    class="item-image"
+                    height="100%"
+                ></Skeleton>
+            </div>
+            <div
+                class="result-content"
+                width="100%"
+                style="justify-content: unset; row-gap: 2rem; flex-grow: 1"
+            >
+                <Skeleton
+                    width="100%"
+                    height="4rem"
+                ></Skeleton>
+                <Skeleton
+                    width="100%"
+                    height="4rem"
+                ></Skeleton>
+            </div>
+        </div>
+    </section>
+    <section v-else>
         <div class="result">
             <div class="image-placeholder">
-                <img v-if="image" :src="image" class="item-image" />
-                <div v-else class="item-image no-image"><div>No image available</div></div>
+                <img
+                    v-if="image"
+                    :src="image"
+                    class="item-image"
+                />
+                <div
+                    v-else
+                    class="item-image no-image"
+                >
+                    <div>No image available</div>
+                </div>
             </div>
             <div class="result-content">
                 <div>
@@ -52,25 +97,34 @@ function selectResult(resourceid: string) {
                     </div>
                     <div class="item-current-location">
                         <span class="breadcrumb-title">Current location:</span>
-                        <span class="breadcrumb">CGI Room 222, Aisle 3, Level B, Case 3</span>
+                        <span class="breadcrumb"
+                            >CGI Room 222, Aisle 3, Level B, Case 3</span
+                        >
                     </div>
                     <div class="scope-note">
-                        <span class="scope-note-title">Item description:</span><span class="scope-note-content">{{ searchResult._source.displaydescription }}</span>
+                        <span class="scope-note-title">Item description:</span
+                        ><span class="scope-note-content">{{
+                            searchResult._source.displaydescription
+                        }}</span>
                     </div>
                 </div>
                 <div>
                     <div class="actions">
-                        <Button class="action-button"
+                        <Button
+                            class="action-button"
                             label="show more"
                             severity="secondary"
                             text
                             icon="pi pi-plus-circle"
                             size="large"
                             @click="
-                                selectResult(searchResult._source.resourceinstanceid)
+                                selectResult(
+                                    searchResult._source.resourceinstanceid,
+                                )
                             "
                         />
-                        <Button class="action-button"
+                        <Button
+                            class="action-button"
                             label="edit"
                             severity="secondary"
                             text
@@ -78,7 +132,9 @@ function selectResult(resourceid: string) {
                             target="_blank"
                             size="large"
                             icon="pi pi-pen-to-square"
-                            :href="arches.urls.resource + '/' + searchResult._id"
+                            :href="
+                                arches.urls.resource + '/' + searchResult._id
+                            "
                         />
                     </div>
                 </div>
@@ -160,7 +216,7 @@ function selectResult(resourceid: string) {
     margin: 1px;
 }
 
-.no-image { 
+.no-image {
     display: flex;
     text-align: center;
     align-items: center;
@@ -213,8 +269,7 @@ function selectResult(resourceid: string) {
 }
 
 .p-button-text.p-button-secondary.action-button:hover {
-    background: #DFDBEB;
+    background: #dfdbeb;
     color: #25476a;
 }
-
 </style>

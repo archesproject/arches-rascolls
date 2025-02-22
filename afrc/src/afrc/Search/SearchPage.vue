@@ -6,6 +6,8 @@ import { useGettext } from "vue3-gettext";
 import Toast from "primevue/toast";
 import { useToast } from "primevue/usetoast";
 import Button from "primevue/button";
+import DataView from "primevue/dataview";
+
 import { DEFAULT_ERROR_TOAST_LIFE, ERROR } from "@/afrc/Search/constants.ts";
 
 import arches from "arches";
@@ -21,14 +23,17 @@ import type { Basemap, MapLayer, MapSource } from "@/afrc/Search/types.ts";
 let query = getQueryObject(null);
 let queryString = ref(JSON.stringify(query));
 let searchResults = ref([]);
-let resultsCount = ref("calculating...");
+let resultsCount = ref();
 let resultSelected = ref("");
+let forcePaginatorRepaint = ref(0);
 const showMap = ref(false);
 const basemaps: Ref<Basemap[]> = ref([]);
 const overlays: Ref<MapLayer[]> = ref([]);
 const sources: Ref<MapSource[]> = ref([]);
 const resultsSelected: Ref<string[]> = ref([]);
 const dataLoaded = ref(false);
+const loadingSearchResults = ref(true);
+const newQuery = ref(false);
 const toast = useToast();
 const { $gettext } = useGettext();
 
@@ -36,11 +41,12 @@ provide("resultsSelected", resultsSelected);
 provide("resultSelected", resultSelected);
 
 watch(queryString, () => {
-    doQuery();
+    performSearch();
 });
 
 function updateFilter(componentName: string, value: object) {
     console.log(value);
+    newQuery.value = true;
     // Test for an empty object
     function isEmpty(value: unknown) {
         if (value === null || value === undefined) {
@@ -82,24 +88,33 @@ function getQueryObject(uri: string | null): GenericObject {
     return obj;
 }
 
-const doQuery = function () {
+async function performSearch() {
+    loadingSearchResults.value = true;
     const queryObj = JSON.parse(queryString.value ?? "{}");
 
     Object.keys(queryObj).forEach((key) => {
         queryObj[key] = JSON.stringify(queryObj[key]);
     });
 
+    if (newQuery.value) {
+        const componentName = "paging-filter";
+        delete queryObj[componentName];
+        forcePaginatorRepaint.value += 1;
+        newQuery.value = false;
+    }
+
     const qs = new URLSearchParams(queryObj);
 
     fetch(arches.urls["api-search"] + "?" + qs.toString())
         .then((response) => response.json())
         .then((data) => {
-            console.log(data);
-            searchResults.value = data.results.hits.hits;
+            const hits: never[] = data.results.hits.hits;
+            searchResults.value = hits;
             resultsCount.value = data.total_results;
             resultsSelected.value = [];
+            loadingSearchResults.value = false;
         });
-};
+}
 
 async function fetchSystemMapData() {
     try {
@@ -136,8 +151,22 @@ async function fetchSystemMapData() {
     }
 }
 
+async function onPageChange(event: {
+    first: number;
+    rows: number;
+    page: number;
+    pageCount: number;
+}) {
+    console.log("onPageChange");
+    console.log(queryString.value);
+    const componentName = "paging-filter";
+    query[componentName] = event.page + 1;
+    queryString.value = JSON.stringify(query);
+    console.log(queryString.value);
+}
+
 onMounted(async () => {
-    doQuery();
+    performSearch();
     await fetchSystemMapData();
     dataLoaded.value = true;
 });
@@ -148,7 +177,7 @@ onMounted(async () => {
         <!-- Main Content Section -->
         <header>
             <SimpleSearchFilter
-                style="flex-grow: 1; max-width: 800px;"
+                style="flex-grow: 1; max-width: 800px"
                 :update-filter
             />
             <div class="view-buttons">
@@ -178,16 +207,52 @@ onMounted(async () => {
         </header>
 
         <main>
-            <section class="afrc-search-results-panel"
-                :class="{ 'map-sidebar' : showMap}"
+            <section
+                class="afrc-search-results-panel"
+                :class="{ 'map-sidebar': showMap }"
             >
-                <div class="section-header">{{ resultsCount }} Results</div>
+                <div
+                    v-if="loadingSearchResults"
+                    class="section-header"
+                >
+                    {{ $gettext("Loading Results...") }}
+                </div>
+                <div
+                    v-else
+                    class="section-header"
+                >
+                    {{ resultsCount }} Results
+                </div>
                 <div class="search-result-list">
-                    <SearchResultItem
-                        v-for="searchResult in searchResults"
-                        :key="searchResult"
-                        :search-result
-                    />
+                    <DataView
+                        :key="forcePaginatorRepaint"
+                        data-key="id"
+                        lazy
+                        paginator
+                        :rows="5"
+                        :value="searchResults"
+                        :total-records="resultsCount"
+                        @page="onPageChange"
+                    >
+                        <template #list="slotProps">
+                            <div v-if="loadingSearchResults">
+                                <SearchResultItem
+                                    v-for="i in 5"
+                                    :key="i"
+                                    :search-result="{}"
+                                    :loading="true"
+                                />
+                            </div>
+                            <div v-else>
+                                <SearchResultItem
+                                    v-for="item in slotProps.items"
+                                    :key="item"
+                                    :search-result="item"
+                                    :loading="false"
+                                />
+                            </div>
+                        </template>
+                    </DataView>
                 </div>
             </section>
             <section v-if="dataLoaded && resultSelected">
@@ -209,17 +274,24 @@ onMounted(async () => {
             <aside v-if="!showMap">
                 <div>
                     <h1 class="section-header">Search Facets</h1>
-                    <p class="section-tag">Select the Collections that you want to include in your search</p>
+                    <p class="section-tag">
+                        Select the Collections that you want to include in your
+                        search
+                    </p>
                 </div>
                 <section class="facets">
                     <div class="facet-item selected">
                         <div class="facet-item-icon pi pi-address-book"></div>
                         <h2 class="facet-item-title">Reference Objects</h2>
                         <p class="facet-item-tag">
-                            Reference collection items such as papers,
-                            paints, textiles
+                            Reference collection items such as papers, paints,
+                            textiles
                         </p>
-                        <a class="facet-item-toggle" href="#">(click to unselect)</a>
+                        <a
+                            class="facet-item-toggle"
+                            href="#"
+                            >(click to unselect)</a
+                        >
                     </div>
                     <div class="facet-item">
                         <div class="facet-item-icon pi pi-chart-line"></div>
@@ -228,13 +300,23 @@ onMounted(async () => {
                             Materials removed from works of art or other
                             reference objects
                         </p>
-                        <a class="facet-item-toggle" href="#">(click to select)</a>
+                        <a
+                            class="facet-item-toggle"
+                            href="#"
+                            >(click to select)</a
+                        >
                     </div>
                     <div class="facet-item">
                         <div class="facet-item-icon pi pi-building"></div>
                         <h2 class="facet-item-title">Building Materials</h2>
-                        <p class="facet-item-tag">Construction materials and related objects</p>
-                        <a class="facet-item-toggle" href="#">(click to select)</a>
+                        <p class="facet-item-tag">
+                            Construction materials and related objects
+                        </p>
+                        <a
+                            class="facet-item-toggle"
+                            href="#"
+                            >(click to select)</a
+                        >
                     </div>
                 </section>
             </aside>
@@ -248,6 +330,7 @@ onMounted(async () => {
 :root {
     font-size: 16px;
 }
+
 .afrc-container {
     font-family: Arial, sans-serif;
     background-color: #f8f8f8;
@@ -256,11 +339,13 @@ onMounted(async () => {
     flex-direction: column;
     flex-grow: 1;
 }
+
 main {
     display: flex;
     flex-direction: row;
-    height: 100vh;
+    flex-grow: 1;
 }
+
 header {
     font-size: 2rem;
     display: flex;
@@ -301,6 +386,7 @@ header {
 .p-autocomplete-input-multiple {
     border-radius: 3px;
 }
+
 .view-buttons {
     display: flex;
     gap: 5px;
@@ -314,7 +400,7 @@ header {
     background: #fff;
 }
 .p-button-label {
-    font-size: .5em;
+    font-size: 0.5em;
 }
 section.afrc-search-results-panel {
     display: flex;
@@ -322,10 +408,11 @@ section.afrc-search-results-panel {
     flex-grow: 1;
     padding: 15px;
     overflow-y: auto;
-    width: 400px;
+    height: calc(100vh - 150px);
     min-width: 400px;
     background: #fff;
 }
+
 .search-result-list {
     margin-top: 10px;
     margin-left: -15px;
@@ -346,12 +433,14 @@ aside {
     border-left: 1px #ccc solid;
     padding: 15px;
 }
+
 .facets {
     padding: 16px;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
 }
+
 .facet-item {
     padding: 15px;
     border: 1px solid #ddd;
@@ -366,6 +455,7 @@ aside {
     background-color: #f0f8ff;
     border-color: #007bff;
 }
+
 .facet-item.selected {
     background-color: #f0f8ff;
     border-color: #007bff;
@@ -392,7 +482,7 @@ aside {
     border: 1px solid #244768;
     border-radius: 50%;
     color: #244768;
-    background: #98ADC2;
+    background: #98adc2;
 }
 .facet-item-tag {
     font-size: 0.85em;
@@ -401,7 +491,7 @@ aside {
     margin: 0px;
 }
 .facet-item-toggle {
-    color:#007bff;
+    color: #007bff;
     font-size: 0.75em;
 }
 </style>

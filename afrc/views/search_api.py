@@ -24,18 +24,23 @@ from django.db import connection
 from django.utils.translation import get_language, gettext as _
 from django.db.models import Q
 
-from arches.app.models.models import ResourceXResource
+from arches.app.models.models import ResourceXResource, ResourceInstance
 from arches.app.models.system_settings import settings
 from arches.app.search.components.base import SearchFilterFactory
 from arches.app.search.components.search_results import get_localized_descriptor
-from arches.app.search.elasticsearch_dsl_builder import Query, Ids
+from arches.app.search.elasticsearch_dsl_builder import Query, Ids, Bool, Match, Nested
 from arches.app.search.mappings import RESOURCES_INDEX
 from arches.app.search.search_engine_factory import SearchEngineFactory
 from arches.app.utils.response import JSONResponse, JSONErrorResponse
 
+from arches.app.search.es_mapping_modifier import EsMappingModifier
+
+
 logger = logging.getLogger(__name__)
 
 
+# Need to use this rather then the search_results function in arches.app.vies.search
+# because we need to return the results rather than the response object
 def search_results(request, returnDsl=False):
     search_filter_factory = SearchFilterFactory(request)
     searchview_component_instance = search_filter_factory.get_searchview_instance()
@@ -76,7 +81,6 @@ def search_results(request, returnDsl=False):
 
 class SearchAPI(View):
     def get(self, request):
-
         base_resource_type_filter = [
             {
                 "graphid": settings.COLLECTIONS_GRAPHID,
@@ -84,212 +88,63 @@ class SearchAPI(View):
             }
         ]
 
-        current_page = request.GET.get("paging-filter", 1)
+        current_page = int(request.GET.get("paging-filter", 1))
         page_size = int(settings.SEARCH_ITEMS_PER_PAGE)
         print(page_size)
 
-        request_copy = request.GET.copy()
-        request_copy["resource-type-filter"] = json.dumps(base_resource_type_filter)
-        request.GET = request_copy
-        direct_results = search_results(request)
-        print(current_page * page_size)
-        print(direct_results["total_results"])
-
-        if direct_results["total_results"] >= current_page * page_size:
-            print("we have direct hits on collections")
-            return JSONResponse(content=search_results(request))
+        if "term-filter" in request.GET:
+            terms = json.loads(request.GET.get("term-filter", None))
+            if terms:
+                terms = [term["value"] for term in terms]
+            results = get_related_resources_by_text(terms, settings.COLLECTIONS_GRAPHID)
+            print(f"len of results: {len(results)}")
+            ret = get_search_results_by_resourceids(
+                [str(row[0]) for row in results],
+                start=(current_page - 1) * page_size,
+                limit=page_size,
+            )
+            return JSONResponse({"results": ret, "total_results": len(results)})
         else:
-            # we have no more direct hits on reference collections and we need to
-            # backfill with results of hits based on potential resources related to reference collections
-            # So first we need to search for resources that aren't reference collections and that match our search criteria
-            # then we take those resource instance ids and do a recursive search for any of those
-            # resources that might be related to reference collections
-            # and return a list of those reference collections
-            base_resource_type_filter[0]["inverted"] = True
-
             request_copy = request.GET.copy()
             request_copy["resource-type-filter"] = json.dumps(base_resource_type_filter)
-            request_copy["paging-filter"] = 1
             request.GET = request_copy
-            backfill_results = search_results(request)
+            direct_results = search_results(request)
+            print(current_page * page_size)
+            # print(direct_results)
+            print(direct_results["total_results"])
 
-            # first page of hits of potentially related resources
-            resourceinstanceids = [
-                hit["_source"]["resourceinstanceid"]
-                for hit in backfill_results["results"]["hits"]["hits"]
-            ]
-
-            related_resource_ids = list(
-                search_relationships_via_ORM(
-                    resourceinstanceids,
-                    target_graphid=settings.COLLECTIONS_GRAPHID,
-                    depth=3,
-                )
-            )
-
-            se = SearchEngineFactory().create()
-            query = Query(se, start=0, limit=30)
-            query.add_query(Ids(ids=related_resource_ids))
-            results = query.search(index=RESOURCES_INDEX)
-
-            descriptor_types = ("displaydescription", "displayname")
-            active_and_default_language_codes = (get_language(), settings.LANGUAGE_CODE)
-            for result in results["hits"]["hits"]:
-                for descriptor_type in descriptor_types:
-                    descriptor = get_localized_descriptor(
-                        result, descriptor_type, active_and_default_language_codes
-                    )
-                    if descriptor:
-                        print(descriptor)
-                        result["_source"][descriptor_type] = descriptor["value"]
-                        if descriptor_type == "displayname":
-                            result["_source"]["displayname_language"] = descriptor[
-                                "language"
-                            ]
-                    else:
-                        result["_source"][descriptor_type] = _("Undefined")
-            direct_results["results"]["hits"]["hits"] += results["hits"]["hits"]
-            direct_results["total_results"] += int(len(results["hits"]["hits"]))
-            return JSONResponse(direct_results)
+            return JSONResponse(content=search_results(request))
 
 
-def search_relationships_via_ORM(
-    resourceinstanceids=None,
-    target_graphid=None,
-    depth=1,
-):
-    hits = set()
-
-    # This is a placeholder for the ORM version of the search_relationships function
-    # This function should return a list of resourceinstanceids of reference collections
-    # that are related to the given list of resourceinstanceids
-    def get_related_resourceinstanceids(resourceinstanceids, depth=1):
-        depth -= 1
-        to_crawl = set()
-
-        # This is a placeholder for the ORM version of the get_related_resourceinstanceids function
-        # This function should return a list of resourceinstanceids of resources that are related to
-        # the given list of resourceinstanceids
-        instances_query = Q(resourceinstanceidfrom__in=resourceinstanceids) | Q(
-            resourceinstanceidto__in=resourceinstanceids
-        )
-
-        for res in ResourceXResource.objects.filter(instances_query).values_list(
-            "resourceinstanceidfrom",
-            "resourceinstancefrom_graphid",
-            "resourceinstanceidto",
-            "resourceinstanceto_graphid",
-        ):
-            if str(res[1]) != target_graphid:
-                to_crawl.add(res[0])
-            else:
-                hits.add(res[0])
-
-            if str(res[3]) != target_graphid:
-                to_crawl.add(res[2])
-            else:
-                hits.add(res[2])
-
-        if depth > 0:
-            get_related_resourceinstanceids(list(to_crawl), depth=depth)
-
-        return hits
-
-    return get_related_resourceinstanceids(resourceinstanceids, depth=depth)
-
-
-def search_relationships(resourceinstanceids=None, target_graphid=None):
+def get_related_resources_by_text(search_query, graphid):
     with connection.cursor() as cursor:
-        sql = """
-            WITH RECURSIVE resource_traversal_from(resourcexid, resourceid, graphid, depth) AS (
-                -- Anchor member: start with the given list of starting resource IDs
-                SELECT 
-                    resource_x_resource.resourcexid, resourceinstanceidto AS resourceid, resourceinstanceto_graphid AS graphid, 0 AS depth
-                FROM 
-                    resource_x_resource
-                WHERE 
-                    resourceinstanceidfrom = ANY(%s::uuid[])
-
-                UNION ALL
-
-                -- Recursive member: traverse the table bidirectionally
-                SELECT 
-                    resource_x_resource.resourcexid, resource_x_resource.resourceinstanceidto AS resourceid, resourceinstanceto_graphid AS graphid, rt.depth + 1
-                FROM 
-                    resource_x_resource
-                INNER JOIN 
-                    resource_traversal_from rt
-                ON 
-                    resource_x_resource.resourceinstanceidfrom = rt.resourceid
-                WHERE 
-                    rt.graphid != %s::uuid
-                
-            ) CYCLE resourcexid SET is_cycle USING path
-
-            SELECT DISTINCT resourceid
-            FROM resource_traversal_from
-            WHERE graphid = %s::uuid
-            AND DEPTH < 3
-
-            UNION (
-                WITH RECURSIVE resource_traversal_to(resourcexid, resourceid, graphid, depth) AS (
-                    -- Anchor member: start with the given list of starting resource IDs
-                    SELECT 
-                        resource_x_resource.resourcexid, resourceinstanceidfrom AS resourceid, resourceinstancefrom_graphid AS graphid, 0 AS depth
-                    FROM 
-                        resource_x_resource
-                    WHERE 
-                        resourceinstanceidto = ANY(%s::uuid[])
-                    
-                    UNION ALL
-                
-                    SELECT 
-                        resource_x_resource.resourcexid, resource_x_resource.resourceinstanceidfrom AS resourceid, resourceinstancefrom_graphid AS graphid, rt.depth + 1
-                    FROM 
-                        resource_x_resource
-                    INNER JOIN 
-                        resource_traversal_to rt
-                    ON 
-                        resource_x_resource.resourceinstanceidto = rt.resourceid
-                    WHERE 
-                        rt.graphid != %s::uuid
-                
-                ) CYCLE resourcexid SET is_cycle USING path
-
-                SELECT DISTINCT resourceid
-                FROM resource_traversal_to
-                WHERE graphid = %s::uuid
-                AND DEPTH < 3
-            )
-        """
-        print(
-            sql
-            % (
-                resourceinstanceids,
-                target_graphid,
-                target_graphid,
-                resourceinstanceids,
-                target_graphid,
-                target_graphid,
-            )
-        )
         cursor.execute(
-            sql,
-            [
-                resourceinstanceids,
-                target_graphid,
-                target_graphid,
-                resourceinstanceids,
-                target_graphid,
-                target_graphid,
-            ],
+            "SELECT DISTINCT * FROM __afrc_get_related_resources_by_searchable_values(%s, %s)",
+            [search_query, graphid],
         )
-        hits = []
-        # hits = [str(row[0]) for row in cursor.fetchall()]
-        for row in cursor.fetchall():
-            hits.append(str(row[0]))
-        print(len(hits))
-        return hits
+        rows = cursor.fetchall()
+    return rows
 
 
-# {"query": {"ids": {"values": ["fba9bdb3-29a6-3cc2-bd7e-2d3fa7a08c78"]}}, "start": 0, "limit": 0}
+def get_search_results_by_resourceids(
+    resourceids, start=0, limit=settings.SEARCH_ITEMS_PER_PAGE
+):
+    se = SearchEngineFactory().create()
+    query = Query(se, start=start, limit=limit)
+    query.add_query(Ids(ids=resourceids))
+    results = query.search(index=RESOURCES_INDEX)
+
+    descriptor_types = ("displaydescription", "displayname")
+    active_and_default_language_codes = (get_language(), settings.LANGUAGE_CODE)
+    for result in results["hits"]["hits"]:
+        for descriptor_type in descriptor_types:
+            descriptor = get_localized_descriptor(
+                result, descriptor_type, active_and_default_language_codes
+            )
+            if descriptor:
+                result["_source"][descriptor_type] = descriptor["value"]
+                if descriptor_type == "displayname":
+                    result["_source"]["displayname_language"] = descriptor["language"]
+            else:
+                result["_source"][descriptor_type] = _("Undefined")
+    return results

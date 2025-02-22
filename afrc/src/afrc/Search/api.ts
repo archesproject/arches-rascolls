@@ -65,7 +65,10 @@ export const fetchResourceData = (resourceId: string) => {
     return createRequest(url)();
 };
 
-export const fetchImageData = (imageResourceIds: string[], isItem?: boolean) => { 
+export const fetchImageData = (
+    imageResourceIds: string[],
+    isItem?: boolean,
+) => {
     let url = `${arches.urls["api-file-data"]}?resourceids=${imageResourceIds.join(",")}`;
     if (isItem) {
         url += `&item=${isItem}`;

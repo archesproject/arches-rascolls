@@ -107,4 +107,4 @@ export interface Acquisition {
     person: string;
     date: number;
     details: string;
-  }
+}

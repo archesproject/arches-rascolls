@@ -168,8 +168,8 @@ onMounted(() => {
     addMapControls();
 
     if (settings) {
-            map.value!.fitBounds(geojsonExtent(settings.DEFAULT_BOUNDS));
-        }
+        map.value!.fitBounds(geojsonExtent(settings.DEFAULT_BOUNDS));
+    }
 
     map.value!.once(STYLE_LOAD_EVENT, () => {
         if (isDrawingEnabled || drawnFeatures) {
