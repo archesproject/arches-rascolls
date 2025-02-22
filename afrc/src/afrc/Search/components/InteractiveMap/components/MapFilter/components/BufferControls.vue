@@ -8,7 +8,14 @@ import type { Feature, Map } from "maplibre-gl";
 import type { PropType, Ref } from "vue";
 import Select from 'primevue/select';
 import InputNumber from 'primevue/inputnumber';
-import { DRAW_UPDATE_EVENT, METERS } from "@/afrc/Search/constants.ts";
+import { 
+    DRAW_UPDATE_EVENT, 
+    METERS, 
+    FEET, 
+    MILES, 
+    KILOMETERS,
+    YARDS
+} from "@/afrc/Search/components/InteractiveMap/constants.ts";
 import Panel from 'primevue/panel';
 import type { GenericObject } from "@/afrc/Search/types.ts";
 
@@ -26,10 +33,11 @@ const selectedDrawnFeature = inject("selectedDrawnFeature", ref(null));
 const bufferDistance: Ref<number | 0> = ref(0);
     
 const options = ref([
-    { label: $gettext("meters"), code: "meters" },
-    { label: $gettext("feet"), code: "feet" },
-    { label: $gettext("miles"), code: "miles" },
-    { label: $gettext("kilometers"), code: "kilometers" },
+    { label: $gettext("meters"), code: METERS },
+    { label: $gettext("feet"), code: FEET },
+    { label: $gettext("miles"), code: MILES },
+    { label: $gettext("kilometers"), code: KILOMETERS },
+    { label: $gettext("yards"), code: YARDS },
 ]);
 
 const selectedUnits: Ref<string> = ref(options.value[0].code);
@@ -96,8 +104,6 @@ watch(
                 optionValue="code" 
                 placeholder="Units" 
                 optionLabel="label" 
-                class="w-full md:w-56"
-                size="small"
                 fluid 
             />
         </div>

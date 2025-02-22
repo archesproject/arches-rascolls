@@ -9,9 +9,12 @@ import { useToast } from "primevue/usetoast";
 
 import {
     DEFAULT_ERROR_TOAST_LIFE,
-    DRAW_CREATE_EVENT,
     ERROR,
 } from "@/afrc/Search/constants.ts";
+
+import {
+    DRAW_CREATE_EVENT,
+} from "@/afrc/Search/components/InteractiveMap/constants.ts";
 
 import type { Feature } from "geojson";
 import type { Map } from "maplibre-gl";

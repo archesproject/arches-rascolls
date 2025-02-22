@@ -24,6 +24,7 @@ defineProps({
     },
 });
 
+
 const drawControlsRef = ref<InstanceType<typeof DrawControls> | null>(null);
 const bufferControlsRef = ref<InstanceType<typeof BufferControls> | null>(null);
 

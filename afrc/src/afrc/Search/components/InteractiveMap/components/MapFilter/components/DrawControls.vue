@@ -19,7 +19,7 @@ import {
     DRAW_LINE_STRING,
     DRAW_POLYGON,
     DRAW_CREATE_EVENT,
-} from "@/afrc/Search/constants.ts";
+} from "@/afrc/Search/components/InteractiveMap/constants.ts";
 
 const { $gettext } = useGettext();
 

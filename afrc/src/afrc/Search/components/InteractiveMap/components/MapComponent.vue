@@ -15,26 +15,28 @@ import {
     fetchGeoJSONBounds,
 } from "@/afrc/Search/api.ts";
 
-import {
+import { 
     ACTIVE_LANGUAGE_DIRECTION,
-    BUFFER_LAYER_ID,
     CLICK_EVENT,
+    BUFFER_LAYER_ID,
+    BUFFER_FILL_COLOR,
+    BUFFER_FILL_OPACITY,
     DIRECT_SELECT,
     DRAW_CREATE_EVENT,
     DRAW_DELETE_EVENT,
     DRAW_SELECTION_CHANGE_EVENT,
-    DRAW_UPDATE_EVENT,
+    DRAW_UPDATE_EVENT, 
     GEOMETRY_TYPE_LINESTRING,
     GEOMETRY_TYPE_POINT,
     GEOMETRY_TYPE_POLYGON,
     IDLE,
     LTR,
-    METERS,
+    METERS, 
     SIMPLE_SELECT,
     STYLE_LOAD_EVENT,
     TOP_LEFT,
     TOP_RIGHT,
-} from "@/afrc/Search/constants.ts";
+} from "@/afrc/Search/components/InteractiveMap/constants.ts";
 
 import type { Ref } from "vue";
 
@@ -247,8 +249,8 @@ function addBufferLayer() {
         source: BUFFER_LAYER_ID,
         layout: {},
         paint: {
-            "fill-color": "#ea7f08",
-            "fill-opacity": 0.3,
+            "fill-color": BUFFER_FILL_COLOR,
+            "fill-opacity": BUFFER_FILL_OPACITY,
         },
     });
 }

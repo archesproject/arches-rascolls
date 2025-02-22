@@ -7,7 +7,7 @@ import {
     LTR,
     LEFT,
     RIGHT,
-} from "@/afrc/Search/constants.ts";
+} from "@/afrc/Search/components/InteractiveMap/constants.ts";
 
 import type { Component, Ref } from "vue";
 import type { Map } from "maplibre-gl";
