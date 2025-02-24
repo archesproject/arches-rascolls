@@ -7,14 +7,9 @@ import MapboxDraw from "@mapbox/mapbox-gl-draw";
 import FileUpload from "primevue/fileupload";
 import { useToast } from "primevue/usetoast";
 
-import {
-    DEFAULT_ERROR_TOAST_LIFE,
-    ERROR,
-} from "@/afrc/Search/constants.ts";
+import { DEFAULT_ERROR_TOAST_LIFE, ERROR } from "@/afrc/Search/constants.ts";
 
-import {
-    DRAW_CREATE_EVENT,
-} from "@/afrc/Search/components/InteractiveMap/constants.ts";
+import { DRAW_CREATE_EVENT } from "@/afrc/Search/components/InteractiveMap/constants.ts";
 
 import type { Feature } from "geojson";
 import type { Map } from "maplibre-gl";
