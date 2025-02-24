@@ -35,6 +35,7 @@ const sources: Ref<MapSource[]> = ref([]);
 const resultsSelected: Ref<string[]> = ref([]);
 const dataLoaded = ref(false);
 const loadingSearchResults = ref(true);
+const pageSize = ref();
 const newQuery = ref(false);
 const toast = useToast();
 const { $gettext } = useGettext();
@@ -113,6 +114,7 @@ async function performSearch() {
             const hits: never[] = data.results.hits.hits;
             searchResults.value = hits;
             resultsCount.value = data.total_results;
+            pageSize.value = data.page_size;
             resultsSelected.value = [];
             loadingSearchResults.value = false;
         });
@@ -121,6 +123,16 @@ async function performSearch() {
 const updateDrawnFeaturesGeometry = function (features: Feature[]) {
     spatialFilter.value = features;
     console.log("update the query with these feature(s): ", features);
+
+    newQuery.value = true;
+    const componentName = "map-filter";
+
+    if (features.length === 0) {
+        delete query[componentName];
+    } else {
+        query[componentName] = features;
+    }
+    queryString.value = JSON.stringify(query);
 };
 
 async function fetchSystemMapData() {
@@ -236,7 +248,7 @@ onMounted(async () => {
                         data-key="id"
                         lazy
                         paginator
-                        :rows="5"
+                        :rows="pageSize"
                         :value="searchResults"
                         :total-records="resultsCount"
                         @page="onPageChange"
