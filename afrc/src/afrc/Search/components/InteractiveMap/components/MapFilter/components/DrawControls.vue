@@ -8,6 +8,8 @@ import "@mapbox/mapbox-gl-draw/dist/mapbox-gl-draw.css";
 
 import type { Map } from "maplibre-gl";
 import type { PropType } from "vue";
+import Select from 'primevue/select';
+
 
 import {
     POINT,
@@ -17,7 +19,7 @@ import {
     DRAW_LINE_STRING,
     DRAW_POLYGON,
     DRAW_CREATE_EVENT,
-} from "@/afrc/Search/constants.ts";
+} from "@/afrc/Search/components/InteractiveMap/constants.ts";
 
 const { $gettext } = useGettext();
 
@@ -34,20 +36,19 @@ defineExpose({
 });
 
 let draw: typeof MapboxDraw;
-const selectedDrawType = ref("");
+const selectedDrawType = ref();
 
-const options = [
-    { label: $gettext("Draw a Marker"), value: POINT },
-    { label: $gettext("Draw a Polyline"), value: LINE },
-    { label: $gettext("Draw a Polygon"), value: POLYGON },
-];
+const options = ref([
+    { label: $gettext("Draw a Marker"), code: POINT },
+    { label: $gettext("Draw a Polyline"), code: LINE },
+    { label: $gettext("Draw a Polygon"), code: POLYGON },
+]);
 
 watch(
     () => selectedDrawType.value,
     (newDrawType) => {
         if (newDrawType) {
             props.map.getCanvas().style.cursor = "crosshair";
-
             if (newDrawType === POINT) {
                 draw.changeMode(DRAW_POINT);
             } else if (newDrawType === LINE) {
@@ -94,28 +95,17 @@ function deleteSelectedDrawnFeature() {
 </script>
 
 <template>
-    <div>
-        <select v-model="selectedDrawType">
-            <option
-                disabled
-                value=""
-            >
-                {{ $gettext("Draw a") }}
-            </option>
-            <option
-                v-for="option in options"
-                :key="option.value"
-                :value="option.value"
-            >
-                {{ option.label }}
-            </option>
-        </select>
+    <div class="draw-controls">
+        <label for="draw-type">Filter type</label>
+        <Select v-model="selectedDrawType" :options="options" id="draw-type" optionLabel="label" optionValue="code" placeholder="Draw a" class="w-full md:w-56" fluid />
     </div>
 </template>
-
 <style scoped>
-select {
-    margin: 10px;
-    padding: 5px;
+.draw-controls {
+    align-items: baseline;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-top: 15px;
 }
 </style>

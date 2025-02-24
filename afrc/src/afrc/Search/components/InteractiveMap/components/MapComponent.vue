@@ -15,26 +15,28 @@ import {
     fetchGeoJSONBounds,
 } from "@/afrc/Search/api.ts";
 
-import {
+import { 
     ACTIVE_LANGUAGE_DIRECTION,
-    BUFFER_LAYER_ID,
     CLICK_EVENT,
+    BUFFER_LAYER_ID,
+    BUFFER_FILL_COLOR,
+    BUFFER_FILL_OPACITY,
     DIRECT_SELECT,
     DRAW_CREATE_EVENT,
     DRAW_DELETE_EVENT,
     DRAW_SELECTION_CHANGE_EVENT,
-    DRAW_UPDATE_EVENT,
+    DRAW_UPDATE_EVENT, 
     GEOMETRY_TYPE_LINESTRING,
     GEOMETRY_TYPE_POINT,
     GEOMETRY_TYPE_POLYGON,
     IDLE,
     LTR,
-    METERS,
+    METERS, 
     SIMPLE_SELECT,
     STYLE_LOAD_EVENT,
     TOP_LEFT,
     TOP_RIGHT,
-} from "@/afrc/Search/constants.ts";
+} from "@/afrc/Search/components/InteractiveMap/constants.ts";
 
 import type { Ref } from "vue";
 
@@ -75,7 +77,7 @@ const props = withDefaults(defineProps<Props>(), {
     basemap: null,
     overlays: () => [],
     sources: () => [],
-    isDrawingEnabled: false,
+    isDrawingEnabled: true,
     drawnFeatures: () => [],
     drawnFeaturesBuffer: undefined,
     isPopupEnabled: false,
@@ -193,7 +195,6 @@ async function bufferFeatures(features: FeatureCollection) {
     };
 
     const bufferedFeatures = await fetchDrawnFeaturesBuffer(featuresToBuffer);
-
     const source = map.value!.getSource(BUFFER_LAYER_ID) as GeoJSONSource;
     source.setData(bufferedFeatures);
 
@@ -248,8 +249,8 @@ function addBufferLayer() {
         source: BUFFER_LAYER_ID,
         layout: {},
         paint: {
-            "fill-color": "#888888",
-            "fill-opacity": 0.5,
+            "fill-color": BUFFER_FILL_COLOR,
+            "fill-opacity": BUFFER_FILL_OPACITY,
         },
     });
 }
@@ -284,7 +285,7 @@ async function updateDrawnFeatures() {
 
     const bufferedFeatures = await bufferFeatures(drawnFeatures);
 
-    emits("drawnFeaturesUpdated", drawnFeatures);
+    emits("drawnFeaturesUpdated", [...drawnFeatures.features, ...bufferedFeatures.features]);
 
     if (drawnFeatures.features.length) {
         fitBoundsOfFeatures({
@@ -342,6 +343,7 @@ function addDrawControls() {
             point: false,
             line_string: false,
             polygon: false,
+            trash: false
         },
     });
 
@@ -497,5 +499,9 @@ function updateMapOverlays(overlays: Array<MapLayer>) {
     padding-top: 2rem;
     width: 20rem;
     height: 20rem;
+}
+
+.map .mapboxgl-ctrl {
+    margin: 10px;
 }
 </style>
