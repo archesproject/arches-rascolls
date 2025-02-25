@@ -23,17 +23,16 @@ from django.views.generic import View
 from django.db import connection
 from django.utils.translation import get_language, gettext as _
 from django.db.models import Q
+from django.contrib.gis.geos import GEOSGeometry
 
-from arches.app.models.models import ResourceXResource, ResourceInstance
+from arches.app.models.models import GeoJSONGeometry
 from arches.app.models.system_settings import settings
 from arches.app.search.components.base import SearchFilterFactory
 from arches.app.search.components.search_results import get_localized_descriptor
-from arches.app.search.elasticsearch_dsl_builder import Query, Ids, Bool, Match, Nested
+from arches.app.search.elasticsearch_dsl_builder import Query, Ids
 from arches.app.search.mappings import RESOURCES_INDEX
 from arches.app.search.search_engine_factory import SearchEngineFactory
 from arches.app.utils.response import JSONResponse, JSONErrorResponse
-
-from arches.app.search.es_mapping_modifier import EsMappingModifier
 
 
 logger = logging.getLogger(__name__)
@@ -97,23 +96,40 @@ class SearchAPI(View):
             if terms:
                 terms = [term["value"] for term in terms]
             results = get_related_resources_by_text(terms, settings.COLLECTIONS_GRAPHID)
+
+            if map_filter := json.loads(request.GET.get("map-filter", "[]")):
+
+                spatial_filters = Q()
+                for feature in map_filter:
+                    geom = GEOSGeometry(json.dumps(feature["geometry"]), srid=4326)
+                    spatial_filters |= Q(geom__intersects=geom)
+
+                resourceids_in_buffer = GeoJSONGeometry.objects.filter(
+                    spatial_filters
+                ).values_list("resourceinstance_id")
+
+                results = set(resourceids_in_buffer).intersection(set(results))
+
             print(f"len of results: {len(results)}")
             ret = get_search_results_by_resourceids(
                 [str(row[0]) for row in results],
                 start=(current_page - 1) * page_size,
                 limit=page_size,
             )
-            return JSONResponse({"results": ret, "total_results": len(results)})
+            return JSONResponse(
+                {"results": ret, "total_results": len(results), "page_size": page_size}
+            )
         else:
             request_copy = request.GET.copy()
+            if map_filter := request.GET.get("map-filter", None):
+                request_copy["map-filter"] = json.dumps(
+                    {"features": json.loads(map_filter)}
+                )
             request_copy["resource-type-filter"] = json.dumps(base_resource_type_filter)
             request.GET = request_copy
-            direct_results = search_results(request)
-            print(current_page * page_size)
-            # print(direct_results)
-            print(direct_results["total_results"])
-
-            return JSONResponse(content=search_results(request))
+            results = search_results(request)
+            results["page_size"] = page_size
+            return JSONResponse(content=results)
 
 
 def get_related_resources_by_text(search_query, graphid):
