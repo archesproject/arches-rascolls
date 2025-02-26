@@ -94,28 +94,16 @@ const updateQuery = function () {
             option-group-children="items"
             placeholder="find ..."
             input-class="autocomplete-input"
+            :auto-option-focus="true"
             @complete="search"
         >
             <template #optiongroup="slotProps">
                 <div class="option-group">
-                    <div
-                        style="
-                            font-size: 14px;
-                            font-family: &quot;Lucida Sans&quot;,
-                                &quot;Lucida Sans Regular&quot;,
-                                &quot;Lucida Grande&quot;,
-                                &quot;Lucida Sans Unicode&quot;, Geneva, Verdana,
-                                sans-serif;
-                        "
-                    >
-                        {{ slotProps.option.label }}
-                    </div>
+                    {{ slotProps.option.label }}
                 </div>
             </template>
             <template #option="slotProps">
-                <div class="">
-                    <div>{{ slotProps.option.text }}</div>
-                </div>
+                <div>{{ slotProps.option.text }}</div>
             </template>
         </AutoComplete>
     </div>
@@ -126,15 +114,20 @@ const updateQuery = function () {
     width: 100%;
     font-size: 1rem;
 }
-.--p-autocomplete-option-group-background {
-    background-color: lightgray;
-    font-family: Arial, Helvetica, sans-serif;
+.option-group {
+    font-size: 1.4rem;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
-.p-autocomplete-token-label {
-    font-size: 1.3rem;
+:deep(.p-autocomplete-input-multiple) {
+    border-radius: 3px;
 }
 :deep(.autocomplete-input) {
     height: 3rem;
+    font-size: 1.5rem;
+    padding: 10px;
+}
+:deep(.p-autocomplete-chip) {
     font-size: 1.5rem;
 }
 </style>
