@@ -19,6 +19,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 import logging
 import json
 
+from django.core.cache import caches
 from django.views.generic import View
 from django.db import connection
 from django.utils.translation import get_language, gettext as _
@@ -35,11 +36,14 @@ from arches.app.utils.response import JSONResponse
 
 logger = logging.getLogger(__name__)
 
+searchresults_cache = caches["searchresults"]
+
 
 class SearchAPI(View):
     def get(self, request):
         current_page = int(request.GET.get("paging-filter", 1))
         page_size = int(settings.SEARCH_ITEMS_PER_PAGE)
+        searchid = request.GET.get("searchid", None)
 
         if "term-filter" in request.GET:
             terms = json.loads(request.GET.get("term-filter", None))
@@ -63,7 +67,8 @@ class SearchAPI(View):
 
             results = set(resourceids_in_buffer).intersection(set(results))
 
-        # print(f"len of results: {len(results)}")
+        searchresults_cache.add(searchid, results)
+
         ret = get_search_results_by_resourceids(
             [str(row[0]) for row in results],
             start=(current_page - 1) * page_size,
