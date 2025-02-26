@@ -25,111 +25,53 @@ from django.utils.translation import get_language, gettext as _
 from django.db.models import Q
 from django.contrib.gis.geos import GEOSGeometry
 
-from arches.app.models.models import GeoJSONGeometry
+from arches.app.models.models import GeoJSONGeometry, ResourceInstance
 from arches.app.models.system_settings import settings
-from arches.app.search.components.base import SearchFilterFactory
 from arches.app.search.components.search_results import get_localized_descriptor
 from arches.app.search.elasticsearch_dsl_builder import Query, Ids
 from arches.app.search.mappings import RESOURCES_INDEX
 from arches.app.search.search_engine_factory import SearchEngineFactory
-from arches.app.utils.response import JSONResponse, JSONErrorResponse
-
+from arches.app.utils.response import JSONResponse
 
 logger = logging.getLogger(__name__)
 
 
-# Need to use this rather then the search_results function in arches.app.vies.search
-# because we need to return the results rather than the response object
-def search_results(request, returnDsl=False):
-    search_filter_factory = SearchFilterFactory(request)
-    searchview_component_instance = search_filter_factory.get_searchview_instance()
-
-    if not searchview_component_instance:
-        unavailable_searchview_name = search_filter_factory.get_searchview_name()
-        message = _("No search-view named {0}").format(unavailable_searchview_name)
-        return JSONErrorResponse(
-            _("Search Failed"),
-            message,
-            status=400,
-        )
-
-    try:
-        response_object, search_query_object = (
-            searchview_component_instance.handle_search_results_query(
-                search_filter_factory, returnDsl
-            )
-        )
-        if returnDsl:
-            return search_query_object.pop("query")
-        else:
-            return response_object
-    except Exception as e:
-        message = _("There was an error retrieving the search results")
-        try:
-            message = e.args[0].get("message", message)
-        except:
-            logger.exception("Error retrieving search results:")
-            logger.exception(e)
-
-        return JSONErrorResponse(
-            _("Search Failed"),
-            message,
-            status=500,
-        )
-
-
 class SearchAPI(View):
     def get(self, request):
-        base_resource_type_filter = [
-            {
-                "graphid": settings.COLLECTIONS_GRAPHID,
-                "inverted": False,
-            }
-        ]
-
         current_page = int(request.GET.get("paging-filter", 1))
         page_size = int(settings.SEARCH_ITEMS_PER_PAGE)
-        print(page_size)
 
         if "term-filter" in request.GET:
             terms = json.loads(request.GET.get("term-filter", None))
             if terms:
                 terms = [term["value"] for term in terms]
             results = get_related_resources_by_text(terms, settings.COLLECTIONS_GRAPHID)
-
-            if map_filter := json.loads(request.GET.get("map-filter", "[]")):
-
-                spatial_filters = Q()
-                for feature in map_filter:
-                    geom = GEOSGeometry(json.dumps(feature["geometry"]), srid=4326)
-                    spatial_filters |= Q(geom__intersects=geom)
-
-                resourceids_in_buffer = GeoJSONGeometry.objects.filter(
-                    spatial_filters
-                ).values_list("resourceinstance_id")
-
-                results = set(resourceids_in_buffer).intersection(set(results))
-
-            print(f"len of results: {len(results)}")
-            ret = get_search_results_by_resourceids(
-                [str(row[0]) for row in results],
-                start=(current_page - 1) * page_size,
-                limit=page_size,
-            )
-            return JSONResponse(
-                {"results": ret, "total_results": len(results), "page_size": page_size}
-            )
         else:
-            request_copy = request.GET.copy()
-            if map_filter := request.GET.get("map-filter", None):
-                request_copy["map-filter"] = json.dumps(
-                    {"features": json.loads(map_filter)}
-                )
-            request_copy["resource-type-filter"] = json.dumps(base_resource_type_filter)
-            request.GET = request_copy
-            results = search_results(request)
-            results["page_size"] = page_size
-            return JSONResponse(content=results)
+            results = ResourceInstance.objects.filter(
+                graph_id=settings.COLLECTIONS_GRAPHID
+            ).values_list("resourceinstanceid")
+
+        if map_filter := json.loads(request.GET.get("map-filter", "[]")):
+            spatial_filters = Q()
+            for feature in map_filter:
+                geom = GEOSGeometry(json.dumps(feature["geometry"]), srid=4326)
+                spatial_filters |= Q(geom__intersects=geom)
+
+            resourceids_in_buffer = GeoJSONGeometry.objects.filter(
+                spatial_filters
+            ).values_list("resourceinstance_id")
+
+            results = set(resourceids_in_buffer).intersection(set(results))
+
+        # print(f"len of results: {len(results)}")
+        ret = get_search_results_by_resourceids(
+            [str(row[0]) for row in results],
+            start=(current_page - 1) * page_size,
+            limit=page_size,
+        )
+        return JSONResponse(
+            {"results": ret, "total_results": len(results), "page_size": page_size}
+        )
 
 
 def get_related_resources_by_text(search_query, graphid):
