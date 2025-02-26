@@ -6,17 +6,17 @@ import MapboxDraw from "@mapbox/mapbox-gl-draw";
 
 import type { Feature, Map } from "maplibre-gl";
 import type { PropType, Ref } from "vue";
-import Select from 'primevue/select';
-import InputNumber from 'primevue/inputnumber';
-import { 
-    DRAW_UPDATE_EVENT, 
-    METERS, 
-    FEET, 
-    MILES, 
+import Select from "primevue/select";
+import InputNumber from "primevue/inputnumber";
+import {
+    DRAW_UPDATE_EVENT,
+    METERS,
+    FEET,
+    MILES,
     KILOMETERS,
-    YARDS
+    YARDS,
 } from "@/afrc/Search/components/InteractiveMap/constants.ts";
-import Panel from 'primevue/panel';
+import Panel from "primevue/panel";
 import type { GenericObject } from "@/afrc/Search/types.ts";
 
 const { $gettext } = useGettext();
@@ -31,7 +31,7 @@ const props = defineProps({
 const selectedDrawnFeature = inject("selectedDrawnFeature", ref(null));
 
 const bufferDistance: Ref<number | 0> = ref(0);
-    
+
 const options = ref([
     { label: $gettext("meters"), code: METERS },
     { label: $gettext("feet"), code: FEET },
@@ -86,25 +86,30 @@ watch(
 );
 </script>
 
-<template>  
-    <Panel :pt="{title: { style: { 'font-weight': 500 }}}" header="Buffer Selected Feature" style="margin-top: 12px">
+<template>
+    <Panel
+        :pt="{ title: { style: { 'font-weight': 500 } } }"
+        header="Buffer Selected Feature"
+        style="margin-top: 12px"
+    >
         <div class="buffer-controls">
             <label for="buffDistance">Distance</label>
-            <InputNumber 
+            <InputNumber
+                id="buffDistance"
                 v-model="bufferDistance"
                 :min="0"
-                id="buffDistance"
-                :inputStyle="{ fontSize: '1.4rem' }" 
-                fluid @input="(e: GenericObject) => bufferDistance = e.value" 
-                />
-            <Select 
-                v-model="selectedUnits" 
-                :options="options" 
-                id="unit" 
-                optionValue="code" 
-                placeholder="Units" 
-                optionLabel="label" 
-                fluid 
+                :input-style="{ fontSize: '1.4rem' }"
+                fluid
+                @input="(e: GenericObject) => (bufferDistance = e.value)"
+            />
+            <Select
+                id="unit"
+                v-model="selectedUnits"
+                :options="options"
+                option-value="code"
+                placeholder="Units"
+                option-label="label"
+                fluid
             />
         </div>
     </Panel>

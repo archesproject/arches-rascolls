@@ -6,7 +6,7 @@ import { useGettext } from "vue3-gettext";
 import DrawControls from "@/afrc/Search/components/InteractiveMap/components/MapFilter/components/DrawControls.vue";
 // import FeatureUploader from "@/afrc/Search/components/InteractiveMap/components/MapFilter/components/FeatureUploader.vue";
 import BufferControls from "@/afrc/Search/components/InteractiveMap/components/MapFilter/components/BufferControls.vue";
-import Button from 'primevue/button';
+import Button from "primevue/button";
 
 import type { Map } from "maplibre-gl";
 import type { PropType } from "vue";
@@ -23,7 +23,6 @@ defineProps({
         default: null,
     },
 });
-
 
 const drawControlsRef = ref<InstanceType<typeof DrawControls> | null>(null);
 const bufferControlsRef = ref<InstanceType<typeof BufferControls> | null>(null);
@@ -49,21 +48,29 @@ function clearAllDrawnFeatures() {
     <!-- <FeatureUploader :map="map" /> -->
 
     <div class="clear-btns">
-        <Button @click="deleteSelectedFeature" size="large" severity="secondary">
+        <Button
+            size="large"
+            severity="secondary"
+            @click="deleteSelectedFeature"
+        >
             {{ $gettext("Clear Selected") }}
         </Button>
 
-        <Button @click="clearAllDrawnFeatures" size="large" severity="secondary">
+        <Button
+            size="large"
+            severity="secondary"
+            @click="clearAllDrawnFeatures"
+        >
             {{ $gettext("Clear All") }}
         </Button>
     </div>
 </template>
 
 <style scoped>
-    .clear-btns {
-        display: flex;
-        flex-direction: row;
-        gap: 1rem;
-        padding-top: 15px;
-    }
+.clear-btns {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding-top: 15px;
+}
 </style>

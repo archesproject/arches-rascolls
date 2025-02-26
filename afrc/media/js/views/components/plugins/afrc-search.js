@@ -15,7 +15,25 @@ ko.components.register('afrc-search', {
                     summary: { fontSize: '1.5rem' },
                     detail: { fontSize: '1.25rem' },
                 },
-            },
+                autocomplete: {
+                    colorScheme: {  
+                        light: { 
+                            option: {
+                                group: {
+                                    background: "lightgrey"
+                                },
+                            }
+                        },  
+                        dark: {  
+                            option: {
+                                group: {
+                                    background: "lightgrey"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         });
         
         const EditableReportTheme = {

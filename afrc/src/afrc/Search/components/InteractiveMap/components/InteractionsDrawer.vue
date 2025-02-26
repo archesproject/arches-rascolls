@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed, ref, shallowRef } from "vue";
-import Divider from 'primevue/divider';
+import Divider from "primevue/divider";
 
 import {
     ACTIVE_LANGUAGE_DIRECTION,
@@ -45,9 +45,9 @@ const openDrawer = (item: MapInteractionItem) => {
                 v-for="item in items"
                 :key="item.name"
             >
-
-                <div class="sidebar-item"
-                @click="
+                <div
+                    class="sidebar-item"
+                    @click="
                         () => {
                             if (selectedComponent === item.component) {
                                 isOverlayVisible = !isOverlayVisible;
@@ -56,7 +56,8 @@ const openDrawer = (item: MapInteractionItem) => {
                             }
                         }
                     "
-                ><i :class="item.icon"></i>
+                >
+                    <i :class="item.icon"></i>
                     <span style="font-size: 1.2rem">{{ item.name }}</span>
                 </div>
                 <Divider :pt="{ root: 'sidebar-item-divider' }" />
@@ -174,7 +175,6 @@ const openDrawer = (item: MapInteractionItem) => {
 }
 
 .sidebar-item-divider {
-    margin: 0
+    margin: 0;
 }
-
 </style>

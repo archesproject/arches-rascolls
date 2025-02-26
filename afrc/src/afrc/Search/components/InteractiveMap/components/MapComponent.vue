@@ -15,7 +15,7 @@ import {
     fetchGeoJSONBounds,
 } from "@/afrc/Search/api.ts";
 
-import { 
+import {
     ACTIVE_LANGUAGE_DIRECTION,
     CLICK_EVENT,
     BUFFER_LAYER_ID,
@@ -25,13 +25,13 @@ import {
     DRAW_CREATE_EVENT,
     DRAW_DELETE_EVENT,
     DRAW_SELECTION_CHANGE_EVENT,
-    DRAW_UPDATE_EVENT, 
+    DRAW_UPDATE_EVENT,
     GEOMETRY_TYPE_LINESTRING,
     GEOMETRY_TYPE_POINT,
     GEOMETRY_TYPE_POLYGON,
     IDLE,
     LTR,
-    METERS, 
+    METERS,
     SIMPLE_SELECT,
     STYLE_LOAD_EVENT,
     TOP_LEFT,
@@ -285,7 +285,10 @@ async function updateDrawnFeatures() {
 
     const bufferedFeatures = await bufferFeatures(drawnFeatures);
 
-    emits("drawnFeaturesUpdated", [...drawnFeatures.features, ...bufferedFeatures.features]);
+    emits("drawnFeaturesUpdated", [
+        ...drawnFeatures.features,
+        ...bufferedFeatures.features,
+    ]);
 
     if (drawnFeatures.features.length) {
         fitBoundsOfFeatures({
@@ -343,7 +346,7 @@ function addDrawControls() {
             point: false,
             line_string: false,
             polygon: false,
-            trash: false
+            trash: false,
         },
     });
 

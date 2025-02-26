@@ -8,8 +8,7 @@ import "@mapbox/mapbox-gl-draw/dist/mapbox-gl-draw.css";
 
 import type { Map } from "maplibre-gl";
 import type { PropType } from "vue";
-import Select from 'primevue/select';
-
+import Select from "primevue/select";
 
 import {
     POINT,
@@ -97,7 +96,16 @@ function deleteSelectedDrawnFeature() {
 <template>
     <div class="draw-controls">
         <label for="draw-type">Filter type</label>
-        <Select v-model="selectedDrawType" :options="options" id="draw-type" optionLabel="label" optionValue="code" placeholder="Draw a" class="w-full md:w-56" fluid />
+        <Select
+            id="draw-type"
+            v-model="selectedDrawType"
+            :options="options"
+            option-label="label"
+            option-value="code"
+            placeholder="Draw a"
+            class="w-full md:w-56"
+            fluid
+        />
     </div>
 </template>
 <style scoped>
