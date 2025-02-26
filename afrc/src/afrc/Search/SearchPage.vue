@@ -36,7 +36,8 @@ const resultsSelected: Ref<string[]> = ref([]);
 const dataLoaded = ref(false);
 const loadingSearchResults = ref(true);
 const pageSize = ref();
-const newQuery = ref(false);
+const newQuery = ref(true);
+const searchid = ref();
 const toast = useToast();
 const { $gettext } = useGettext();
 
@@ -46,6 +47,11 @@ provide("resultSelected", resultSelected);
 watch(queryString, () => {
     performSearch();
 });
+
+function uniqueId() {
+    /* Not cryptographically secure, but good enough for Vue component keys. */
+    return Math.floor(Math.random() * Date.now());
+}
 
 function updateFilter(componentName: string, value: object) {
     console.log(value);
@@ -102,9 +108,12 @@ async function performSearch() {
     if (newQuery.value) {
         const componentName = "paging-filter";
         delete queryObj[componentName];
+        searchid.value = uniqueId();
         forcePaginatorRepaint.value += 1;
         newQuery.value = false;
     }
+
+    queryObj["searchid"] = searchid.value;
 
     const qs = new URLSearchParams(queryObj);
 
