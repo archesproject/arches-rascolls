@@ -62,7 +62,7 @@ class SearchAPI(View):
                 spatial_filters |= Q(geom__intersects=geom)
 
             resourceids_in_buffer = GeoJSONGeometry.objects.filter(
-                spatial_filters
+                spatial_filters, Q(node_id="bda54e4a-d376-11ef-a239-0275dc2ded29")
             ).values_list("resourceinstance_id")
 
             results = set(resourceids_in_buffer).intersection(set(results))
