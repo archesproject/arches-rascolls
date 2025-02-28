@@ -13,5 +13,7 @@
     api-map-data="{% url 'api-map-data' %}"
     api-feature-buffer="{% url 'api-feature-buffer' %}"
     api-geojson-bounds="{% url 'api-geojson-bounds' %}"
+    api-resource-bounds='(resourceid)=>{ return "{% url "api-resource-bounds" "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa" %}".replace("aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa", resourceid)}'
+    api-resource-geojson='(resourceid)=>{ return "{% url "api-resource-geojson" "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa" %}".replace("aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa", resourceid)}'
 ></div>
 {% endblock arches_urls %}

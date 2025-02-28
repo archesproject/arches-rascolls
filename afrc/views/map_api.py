@@ -1,5 +1,6 @@
-import json
 from http import HTTPStatus
+import json
+import uuid
 
 from django.utils.translation import gettext as _
 from django.views.generic import View
@@ -14,6 +15,8 @@ from arches.app.utils.file_validator import FileValidator
 from arches.app.utils.response import JSONResponse, JSONErrorResponse
 from arches.app.utils.permission_backend import user_can_read_map_layers
 from afrc.utils.geo_utils import GeoUtils
+from django.contrib.gis.db.models import Extent
+from django.contrib.gis.db.models.functions import Transform
 
 
 class MapDataAPI(View):
@@ -38,19 +41,35 @@ class MapDataAPI(View):
         )
 
 
-class FeatureGeometriesAPI(View):
-    def get(self, request):
-        resource_instance_id = request.GET.get("resource_instance_id")
+class ResourceBoundsAPI(View):
+    def get(self, request, resource_id):
+        geoms = models.GeoJSONGeometry.objects.annotate(
+            wgs=Transform("geom", 4326)
+        ).filter(resourceinstance_id=uuid.UUID(resource_id))
+        result = None
+        if geoms:
+            result = geoms.values("wgs").aggregate(Extent("wgs")).get("wgs__extent")
+        return JSONResponse(result)
 
-        se = SearchEngineFactory().create()
-        document = se.search(index=RESOURCES_INDEX, id=resource_instance_id)
 
-        geo_utils = GeoUtils()
+class ResourceGeoJSONAPI(View):
+    def get(self, request, resource_id):
+        geoms = models.GeoJSONGeometry.objects.annotate(
+            wgs=Transform("geom", 4326)
+        ).filter(resourceinstance_id=uuid.UUID(resource_id))
 
-        for geometry in document["_source"]["geometries"]:
-            geometry["centroid"] = geo_utils.get_centroid(geometry["geom"])
-
-        return JSONResponse(document["_source"]["geometries"])
+        geojson = {
+            "type": "FeatureCollection",
+            "features": [
+                {
+                    "type": "Feature",
+                    "geometry": json.loads(geom.wgs.geojson),
+                    "properties": {},
+                }
+                for geom in geoms
+            ],
+        }
+        return JSONResponse(geojson)
 
 
 class ResourceInstancesWithinGeometryAndBufferAPI(View):
@@ -131,7 +150,8 @@ class GeoJSONParseIntoCollectionAPI(View):
         geojson_obj = json.load(feature_file)
 
         return JSONResponse(GeoUtils.shape_geojson_as_feature_collection(geojson_obj))
-    
+
+
 class ReferenceCollectionMVT(View):
     def get(self, request, zoom, x, y):
         system_settings_resourceid = settings.SYSTEM_SETTINGS_RESOURCE_ID
