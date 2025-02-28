@@ -26,6 +26,7 @@ let queryString = ref(JSON.stringify(query));
 let searchResults = ref([]);
 let resultsCount = ref();
 let resultSelected = ref("");
+let zoomToFeature = ref("");
 let spatialFilter: Ref<Feature[]> = ref([]);
 let forcePaginatorRepaint = ref(0);
 const showMap = ref(false);
@@ -43,6 +44,7 @@ const { $gettext } = useGettext();
 
 provide("resultsSelected", resultsSelected);
 provide("resultSelected", resultSelected);
+provide("zoomToFeature", zoomToFeature);
 
 watch(queryString, () => {
     performSearch();

@@ -13,6 +13,8 @@ import PopupContainer from "@/afrc/Search/components/InteractiveMap/components/P
 import {
     fetchDrawnFeaturesBuffer,
     fetchGeoJSONBounds,
+    fetchResourceBounds,
+    fetchResourceGeoJSON,
 } from "@/afrc/Search/api.ts";
 
 import {
@@ -100,6 +102,7 @@ const {
 
 let resultsSelected = inject("resultsSelected") as Ref<string[]>;
 let resultSelected = inject("resultSelected") as Ref<string>;
+let zoomToFeature = inject("zoomToFeature") as Ref<string>;
 
 const emits = defineEmits([
     "mapInitialized",
@@ -163,6 +166,24 @@ watch(
 );
 
 watch(
+    () => zoomToFeature,
+    async (resource) => {
+        const extent = await fetchResourceBounds(resource.value as string);
+        if (extent) {
+            const bounds = [
+                [extent[0], extent[1]],
+                [extent[2], extent[3]],
+            ];
+            map.value!.fitBounds(
+                bounds as [[number, number], [number, number]],
+                { duration: 5000 },
+            );
+        }
+    },
+    { deep: true },
+);
+
+watch(
     () => drawnFeaturesBuffer,
     () => {
         updateDrawnFeatures();
@@ -199,9 +220,23 @@ onMounted(() => {
         if (drawnFeaturesBuffer?.distance && drawnFeaturesBuffer?.units) {
             addBufferLayer();
         }
-        // if (overlays) {
-        //     updateMapOverlays(overlays);
-        // }
+        map.value!.addSource("point", {
+            type: "geojson",
+            data: {
+                type: "FeatureCollection",
+                features: [],
+            },
+        });
+
+        map.value!.addLayer({
+            id: "point",
+            source: "point",
+            type: "circle",
+            paint: {
+                "circle-radius": 6,
+                "circle-color": "#ff2233",
+            },
+        });
     });
 });
 
@@ -228,29 +263,17 @@ async function fitBoundsOfFeatures(features: FeatureCollection) {
     });
 }
 
-function updateFeatureSelection(selected: Ref<string[]>) {
-    const layers: Array<string> = [];
-    overlays.forEach((overlay) => {
-        layers.push(
-            ...overlay.layerdefinitions.map(
-                (layerDefinition) => layerDefinition.id,
-            ),
-        );
-    });
-    const features = map.value!.queryRenderedFeatures({ layers: layers });
-    features.forEach((feature) => {
-        const featureSelected = selected.value.includes(
-            feature.properties?.resourceinstanceid,
-        );
-        map.value!.setFeatureState(
-            {
-                source: "referencecollections",
-                sourceLayer: "referencecollections",
-                id: feature.id,
-            },
-            { selected: featureSelected },
-        );
-    });
+async function updateFeatureSelection(selected: Ref<string[]>) {
+    const source = map.value!.getSource("point") as GeoJSONSource;
+    if (selected.value.length) {
+        const geojson = await fetchResourceGeoJSON(selected.value[0]);
+        source.setData(geojson);
+    } else {
+        source.setData({
+            type: "FeatureCollection",
+            features: [],
+        });
+    }
 }
 
 function addBufferLayer() {

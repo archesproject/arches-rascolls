@@ -76,5 +76,15 @@ export const fetchImageData = (
     return createRequest(url)();
 };
 
+export const fetchResourceBounds = (resourceId: string) => {
+    const url = arches.urls["api-resource-bounds"](resourceId);
+    return createRequest(url)();
+};
+
+export const fetchResourceGeoJSON = (resourceId: string) => {
+    const url = arches.urls["api-resource-geojson"](resourceId);
+    return createRequest(url)();
+};
+
 export const fetchSettings = createRequest(arches.urls["api-settings"]);
 export const fetchMapData = createRequest(arches.urls["api-map-data"]);
