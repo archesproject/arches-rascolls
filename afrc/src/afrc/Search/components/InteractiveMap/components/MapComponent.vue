@@ -4,6 +4,7 @@ import { onMounted, ref, useTemplateRef, watch, inject } from "vue";
 import MapboxDraw from "@mapbox/mapbox-gl-draw";
 import maplibregl from "maplibre-gl";
 import geojsonExtent from "@mapbox/geojson-extent";
+import { selectedLayerDefinition } from "./MapFilter/selected-feature.ts";
 
 import "@mapbox/mapbox-gl-draw/dist/mapbox-gl-draw.css";
 import "maplibre-gl/dist/maplibre-gl.css";
@@ -44,6 +45,7 @@ import type { Ref } from "vue";
 
 import type { Feature, FeatureCollection } from "geojson";
 import type {
+    LayerSpecification,
     AddLayerObject,
     Map,
     MapMouseEvent,
@@ -201,7 +203,7 @@ onMounted(() => {
         if (drawnFeaturesBuffer?.distance && drawnFeaturesBuffer?.units) {
             addBufferLayer();
         }
-        map.value!.addSource("point", {
+        map.value!.addSource("selected-resource", {
             type: "geojson",
             data: {
                 type: "FeatureCollection",
@@ -209,14 +211,8 @@ onMounted(() => {
             },
         });
 
-        map.value!.addLayer({
-            id: "point",
-            source: "point",
-            type: "circle",
-            paint: {
-                "circle-radius": 6,
-                "circle-color": "#ff2233",
-            },
+        selectedLayerDefinition.forEach((layer) => {
+            map.value!.addLayer(layer as LayerSpecification);
         });
     });
 });
@@ -245,7 +241,7 @@ async function fitBoundsOfFeatures(features: FeatureCollection) {
 }
 
 async function updateFeatureSelection(selected: Ref<string[]>) {
-    const source = map.value!.getSource("point") as GeoJSONSource;
+    const source = map.value!.getSource("selected-resource") as GeoJSONSource;
     if (selected.value.length) {
         const geojson = await fetchResourceGeoJSON(selected.value[0]);
         source.setData(geojson);
