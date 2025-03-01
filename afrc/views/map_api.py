@@ -1,6 +1,8 @@
 import json
 from http import HTTPStatus
 
+from django.core.cache import caches
+from django.core.cache import cache
 from django.utils.translation import gettext as _
 from django.views.generic import View
 from django.http import HttpResponse
@@ -14,6 +16,8 @@ from arches.app.utils.file_validator import FileValidator
 from arches.app.utils.response import JSONResponse, JSONErrorResponse
 from arches.app.utils.permission_backend import user_can_read_map_layers
 from afrc.utils.geo_utils import GeoUtils
+
+searchresults_cache = caches["searchresults"]
 
 
 class MapDataAPI(View):
@@ -131,9 +135,34 @@ class GeoJSONParseIntoCollectionAPI(View):
         geojson_obj = json.load(feature_file)
 
         return JSONResponse(GeoUtils.shape_geojson_as_feature_collection(geojson_obj))
-    
+
+
 class ReferenceCollectionMVT(View):
+
+    def get_instances(self, resources_in_bbox, sessionid):
+        # searchresults_cache = caches["searchresults"]
+        resource_ids = cache.get(sessionid)
+        if not resource_ids:
+            resource_ids = []
+        return set(resource_ids) & set(resources_in_bbox)
+
     def get(self, request, zoom, x, y):
+        resources = []
+        with connection.cursor() as cursor:
+            resource_query = """
+                SELECT resourceinstanceid::text
+                FROM geojson_geometries
+                WHERE 
+                ST_Intersects(geom, TileBBox(%s, %s, %s, 3857))
+                """
+            cursor.execute(resource_query, [zoom, x, y])
+            resources = [record[0] for record in cursor.fetchall()]
+
+        session_id = request.session.session_key
+        search_result_instances = self.get_instances(resources, session_id)
+        if len(search_result_instances) == 0:
+            search_result_instances.add("ce33afca-6b9d-4829-9599-5d81a3afbb18")
+
         system_settings_resourceid = settings.SYSTEM_SETTINGS_RESOURCE_ID
         with connection.cursor() as cursor:
             result = cursor.execute(
@@ -152,10 +181,19 @@ class ReferenceCollectionMVT(View):
                         false
                     ) geom
                 FROM geojson_geometries gg
-                WHERE resourceinstanceid != %s and (gg.geom && ST_TileEnvelope(%s, %s, %s, margin => (64.0 / 4096)))
+                WHERE resourceinstanceid != %s and resourceinstanceid in %s and (gg.geom && ST_TileEnvelope(%s, %s, %s, margin => (64.0 / 4096)))
                 ) tile
                 """,
-                [zoom, x, y, system_settings_resourceid, zoom, x, y],
+                [
+                    zoom,
+                    x,
+                    y,
+                    system_settings_resourceid,
+                    tuple(search_result_instances),
+                    zoom,
+                    x,
+                    y,
+                ],
             )
             result = bytes(cursor.fetchone()[0]) if result is None else result
         return HttpResponse(result, content_type="application/x-protobuf")

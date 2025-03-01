@@ -295,6 +295,7 @@ onMounted(async () => {
                     :overlays="overlays"
                     :sources="sources"
                     :include-drawer="true"
+                    :query="queryString"
                     :popup-enabled="false"
                     @drawn-features-updated="updateDrawnFeaturesGeometry"
                 />

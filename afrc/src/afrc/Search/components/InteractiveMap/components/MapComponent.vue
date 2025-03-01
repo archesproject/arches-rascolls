@@ -65,6 +65,7 @@ interface Props {
     settings: Settings | null;
     basemap: Basemap | null;
     overlays: MapLayer[];
+    query: string;
     sources: MapSource[];
     isDrawingEnabled?: boolean;
     drawnFeatures?: Feature[];
@@ -76,6 +77,7 @@ const props = withDefaults(defineProps<Props>(), {
     settings: null,
     basemap: null,
     overlays: () => [],
+    query: "",
     sources: () => [],
     isDrawingEnabled: true,
     drawnFeatures: () => [],
@@ -141,6 +143,24 @@ watch(
         }
     },
     { deep: true },
+);
+
+watch(
+    () => props.query,
+    () => {
+        if (map.value) {
+            const sourceCache =
+                map.value.style.sourceCaches["referencecollections"];
+            for (const id in sourceCache._tiles) {
+                sourceCache._tiles[id].expirationTime = Date.now() - 1;
+                sourceCache._reloadTile(id, "reloading");
+            }
+            sourceCache._cache.reset();
+            // map.value.triggerRepaint();
+            map.value.setStyle(map.value.getStyle());
+        }
+    },
+    { deep: true, immediate: true },
 );
 
 watch(
@@ -371,13 +391,12 @@ function addDrawControls() {
 
 function addOverlayToMap(overlay: MapLayer) {
     overlay.layerdefinitions.forEach((layerDefinition: LayerDefinition) => {
-        
-        map.value!.on('mouseenter', layerDefinition.id, () => {
-            map.value!.getCanvas().style.cursor = 'pointer';
+        map.value!.on("mouseenter", layerDefinition.id, () => {
+            map.value!.getCanvas().style.cursor = "pointer";
         });
 
-        map.value!.on('mouseleave', layerDefinition.id, () => {
-            map.value!.getCanvas().style.cursor = '';
+        map.value!.on("mouseleave", layerDefinition.id, () => {
+            map.value!.getCanvas().style.cursor = "";
         });
 
         if (!map.value!.getSource(layerDefinition.source!)) {
