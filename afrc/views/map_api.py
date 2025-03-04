@@ -2,7 +2,6 @@ import json
 from http import HTTPStatus
 
 from django.core.cache import caches
-from django.core.cache import cache
 from django.utils.translation import gettext as _
 from django.views.generic import View
 from django.http import HttpResponse
@@ -141,7 +140,7 @@ class ReferenceCollectionMVT(View):
 
     def get(self, request, zoom, x, y):
         session_id = request.session.session_key
-        resource_ids = cache.get(session_id)
+        resource_ids = searchresults_cache.get(session_id)
         system_settings_resourceid = settings.SYSTEM_SETTINGS_RESOURCE_ID
         with connection.cursor() as cursor:
             if resource_ids:

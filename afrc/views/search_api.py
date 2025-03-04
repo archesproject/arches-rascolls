@@ -20,7 +20,6 @@ import logging
 import json
 
 from django.core.cache import caches
-from django.core.cache import cache
 from django.views.generic import View
 from django.db import connection
 from django.utils.translation import get_language, gettext as _
@@ -68,7 +67,7 @@ class SearchAPI(View):
 
             results = set(resourceids_in_buffer).intersection(set(results))
         session_id = request.session._get_or_create_session_key()
-        cache.set(session_id, [str(id[0]) for id in results])
+        searchresults_cache.set(session_id, [str(id[0]) for id in results])
 
         ret = get_search_results_by_resourceids(
             [str(row[0]) for row in results],
