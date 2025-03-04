@@ -156,7 +156,6 @@ watch(
                 sourceCache._reloadTile(id, "reloading");
             }
             sourceCache._cache.reset();
-            // map.value.triggerRepaint();
             map.value.setStyle(map.value.getStyle());
         }
     },
