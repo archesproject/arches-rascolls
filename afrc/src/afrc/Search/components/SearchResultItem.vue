@@ -13,7 +13,7 @@ const resultSelected = inject("resultSelected") as Ref<string>;
 const image: Ref<string> = ref("");
 
 onMounted(async () => {
-    if (props.searchResult) {
+    if (props.searchResult?._source) {
         const res = await fetchImageData(
             [props.searchResult._source.resourceinstanceid],
             true,

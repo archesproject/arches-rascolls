@@ -371,13 +371,12 @@ function addDrawControls() {
 
 function addOverlayToMap(overlay: MapLayer) {
     overlay.layerdefinitions.forEach((layerDefinition: LayerDefinition) => {
-        
-        map.value!.on('mouseenter', layerDefinition.id, () => {
-            map.value!.getCanvas().style.cursor = 'pointer';
+        map.value!.on("mouseenter", layerDefinition.id, () => {
+            map.value!.getCanvas().style.cursor = "pointer";
         });
 
-        map.value!.on('mouseleave', layerDefinition.id, () => {
-            map.value!.getCanvas().style.cursor = '';
+        map.value!.on("mouseleave", layerDefinition.id, () => {
+            map.value!.getCanvas().style.cursor = "";
         });
 
         if (!map.value!.getSource(layerDefinition.source!)) {
