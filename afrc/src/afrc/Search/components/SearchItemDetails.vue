@@ -242,17 +242,6 @@ function zoomToSearchResult(resourceid: string) {
                 @click="zoomToSearchResult(resultSelected)"
             />
         </div>
-        <div v-else>
-            <Button
-                class="action-button"
-                label="No Geometry Available"
-                severity="secondary"
-                text
-                icon="pi pi-map-marker"
-                size="large"
-                disabled
-            />
-        </div>
     </div>
 </template>
 
