@@ -19,6 +19,7 @@ import type { Feature, Map } from "maplibre-gl";
 
 import type {
     Basemap,
+    GenericObject,
     MapInteractionItem,
     MapLayer,
     MapSource,
@@ -34,7 +35,7 @@ const props = defineProps<{
     sources: MapSource[];
     includeDrawer: boolean;
     popupEnabled: boolean;
-    query: string;
+    query: GenericObject[];
 }>();
 
 const map: Ref<Map | null> = ref(null);

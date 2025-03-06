@@ -15,6 +15,7 @@ from arches.app.utils.file_validator import FileValidator
 from arches.app.utils.response import JSONResponse, JSONErrorResponse
 from arches.app.utils.permission_backend import user_can_read_map_layers
 from afrc.utils.geo_utils import GeoUtils
+from django.http import Http404
 
 searchresults_cache = caches["searchresults"]
 
@@ -136,17 +137,17 @@ class GeoJSONParseIntoCollectionAPI(View):
         return JSONResponse(GeoUtils.shape_geojson_as_feature_collection(geojson_obj))
 
 
-class ReferenceCollectionMVT(View):
-
+class ReferenceCollectionSearchMVT(View):
     def get(self, request, zoom, x, y):
-        session_id = request.session.session_key
-        resource_ids = searchresults_cache.get(session_id)
         system_settings_resourceid = settings.SYSTEM_SETTINGS_RESOURCE_ID
+        result = None
         with connection.cursor() as cursor:
+            session_id = request.session.session_key
+            resource_ids = searchresults_cache.get(session_id, [])
             if resource_ids:
                 result = cursor.execute(
                     """
-                    SELECT ST_AsMVT(tile, 'referencecollections', 4096, 'geom', 'id')
+                    SELECT ST_AsMVT(tile, 'rascolls-search', 4096, 'geom', 'id')
                     FROM (
                     SELECT
                         id,
@@ -160,7 +161,7 @@ class ReferenceCollectionMVT(View):
                             false
                         ) geom
                     FROM geojson_geometries gg
-                    WHERE resourceinstanceid != %s and resourceinstanceid in %s and (gg.geom && ST_TileEnvelope(%s, %s, %s, margin => (64.0 / 4096)))
+                    WHERE nodeid='bda54e4a-d376-11ef-a239-0275dc2ded29' and resourceinstanceid != %s and resourceinstanceid in %s and (gg.geom && ST_TileEnvelope(%s, %s, %s, margin => (64.0 / 4096)))
                     ) tile
                     """,
                     [
@@ -174,35 +175,46 @@ class ReferenceCollectionMVT(View):
                         y,
                     ],
                 )
+                result = bytes(cursor.fetchone()[0]) if result is None else result
             else:
-                result = cursor.execute(
-                    """
-                    SELECT ST_AsMVT(tile, 'referencecollections', 4096, 'geom', 'id')
-                    FROM (
-                    SELECT
-                        id,
-                        resourceinstanceid,
-                        nodeid,
-                        ST_AsMVTGeom(
-                            geom,
-                            TileBBox(%s, %s, %s, 3857),
-                            4096,
-                            256,
-                            false
-                        ) geom
-                    FROM geojson_geometries gg
-                    WHERE resourceinstanceid != %s and (gg.geom && ST_TileEnvelope(%s, %s, %s, margin => (64.0 / 4096)))
-                    ) tile
-                    """,
-                    [
-                        zoom,
-                        x,
-                        y,
-                        system_settings_resourceid,
-                        zoom,
-                        x,
-                        y,
-                    ],
-                )
+                raise Http404("No search results found")
+        return HttpResponse(result, content_type="application/x-protobuf")
+
+
+class ReferenceCollectionMVT(View):
+    def get(self, request, zoom, x, y):
+        system_settings_resourceid = settings.SYSTEM_SETTINGS_RESOURCE_ID
+        result = None
+        with connection.cursor() as cursor:
+            result = cursor.execute(
+                """
+                SELECT ST_AsMVT(tile, 'referencecollections', 4096, 'geom', 'id')
+                FROM (
+                SELECT
+                    id,
+                    resourceinstanceid,
+                    nodeid,
+                    ST_AsMVTGeom(
+                        geom,
+                        TileBBox(%s, %s, %s, 3857),
+                        4096,
+                        256,
+                        false
+                    ) geom
+                FROM geojson_geometries gg
+                WHERE nodeid='bda54e4a-d376-11ef-a239-0275dc2ded29' and resourceinstanceid != %s and (gg.geom && ST_TileEnvelope(%s, %s, %s, margin => (64.0 / 4096)))
+                ) tile
+                """,
+                [
+                    zoom,
+                    x,
+                    y,
+                    system_settings_resourceid,
+                    zoom,
+                    x,
+                    y,
+                ],
+            )
             result = bytes(cursor.fetchone()[0]) if result is None else result
+
         return HttpResponse(result, content_type="application/x-protobuf")
