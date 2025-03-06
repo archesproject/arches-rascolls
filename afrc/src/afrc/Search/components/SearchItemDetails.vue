@@ -102,13 +102,24 @@ function clearResult() {
             </div>
         </div>
         <div class="description">
-            <template
-                v-if="displaydescription && displaydescription != 'Undefined'"
-            >
-                <!-- eslint-disable-next-line vue/no-v-html -->
-                <div v-html="displaydescription"></div>
-            </template>
-            <div v-else>No description provided</div>
+            <div class="value-header">Description</div>
+            <div class="resource-details-value">
+                <template
+                    v-if="
+                        displaydescription && displaydescription != 'Undefined'
+                    "
+                >
+                    <!-- eslint-disable-next-line vue/no-v-html -->
+                    <div v-html="displaydescription"></div>
+                </template>
+                <div v-else>No description provided</div>
+            </div>
+        </div>
+        <div
+            class="value-header"
+            style="padding: 0 10px"
+        >
+            Images
         </div>
         <div
             v-if="images.length"
@@ -141,6 +152,13 @@ function clearResult() {
             </Carousel>
         </div>
         <div
+            v-else
+            class="resource-details-value"
+            style="padding: 0 13px"
+        >
+            <div>No images available</div>
+        </div>
+        <div
             class="resource-details"
             style="color: grey"
         >
@@ -166,30 +184,36 @@ function clearResult() {
                 >
             </div>
         </div>
-        <div
-            v-if="acquisitions"
-            class="resource-details"
-        >
+        <div class="resource-details">
             <div class="value-header">Acquisition Information</div>
+            <div v-if="acquisitions">
+                <div
+                    v-for="(acquisition, index) in acquisitions"
+                    :key="index"
+                >
+                    <div class="value-entry">
+                        Acquired by:<span class="resource-details-value">{{
+                            acquisition.person
+                        }}</span>
+                    </div>
+                    <div class="value-entry">
+                        Acquired on:<span class="resource-details-value">{{
+                            acquisition.date
+                        }}</span>
+                    </div>
+                    <div class="value-entry">
+                        Acquisition Details:<span
+                            class="resource-details-value"
+                            >{{ acquisition.details }}</span
+                        >
+                    </div>
+                </div>
+            </div>
             <div
-                v-for="(acquisition, index) in acquisitions"
-                :key="index"
+                v-else
+                class="resource-details-value"
             >
-                <div class="value-entry">
-                    Acquired by:<span class="resource-details-value">{{
-                        acquisition.person
-                    }}</span>
-                </div>
-                <div class="value-entry">
-                    Acquired on:<span class="resource-details-value">{{
-                        acquisition.date
-                    }}</span>
-                </div>
-                <div class="value-entry">
-                    Acquisition Details:<span class="resource-details-value">{{
-                        acquisition.details
-                    }}</span>
-                </div>
+                No acquisition information available
             </div>
         </div>
         <div class="resource-details">
