@@ -439,7 +439,7 @@ section.afrc-search-results-panel {
     overflow-y: auto;
     height: calc(
         100vh - 50px
-    ); /* for display in a standalone plugin or embeded in AFS */
+    ); /* for display in a standalone plugin or embedded in AFS */
     min-width: 400px;
     background: #fff;
 }
