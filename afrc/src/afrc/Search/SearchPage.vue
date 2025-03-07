@@ -288,7 +288,7 @@ onMounted(async () => {
             </section>
             <div
                 v-if="showMap && dataLoaded"
-                style="width: 100%; height: 100%"
+                style="width: 100%; height: inherit"
             >
                 <InteractiveMap
                     :basemaps="basemaps"
