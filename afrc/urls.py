@@ -10,6 +10,7 @@ from afrc.views.map_api import (
     FeatureBufferAPI,
     GeoJSONBoundsAPI,
     ReferenceCollectionMVT,
+    ReferenceCollectionSearchMVT,
 )
 from afrc.views.rascoll_search import RascollSearchView
 
@@ -25,6 +26,11 @@ urlpatterns = [
         r"^api-reference-collection-mvt/(?P<zoom>[0-9]+|\{z\})/(?P<x>[0-9]+|\{x\})/(?P<y>[0-9]+|\{y\}).pbf$",
         ReferenceCollectionMVT.as_view(),
         name="api-reference-collection-mvt",
+    ),
+    re_path(
+        r"^api-reference-collection-search-mvt/(?P<zoom>[0-9]+|\{z\})/(?P<x>[0-9]+|\{x\})/(?P<y>[0-9]+|\{y\}).pbf$",
+        ReferenceCollectionSearchMVT.as_view(),
+        name="api-reference-collection-search-mvt",
     ),
     re_path(r"^rascoll-search$", RascollSearchView.as_view(), name="rascoll-search"),
 ]

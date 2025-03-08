@@ -45,8 +45,8 @@ class SearchAPI(View):
         page_size = int(settings.SEARCH_ITEMS_PER_PAGE)
         searchid = request.GET.get("searchid", None)
 
-        if "term-filter" in request.GET:
-            terms = json.loads(request.GET.get("term-filter", None))
+        if term_filter := request.GET.get("term-filter", None):
+            terms = json.loads(term_filter)
             if terms:
                 terms = [term["value"] for term in terms]
             results = get_related_resources_by_text(terms, settings.COLLECTIONS_GRAPHID)
@@ -66,8 +66,12 @@ class SearchAPI(View):
             ).values_list("resourceinstance_id")
 
             results = set(resourceids_in_buffer).intersection(set(results))
+        session_id = request.session._get_or_create_session_key()
 
-        searchresults_cache.add(searchid, results)
+        if term_filter or map_filter:
+            searchresults_cache.set(session_id, [str(id[0]) for id in results])
+        else:
+            searchresults_cache.clear()
 
         ret = get_search_results_by_resourceids(
             [str(row[0]) for row in results],

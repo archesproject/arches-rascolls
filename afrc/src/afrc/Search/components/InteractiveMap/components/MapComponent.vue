@@ -49,12 +49,14 @@ import type {
     ControlPosition,
     Popup,
     SourceSpecification,
+    VectorTileSource,
 } from "maplibre-gl";
 
 import type {
     Basemap,
     Buffer,
     DrawEvent,
+    GenericObject,
     LayerDefinition,
     MapLayer,
     MapSource,
@@ -65,6 +67,7 @@ interface Props {
     settings: Settings | null;
     basemap: Basemap | null;
     overlays: MapLayer[];
+    query: GenericObject[];
     sources: MapSource[];
     isDrawingEnabled?: boolean;
     drawnFeatures?: Feature[];
@@ -76,6 +79,7 @@ const props = withDefaults(defineProps<Props>(), {
     settings: null,
     basemap: null,
     overlays: () => [],
+    query: () => [],
     sources: () => [],
     isDrawingEnabled: true,
     drawnFeatures: () => [],
@@ -141,6 +145,21 @@ watch(
         }
     },
     { deep: true },
+);
+
+watch(
+    () => props.query,
+    () => {
+        if (map.value) {
+            const src = map.value.getSource(
+                "rascolls-search",
+            ) as VectorTileSource;
+            const oldUrl = src.tiles[0];
+            const newUrl = `${oldUrl}?cacheclear=${Date.now()}`;
+            src.setTiles([newUrl]);
+        }
+    },
+    { deep: true, immediate: true },
 );
 
 watch(
@@ -419,9 +438,6 @@ function addOverlayToMap(overlay: MapLayer) {
                 );
                 resultsSelected.value = Array.from(uniqueResourceIds);
                 resultSelected.value = resultsSelected.value[0];
-            } else {
-                resultsSelected.value = [];
-                resultSelected.value = "";
             }
         };
 

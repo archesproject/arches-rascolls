@@ -156,6 +156,7 @@ async function fetchSystemMapData() {
                 layer.maplayerid !== "6b9d3c6a-60a4-4630-b4f8-4c5159b68cec",
         );
 
+        overlays.value.sort((a, b) => (b.sortorder ?? 0) - (a.sortorder ?? 0));
         layers
             .filter((layer: MapLayer) => !layer.isoverlay)
             .forEach((layer: MapLayer) => {
@@ -295,6 +296,7 @@ onMounted(async () => {
                     :overlays="overlays"
                     :sources="sources"
                     :include-drawer="true"
+                    :query="searchResults"
                     :popup-enabled="false"
                     @drawn-features-updated="updateDrawnFeaturesGeometry"
                 />

@@ -19,6 +19,7 @@ import type { Feature, Map } from "maplibre-gl";
 
 import type {
     Basemap,
+    GenericObject,
     MapInteractionItem,
     MapLayer,
     MapSource,
@@ -34,6 +35,7 @@ const props = defineProps<{
     sources: MapSource[];
     includeDrawer: boolean;
     popupEnabled: boolean;
+    query: GenericObject[];
 }>();
 
 const map: Ref<Map | null> = ref(null);
@@ -69,6 +71,7 @@ const emits = defineEmits(["drawnFeatureSelected", "drawnFeaturesUpdated"]);
 provide("overlays", props.overlays);
 provide("basemaps", props.basemaps);
 provide("selectedDrawnFeature", selectedDrawnFeature);
+provide("query", props.query);
 
 watch(
     () => props.basemaps,
@@ -116,6 +119,7 @@ function updateSelectedDrawnFeature(feature: Feature) {
             :basemap="basemap"
             :overlays="overlays"
             :sources="sources"
+            :query="query"
             :is-drawing-enabled="true"
             :is-popup-enabled="popupEnabled"
             @map-initialized="
