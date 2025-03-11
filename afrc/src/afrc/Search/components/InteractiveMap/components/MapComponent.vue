@@ -4,6 +4,7 @@ import { onMounted, ref, useTemplateRef, watch, inject } from "vue";
 import MapboxDraw from "@mapbox/mapbox-gl-draw";
 import maplibregl from "maplibre-gl";
 import geojsonExtent from "@mapbox/geojson-extent";
+import { selectedLayerDefinition } from "./MapFilter/selected-feature.ts";
 
 import "@mapbox/mapbox-gl-draw/dist/mapbox-gl-draw.css";
 import "maplibre-gl/dist/maplibre-gl.css";
@@ -13,6 +14,8 @@ import PopupContainer from "@/afrc/Search/components/InteractiveMap/components/P
 import {
     fetchDrawnFeaturesBuffer,
     fetchGeoJSONBounds,
+    fetchResourceBounds,
+    fetchResourceGeoJSON,
 } from "@/afrc/Search/api.ts";
 
 import {
@@ -42,6 +45,7 @@ import type { Ref } from "vue";
 
 import type { Feature, FeatureCollection } from "geojson";
 import type {
+    LayerSpecification,
     AddLayerObject,
     Map,
     MapMouseEvent,
@@ -100,6 +104,7 @@ const {
 
 let resultsSelected = inject("resultsSelected") as Ref<string[]>;
 let resultSelected = inject("resultSelected") as Ref<string>;
+let zoomToFeature = inject("zoomToFeature") as Ref<string>;
 
 const emits = defineEmits([
     "mapInitialized",
@@ -163,6 +168,24 @@ watch(
 );
 
 watch(
+    () => zoomToFeature,
+    async (resource) => {
+        const extent = await fetchResourceBounds(resource.value as string);
+        if (extent) {
+            const bounds = [
+                [extent[0], extent[1]],
+                [extent[2], extent[3]],
+            ];
+            map.value!.fitBounds(
+                bounds as [[number, number], [number, number]],
+                { duration: 5000 },
+            );
+        }
+    },
+    { deep: true },
+);
+
+watch(
     () => drawnFeaturesBuffer,
     () => {
         updateDrawnFeatures();
@@ -199,9 +222,17 @@ onMounted(() => {
         if (drawnFeaturesBuffer?.distance && drawnFeaturesBuffer?.units) {
             addBufferLayer();
         }
-        // if (overlays) {
-        //     updateMapOverlays(overlays);
-        // }
+        map.value!.addSource("selected-resource", {
+            type: "geojson",
+            data: {
+                type: "FeatureCollection",
+                features: [],
+            },
+        });
+
+        selectedLayerDefinition.forEach((layer) => {
+            map.value!.addLayer(layer as LayerSpecification);
+        });
     });
 });
 
@@ -228,29 +259,17 @@ async function fitBoundsOfFeatures(features: FeatureCollection) {
     });
 }
 
-function updateFeatureSelection(selected: Ref<string[]>) {
-    const layers: Array<string> = [];
-    overlays.forEach((overlay) => {
-        layers.push(
-            ...overlay.layerdefinitions.map(
-                (layerDefinition) => layerDefinition.id,
-            ),
-        );
-    });
-    const features = map.value!.queryRenderedFeatures({ layers: layers });
-    features.forEach((feature) => {
-        const featureSelected = selected.value.includes(
-            feature.properties?.resourceinstanceid,
-        );
-        map.value!.setFeatureState(
-            {
-                source: "referencecollections",
-                sourceLayer: "referencecollections",
-                id: feature.id,
-            },
-            { selected: featureSelected },
-        );
-    });
+async function updateFeatureSelection(selected: Ref<string[]>) {
+    const source = map.value!.getSource("selected-resource") as GeoJSONSource;
+    if (selected.value.length) {
+        const geojson = await fetchResourceGeoJSON(selected.value[0]);
+        source.setData(geojson);
+    } else {
+        source.setData({
+            type: "FeatureCollection",
+            features: [],
+        });
+    }
 }
 
 function addBufferLayer() {

@@ -12,12 +12,14 @@ import Carousel from "primevue/carousel";
 
 const resultSelected = inject("resultSelected") as Ref<string>;
 const resultsSelected = inject("resultsSelected") as Ref<string[]>;
+const zoomToFeature = inject("zoomToFeature") as Ref<string>;
 
 const displayname: Ref<string> = ref("");
 const displaydescription: Ref<string> = ref("");
 const images: Ref<string[]> = ref([]);
 const acquisitions: Ref<Acquisition[]> = ref([]);
 const identifier: Ref<string> = ref("");
+const hasGeom: Ref<boolean> = ref(false);
 
 onMounted(async () => {
     getData();
@@ -39,7 +41,10 @@ async function getData() {
                 "Identifier_type"
             ] as UnspecifiedObject["@display_value"]) === "Accession Number",
     );
-
+    hasGeom.value =
+        !!resp.resource["Production "]?.[0]["Production_location"]?.[
+            "Production_location_geo"
+        ]?.geojson;
     acquisitions.value = resp.resource["Addition to Collection"]?.map(
         (tile: GenericObject) => ({
             person: tile?.["Addition to Collection_carried out by"][
@@ -74,6 +79,10 @@ async function getData() {
 function clearResult() {
     resultSelected.value = "";
     resultsSelected.value = [];
+}
+
+function zoomToSearchResult(resourceid: string) {
+    zoomToFeature.value = resourceid;
 }
 </script>
 
@@ -221,6 +230,17 @@ function clearResult() {
             <div class="value-entry">
                 <span class="resource-details-value">raman spectrum</span>
             </div>
+        </div>
+        <div v-if="hasGeom">
+            <Button
+                class="action-button"
+                label="Map"
+                severity="secondary"
+                text
+                icon="pi pi-map-marker"
+                size="large"
+                @click="zoomToSearchResult(resultSelected)"
+            />
         </div>
     </div>
 </template>

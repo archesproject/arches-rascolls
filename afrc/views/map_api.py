@@ -1,11 +1,14 @@
-import json
 from http import HTTPStatus
+import json
+import uuid
 
+from django.contrib.gis.db.models import Extent
+from django.contrib.gis.db.models.functions import Transform
 from django.core.cache import caches
+from django.db import connection
+from django.http import HttpResponse, Http404
 from django.utils.translation import gettext as _
 from django.views.generic import View
-from django.http import HttpResponse
-from django.db import connection
 
 from arches.app.models import models
 from arches.app.models.system_settings import settings
@@ -15,7 +18,6 @@ from arches.app.utils.file_validator import FileValidator
 from arches.app.utils.response import JSONResponse, JSONErrorResponse
 from arches.app.utils.permission_backend import user_can_read_map_layers
 from afrc.utils.geo_utils import GeoUtils
-from django.http import Http404
 
 searchresults_cache = caches["searchresults"]
 
@@ -42,19 +44,35 @@ class MapDataAPI(View):
         )
 
 
-class FeatureGeometriesAPI(View):
-    def get(self, request):
-        resource_instance_id = request.GET.get("resource_instance_id")
+class ResourceBoundsAPI(View):
+    def get(self, request, resource_id):
+        geoms = models.GeoJSONGeometry.objects.annotate(
+            wgs=Transform("geom", 4326)
+        ).filter(resourceinstance_id=uuid.UUID(resource_id))
+        result = None
+        if geoms:
+            result = geoms.values("wgs").aggregate(Extent("wgs")).get("wgs__extent")
+        return JSONResponse(result)
 
-        se = SearchEngineFactory().create()
-        document = se.search(index=RESOURCES_INDEX, id=resource_instance_id)
 
-        geo_utils = GeoUtils()
+class ResourceGeoJSONAPI(View):
+    def get(self, request, resource_id):
+        geoms = models.GeoJSONGeometry.objects.annotate(
+            wgs=Transform("geom", 4326)
+        ).filter(resourceinstance_id=uuid.UUID(resource_id))
 
-        for geometry in document["_source"]["geometries"]:
-            geometry["centroid"] = geo_utils.get_centroid(geometry["geom"])
-
-        return JSONResponse(document["_source"]["geometries"])
+        geojson = {
+            "type": "FeatureCollection",
+            "features": [
+                {
+                    "type": "Feature",
+                    "geometry": json.loads(geom.wgs.geojson),
+                    "properties": {},
+                }
+                for geom in geoms
+            ],
+        }
+        return JSONResponse(geojson)
 
 
 class ResourceInstancesWithinGeometryAndBufferAPI(View):
@@ -216,5 +234,4 @@ class ReferenceCollectionMVT(View):
                 ],
             )
             result = bytes(cursor.fetchone()[0]) if result is None else result
-
         return HttpResponse(result, content_type="application/x-protobuf")

@@ -11,8 +11,12 @@ from afrc.views.map_api import (
     GeoJSONBoundsAPI,
     ReferenceCollectionMVT,
     ReferenceCollectionSearchMVT,
+    ResourceBoundsAPI,
+    ResourceGeoJSONAPI,
 )
 from afrc.views.rascoll_search import RascollSearchView
+
+uuid_regex = settings.UUID_REGEX
 
 urlpatterns = [
     # project-level urls
@@ -22,6 +26,16 @@ urlpatterns = [
     path("api-file-data", FileAPI.as_view(), name="api-file-data"),
     path("api-feature-buffer", FeatureBufferAPI.as_view(), name="api-feature-buffer"),
     path("api-geojson-bounds", GeoJSONBoundsAPI.as_view(), name="api-geojson-bounds"),
+    re_path(
+        "api-resource-bounds/(?P<resource_id>%s)$" % (uuid_regex),
+        ResourceBoundsAPI.as_view(),
+        name="api-resource-bounds",
+    ),
+    re_path(
+        "api-resource-geojson/(?P<resource_id>%s)$" % (uuid_regex),
+        ResourceGeoJSONAPI.as_view(),
+        name="api-resource-geojson",
+    ),
     re_path(
         r"^api-reference-collection-mvt/(?P<zoom>[0-9]+|\{z\})/(?P<x>[0-9]+|\{x\})/(?P<y>[0-9]+|\{y\}).pbf$",
         ReferenceCollectionMVT.as_view(),
