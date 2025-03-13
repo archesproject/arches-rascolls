@@ -217,7 +217,7 @@ onMounted(() => {
         map.value!.fitBounds(geojsonExtent(settings.DEFAULT_BOUNDS));
     }
 
-    map.value!.once(STYLE_LOAD_EVENT, async () => {
+    map.value!.once(STYLE_LOAD_EVENT, () => {
         if (isDrawingEnabled || drawnFeatures) {
             addDrawControls();
         }
@@ -231,6 +231,7 @@ onMounted(() => {
                 features: [],
             },
         });
+
         selectedLayerDefinition.forEach((layer) => {
             map.value!.addLayer(layer as LayerSpecification);
         });
