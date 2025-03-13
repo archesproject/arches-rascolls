@@ -102,10 +102,11 @@ function selectResult(resourceid: string) {
                         >
                     </div>
                     <div class="scope-note">
-                        <span class="scope-note-title">Item description:</span
-                        ><span class="scope-note-content">{{
-                            searchResult._source.displaydescription
-                        }}</span>
+                        <span class="scope-note-title">Item description:</span>
+                        <span
+                            class="scope-note-content"
+                            v-html="searchResult._source.displaydescription"
+                        ></span>
                     </div>
                 </div>
                 <div>
