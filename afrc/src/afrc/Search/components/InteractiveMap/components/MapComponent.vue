@@ -124,6 +124,7 @@ const popupInstance: Ref<Popup | null> = ref(null);
 const clickedFeatures: Ref<Feature[]> = ref([]);
 const clickedCoordinates: Ref<[number, number]> = ref([0, 0]);
 const popupContainerRerenderKey = ref(0);
+const searchMarkers: maplibregl.Marker[] = [];
 
 watch(
     () => basemap,
@@ -162,6 +163,7 @@ watch(
             const oldUrl = src.tiles[0];
             const newUrl = `${oldUrl}?cacheclear=${Date.now()}`;
             src.setTiles([newUrl]);
+            updateCurrentPageOfSearchResults();
         }
     },
     { deep: true, immediate: true },
@@ -178,7 +180,7 @@ watch(
             ];
             map.value!.fitBounds(
                 bounds as [[number, number], [number, number]],
-                { duration: 5000 },
+                { duration: 4500, maxZoom: 12 },
             );
         }
     },
@@ -215,7 +217,7 @@ onMounted(() => {
         map.value!.fitBounds(geojsonExtent(settings.DEFAULT_BOUNDS));
     }
 
-    map.value!.once(STYLE_LOAD_EVENT, () => {
+    map.value!.once(STYLE_LOAD_EVENT, async () => {
         if (isDrawingEnabled || drawnFeatures) {
             addDrawControls();
         }
@@ -229,7 +231,6 @@ onMounted(() => {
                 features: [],
             },
         });
-
         selectedLayerDefinition.forEach((layer) => {
             map.value!.addLayer(layer as LayerSpecification);
         });
@@ -293,6 +294,28 @@ function addBufferLayer() {
     });
 }
 
+function updateCurrentPageOfSearchResults() {
+    searchMarkers.forEach((marker) => {
+        marker.remove();
+    });
+    if (props.query.values!) {
+        props.query.forEach(async (searchResult: GenericObject) => {
+            if (searchResult._source?.points?.length) {
+                const point = searchResult._source.points[0].point;
+                const coordinates = [point.lon, point.lat] as [number, number];
+                const marker = new maplibregl.Marker({
+                    color: "#22C",
+                    draggable: false,
+                    scale: 0.75,
+                })
+                    .setLngLat(coordinates)
+                    .addTo(map.value!);
+                searchMarkers.push(marker);
+            }
+        });
+    }
+}
+
 function selectNewlyDrawnFeature(e: DrawEvent) {
     const feature = e.features[0];
     const featureId = feature.id as string;
@@ -353,6 +376,7 @@ function updateBasemap(basemap: Basemap) {
         updateMapOverlays(overlays);
         addBufferLayer();
         bufferFeatures(draw.getAll());
+        updateCurrentPageOfSearchResults(); // adds markers to the map on initial load
     });
 }
 

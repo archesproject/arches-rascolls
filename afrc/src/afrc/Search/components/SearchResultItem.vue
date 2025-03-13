@@ -10,6 +10,9 @@ import { fetchImageData } from "@/afrc/Search/api.ts";
 
 const resultsSelected = inject("resultsSelected") as Ref<string[]>;
 const resultSelected = inject("resultSelected") as Ref<string>;
+const zoomToFeature = inject("zoomToFeature") as Ref<string>;
+const showMap = inject("showMap") as Ref<string>;
+
 const image: Ref<string> = ref("");
 
 onMounted(async () => {
@@ -44,6 +47,10 @@ const props = defineProps({
 function selectResult(resourceid: string) {
     resultSelected.value = resourceid;
     resultsSelected.value = [resourceid];
+}
+
+function zoomToSearchResult(resourceid: string) {
+    zoomToFeature.value = resourceid;
 }
 </script>
 
@@ -136,6 +143,25 @@ function selectResult(resourceid: string) {
                                 arches.urls.resource + '/' + searchResult._id
                             "
                         />
+                        <div
+                            v-if="
+                                searchResult._source?.points?.length && showMap
+                            "
+                        >
+                            <Button
+                                class="action-button"
+                                label="Map"
+                                severity="secondary"
+                                text
+                                icon="pi pi-map-marker"
+                                size="large"
+                                @click="
+                                    zoomToSearchResult(
+                                        searchResult._source.resourceinstanceid,
+                                    )
+                                "
+                            />
+                        </div>
                     </div>
                 </div>
             </div>
