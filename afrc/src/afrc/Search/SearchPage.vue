@@ -45,6 +45,7 @@ const { $gettext } = useGettext();
 provide("resultsSelected", resultsSelected);
 provide("resultSelected", resultSelected);
 provide("zoomToFeature", zoomToFeature);
+provide("showMap", showMap);
 
 watch(queryString, () => {
     performSearch();

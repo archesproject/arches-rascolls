@@ -13,6 +13,7 @@ import Carousel from "primevue/carousel";
 const resultSelected = inject("resultSelected") as Ref<string>;
 const resultsSelected = inject("resultsSelected") as Ref<string[]>;
 const zoomToFeature = inject("zoomToFeature") as Ref<string>;
+const showMap = inject("showMap") as Ref<string>;
 
 const displayname: Ref<string> = ref("");
 const displaydescription: Ref<string> = ref("");
@@ -231,7 +232,7 @@ function zoomToSearchResult(resourceid: string) {
                 <span class="resource-details-value">raman spectrum</span>
             </div>
         </div>
-        <div v-if="hasGeom">
+        <div v-if="hasGeom && showMap">
             <Button
                 class="action-button"
                 label="Map"
