@@ -208,6 +208,8 @@ watch(
 watch(
     () => zoomToFeature,
     async (resource) => {
+        resultSelected.value = resource.value;
+        resultsSelected.value = [resource.value];
         const extent = await fetchResourceBounds(resource.value as string);
         if (extent) {
             const bounds = [
