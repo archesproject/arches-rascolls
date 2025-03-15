@@ -34,6 +34,8 @@ import {
     GEOMETRY_TYPE_POLYGON,
     IDLE,
     LTR,
+    MARKER_COLOR,
+    MARKER_HIGHLIGHT_COLOR,
     METERS,
     SIMPLE_SELECT,
     STYLE_LOAD_EVENT,
@@ -44,16 +46,16 @@ import {
 import type { Ref } from "vue";
 
 import type { Feature, FeatureCollection } from "geojson";
-import type {
-    LayerSpecification,
-    AddLayerObject,
-    Map,
-    MapMouseEvent,
-    GeoJSONSource,
-    ControlPosition,
-    Popup,
-    SourceSpecification,
-    VectorTileSource,
+import {
+    type LayerSpecification,
+    type AddLayerObject,
+    type Map,
+    type MapMouseEvent,
+    type GeoJSONSource,
+    type ControlPosition,
+    type Popup,
+    type SourceSpecification,
+    type VectorTileSource,
 } from "maplibre-gl";
 
 import type {
@@ -105,6 +107,7 @@ const {
 let resultsSelected = inject("resultsSelected") as Ref<string[]>;
 let resultSelected = inject("resultSelected") as Ref<string>;
 let zoomToFeature = inject("zoomToFeature") as Ref<string>;
+let highlightResult = inject("highlightResult") as Ref<string>;
 
 const emits = defineEmits([
     "mapInitialized",
@@ -124,7 +127,7 @@ const popupInstance: Ref<Popup | null> = ref(null);
 const clickedFeatures: Ref<Feature[]> = ref([]);
 const clickedCoordinates: Ref<[number, number]> = ref([0, 0]);
 const popupContainerRerenderKey = ref(0);
-const searchMarkers: maplibregl.Marker[] = [];
+const searchMarkers: GenericObject = {};
 
 watch(
     () => basemap,
@@ -139,6 +142,39 @@ watch(
     () => overlays,
     (overlays) => {
         updateMapOverlays(overlays as MapLayer[]);
+    },
+    { deep: true },
+);
+
+watch(
+    () => highlightResult,
+    () => {
+        if (searchMarkers[highlightResult.value]) {
+            const marker = searchMarkers[highlightResult.value].marker;
+            if (marker._color === MARKER_COLOR) {
+                searchMarkers[highlightResult.value].marker = replaceMarker(
+                    marker,
+                    MARKER_HIGHLIGHT_COLOR,
+                );
+            } else {
+                searchMarkers[highlightResult.value].marker = replaceMarker(
+                    marker,
+                    MARKER_COLOR,
+                );
+            }
+        } else {
+            for (const id in searchMarkers) {
+                const marker = searchMarkers[id].marker;
+                if (
+                    searchMarkers[id].marker._color === MARKER_HIGHLIGHT_COLOR
+                ) {
+                    searchMarkers[id].marker = replaceMarker(
+                        marker,
+                        MARKER_COLOR,
+                    );
+                }
+            }
+        }
     },
     { deep: true },
 );
@@ -274,6 +310,23 @@ async function updateFeatureSelection(selected: Ref<string[]>) {
     }
 }
 
+function createMarker(coordinates: [number, number], color: string) {
+    return new maplibregl.Marker({
+        color: color,
+        draggable: false,
+        scale: 0.75,
+    })
+        .setLngLat(coordinates)
+        .addTo(map.value!);
+}
+
+function replaceMarker(marker: maplibregl.Marker, color: string) {
+    marker.remove();
+    const lngLat = marker.getLngLat();
+    const coordinates = [lngLat.lng, lngLat.lat] as [number, number];
+    return createMarker(coordinates, color);
+}
+
 function addBufferLayer() {
     map.value!.addSource(BUFFER_LAYER_ID, {
         type: "geojson",
@@ -296,22 +349,19 @@ function addBufferLayer() {
 }
 
 function updateCurrentPageOfSearchResults() {
-    searchMarkers.forEach((marker) => {
-        marker.remove();
-    });
+    for (const id in searchMarkers) {
+        searchMarkers[id].marker.remove();
+    }
     if (props.query.values!) {
         props.query.forEach(async (searchResult: GenericObject) => {
             if (searchResult._source?.points?.length) {
                 const point = searchResult._source.points[0].point;
                 const coordinates = [point.lon, point.lat] as [number, number];
-                const marker = new maplibregl.Marker({
-                    color: "#22C",
-                    draggable: false,
-                    scale: 0.75,
-                })
-                    .setLngLat(coordinates)
-                    .addTo(map.value!);
-                searchMarkers.push(marker);
+                const marker = createMarker(coordinates, MARKER_COLOR);
+                searchMarkers[searchResult._id] = {
+                    marker: marker,
+                    highlighted: false,
+                };
             }
         });
     }

@@ -11,6 +11,7 @@ import { fetchImageData } from "@/afrc/Search/api.ts";
 const resultsSelected = inject("resultsSelected") as Ref<string[]>;
 const resultSelected = inject("resultSelected") as Ref<string>;
 const zoomToFeature = inject("zoomToFeature") as Ref<string>;
+const highlightResult = inject("highlightResult") as Ref<string>;
 const showMap = inject("showMap") as Ref<string>;
 
 const image: Ref<string> = ref("");
@@ -38,11 +39,15 @@ const props = defineProps({
     },
 });
 
-/* function highlightResult(resourceid: string) {
-    if (!resultSelected.value) {
-        resultsSelected.value = [resourceid];
+function setHighlightResult(resourceid: string) {
+    if (highlightResult.value !== resourceid) {
+        highlightResult.value = resourceid;
     }
-} */
+}
+
+function clearHighlightResult() {
+    highlightResult.value = "";
+}
 
 function selectResult(resourceid: string) {
     resultSelected.value = resourceid;
@@ -83,7 +88,11 @@ function zoomToSearchResult(resourceid: string) {
         </div>
     </section>
     <section v-else>
-        <div class="result">
+        <div
+            class="result"
+            @mouseover="setHighlightResult(props.searchResult._id)"
+            @mouseleave="clearHighlightResult"
+        >
             <div class="image-placeholder">
                 <img
                     v-if="image"

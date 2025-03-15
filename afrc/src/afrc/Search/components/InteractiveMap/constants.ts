@@ -31,3 +31,5 @@ export const SIMPLE_SELECT = "simple_select";
 export const YARDS = "yards";
 export const BUFFER_FILL_COLOR = "#ea7f08";
 export const BUFFER_FILL_OPACITY = 0.3;
+export const MARKER_COLOR = "#C12";
+export const MARKER_HIGHLIGHT_COLOR = "#3F3";

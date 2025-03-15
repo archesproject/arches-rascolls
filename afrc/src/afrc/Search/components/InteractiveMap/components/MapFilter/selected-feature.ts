@@ -5,7 +5,7 @@ export const selectedLayerDefinition = [
         type: "circle",
         filter: ["all", ["==", "$type", "Point"]],
         paint: {
-            "circle-radius": 6,
+            "circle-radius": 9,
             "circle-opacity": 1,
             "circle-color": "#f00",
         },
@@ -16,8 +16,8 @@ export const selectedLayerDefinition = [
         type: "circle",
         filter: ["all", ["==", "$type", "Point"]],
         paint: {
-            "circle-radius": 5,
-            "circle-color": "#aaf",
+            "circle-radius": 8,
+            "circle-color": "#fff",
         },
     },
     {
