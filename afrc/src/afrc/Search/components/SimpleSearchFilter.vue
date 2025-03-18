@@ -103,7 +103,9 @@ const updateQuery = function () {
                 </div>
             </template>
             <template #option="slotProps">
-                <div>{{ slotProps.option.text }}</div>
+                <div class="search-option">
+                    {{ slotProps.option.text }}
+                </div>
             </template>
         </AutoComplete>
     </div>
@@ -114,7 +116,8 @@ const updateQuery = function () {
     width: 100%;
     font-size: 1rem;
 }
-.option-group {
+.option-group,
+.search-option {
     font-size: 1.4rem;
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
         "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
