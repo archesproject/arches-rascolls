@@ -15,10 +15,16 @@ import arches from "arches";
 import SimpleSearchFilter from "@/afrc/Search/components/SimpleSearchFilter.vue";
 import SearchResultItem from "@/afrc/Search/components/SearchResultItem.vue";
 import SearchItemDetails from "@/afrc/Search/components/SearchItemDetails.vue";
+import SearchFilterState from "@/afrc/Search/components/SearchFilterState.vue";
 import InteractiveMap from "@/afrc/Search/components/InteractiveMap/InteractiveMap.vue";
 import { fetchMapData } from "@/afrc/Search/api.ts";
 import type { GenericObject } from "@/afrc/Search/types";
-import type { Basemap, MapLayer, MapSource } from "@/afrc/Search/types.ts";
+import type {
+    Basemap,
+    MapLayer,
+    MapSource,
+    SearchFilter,
+} from "@/afrc/Search/types.ts";
 import type { Feature } from "maplibre-gl/dist/maplibre-gl";
 
 let query = getQueryObject(null);
@@ -34,6 +40,7 @@ const showMap = ref(false);
 const basemaps: Ref<Basemap[]> = ref([]);
 const overlays: Ref<MapLayer[]> = ref([]);
 const sources: Ref<MapSource[]> = ref([]);
+const searchFilters: Ref<SearchFilter[]> = ref([]);
 const resultsSelected: Ref<string[]> = ref([]);
 const dataLoaded = ref(false);
 const loadingSearchResults = ref(true);
@@ -48,6 +55,7 @@ provide("resultSelected", resultSelected);
 provide("zoomToFeature", zoomToFeature);
 provide("highlightResult", highlightResult);
 provide("showMap", showMap);
+provide("searchFilters", searchFilters);
 
 watch(queryString, () => {
     performSearch();
@@ -253,9 +261,20 @@ onMounted(async () => {
                 </div>
                 <div
                     v-else
-                    class="section-header"
+                    style="
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                    "
                 >
-                    {{ resultsCount }} Results
+                    <div class="section-header">
+                        {{ resultsCount }}
+                        <span v-if="searchFilters.length">Results</span
+                        ><span v-else>Items</span>
+                    </div>
+                    <div style="margin: 0px 10px">
+                        <SearchFilterState />
+                    </div>
                 </div>
                 <div class="search-result-list">
                     <DataView

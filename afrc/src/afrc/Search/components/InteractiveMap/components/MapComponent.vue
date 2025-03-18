@@ -41,6 +41,7 @@ import {
     STYLE_LOAD_EVENT,
     TOP_LEFT,
     TOP_RIGHT,
+    MAP_FILTER_NAME,
 } from "@/afrc/Search/components/InteractiveMap/constants.ts";
 
 import type { Ref } from "vue";
@@ -67,6 +68,7 @@ import type {
     MapLayer,
     MapSource,
     Settings,
+    SearchFilter,
 } from "@/afrc/Search/types.ts";
 
 interface Props {
@@ -108,6 +110,7 @@ let resultsSelected = inject("resultsSelected") as Ref<string[]>;
 let resultSelected = inject("resultSelected") as Ref<string>;
 let zoomToFeature = inject("zoomToFeature") as Ref<string>;
 let highlightResult = inject("highlightResult") as Ref<string>;
+const searchFilters = inject("searchFilters") as Ref<SearchFilter[]>;
 
 const emits = defineEmits([
     "mapInitialized",
@@ -385,6 +388,14 @@ function selectNewlyDrawnFeature(e: DrawEvent) {
     });
 }
 
+function clear(id: string) {
+    draw.deleteAll();
+    map.value!.fire("draw.delete");
+    searchFilters.value = searchFilters.value.filter(
+        (filter) => filter.id !== id,
+    );
+}
+
 async function updateDrawnFeatures() {
     const drawnFeatures = draw.getAll();
 
@@ -409,6 +420,21 @@ async function updateDrawnFeatures() {
             type: "FeatureCollection",
             features: [...drawnFeatures.features, ...bufferedFeatures.features],
         });
+        if (
+            !searchFilters.value.find(
+                (filter) => filter.name === MAP_FILTER_NAME,
+            )
+        ) {
+            searchFilters.value.push({
+                id: MAP_FILTER_NAME,
+                name: MAP_FILTER_NAME,
+                clear: () => clear(MAP_FILTER_NAME),
+            });
+        }
+    } else {
+        searchFilters.value = searchFilters.value.filter(
+            (filter) => filter.name !== MAP_FILTER_NAME,
+        );
     }
 }
 
