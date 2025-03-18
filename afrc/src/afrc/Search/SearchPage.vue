@@ -294,7 +294,7 @@ onMounted(async () => {
             </section>
             <div
                 v-if="showMap && dataLoaded"
-                style="width: 100%; height: 100%"
+                style="width: 100%; height: inherit"
             >
                 <InteractiveMap
                     :basemaps="basemaps"
@@ -444,9 +444,20 @@ section.afrc-search-results-panel {
     flex-grow: 1;
     padding: 15px;
     overflow-y: auto;
-    height: calc(100vh - 150px);
+    height: calc(
+        100vh - 50px
+    ); /* for display in a standalone plugin or embedded in AFS */
     min-width: 400px;
     background: #fff;
+}
+
+/* 
+The following rule is for display in as a standard plugin within RASColls.
+.base-manager-grid is an arches class, so this rule won't apply
+in a standalone plugin or when embedded in AFS.
+*/
+.base-manager-grid section.afrc-search-results-panel {
+    height: calc(100vh - 100px);
 }
 
 .search-result-list {
