@@ -28,7 +28,7 @@ const searchFilters = inject("searchFilters") as Ref<SearchFilter[]>;
 
 <style scoped>
 .search-filter-chip {
-    padding-right: 3px;
+    padding: 3px;
 }
 .search-filters {
     display: flex;
