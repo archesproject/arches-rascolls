@@ -201,7 +201,7 @@ watch(
                 "rascolls-search",
             ) as VectorTileSource;
             const oldUrl = src.tiles[0];
-            const newUrl = `${oldUrl}?cacheclear=${Date.now()}`;
+            const newUrl = `${oldUrl.split("?cacheclear")[0]}?cacheclear=${Date.now()}`;
             src.setTiles([newUrl]);
             updateCurrentPageOfSearchResults();
         }
