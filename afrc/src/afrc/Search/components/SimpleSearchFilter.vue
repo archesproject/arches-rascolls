@@ -100,7 +100,6 @@ const updateQuery = function () {
         }
     });
     filtersToClear.forEach((filterId) => {
-        console.log("clearing filter", filterId);
         clear(filterId);
     });
 
