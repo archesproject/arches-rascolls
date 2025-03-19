@@ -267,7 +267,7 @@ onMounted(async () => {
                         align-items: center;
                     "
                 >
-                    <div class="section-header">
+                    <div class="section-header afrc-search-results-header">
                         {{ resultsCount }}
                         <span v-if="searchFilters.length">Results</span
                         ><span v-else>Items</span>
@@ -429,6 +429,10 @@ header {
     margin-right: -15px;
     margin-top: 13px;
     gap: 0px;
+}
+
+.afrc-search-results-header {
+    min-width: 90px;
 }
 
 .section-tag {
