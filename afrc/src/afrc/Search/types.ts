@@ -112,5 +112,6 @@ export interface Acquisition {
 export interface SearchFilter {
     id: string;
     name: string;
+    type: string;
     clear(): void;
 }
