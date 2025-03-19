@@ -8,6 +8,7 @@ import type { AutoCompleteCompleteEvent } from "primevue/autocomplete";
 import arches from "arches";
 
 import type { GenericObject, SearchFilter } from "@/afrc/Search/types";
+import { TERM_FILTER_TYPE } from "@/afrc/Search/constants.ts";
 const searchFilters = inject("searchFilters") as Ref<SearchFilter[]>;
 const componentName = "term-filter";
 const props = defineProps({
@@ -36,12 +37,12 @@ watch(items, (newValue, oldValue) => {
 
 function clear(value: string) {
     for (const term of filter.value.terms as GenericObject[]) {
-        if (term.text === value) {
+        if (term.text === value && term.type === TERM_FILTER_TYPE) {
             filter.value.terms.splice(filter.value.terms.indexOf(term), 1);
         }
     }
     searchFilters.value = searchFilters.value.filter(
-        (filter) => filter.id !== value,
+        (filter) => filter.id !== value || filter.type !== TERM_FILTER_TYPE,
     );
 }
 
@@ -86,11 +87,11 @@ const updateQuery = function () {
             searchFilters.value.push({
                 id: term.text,
                 name: term.text,
+                type: TERM_FILTER_TYPE,
                 clear: () => clear(term.text),
             });
         }
     });
-
     const termIds: string[] = terms.map((term: GenericObject) => term.text);
     const filtersToClear: string[] = [];
     searchFilters.value.forEach((filter) => {
@@ -99,6 +100,7 @@ const updateQuery = function () {
         }
     });
     filtersToClear.forEach((filterId) => {
+        console.log("clearing filter", filterId);
         clear(filterId);
     });
 
@@ -163,7 +165,8 @@ const updateQuery = function () {
     font-size: 1.5rem;
     padding: 10px;
 }
-:deep(.p-autocomplete-chip) {
-    font-size: 1.5rem;
+
+:deep(.p-chip.p-component.p-autocomplete-chip) {
+    display: none;
 }
 </style>

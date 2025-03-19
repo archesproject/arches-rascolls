@@ -42,6 +42,7 @@ import {
     TOP_LEFT,
     TOP_RIGHT,
     MAP_FILTER_NAME,
+    MAP_FILTER_TYPE,
 } from "@/afrc/Search/components/InteractiveMap/constants.ts";
 
 import type { Ref } from "vue";
@@ -388,11 +389,11 @@ function selectNewlyDrawnFeature(e: DrawEvent) {
     });
 }
 
-function clear(id: string) {
+function clear() {
     draw.deleteAll();
     map.value!.fire("draw.delete");
     searchFilters.value = searchFilters.value.filter(
-        (filter) => filter.id !== id,
+        (filter) => filter.type !== MAP_FILTER_TYPE,
     );
 }
 
@@ -428,7 +429,8 @@ async function updateDrawnFeatures() {
             searchFilters.value.push({
                 id: MAP_FILTER_NAME,
                 name: MAP_FILTER_NAME,
-                clear: () => clear(MAP_FILTER_NAME),
+                type: MAP_FILTER_TYPE,
+                clear: () => clear(),
             });
         }
     } else {

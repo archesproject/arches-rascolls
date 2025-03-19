@@ -34,3 +34,4 @@ export const BUFFER_FILL_OPACITY = 0.3;
 export const MARKER_COLOR = "#C12";
 export const MARKER_HIGHLIGHT_COLOR = "#3F3";
 export const MAP_FILTER_NAME = "Map Filter";
+export const MAP_FILTER_TYPE = "map";

@@ -11,13 +11,15 @@ const searchFilters = inject("searchFilters") as Ref<SearchFilter[]>;
         <div
             v-for="(filter, index) in searchFilters"
             :key="index"
-            class="search-filter"
+            class="search-filter-chip"
         >
             <Button
+                :style="{ fontSize: '1.55rem', borderRadius: '3px' }"
                 :label="filter.name"
-                class="p-button"
-                severity="info"
-                raised
+                size="large"
+                severity="secondary"
+                icon="pi pi-times"
+                icon-pos="right"
                 @click="filter.clear()"
             />
         </div>
@@ -25,9 +27,8 @@ const searchFilters = inject("searchFilters") as Ref<SearchFilter[]>;
 </template>
 
 <style scoped>
-.search-filter {
-    margin: 0px;
-    padding: 3px;
+.search-filter-chip {
+    padding-right: 3px;
 }
 .search-filters {
     display: flex;
