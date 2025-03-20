@@ -8,7 +8,7 @@ import MapComponent from "@/afrc/Search/components/InteractiveMap/components/Map
 import MapFilter from "@/afrc/Search/components/InteractiveMap/components/MapFilter/MapFilter.vue";
 import InteractionsDrawer from "@/afrc/Search/components/InteractiveMap/components/InteractionsDrawer.vue";
 // import OverlayControls from "@/afrc/Search/components/InteractiveMap/components/OverlayControls.vue";
-// import BasemapControls from "@/afrc/Search/components/InteractiveMap/components/BasemapControls.vue";
+import BasemapControls from "@/afrc/Search/components/InteractiveMap/components/BasemapControls.vue";
 
 import { fetchSettings } from "@/afrc/Search/api.ts";
 
@@ -50,14 +50,14 @@ const mapInteractionItems: MapInteractionItem[] = [
     },
     {
         name: "Basemap",
-        header: "Map Filter",
-        component: MapFilter,
+        header: "Basemap",
+        component: BasemapControls,
         icon: "pi pi-map",
     },
     {
         name: "Overlays",
-        header: "Map Filter",
-        component: MapFilter,
+        header: "Overlays",
+        component: BasemapControls,
         icon: "pi pi-globe",
     },
 ];
