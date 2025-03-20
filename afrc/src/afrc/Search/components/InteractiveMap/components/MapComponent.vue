@@ -130,7 +130,7 @@ const popupContainerRerenderKey = ref(0);
 const searchMarkers: GenericObject = {};
 
 watch(
-    () => basemap,
+    () => props.basemap,
     (basemap) => {
         if (basemap) {
             updateBasemap(basemap as Basemap);
