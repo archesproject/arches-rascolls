@@ -40,7 +40,6 @@ onMounted(() => {
     <div
         v-for="basemap in basemaps"
         :key="basemap.id"
-        class="basemap-menu"
     >
         <div class="basemap-item">
             <RadioButton
