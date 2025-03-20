@@ -347,6 +347,27 @@ CANTALOUPE_HTTP_ENDPOINT = "http://localhost:8182/"
 
 ACCESSIBILITY_MODE = False
 
+RASCOLLS_BASEMAPS = [
+    {
+        "name": "positron",
+        "title": "Light",
+        "url": "https://tiles.openfreemap.org/styles/positron",
+        "attribution": "Tiles by <a href='https://www.openfreemap.org/'>Open Free Map</a>",
+        "addtomap": True,
+        "type": "xyz",
+        "iconclass": "fa fa-map",
+    },
+    {
+        "name": "liberty",
+        "title": "Streets",
+        "url": "https://tiles.openfreemap.org/styles/liberty",
+        "attribution": "Tiles by <a href='https://www.openfreemap.org/'>Open Free Map</a>",
+        "addtomap": False,
+        "type": "xyz",
+        "iconclass": "fa fa-map",
+    },
+]
+
 RENDERERS = [
     {
         "name": "imagereader",

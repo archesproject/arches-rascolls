@@ -37,6 +37,8 @@ export interface MapLayer {
     legend?: string | null;
     maplayerid?: string;
     name: string;
+    title: string;
+    url: string;
     searchonly?: boolean;
     sortorder?: number;
     visible: boolean;
