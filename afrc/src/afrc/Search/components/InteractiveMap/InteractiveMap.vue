@@ -7,7 +7,7 @@ import { useToast } from "primevue/usetoast";
 import MapComponent from "@/afrc/Search/components/InteractiveMap/components/MapComponent.vue";
 import MapFilter from "@/afrc/Search/components/InteractiveMap/components/MapFilter/MapFilter.vue";
 import InteractionsDrawer from "@/afrc/Search/components/InteractiveMap/components/InteractionsDrawer.vue";
-// import OverlayControls from "@/afrc/Search/components/InteractiveMap/components/OverlayControls.vue";
+import OverlayControls from "@/afrc/Search/components/InteractiveMap/components/OverlayControls.vue";
 import BasemapControls from "@/afrc/Search/components/InteractiveMap/components/BasemapControls.vue";
 
 import { fetchSettings } from "@/afrc/Search/api.ts";
@@ -57,7 +57,7 @@ const mapInteractionItems: MapInteractionItem[] = [
     {
         name: "Overlays",
         header: "Overlays",
-        component: BasemapControls,
+        component: OverlayControls,
         icon: "pi pi-globe",
     },
 ];

@@ -27,9 +27,24 @@ const overlays: Ref<Array<MapLayer>> = inject("overlays", ref([]));
         v-for="overlay in overlays"
         :key="overlay.id"
     >
-        <div style="display: flex; align-items: center">
+        <div class="overlay-item">
             <ToggleSwitch v-model="overlay.addtomap" />
             <label>{{ overlay.name }}</label>
         </div>
     </div>
 </template>
+
+<style scoped>
+.overlay-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+.overlay-item label {
+    padding: 7px;
+    margin-bottom: 0;
+}
+.overlay-item:hover {
+    background: #f7f6fa;
+}
+</style>
