@@ -38,6 +38,7 @@ class MapDataAPI(View):
             {
                 "map_layers": map_layers,
                 "map_sources": map_sources,
+                "rascolls_basemaps": settings.RASCOLLS_BASEMAPS,
                 # "resource_map_layers": resource_map_layers,
                 # "resource_map_sources": resource_map_sources,
             }
