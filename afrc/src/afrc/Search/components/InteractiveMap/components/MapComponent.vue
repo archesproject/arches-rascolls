@@ -608,7 +608,6 @@ function removeOverlayFromMap(overlay: MapLayer) {
 }
 
 function updateMapOverlays(overlays: Array<MapLayer>) {
-    // overlays.sort((a, b) => (b.sortorder ?? 0) - (a.sortorder ?? 0));
     for (let overlay of overlays) {
         overlay.layerdefinitions.forEach((layerDefinition: LayerDefinition) => {
             if (map.value!.getLayer(layerDefinition.id)) {
