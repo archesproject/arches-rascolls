@@ -21,6 +21,7 @@ const images: Ref<string[]> = ref([]);
 const acquisitions: Ref<Acquisition[]> = ref([]);
 const identifier: Ref<string> = ref("");
 const hasGeom: Ref<boolean> = ref(false);
+const placeNames: Ref<GenericObject[]> = ref([]);
 
 onMounted(async () => {
     getData();
@@ -46,6 +47,12 @@ async function getData() {
         !!resp.resource["Production "]?.[0]["Production_location"]?.[
             "Production_location_geo"
         ]?.geojson;
+    placeNames.value = resp.resource["Production "]?.[0][
+        "Production_location"
+    ]?.["instance_details"].map((place: GenericObject) => ({
+        name: place.display_value,
+        resourceid: place.resourceId,
+    }));
     acquisitions.value = resp.resource["Addition to Collection"]?.map(
         (tile: GenericObject) => ({
             person: tile?.["Addition to Collection_carried out by"][
@@ -230,6 +237,21 @@ function zoomToSearchResult(resourceid: string) {
             <div class="value-header">Analytic Data</div>
             <div class="value-entry">
                 <span class="resource-details-value">raman spectrum</span>
+            </div>
+        </div>
+        <div class="resource-details">
+            <div class="value-header">Associated Places</div>
+            <div
+                v-for="place in placeNames"
+                :key="place.resourceid"
+            >
+                <div class="value-entry">
+                    <span
+                        class="resource-details-value"
+                        @click="console.log(place)"
+                        >{{ place.name }}</span
+                    >
+                </div>
             </div>
         </div>
         <div v-if="hasGeom && showMap">
