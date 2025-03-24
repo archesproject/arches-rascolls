@@ -212,18 +212,32 @@ watch(
 watch(
     () => zoomToFeature,
     async (resource) => {
-        resultSelected.value = resource.value;
-        resultsSelected.value = [resource.value];
-        const extent = await fetchResourceBounds(resource.value as string);
-        if (extent) {
-            const bounds = [
-                [extent[0], extent[1]],
-                [extent[2], extent[3]],
-            ];
-            map.value!.fitBounds(
-                bounds as [[number, number], [number, number]],
-                { duration: 4500, maxZoom: 12 },
-            );
+        const [resourceId, action] = resource.value.split(":");
+        const extent = await fetchResourceBounds(resourceId as string);
+        if (action === "zoom") {
+            resultSelected.value = resourceId;
+            resultsSelected.value = [resourceId];
+            if (extent) {
+                map.value!.fitBounds(
+                    [
+                        [extent[0], extent[1]],
+                        [extent[2], extent[3]],
+                    ],
+                    { duration: 4500, maxZoom: 12 },
+                );
+            }
+        }
+        if (action === "search") {
+            draw.deleteAll();
+            draw.add({
+                type: "Feature",
+                properties: {},
+                geometry: {
+                    coordinates: [extent[0], extent[1]],
+                    type: "Point",
+                },
+            });
+            updateDrawnFeatures();
         }
     },
     { deep: true },

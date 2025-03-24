@@ -89,8 +89,8 @@ function clearResult() {
     resultsSelected.value = [];
 }
 
-function zoomToSearchResult(resourceid: string) {
-    zoomToFeature.value = resourceid;
+function zoomToSearchResult(resourceid: string, action: string) {
+    zoomToFeature.value = `${resourceid}:${action}`;
 }
 </script>
 
@@ -239,31 +239,56 @@ function zoomToSearchResult(resourceid: string) {
                 <span class="resource-details-value">raman spectrum</span>
             </div>
         </div>
-        <div class="resource-details">
-            <div class="value-header">Associated Places</div>
-            <div
-                v-for="place in placeNames"
-                :key="place.resourceid"
-            >
-                <div class="value-entry">
-                    <span
-                        class="resource-details-value"
-                        @click="console.log(place)"
-                        >{{ place.name }}</span
-                    >
+        <div>
+            <div class="resource-details">
+                <div class="value-header">Associated Places</div>
+                <div
+                    v-for="place in placeNames"
+                    :key="place.resourceid"
+                    style="
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: space-between;
+                    "
+                >
+                    <div class="value-entry">
+                        <span
+                            class="resource-details-value"
+                            @click="console.log(place)"
+                            >{{ place.name }}</span
+                        >
+                    </div>
+                    <div style="display: flex; flex-direction: row">
+                        <div v-if="hasGeom && showMap">
+                            <Button
+                                class="action-button"
+                                label="Zoom To"
+                                severity="secondary"
+                                text
+                                icon="pi pi-map-marker"
+                                size="large"
+                                @click="
+                                    zoomToSearchResult(resultSelected, 'zoom')
+                                "
+                            />
+                        </div>
+                        <div v-if="hasGeom && showMap">
+                            <Button
+                                class="action-button"
+                                label="Search Here"
+                                severity="secondary"
+                                text
+                                icon="pi pi-search"
+                                size="large"
+                                @click="
+                                    zoomToSearchResult(resultSelected, 'search')
+                                "
+                            />
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div v-if="hasGeom && showMap">
-            <Button
-                class="action-button"
-                label="Map"
-                severity="secondary"
-                text
-                icon="pi pi-map-marker"
-                size="large"
-                @click="zoomToSearchResult(resultSelected)"
-            />
         </div>
     </div>
 </template>
