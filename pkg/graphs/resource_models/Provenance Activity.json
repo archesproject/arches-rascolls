@@ -84,7 +84,7 @@
                     },
                     "is_editable": true,
                     "name": {
-                        "en": "TimeSpan"
+                        "en": "Move TimeSpan"
                     },
                     "nodegroup_id": "26a5678c-d772-11ef-825b-0275dc2ded29",
                     "sortorder": 0,
@@ -486,7 +486,7 @@
                     },
                     "is_editable": true,
                     "name": {
-                        "en": "TimeSpan"
+                        "en": "Promise TimeSpan"
                     },
                     "nodegroup_id": "26a5a616-d772-11ef-825b-0275dc2ded29",
                     "sortorder": 0,
@@ -834,7 +834,7 @@
                     },
                     "is_editable": true,
                     "name": {
-                        "en": "TimeSpan"
+                        "en": "Payment TimeSpan"
                     },
                     "nodegroup_id": "26a5db36-d772-11ef-825b-0275dc2ded29",
                     "sortorder": 1,
@@ -7076,8 +7076,10 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "timespan_n4",
-                    "config": {},
+                    "alias": "move_timespan",
+                    "config": {
+                        "en": ""
+                    },
                     "datatype": "semantic",
                     "description": "# Specific:\n\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
                     "exportable": false,
@@ -7088,7 +7090,7 @@
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": false,
-                    "name": "TimeSpan",
+                    "name": "Move TimeSpan",
                     "nodegroup_id": "26a5678c-d772-11ef-825b-0275dc2ded29",
                     "nodeid": "26a5678c-d772-11ef-825b-0275dc2ded29",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span",
@@ -7139,8 +7141,10 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "timespan_n1",
-                    "config": {},
+                    "alias": "provenance_activity_timespan",
+                    "config": {
+                        "en": ""
+                    },
                     "datatype": "semantic",
                     "description": "# Specific:\n\n\n# General:\nTimeSpan is used to record a span of time between two, possibly fuzzy, points. It can also have a known duration between those points.  For example, a 1 week activity might occur sometime between the first and third quarters of the year. See: https://linked.art/model/base/#time-span-details\n\n# Arches Note:\n\n\n* BranchId: la-timespan\n* FieldId: \n",
                     "exportable": false,
@@ -7151,7 +7155,7 @@
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": false,
-                    "name": "TimeSpan",
+                    "name": "Provenance Activity TimeSpan",
                     "nodegroup_id": "26a57510-d772-11ef-825b-0275dc2ded29",
                     "nodeid": "26a57510-d772-11ef-825b-0275dc2ded29",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span",
@@ -7406,8 +7410,10 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "timespan_n3",
-                    "config": {},
+                    "alias": "promise_timespan",
+                    "config": {
+                        "en": ""
+                    },
                     "datatype": "semantic",
                     "description": "# Specific:\n\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
                     "exportable": false,
@@ -7418,7 +7424,7 @@
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": false,
-                    "name": "TimeSpan",
+                    "name": "Promise TimeSpan",
                     "nodegroup_id": "26a5a616-d772-11ef-825b-0275dc2ded29",
                     "nodeid": "26a5a616-d772-11ef-825b-0275dc2ded29",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span",
@@ -7427,8 +7433,10 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "timespan_n2",
-                    "config": {},
+                    "alias": "acquisition_timespan",
+                    "config": {
+                        "en": ""
+                    },
                     "datatype": "semantic",
                     "description": "# Specific:\n\n\n# General:\nTimeSpan is used to record a span of time between two, possibly fuzzy, points. It can also have a known duration between those points.  For example, a 1 week activity might occur sometime between the first and third quarters of the year. See: https://linked.art/model/base/#time-span-details\n\n# Arches Note:\n\n\n* BranchId: la-timespan\n* FieldId: \n",
                     "exportable": false,
@@ -7439,7 +7447,7 @@
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": false,
-                    "name": "TimeSpan",
+                    "name": "Acquisition TimeSpan",
                     "nodegroup_id": "26a5aa6c-d772-11ef-825b-0275dc2ded29",
                     "nodeid": "26a5aa6c-d772-11ef-825b-0275dc2ded29",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span",
@@ -7448,8 +7456,10 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "timespan_n5",
-                    "config": {},
+                    "alias": "transfer_of_custody_timespan",
+                    "config": {
+                        "en": ""
+                    },
                     "datatype": "semantic",
                     "description": "# Specific:\n\n\n# General:\nTimeSpan is used to record a span of time between two, possibly fuzzy, points. It can also have a known duration between those points.  For example, a 1 week activity might occur sometime between the first and third quarters of the year. See: https://linked.art/model/base/#time-span-details\n\n# Arches Note:\n\n\n* BranchId: la-timespan\n* FieldId: \n",
                     "exportable": false,
@@ -7460,7 +7470,7 @@
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": false,
-                    "name": "TimeSpan",
+                    "name": "Transfer of Custody TimeSpan",
                     "nodegroup_id": "26a5aea4-d772-11ef-825b-0275dc2ded29",
                     "nodeid": "26a5aea4-d772-11ef-825b-0275dc2ded29",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span",
@@ -7553,8 +7563,10 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "name_n29",
-                    "config": {},
+                    "alias": "provenance_activity_name",
+                    "config": {
+                        "en": ""
+                    },
                     "datatype": "semantic",
                     "description": "# Specific:\n\n\n# General:\nIt is strongly recommended that every resource that should be rendered to an end user have at least one name. Different types of name can be distinguished using classifications. See: https://linked.art/model/base/#names\n\n# Arches Note:\nThis node's content should be the value for the title descriptor function, when used for a resource model.\n\n* BranchId: la-name\n* FieldId: \n",
                     "exportable": false,
@@ -7565,7 +7577,7 @@
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": false,
-                    "name": "Name",
+                    "name": "Provenance Activity Name",
                     "nodegroup_id": "26a5c4f2-d772-11ef-825b-0275dc2ded29",
                     "nodeid": "26a5c4f2-d772-11ef-825b-0275dc2ded29",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E33_E41_Linguistic_Appellation",
@@ -7658,8 +7670,10 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "timespan",
-                    "config": {},
+                    "alias": "payment_timespan",
+                    "config": {
+                        "en": ""
+                    },
                     "datatype": "semantic",
                     "description": "# Specific:\n\n\n# General:\nTimeSpan is used to record a span of time between two, possibly fuzzy, points. It can also have a known duration between those points.  For example, a 1 week activity might occur sometime between the first and third quarters of the year. See: https://linked.art/model/base/#time-span-details\n\n# Arches Note:\n\n\n* BranchId: la-timespan\n* FieldId: \n",
                     "exportable": false,
@@ -7670,7 +7684,7 @@
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": false,
-                    "name": "TimeSpan",
+                    "name": "Payment TimeSpan",
                     "nodegroup_id": "26a5db36-d772-11ef-825b-0275dc2ded29",
                     "nodeid": "26a5db36-d772-11ef-825b-0275dc2ded29",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span",
@@ -12042,8 +12056,8 @@
             "publication": {
                 "graph_id": "26a55ac6-d772-11ef-825b-0275dc2ded29",
                 "notes": null,
-                "publicationid": "8c144654-e417-11ef-9545-0275dc2ded29",
-                "published_time": "2025-02-05T15:18:45.729"
+                "publicationid": "adefef2e-0a98-11f0-aff1-469c1cc4c080",
+                "published_time": "2025-03-26T18:18:51.797"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -12076,9 +12090,9 @@
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 14.15 (Ubuntu 14.15-0ubuntu0.22.04.1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0, 64-bit",
-        "git hash": "fatal: not a git repository (or any of the parent directories): .git",
-        "os": "Linux",
-        "os version": "6.8.0-1021-aws"
+        "db": "PostgreSQL 16.3 (Debian 16.3-1.pgdg110+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 64-bit",
+        "git hash": "f36de630c 2025-03-12 10:30:23 -0600",
+        "os": "Darwin",
+        "os version": "23.3.0"
     }
 }
