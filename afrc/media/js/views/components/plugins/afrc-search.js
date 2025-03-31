@@ -6,7 +6,7 @@ import { DEFAULT_THEME } from "@/arches/themes/default.ts";
 import Search from '@/afrc/Search/SearchPage.vue';
 import AFRCSEarchTemplate from 'templates/views/components/plugins/afrc-search.htm';
 
-ko.components.register('afrc-search', {
+export default ko.components.register('afrc-search', {
     viewModel: function() {
         const RascollsThemePreset = definePreset(DEFAULT_THEME, {
             components: {
