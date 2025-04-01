@@ -212,9 +212,12 @@ watch(
 watch(
     () => zoomToFeature,
     async (resource) => {
+        if (!resource.value) {
+            return;
+        }
         const [resourceId, action] = resource.value.split(":");
-        const extent = await fetchResourceBounds(resourceId as string);
         if (action === "zoom") {
+            const extent = await fetchResourceBounds(resourceId as string);
             resultSelected.value = resourceId;
             resultsSelected.value = [resourceId];
             if (extent) {
@@ -228,17 +231,16 @@ watch(
             }
         }
         if (action === "search") {
-            draw.deleteAll();
-            draw.add({
-                type: "Feature",
-                properties: {},
-                geometry: {
-                    coordinates: [extent[0], extent[1]],
-                    type: "Point",
-                },
-            });
+            const features = await fetchResourceGeoJSON(resourceId as string);
+            if (features) {
+                draw.deleteAll();
+                features.features.forEach((feature: Feature) => {
+                    draw.add(feature);
+                });
+            }
             updateDrawnFeatures();
         }
+        resource.value = "";
     },
     { deep: true },
 );
