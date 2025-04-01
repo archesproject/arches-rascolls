@@ -216,10 +216,12 @@ watch(
             return;
         }
         const [resourceId, action] = resource.value.split(":");
-        if (action === "zoom") {
-            const extent = await fetchResourceBounds(resourceId as string);
+        if (action === "zoom-and-select") {
             resultSelected.value = resourceId;
             resultsSelected.value = [resourceId];
+        }
+        if (action === "zoom" || action === "zoom-and-select") {
+            const extent = await fetchResourceBounds(resourceId as string);
             if (extent) {
                 map.value!.fitBounds(
                     [

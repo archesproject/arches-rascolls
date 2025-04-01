@@ -241,6 +241,22 @@ function zoomToSearchResult(resourceid: string, action: string) {
         </div>
         <div>
             <div class="resource-details">
+                <div v-if="hasGeom && showMap">
+                    <Button
+                        class="action-button"
+                        label="Zoom To Item"
+                        severity="secondary"
+                        text
+                        icon="pi pi-map-marker"
+                        size="large"
+                        @click="
+                            zoomToSearchResult(
+                                resultSelected,
+                                'zoom-and-select',
+                            )
+                        "
+                    />
+                </div>
                 <div class="value-header">Associated Places</div>
                 <div
                     v-for="place in placeNames"
