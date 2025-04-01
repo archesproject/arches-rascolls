@@ -269,7 +269,7 @@ function zoomToSearchResult(resourceid: string, action: string) {
                                 icon="pi pi-map-marker"
                                 size="large"
                                 @click="
-                                    zoomToSearchResult(resultSelected, 'zoom')
+                                    zoomToSearchResult(place.resourceid, 'zoom')
                                 "
                             />
                         </div>
@@ -282,7 +282,10 @@ function zoomToSearchResult(resourceid: string, action: string) {
                                 icon="pi pi-search"
                                 size="large"
                                 @click="
-                                    zoomToSearchResult(resultSelected, 'search')
+                                    zoomToSearchResult(
+                                        place.resourceid,
+                                        'search',
+                                    )
                                 "
                             />
                         </div>
