@@ -18,12 +18,11 @@
         "vitest": "vitest --run --coverage"
     },
     "dependencies": {
-        "arches": "archesproject/arches#stable/7.6.6",
-        "maplibre-gl": "^4.6.0",
-        "primevue": "4.2.0"
+        "arches": "archesproject/arches#dev/8.0.x",
+        "maplibre-gl": "^4.6.0"
     },
     "devDependencies": {
-        "arches-dev-dependencies": "archesproject/arches-dev-dependencies#stable/7.6.6"
+        "arches-dev-dependencies": "archesproject/arches-dev-dependencies#dev/8.0.x"
     },
     "nodeModulesPaths": {
     },
