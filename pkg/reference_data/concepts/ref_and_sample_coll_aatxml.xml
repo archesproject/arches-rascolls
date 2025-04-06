@@ -3096,6 +3096,125 @@
         <skos:scopeNote xml:lang="en">{"id": "3d42cde5-d710-4ae9-95d7-d12902ffa845", "value": "The works produced by an artist or composer regarded collectively. For the collective body of works by a writer, use \"corpora.\""}</skos:scopeNote>
       </skos:Concept>
     </skos:narrower>
+    <skos:narrower>
+      <skos:Concept rdf:about="https://rascoll.usw1.gci.fargeo.net//2465ff6c-0185-479f-a545-13a1cdab4e69">
+        <dcterms:identifier xml:lang="en">{"id": "395345eb-5d00-40cd-847b-08022b7d77e5", "value": "http://vocab.getty.edu/aat/300312349"}</dcterms:identifier>
+        <skos:scopeNote xml:lang="en">{"id": "7487c9f4-c368-4029-941f-1995a1b94ade", "value": "All examples of a set number or amount of multiples, such as coins, notes, stamps, prints, copies of a newspaper, books, periodicals, etc. that were issued at one time or otherwise sharply distinguished in pattern, design, color, or identifying numbers from those issued at another time."}</skos:scopeNote>
+        <skos:inScheme rdf:resource="https://rascoll.usw1.gci.fargeo.net//b73e741b-46da-496c-8960-55cc1007bec4"/>
+        <skos:prefLabel xml:lang="en">{"id": "096149ff-b3a9-46d0-9d84-8986b91ca454", "value": "issues (object groupings)"}</skos:prefLabel>
+      </skos:Concept>
+    </skos:narrower>
+    <skos:narrower>
+      <skos:Concept rdf:about="https://rascoll.usw1.gci.fargeo.net//b3498065-2de2-43d1-945c-96713ffb1fb8">
+        <skos:scopeNote xml:lang="de">{"id": "afdfa077-538e-42bf-b222-0297f8b273bf", "value": "Sammlung, die ein Individuum zusammenstellt und besitzt und nicht \u00f6ffentliches Eigentum ist."}</skos:scopeNote>
+        <skos:inScheme rdf:resource="https://rascoll.usw1.gci.fargeo.net//b73e741b-46da-496c-8960-55cc1007bec4"/>
+        <skos:scopeNote xml:lang="en">{"id": "cb6e5970-92f1-4bc9-9bee-1b20d1d7c50c", "value": "Collections owned and maintained by private individuals, outside of the public domain."}</skos:scopeNote>
+        <skos:prefLabel xml:lang="en">{"id": "edc4c395-1c5c-4839-9a72-26f06baf85d4", "value": "private collections"}</skos:prefLabel>
+        <skos:prefLabel xml:lang="de">{"id": "a22cba05-467f-410d-bbcf-15ac4c700330", "value": "Privatsammlung"}</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">{"id": "d9ebad57-0a77-4dd7-bd0c-8f5a24095414", "value": "collections priv\u00e9es"}</skos:prefLabel>
+        <dcterms:identifier xml:lang="en">{"id": "8aad3b58-1b0e-4e88-97cd-d69db5f7fdde", "value": "http://vocab.getty.edu/aat/300146236"}</dcterms:identifier>
+      </skos:Concept>
+    </skos:narrower>
+    <skos:narrower>
+      <skos:Concept rdf:about="https://rascoll.usw1.gci.fargeo.net//8af67f6d-3f1b-4313-9668-d3969a0c5469">
+        <skos:inScheme rdf:resource="https://rascoll.usw1.gci.fargeo.net//b73e741b-46da-496c-8960-55cc1007bec4"/>
+        <skos:scopeNote xml:lang="en">{"id": "3d42cde5-d710-4ae9-95d7-d12902ffa845", "value": "The works produced by an artist or composer regarded collectively. For the collective body of works by a writer, use \"corpora.\""}</skos:scopeNote>
+        <skos:prefLabel xml:lang="en">{"id": "fddb8dc5-5b3d-48a3-a06a-64bbe10d82b0", "value": "oeuvre"}</skos:prefLabel>
+        <dcterms:identifier xml:lang="en">{"id": "884093dc-78b3-4af5-ac74-41dd97d5dc3c", "value": "http://vocab.getty.edu/aat/300070186"}</dcterms:identifier>
+      </skos:Concept>
+    </skos:narrower>
+    <skos:narrower>
+      <skos:Concept rdf:about="https://rascoll.usw1.gci.fargeo.net//fe2241bd-9fa0-463b-aa69-f26aca86f3ee">
+        <skos:inScheme rdf:resource="https://rascoll.usw1.gci.fargeo.net//b73e741b-46da-496c-8960-55cc1007bec4"/>
+        <dcterms:identifier xml:lang="en">{"id": "21257c37-5166-42c7-ac88-9abe3c58b9ee", "value": "http://vocab.getty.edu/aat/300241583"}</dcterms:identifier>
+        <skos:prefLabel xml:lang="en">{"id": "52a5d486-7cb2-4369-b0b1-2fec4f5ffdbf", "value": "components (objects parts)"}</skos:prefLabel>
+        <skos:prefLabel xml:lang="de">{"id": "57963d9b-3149-4e2c-8bf0-0c08f48bebc4", "value": "Bestandteil (Objekt)"}</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">{"id": "a6c2a176-323e-42b1-a589-64f6dfc58be2", "value": "Constituent parts of a larger object. A component differs from an item in that the item can stand alone as an independent work but the component typically cannot or does not stand alone. Examples are a panel of a polyptych or a discrete architectural component such as a dome."}</skos:scopeNote>
+        <skos:scopeNote xml:lang="de">{"id": "3f0b1afc-66d1-470e-bbe5-4494b73f16a7", "value": "Bestandteil von Objekten oder Strukturen."}</skos:scopeNote>
+      </skos:Concept>
+    </skos:narrower>
+    <skos:narrower>
+      <skos:Concept rdf:about="https://rascoll.usw1.gci.fargeo.net//4f4cf6d3-c30a-4f08-a733-c8bd1276067b">
+        <skos:prefLabel xml:lang="en">{"id": "0776c7d8-aed8-4ffb-a8f4-eb2f3e90e0fe", "value": "projects (object groupings)"}</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">{"id": "c056a705-584c-4521-848e-cdbb585d1994", "value": "Physical works, such as drawings and written documents, that were used in the planning or execution of a definable physical work or set of works; also includes the finished works. Alternatively, a project may be planned, but unexecuted. For the conceptual activities of planning or carrying out of proposed undertakings or creations, use projects (artistic concepts)."}</skos:scopeNote>
+        <skos:inScheme rdf:resource="https://rascoll.usw1.gci.fargeo.net//b73e741b-46da-496c-8960-55cc1007bec4"/>
+        <dcterms:identifier xml:lang="en">{"id": "bb557567-3830-4784-aa07-2dbb09dde65f", "value": "http://vocab.getty.edu/aat/300404832"}</dcterms:identifier>
+      </skos:Concept>
+    </skos:narrower>
+    <skos:narrower>
+      <skos:Concept rdf:about="https://rascoll.usw1.gci.fargeo.net//b8bff485-6f60-45ea-a9bc-32861ade7861">
+        <skos:inScheme rdf:resource="https://rascoll.usw1.gci.fargeo.net//b73e741b-46da-496c-8960-55cc1007bec4"/>
+        <skos:scopeNote xml:lang="en">{"id": "1fd7db53-efbd-4504-b842-8442551c350a", "value": "In archival description, subordinate groups or subdivisions of a group; archival groups that are parts of larger groups."}</skos:scopeNote>
+        <dcterms:identifier xml:lang="en">{"id": "b7e2604a-3623-460f-9674-f11d046d0234", "value": "http://vocab.getty.edu/aat/300404023"}</dcterms:identifier>
+        <skos:prefLabel xml:lang="en">{"id": "47a37a65-8061-4180-aac7-cf344d9c682e", "value": "subgroups (archival divisions)"}</skos:prefLabel>
+      </skos:Concept>
+    </skos:narrower>
+    <skos:narrower>
+      <skos:Concept rdf:about="https://rascoll.usw1.gci.fargeo.net//759cca44-5219-4074-beda-214a81c201b0">
+        <dcterms:identifier xml:lang="en">{"id": "e6241b43-94ff-4e4f-8d47-f0f41d9a0591", "value": "http://vocab.getty.edu/aat/300133146"}</dcterms:identifier>
+        <skos:scopeNote xml:lang="de">{"id": "df330848-baea-4f05-8d18-3c76bf490b18", "value": "Wird in Bezug auf eine Gruppe von Gegenst\u00e4nden verwendet, die zusammen benutzt oder betrachtet werden soll."}</skos:scopeNote>
+        <skos:prefLabel xml:lang="de">{"id": "4923980b-30ab-425b-936b-2c91702a8b3f", "value": "Set (Objektgruppe)"}</skos:prefLabel>
+        <skos:inScheme rdf:resource="https://rascoll.usw1.gci.fargeo.net//b73e741b-46da-496c-8960-55cc1007bec4"/>
+        <skos:scopeNote xml:lang="en">{"id": "0e02be5b-f3b6-4929-b444-f420c427b791", "value": "Assemblies of items that the creator intended to be kept or seen together, cuch as a tea set, a desk set, or a pair of terrestrial and celestial globes. A set differs from a collection in that it is typically smaller and it was intended by the creator to be grouped together. It is useful to catalog the set as a whole when the items in the set will not be cataloged separately or when there are characteristics of the whole set that may not be apparent in the individual records for the parts. "}</skos:scopeNote>
+        <skos:prefLabel xml:lang="en">{"id": "c8459b61-f670-4009-8348-7f719e536f78", "value": "sets (groups)"}</skos:prefLabel>
+      </skos:Concept>
+    </skos:narrower>
+    <skos:prefLabel xml:lang="en-us">{"id": "ad5208d1-ab0b-45ec-8e4d-702225bf9a0d", "value": "Collection Types"}</skos:prefLabel>
+    <skos:narrower>
+      <skos:Concept rdf:about="https://rascoll.usw1.gci.fargeo.net//3787d26c-11a1-447c-8a71-74b862714f5f">
+        <skos:scopeNote xml:lang="en">{"id": "f1606529-6e3c-466b-a89c-fceaa6bacf68", "value": "Refers to groups of archaeological artifacts found in association with each other, as from one level, activity area, or site, regardless of their material or type. "}</skos:scopeNote>
+        <skos:prefLabel xml:lang="en">{"id": "465c38c4-a7f4-4258-972d-46d7d59f8b0b", "value": "assemblages (archaeological artifacts)"}</skos:prefLabel>
+        <dcterms:identifier xml:lang="en">{"id": "65695d8b-dec1-4de5-b509-b673a9e4b6e7", "value": "http://vocab.getty.edu/aat/300256847"}</dcterms:identifier>
+        <skos:inScheme rdf:resource="https://rascoll.usw1.gci.fargeo.net//b73e741b-46da-496c-8960-55cc1007bec4"/>
+        <skos:prefLabel xml:lang="de">{"id": "18f48dae-5f56-49d9-819a-9274b9fcd0fd", "value": "Fundkomplex (Objektgruppe)"}</skos:prefLabel>
+        <skos:scopeNote xml:lang="de">{"id": "85ab8c52-68f6-4f82-a965-2b23caf9f795", "value": "Bezieht sich auf eine Ansammlung arch\u00e4ologischer Fundst\u00fccke, die zusammen gefunden wurden, entweder in einer Schicht, einem Arbeitsbereich oder einer Fundstelle, ungeachtet des Werkstoffes oder der Typologie."}</skos:scopeNote>
+      </skos:Concept>
+    </skos:narrower>
+    <skos:inScheme>
+      <skos:ConceptScheme rdf:about="https://rascoll.usw1.gci.fargeo.net//b73e741b-46da-496c-8960-55cc1007bec4">
+        <skos:hasTopConcept rdf:resource="https://rascoll.usw1.gci.fargeo.net//bbece28d-0e5e-41ca-b852-541c4948fe4d"/>
+        <skos:hasTopConcept rdf:resource="https://rascoll.usw1.gci.fargeo.net//4ca81629-eea8-4c65-a963-0012a9a33d7a"/>
+        <skos:hasTopConcept rdf:resource="https://rascoll.usw1.gci.fargeo.net//dfff7618-9251-4da9-b4cc-b9f659e12f5b"/>
+        <skos:hasTopConcept rdf:resource="https://rascoll.usw1.gci.fargeo.net//0d8ce64c-f83c-4994-bac5-21b33ae4055e"/>
+        <skos:hasTopConcept rdf:resource="https://rascoll.usw1.gci.fargeo.net//81c81e47-be9c-493e-915f-8e5a2338d7c9"/>
+        <skos:hasTopConcept rdf:resource="https://rascoll.usw1.gci.fargeo.net//61699f66-0d46-4452-b168-ba989809e77e"/>
+        <skos:hasTopConcept rdf:resource="https://rascoll.usw1.gci.fargeo.net//86678b32-84f0-4506-8161-a2c49fae74ee"/>
+        <dcterms:identifier xml:lang="en">{"id": "ddbd5d3a-ef87-41cb-84ba-5877bd1b596e", "value": "http://localhost:8000/b73e741b-46da-496c-8960-55cc1007bec4"}</dcterms:identifier>
+        <skos:hasTopConcept rdf:resource="https://rascoll.usw1.gci.fargeo.net//9266b424-a051-47ce-8743-1b5ae9a20ed7"/>
+        <skos:hasTopConcept rdf:resource="https://rascoll.usw1.gci.fargeo.net//1fc2970f-60b4-46fe-82e8-a874a978e6a3"/>
+        <skos:hasTopConcept rdf:resource="https://rascoll.usw1.gci.fargeo.net//fb9397d4-06fa-4f60-8493-b36198f6bceb"/>
+        <skos:hasTopConcept rdf:resource="https://rascoll.usw1.gci.fargeo.net//5bd3fd11-b460-42d1-ac1e-46eb1f86e9f4"/>
+        <skos:hasTopConcept rdf:resource="https://rascoll.usw1.gci.fargeo.net//0c67ce57-dcd1-4cac-8e4c-899acacfe7d9"/>
+        <skos:hasTopConcept rdf:resource="https://rascoll.usw1.gci.fargeo.net//7764512c-494b-46e5-ad33-223836c8518b"/>
+        <skos:hasTopConcept rdf:resource="https://rascoll.usw1.gci.fargeo.net//9761c5b7-5d6e-4dd0-9845-2a53d1456091"/>
+        <skos:hasTopConcept rdf:resource="https://rascoll.usw1.gci.fargeo.net//ecb492a0-ece2-44cc-be2f-2773ba314d0d"/>
+        <skos:hasTopConcept rdf:resource="https://rascoll.usw1.gci.fargeo.net//75de259d-80da-4593-b175-fea47bad942c"/>
+        <skos:hasTopConcept rdf:resource="https://rascoll.usw1.gci.fargeo.net//43201e0e-3be9-445b-9b95-337b0a76094c"/>
+        <skos:hasTopConcept rdf:resource="https://rascoll.usw1.gci.fargeo.net//a86e97f3-2d33-4358-bbf2-e3b825502f2b"/>
+        <dcterms:title xml:lang="en-us">{"id": "2298bb79-cb40-4d6f-be92-89de824e15b3", "value": "AAT Entries"}</dcterms:title>
+        <skos:hasTopConcept rdf:resource="https://rascoll.usw1.gci.fargeo.net//0f3d6d10-5daf-45af-ba4d-c1543ba83374"/>
+        <skos:hasTopConcept rdf:resource="https://rascoll.usw1.gci.fargeo.net//42f66db6-b76f-416a-8fd8-5dc3f5d3c171"/>
+        <skos:hasTopConcept rdf:resource="https://rascoll.usw1.gci.fargeo.net//999692fa-3c5f-4d4a-8efa-44e792c45592"/>
+        <skos:hasTopConcept rdf:resource="https://rascoll.usw1.gci.fargeo.net//fd958d6c-1ad9-4e51-b6f0-33d23d04fbe0"/>
+        <skos:hasTopConcept rdf:resource="https://rascoll.usw1.gci.fargeo.net//25b3ec4f-9e1f-43d1-82fb-c6cc9325c2e4"/>
+        <skos:hasTopConcept rdf:resource="https://rascoll.usw1.gci.fargeo.net//e4ff9005-d58f-45b4-8dd0-6178fe8f4da9"/>
+        <skos:hasTopConcept rdf:resource="https://rascoll.usw1.gci.fargeo.net//47e23fb9-a593-433e-a1b4-32fa1f5576d1"/>
+        <skos:hasTopConcept rdf:resource="https://rascoll.usw1.gci.fargeo.net//861d4f3b-4521-430f-9493-1a697ea34be6"/>
+        <skos:hasTopConcept rdf:resource="https://rascoll.usw1.gci.fargeo.net//ebbc6d1b-20b1-4f39-b2b0-1881c1187e1b"/>
+        <skos:hasTopConcept rdf:resource="https://rascoll.usw1.gci.fargeo.net//87da0b3d-f6b7-4e40-aea3-15a0d7dc7878"/>
+        <skos:hasTopConcept rdf:resource="https://rascoll.usw1.gci.fargeo.net//84a1db8c-eb26-445f-be42-48ed6dc5b3fd"/>
+        <skos:hasTopConcept rdf:resource="https://rascoll.usw1.gci.fargeo.net//e5909f90-de56-40ed-8262-2b0b9ed629f2"/>
+        <skos:hasTopConcept rdf:resource="https://rascoll.usw1.gci.fargeo.net//04823117-0f18-42b6-b42e-f9f51bde4c16"/>
+        <skos:hasTopConcept rdf:resource="https://rascoll.usw1.gci.fargeo.net//4157e908-660c-45cc-a20f-06a3841b1543"/>
+        <skos:hasTopConcept rdf:resource="https://rascoll.usw1.gci.fargeo.net//c19aa471-036d-4828-8ae8-1a9c8c7792c6"/>
+        <skos:hasTopConcept rdf:resource="https://rascoll.usw1.gci.fargeo.net//9a0fb1f3-0d1b-480a-ae3d-382d5bc4256c"/>
+        <skos:hasTopConcept rdf:resource="https://rascoll.usw1.gci.fargeo.net//67d2e2c0-4a05-41fa-8e22-c8fda35ea76e"/>
+        <skos:hasTopConcept rdf:resource="https://rascoll.usw1.gci.fargeo.net//12a85b63-5210-4300-ac46-bb8d03bc98ec"/>
+        <skos:hasTopConcept rdf:resource="https://rascoll.usw1.gci.fargeo.net//f1e7c733-a149-4ffe-8f8e-620c852f4131"/>
+        <skos:hasTopConcept rdf:resource="https://rascoll.usw1.gci.fargeo.net//955f7d60-f1d7-4077-8765-1eb423fe7dcc"/>
+        <skos:hasTopConcept rdf:resource="https://rascoll.usw1.gci.fargeo.net//c9457185-7085-4ea2-a152-122d1bb28f12"/>
+      </skos:ConceptScheme>
+    </skos:inScheme>
   </skos:Concept>
   <skos:Concept rdf:about="http://localhost:8000/a71fd54f-7765-4908-ae89-0a4593d3cf69">
     <skos:scopeNote xml:lang="en">{"id": "cb926adf-0de3-4247-ae5c-afbabc337ef1", "value": "Listing items on hand."}</skos:scopeNote>
@@ -3131,6 +3250,7 @@
         <dcterms:identifier xml:lang="en">{"id": "85db1315-47bc-4b69-a10e-014c0f84f0b3", "value": "http://vocab.getty.edu/aat/300079654"}</dcterms:identifier>
       </skos:Concept>
     </skos:narrower>
+    <dcterms:identifier xml:lang="en">{"id": "61ff5eb6-7a3c-49b1-920a-a0e39d2cd0a0", "value": "http://localhost:8001/e3acac51-5f58-4a8d-8c25-0949b1f664df"}</dcterms:identifier>
     <skos:narrower>
       <skos:Concept rdf:about="http://localhost:8000/e15a5258-c4c6-479f-bd0b-30e83ec5a3f1">
         <dcterms:identifier xml:lang="en">{"id": "cfbaa1ab-2d5f-41ee-82f2-1b4f759d6c7b", "value": "http://vocab.getty.edu/aat/300417261"}</dcterms:identifier>
@@ -3139,6 +3259,7 @@
         <skos:prefLabel xml:lang="en">{"id": "5a40a5d2-e39e-4aa9-84f0-2a7fe47db845", "value": "extracting (information handling)"}</skos:prefLabel>
       </skos:Concept>
     </skos:narrower>
+    <skos:prefLabel xml:lang="en-us">{"id": "e6b76d25-ac44-402a-917e-6b7f60cb4af1", "value": "Identifier Types"}</skos:prefLabel>
     <skos:narrower>
       <skos:Concept rdf:about="http://localhost:8000/f3725a5c-4f37-4142-b252-86bdd125988a">
         <skos:scopeNote xml:lang="en">{"id": "c192ac2d-6873-4310-877e-ce50614056da", "value": "Superintending or managing the collections, exhibitions, research activities, and personnel of a museum, art gallery, zoo, or other place of exhibit; also, the superintending or managing of a single collection or subject of study in such an institution."}</skos:scopeNote>
@@ -3618,7 +3739,6 @@
         <skos:prefLabel xml:lang="en-us">{"id": "d9ca8f76-5cc2-4d88-a5d5-2aea468512fc", "value": "scholarly title "}</skos:prefLabel>
       </skos:Concept>
     </skos:narrower>
-    <skos:prefLabel xml:lang="en">{"id": "9a5d8d6e-bfdd-46cc-a4d5-a529a3af783b", "value": "titles (general, names)"}</skos:prefLabel>
     <skos:narrower>
       <skos:Concept rdf:about="http://localhost:8000/6bb65117-9c69-4aa7-a99b-fa1ad817495c">
         <skos:inScheme rdf:resource="http://localhost:8000/b73e741b-46da-496c-8960-55cc1007bec4"/>
@@ -5119,6 +5239,11 @@
         <dcterms:identifier xml:lang="en">{"id": "5d3dc27a-003a-47bc-8163-042e7183df6b", "value": "http://vocab.getty.edu/aat/300265124"}</dcterms:identifier>
       </skos:Concept>
     </skos:narrower>
+    <skos:inScheme rdf:resource="https://rascoll.usw1.gci.fargeo.net//b73e741b-46da-496c-8960-55cc1007bec4"/>
+    <dcterms:identifier xml:lang="en">{"id": "80416162-e6da-4ebd-a9f9-8a5fa53f50b8", "value": "http://localhost:8000/f2bd260c-a4ba-4b27-ba3b-961f37ca8016"}</dcterms:identifier>
+    <skos:prefLabel xml:lang="en">{"id": "000aa66c-3785-4461-b8ef-6932876dd710", "value": "photography techniques"}</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://rascoll.usw1.gci.fargeo.net//0f3d6d10-5daf-45af-ba4d-c1543ba83374">
     <skos:narrower>
       <skos:Concept rdf:about="http://localhost:8000/879c7e4e-2bce-490c-bb05-bf9ac6c3fe28">
         <dcterms:identifier xml:lang="en">{"id": "b455a2f1-e268-49a1-8ed4-413d092764b6", "value": "http://vocab.getty.edu/aat/300053462"}</dcterms:identifier>
