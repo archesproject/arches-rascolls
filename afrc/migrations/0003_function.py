@@ -131,7 +131,7 @@ class Migration(migrations.Migration):
                 SELECT sv.resourceinstanceid, r.graphid, r.graphid = target_graphid AS is_matching
                 FROM afrc_searchable_values sv
                 JOIN resource_instances r ON r.resourceinstanceid = sv.resourceinstanceid
-                WHERE sv.value ILIKE '%' || term || '%'
+                WHERE sv.value @@ plainto_tsquery(term)
                 ON CONFLICT (resourceinstanceid) DO NOTHING;
 
                 WITH first_level AS (
