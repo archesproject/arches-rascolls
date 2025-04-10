@@ -355,7 +355,7 @@ CANTALOUPE_HTTP_ENDPOINT = "http://localhost:8182/"
 
 ACCESSIBILITY_MODE = False
 
-RASCOLLS_BASEMAPS = [
+BASEMAPS = [
     {
         "name": "positron",
         "title": "Light",
