@@ -108,3 +108,8 @@ export interface Acquisition {
     date: number;
     details: string;
 }
+
+export interface Composition {
+    type: string;
+    mixture: string;
+}
