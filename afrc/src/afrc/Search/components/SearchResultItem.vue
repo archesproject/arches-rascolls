@@ -271,7 +271,7 @@ function zoomToSearchResult(resourceid: string) {
 }
 
 .result-displayname {
-    font-size: 1.33em;
+    font-size: 1.15em;
     font-weight: 500;
     color: #25476a;
     margin: 0px;
