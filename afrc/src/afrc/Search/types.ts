@@ -102,14 +102,3 @@ export interface UserRefAndSetter {
     user: Ref<User | null>;
     setUser: (userToSet: User | null) => void;
 }
-
-export interface Acquisition {
-    person: string;
-    date: number;
-    details: string;
-}
-
-export interface Composition {
-    type: string;
-    mixture: string;
-}

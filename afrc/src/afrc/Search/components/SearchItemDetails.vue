@@ -1,10 +1,8 @@
 <script setup lang="ts">
 import { onMounted, inject, ref, watch } from "vue";
 import type {
-    Acquisition,
     UnspecifiedObject,
     GenericObject,
-    Composition,
 } from "@/afrc/Search/types";
 import { fetchResourceData, fetchImageData } from "@/afrc/Search/api.ts";
 import type { Ref } from "vue";
@@ -23,6 +21,17 @@ const acquisitions: Ref<Acquisition[]> = ref([]);
 const composition: Ref<Composition[]> = ref([]);
 const identifier: Ref<string> = ref("");
 const hasGeom: Ref<boolean> = ref(false);
+
+interface Acquisition {
+    person: string;
+    date: number;
+    details: string;
+}
+
+interface Composition {
+    type: string;
+    mixture: string;
+}
 
 onMounted(async () => {
     getData();
