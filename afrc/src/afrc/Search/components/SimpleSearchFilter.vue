@@ -1,13 +1,15 @@
 <script setup lang="ts">
-import { ref, watch } from "vue";
+import { ref, watch, inject } from "vue";
+import type { Ref } from "vue";
 
 import AutoComplete from "primevue/autocomplete";
 import type { AutoCompleteCompleteEvent } from "primevue/autocomplete";
 
 import arches from "arches";
 
-import type { GenericObject } from "@/afrc/Search/types";
-
+import type { GenericObject, SearchFilter } from "@/afrc/Search/types";
+import { TERM_FILTER_TYPE } from "@/afrc/Search/constants.ts";
+const searchFilters = inject("searchFilters") as Ref<SearchFilter[]>;
 const componentName = "term-filter";
 const props = defineProps({
     updateFilter: {
@@ -18,7 +20,7 @@ const props = defineProps({
 // const emit = defineEmits(["update:filter"]);
 
 const items = ref();
-const filter = ref({ terms: [] });
+const filter = ref<{ terms: GenericObject[] }>({ terms: [] });
 
 watch(
     () => filter.value.terms,
@@ -32,6 +34,17 @@ watch(
 watch(items, (newValue, oldValue) => {
     console.log("Item has changed from", oldValue, "to", newValue);
 });
+
+function clear(value: string) {
+    for (const term of filter.value.terms as GenericObject[]) {
+        if (term.text === value && term.type === TERM_FILTER_TYPE) {
+            filter.value.terms.splice(filter.value.terms.indexOf(term), 1);
+        }
+    }
+    searchFilters.value = searchFilters.value.filter(
+        (filter) => filter.id !== value || filter.type !== TERM_FILTER_TYPE,
+    );
+}
 
 function search(event: AutoCompleteCompleteEvent) {
     // items.value = [...Array(10).keys()].map((item) => event.query + "-" + item);
@@ -68,6 +81,27 @@ const updateQuery = function () {
             term.type === "term"
         );
     }, this);
+
+    terms.forEach((term: GenericObject) => {
+        if (!searchFilters.value.find((filter) => filter.name === term.text)) {
+            searchFilters.value.push({
+                id: term.text,
+                name: term.text,
+                type: TERM_FILTER_TYPE,
+                clear: () => clear(term.text),
+            });
+        }
+    });
+    const termIds: string[] = terms.map((term: GenericObject) => term.text);
+    const filtersToClear: string[] = [];
+    searchFilters.value.forEach((filter) => {
+        if (!termIds.includes(filter.id)) {
+            filtersToClear.push(filter.id);
+        }
+    });
+    filtersToClear.forEach((filterId) => {
+        clear(filterId);
+    });
 
     // const query = {};// JSON.parse(props.queryString);
     // // if (terms.length > 0){
@@ -130,7 +164,8 @@ const updateQuery = function () {
     font-size: 1.5rem;
     padding: 10px;
 }
-:deep(.p-autocomplete-chip) {
-    font-size: 1.5rem;
+
+:deep(.p-chip.p-component.p-autocomplete-chip) {
+    display: none;
 }
 </style>
