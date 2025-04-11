@@ -1,9 +1,6 @@
 <script setup lang="ts">
 import { onMounted, inject, ref, watch } from "vue";
-import type {
-    UnspecifiedObject,
-    GenericObject,
-} from "@/afrc/Search/types";
+import type { UnspecifiedObject, GenericObject } from "@/afrc/Search/types";
 import { fetchResourceData, fetchImageData } from "@/afrc/Search/api.ts";
 import type { Ref } from "vue";
 import Button from "primevue/button";

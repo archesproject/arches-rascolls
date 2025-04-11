@@ -37,6 +37,8 @@ export interface MapLayer {
     legend?: string | null;
     maplayerid?: string;
     name: string;
+    title: string;
+    url: string;
     searchonly?: boolean;
     sortorder?: number;
     visible: boolean;
@@ -101,4 +103,11 @@ export interface User {
 export interface UserRefAndSetter {
     user: Ref<User | null>;
     setUser: (userToSet: User | null) => void;
+}
+
+export interface SearchFilter {
+    id: string;
+    name: string;
+    type: string;
+    clear(): void;
 }

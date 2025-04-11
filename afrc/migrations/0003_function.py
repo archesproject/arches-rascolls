@@ -1,4 +1,5 @@
 from django.db import migrations
+from arches.app.models.system_settings import settings
 
 
 class Migration(migrations.Migration):
@@ -131,7 +132,7 @@ class Migration(migrations.Migration):
                 SELECT sv.resourceinstanceid, r.graphid, r.graphid = target_graphid AS is_matching
                 FROM afrc_searchable_values sv
                 JOIN resource_instances r ON r.resourceinstanceid = sv.resourceinstanceid
-                WHERE sv.value ILIKE '%' || term || '%'
+                WHERE sv.value @@ plainto_tsquery(term)
                 ON CONFLICT (resourceinstanceid) DO NOTHING;
 
                 WITH first_level AS (
@@ -224,7 +225,11 @@ class Migration(migrations.Migration):
             'search', 
             'Manage Searchable Values Function', 
             'Makes a tiles searchable values available for search', 
-            '{}', 
+            concat('{"triggering_nodegroups": ["', (
+                select string_agg(distinct nodegroupid::text, '","') from nodes 
+                where datatype in ('string','non-localized-string','concept', 'concept-list') 
+                and graphid != '1d0ac51c-131a-11f0-bf26-469c1cc4c080'
+            ), '"]}')::jsonb, 
             'manage_searchable_values.py', 
             'ManageSearchableValues', 
             'views/components/functions/manage-searchable-values'
@@ -234,6 +239,36 @@ class Migration(migrations.Migration):
     reverse_register_searchable_values_function = """
         DELETE FROM public.functions WHERE functionid = 'c75ebc8d-7aae-4c99-981d-4219dbb4b789';
     """
+
+    def add_function_to_graphs(apps, schema_editor):
+        GraphModel = apps.get_model("models", "GraphModel")
+        FunctionXGraph = apps.get_model("models", "FunctionXGraph")
+        Function = apps.get_model("models", "Function")
+        resource_models = GraphModel.objects.filter(isresource=True).exclude(
+            graphid=settings.SYSTEM_SETTINGS_RESOURCE_ID
+        )
+        function = Function.objects.get(
+            functionid="c75ebc8d-7aae-4c99-981d-4219dbb4b789"
+        )
+        config = function.defaultconfig
+        for resource_model in resource_models:
+            function_x_graph = FunctionXGraph(
+                graph_id=resource_model.graphid,
+                function_id=function.functionid,
+                config=config,
+            )
+            function_x_graph.save()
+
+    def remove_function_from_graphs(apps, schema_editor):
+        GraphModel = apps.get_model("models", "GraphModel")
+        Function = apps.get_model("models", "Function")
+        fn = Function.objects.get(functionid="c75ebc8d-7aae-4c99-981d-4219dbb4b789")
+        resource_models = GraphModel.objects.filter(isresource=True).exclude(
+            graphid=settings.SYSTEM_SETTINGS_RESOURCE_ID
+        )
+        for resource_model in resource_models:
+            resource_model.functions.remove(fn)
+            resource_model.save()
 
     operations = [
         migrations.RunSQL(
@@ -254,4 +289,5 @@ class Migration(migrations.Migration):
             register_searchable_values_function,
             reverse_register_searchable_values_function,
         ),
+        migrations.RunPython(add_function_to_graphs, remove_function_from_graphs),
     ]

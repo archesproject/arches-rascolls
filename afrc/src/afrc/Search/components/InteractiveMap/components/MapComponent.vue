@@ -41,6 +41,8 @@ import {
     STYLE_LOAD_EVENT,
     TOP_LEFT,
     TOP_RIGHT,
+    MAP_FILTER_NAME,
+    MAP_FILTER_TYPE,
 } from "@/afrc/Search/components/InteractiveMap/constants.ts";
 
 import type { Ref } from "vue";
@@ -67,6 +69,7 @@ import type {
     MapLayer,
     MapSource,
     Settings,
+    SearchFilter,
 } from "@/afrc/Search/types.ts";
 
 interface Props {
@@ -108,6 +111,7 @@ let resultsSelected = inject("resultsSelected") as Ref<string[]>;
 let resultSelected = inject("resultSelected") as Ref<string>;
 let zoomToFeature = inject("zoomToFeature") as Ref<string>;
 let highlightResult = inject("highlightResult") as Ref<string>;
+const searchFilters = inject("searchFilters") as Ref<SearchFilter[]>;
 
 const emits = defineEmits([
     "mapInitialized",
@@ -130,7 +134,7 @@ const popupContainerRerenderKey = ref(0);
 const searchMarkers: GenericObject = {};
 
 watch(
-    () => basemap,
+    () => props.basemap,
     (basemap) => {
         if (basemap) {
             updateBasemap(basemap as Basemap);
@@ -197,7 +201,7 @@ watch(
                 "rascolls-search",
             ) as VectorTileSource;
             const oldUrl = src.tiles[0];
-            const newUrl = `${oldUrl}?cacheclear=${Date.now()}`;
+            const newUrl = `${oldUrl.split("?cacheclear")[0]}?cacheclear=${Date.now()}`;
             src.setTiles([newUrl]);
             updateCurrentPageOfSearchResults();
         }
@@ -385,6 +389,14 @@ function selectNewlyDrawnFeature(e: DrawEvent) {
     });
 }
 
+function clear() {
+    draw.deleteAll();
+    map.value!.fire("draw.delete");
+    searchFilters.value = searchFilters.value.filter(
+        (filter) => filter.type !== MAP_FILTER_TYPE,
+    );
+}
+
 async function updateDrawnFeatures() {
     const drawnFeatures = draw.getAll();
 
@@ -409,6 +421,22 @@ async function updateDrawnFeatures() {
             type: "FeatureCollection",
             features: [...drawnFeatures.features, ...bufferedFeatures.features],
         });
+        if (
+            !searchFilters.value.find(
+                (filter) => filter.name === MAP_FILTER_NAME,
+            )
+        ) {
+            searchFilters.value.push({
+                id: MAP_FILTER_NAME,
+                name: MAP_FILTER_NAME,
+                type: MAP_FILTER_TYPE,
+                clear: () => clear(),
+            });
+        }
+    } else {
+        searchFilters.value = searchFilters.value.filter(
+            (filter) => filter.name !== MAP_FILTER_NAME,
+        );
     }
 }
 
@@ -580,6 +608,13 @@ function removeOverlayFromMap(overlay: MapLayer) {
 }
 
 function updateMapOverlays(overlays: Array<MapLayer>) {
+    for (let overlay of overlays) {
+        overlay.layerdefinitions.forEach((layerDefinition: LayerDefinition) => {
+            if (map.value!.getLayer(layerDefinition.id)) {
+                map.value!.removeLayer(layerDefinition.id);
+            }
+        });
+    }
     for (let overlay of overlays) {
         if (overlay.addtomap) {
             addOverlayToMap(overlay);

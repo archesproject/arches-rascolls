@@ -41,11 +41,27 @@ onMounted(() => {
         v-for="basemap in basemaps"
         :key="basemap.id"
     >
-        <RadioButton
-            v-model="selectedBasemap"
-            :value="basemap"
-            :label="basemap.name"
-        />
-        <label>{{ basemap.name }}</label>
+        <div class="basemap-item">
+            <RadioButton
+                v-model="selectedBasemap"
+                :value="basemap"
+                :label="basemap.name"
+            />
+            <label>{{ basemap.name }}</label>
+        </div>
     </div>
 </template>
+
+<style scoped>
+.basemap-item {
+    display: flex;
+    align-items: baseline;
+    padding: 10px;
+}
+.basemap-item label {
+    padding: 7px;
+}
+.basemap-item:hover {
+    background: #f7f6fa;
+}
+</style>
