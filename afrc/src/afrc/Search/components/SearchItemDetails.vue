@@ -1,10 +1,6 @@
 <script setup lang="ts">
 import { onMounted, inject, ref, watch } from "vue";
-import type {
-    Acquisition,
-    UnspecifiedObject,
-    GenericObject,
-} from "@/afrc/Search/types";
+import type { UnspecifiedObject, GenericObject } from "@/afrc/Search/types";
 import { fetchResourceData, fetchImageData } from "@/afrc/Search/api.ts";
 import type { Ref } from "vue";
 import Button from "primevue/button";
@@ -19,8 +15,20 @@ const displayname: Ref<string> = ref("");
 const displaydescription: Ref<string> = ref("");
 const images: Ref<string[]> = ref([]);
 const acquisitions: Ref<Acquisition[]> = ref([]);
+const composition: Ref<Composition[]> = ref([]);
 const identifier: Ref<string> = ref("");
 const hasGeom: Ref<boolean> = ref(false);
+
+interface Acquisition {
+    person: string;
+    date: number;
+    details: string;
+}
+
+interface Composition {
+    type: string;
+    mixture: string;
+}
 
 onMounted(async () => {
     getData();
@@ -64,6 +72,12 @@ async function getData() {
                 .join(" "),
         }),
     );
+    composition.value = [
+        {
+            type: resp.resource["material"]?.["@display_value"],
+            mixture: resp.resource["mixture type"]?.["@display_value"],
+        },
+    ];
     displayname.value = resp.displayname;
     displaydescription.value = resp.displaydescription;
     identifier.value = accessionNumber
@@ -172,26 +186,21 @@ function zoomToSearchResult(resourceid: string) {
             class="resource-details"
             style="color: grey"
         >
-            <div class="value-header">Material Information</div>
-            <div class="value-entry">
-                Chemical (CAS) Number:<span class="resource-details-value"
-                    >1309-36-0</span
-                >
-            </div>
-            <div class="value-entry">
-                Chemical Formula:<span class="resource-details-value"
-                    >FeS2</span
-                >
-            </div>
-            <div class="value-entry">
-                Chemical Name:<span class="resource-details-value"
-                    >Iron Disulfide</span
-                >
-            </div>
-            <div class="value-entry">
-                Common Name:<span class="resource-details-value"
-                    >Pyrite, Fool's Gold</span
-                >
+            <div
+                v-for="(material, index) in composition"
+                :key="index"
+            >
+                <div class="value-header">Material Information</div>
+                <div class="value-entry">
+                    Materials:<span class="resource-details-value">{{
+                        material.type || "No material type provided"
+                    }}</span>
+                </div>
+                <div class="value-entry">
+                    Mixture Type:<span class="resource-details-value">{{
+                        material.mixture || "No mixture type provided"
+                    }}</span>
+                </div>
             </div>
         </div>
         <div class="resource-details">
