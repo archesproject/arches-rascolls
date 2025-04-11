@@ -225,7 +225,11 @@ class Migration(migrations.Migration):
             'search', 
             'Manage Searchable Values Function', 
             'Makes a tiles searchable values available for search', 
-            '{}', 
+            concat('{"triggering_nodegroups": ["', (
+                select string_agg(distinct nodegroupid::text, '","') from nodes 
+                where datatype in ('string','non-localized-string','concept', 'concept-list') 
+                and graphid != '1d0ac51c-131a-11f0-bf26-469c1cc4c080'
+            ), '"]}')::jsonb, 
             'manage_searchable_values.py', 
             'ManageSearchableValues', 
             'views/components/functions/manage-searchable-values'
@@ -234,22 +238,6 @@ class Migration(migrations.Migration):
 
     reverse_register_searchable_values_function = """
         DELETE FROM public.functions WHERE functionid = 'c75ebc8d-7aae-4c99-981d-4219dbb4b789';
-    """
-
-
-    configure_searchable_values_function = """
-        UPDATE functions
-        SET defaultconfig =
-            concat('{"triggering_nodegroups": ["', (
-            select string_agg(distinct nodegroupid::text, '","') from nodes 
-            where datatype in ('string','non-localized-string','concept', 'concept-list') 
-            and graphid != '1d0ac51c-131a-11f0-bf26-469c1cc4c080'
-        ), '"]}')::jsonb
-        WHERE functionid = 'c75ebc8d-7aae-4c99-981d-4219dbb4b789';
-    """
-    
-    reverse_configure_searchable_values_function = """
-        update functions set defaultconfig = '{}' where functionid = 'c75ebc8d-7aae-4c99-981d-4219dbb4b789';
     """
 
     def add_function_to_graphs(apps, schema_editor):
@@ -274,16 +262,13 @@ class Migration(migrations.Migration):
     def remove_function_from_graphs(apps, schema_editor):
         GraphModel = apps.get_model("models", "GraphModel")
         Function = apps.get_model("models", "Function")
-        fn = Function.objects.get(
-            functionid="c75ebc8d-7aae-4c99-981d-4219dbb4b789"
-        )
+        fn = Function.objects.get(functionid="c75ebc8d-7aae-4c99-981d-4219dbb4b789")
         resource_models = GraphModel.objects.filter(isresource=True).exclude(
             graphid=settings.SYSTEM_SETTINGS_RESOURCE_ID
         )
         for resource_model in resource_models:
             resource_model.functions.remove(fn)
             resource_model.save()
-
 
     operations = [
         migrations.RunSQL(
@@ -303,10 +288,6 @@ class Migration(migrations.Migration):
         migrations.RunSQL(
             register_searchable_values_function,
             reverse_register_searchable_values_function,
-        ),
-        migrations.RunSQL(
-            configure_searchable_values_function,
-            reverse_configure_searchable_values_function,
         ),
         migrations.RunPython(add_function_to_graphs, remove_function_from_graphs),
     ]
