@@ -170,17 +170,15 @@ async function fetchSystemMapData() {
         );
 
         overlays.value.sort((a, b) => (b.sortorder ?? 0) - (a.sortorder ?? 0));
-        layers
-            .filter((layer: MapLayer) => !layer.isoverlay)
-            .forEach((layer: MapLayer) => {
-                basemaps.value.push({
-                    name: layer.name,
-                    active: layer.addtomap,
-                    value: layer.name,
-                    id: layer.name,
-                    url: "https://tiles.openfreemap.org/styles/positron",
-                });
+        mapData.rascolls_basemaps.forEach((layer: MapLayer) => {
+            basemaps.value.push({
+                name: layer.title,
+                active: layer.addtomap,
+                value: layer.name,
+                id: layer.name,
+                url: layer.url,
             });
+        });
 
         sources.value = mapData.map_sources;
     } catch (error) {

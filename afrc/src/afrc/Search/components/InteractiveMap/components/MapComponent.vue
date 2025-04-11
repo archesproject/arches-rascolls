@@ -134,7 +134,7 @@ const popupContainerRerenderKey = ref(0);
 const searchMarkers: GenericObject = {};
 
 watch(
-    () => basemap,
+    () => props.basemap,
     (basemap) => {
         if (basemap) {
             updateBasemap(basemap as Basemap);
@@ -626,6 +626,13 @@ function removeOverlayFromMap(overlay: MapLayer) {
 }
 
 function updateMapOverlays(overlays: Array<MapLayer>) {
+    for (let overlay of overlays) {
+        overlay.layerdefinitions.forEach((layerDefinition: LayerDefinition) => {
+            if (map.value!.getLayer(layerDefinition.id)) {
+                map.value!.removeLayer(layerDefinition.id);
+            }
+        });
+    }
     for (let overlay of overlays) {
         if (overlay.addtomap) {
             addOverlayToMap(overlay);
