@@ -1717,7 +1717,7 @@ class Migration(migrations.Migration):
         }
 
         reference_collections = {
-            "maplayerid": uuid.UUID("803829fe-b437-40b2-94a4-8ae10fa25b10"),
+            "maplayerid": uuid.UUID("0c23d1a3-3e6a-4e72-b413-a2a6c46f828b"),
             "sortorder": 1,
             "style": {
                 "name": "Reference Collections",
@@ -1857,15 +1857,21 @@ class Migration(migrations.Migration):
     def remove_map_layers(apps, schema_editor):
         MapSource = apps.get_model("models", "MapSource")
         MapLayer = apps.get_model("models", "MapLayer")
-        layerids = ("803829fe-b437-40b2-94a4-8ae10fa25b10",)
+        layerids = (
+            "803829fe-b437-40b2-94a4-8ae10fa25b10",
+            "0c23d1a3-3e6a-4e72-b413-a2a6c46f828b",
+        )
         for layerid in layerids:
-            mapbox_layer = MapLayer.objects.get(maplayerid=layerid)
-            all_sources = [i.get("source") for i in mapbox_layer.layerdefinitions]
-            sources = {i for i in all_sources if i}
-            for source in sources:
-                src = MapSource.objects.get(name=source)
-                src.delete()
-            mapbox_layer.delete()
+            try:
+                mapbox_layer = MapLayer.objects.get(maplayerid=layerid)
+                all_sources = [i.get("source") for i in mapbox_layer.layerdefinitions]
+                sources = {i for i in all_sources if i}
+                for source in sources:
+                    src = MapSource.objects.get(name=source)
+                    src.delete()
+                mapbox_layer.delete()
+            except MapLayer.DoesNotExist:
+                pass
 
     operations = [
         migrations.RunPython(add_map_layers, remove_map_layers),
