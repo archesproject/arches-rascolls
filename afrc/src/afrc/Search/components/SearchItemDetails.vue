@@ -289,12 +289,12 @@ function zoomToSearchResult(resourceid: string) {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 150px;
+    height: 250px;
 }
 
 .carousel-image {
     max-height: 250px;
-    max-width: 250px;
+    max-width: 300px;
 }
 
 .resource-details {
