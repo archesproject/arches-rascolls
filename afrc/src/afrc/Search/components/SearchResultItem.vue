@@ -7,10 +7,11 @@ import Skeleton from "primevue/skeleton";
 
 import arches from "arches";
 import { fetchImageData } from "@/afrc/Search/api.ts";
+import type { GenericObject } from "../types";
 
 const resultsSelected = inject("resultsSelected") as Ref<string[]>;
 const resultSelected = inject("resultSelected") as Ref<string>;
-const zoomToFeature = inject("zoomToFeature") as Ref<string>;
+const zoomFeature = inject("zoomFeature") as GenericObject;
 const highlightResult = inject("highlightResult") as Ref<string>;
 const showMap = inject("showMap") as Ref<string>;
 
@@ -55,7 +56,7 @@ function selectResult(resourceid: string) {
 }
 
 function zoomToSearchResult(resourceid: string) {
-    zoomToFeature.value = resourceid;
+    zoomFeature.value = {resourceid: resourceid, action: "zoom"};
 }
 </script>
 

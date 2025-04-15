@@ -109,7 +109,7 @@ const {
 
 let resultsSelected = inject("resultsSelected") as Ref<string[]>;
 let resultSelected = inject("resultSelected") as Ref<string>;
-let zoomToFeature = inject("zoomToFeature") as Ref<string>;
+let zoomFeature = inject("zoomFeature") as GenericObject;
 let highlightResult = inject("highlightResult") as Ref<string>;
 const searchFilters = inject("searchFilters") as Ref<SearchFilter[]>;
 
@@ -210,12 +210,13 @@ watch(
 );
 
 watch(
-    () => zoomToFeature,
-    async (resource) => {
-        if (!resource.value) {
+    () => zoomFeature,
+    async (zoomFeature) => {
+        if (!zoomFeature.value.resourceid) {
             return;
         }
-        const [resourceId, action] = resource.value.split(":");
+        const resourceId = zoomFeature.value.resourceid;
+        const action = zoomFeature.value.action;
         if (action === "zoom-and-select") {
             resultSelected.value = resourceId;
             resultsSelected.value = [resourceId];
@@ -242,7 +243,7 @@ watch(
             }
             updateDrawnFeatures();
         }
-        resource.value = "";
+        zoomFeature.value = {resource: "", action: ""};
     },
     { deep: true },
 );

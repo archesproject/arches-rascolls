@@ -12,7 +12,7 @@ import Carousel from "primevue/carousel";
 
 const resultSelected = inject("resultSelected") as Ref<string>;
 const resultsSelected = inject("resultsSelected") as Ref<string[]>;
-const zoomToFeature = inject("zoomToFeature") as Ref<string>;
+const zoomFeature = inject("zoomFeature") as GenericObject;
 const showMap = inject("showMap") as Ref<string>;
 
 const displayname: Ref<string> = ref("");
@@ -90,7 +90,7 @@ function clearResult() {
 }
 
 function zoomToSearchResult(resourceid: string, action: string) {
-    zoomToFeature.value = `${resourceid}:${action}`;
+    zoomFeature.value = {resourceid, action};
 }
 </script>
 
@@ -308,7 +308,7 @@ function zoomToSearchResult(resourceid: string, action: string) {
                             )
                         "
                     />
-        </div>
+                </div>
     </div>
 </template>
 
