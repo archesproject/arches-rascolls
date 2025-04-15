@@ -241,22 +241,6 @@ function zoomToSearchResult(resourceid: string, action: string) {
         </div>
         <div>
             <div class="resource-details">
-                <div v-if="hasGeom && showMap">
-                    <Button
-                        class="action-button"
-                        label="Zoom To Item"
-                        severity="secondary"
-                        text
-                        icon="pi pi-map-marker"
-                        size="large"
-                        @click="
-                            zoomToSearchResult(
-                                resultSelected,
-                                'zoom-and-select',
-                            )
-                        "
-                    />
-                </div>
                 <div class="value-header">Associated Places</div>
                 <div
                     v-for="place in placeNames"
@@ -279,7 +263,7 @@ function zoomToSearchResult(resourceid: string, action: string) {
                         <div v-if="hasGeom && showMap">
                             <Button
                                 class="action-button"
-                                label="Zoom To"
+                                label="Zoom to Place"
                                 severity="secondary"
                                 text
                                 icon="pi pi-map-marker"
@@ -308,6 +292,22 @@ function zoomToSearchResult(resourceid: string, action: string) {
                     </div>
                 </div>
             </div>
+        </div>
+        <div v-if="hasGeom && showMap" class="zoom-to-item">
+                    <Button
+                        class="action-button"
+                        label="Zoom To Item"
+                        severity="secondary"
+                        text
+                        icon="pi pi-map-marker"
+                        size="large"
+                        @click="
+                            zoomToSearchResult(
+                                resultSelected,
+                                'zoom-and-select',
+                            )
+                        "
+                    />
         </div>
     </div>
 </template>
@@ -366,7 +366,11 @@ function zoomToSearchResult(resourceid: string, action: string) {
     color: #25476a;
     padding: 0px 3px;
 }
-
+.zoom-to-item {
+    padding: 0 1rem;
+    display: flex;
+    justify-content: start;
+}
 .close-button:hover {
     color: #25476a;
 }
