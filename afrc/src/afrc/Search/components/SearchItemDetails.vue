@@ -151,7 +151,7 @@ function zoomToSearchResult(resourceid: string) {
         >
             <Carousel
                 :value="images"
-                :num-visible="2"
+                :num-visible="1"
                 :num-scroll="1"
                 container-class="flex items-center"
             >
@@ -161,12 +161,10 @@ function zoomToSearchResult(resourceid: string) {
                     >
                         <div class="mb-4">
                             <div class="relative mx-auto">
-                                <div style="padding: 3px">
+                                <div class="carousel-image-container" style="padding: 3px">
                                     <img
                                         :src="image.data"
-                                        height="120px"
-                                        width="120px"
-                                        class="w-full rounded"
+                                        class="w-full rounded carousel-image"
                                     />
                                 </div>
                             </div>
@@ -291,6 +289,23 @@ function zoomToSearchResult(resourceid: string) {
     padding: 10px;
     line-height: 1.25;
 }
+
+.p-carousel-indicator-list-padding {
+    padding: 0px;
+}
+
+.carousel-image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+}
+
+.carousel-image {
+    max-height: 250px;
+    max-width: 300px;
+}
+
 .resource-details {
     padding: 10px;
 }
