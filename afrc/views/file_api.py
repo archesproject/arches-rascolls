@@ -11,8 +11,8 @@ class FileAPI(View):
         resource_ids = request.GET.get("resourceids")
         is_item = request.GET.get("item", None)
         if is_item:
-            digital_resource = ResourceXResource.objects.filter(resourceinstanceidfrom_id=resource_ids).filter(resourceinstanceto_graphid_id=digital_resource_graph_id)
-            resource_ids = digital_resource.values_list('resourceinstanceidto_id', flat=True)
+            digital_resource = ResourceXResource.objects.filter(from_resource_id=resource_ids).filter(to_resource_graph_id=digital_resource_graph_id)
+            resource_ids = digital_resource.values_list('to_resource_id', flat=True)
             resource_ids = [str(id) for id in resource_ids]
         else:
             resource_ids = resource_ids.split(",")
