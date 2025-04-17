@@ -88,10 +88,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
                 <nav id="myNavbar" class="navbar-collapse collapse" aria-label="{% trans 'Arches Application Navigation' %}">
                     <ul class="nav navbar-nav navbar-right">
                         <li>
-                            <a href="#info-block-1">{% trans "Arches Features" %}</a>
-                        </li>
-                        <li>
-                            <a href="{% url 'search_home' %}">{% trans "Search Arches" %}</a>
+                            <a href="{% url 'plugins' 'afrc-search' %}">{% trans "Search RaSColls" %}</a>
                         </li>
                         {% if user|can_create_resource_instance and user.username != 'anonymous' %}
                             <li>
