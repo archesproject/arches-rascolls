@@ -105,12 +105,6 @@ export interface UserRefAndSetter {
     setUser: (userToSet: User | null) => void;
 }
 
-export interface Acquisition {
-    person: string;
-    date: number;
-    details: string;
-}
-
 export interface SearchFilter {
     id: string;
     name: string;

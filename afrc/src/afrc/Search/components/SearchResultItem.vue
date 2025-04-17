@@ -95,10 +95,9 @@ function zoomToSearchResult(resourceid: string) {
             @mouseleave="clearHighlightResult"
         >
             <div class="image-placeholder">
-                <img
+                <img class="item-image"
                     v-if="image"
                     :src="image"
-                    class="item-image"
                 />
                 <div
                     v-else
@@ -246,10 +245,13 @@ function zoomToSearchResult(resourceid: string) {
     background-color: #eee;
     margin: 5px;
     margin-left: 15px;
+    display: flex;
+    align-items: center;
 }
 
 .item-image {
-    height: 118px;
+    max-height: 118px;
+    max-width: 118px;
     margin: 1px;
 }
 
@@ -258,7 +260,10 @@ function zoomToSearchResult(resourceid: string) {
     text-align: center;
     align-items: center;
     color: #555;
-    width: 118px;
+    justify-content: center;
+    height: 100%;
+    line-height: 1.15;
+    font-weight: 500;
     background-color: rgb(236, 236, 236);
 }
 
@@ -267,7 +272,7 @@ function zoomToSearchResult(resourceid: string) {
 }
 
 .result-displayname {
-    font-size: 1.33em;
+    font-size: 1.15em;
     font-weight: 500;
     color: #25476a;
     margin: 0px;
