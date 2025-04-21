@@ -24,16 +24,11 @@ const filter = ref<{ terms: GenericObject[] }>({ terms: [] });
 
 watch(
     () => filter.value.terms,
-    (newValue, oldValue) => {
-        console.log("Something has changed from", oldValue, "to", newValue);
+    () => {
         updateQuery();
     },
     { deep: true },
 );
-
-watch(items, (newValue, oldValue) => {
-    console.log("Item has changed from", oldValue, "to", newValue);
-});
 
 function clear(value: string) {
     for (const term of filter.value.terms as GenericObject[]) {
@@ -59,11 +54,9 @@ function search(event: AutoCompleteCompleteEvent) {
                     item.inverted = false;
                 });
             });
-            let ret = [
-                { label: "Terms", items: data.terms },
-                { label: "Concepts", items: data.concepts },
-            ];
-            ret[0].items.unshift({
+            let ret = [...data.terms, ...data.concepts];
+            ret = [...new Set(ret)];
+            ret.unshift({
                 text: event.query,
                 type: "term",
                 value: event.query,
@@ -124,18 +117,11 @@ const updateQuery = function () {
             fluid
             :suggestions="items"
             option-label="text"
-            option-group-label="label"
-            option-group-children="items"
             placeholder="find ..."
             input-class="autocomplete-input"
             :auto-option-focus="true"
             @complete="search"
         >
-            <template #optiongroup="slotProps">
-                <div class="option-group">
-                    {{ slotProps.option.label }}
-                </div>
-            </template>
             <template #option="slotProps">
                 <div class="search-option">
                     {{ slotProps.option.text }}
