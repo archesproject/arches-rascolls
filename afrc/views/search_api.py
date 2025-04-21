@@ -48,7 +48,7 @@ class SearchAPI(View):
         if term_filter := request.GET.get("term-filter", None):
             terms = json.loads(term_filter)
             if terms:
-                terms = [term["value"] for term in terms]
+                terms = [term["text"] for term in terms]
             results = get_related_resources_by_text(terms, settings.COLLECTIONS_GRAPHID)
         else:
             results = ResourceInstance.objects.filter(
