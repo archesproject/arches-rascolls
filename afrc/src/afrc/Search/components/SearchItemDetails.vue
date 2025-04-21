@@ -86,7 +86,11 @@ async function getData() {
         },
     ];
     displayname.value = resp.displayname;
-    displaydescription.value = resp.displaydescription;
+    const descriptionValue = resp.resource["Statement"]?.map(
+        (statement: GenericObject) =>
+            `${statement?.["Statement_content"]?.["@display_value"]}`,
+    );
+    displaydescription.value = descriptionValue ? descriptionValue.join("<br>") : descriptionValue;
     identifier.value = accessionNumber
         ? accessionNumber["Identifier_content"]["@display_value"]
         : "";
