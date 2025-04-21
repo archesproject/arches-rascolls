@@ -253,57 +253,65 @@ function zoomToSearchResult(resourceid: string, action: string) {
         <div>
             <div class="resource-details">
                 <div class="value-header">Associated Places</div>
-                <div
-                    v-for="place in placeNames"
-                    :key="place.resourceid"
-                    style="
-                        display: flex;
-                        flex-direction: row;
-                        align-items: center;
-                        justify-content: space-between;
-                    "
-                >
-                    <div class="value-entry">
-                        <span
-                            class="resource-details-value"
-                            @click="console.log(place)"
-                            >{{ place.name }}</span
+                    <div v-if="placeNames">
+                        <div
+                            v-for="place in placeNames"
+                            :key="place.resourceid"
+                            style="
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                justify-content: space-between;
+                            "
                         >
+                            <div class="value-entry">
+                                <span
+                                    class="resource-details-value"
+                                    @click="console.log(place)"
+                                    >{{ place.name }}</span
+                                >
+                            </div>
+                            <div style="display: flex; flex-direction: row">
+                                <div v-if="hasGeom && showMap">
+                                    <Button
+                                        class="action-button"
+                                        label="Zoom to Place"
+                                        severity="secondary"
+                                        text
+                                        icon="pi pi-map-marker"
+                                        size="large"
+                                        @click="
+                                            zoomToSearchResult(place.resourceid, 'zoom')
+                                        "
+                                    />
+                                </div>
+                                <div v-if="hasGeom && showMap">
+                                    <Button
+                                        class="action-button"
+                                        label="Search Here"
+                                        severity="secondary"
+                                        text
+                                        icon="pi pi-search"
+                                        size="large"
+                                        @click="
+                                            zoomToSearchResult(
+                                                place.resourceid,
+                                                'search',
+                                            )
+                                        "
+                                    />
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div style="display: flex; flex-direction: row">
-                        <div v-if="hasGeom && showMap">
-                            <Button
-                                class="action-button"
-                                label="Zoom to Place"
-                                severity="secondary"
-                                text
-                                icon="pi pi-map-marker"
-                                size="large"
-                                @click="
-                                    zoomToSearchResult(place.resourceid, 'zoom')
-                                "
-                            />
-                        </div>
-                        <div v-if="hasGeom && showMap">
-                            <Button
-                                class="action-button"
-                                label="Search Here"
-                                severity="secondary"
-                                text
-                                icon="pi pi-search"
-                                size="large"
-                                @click="
-                                    zoomToSearchResult(
-                                        place.resourceid,
-                                        'search',
-                                    )
-                                "
-                            />
-                        </div>
+                    <div
+                        v-else
+                        class="resource-details-value"
+                        >
+                        No associated places available
                     </div>
                 </div>
             </div>
-        </div>
         <div v-if="hasGeom && showMap" class="zoom-to-item">
                     <Button
                         class="action-button"
