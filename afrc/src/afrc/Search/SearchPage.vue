@@ -32,7 +32,7 @@ let queryString = ref(JSON.stringify(query));
 let searchResults = ref([]);
 let resultsCount = ref();
 let resultSelected = ref("");
-let zoomToFeature = ref("");
+let zoomFeature = ref({});
 let highlightResult = ref("");
 let spatialFilter: Ref<Feature[]> = ref([]);
 let forcePaginatorRepaint = ref(0);
@@ -52,7 +52,7 @@ const { $gettext } = useGettext();
 
 provide("resultsSelected", resultsSelected);
 provide("resultSelected", resultSelected);
-provide("zoomToFeature", zoomToFeature);
+provide("zoomFeature", zoomFeature);
 provide("highlightResult", highlightResult);
 provide("showMap", showMap);
 provide("searchFilters", searchFilters);

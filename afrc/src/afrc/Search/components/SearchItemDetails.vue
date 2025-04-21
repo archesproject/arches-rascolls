@@ -8,7 +8,7 @@ import Carousel from "primevue/carousel";
 
 const resultSelected = inject("resultSelected") as Ref<string>;
 const resultsSelected = inject("resultsSelected") as Ref<string[]>;
-const zoomToFeature = inject("zoomToFeature") as Ref<string>;
+const zoomFeature = inject("zoomFeature") as GenericObject;
 const showMap = inject("showMap") as Ref<string>;
 
 const displayname: Ref<string> = ref("");
@@ -18,6 +18,7 @@ const acquisitions: Ref<Acquisition[]> = ref([]);
 const composition: Ref<Composition[]> = ref([]);
 const identifier: Ref<string> = ref("");
 const hasGeom: Ref<boolean> = ref(false);
+const placeNames: Ref<GenericObject[]> = ref([]);
 
 interface Acquisition {
     person: string;
@@ -54,6 +55,12 @@ async function getData() {
         !!resp.resource["Production "]?.[0]["Production_location"]?.[
             "Production_location_geo"
         ]?.geojson;
+    placeNames.value = resp.resource["Production "]?.[0][
+        "Production_location"
+    ]?.["instance_details"].map((place: GenericObject) => ({
+        name: place.display_value,
+        resourceid: place.resourceId,
+    }));
     acquisitions.value = resp.resource["Addition to Collection"]?.map(
         (tile: GenericObject) => ({
             person: tile?.["Addition to Collection_carried out by"][
@@ -96,8 +103,8 @@ function clearResult() {
     resultsSelected.value = [];
 }
 
-function zoomToSearchResult(resourceid: string) {
-    zoomToFeature.value = resourceid;
+function zoomToSearchResult(resourceid: string, action: string) {
+    zoomFeature.value = {resourceid, action};
 }
 </script>
 
@@ -239,17 +246,76 @@ function zoomToSearchResult(resourceid: string) {
                 <span class="resource-details-value">raman spectrum</span>
             </div>
         </div>
-        <div v-if="hasGeom && showMap">
-            <Button
-                class="action-button"
-                label="Map"
-                severity="secondary"
-                text
-                icon="pi pi-map-marker"
-                size="large"
-                @click="zoomToSearchResult(resultSelected)"
-            />
+        <div>
+            <div class="resource-details">
+                <div class="value-header">Associated Places</div>
+                <div
+                    v-for="place in placeNames"
+                    :key="place.resourceid"
+                    style="
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: space-between;
+                    "
+                >
+                    <div class="value-entry">
+                        <span
+                            class="resource-details-value"
+                            @click="console.log(place)"
+                            >{{ place.name }}</span
+                        >
+                    </div>
+                    <div style="display: flex; flex-direction: row">
+                        <div v-if="hasGeom && showMap">
+                            <Button
+                                class="action-button"
+                                label="Zoom to Place"
+                                severity="secondary"
+                                text
+                                icon="pi pi-map-marker"
+                                size="large"
+                                @click="
+                                    zoomToSearchResult(place.resourceid, 'zoom')
+                                "
+                            />
+                        </div>
+                        <div v-if="hasGeom && showMap">
+                            <Button
+                                class="action-button"
+                                label="Search Here"
+                                severity="secondary"
+                                text
+                                icon="pi pi-search"
+                                size="large"
+                                @click="
+                                    zoomToSearchResult(
+                                        place.resourceid,
+                                        'search',
+                                    )
+                                "
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+        <div v-if="hasGeom && showMap" class="zoom-to-item">
+                    <Button
+                        class="action-button"
+                        label="Zoom To Item"
+                        severity="secondary"
+                        text
+                        icon="pi pi-map-marker"
+                        size="large"
+                        @click="
+                            zoomToSearchResult(
+                                resultSelected,
+                                'zoom-and-select',
+                            )
+                        "
+                    />
+                </div>
     </div>
 </template>
 
@@ -324,7 +390,11 @@ function zoomToSearchResult(resourceid: string) {
     color: #25476a;
     padding: 0px 3px;
 }
-
+.zoom-to-item {
+    padding: 0 1rem;
+    display: flex;
+    justify-content: start;
+}
 .close-button:hover {
     color: #25476a;
 }

@@ -109,7 +109,7 @@ const {
 
 let resultsSelected = inject("resultsSelected") as Ref<string[]>;
 let resultSelected = inject("resultSelected") as Ref<string>;
-let zoomToFeature = inject("zoomToFeature") as Ref<string>;
+let zoomFeature = inject("zoomFeature") as GenericObject;
 let highlightResult = inject("highlightResult") as Ref<string>;
 const searchFilters = inject("searchFilters") as Ref<SearchFilter[]>;
 
@@ -210,21 +210,40 @@ watch(
 );
 
 watch(
-    () => zoomToFeature,
-    async (resource) => {
-        resultSelected.value = resource.value;
-        resultsSelected.value = [resource.value];
-        const extent = await fetchResourceBounds(resource.value as string);
-        if (extent) {
-            const bounds = [
-                [extent[0], extent[1]],
-                [extent[2], extent[3]],
-            ];
-            map.value!.fitBounds(
-                bounds as [[number, number], [number, number]],
-                { duration: 4500, maxZoom: 12 },
-            );
+    () => zoomFeature,
+    async (zoomFeature) => {
+        if (!zoomFeature.value.resourceid) {
+            return;
         }
+        const resourceId = zoomFeature.value.resourceid;
+        const action = zoomFeature.value.action;
+        if (action === "zoom-and-select") {
+            resultSelected.value = resourceId;
+            resultsSelected.value = [resourceId];
+        }
+        if (action === "zoom" || action === "zoom-and-select") {
+            const extent = await fetchResourceBounds(resourceId as string);
+            if (extent) {
+                map.value!.fitBounds(
+                    [
+                        [extent[0], extent[1]],
+                        [extent[2], extent[3]],
+                    ],
+                    { duration: 4500, maxZoom: 12 },
+                );
+            }
+        }
+        if (action === "search") {
+            const features = await fetchResourceGeoJSON(resourceId as string);
+            if (features) {
+                draw.deleteAll();
+                features.features.forEach((feature: Feature) => {
+                    draw.add(feature);
+                });
+            }
+            updateDrawnFeatures();
+        }
+        zoomFeature.value = {resource: "", action: ""};
     },
     { deep: true },
 );
