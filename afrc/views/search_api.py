@@ -24,7 +24,7 @@ from django.views.generic import View
 from django.db import connection
 from django.utils.translation import get_language, gettext as _
 from django.db.models import Q
-from django.contrib.gis.geos import GEOSGeometry
+from django.contrib.gis.geos import GEOSGeometry, Polygon
 
 from arches.app.models.models import GeoJSONGeometry, ResourceInstance, TileModel
 from arches.app.models.system_settings import settings
@@ -40,10 +40,42 @@ searchresults_cache = caches["searchresults"]
 
 
 class SearchAPI(View):
+
+
+    def split_at_dateline(self, geom):
+        coords = list(geom.coords[0])
+        max_lon = max(lon for lon, lat in coords)
+        min_lon = min(lon for lon, lat in coords)
+        if max_lon > 180 and geom.dims == 2:
+            new_coords = []
+            for coords in geom.coords[0]:
+                lon, lat = coords
+                lon = lon - 360 if lon > 180 else -179.99
+                new_coords.append([lon, lat])
+            western_geom = GEOSGeometry(json.dumps({"coordinates": [new_coords,], "type":"Polygon"}))
+            eastern_geom = geom
+            east = GEOSGeometry('{"coordinates": [[[180.0, 86.0],[0.0,    86.0],[0.0,    -86.0],[180.0, -86.0],[180.0, 86.0]]],"type": "Polygon"}')
+            west = GEOSGeometry('{"coordinates": [[[0.0,   86.0],[-180.0, 86.0],[-180.0, -86.0],[0.0,   -86.0],[0.0, 86.0]]],"type": "Polygon"}')
+            return (eastern_geom.intersection(east), western_geom.intersection(west))
+    
+        if min_lon < 180 and geom.dims == 2:
+            new_coords = []
+            for coords in geom.coords[0]:
+                lon, lat = coords
+                lon = lon + 360 if lon > 180 else 179.99
+                new_coords.append([lon, lat])
+            eastern_geom = GEOSGeometry(json.dumps({"coordinates": [new_coords,], "type":"Polygon"}))
+            western_geom = geom
+            east = GEOSGeometry('{"coordinates": [[[180.0, 86.0],[0.0,    86.0],[0.0,    -86.0],[180.0, -86.0],[180.0, 86.0]]],"type": "Polygon"}')
+            west = GEOSGeometry('{"coordinates": [[[0.0,   86.0],[-180.0, 86.0],[-180.0, -86.0],[0.0,   -86.0],[0.0, 86.0]]],"type": "Polygon"}')
+            return (eastern_geom.intersection(east), western_geom.intersection(west))
+    
+        return [geom]
+        
+
     def get(self, request):
         current_page = int(request.GET.get("paging-filter", 1))
         page_size = int(settings.SEARCH_ITEMS_PER_PAGE)
-        searchid = request.GET.get("searchid", None)
         results = []
 
         if term_filter := request.GET.get("term-filter", None):
@@ -59,8 +91,9 @@ class SearchAPI(View):
         if map_filter := json.loads(request.GET.get("map-filter", "[]")):
             spatial_filters = Q()
             for feature in map_filter:
-                geom = GEOSGeometry(json.dumps(feature["geometry"]), srid=4326)
-                spatial_filters |= Q(geom__intersects=geom)
+                raw_geom = GEOSGeometry(json.dumps(feature["geometry"]), srid=4326)
+                for geom in self.split_at_dateline(raw_geom):
+                    spatial_filters |= Q(geom__intersects=geom)
 
             resourceids_in_buffer = GeoJSONGeometry.objects.filter(
                 spatial_filters, Q(node_id="bda54e4a-d376-11ef-a239-0275dc2ded29")
