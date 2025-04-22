@@ -2,9 +2,7 @@ import json
 import uuid
 from django.contrib.gis.geos import (
     GEOSGeometry,
-    GeometryCollection,
 )
-from django.db import connection
 from arches.app.models.system_settings import settings
 from arches.app.utils.geo_utils import GeoUtils as ArchesGeoUtils
 
