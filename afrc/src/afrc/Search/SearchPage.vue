@@ -17,6 +17,7 @@ import SearchResultItem from "@/afrc/Search/components/SearchResultItem.vue";
 import SearchItemDetails from "@/afrc/Search/components/SearchItemDetails.vue";
 import SearchFilterState from "@/afrc/Search/components/SearchFilterState.vue";
 import InteractiveMap from "@/afrc/Search/components/InteractiveMap/InteractiveMap.vue";
+import SearchFacet from "@/afrc/Search/components/SearchFacet.vue";
 import { fetchMapData } from "@/afrc/Search/api.ts";
 import type { GenericObject } from "@/afrc/Search/types";
 import type {
@@ -49,6 +50,35 @@ const newQuery = ref(true);
 const searchid = ref();
 const toast = useToast();
 const { $gettext } = useGettext();
+
+const searchFacetConfig = [
+    {
+        name: "reference-objects",
+        title: $gettext("Reference Objects"),
+        description: $gettext(
+            "Reference collection items such as papers, paints, textiles",
+        ),
+        icon: "pi pi-address-book",
+        selected: true,
+    },
+    {
+        name: "samples",
+        title: $gettext("Samples"),
+        description: $gettext(
+            "Materials removed from works of art or other reference objects",
+        ),
+        icon: "pi pi-chart-line",
+    },
+    {
+        name: "building-materials",
+        title: $gettext("Building Materials"),
+        description: $gettext(
+            "Construction materials and related objects",
+        ),
+        icon: "pi pi-building",
+    },
+];
+
 
 provide("resultsSelected", resultsSelected);
 provide("resultSelected", resultSelected);
@@ -333,44 +363,16 @@ onMounted(async () => {
                     </p>
                 </div>
                 <section class="facets">
-                    <div class="facet-item selected">
-                        <div class="facet-item-icon pi pi-address-book"></div>
-                        <h2 class="facet-item-title">Reference Objects</h2>
-                        <p class="facet-item-tag">
-                            Reference collection items such as papers, paints,
-                            textiles
-                        </p>
-                        <a
-                            class="facet-item-toggle"
-                            href="#"
-                            >(click to unselect)</a
-                        >
-                    </div>
-                    <div class="facet-item">
-                        <div class="facet-item-icon pi pi-chart-line"></div>
-                        <h2 class="facet-item-title">Samples</h2>
-                        <p class="facet-item-tag">
-                            Materials removed from works of art or other
-                            reference objects
-                        </p>
-                        <a
-                            class="facet-item-toggle"
-                            href="#"
-                            >(click to select)</a
-                        >
-                    </div>
-                    <div class="facet-item">
-                        <div class="facet-item-icon pi pi-building"></div>
-                        <h2 class="facet-item-title">Building Materials</h2>
-                        <p class="facet-item-tag">
-                            Construction materials and related objects
-                        </p>
-                        <a
-                            class="facet-item-toggle"
-                            href="#"
-                            >(click to select)</a
-                        >
-                    </div>
+                    <template
+                        v-for="facet in searchFacetConfig"
+                        :key="facet.name">
+                        <SearchFacet
+                            :title="facet.title"
+                            :description="facet.description"
+                            :icon="facet.icon"
+                            :selected="facet.selected || false"
+                        />
+                    </template>
                 </section>
             </aside>
         </main>
