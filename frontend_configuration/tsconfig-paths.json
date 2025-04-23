@@ -3,7 +3,7 @@
     "compilerOptions": {
         "paths": {
             "@/arches/*": [
-                "../../arches/arches/app/src/arches/*"
+                "../../ENV/arches/arches/app/src/arches/*"
             ],
             "@/afrc/*": [
                 "../afrc/src/afrc/*"

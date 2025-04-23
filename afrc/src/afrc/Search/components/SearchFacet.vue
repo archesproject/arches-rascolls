@@ -21,21 +21,11 @@ defineProps({
         type: String,
         default: "pi pi-address-book",
     },
-    selected: {
-        type: Boolean,
-        required: true,
-    },
 });
 
 const emits = defineEmits(["select"]);
 
-// function selectFacet(name: string, valueid: string) {
-//     emits("select", name, valueid);
-//     // const facet = searchFilters.value.find((filter) => filter.id === searchString);
-//     // if (facet) {
-//     //     facet.selected = !facet.selected;
-//     // }
-// }
+
 </script>
 
 <template>

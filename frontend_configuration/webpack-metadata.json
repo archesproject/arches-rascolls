@@ -1,16 +1,16 @@
 {
     "_comment": "This is a generated file. Do not edit directly.",
     "APP_RELATIVE_PATH": "afrc",
-    "APP_ROOT": "/Users/cyrus/Documents/projects/getty/afrc/arches-for-reference-and-sample-collection/afrc",
+    "APP_ROOT": "/Users/alexei/Work/Projects/arches/arches_projects/arches-for-reference-collections/arches-for-reference-collections/afrc",
     "ARCHES_APPLICATIONS": [
         "afrc"
     ],
     "ARCHES_APPLICATIONS_PATHS": {
-        "afrc": "/Users/cyrus/Documents/projects/getty/afrc/arches-for-reference-and-sample-collection/afrc"
+        "afrc": "/Users/alexei/Work/Projects/arches/arches_projects/arches-for-reference-collections/arches-for-reference-collections/afrc"
     },
-    "SITE_PACKAGES_DIRECTORY": "/Users/cyrus/Documents/projects/getty/afrc/envafrc/lib/python3.12/site-packages",
-    "PUBLIC_SERVER_ADDRESS": "http://localhost:8007/",
-    "ROOT_DIR": "/Users/cyrus/Documents/projects/getty/afrc/arches/arches",
+    "SITE_PACKAGES_DIRECTORY": "/Users/alexei/Work/Projects/arches/arches_projects/arches-for-reference-collections/ENV/lib/python3.12/site-packages",
+    "PUBLIC_SERVER_ADDRESS": "http://localhost:8000/",
+    "ROOT_DIR": "/Users/alexei/Work/Projects/arches/arches_projects/arches-for-reference-collections/ENV/arches/arches",
     "STATIC_URL": "/static/",
     "WEBPACK_DEVELOPMENT_SERVER_PORT": 9000
 }

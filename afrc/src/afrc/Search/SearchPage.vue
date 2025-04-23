@@ -60,7 +60,6 @@ const searchFacetConfig = [
             "Reference collection items such as papers, paints, textiles",
         ),
         icon: "pi pi-address-book",
-        selected: true,
         valueid: "f697d7f2-4956-4b14-8910-c7ca673e74ca",
     },
     {
@@ -70,7 +69,6 @@ const searchFacetConfig = [
             "Materials removed from works of art or other reference objects",
         ),
         icon: "pi pi-chart-line",
-        selected: false,
         valueid: "acccf634-141a-4710-bfdd-5f6501bea189",
     },
     {
@@ -78,7 +76,6 @@ const searchFacetConfig = [
         title: $gettext("Building Materials"),
         description: $gettext("Construction materials and related objects"),
         icon: "pi pi-building",
-        selected: false,
         valueid: "e00d394b-e914-4c89-961d-db8e62410ba2",
     },
 ];
@@ -402,7 +399,6 @@ onMounted(async () => {
                             :title="facet.title"
                             :description="facet.description"
                             :icon="facet.icon"
-                            :selected="facet.selected"
                             @select="onSelectFacet"
                         />
                     </template>
