@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { inject } from "vue";
+import { inject, ref } from "vue";
 import type { Ref } from "vue";
 
 import { useGettext } from "vue3-gettext";
@@ -11,8 +11,8 @@ const { $gettext } = useGettext();
 const searchFilters = inject("searchFilters") as Ref<SearchFilter[]>;
 const query = inject("query") as GenericObject;
 const queryString = inject("queryString") as Ref<string>;
-const selectedFacetName = inject("selectedFacetName") as Ref<string>;
 
+const selectedFacetName = ref("");
 const searchFacetConfig = [
     {
         name: "reference-objects",

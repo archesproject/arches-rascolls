@@ -46,7 +46,6 @@ const resultsSelected: Ref<string[]> = ref([]);
 const dataLoaded = ref(false);
 const loadingSearchResults = ref(true);
 const pageSize = ref();
-const selectedFacetName = ref("");
 const newQuery = ref(true);
 const searchid = ref();
 const toast = useToast();
@@ -58,7 +57,6 @@ provide("zoomFeature", zoomFeature);
 provide("highlightResult", highlightResult);
 provide("showMap", showMap);
 provide("searchFilters", searchFilters);
-provide("selectedFacetName", selectedFacetName);
 provide("query", query);
 provide("queryString", queryString);
 
