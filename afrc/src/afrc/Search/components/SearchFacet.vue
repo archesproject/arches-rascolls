@@ -2,55 +2,152 @@
 import { inject } from "vue";
 import type { Ref } from "vue";
 
-const selectedFacetName = inject("selectedFacetName") as Ref<string>;
-const emits = defineEmits(["select"]);
+import { useGettext } from "vue3-gettext";
 
-defineProps({
-    name: {
-        type: String,
-        required: true,
+import type { GenericObject, SearchFilter } from "@/afrc/Search/types";
+import { FACET_FILTER_TYPE } from "@/afrc/Search/constants.ts";
+
+const { $gettext } = useGettext();
+const searchFilters = inject("searchFilters") as Ref<SearchFilter[]>;
+const query = inject("query") as GenericObject;
+const queryString = inject("queryString") as Ref<string>;
+const selectedFacetName = inject("selectedFacetName") as Ref<string>;
+
+const searchFacetConfig = [
+    {
+        name: "reference-objects",
+        title: $gettext("Reference Objects"),
+        description: $gettext(
+            "Reference collection items such as papers, paints, textiles",
+        ),
+        icon: "pi pi-address-book",
+        valueid: "f697d7f2-4956-4b14-8910-c7ca673e74ca",
     },
-    title: {
-        type: String,
-        required: true,
+    {
+        name: "samples",
+        title: $gettext("Samples"),
+        description: $gettext(
+            "Materials removed from works of art or other reference objects",
+        ),
+        icon: "pi pi-chart-line",
+        valueid: "acccf634-141a-4710-bfdd-5f6501bea189",
     },
-    description: {
-        type: String,
-        default: null,
+    {
+        name: "building-materials",
+        title: $gettext("Building Materials"),
+        description: $gettext("Construction materials and related objects"),
+        icon: "pi pi-building",
+        valueid: "e00d394b-e914-4c89-961d-db8e62410ba2",
     },
-    icon: {
-        type: String,
-        default: "pi pi-address-book",
-    },
-});
+];
+
+function onSelectFacet(facet_name: string) {
+    const componentName = "advanced-search";
+    selectedFacetName.value =
+        selectedFacetName.value === facet_name ? "" : facet_name;
+
+    // Clear all the facet filter chips
+    searchFilters.value = searchFilters.value.filter(
+        (filter) => filter.type !== FACET_FILTER_TYPE,
+    );
+
+    if (selectedFacetName.value !== "") {
+        const facet = searchFacetConfig.find(
+            (facet) => facet.name === selectedFacetName.value,
+        );
+        const valueid = facet!.valueid;
+        query[componentName] = [
+            {
+                op: "and",
+                "e9b8d73c-09b7-11f0-b84f-0275dc2ded29": {
+                    op: "eq",
+                    val: valueid,
+                },
+            },
+        ];
+        if (
+            !searchFilters.value.find((filter) => filter.name === facet!.title)
+        ) {
+            searchFilters.value.push({
+                id: facet!.name,
+                name: facet!.title,
+                type: FACET_FILTER_TYPE,
+                clear: () => onSelectFacet(facet!.name),
+            });
+        }
+    } else {
+        delete query[componentName];
+    }
+    queryString.value = JSON.stringify(query);
+}
 </script>
 
 <template>
-    <div
-        class="facet-item-toggle"
-        @click.prevent="emits('select', name)"
-    >
-        <div
-            class="facet-item"
-            :class="{ selected: selectedFacetName === name }"
+    <div>
+        <h1 class="section-header">Search Facets</h1>
+        <p class="section-tag">
+            Select the Collections that you want to include in your search
+        </p>
+    </div>
+    <section class="facets">
+        <template
+            v-for="facet in searchFacetConfig"
+            :key="facet.name"
         >
             <div
-                class="facet-item-icon pi"
-                :class="icon"
-            ></div>
-            <h2 class="facet-item-title">{{ title }}</h2>
-            <p class="facet-item-tag">
-                {{ description }}
-            </p>
-            <div>
-                {{ selectedFacetName === name ? "Unselect" : "Select" }} this
-                facet
+                class="facet-item-toggle"
+                @click.prevent="onSelectFacet(facet.name)"
+            >
+                <div
+                    class="facet-item"
+                    :class="{ selected: selectedFacetName === facet.name }"
+                >
+                    <div
+                        class="facet-item-icon pi"
+                        :class="facet.icon"
+                    ></div>
+                    <h2 class="facet-item-title">{{ facet.title }}</h2>
+                    <p class="facet-item-tag">
+                        {{ facet.description }}
+                    </p>
+                    <div>
+                        {{
+                            selectedFacetName === facet.name
+                                ? "Unselect"
+                                : "Select"
+                        }}
+                        this facet
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
+        </template>
+    </section>
 </template>
 
 <style scoped>
+.section-header {
+    font-size: 1.33em;
+    font-weight: 500;
+    color: #25476a;
+    margin-top: 0px;
+    margin-bottom: 3px;
+}
+
+.section-tag {
+    font-size: 1em;
+    font-weight: 300;
+    color: #888;
+    line-height: 1.5;
+    margin: 0px;
+}
+
+.facets {
+    padding: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
 .facet-item {
     padding: 15px;
     border: 1px solid #ddd;
