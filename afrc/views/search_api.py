@@ -26,7 +26,7 @@ from django.utils.translation import get_language, gettext as _
 from django.db.models import Q
 from django.contrib.gis.geos import GEOSGeometry
 
-from arches.app.models.models import GeoJSONGeometry, ResourceInstance
+from arches.app.models.models import GeoJSONGeometry, ResourceInstance, TileModel
 from arches.app.models.system_settings import settings
 from arches.app.search.components.search_results import get_localized_descriptor
 from arches.app.search.elasticsearch_dsl_builder import Query, Ids
@@ -66,9 +66,46 @@ class SearchAPI(View):
             ).values_list("resourceinstance_id")
 
             results = set(resourceids_in_buffer).intersection(set(results))
+
+        if advanced_search_filter := request.GET.get("advanced-search", None):
+            print(advanced_search_filter)
+            advanced_search_filter = json.loads(advanced_search_filter)
+            # [{'op': 'and', 'e9b8d73c-09b7-11f0-b84f-0275dc2ded29': {'op': 'eq', 'val': 'f697d7f2-4956-4b14-8910-c7ca673e74ca'}}]
+            for filter in advanced_search_filter:
+                if filter["op"] == "and":
+                    for key, value in filter.items():
+                        if key != "op":
+                            # This is where you would apply the filter to the results
+                            # For example, you could use Q objects to build your query
+                            # and filter the results accordingly.
+                            # Example:
+                            # results = results.filter(Q(**{key: value}))
+                            results = TileModel.objects.filter(
+                                Q(**{f"data__{key}": value["val"]}),
+                            ).values_list("resourceinstance_id")
+                            pass
+                elif filter["op"] == "or":
+                    # Handle "or" operation
+                    # You can use Q objects to build your query and filter the results accordingly.
+                    # Example:
+                    # results = results.filter(Q(**{key: value}))
+                    pass
+                elif filter["op"] == "not":
+                    # Handle "not" operation
+                    # You can use Q objects to build your query and filter the results accordingly.
+                    # Example:
+                    # results = results.exclude(Q(**{key: value}))
+                    pass
+                else:
+                    # Handle other operations
+                    # You can use Q objects to build your query and filter the results accordingly.
+                    # Example:
+                    # results = results.filter(Q(**{key: value}))
+                    pass
+
         session_id = request.session._get_or_create_session_key()
 
-        if term_filter or map_filter:
+        if term_filter or map_filter or advanced_search_filter:
             searchresults_cache.set(session_id, [str(id[0]) for id in results])
         else:
             searchresults_cache.clear()

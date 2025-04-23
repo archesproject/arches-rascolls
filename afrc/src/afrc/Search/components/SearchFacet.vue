@@ -1,6 +1,14 @@
 <script setup lang="ts">
+import { inject } from "vue";
+import type { Ref } from "vue";
+
+const selectedFacetName = inject("selectedFacetName") as Ref<string>;
 
 defineProps({
+    name: {
+        type: String,
+        required: true,
+    },
     title: {
         type: String,
         required: true,
@@ -11,44 +19,51 @@ defineProps({
     },
     icon: {
         type: String,
-        default: 'pi pi-address-book',
+        default: "pi pi-address-book",
     },
     selected: {
         type: Boolean,
-        default: false,
-    },
-    // onClick: {
-    //     type: Function,
-    //     required: true,
-    // },
-    searchString: {
-        type: String,
-        default: "",
-        required: false,
+        required: true,
     },
 });
+
+const emits = defineEmits(["select"]);
+
+// function selectFacet(name: string, valueid: string) {
+//     emits("select", name, valueid);
+//     // const facet = searchFilters.value.find((filter) => filter.id === searchString);
+//     // if (facet) {
+//     //     facet.selected = !facet.selected;
+//     // }
+// }
 </script>
 
-
 <template>
-    <div class="facet-item" :class="{selected: selected}">
-    <div class="facet-item-icon pi" :class="icon"></div>
-    <h2 class="facet-item-title">{{ title }}</h2>
-    <p class="facet-item-tag">
-        {{ description }}
-    </p>
-    <a
+    <div
         class="facet-item-toggle"
-        href="#"
-        >(click to unselect)</a
+        @click.prevent="emits('select', name)"
     >
-</div>
+        <div
+            class="facet-item"
+            :class="{ selected: selectedFacetName === name }"
+        >
+            <div
+                class="facet-item-icon pi"
+                :class="icon"
+            ></div>
+            <h2 class="facet-item-title">{{ title }}</h2>
+            <p class="facet-item-tag">
+                {{ description }}
+            </p>
+            <div>
+                {{ selectedFacetName === name ? "Unselect" : "Select" }} this
+                facet
+            </div>
+        </div>
+    </div>
 </template>
 
-
 <style scoped>
-
-
 .facet-item {
     padding: 15px;
     border: 1px solid #ddd;

@@ -46,6 +46,7 @@ const resultsSelected: Ref<string[]> = ref([]);
 const dataLoaded = ref(false);
 const loadingSearchResults = ref(true);
 const pageSize = ref();
+const selectedFacetName = ref("");
 const newQuery = ref(true);
 const searchid = ref();
 const toast = useToast();
@@ -60,6 +61,7 @@ const searchFacetConfig = [
         ),
         icon: "pi pi-address-book",
         selected: true,
+        valueid: "f697d7f2-4956-4b14-8910-c7ca673e74ca",
     },
     {
         name: "samples",
@@ -68,17 +70,18 @@ const searchFacetConfig = [
             "Materials removed from works of art or other reference objects",
         ),
         icon: "pi pi-chart-line",
+        selected: false,
+        valueid: "acccf634-141a-4710-bfdd-5f6501bea189",
     },
     {
         name: "building-materials",
         title: $gettext("Building Materials"),
-        description: $gettext(
-            "Construction materials and related objects",
-        ),
+        description: $gettext("Construction materials and related objects"),
         icon: "pi pi-building",
+        selected: false,
+        valueid: "e00d394b-e914-4c89-961d-db8e62410ba2",
     },
 ];
-
 
 provide("resultsSelected", resultsSelected);
 provide("resultSelected", resultSelected);
@@ -86,6 +89,7 @@ provide("zoomFeature", zoomFeature);
 provide("highlightResult", highlightResult);
 provide("showMap", showMap);
 provide("searchFilters", searchFilters);
+provide("selectedFacetName", selectedFacetName);
 
 watch(queryString, () => {
     performSearch();
@@ -235,6 +239,32 @@ async function onPageChange(event: {
     console.log(queryString.value);
 }
 
+function onSelectFacet(facet_name: string) {
+    console.log("Facet selected: ", facet_name);
+    const componentName = "advanced-search";
+    selectedFacetName.value =
+        selectedFacetName.value === facet_name ? "" : facet_name;
+
+    if (selectedFacetName.value !== "") {
+        const facet = searchFacetConfig.find(
+            (facet) => facet.name === selectedFacetName.value,
+        );
+        const valueid = facet!.valueid;
+        query[componentName] = [
+            {
+                op: "and",
+                "e9b8d73c-09b7-11f0-b84f-0275dc2ded29": {
+                    op: "eq",
+                    val: valueid,
+                },
+            },
+        ];
+    } else {
+        delete query[componentName];
+    }
+    queryString.value = JSON.stringify(query);
+}
+
 onMounted(async () => {
     performSearch();
     await fetchSystemMapData();
@@ -365,12 +395,15 @@ onMounted(async () => {
                 <section class="facets">
                     <template
                         v-for="facet in searchFacetConfig"
-                        :key="facet.name">
+                        :key="facet.facet_name"
+                    >
                         <SearchFacet
+                            :name="facet.name"
                             :title="facet.title"
                             :description="facet.description"
                             :icon="facet.icon"
-                            :selected="facet.selected || false"
+                            :selected="facet.selected"
+                            @select="onSelectFacet"
                         />
                     </template>
                 </section>
