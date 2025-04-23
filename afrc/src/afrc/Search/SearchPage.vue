@@ -17,6 +17,7 @@ import SearchResultItem from "@/afrc/Search/components/SearchResultItem.vue";
 import SearchItemDetails from "@/afrc/Search/components/SearchItemDetails.vue";
 import SearchFilterState from "@/afrc/Search/components/SearchFilterState.vue";
 import InteractiveMap from "@/afrc/Search/components/InteractiveMap/InteractiveMap.vue";
+import SearchFacet from "@/afrc/Search/components/SearchFacet.vue";
 import { fetchMapData } from "@/afrc/Search/api.ts";
 import type { GenericObject } from "@/afrc/Search/types";
 import type {
@@ -56,6 +57,8 @@ provide("zoomFeature", zoomFeature);
 provide("highlightResult", highlightResult);
 provide("showMap", showMap);
 provide("searchFilters", searchFilters);
+provide("query", query);
+provide("queryString", queryString);
 
 watch(queryString, () => {
     performSearch();
@@ -325,53 +328,7 @@ onMounted(async () => {
             </div>
 
             <aside v-if="!showMap">
-                <div>
-                    <h1 class="section-header">Search Facets</h1>
-                    <p class="section-tag">
-                        Select the Collections that you want to include in your
-                        search
-                    </p>
-                </div>
-                <section class="facets">
-                    <div class="facet-item selected">
-                        <div class="facet-item-icon pi pi-address-book"></div>
-                        <h2 class="facet-item-title">Reference Objects</h2>
-                        <p class="facet-item-tag">
-                            Reference collection items such as papers, paints,
-                            textiles
-                        </p>
-                        <a
-                            class="facet-item-toggle"
-                            href="#"
-                            >(click to unselect)</a
-                        >
-                    </div>
-                    <div class="facet-item">
-                        <div class="facet-item-icon pi pi-chart-line"></div>
-                        <h2 class="facet-item-title">Samples</h2>
-                        <p class="facet-item-tag">
-                            Materials removed from works of art or other
-                            reference objects
-                        </p>
-                        <a
-                            class="facet-item-toggle"
-                            href="#"
-                            >(click to select)</a
-                        >
-                    </div>
-                    <div class="facet-item">
-                        <div class="facet-item-icon pi pi-building"></div>
-                        <h2 class="facet-item-title">Building Materials</h2>
-                        <p class="facet-item-tag">
-                            Construction materials and related objects
-                        </p>
-                        <a
-                            class="facet-item-toggle"
-                            href="#"
-                            >(click to select)</a
-                        >
-                    </div>
-                </section>
+                <SearchFacet />
             </aside>
         </main>
     </div>
@@ -433,13 +390,6 @@ header {
     min-width: 90px;
 }
 
-.section-tag {
-    font-size: 1em;
-    font-weight: 300;
-    color: #888;
-    line-height: 1.5;
-    margin: 0px;
-}
 .p-autocomplete-input-multiple {
     border-radius: 3px;
 }
@@ -500,66 +450,5 @@ aside {
     background: #fdfdfd;
     border-left: 1px #ccc solid;
     padding: 15px;
-}
-
-.facets {
-    padding: 16px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.facet-item {
-    padding: 15px;
-    border: 1px solid #ddd;
-    background: #fdfdfd;
-    text-align: center;
-    cursor: pointer;
-    width: 170px;
-    height: 170px;
-    border-radius: 3px;
-}
-.facet-item:hover {
-    background-color: #f0f8ff;
-    border-color: #007bff;
-}
-
-.facet-item.selected {
-    background-color: #f0f8ff;
-    border-color: #007bff;
-    filter: drop-shadow(2px 2px 3px #ccc);
-}
-.facet-item-title {
-    font-size: 1.05em;
-    font-weight: 300;
-    color: #25476a;
-    margin: 0px;
-}
-.facet-item-icon {
-    font-size: 18px;
-    padding: 11px;
-    border: 1px solid #aaa;
-    border-radius: 50%;
-    color: #aaa;
-    background: #eee;
-    margin-bottom: 10px;
-    height: 40px;
-    width: 40px;
-}
-.facet-item.selected .facet-item-icon {
-    border: 1px solid #244768;
-    border-radius: 50%;
-    color: #244768;
-    background: #98adc2;
-}
-.facet-item-tag {
-    font-size: 0.85em;
-    color: #aaa;
-    line-height: 1.15;
-    margin: 0px;
-}
-.facet-item-toggle {
-    color: #007bff;
-    font-size: 0.75em;
 }
 </style>
