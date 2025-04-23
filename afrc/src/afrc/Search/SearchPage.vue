@@ -237,7 +237,6 @@ async function onPageChange(event: {
 }
 
 function onSelectFacet(facet_name: string) {
-    console.log("Facet selected: ", facet_name);
     const componentName = "advanced-search";
     selectedFacetName.value =
         selectedFacetName.value === facet_name ? "" : facet_name;
