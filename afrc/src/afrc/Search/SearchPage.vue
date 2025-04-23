@@ -241,6 +241,11 @@ function onSelectFacet(facet_name: string) {
     selectedFacetName.value =
         selectedFacetName.value === facet_name ? "" : facet_name;
 
+    // Clear all the facet filter chips
+    searchFilters.value = searchFilters.value.filter(
+        (filter) => filter.type !== "FACET_FILTER_TYPE",
+    );
+
     if (selectedFacetName.value !== "") {
         const facet = searchFacetConfig.find(
             (facet) => facet.name === selectedFacetName.value,
@@ -255,6 +260,16 @@ function onSelectFacet(facet_name: string) {
                 },
             },
         ];
+        if (
+            !searchFilters.value.find((filter) => filter.name === facet!.title)
+        ) {
+            searchFilters.value.push({
+                id: facet!.name,
+                name: facet!.title,
+                type: "FACET_FILTER_TYPE",
+                clear: () => onSelectFacet(facet!.name),
+            });
+        }
     } else {
         delete query[componentName];
     }

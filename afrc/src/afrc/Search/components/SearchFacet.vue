@@ -3,6 +3,7 @@ import { inject } from "vue";
 import type { Ref } from "vue";
 
 const selectedFacetName = inject("selectedFacetName") as Ref<string>;
+const emits = defineEmits(["select"]);
 
 defineProps({
     name: {
@@ -22,10 +23,6 @@ defineProps({
         default: "pi pi-address-book",
     },
 });
-
-const emits = defineEmits(["select"]);
-
-
 </script>
 
 <template>
