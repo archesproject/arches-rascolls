@@ -44,6 +44,7 @@ class SearchAPI(View):
         current_page = int(request.GET.get("paging-filter", 1))
         page_size = int(settings.SEARCH_ITEMS_PER_PAGE)
         searchid = request.GET.get("searchid", None)
+        results = []
 
         if term_filter := request.GET.get("term-filter", None):
             terms = json.loads(term_filter)
@@ -68,7 +69,7 @@ class SearchAPI(View):
             results = set(resourceids_in_buffer).intersection(set(results))
 
         if advanced_search_filter := request.GET.get("advanced-search", None):
-            print(advanced_search_filter)
+            advanced_search_results = []
             advanced_search_filter = json.loads(advanced_search_filter)
             # [{'op': 'and', 'e9b8d73c-09b7-11f0-b84f-0275dc2ded29': {'op': 'eq', 'val': 'f697d7f2-4956-4b14-8910-c7ca673e74ca'}}]
             for filter in advanced_search_filter:
@@ -80,7 +81,7 @@ class SearchAPI(View):
                             # and filter the results accordingly.
                             # Example:
                             # results = results.filter(Q(**{key: value}))
-                            results = TileModel.objects.filter(
+                            advanced_search_results = TileModel.objects.filter(
                                 Q(**{f"data__{key}": value["val"]}),
                             ).values_list("resourceinstance_id")
                             pass
@@ -102,6 +103,8 @@ class SearchAPI(View):
                     # Example:
                     # results = results.filter(Q(**{key: value}))
                     pass
+
+            results = set(advanced_search_results).intersection(set(results))
 
         session_id = request.session._get_or_create_session_key()
 
