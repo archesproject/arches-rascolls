@@ -10,6 +10,14 @@ from arches.app.utils.geo_utils import GeoUtils as ArchesGeoUtils
 class GeoUtils(ArchesGeoUtils):
 
     def split_polygon_at_antimeridian(self, geom):
+        """
+        If a polygon is drawn starting in the west and extends into the east, its eastern coordinates
+        will be less that -180. If a polygon starts in the east and extends west, its western coordinates
+        will exceed 180. 
+        To correct for this, adjust the coordinates in the extended area, and split the polygon into two 
+        using an intersection with polygon for the corresponding hemisphere.
+        """
+
         if geom.dims == 2:
             geom_coords = geom.coords[0]
             extends_into_western_hemisphere = max(lon for lon, lat in geom_coords) > 180
