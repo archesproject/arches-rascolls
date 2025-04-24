@@ -42,7 +42,6 @@ searchresults_cache = caches["searchresults"]
 
 
 class SearchAPI(View):
-
     def get(self, request):
         current_page = int(request.GET.get("paging-filter", 1))
         page_size = int(settings.SEARCH_ITEMS_PER_PAGE)
