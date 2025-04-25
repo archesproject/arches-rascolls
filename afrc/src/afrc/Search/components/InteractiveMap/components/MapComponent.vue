@@ -324,14 +324,16 @@ async function fitBoundsOfFeatures(features: FeatureCollection) {
 
 async function updateFeatureSelection(selected: Ref<string[]>) {
     const source = map.value!.getSource("selected-resource") as GeoJSONSource;
-    if (selected.value.length) {
-        const geojson = await fetchResourceGeoJSON(selected.value[0]);
-        source.setData(geojson);
-    } else {
-        source.setData({
-            type: "FeatureCollection",
-            features: [],
-        });
+    if (source) {
+        if (selected.value.length) {
+            const geojson = await fetchResourceGeoJSON(selected.value[0]);
+            source.setData(geojson);
+        } else {
+            source.setData({
+                type: "FeatureCollection",
+                features: [],
+            });
+        }
     }
 }
 
