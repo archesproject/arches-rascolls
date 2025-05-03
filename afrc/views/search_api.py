@@ -20,19 +20,17 @@ import logging
 import json
 
 from django.core.cache import caches
+from django.core.paginator import Paginator
 from django.views.generic import View
 from django.db import connection
 from django.utils.translation import get_language, gettext as _
 from django.db.models import Q
-from django.contrib.gis.geos import GEOSGeometry, Polygon
+from django.contrib.gis.geos import GEOSGeometry
 
 from arches.app.models.models import GeoJSONGeometry, ResourceInstance, TileModel
-from arches.app.models.system_settings import settings
-from arches.app.search.components.search_results import get_localized_descriptor
-from arches.app.search.elasticsearch_dsl_builder import Query, Ids
-from arches.app.search.mappings import RESOURCES_INDEX
-from arches.app.search.search_engine_factory import SearchEngineFactory
+from arches.app.models.resource import Resource
 from arches.app.utils.response import JSONResponse
+from arches.app.models.system_settings import settings
 
 from afrc.utils.geo_utils import GeoUtils
 
@@ -139,22 +137,18 @@ def get_related_resources_by_text(search_query, graphid):
 def get_search_results_by_resourceids(
     resourceids, start=0, limit=settings.SEARCH_ITEMS_PER_PAGE
 ):
-    se = SearchEngineFactory().create()
-    query = Query(se, start=start, limit=limit)
-    query.add_query(Ids(ids=resourceids))
-    results = query.search(index=RESOURCES_INDEX)
-
-    descriptor_types = ("displaydescription", "displayname")
-    active_and_default_language_codes = (get_language(), settings.LANGUAGE_CODE)
-    for result in results["hits"]["hits"]:
-        for descriptor_type in descriptor_types:
-            descriptor = get_localized_descriptor(
-                result, descriptor_type, active_and_default_language_codes
-            )
-            if descriptor:
-                result["_source"][descriptor_type] = descriptor["value"]
-                if descriptor_type == "displayname":
-                    result["_source"]["displayname_language"] = descriptor["language"]
-            else:
-                result["_source"][descriptor_type] = _("Undefined")
+    resource_paginator = Paginator(resourceids, limit)
+    resources = ResourceInstance.objects.filter(
+        pk__in=resource_paginator.page(start + 1).object_list
+        ).prefetch_related("geojsongeometry_set")
+    results = []
+    lang = get_language()
+    for resource_instance in resources:
+        res = {}
+        res["resourceinstanceid"] = resource_instance.resourceinstanceid
+        res["displayname"] = resource_instance.descriptors[lang]["name"]
+        res["displaydescription"] = resource_instance.descriptors[lang]["description"]
+        res["displayname_language"] = lang
+        res["has_geom"] = resource_instance.geojsongeometry_set.exists()
+        results.append(res) 
     return results

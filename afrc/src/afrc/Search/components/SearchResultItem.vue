@@ -18,9 +18,9 @@ const showMap = inject("showMap") as Ref<string>;
 const image: Ref<string> = ref("");
 
 onMounted(async () => {
-    if (props.searchResult?._source) {
+    if (props.searchResult) {
         const res = await fetchImageData(
-            [props.searchResult._source.resourceinstanceid],
+            [props.searchResult.resourceinstanceid],
             true,
         );
         if (res.length > 0) {
@@ -109,7 +109,7 @@ function zoomToSearchResult(resourceid: string) {
             <div class="result-content">
                 <div>
                     <div class="result-displayname">
-                        {{ props.searchResult._source.displayname }}
+                        {{ props.searchResult.displayname }}
                     </div>
                     <div class="item-current-location">
                         <span class="breadcrumb-title">Current location:</span>
@@ -121,7 +121,7 @@ function zoomToSearchResult(resourceid: string) {
                         <span class="scope-note-title">Item description:</span>
                         <span
                             class="scope-note-content"
-                            v-html="searchResult._source.displaydescription"
+                            v-html="searchResult.displaydescription"
                         ></span>
                     </div>
                 </div>
@@ -136,7 +136,7 @@ function zoomToSearchResult(resourceid: string) {
                             size="large"
                             @click="
                                 selectResult(
-                                    searchResult._source.resourceinstanceid,
+                                    searchResult.resourceinstanceid,
                                 )
                             "
                         />
@@ -155,7 +155,7 @@ function zoomToSearchResult(resourceid: string) {
                         />
                         <div
                             v-if="
-                                searchResult._source?.points?.length && showMap
+                                searchResult.has_geom && showMap
                             "
                         >
                             <Button
@@ -167,7 +167,7 @@ function zoomToSearchResult(resourceid: string) {
                                 size="large"
                                 @click="
                                     zoomToSearchResult(
-                                        searchResult._source.resourceinstanceid,
+                                        searchResult.resourceinstanceid,
                                     )
                                 "
                             />
