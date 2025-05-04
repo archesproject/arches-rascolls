@@ -18,7 +18,7 @@ const showMap = inject("showMap") as Ref<string>;
 const image: Ref<string> = ref("");
 
 onMounted(async () => {
-    if (props.searchResult) {
+    if (props.searchResult?.resourceinstanceid) {
         const res = await fetchImageData(
             [props.searchResult.resourceinstanceid],
             true,
