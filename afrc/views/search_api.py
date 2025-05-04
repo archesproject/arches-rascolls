@@ -28,7 +28,6 @@ from django.db.models import Q
 from django.contrib.gis.geos import GEOSGeometry
 
 from arches.app.models.models import GeoJSONGeometry, ResourceInstance, TileModel
-from arches.app.models.resource import Resource
 from arches.app.utils.response import JSONResponse
 from arches.app.models.system_settings import settings
 
