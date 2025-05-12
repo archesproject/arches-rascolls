@@ -169,7 +169,7 @@ function onSelectFacet(facet_name: string) {
     filter: drop-shadow(2px 2px 3px #ccc);
 }
 .facet-item-title {
-    font-size: 1.05em;
+    font-size: 1.45rem;
     font-weight: 300;
     color: #25476a;
     margin: 0px;
@@ -192,13 +192,13 @@ function onSelectFacet(facet_name: string) {
     background: #98adc2;
 }
 .facet-item-tag {
-    font-size: 0.85em;
+    font-size: 1.2rem;
     color: #aaa;
     line-height: 1.15;
     margin: 0px;
 }
 .facet-item-toggle {
     color: #007bff;
-    font-size: 0.75em;
+    font-size: 1.15rem;
 }
 </style>
