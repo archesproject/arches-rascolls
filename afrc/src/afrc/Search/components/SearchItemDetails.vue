@@ -253,7 +253,7 @@ function zoomToSearchResult(resourceid: string, action: string) {
         <div>
             <div class="resource-details">
                 <div class="value-header">Associated Places</div>
-                    <div v-if="placeNames">
+                    <div v-if="placeNames?.length">
                         <div
                             v-for="place in placeNames"
                             :key="place.resourceid"
