@@ -247,7 +247,7 @@ function zoomToSearchResult(resourceid: string, action: string) {
         <div class="resource-details">
             <div class="value-header">Analytic Data</div>
             <div class="value-entry">
-                <span class="resource-details-value">raman spectrum</span>
+                <span class="resource-details-value">No analytic data available</span>
             </div>
         </div>
         <div>
@@ -312,22 +312,6 @@ function zoomToSearchResult(resourceid: string, action: string) {
                     </div>
                 </div>
             </div>
-        <div v-if="hasGeom && showMap" class="zoom-to-item">
-                    <Button
-                        class="action-button"
-                        label="Zoom To Item"
-                        severity="secondary"
-                        text
-                        icon="pi pi-map-marker"
-                        size="large"
-                        @click="
-                            zoomToSearchResult(
-                                resultSelected,
-                                'zoom-and-select',
-                            )
-                        "
-                    />
-                </div>
     </div>
 </template>
 
