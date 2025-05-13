@@ -39,6 +39,10 @@ watch(resultSelected, () => {
     getData();
 });
 
+watch(showMap, () => {
+    clearResult();
+});
+
 async function getData() {
     const resp = await fetchResourceData(resultSelected.value);
     const imageResourceids = resp.resource["Digital Reference"]?.map(
