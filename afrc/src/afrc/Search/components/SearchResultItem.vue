@@ -53,7 +53,7 @@ function clearHighlightResult() {
 function selectResult(resourceid: string) {
     resultSelected.value = resourceid;
     resultsSelected.value = [resourceid];
-    if (props.searchResult._source?.points?.length && showMap.value) {
+    if (props.searchResult.has_geom && showMap.value) {
         zoomFeature.value = {resourceid: resourceid, action: "zoom"};
     }
 }
