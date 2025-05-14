@@ -7,13 +7,122 @@ import inspect
 import semantic_version
 from datetime import datetime, timedelta
 from django.utils.translation import gettext_lazy as _
+from django.utils.crypto import get_random_string
 
 try:
     from arches.settings import *
 except ImportError:
     pass
 
+
+def get_env_variable(var_name):
+    msg = "Set the %s environment variable"
+    try:
+        return os.environ[var_name]
+    except KeyError:
+        error_msg = msg % var_name
+        raise ImproperlyConfigured(error_msg)
+
+
+def get_optional_env_variable(var_name, default=None) -> str:
+    try:
+        return os.environ[var_name]
+    except KeyError:
+        return default
+
+
 APP_NAME = "afrc"
+
+SECRETS_MODE = get_optional_env_variable("ARCHES_SECRETS_MODE", "ENV")
+
+APP_ROOT = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
+
+# environment variable names for postgres are built-ins for the pg client, do not modify
+DB_NAME = get_optional_env_variable("PGDATABASE", APP_NAME)
+DB_USER = get_optional_env_variable("PGUSER", "postgres")
+DB_PASSWORD = get_optional_env_variable("PGPASSWORD", "postgis")
+DB_HOST = get_optional_env_variable("PGHOST", "localhost")
+DB_PORT = get_optional_env_variable("PGPORT", "5432")
+
+ES_USER = get_optional_env_variable("ARCHES_ESUSER", "elastic")
+ES_PASSWORD = get_optional_env_variable("ARCHES_ESPASSWORD", "E1asticSearchforArche5")
+ES_HOST = get_optional_env_variable("ARCHES_ESHOST", "localhost")
+ES_PORT = int(get_optional_env_variable("ARCHES_ESPORT", "9200"))
+WEBPACK_DEVELOPMENT_SERVER_PORT = int(
+    get_optional_env_variable("ARCHES_WEBPACKDEVELOPMENTSERVERPORT", "8022")
+)
+ES_PROTOCOL = get_optional_env_variable("ARCHES_ESPROTOCOL", "http")
+ES_VALIDATE_CERT = get_optional_env_variable("ARCHES_ESVALIDATE", "True") == "True"
+DEBUG = bool(get_optional_env_variable("ARCHES_DJANGO_DEBUG", False))
+KIBANA_URL = get_optional_env_variable("ARCHES_KIBANA_URL", "http://localhost:5601/")
+KIBANA_CONFIG_BASEPATH = get_optional_env_variable(
+    "ARCHES_KIBANACONFIGBASEPATH", "kibana"
+)
+RESOURCE_IMPORT_LOG = get_optional_env_variable(
+    "ARCHES_RESOURCEIMPORTLOG", os.path.join(APP_ROOT, "logs", "resource_import.log")
+)
+ARCHES_LOG_PATH = get_optional_env_variable(
+    "ARCHES_LOGPATH", os.path.join(ROOT_DIR, "arches.log")
+)
+
+STORAGE_BACKEND = get_optional_env_variable(
+    "ARCHES_STORAGEBACKEND", "django.core.files.storage.FileSystemStorage"
+)
+
+if STORAGE_BACKEND == "storages.backends.s3.S3Storage":
+    import psutil
+
+    STORAGE_OPTIONS = {
+        "bucket_name": get_env_variable("ARCHES_S3BUCKETNAME"),
+        "file_overwrite": get_optional_env_variable("ARCHES_S3FILEOVERWRITE", "True")
+        == "True",
+        "signature_version": get_optional_env_variable(
+            "ARCHES_S3SIGNATUREVERSION", "s3v4"
+        ),
+        "region": get_optional_env_variable("ARCHES_S3REGION", "us-west-1"),
+        "max_memory_size": get_optional_env_variable(
+            "ARCHES_S3MAXMEMORY", str(psutil.virtual_memory().available * 0.5)
+        ),
+    }
+else:
+    STORAGE_OPTIONS = {}
+
+STORAGES = {
+    "default": {
+        "BACKEND": STORAGE_BACKEND,
+        "OPTIONS": STORAGE_OPTIONS,
+    },
+    "staticfiles": {
+        "BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage",
+    },
+}
+
+if SECRETS_MODE == "AWS":
+    try:
+        import boto3
+        import json
+
+        AWS_REGION = get_optional_env_variable("ARCHES_AWS_REGION", "us-west-1")
+        ES_SECRET_ID = get_env_variable("ARCHES_ES_SECRET_ID")
+        DB_SECRET_ID = get_env_variable("ARCHES_DB_SECRET_ID")
+        client = boto3.client("secretsmanager", region_name=AWS_REGION)
+        es_secret = json.loads(
+            client.get_secret_value(SecretId=ES_SECRET_ID)["SecretString"]
+        )
+        db_secret = json.loads(
+            client.get_secret_value(SecretId=DB_SECRET_ID)["SecretString"]
+        )
+        DB_NAME = APP_NAME
+        DB_USER = db_secret["username"]
+        DB_PASSWORD = db_secret["password"]
+        DB_HOST = db_secret["host"]
+        DB_PORT = db_secret["port"]
+        ES_USER = es_secret["user"]
+        ES_PASSWORD = es_secret["password"]
+        ES_HOST = es_secret["host"]
+    except (ModuleNotFoundError, ImportError):
+        pass
+
 APP_VERSION = semantic_version.Version(major=0, minor=0, patch=0)
 APP_ROOT = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
 
@@ -49,28 +158,26 @@ FILE_TYPES = [
 ]
 FILENAME_GENERATOR = "arches.app.utils.storage_filename_generator.generate_filename"
 UPLOADED_FILES_DIR = "uploadedfiles"
-
+chars = "abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)"
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-_u6%r8rchhf3pdc=*4c&6+hi_!low2jdthg+a0jq2z6y5yricw"
-
+SECRET_KEY = get_optional_env_variable(
+    "ARCHES_SECRET_KEY", "django-insecure-" + get_random_string(50, chars)
+)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ROOT_URLCONF = "afrc.urls"
 ROOT_HOSTCONF = "afrc.hosts"
 
-DEFAULT_HOST = "afrc"
-
+ELASTICSEARCH_HOSTS = [{"scheme": ES_PROTOCOL, "host": ES_HOST, "port": ES_PORT}]
 # Modify this line as needed for your project to connect to elasticsearch with a password that you generate
 ELASTICSEARCH_CONNECTION_OPTIONS = {
     "request_timeout": 30,
-    "verify_certs": False,
-    "basic_auth": ("elastic", "E1asticSearchforArche5"),
+    "verify_certs": ES_VALIDATE_CERT,
+    "basic_auth": (ES_USER, ES_PASSWORD),
 }
 
-# If you need to connect to Elasticsearch via an API key instead of username/password, use the syntax below:
-# ELASTICSEARCH_CONNECTION_OPTIONS = {"request_timeout": 30, "verify_certs": False, "api_key": "<ENCODED_API_KEY>"}
-# ELASTICSEARCH_CONNECTION_OPTIONS = {"request_timeout": 30, "verify_certs": False, "api_key": ("<ID>", "<API_KEY>")}
+DEFAULT_HOST = "afrc"
 
 # Your Elasticsearch instance needs to be configured with xpack.security.enabled=true to use API keys - update elasticsearch.yml or .env file and restart.
 
@@ -81,12 +188,21 @@ ELASTICSEARCH_CONNECTION_OPTIONS = {
 # Or Kibana: https://www.elastic.co/guide/en/kibana/current/api-keys.html
 
 # a prefix to append to all elasticsearch indexes, note: must be lower case
-ELASTICSEARCH_PREFIX = "afrc"
+ELASTICSEARCH_PREFIX = get_optional_env_variable("ARCHES_ES_INDEX_PREFIX", APP_NAME)
 
 ELASTICSEARCH_CUSTOM_INDEXES = []
-ELASTICSEARCH_HOSTS = [
-    {"scheme": "http", "host": "localhost", "port": ELASTICSEARCH_HTTP_PORT}
-]
+
+LOAD_DEFAULT_ONTOLOGY = False
+LOAD_PACKAGE_ONTOLOGIES = True
+
+ELASTICSEARCH_CUSTOM_INDEXES = []
+
+PUBLIC_SERVER_ADDRESS = get_optional_env_variable(
+    "ARCHES_PUBLIC_SERVER_ADDRESS", "http://localhost:8000/"
+)
+ARCHES_NAMESPACE_FOR_DATA_EXPORT = get_optional_env_variable(
+    "ARCHES_NAMESPACE_FOR_DATA_EXPORT", PUBLIC_SERVER_ADDRESS
+)
 # [{
 #     'module': 'afrc.search_indexes.sample_index.SampleIndex',
 #     'name': 'my_new_custom_index', <-- follow ES index naming rules
@@ -111,17 +227,17 @@ DATABASES = {
         "AUTOCOMMIT": True,
         "CONN_MAX_AGE": 0,
         "ENGINE": "django.contrib.gis.db.backends.postgis",
-        "HOST": "localhost",
-        "NAME": "afrc",
         "OPTIONS": {
             "options": "-c cursor_tuple_fraction=1",
         },
-        "PASSWORD": "postgis",
-        "PORT": "5432",
+        "HOST": DB_HOST,
+        "NAME": DB_NAME,
+        "PASSWORD": DB_PASSWORD,
+        "PORT": DB_PORT,
         "POSTGIS_TEMPLATE": "template_postgis",
         "TEST": {"CHARSET": None, "COLLATION": None, "MIRROR": None, "NAME": None},
         "TIME_ZONE": None,
-        "USER": "postgres",
+        "USER": DB_USER,
     }
 }
 
@@ -188,7 +304,7 @@ TEMPLATES = build_templates_config(
     app_root=APP_ROOT,
 )
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = get_optional_env_variable("ARCHES_ALLOWED_HOSTS", "*").split(",")
 
 SYSTEM_SETTINGS_LOCAL_PATH = os.path.join(
     APP_ROOT, "system_settings", "System_Settings.json"
