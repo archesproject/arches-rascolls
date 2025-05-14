@@ -114,7 +114,7 @@ function zoomToSearchResult(resourceid: string) {
                     <div class="item-current-location">
                         <span class="breadcrumb-title">Current location:</span>
                         <span class="breadcrumb"
-                            >CGI Room 222, Aisle 3, Level B, Case 3</span
+                            >{{props.searchResult.currentlocation}}</span
                         >
                     </div>
                     <div class="scope-note">
@@ -150,7 +150,7 @@ function zoomToSearchResult(resourceid: string) {
                             size="large"
                             icon="pi pi-pen-to-square"
                             :href="
-                                arches.urls.resource + '/' + searchResult._id
+                                arches.urls.resource + '/' + searchResult.resourceinstanceid
                             "
                         />
                         <div
