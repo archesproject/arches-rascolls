@@ -91,9 +91,9 @@ function selectResult(resourceid: string) {
     <section v-else>
         <div
             class="result"
-            @mouseover="setHighlightResult(props.searchResult._id)"
+            @mouseover="setHighlightResult(props.searchResult.resourceinstanceid)"
             @mouseleave="clearHighlightResult"
-            :class="{ selected: resultSelected === props.searchResult._id }"
+            :class="{ selected: resultSelected === props.searchResult.resourceinstanceid }"
         >
             <div class="image-placeholder">
                 <img class="item-image"

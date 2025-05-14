@@ -24,6 +24,8 @@ from django.core.cache import caches
 from django.core.paginator import Paginator
 from django.views.generic import View
 from django.db import connection
+from django.contrib.gis.db.models.aggregates import Union
+from django.contrib.gis.db.models.functions import Transform, Centroid
 from django.contrib.gis.geos import GEOSGeometry
 from django.utils.translation import get_language, gettext as _
 from django.db.models import Q
@@ -168,5 +170,7 @@ def get_search_results_by_resourceids(
         res["displaydescription"] = resource_instance.descriptors[lang]["description"]
         res["displayname_language"] = lang
         res["has_geom"] = resource_instance.geojsongeometry_set.exists()
+        if res["has_geom"]:
+            res["centroid"] = resource_instance.geojsongeometry_set.all().annotate(centroid=Centroid(Union('geom'))).annotate(wgs=Transform("geom", 4326)).first().wgs.coords
         results.append(res) 
     return results
