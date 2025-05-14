@@ -127,6 +127,8 @@ async function performSearch() {
         searchid.value = uniqueId();
         forcePaginatorRepaint.value += 1;
         newQuery.value = false;
+        resultsSelected.value = [];
+        resultSelected.value = "";
     }
 
     queryObj["searchid"] = searchid.value;
@@ -140,7 +142,6 @@ async function performSearch() {
             searchResults.value = hits;
             resultsCount.value = data.total_results;
             pageSize.value = data.page_size;
-            resultsSelected.value = [];
             loadingSearchResults.value = false;
         });
 }
