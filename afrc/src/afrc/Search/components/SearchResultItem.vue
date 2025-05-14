@@ -53,11 +53,11 @@ function clearHighlightResult() {
 function selectResult(resourceid: string) {
     resultSelected.value = resourceid;
     resultsSelected.value = [resourceid];
+    if (props.searchResult._source?.points?.length && showMap.value) {
+        zoomFeature.value = {resourceid: resourceid, action: "zoom"};
+    }
 }
 
-function zoomToSearchResult(resourceid: string) {
-    zoomFeature.value = {resourceid: resourceid, action: "zoom"};
-}
 </script>
 
 <template>
@@ -153,25 +153,6 @@ function zoomToSearchResult(resourceid: string) {
                                 arches.urls.resource + '/' + searchResult._id
                             "
                         />
-                        <div
-                            v-if="
-                                searchResult._source?.points?.length && showMap
-                            "
-                        >
-                            <Button
-                                class="action-button"
-                                label="Map"
-                                severity="secondary"
-                                text
-                                icon="pi pi-map-marker"
-                                size="large"
-                                @click="
-                                    zoomToSearchResult(
-                                        searchResult._source.resourceinstanceid,
-                                    )
-                                "
-                            />
-                        </div>
                     </div>
                 </div>
             </div>
