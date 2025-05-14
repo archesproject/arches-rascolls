@@ -27,7 +27,7 @@ from django.db import connection
 from django.contrib.gis.geos import GEOSGeometry
 from django.utils.translation import get_language, gettext as _
 from django.db.models import Q
-from django.contrib.gis.geos import GEOSGeometry
+from django.db.models.fields.json import KT
 
 from arches.app.models.models import GeoJSONGeometry, ResourceInstance, TileModel
 from arches.app.utils.response import JSONResponse
@@ -124,6 +124,22 @@ class SearchAPI(View):
             {"results": ret, "total_results": len(results), "page_size": page_size}
         )
 
+def get_current_location(resource):
+    try:
+        place = resource.from_resxres.filter(node_id="bda4a954-d376-11ef-a239-0275dc2ded29").first().to_resource.name
+    except AttributeError:
+        place = None
+
+    try:
+        TileModel.objects.filter(resourceinstance_id=resource.pk)
+        statement_value = TileModel.objects.filter(resourceinstance_id=resource.pk, nodegroup_id="c7ab9e8a-08e1-11f0-a3e8-0275dc2ded29").annotate(
+            location_description=KT(f'data__{"c7abb924-08e1-11f0-a3e8-0275dc2ded29"}')
+            ).values_list('location_description', flat=True).first()
+        statement = json.loads(statement_value)["en"]["value"]
+    except TypeError:
+        statement = None
+
+    return " | ".join([str(value) for value in [place, statement] if value is not None])
 
 def get_related_resources_by_text(search_query, graphid):
     with connection.cursor() as cursor:
@@ -146,7 +162,7 @@ def get_search_results_by_resourceids(
     results = []
     lang = get_language()
     for resource_instance in resources:
-        res = {}
+        res = {"currentlocation": get_current_location(resource_instance)}
         res["resourceinstanceid"] = resource_instance.resourceinstanceid
         res["displayname"] = resource_instance.descriptors[lang]["name"]
         res["displaydescription"] = resource_instance.descriptors[lang]["description"]
