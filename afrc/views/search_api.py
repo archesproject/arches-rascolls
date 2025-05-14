@@ -16,8 +16,9 @@ You should have received a copy of the GNU Affero General Public License
 along with this program. If not, see <http://www.gnu.org/licenses/>.
 """
 
-import logging
 import json
+import logging
+import math
 
 from django.core.cache import caches
 from django.core.paginator import Paginator
@@ -137,8 +138,9 @@ def get_search_results_by_resourceids(
     resourceids, start=0, limit=settings.SEARCH_ITEMS_PER_PAGE
 ):
     resource_paginator = Paginator(resourceids, limit)
+    page = math.ceil((start + 1) / limit)
     resources = ResourceInstance.objects.filter(
-        pk__in=resource_paginator.page(start + 1).object_list
+        pk__in=resource_paginator.page(page).object_list
         ).prefetch_related("geojsongeometry_set")
     results = []
     lang = get_language()
