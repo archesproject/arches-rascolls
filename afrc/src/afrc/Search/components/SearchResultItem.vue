@@ -93,6 +93,7 @@ function selectResult(resourceid: string) {
             class="result"
             @mouseover="setHighlightResult(props.searchResult._id)"
             @mouseleave="clearHighlightResult"
+            :class="{ selected: resultSelected === props.searchResult._id }"
         >
             <div class="image-placeholder">
                 <img class="item-image"
@@ -175,6 +176,10 @@ function selectResult(resourceid: string) {
 
 .result:hover {
     background: #f7f6fa;
+}
+
+.result.selected {
+    background: #eef7ff;
 }
 
 .map-sidebar .result:hover {
