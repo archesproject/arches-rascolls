@@ -142,6 +142,19 @@ function zoomToSearchResult(resourceid: string) {
                         />
                         <Button
                             class="action-button"
+                            label="report"
+                            severity="secondary"
+                            text
+                            as="a"
+                            target="_blank"
+                            size="large"
+                            icon="pi pi-file"
+                            :href="
+                                arches.urls.resource_report + searchResult.resourceinstanceid
+                            "
+                        />
+                        <Button
+                            class="action-button"
                             label="edit"
                             severity="secondary"
                             text
@@ -153,6 +166,7 @@ function zoomToSearchResult(resourceid: string) {
                                 arches.urls.resource + '/' + searchResult.resourceinstanceid
                             "
                         />
+
                         <div
                             v-if="
                                 searchResult.has_geom && showMap
