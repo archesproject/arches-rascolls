@@ -24,6 +24,7 @@ from django.core.cache import caches
 from django.core.paginator import Paginator
 from django.views.generic import View
 from django.db import connection
+from django.contrib.gis.geos import GEOSGeometry
 from django.utils.translation import get_language, gettext as _
 from django.db.models import Q
 from django.contrib.gis.geos import GEOSGeometry
