@@ -18,9 +18,9 @@ const showMap = inject("showMap") as Ref<string>;
 const image: Ref<string> = ref("");
 
 onMounted(async () => {
-    if (props.searchResult?._source) {
+    if (props.searchResult?.resourceinstanceid) {
         const res = await fetchImageData(
-            [props.searchResult._source.resourceinstanceid],
+            [props.searchResult.resourceinstanceid],
             true,
         );
         if (res.length > 0) {
@@ -53,7 +53,7 @@ function clearHighlightResult() {
 function selectResult(resourceid: string) {
     resultSelected.value = resourceid;
     resultsSelected.value = [resourceid];
-    if (props.searchResult._source?.points?.length && showMap.value) {
+    if (props.searchResult.has_geom && showMap.value) {
         zoomFeature.value = {resourceid: resourceid, action: "zoom"};
     }
 }
@@ -91,9 +91,9 @@ function selectResult(resourceid: string) {
     <section v-else>
         <div
             class="result"
-            @mouseover="setHighlightResult(props.searchResult._id)"
+            @mouseover="setHighlightResult(props.searchResult.resourceinstanceid)"
             @mouseleave="clearHighlightResult"
-            :class="{ selected: resultSelected === props.searchResult._id }"
+            :class="{ selected: resultSelected === props.searchResult.resourceinstanceid }"
         >
             <div class="image-placeholder">
                 <img class="item-image"
@@ -110,19 +110,19 @@ function selectResult(resourceid: string) {
             <div class="result-content">
                 <div>
                     <div class="result-displayname">
-                        {{ props.searchResult._source.displayname }}
+                        {{ props.searchResult.displayname }}
                     </div>
                     <div class="item-current-location">
                         <span class="breadcrumb-title">Current location:</span>
                         <span class="breadcrumb"
-                            >CGI Room 222, Aisle 3, Level B, Case 3</span
+                            >{{props.searchResult.currentlocation}}</span
                         >
                     </div>
                     <div class="scope-note">
                         <span class="scope-note-title">Item description:</span>
                         <span
                             class="scope-note-content"
-                            v-html="searchResult._source.displaydescription"
+                            v-html="searchResult.displaydescription"
                         ></span>
                     </div>
                 </div>
@@ -137,8 +137,21 @@ function selectResult(resourceid: string) {
                             size="large"
                             @click="
                                 selectResult(
-                                    searchResult._source.resourceinstanceid,
+                                    searchResult.resourceinstanceid,
                                 )
+                            "
+                        />
+                        <Button
+                            class="action-button"
+                            label="report"
+                            severity="secondary"
+                            text
+                            as="a"
+                            target="_blank"
+                            size="large"
+                            icon="pi pi-file"
+                            :href="
+                                arches.urls.resource_report + searchResult.resourceinstanceid
                             "
                         />
                         <Button
@@ -151,7 +164,7 @@ function selectResult(resourceid: string) {
                             size="large"
                             icon="pi pi-pen-to-square"
                             :href="
-                                arches.urls.resource + '/' + searchResult._id
+                                arches.urls.resource + '/' + searchResult.resourceinstanceid
                             "
                         />
                     </div>

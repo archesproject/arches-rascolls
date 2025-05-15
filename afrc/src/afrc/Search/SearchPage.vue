@@ -138,7 +138,7 @@ async function performSearch() {
     fetch(arches.urls["api-search"] + "?" + qs.toString())
         .then((response) => response.json())
         .then((data) => {
-            const hits: never[] = data.results.hits.hits;
+            const hits: never[] = data.results;
             searchResults.value = hits;
             resultsCount.value = data.total_results;
             pageSize.value = data.page_size;
