@@ -67,12 +67,12 @@ async function getData() {
     }));
     acquisitions.value = resp.resource["Addition to Collection"]?.map(
         (tile: GenericObject) => ({
-            person: tile?.["Addition to Collection_carried out by"][
+            person: tile?.["Addition to Collection_carried out by"]?.[
                 "@display_value"
             ],
-            date: tile?.["Addition to Collection_time"][
+            date: tile?.["Addition to Collection_time"]?.[
                 "Addition to Collection_time_begin of the begin"
-            ]["@display_value"],
+            ]?.["@display_value"],
             details: tile?.["Addition to Collection_Statement"]
                 ?.map(
                     (statement: GenericObject) =>
