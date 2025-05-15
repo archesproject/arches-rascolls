@@ -75,39 +75,27 @@ class SearchAPI(View):
         if advanced_search_filter := request.GET.get("advanced-search", None):
             advanced_search_results = []
             advanced_search_filter = json.loads(advanced_search_filter)
+            query = Q()
             # [{'op': 'and', 'e9b8d73c-09b7-11f0-b84f-0275dc2ded29': {'op': 'eq', 'val': 'f697d7f2-4956-4b14-8910-c7ca673e74ca'}}]
             for filter in advanced_search_filter:
                 if filter["op"] == "and":
                     for key, value in filter.items():
                         if key != "op":
-                            # This is where you would apply the filter to the results
-                            # For example, you could use Q objects to build your query
-                            # and filter the results accordingly.
-                            # Example:
-                            # results = results.filter(Q(**{key: value}))
-                            advanced_search_results = TileModel.objects.filter(
-                                Q(**{f"data__{key}": value["val"]}),
-                            ).values_list("resourceinstance_id")
-                            pass
+                            query &= Q(**{f"data__{key}": value["val"]})
                 elif filter["op"] == "or":
-                    # Handle "or" operation
-                    # You can use Q objects to build your query and filter the results accordingly.
-                    # Example:
-                    # results = results.filter(Q(**{key: value}))
-                    pass
+                    for key, value in filter.items():
+                        if key != "op":
+                            query |= Q(**{f"data__{key}": value["val"]})
                 elif filter["op"] == "not":
                     # Handle "not" operation
-                    # You can use Q objects to build your query and filter the results accordingly.
-                    # Example:
-                    # results = results.exclude(Q(**{key: value}))
                     pass
                 else:
                     # Handle other operations
-                    # You can use Q objects to build your query and filter the results accordingly.
-                    # Example:
-                    # results = results.filter(Q(**{key: value}))
                     pass
 
+            advanced_search_results = TileModel.objects.filter(query).values_list(
+                "resourceinstance_id"
+            )
             results = set(advanced_search_results).intersection(set(results))
 
         session_id = request.session._get_or_create_session_key()
@@ -126,22 +114,38 @@ class SearchAPI(View):
             {"results": ret, "total_results": len(results), "page_size": page_size}
         )
 
+
 def get_current_location(resource):
     try:
-        place = resource.from_resxres.filter(node_id="bda4a954-d376-11ef-a239-0275dc2ded29").first().to_resource.name
+        place = (
+            resource.from_resxres.filter(node_id="bda4a954-d376-11ef-a239-0275dc2ded29")
+            .first()
+            .to_resource.name
+        )
     except AttributeError:
         place = None
 
     try:
         TileModel.objects.filter(resourceinstance_id=resource.pk)
-        statement_value = TileModel.objects.filter(resourceinstance_id=resource.pk, nodegroup_id="c7ab9e8a-08e1-11f0-a3e8-0275dc2ded29").annotate(
-            location_description=KT(f'data__{"c7abb924-08e1-11f0-a3e8-0275dc2ded29"}')
-            ).values_list('location_description', flat=True).first()
+        statement_value = (
+            TileModel.objects.filter(
+                resourceinstance_id=resource.pk,
+                nodegroup_id="c7ab9e8a-08e1-11f0-a3e8-0275dc2ded29",
+            )
+            .annotate(
+                location_description=KT(
+                    f'data__{"c7abb924-08e1-11f0-a3e8-0275dc2ded29"}'
+                )
+            )
+            .values_list("location_description", flat=True)
+            .first()
+        )
         statement = json.loads(statement_value)["en"]["value"]
     except TypeError:
         statement = None
 
     return " | ".join([str(value) for value in [place, statement] if value is not None])
+
 
 def get_related_resources_by_text(search_query, graphid):
     with connection.cursor() as cursor:
@@ -160,7 +164,7 @@ def get_search_results_by_resourceids(
     page = math.ceil((start + 1) / limit)
     resources = ResourceInstance.objects.filter(
         pk__in=resource_paginator.page(page).object_list
-        ).prefetch_related("geojsongeometry_set")
+    ).prefetch_related("geojsongeometry_set")
     results = []
     lang = get_language()
     for resource_instance in resources:
@@ -171,6 +175,12 @@ def get_search_results_by_resourceids(
         res["displayname_language"] = lang
         res["has_geom"] = resource_instance.geojsongeometry_set.exists()
         if res["has_geom"]:
-            res["centroid"] = resource_instance.geojsongeometry_set.all().annotate(centroid=Centroid(Union('geom'))).annotate(wgs=Transform("geom", 4326)).first().wgs.coords
-        results.append(res) 
+            res["centroid"] = (
+                resource_instance.geojsongeometry_set.all()
+                .annotate(centroid=Centroid(Union("geom")))
+                .annotate(wgs=Transform("geom", 4326))
+                .first()
+                .wgs.coords
+            )
+        results.append(res)
     return results

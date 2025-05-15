@@ -54,10 +54,9 @@ function selectResult(resourceid: string) {
     resultSelected.value = resourceid;
     resultsSelected.value = [resourceid];
     if (props.searchResult.has_geom && showMap.value) {
-        zoomFeature.value = {resourceid: resourceid, action: "zoom"};
+        zoomFeature.value = { resourceid: resourceid, action: "zoom" };
     }
 }
-
 </script>
 
 <template>
@@ -91,13 +90,19 @@ function selectResult(resourceid: string) {
     <section v-else>
         <div
             class="result"
-            @mouseover="setHighlightResult(props.searchResult.resourceinstanceid)"
+            :class="{
+                selected:
+                    resultSelected === props.searchResult.resourceinstanceid,
+            }"
+            @mouseover="
+                setHighlightResult(props.searchResult.resourceinstanceid)
+            "
             @mouseleave="clearHighlightResult"
-            :class="{ selected: resultSelected === props.searchResult.resourceinstanceid }"
         >
             <div class="image-placeholder">
-                <img class="item-image"
+                <img
                     v-if="image"
+                    class="item-image"
                     :src="image"
                 />
                 <div
@@ -114,9 +119,9 @@ function selectResult(resourceid: string) {
                     </div>
                     <div class="item-current-location">
                         <span class="breadcrumb-title">Current location:</span>
-                        <span class="breadcrumb"
-                            >{{props.searchResult.currentlocation}}</span
-                        >
+                        <span class="breadcrumb">{{
+                            props.searchResult.currentlocation
+                        }}</span>
                     </div>
                     <div class="scope-note">
                         <span class="scope-note-title">Item description:</span>
@@ -136,9 +141,7 @@ function selectResult(resourceid: string) {
                             icon="pi pi-plus-circle"
                             size="large"
                             @click="
-                                selectResult(
-                                    searchResult.resourceinstanceid,
-                                )
+                                selectResult(searchResult.resourceinstanceid)
                             "
                         />
                         <Button
@@ -151,7 +154,8 @@ function selectResult(resourceid: string) {
                             size="large"
                             icon="pi pi-file"
                             :href="
-                                arches.urls.resource_report + searchResult.resourceinstanceid
+                                arches.urls.resource_report +
+                                searchResult.resourceinstanceid
                             "
                         />
                         <Button
@@ -164,7 +168,9 @@ function selectResult(resourceid: string) {
                             size="large"
                             icon="pi pi-pen-to-square"
                             :href="
-                                arches.urls.resource + '/' + searchResult.resourceinstanceid
+                                arches.urls.resource +
+                                '/' +
+                                searchResult.resourceinstanceid
                             "
                         />
                     </div>

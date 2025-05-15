@@ -243,7 +243,7 @@ watch(
             }
             updateDrawnFeatures();
         }
-        zoomFeature.value = {resource: "", action: ""};
+        zoomFeature.value = { resource: "", action: "" };
     },
     { deep: true },
 );
