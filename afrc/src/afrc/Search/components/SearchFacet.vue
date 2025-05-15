@@ -12,7 +12,6 @@ const searchFilters = inject("searchFilters") as Ref<SearchFilter[]>;
 const query = inject("query") as GenericObject;
 const queryString = inject("queryString") as Ref<string>;
 
-const selectedFacetName = ref("");
 const searchFacetConfig = [
     {
         name: "reference-objects",
@@ -22,6 +21,7 @@ const searchFacetConfig = [
         ),
         icon: "pi pi-address-book",
         valueid: "f697d7f2-4956-4b14-8910-c7ca673e74ca",
+        selected: ref(false),
     },
     {
         name: "samples",
@@ -31,6 +31,7 @@ const searchFacetConfig = [
         ),
         icon: "pi pi-chart-line",
         valueid: "acccf634-141a-4710-bfdd-5f6501bea189",
+        selected: ref(false),
     },
     {
         name: "building-materials",
@@ -38,43 +39,45 @@ const searchFacetConfig = [
         description: $gettext("Construction materials and related objects"),
         icon: "pi pi-building",
         valueid: "e00d394b-e914-4c89-961d-db8e62410ba2",
+        selected: ref(false),
     },
 ];
 
-function onSelectFacet(facet_name: string) {
+function onSelectFacet(facet: GenericObject) {
     const componentName = "advanced-search";
-    selectedFacetName.value =
-        selectedFacetName.value === facet_name ? "" : facet_name;
+    query[componentName] = [];
+
+    // Toggle the selected state of the facet
+    facet.selected.value = !facet.selected.value;
 
     // Clear all the facet filter chips
     searchFilters.value = searchFilters.value.filter(
         (filter) => filter.type !== FACET_FILTER_TYPE,
     );
 
-    if (selectedFacetName.value !== "") {
-        const facet = searchFacetConfig.find(
-            (facet) => facet.name === selectedFacetName.value,
-        );
-        const valueid = facet!.valueid;
-        query[componentName] = [
-            {
-                op: "and",
-                "e9b8d73c-09b7-11f0-b84f-0275dc2ded29": {
-                    op: "eq",
-                    val: valueid,
-                },
-            },
-        ];
-        if (
-            !searchFilters.value.find((filter) => filter.name === facet!.title)
-        ) {
-            searchFilters.value.push({
-                id: facet!.name,
-                name: facet!.title,
-                type: FACET_FILTER_TYPE,
-                clear: () => onSelectFacet(facet!.name),
-            });
-        }
+    const selectedFacets = searchFacetConfig.filter(
+        (facet) => facet.selected.value,
+    );
+
+    if (selectedFacets.length > 0) {
+        selectedFacets.forEach((facet, index) => {
+            if (facet) {
+                const valueid = facet.valueid;
+                query[componentName].push({
+                    op: index === 0 ? "and" : "or",
+                    "e9b8d73c-09b7-11f0-b84f-0275dc2ded29": {
+                        op: "eq",
+                        val: valueid,
+                    },
+                });
+                searchFilters.value.push({
+                    id: facet.name,
+                    name: facet.title,
+                    type: FACET_FILTER_TYPE,
+                    clear: () => onSelectFacet(facet),
+                });
+            }
+        });
     } else {
         delete query[componentName];
     }
@@ -96,11 +99,11 @@ function onSelectFacet(facet_name: string) {
         >
             <div
                 class="facet-item-toggle"
-                @click.prevent="onSelectFacet(facet.name)"
+                @click.prevent="onSelectFacet(facet)"
             >
                 <div
                     class="facet-item"
-                    :class="{ selected: selectedFacetName === facet.name }"
+                    :class="{ selected: facet.selected.value }"
                 >
                     <div
                         class="facet-item-icon pi"
@@ -111,11 +114,7 @@ function onSelectFacet(facet_name: string) {
                         {{ facet.description }}
                     </p>
                     <div>
-                        {{
-                            selectedFacetName === facet.name
-                                ? "Unselect"
-                                : "Select"
-                        }}
+                        {{ facet.selected ? "Unselect" : "Select" }}
                         this facet
                     </div>
                 </div>
