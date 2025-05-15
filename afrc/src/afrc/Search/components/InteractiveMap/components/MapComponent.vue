@@ -381,11 +381,11 @@ function updateCurrentPageOfSearchResults() {
     }
     if (props.query.values!) {
         props.query.forEach(async (searchResult: GenericObject) => {
-            if (searchResult._source?.points?.length) {
-                const point = searchResult._source.points[0].point;
-                const coordinates = [point.lon, point.lat] as [number, number];
+            if (searchResult.has_geom) {
+                const point = searchResult.centroid;
+                const coordinates = [point[0], point[1]] as [number, number];
                 const marker = createMarker(coordinates, MARKER_COLOR);
-                searchMarkers[searchResult._id] = {
+                searchMarkers[searchResult.resourceinstanceid] = {
                     marker: marker,
                     highlighted: false,
                 };
