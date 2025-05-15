@@ -88,33 +88,6 @@
                 },
                 {
                     "active": true,
-                    "cardid": "11e1d40a-7263-4351-8c7a-84c3144d71d2",
-                    "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
-                    "config": null,
-                    "constraints": [],
-                    "cssclass": null,
-                    "description": null,
-                    "graph_id": "bda239c6-d376-11ef-a239-0275dc2ded29",
-                    "helpenabled": false,
-                    "helptext": {
-                        "en": ""
-                    },
-                    "helptitle": {
-                        "en": ""
-                    },
-                    "instructions": {
-                        "en": ""
-                    },
-                    "is_editable": true,
-                    "name": {
-                        "en": "Color"
-                    },
-                    "nodegroup_id": "3aff54bc-0f3b-11f0-aa84-02460e9d2217",
-                    "sortorder": null,
-                    "visible": true
-                },
-                {
-                    "active": true,
                     "cardid": "368c75c6-396e-4735-bd19-18bb736bf0e4",
                     "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
                     "config": null,
@@ -351,92 +324,9 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "has_part"
+                        "en": "Component"
                     },
                     "nodegroup_id": "6ee83594-08e4-11f0-81c1-0275dc2ded29",
-                    "sortorder": null,
-                    "source_identifier_id": null,
-                    "visible": true
-                },
-                {
-                    "active": true,
-                    "cardid": "6ee83b52-08e4-11f0-81c1-0275dc2ded29",
-                    "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
-                    "config": null,
-                    "constraints": [],
-                    "cssclass": null,
-                    "description": {
-                        "en": "# Specific:\n\n\n# General:\nIt is strongly recommended that every resource that should be rendered to an end user have at least one name. Different types of name can be distinguished using classifications. See: https://linked.art/model/base/#names\n\n# Arches Note:\nThis node's content should be the value for the title descriptor function, when used for a resource model.\n\n* BranchId: la-name\n* FieldId: \n"
-                    },
-                    "graph_id": "bda239c6-d376-11ef-a239-0275dc2ded29",
-                    "helpenabled": false,
-                    "helptext": {
-                        "en": ""
-                    },
-                    "helptitle": {
-                        "en": ""
-                    },
-                    "instructions": {
-                        "en": ""
-                    },
-                    "name": {
-                        "en": "has_part"
-                    },
-                    "nodegroup_id": "6ee839cc-08e4-11f0-81c1-0275dc2ded29",
-                    "sortorder": null,
-                    "source_identifier_id": null,
-                    "visible": true
-                },
-                {
-                    "active": true,
-                    "cardid": "6ee83e2c-08e4-11f0-81c1-0275dc2ded29",
-                    "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
-                    "config": null,
-                    "constraints": [],
-                    "cssclass": null,
-                    "description": "{\"en\": \"\"}",
-                    "graph_id": "bda239c6-d376-11ef-a239-0275dc2ded29",
-                    "helpenabled": false,
-                    "helptext": {
-                        "en": ""
-                    },
-                    "helptitle": {
-                        "en": ""
-                    },
-                    "instructions": {
-                        "en": ""
-                    },
-                    "name": {
-                        "en": "Component Name"
-                    },
-                    "nodegroup_id": "6ee83c9c-08e4-11f0-81c1-0275dc2ded29",
-                    "sortorder": null,
-                    "source_identifier_id": null,
-                    "visible": true
-                },
-                {
-                    "active": true,
-                    "cardid": "6ee840f2-08e4-11f0-81c1-0275dc2ded29",
-                    "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
-                    "config": null,
-                    "constraints": [],
-                    "cssclass": null,
-                    "description": "{\"en\": \"\"}",
-                    "graph_id": "bda239c6-d376-11ef-a239-0275dc2ded29",
-                    "helpenabled": false,
-                    "helptext": {
-                        "en": ""
-                    },
-                    "helptitle": {
-                        "en": ""
-                    },
-                    "instructions": {
-                        "en": ""
-                    },
-                    "name": {
-                        "en": "Component_statement"
-                    },
-                    "nodegroup_id": "6ee83f62-08e4-11f0-81c1-0275dc2ded29",
                     "sortorder": null,
                     "source_identifier_id": null,
                     "visible": true
@@ -751,6 +641,33 @@
                     },
                     "nodegroup_id": "9e72be4e-d714-11ef-8c40-0275dc2ded29",
                     "sortorder": 2,
+                    "source_identifier_id": null,
+                    "visible": true
+                },
+                {
+                    "active": true,
+                    "cardid": "bb321295-4a28-4801-95f1-9ca8ec404c98",
+                    "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
+                    "config": null,
+                    "constraints": [],
+                    "cssclass": null,
+                    "description": "{\"en\": \"\"}",
+                    "graph_id": "bda239c6-d376-11ef-a239-0275dc2ded29",
+                    "helpenabled": false,
+                    "helptext": {
+                        "en": ""
+                    },
+                    "helptitle": {
+                        "en": ""
+                    },
+                    "instructions": {
+                        "en": ""
+                    },
+                    "name": {
+                        "en": "Component Statement"
+                    },
+                    "nodegroup_id": "6ee83f62-08e4-11f0-81c1-0275dc2ded29",
+                    "sortorder": null,
                     "source_identifier_id": null,
                     "visible": true
                 },
@@ -2521,6 +2438,36 @@
             ],
             "cards_x_nodes_x_widgets": [
                 {
+                    "card_id": "6ee8380a-08e4-11f0-81c1-0275dc2ded29",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Component Name",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "0490ec53-754b-4413-9248-d9abaa1e0f81",
+                    "label": {
+                        "en": "Component Name"
+                    },
+                    "node_id": "6ee853d0-08e4-11f0-81c1-0275dc2ded29",
+                    "sortorder": 0,
+                    "source_identifier_id": null,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
                     "card_id": "bda49c3e-d376-11ef-a239-0275dc2ded29",
                     "config": {
                         "defaultValue": "",
@@ -2540,7 +2487,7 @@
                     "node_id": "3ef62cf2-d71a-11ef-8c40-0275dc2ded29",
                     "sortorder": 2,
                     "source_identifier_id": null,
-                    "visible": true,
+                    "visible": false,
                     "widget_id": "10000000-0000-0000-0000-000000000002"
                 },
                 {
@@ -2887,7 +2834,7 @@
                 {
                     "card_id": "bda39f64-d376-11ef-a239-0275dc2ded29",
                     "config": {
-                        "defaultValue": "",
+                        "defaultValue": "72202a9f-1551-4cbc-9c7a-73c02321f3ea",
                         "i18n_properties": [
                             "placeholder"
                         ],
@@ -2904,13 +2851,148 @@
                     "node_id": "f7757e46-d728-11ef-82a5-0275dc2ded29",
                     "sortorder": 2,
                     "source_identifier_id": null,
-                    "visible": true,
+                    "visible": false,
                     "widget_id": "10000000-0000-0000-0000-000000000002"
+                },
+                {
+                    "card_id": "6ee8380a-08e4-11f0-81c1-0275dc2ded29",
+                    "config": {
+                        "defaultResourceInstance": [],
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "part_Name_source",
+                        "placeholder": {
+                            "en": ""
+                        }
+                    },
+                    "id": "12a4985e-1c67-431d-bc92-d5a968e3db65",
+                    "label": {
+                        "en": "part_Name_source"
+                    },
+                    "node_id": "6ee85218-08e4-11f0-81c1-0275dc2ded29",
+                    "sortorder": 2,
+                    "source_identifier_id": null,
+                    "visible": false,
+                    "widget_id": "ff3c400a-76ec-11e7-a793-784f435179ea"
+                },
+                {
+                    "card_id": "bb321295-4a28-4801-95f1-9ca8ec404c98",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "part_Statement_label",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "23f18839-eccd-416d-92f6-1ace7b546fc5",
+                    "label": {
+                        "en": "part_Statement_label"
+                    },
+                    "node_id": "6ee8559c-08e4-11f0-81c1-0275dc2ded29",
+                    "sortorder": 2,
+                    "source_identifier_id": null,
+                    "visible": false,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "bb321295-4a28-4801-95f1-9ca8ec404c98",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Component Statement",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "273329f5-5f94-4a92-83e9-b6a5ecd75c6b",
+                    "label": {
+                        "en": "Component Statement"
+                    },
+                    "node_id": "6ee85754-08e4-11f0-81c1-0275dc2ded29",
+                    "sortorder": 0,
+                    "source_identifier_id": null,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000005"
+                },
+                {
+                    "card_id": "6ee8380a-08e4-11f0-81c1-0275dc2ded29",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "part_Name_label",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "2892d50e-3d3b-4c6b-8801-8269100c3d8e",
+                    "label": {
+                        "en": "part_Name_label"
+                    },
+                    "node_id": "6ee852f4-08e4-11f0-81c1-0275dc2ded29",
+                    "sortorder": 3,
+                    "source_identifier_id": null,
+                    "visible": false,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "6ee8380a-08e4-11f0-81c1-0275dc2ded29",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Component Name Type",
+                        "options": [],
+                        "placeholder": {
+                            "en": "Select an option"
+                        }
+                    },
+                    "id": "292f4118-7e08-4f1d-be00-169e6a21cbce",
+                    "label": {
+                        "en": "Component Name Type"
+                    },
+                    "node_id": "6ee85150-08e4-11f0-81c1-0275dc2ded29",
+                    "sortorder": 1,
+                    "source_identifier_id": null,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000012"
                 },
                 {
                     "card_id": "368c75c6-396e-4735-bd19-18bb736bf0e4",
                     "config": {
-                        "defaultValue": "",
+                        "defaultValue": "a1e69344-d821-4cf6-8763-731c955e0489",
                         "i18n_properties": [
                             "placeholder"
                         ],
@@ -3033,7 +3115,7 @@
                     "node_id": "398116be-0907-11f0-9e45-0275dc2ded29",
                     "sortorder": 1,
                     "source_identifier_id": null,
-                    "visible": true,
+                    "visible": false,
                     "widget_id": "10000000-0000-0000-0000-000000000002"
                 },
                 {
@@ -3684,7 +3766,7 @@
                     "node_id": "c612606c-d728-11ef-8f5d-0275dc2ded29",
                     "sortorder": 2,
                     "source_identifier_id": null,
-                    "visible": true,
+                    "visible": false,
                     "widget_id": "10000000-0000-0000-0000-000000000002"
                 },
                 {
@@ -3730,402 +3812,8 @@
                     "node_id": "53f96ea0-0908-11f0-9f70-0275dc2ded29",
                     "sortorder": 1,
                     "source_identifier_id": null,
-                    "visible": true,
+                    "visible": false,
                     "widget_id": "10000000-0000-0000-0000-000000000002"
-                },
-                {
-                    "card_id": "6ee83b52-08e4-11f0-81c1-0275dc2ded29",
-                    "config": {
-                        "defaultValue": [
-                            "bc35776b-996f-4fc1-bd25-9f6432c1f349"
-                        ],
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "Name Language",
-                        "options": [],
-                        "placeholder": {
-                            "en": "Select an option"
-                        }
-                    },
-                    "id": "6ee85984-08e4-11f0-81c1-0275dc2ded29",
-                    "label": {
-                        "en": "Name Language"
-                    },
-                    "node_id": "6ee84c32-08e4-11f0-81c1-0275dc2ded29",
-                    "sortorder": 2,
-                    "source_identifier_id": null,
-                    "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000012"
-                },
-                {
-                    "card_id": "6ee83b52-08e4-11f0-81c1-0275dc2ded29",
-                    "config": {
-                        "defaultValue": [
-                            "0fa02b3a-eb9b-4e6c-a0fd-3e948795df10"
-                        ],
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "Name Type",
-                        "options": [],
-                        "placeholder": {
-                            "en": "Select an option"
-                        }
-                    },
-                    "id": "6ee85a42-08e4-11f0-81c1-0275dc2ded29",
-                    "label": {
-                        "en": "Name Type"
-                    },
-                    "node_id": "6ee84de0-08e4-11f0-81c1-0275dc2ded29",
-                    "sortorder": 1,
-                    "source_identifier_id": null,
-                    "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000012"
-                },
-                {
-                    "card_id": "6ee83b52-08e4-11f0-81c1-0275dc2ded29",
-                    "config": {
-                        "defaultResourceInstance": [],
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "Source Reference Work for Name for Dimension",
-                        "placeholder": {
-                            "en": ""
-                        }
-                    },
-                    "id": "6ee85ad8-08e4-11f0-81c1-0275dc2ded29",
-                    "label": {
-                        "en": "Source Reference Work for Name for Dimension"
-                    },
-                    "node_id": "6ee84b42-08e4-11f0-81c1-0275dc2ded29",
-                    "sortorder": 3,
-                    "source_identifier_id": null,
-                    "visible": false,
-                    "widget_id": "ff3c400a-76ec-11e7-a793-784f435179ea"
-                },
-                {
-                    "card_id": "6ee83b52-08e4-11f0-81c1-0275dc2ded29",
-                    "config": {
-                        "defaultValue": {
-                            "en": {
-                                "direction": "ltr",
-                                "value": ""
-                            }
-                        },
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "Name",
-                        "maxLength": null,
-                        "placeholder": {
-                            "en": "Enter text"
-                        },
-                        "uneditable": false,
-                        "width": "100%"
-                    },
-                    "id": "6ee85b6e-08e4-11f0-81c1-0275dc2ded29",
-                    "label": {
-                        "en": "Name"
-                    },
-                    "node_id": "6ee84eb2-08e4-11f0-81c1-0275dc2ded29",
-                    "sortorder": 0,
-                    "source_identifier_id": null,
-                    "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000001"
-                },
-                {
-                    "card_id": "6ee83b52-08e4-11f0-81c1-0275dc2ded29",
-                    "config": {
-                        "defaultValue": {
-                            "en": {
-                                "direction": "ltr",
-                                "value": ""
-                            }
-                        },
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "Name Label",
-                        "maxLength": null,
-                        "placeholder": {
-                            "en": "Enter text"
-                        },
-                        "uneditable": false,
-                        "width": "100%"
-                    },
-                    "id": "6ee85bf0-08e4-11f0-81c1-0275dc2ded29",
-                    "label": {
-                        "en": "Name Label"
-                    },
-                    "node_id": "6ee84f8e-08e4-11f0-81c1-0275dc2ded29",
-                    "sortorder": 4,
-                    "source_identifier_id": null,
-                    "visible": false,
-                    "widget_id": "10000000-0000-0000-0000-000000000001"
-                },
-                {
-                    "card_id": "6ee83e2c-08e4-11f0-81c1-0275dc2ded29",
-                    "config": {
-                        "defaultValue": "",
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "Type of Name",
-                        "options": [],
-                        "placeholder": {
-                            "en": "Select an option"
-                        }
-                    },
-                    "id": "6ee85c7c-08e4-11f0-81c1-0275dc2ded29",
-                    "label": {
-                        "en": "Type of Name"
-                    },
-                    "node_id": "6ee85150-08e4-11f0-81c1-0275dc2ded29",
-                    "sortorder": 1,
-                    "source_identifier_id": null,
-                    "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000012"
-                },
-                {
-                    "card_id": "6ee83e2c-08e4-11f0-81c1-0275dc2ded29",
-                    "config": {
-                        "defaultValue": {
-                            "en": {
-                                "direction": "ltr",
-                                "value": ""
-                            }
-                        },
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "Text of Name",
-                        "maxLength": null,
-                        "placeholder": {
-                            "en": "Enter text"
-                        },
-                        "uneditable": false,
-                        "width": "100%"
-                    },
-                    "id": "6ee85cfe-08e4-11f0-81c1-0275dc2ded29",
-                    "label": {
-                        "en": "Text of Name"
-                    },
-                    "node_id": "6ee853d0-08e4-11f0-81c1-0275dc2ded29",
-                    "sortorder": 0,
-                    "source_identifier_id": null,
-                    "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000001"
-                },
-                {
-                    "card_id": "6ee83e2c-08e4-11f0-81c1-0275dc2ded29",
-                    "config": {
-                        "defaultResourceInstance": [],
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "source",
-                        "placeholder": {
-                            "en": ""
-                        }
-                    },
-                    "id": "6ee85d8a-08e4-11f0-81c1-0275dc2ded29",
-                    "label": {
-                        "en": "source"
-                    },
-                    "node_id": "6ee85218-08e4-11f0-81c1-0275dc2ded29",
-                    "sortorder": 3,
-                    "source_identifier_id": null,
-                    "visible": false,
-                    "widget_id": "ff3c400a-76ec-11e7-a793-784f435179ea"
-                },
-                {
-                    "card_id": "6ee83e2c-08e4-11f0-81c1-0275dc2ded29",
-                    "config": {
-                        "defaultValue": [
-                            "bc35776b-996f-4fc1-bd25-9f6432c1f349"
-                        ],
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "Language of Text",
-                        "options": [],
-                        "placeholder": {
-                            "en": "Select an option"
-                        }
-                    },
-                    "id": "6ee85e0c-08e4-11f0-81c1-0275dc2ded29",
-                    "label": {
-                        "en": "Language of Text"
-                    },
-                    "node_id": "6ee854c0-08e4-11f0-81c1-0275dc2ded29",
-                    "sortorder": 2,
-                    "source_identifier_id": null,
-                    "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000012"
-                },
-                {
-                    "card_id": "6ee83e2c-08e4-11f0-81c1-0275dc2ded29",
-                    "config": {
-                        "defaultValue": {
-                            "en": {
-                                "direction": "ltr",
-                                "value": ""
-                            }
-                        },
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "_label",
-                        "maxLength": null,
-                        "placeholder": {
-                            "en": "Enter text"
-                        },
-                        "uneditable": false,
-                        "width": "100%"
-                    },
-                    "id": "6ee85e8e-08e4-11f0-81c1-0275dc2ded29",
-                    "label": {
-                        "en": "_label"
-                    },
-                    "node_id": "6ee852f4-08e4-11f0-81c1-0275dc2ded29",
-                    "sortorder": 4,
-                    "source_identifier_id": null,
-                    "visible": false,
-                    "widget_id": "10000000-0000-0000-0000-000000000001"
-                },
-                {
-                    "card_id": "6ee840f2-08e4-11f0-81c1-0275dc2ded29",
-                    "config": {
-                        "defaultValue": {
-                            "en": {
-                                "direction": "ltr",
-                                "value": ""
-                            }
-                        },
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "Text of Statement",
-                        "maxLength": null,
-                        "placeholder": {
-                            "en": "Enter text"
-                        },
-                        "uneditable": false,
-                        "width": "100%"
-                    },
-                    "id": "6ee85f10-08e4-11f0-81c1-0275dc2ded29",
-                    "label": {
-                        "en": "Text of Statement"
-                    },
-                    "node_id": "6ee85754-08e4-11f0-81c1-0275dc2ded29",
-                    "sortorder": 0,
-                    "source_identifier_id": null,
-                    "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000001"
-                },
-                {
-                    "card_id": "6ee840f2-08e4-11f0-81c1-0275dc2ded29",
-                    "config": {
-                        "defaultValue": [
-                            "72202a9f-1551-4cbc-9c7a-73c02321f3ea"
-                        ],
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "Type of Statement",
-                        "options": [],
-                        "placeholder": {
-                            "en": "Select an option"
-                        }
-                    },
-                    "id": "6ee85f9c-08e4-11f0-81c1-0275dc2ded29",
-                    "label": {
-                        "en": "Type of Statement"
-                    },
-                    "node_id": "6ee8581c-08e4-11f0-81c1-0275dc2ded29",
-                    "sortorder": 1,
-                    "source_identifier_id": null,
-                    "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000012"
-                },
-                {
-                    "card_id": "6ee840f2-08e4-11f0-81c1-0275dc2ded29",
-                    "config": {
-                        "defaultValue": {
-                            "en": {
-                                "direction": "ltr",
-                                "value": ""
-                            }
-                        },
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "_label",
-                        "maxLength": null,
-                        "placeholder": {
-                            "en": "Enter text"
-                        },
-                        "uneditable": false,
-                        "width": "100%"
-                    },
-                    "id": "6ee8601e-08e4-11f0-81c1-0275dc2ded29",
-                    "label": {
-                        "en": "_label"
-                    },
-                    "node_id": "6ee8559c-08e4-11f0-81c1-0275dc2ded29",
-                    "sortorder": 3,
-                    "source_identifier_id": null,
-                    "visible": false,
-                    "widget_id": "10000000-0000-0000-0000-000000000001"
-                },
-                {
-                    "card_id": "6ee840f2-08e4-11f0-81c1-0275dc2ded29",
-                    "config": {
-                        "defaultResourceInstance": [],
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "source",
-                        "placeholder": {
-                            "en": ""
-                        }
-                    },
-                    "id": "6ee860a0-08e4-11f0-81c1-0275dc2ded29",
-                    "label": {
-                        "en": "source"
-                    },
-                    "node_id": "6ee8566e-08e4-11f0-81c1-0275dc2ded29",
-                    "sortorder": 4,
-                    "source_identifier_id": null,
-                    "visible": false,
-                    "widget_id": "ff3c400a-76ec-11e7-a793-784f435179ea"
-                },
-                {
-                    "card_id": "6ee840f2-08e4-11f0-81c1-0275dc2ded29",
-                    "config": {
-                        "defaultValue": [
-                            "bc35776b-996f-4fc1-bd25-9f6432c1f349"
-                        ],
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "Language of Text",
-                        "options": [],
-                        "placeholder": {
-                            "en": "Select an option"
-                        }
-                    },
-                    "id": "6ee86118-08e4-11f0-81c1-0275dc2ded29",
-                    "label": {
-                        "en": "Language of Text"
-                    },
-                    "node_id": "6ee858e4-08e4-11f0-81c1-0275dc2ded29",
-                    "sortorder": 2,
-                    "source_identifier_id": null,
-                    "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000012"
                 },
                 {
                     "card_id": "6ee84390-08e4-11f0-81c1-0275dc2ded29",
@@ -4204,7 +3892,7 @@
                         "en": "Unit"
                     },
                     "node_id": "6ee84a70-08e4-11f0-81c1-0275dc2ded29",
-                    "sortorder": 4,
+                    "sortorder": 2,
                     "source_identifier_id": null,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000002"
@@ -4271,9 +3959,9 @@
                         "en": "Highest possible value "
                     },
                     "node_id": "6ee845ac-08e4-11f0-81c1-0275dc2ded29",
-                    "sortorder": 3,
+                    "sortorder": 4,
                     "source_identifier_id": null,
-                    "visible": true,
+                    "visible": false,
                     "widget_id": "10000000-0000-0000-0000-000000000008"
                 },
                 {
@@ -4308,9 +3996,9 @@
                         "en": "Lowest possible value"
                     },
                     "node_id": "6ee8489a-08e4-11f0-81c1-0275dc2ded29",
-                    "sortorder": 2,
+                    "sortorder": 3,
                     "source_identifier_id": null,
-                    "visible": true,
+                    "visible": false,
                     "widget_id": "10000000-0000-0000-0000-000000000008"
                 },
                 {
@@ -4431,7 +4119,7 @@
                     "node_id": "599508f7-0f3b-11f0-8547-02460e9d2217",
                     "sortorder": 0,
                     "source_identifier_id": null,
-                    "visible": true,
+                    "visible": false,
                     "widget_id": "10000000-0000-0000-0000-000000000002"
                 },
                 {
@@ -4458,6 +4146,28 @@
                     "widget_id": "10000000-0000-0000-0000-000000000002"
                 },
                 {
+                    "card_id": "bb321295-4a28-4801-95f1-9ca8ec404c98",
+                    "config": {
+                        "defaultResourceInstance": [],
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Component Statement Source",
+                        "placeholder": {
+                            "en": ""
+                        }
+                    },
+                    "id": "89bed1bd-1dea-4858-b142-6af845f826fe",
+                    "label": {
+                        "en": "Component Statement Source"
+                    },
+                    "node_id": "6ee8566e-08e4-11f0-81c1-0275dc2ded29",
+                    "sortorder": 3,
+                    "source_identifier_id": null,
+                    "visible": true,
+                    "widget_id": "ff3c400a-76ec-11e7-a793-784f435179ea"
+                },
+                {
                     "card_id": "6ee8380a-08e4-11f0-81c1-0275dc2ded29",
                     "config": {
                         "defaultValue": "52a5d486-7cb2-4369-b0b1-2fec4f5ffdbf",
@@ -4475,10 +4185,33 @@
                         "en": "part_type"
                     },
                     "node_id": "6ee84494-08e4-11f0-81c1-0275dc2ded29",
-                    "sortorder": 0,
+                    "sortorder": 5,
+                    "source_identifier_id": null,
+                    "visible": false,
+                    "widget_id": "10000000-0000-0000-0000-000000000002"
+                },
+                {
+                    "card_id": "bb321295-4a28-4801-95f1-9ca8ec404c98",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Component Statement Type",
+                        "options": [],
+                        "placeholder": {
+                            "en": "Select an option"
+                        }
+                    },
+                    "id": "936fad2b-f723-4033-98ea-f1d5790328a3",
+                    "label": {
+                        "en": "Component Statement Type"
+                    },
+                    "node_id": "6ee8581c-08e4-11f0-81c1-0275dc2ded29",
+                    "sortorder": 1,
                     "source_identifier_id": null,
                     "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000002"
+                    "widget_id": "10000000-0000-0000-0000-000000000012"
                 },
                 {
                     "card_id": "11e1d40a-7263-4351-8c7a-84c3144d71d2",
@@ -4502,6 +4235,29 @@
                     "source_identifier_id": null,
                     "visible": false,
                     "widget_id": "10000000-0000-0000-0000-000000000002"
+                },
+                {
+                    "card_id": "bb321295-4a28-4801-95f1-9ca8ec404c98",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Component Statement Language",
+                        "options": [],
+                        "placeholder": {
+                            "en": "Select an option"
+                        }
+                    },
+                    "id": "961d556c-8510-48ef-b8ae-cf1c5e6df51f",
+                    "label": {
+                        "en": "Component Statement Language"
+                    },
+                    "node_id": "6ee858e4-08e4-11f0-81c1-0275dc2ded29",
+                    "sortorder": 4,
+                    "source_identifier_id": null,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000012"
                 },
                 {
                     "card_id": "97047520-d71a-11ef-ac5a-0275dc2ded29",
@@ -5110,6 +4866,29 @@
                     "widget_id": "10000000-0000-0000-0000-000000000012"
                 },
                 {
+                    "card_id": "6ee8380a-08e4-11f0-81c1-0275dc2ded29",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Component Name Language",
+                        "options": [],
+                        "placeholder": {
+                            "en": "Select an option"
+                        }
+                    },
+                    "id": "97ef9c21-c0aa-45c7-a35d-3c371135619c",
+                    "label": {
+                        "en": "Component Name Language"
+                    },
+                    "node_id": "6ee854c0-08e4-11f0-81c1-0275dc2ded29",
+                    "sortorder": 4,
+                    "source_identifier_id": null,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000012"
+                },
+                {
                     "card_id": "11e1d40a-7263-4351-8c7a-84c3144d71d2",
                     "config": {
                         "defaultValue": "",
@@ -5165,7 +4944,7 @@
                     "node_id": "4f640ba5-0f3c-11f0-a329-02460e9d2217",
                     "sortorder": 10,
                     "source_identifier_id": null,
-                    "visible": true,
+                    "visible": false,
                     "widget_id": "ff3c400a-76ec-11e7-a793-784f435179ea"
                 },
                 {
@@ -5777,7 +5556,7 @@
                 {
                     "card_id": "bda41516-d376-11ef-a239-0275dc2ded29",
                     "config": {
-                        "defaultValue": "",
+                        "defaultValue": "72202a9f-1551-4cbc-9c7a-73c02321f3ea",
                         "i18n_properties": [
                             "placeholder"
                         ],
@@ -5794,7 +5573,7 @@
                     "node_id": "42b1ba06-d728-11ef-8523-0275dc2ded29",
                     "sortorder": 2,
                     "source_identifier_id": null,
-                    "visible": true,
+                    "visible": false,
                     "widget_id": "10000000-0000-0000-0000-000000000002"
                 },
                 {
@@ -5804,7 +5583,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "color_type",
+                        "label": "color",
                         "options": [],
                         "placeholder": {
                             "en": "Select an option"
@@ -5812,12 +5591,12 @@
                     },
                     "id": "a846bce1-d74e-485f-b716-74bd5259965a",
                     "label": {
-                        "en": "color_type"
+                        "en": "color"
                     },
                     "node_id": "7c124187-0f3c-11f0-99ef-02460e9d2217",
                     "sortorder": 11,
                     "source_identifier_id": null,
-                    "visible": false,
+                    "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000002"
                 },
                 {
@@ -7180,7 +6959,7 @@
                 {
                     "card_id": "bda2d8ae-d376-11ef-a239-0275dc2ded29",
                     "config": {
-                        "defaultValue": "",
+                        "defaultValue": "72202a9f-1551-4cbc-9c7a-73c02321f3ea",
                         "i18n_properties": [
                             "placeholder"
                         ],
@@ -7197,7 +6976,7 @@
                     "node_id": "bda533c4-d376-11ef-a239-0275dc2ded29",
                     "sortorder": 2,
                     "source_identifier_id": null,
-                    "visible": true,
+                    "visible": false,
                     "widget_id": "10000000-0000-0000-0000-000000000002"
                 },
                 {
@@ -8605,7 +8384,7 @@
                 {
                     "card_id": "bda33466-d376-11ef-a239-0275dc2ded29",
                     "config": {
-                        "defaultValue": "",
+                        "defaultValue": "72202a9f-1551-4cbc-9c7a-73c02321f3ea",
                         "i18n_properties": [
                             "placeholder"
                         ],
@@ -8622,7 +8401,7 @@
                     "node_id": "bda5c348-d376-11ef-a239-0275dc2ded29",
                     "sortorder": 2,
                     "source_identifier_id": null,
-                    "visible": true,
+                    "visible": false,
                     "widget_id": "10000000-0000-0000-0000-000000000002"
                 },
                 {
@@ -11516,7 +11295,7 @@
                 {
                     "card_id": "bda40774-d376-11ef-a239-0275dc2ded29",
                     "config": {
-                        "defaultValue": "",
+                        "defaultValue": "72202a9f-1551-4cbc-9c7a-73c02321f3ea",
                         "i18n_properties": [
                             "placeholder"
                         ],
@@ -11533,7 +11312,7 @@
                     "node_id": "bda4dfc8-d376-11ef-a239-0275dc2ded29",
                     "sortorder": 2,
                     "source_identifier_id": null,
-                    "visible": true,
+                    "visible": false,
                     "widget_id": "10000000-0000-0000-0000-000000000002"
                 },
                 {
@@ -12977,7 +12756,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "color_Name_content",
+                        "label": "original color entry",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -12987,41 +12766,12 @@
                     },
                     "id": "c01c0cdf-4102-4085-9a23-2a101d91aa67",
                     "label": {
-                        "en": "color_Name_content"
+                        "en": "original color entry"
                     },
                     "node_id": "536eb7e1-0f3d-11f0-af39-02460e9d2217",
                     "sortorder": 2,
                     "source_identifier_id": null,
-                    "visible": false,
-                    "widget_id": "10000000-0000-0000-0000-000000000001"
-                },
-                {
-                    "card_id": "11e1d40a-7263-4351-8c7a-84c3144d71d2",
-                    "config": {
-                        "defaultValue": {
-                            "en": {
-                                "direction": "ltr",
-                                "value": ""
-                            }
-                        },
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "color_Name_content",
-                        "maxLength": null,
-                        "placeholder": {
-                            "en": "Enter text"
-                        },
-                        "uneditable": false,
-                        "width": "100%"
-                    },
-                    "id": "c01c0cdf-4102-4085-9a23-2a101d91aa67",
-                    "label": {
-                        "en": "color_Name_content"
-                    },
-                    "node_id": "536eb7e1-0f3d-11f0-af39-02460e9d2217",
-                    "sortorder": 2,
-                    "visible": false,
+                    "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
                 {
@@ -13205,7 +12955,7 @@
                 {
                     "card_id": "970491ea-d71a-11ef-ac5a-0275dc2ded29",
                     "config": {
-                        "defaultValue": "",
+                        "defaultValue": "72202a9f-1551-4cbc-9c7a-73c02321f3ea",
                         "i18n_properties": [
                             "placeholder"
                         ],
@@ -13222,7 +12972,7 @@
                     "node_id": "9fd61fde-d71d-11ef-825b-0275dc2ded29",
                     "sortorder": 2,
                     "source_identifier_id": null,
-                    "visible": true,
+                    "visible": false,
                     "widget_id": "10000000-0000-0000-0000-000000000002"
                 },
                 {
@@ -13252,7 +13002,7 @@
                     "node_id": "84ce26e4-0f3b-11f0-9fbb-02460e9d2217",
                     "sortorder": 1,
                     "source_identifier_id": null,
-                    "visible": true,
+                    "visible": false,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 }
             ],
@@ -13509,15 +13259,6 @@
                 },
                 {
                     "description": null,
-                    "domainnode_id": "3aff54bc-0f3b-11f0-aa84-02460e9d2217",
-                    "edgeid": "11b67654-9b61-4345-bfca-a1d5cfbb0ee4",
-                    "graph_id": "bda239c6-d376-11ef-a239-0275dc2ded29",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
-                    "rangenode_id": "7c124187-0f3c-11f0-99ef-02460e9d2217"
-                },
-                {
-                    "description": null,
                     "domainnode_id": "bda4a954-d376-11ef-a239-0275dc2ded29",
                     "edgeid": "1bb9b76c-20c2-4923-acaa-92e10a0a2f53",
                     "graph_id": "bda239c6-d376-11ef-a239-0275dc2ded29",
@@ -13558,33 +13299,6 @@
                 },
                 {
                     "description": null,
-                    "domainnode_id": "daa92019-0f3c-11f0-870d-02460e9d2217",
-                    "edgeid": "25a06169-4ee7-4b8a-853f-531391861899",
-                    "graph_id": "bda239c6-d376-11ef-a239-0275dc2ded29",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
-                    "rangenode_id": "fc75e787-0f3c-11f0-aa25-02460e9d2217"
-                },
-                {
-                    "description": null,
-                    "domainnode_id": "3aff54bc-0f3b-11f0-aa84-02460e9d2217",
-                    "edgeid": "30057288-2877-4893-97bb-74979a7c5a93",
-                    "graph_id": "bda239c6-d376-11ef-a239-0275dc2ded29",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P90b_has_upper_value_limit",
-                    "rangenode_id": "2a60f7df-0f3c-11f0-b938-02460e9d2217"
-                },
-                {
-                    "description": null,
-                    "domainnode_id": "daa92019-0f3c-11f0-870d-02460e9d2217",
-                    "edgeid": "354c0d69-1f39-4f29-8123-3264e88c3b8c",
-                    "graph_id": "bda239c6-d376-11ef-a239-0275dc2ded29",
-                    "name": null,
-                    "ontologyproperty": "http://www.w3.org/2000/01/rdf-schema#label",
-                    "rangenode_id": "2bfe64b7-0f3d-11f0-8705-02460e9d2217"
-                },
-                {
-                    "description": null,
                     "domainnode_id": "398111dc-0907-11f0-9e45-0275dc2ded29",
                     "edgeid": "39813dba-0907-11f0-9e45-0275dc2ded29",
                     "graph_id": "bda239c6-d376-11ef-a239-0275dc2ded29",
@@ -13602,15 +13316,6 @@
                     "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by",
                     "rangenode_id": "4f640ba5-0f3c-11f0-a329-02460e9d2217",
                     "source_identifier_id": null
-                },
-                {
-                    "description": null,
-                    "domainnode_id": "3aff54bc-0f3b-11f0-aa84-02460e9d2217",
-                    "edgeid": "3ccd987e-63fc-4cf6-ab25-927b5fab6330",
-                    "graph_id": "bda239c6-d376-11ef-a239-0275dc2ded29",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by",
-                    "rangenode_id": "4f640ba5-0f3c-11f0-a329-02460e9d2217"
                 },
                 {
                     "description": null,
@@ -13894,15 +13599,6 @@
                 },
                 {
                     "description": null,
-                    "domainnode_id": "daa92019-0f3c-11f0-870d-02460e9d2217",
-                    "edgeid": "5345413c-cd21-40fe-8739-0dd914503dca",
-                    "graph_id": "bda239c6-d376-11ef-a239-0275dc2ded29",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P190_has_symbolic_content",
-                    "rangenode_id": "536eb7e1-0f3d-11f0-af39-02460e9d2217"
-                },
-                {
-                    "description": null,
                     "domainnode_id": "53f96a86-0908-11f0-9f70-0275dc2ded29",
                     "edgeid": "53f994de-0908-11f0-9f70-0275dc2ded29",
                     "graph_id": "bda239c6-d376-11ef-a239-0275dc2ded29",
@@ -13953,33 +13649,6 @@
                 },
                 {
                     "description": null,
-                    "domainnode_id": "3aff54bc-0f3b-11f0-aa84-02460e9d2217",
-                    "edgeid": "5df0d7cc-9f66-43a2-8bfc-a522185cfe8b",
-                    "graph_id": "bda239c6-d376-11ef-a239-0275dc2ded29",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
-                    "rangenode_id": "daa92019-0f3c-11f0-870d-02460e9d2217"
-                },
-                {
-                    "description": null,
-                    "domainnode_id": "3aff54bc-0f3b-11f0-aa84-02460e9d2217",
-                    "edgeid": "5e9b87b4-4016-4e83-aa25-2743d72e10df",
-                    "graph_id": "bda239c6-d376-11ef-a239-0275dc2ded29",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P90a_has_lower_value_limit",
-                    "rangenode_id": "aa0ce4cf-0f3b-11f0-adf6-02460e9d2217"
-                },
-                {
-                    "description": null,
-                    "domainnode_id": "3aff54bc-0f3b-11f0-aa84-02460e9d2217",
-                    "edgeid": "5f49a7c3-dcc6-4c33-81b0-d57ed5f7d623",
-                    "graph_id": "bda239c6-d376-11ef-a239-0275dc2ded29",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P90_has_value",
-                    "rangenode_id": "599508f7-0f3b-11f0-8547-02460e9d2217"
-                },
-                {
-                    "description": null,
                     "domainnode_id": "bda51812-d376-11ef-a239-0275dc2ded29",
                     "edgeid": "5ff844cb-55d1-498a-a3d4-f882693a7b46",
                     "graph_id": "bda239c6-d376-11ef-a239-0275dc2ded29",
@@ -14010,16 +13679,6 @@
                 },
                 {
                     "description": null,
-                    "domainnode_id": "6ee839cc-08e4-11f0-81c1-0275dc2ded29",
-                    "edgeid": "6ee8e782-08e4-11f0-81c1-0275dc2ded29",
-                    "graph_id": "bda239c6-d376-11ef-a239-0275dc2ded29",
-                    "name": null,
-                    "ontologyproperty": "http://www.w3.org/2000/01/rdf-schema#label",
-                    "rangenode_id": "6ee84f8e-08e4-11f0-81c1-0275dc2ded29",
-                    "source_identifier_id": null
-                },
-                {
-                    "description": null,
                     "domainnode_id": "6ee8420a-08e4-11f0-81c1-0275dc2ded29",
                     "edgeid": "6ee8e890-08e4-11f0-81c1-0275dc2ded29",
                     "graph_id": "bda239c6-d376-11ef-a239-0275dc2ded29",
@@ -14036,16 +13695,6 @@
                     "name": null,
                     "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P90b_has_upper_value_limit",
                     "rangenode_id": "6ee845ac-08e4-11f0-81c1-0275dc2ded29",
-                    "source_identifier_id": null
-                },
-                {
-                    "description": null,
-                    "domainnode_id": "6ee839cc-08e4-11f0-81c1-0275dc2ded29",
-                    "edgeid": "6ee8ea52-08e4-11f0-81c1-0275dc2ded29",
-                    "graph_id": "bda239c6-d376-11ef-a239-0275dc2ded29",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P190_has_symbolic_content",
-                    "rangenode_id": "6ee84eb2-08e4-11f0-81c1-0275dc2ded29",
                     "source_identifier_id": null
                 },
                 {
@@ -14070,16 +13719,6 @@
                 },
                 {
                     "description": null,
-                    "domainnode_id": "6ee839cc-08e4-11f0-81c1-0275dc2ded29",
-                    "edgeid": "6ee8ecdc-08e4-11f0-81c1-0275dc2ded29",
-                    "graph_id": "bda239c6-d376-11ef-a239-0275dc2ded29",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by",
-                    "rangenode_id": "6ee84b42-08e4-11f0-81c1-0275dc2ded29",
-                    "source_identifier_id": null
-                },
-                {
-                    "description": null,
                     "domainnode_id": "6ee8420a-08e4-11f0-81c1-0275dc2ded29",
                     "edgeid": "6ee8edae-08e4-11f0-81c1-0275dc2ded29",
                     "graph_id": "bda239c6-d376-11ef-a239-0275dc2ded29",
@@ -14100,42 +13739,12 @@
                 },
                 {
                     "description": null,
-                    "domainnode_id": "6ee839cc-08e4-11f0-81c1-0275dc2ded29",
-                    "edgeid": "6ee8ef3e-08e4-11f0-81c1-0275dc2ded29",
-                    "graph_id": "bda239c6-d376-11ef-a239-0275dc2ded29",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P72_has_language",
-                    "rangenode_id": "6ee84c32-08e4-11f0-81c1-0275dc2ded29",
-                    "source_identifier_id": null
-                },
-                {
-                    "description": null,
-                    "domainnode_id": "6ee8420a-08e4-11f0-81c1-0275dc2ded29",
-                    "edgeid": "6ee8f006-08e4-11f0-81c1-0275dc2ded29",
-                    "graph_id": "bda239c6-d376-11ef-a239-0275dc2ded29",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
-                    "rangenode_id": "6ee839cc-08e4-11f0-81c1-0275dc2ded29",
-                    "source_identifier_id": null
-                },
-                {
-                    "description": null,
                     "domainnode_id": "6ee8420a-08e4-11f0-81c1-0275dc2ded29",
                     "edgeid": "6ee8f0c4-08e4-11f0-81c1-0275dc2ded29",
                     "graph_id": "bda239c6-d376-11ef-a239-0275dc2ded29",
                     "name": null,
                     "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P90_has_value",
                     "rangenode_id": "6ee84d04-08e4-11f0-81c1-0275dc2ded29",
-                    "source_identifier_id": null
-                },
-                {
-                    "description": null,
-                    "domainnode_id": "6ee839cc-08e4-11f0-81c1-0275dc2ded29",
-                    "edgeid": "6ee8f182-08e4-11f0-81c1-0275dc2ded29",
-                    "graph_id": "bda239c6-d376-11ef-a239-0275dc2ded29",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
-                    "rangenode_id": "6ee84de0-08e4-11f0-81c1-0275dc2ded29",
                     "source_identifier_id": null
                 },
                 {
@@ -14277,15 +13886,6 @@
                     "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P72_has_language",
                     "rangenode_id": "791375b6-0f3d-11f0-bdd9-02460e9d2217",
                     "source_identifier_id": null
-                },
-                {
-                    "description": null,
-                    "domainnode_id": "daa92019-0f3c-11f0-870d-02460e9d2217",
-                    "edgeid": "7e693f65-25c6-4cff-8cd0-da9fd9a30fb8",
-                    "graph_id": "bda239c6-d376-11ef-a239-0275dc2ded29",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P72_has_language",
-                    "rangenode_id": "791375b6-0f3d-11f0-bdd9-02460e9d2217"
                 },
                 {
                     "description": null,
@@ -18279,15 +17879,6 @@
                 },
                 {
                     "description": null,
-                    "domainnode_id": "daa92019-0f3c-11f0-870d-02460e9d2217",
-                    "edgeid": "c94804dd-b38d-4e6c-b8b4-74afcb961214",
-                    "graph_id": "bda239c6-d376-11ef-a239-0275dc2ded29",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by",
-                    "rangenode_id": "a0feb94a-0f3d-11f0-8ebf-02460e9d2217"
-                },
-                {
-                    "description": null,
                     "domainnode_id": "55e4c424-090a-11f0-9f70-0275dc2ded29",
                     "edgeid": "d65dc2ba-0e96-4fb3-b7a5-60146b48869b",
                     "graph_id": "bda239c6-d376-11ef-a239-0275dc2ded29",
@@ -18315,24 +17906,6 @@
                     "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P43_has_dimension",
                     "rangenode_id": "3aff54bc-0f3b-11f0-aa84-02460e9d2217",
                     "source_identifier_id": null
-                },
-                {
-                    "description": null,
-                    "domainnode_id": "3aff54bc-0f3b-11f0-aa84-02460e9d2217",
-                    "edgeid": "d8bd8200-7fe1-4b5e-998d-fdefb5557f77",
-                    "graph_id": "bda239c6-d376-11ef-a239-0275dc2ded29",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P91_has_unit",
-                    "rangenode_id": "af2516b6-0f3c-11f0-a69e-02460e9d2217"
-                },
-                {
-                    "description": null,
-                    "domainnode_id": "bda512ea-d376-11ef-a239-0275dc2ded29",
-                    "edgeid": "d9ebf5d3-e511-4883-b1db-9dd2d7c0eacf",
-                    "graph_id": "bda239c6-d376-11ef-a239-0275dc2ded29",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P43_has_dimension",
-                    "rangenode_id": "3aff54bc-0f3b-11f0-aa84-02460e9d2217"
                 },
                 {
                     "description": null,
@@ -18418,10 +17991,761 @@
             "functions_x_graphs": [
                 {
                     "config": {
+                        "triggering_nodegroups": [
+                            "04f87f4e-d834-11ef-a75a-0275dc2ded29",
+                            "04f89204-d834-11ef-a75a-0275dc2ded29",
+                            "04f89a24-d834-11ef-a75a-0275dc2ded29",
+                            "04f89e20-d834-11ef-a75a-0275dc2ded29",
+                            "04f8a208-d834-11ef-a75a-0275dc2ded29",
+                            "04f8a5dc-d834-11ef-a75a-0275dc2ded29",
+                            "04f8a9c4-d834-11ef-a75a-0275dc2ded29",
+                            "04f8adca-d834-11ef-a75a-0275dc2ded29",
+                            "04f8b1c6-d834-11ef-a75a-0275dc2ded29",
+                            "04f8b66c-d834-11ef-a75a-0275dc2ded29",
+                            "04f8ba68-d834-11ef-a75a-0275dc2ded29",
+                            "04f8be78-d834-11ef-a75a-0275dc2ded29",
+                            "04f8c260-d834-11ef-a75a-0275dc2ded29",
+                            "04f8c648-d834-11ef-a75a-0275dc2ded29",
+                            "04f8ca3a-d834-11ef-a75a-0275dc2ded29",
+                            "04f8d9c6-d834-11ef-a75a-0275dc2ded29",
+                            "0e8fe457-4148-11e7-9c10-c4b301baab9f",
+                            "0fcf0fc2-d70e-11ef-82a5-0275dc2ded29",
+                            "0fcf144a-d70e-11ef-82a5-0275dc2ded29",
+                            "25a81ad2-1fac-11f0-b604-0ae672297eff",
+                            "25a848d6-1fac-11f0-b604-0ae672297eff",
+                            "25a863d4-1fac-11f0-b604-0ae672297eff",
+                            "25a8789c-1fac-11f0-b604-0ae672297eff",
+                            "25a88c38-1fac-11f0-b604-0ae672297eff",
+                            "25a89f5c-1fac-11f0-b604-0ae672297eff",
+                            "25a8b1a4-1fac-11f0-b604-0ae672297eff",
+                            "25a8c752-1fac-11f0-b604-0ae672297eff",
+                            "25a8da8a-1fac-11f0-b604-0ae672297eff",
+                            "25a8ed40-1fac-11f0-b604-0ae672297eff",
+                            "25a8fef2-1fac-11f0-b604-0ae672297eff",
+                            "25a9109a-1fac-11f0-b604-0ae672297eff",
+                            "25a92184-1fac-11f0-b604-0ae672297eff",
+                            "25a9332c-1fac-11f0-b604-0ae672297eff",
+                            "25a9447a-1fac-11f0-b604-0ae672297eff",
+                            "25a95564-1fac-11f0-b604-0ae672297eff",
+                            "25a96c66-1fac-11f0-b604-0ae672297eff",
+                            "25a98052-1fac-11f0-b604-0ae672297eff",
+                            "25a9934e-1fac-11f0-b604-0ae672297eff",
+                            "25a9a4a6-1fac-11f0-b604-0ae672297eff",
+                            "25a9b70c-1fac-11f0-b604-0ae672297eff",
+                            "25a9c936-1fac-11f0-b604-0ae672297eff",
+                            "25a9dae8-1fac-11f0-b604-0ae672297eff",
+                            "25a9ec18-1fac-11f0-b604-0ae672297eff",
+                            "25a9fd52-1fac-11f0-b604-0ae672297eff",
+                            "25aa0f86-1fac-11f0-b604-0ae672297eff",
+                            "25aa21a6-1fac-11f0-b604-0ae672297eff",
+                            "25aa32e0-1fac-11f0-b604-0ae672297eff",
+                            "25aa437a-1fac-11f0-b604-0ae672297eff",
+                            "25aa555e-1fac-11f0-b604-0ae672297eff",
+                            "25aa6ad0-1fac-11f0-b604-0ae672297eff",
+                            "25aa7e26-1fac-11f0-b604-0ae672297eff",
+                            "25aa8fec-1fac-11f0-b604-0ae672297eff",
+                            "25aaa16c-1fac-11f0-b604-0ae672297eff",
+                            "25aab274-1fac-11f0-b604-0ae672297eff",
+                            "25aac818-1fac-11f0-b604-0ae672297eff",
+                            "25aada24-1fac-11f0-b604-0ae672297eff",
+                            "25aaec1c-1fac-11f0-b604-0ae672297eff",
+                            "25aafcfc-1fac-11f0-b604-0ae672297eff",
+                            "25ab1214-1fac-11f0-b604-0ae672297eff",
+                            "25ab2664-1fac-11f0-b604-0ae672297eff",
+                            "25ab3820-1fac-11f0-b604-0ae672297eff",
+                            "25ab4996-1fac-11f0-b604-0ae672297eff",
+                            "25ab5b34-1fac-11f0-b604-0ae672297eff",
+                            "25ab7f42-1fac-11f0-b604-0ae672297eff",
+                            "25ab904a-1fac-11f0-b604-0ae672297eff",
+                            "25aba152-1fac-11f0-b604-0ae672297eff",
+                            "25abb1ba-1fac-11f0-b604-0ae672297eff",
+                            "25abc902-1fac-11f0-b604-0ae672297eff",
+                            "25abdb04-1fac-11f0-b604-0ae672297eff",
+                            "25abf17a-1fac-11f0-b604-0ae672297eff",
+                            "25ac0282-1fac-11f0-b604-0ae672297eff",
+                            "25ac1466-1fac-11f0-b604-0ae672297eff",
+                            "25ac2672-1fac-11f0-b604-0ae672297eff",
+                            "25ac38ba-1fac-11f0-b604-0ae672297eff",
+                            "25ac4d00-1fac-11f0-b604-0ae672297eff",
+                            "25ac5f66-1fac-11f0-b604-0ae672297eff",
+                            "25ac7140-1fac-11f0-b604-0ae672297eff",
+                            "25ac8266-1fac-11f0-b604-0ae672297eff",
+                            "25ac94d6-1fac-11f0-b604-0ae672297eff",
+                            "25aca6e2-1fac-11f0-b604-0ae672297eff",
+                            "25acb7ae-1fac-11f0-b604-0ae672297eff",
+                            "25acc8ac-1fac-11f0-b604-0ae672297eff",
+                            "25acd91e-1fac-11f0-b604-0ae672297eff",
+                            "25acef1c-1fac-11f0-b604-0ae672297eff",
+                            "25ad01a0-1fac-11f0-b604-0ae672297eff",
+                            "25ad2392-1fac-11f0-b604-0ae672297eff",
+                            "25ad3468-1fac-11f0-b604-0ae672297eff",
+                            "25ad4516-1fac-11f0-b604-0ae672297eff",
+                            "25ad56b4-1fac-11f0-b604-0ae672297eff",
+                            "25ad6802-1fac-11f0-b604-0ae672297eff",
+                            "25ad78ce-1fac-11f0-b604-0ae672297eff",
+                            "25ad8a4e-1fac-11f0-b604-0ae672297eff",
+                            "25ad9bba-1fac-11f0-b604-0ae672297eff",
+                            "25adac72-1fac-11f0-b604-0ae672297eff",
+                            "25adbd98-1fac-11f0-b604-0ae672297eff",
+                            "25ae0848-1fac-11f0-b604-0ae672297eff",
+                            "25ae35d4-1fac-11f0-b604-0ae672297eff",
+                            "25ae4920-1fac-11f0-b604-0ae672297eff",
+                            "25ae5aaa-1fac-11f0-b604-0ae672297eff",
+                            "25ae6c20-1fac-11f0-b604-0ae672297eff",
+                            "25ae7d00-1fac-11f0-b604-0ae672297eff",
+                            "26a55c6a-d772-11ef-825b-0275dc2ded29",
+                            "26a561e2-d772-11ef-825b-0275dc2ded29",
+                            "26a5678c-d772-11ef-825b-0275dc2ded29",
+                            "26a56c3c-d772-11ef-825b-0275dc2ded29",
+                            "26a570a6-d772-11ef-825b-0275dc2ded29",
+                            "26a57510-d772-11ef-825b-0275dc2ded29",
+                            "26a5823a-d772-11ef-825b-0275dc2ded29",
+                            "26a586a4-d772-11ef-825b-0275dc2ded29",
+                            "26a58b04-d772-11ef-825b-0275dc2ded29",
+                            "26a59072-d772-11ef-825b-0275dc2ded29",
+                            "26a5952c-d772-11ef-825b-0275dc2ded29",
+                            "26a59978-d772-11ef-825b-0275dc2ded29",
+                            "26a59da6-d772-11ef-825b-0275dc2ded29",
+                            "26a5a1de-d772-11ef-825b-0275dc2ded29",
+                            "26a5a616-d772-11ef-825b-0275dc2ded29",
+                            "26a5aa6c-d772-11ef-825b-0275dc2ded29",
+                            "26a5aea4-d772-11ef-825b-0275dc2ded29",
+                            "26a5b2c8-d772-11ef-825b-0275dc2ded29",
+                            "26a5b7e6-d772-11ef-825b-0275dc2ded29",
+                            "26a5bc28-d772-11ef-825b-0275dc2ded29",
+                            "26a5c09c-d772-11ef-825b-0275dc2ded29",
+                            "26a5c4f2-d772-11ef-825b-0275dc2ded29",
+                            "26a5c934-d772-11ef-825b-0275dc2ded29",
+                            "26a5cd58-d772-11ef-825b-0275dc2ded29",
+                            "26a5d1ea-d772-11ef-825b-0275dc2ded29",
+                            "26a5d640-d772-11ef-825b-0275dc2ded29",
+                            "26a5db36-d772-11ef-825b-0275dc2ded29",
+                            "26a5dfc8-d772-11ef-825b-0275dc2ded29",
+                            "26a5e414-d772-11ef-825b-0275dc2ded29",
+                            "26a5e84c-d772-11ef-825b-0275dc2ded29",
+                            "32f2d663-fae4-11e6-83ad-6c4008b05c4c",
+                            "36956ff4-d770-11ef-8f5d-0275dc2ded29",
+                            "369574ae-d770-11ef-8f5d-0275dc2ded29",
+                            "369578b4-d770-11ef-8f5d-0275dc2ded29",
+                            "36957c88-d770-11ef-8f5d-0275dc2ded29",
+                            "36958048-d770-11ef-8f5d-0275dc2ded29",
+                            "369588ae-d770-11ef-8f5d-0275dc2ded29",
+                            "369590ec-d770-11ef-8f5d-0275dc2ded29",
+                            "369594b6-d770-11ef-8f5d-0275dc2ded29",
+                            "36959876-d770-11ef-8f5d-0275dc2ded29",
+                            "36959c54-d770-11ef-8f5d-0275dc2ded29",
+                            "3695a01e-d770-11ef-8f5d-0275dc2ded29",
+                            "3695a3c0-d770-11ef-8f5d-0275dc2ded29",
+                            "3695a76c-d770-11ef-8f5d-0275dc2ded29",
+                            "3695b2a2-d770-11ef-8f5d-0275dc2ded29",
+                            "3695b676-d770-11ef-8f5d-0275dc2ded29",
+                            "3695ba22-d770-11ef-8f5d-0275dc2ded29",
+                            "3695bdce-d770-11ef-8f5d-0275dc2ded29",
+                            "3695c15c-d770-11ef-8f5d-0275dc2ded29",
+                            "3695c4ea-d770-11ef-8f5d-0275dc2ded29",
+                            "3695c896-d770-11ef-8f5d-0275dc2ded29",
+                            "3695cc56-d770-11ef-8f5d-0275dc2ded29",
+                            "3695cff8-d770-11ef-8f5d-0275dc2ded29",
+                            "3695d476-d770-11ef-8f5d-0275dc2ded29",
+                            "398111dc-0907-11f0-9e45-0275dc2ded29",
+                            "3aff54bc-0f3b-11f0-aa84-02460e9d2217",
+                            "3ddaa0f8-d771-11ef-825b-0275dc2ded29",
+                            "3ddaa8e6-d771-11ef-825b-0275dc2ded29",
+                            "3ddaade6-d771-11ef-825b-0275dc2ded29",
+                            "3ddab19c-d771-11ef-825b-0275dc2ded29",
+                            "3ddab4e4-d771-11ef-825b-0275dc2ded29",
+                            "3ddab854-d771-11ef-825b-0275dc2ded29",
+                            "3ddac218-d771-11ef-825b-0275dc2ded29",
+                            "3ddac588-d771-11ef-825b-0275dc2ded29",
+                            "3ddac8d0-d771-11ef-825b-0275dc2ded29",
+                            "42fb861a-d834-11ef-a75a-0275dc2ded29",
+                            "42fb8b10-d834-11ef-a75a-0275dc2ded29",
+                            "42fb8f2a-d834-11ef-a75a-0275dc2ded29",
+                            "42fba384-d834-11ef-a75a-0275dc2ded29",
+                            "42fba88e-d834-11ef-a75a-0275dc2ded29",
+                            "42fbb4f0-d834-11ef-a75a-0275dc2ded29",
+                            "42fbb8ba-d834-11ef-a75a-0275dc2ded29",
+                            "42fbbc84-d834-11ef-a75a-0275dc2ded29",
+                            "42fbc422-d834-11ef-a75a-0275dc2ded29",
+                            "42fbcbac-d834-11ef-a75a-0275dc2ded29",
+                            "42fbd05c-d834-11ef-a75a-0275dc2ded29",
+                            "42fbd444-d834-11ef-a75a-0275dc2ded29",
+                            "42fbd822-d834-11ef-a75a-0275dc2ded29",
+                            "42fbdbf6-d834-11ef-a75a-0275dc2ded29",
+                            "42fbdfe8-d834-11ef-a75a-0275dc2ded29",
+                            "42fbe3b2-d834-11ef-a75a-0275dc2ded29",
+                            "459afb3e-fdf6-11ef-966f-0275dc2ded29",
+                            "459afed6-fdf6-11ef-966f-0275dc2ded29",
+                            "459b01ba-fdf6-11ef-966f-0275dc2ded29",
+                            "459b0476-fdf6-11ef-966f-0275dc2ded29",
+                            "459b071e-fdf6-11ef-966f-0275dc2ded29",
+                            "53f96a86-0908-11f0-9f70-0275dc2ded29",
+                            "55e4c424-090a-11f0-9f70-0275dc2ded29",
+                            "57d7b53c-d833-11ef-ab38-0275dc2ded29",
+                            "57d7bc26-d833-11ef-ab38-0275dc2ded29",
+                            "57d7c0d6-d833-11ef-ab38-0275dc2ded29",
+                            "57d7c96e-d833-11ef-ab38-0275dc2ded29",
+                            "57d7d602-d833-11ef-ab38-0275dc2ded29",
+                            "57d7da26-d833-11ef-ab38-0275dc2ded29",
+                            "57d7de54-d833-11ef-ab38-0275dc2ded29",
+                            "57d7e840-d833-11ef-ab38-0275dc2ded29",
+                            "57d7f0ba-d833-11ef-ab38-0275dc2ded29",
+                            "57d7f920-d833-11ef-ab38-0275dc2ded29",
+                            "57d80168-d833-11ef-ab38-0275dc2ded29",
+                            "57d80e9c-d833-11ef-ab38-0275dc2ded29",
+                            "57d812d4-d833-11ef-ab38-0275dc2ded29",
+                            "57d81720-d833-11ef-ab38-0275dc2ded29",
+                            "57d81b4e-d833-11ef-ab38-0275dc2ded29",
+                            "57d81f54-d833-11ef-ab38-0275dc2ded29",
+                            "57d82378-d833-11ef-ab38-0275dc2ded29",
+                            "67288b96-1fab-11f0-809a-0ae672297eff",
+                            "6728b17a-1fab-11f0-809a-0ae672297eff",
+                            "6728f37e-1fab-11f0-809a-0ae672297eff",
+                            "6729030a-1fab-11f0-809a-0ae672297eff",
+                            "6729298e-1fab-11f0-809a-0ae672297eff",
+                            "67293852-1fab-11f0-809a-0ae672297eff",
+                            "6ee83594-08e4-11f0-81c1-0275dc2ded29",
+                            "6ee839cc-08e4-11f0-81c1-0275dc2ded29",
+                            "6ee83c9c-08e4-11f0-81c1-0275dc2ded29",
+                            "6ee83f62-08e4-11f0-81c1-0275dc2ded29",
+                            "6ee8420a-08e4-11f0-81c1-0275dc2ded29",
+                            "7ce194c2-d772-11ef-825b-0275dc2ded29",
+                            "7ce19a44-d772-11ef-825b-0275dc2ded29",
+                            "7ce19ecc-d772-11ef-825b-0275dc2ded29",
+                            "7ce1a336-d772-11ef-825b-0275dc2ded29",
+                            "7ce1adc2-d772-11ef-825b-0275dc2ded29",
+                            "7ce1b24a-d772-11ef-825b-0275dc2ded29",
+                            "7ce1b6b4-d772-11ef-825b-0275dc2ded29",
+                            "7ce1bb0a-d772-11ef-825b-0275dc2ded29",
+                            "7ce1bf4c-d772-11ef-825b-0275dc2ded29",
+                            "7ce1c384-d772-11ef-825b-0275dc2ded29",
+                            "7ce1c7e4-d772-11ef-825b-0275dc2ded29",
+                            "7ce1cc30-d772-11ef-825b-0275dc2ded29",
+                            "7ce1d19e-d772-11ef-825b-0275dc2ded29",
+                            "7ce1d612-d772-11ef-825b-0275dc2ded29",
+                            "7ce1da72-d772-11ef-825b-0275dc2ded29",
+                            "7ce1deb4-d772-11ef-825b-0275dc2ded29",
+                            "7ce1e2ec-d772-11ef-825b-0275dc2ded29",
+                            "7ce1e74c-d772-11ef-825b-0275dc2ded29",
+                            "7ce1eb70-d772-11ef-825b-0275dc2ded29",
+                            "7ce1ef9e-d772-11ef-825b-0275dc2ded29",
+                            "7ce1f412-d772-11ef-825b-0275dc2ded29",
+                            "7ce1f926-d772-11ef-825b-0275dc2ded29",
+                            "7ce1fd90-d772-11ef-825b-0275dc2ded29",
+                            "7ce201c8-d772-11ef-825b-0275dc2ded29",
+                            "7ce205f6-d772-11ef-825b-0275dc2ded29",
+                            "7ce20a1a-d772-11ef-825b-0275dc2ded29",
+                            "7ce2124e-d772-11ef-825b-0275dc2ded29",
+                            "82059936-1fab-11f0-b604-0ae672297eff",
+                            "8205bbaa-1fab-11f0-b604-0ae672297eff",
+                            "8205ccbc-1fab-11f0-b604-0ae672297eff",
+                            "8205dc2a-1fab-11f0-b604-0ae672297eff",
+                            "8205ed5a-1fab-11f0-b604-0ae672297eff",
+                            "8205fe44-1fab-11f0-b604-0ae672297eff",
+                            "82061b72-1fab-11f0-b604-0ae672297eff",
+                            "82062a0e-1fab-11f0-b604-0ae672297eff",
+                            "8206390e-1fab-11f0-b604-0ae672297eff",
+                            "820663fc-1fab-11f0-b604-0ae672297eff",
+                            "820672e8-1fab-11f0-b604-0ae672297eff",
+                            "820681ac-1fab-11f0-b604-0ae672297eff",
+                            "82068fee-1fab-11f0-b604-0ae672297eff",
+                            "82069e62-1fab-11f0-b604-0ae672297eff",
+                            "8206ac7c-1fab-11f0-b604-0ae672297eff",
+                            "8206bb4a-1fab-11f0-b604-0ae672297eff",
+                            "8206d4a4-1fab-11f0-b604-0ae672297eff",
+                            "8206f970-1fab-11f0-b604-0ae672297eff",
+                            "820708d4-1fab-11f0-b604-0ae672297eff",
+                            "82071874-1fab-11f0-b604-0ae672297eff",
+                            "87139870-d860-11ef-98f5-0275dc2ded29",
+                            "8713ae0a-d860-11ef-98f5-0275dc2ded29",
+                            "8713b6de-d860-11ef-98f5-0275dc2ded29",
+                            "8713bc60-d860-11ef-98f5-0275dc2ded29",
+                            "8713c124-d860-11ef-98f5-0275dc2ded29",
+                            "8713c548-d860-11ef-98f5-0275dc2ded29",
+                            "8713cde0-d860-11ef-98f5-0275dc2ded29",
+                            "8713d5d8-d860-11ef-98f5-0275dc2ded29",
+                            "8713d9ca-d860-11ef-98f5-0275dc2ded29",
+                            "8713ddc6-d860-11ef-98f5-0275dc2ded29",
+                            "8713e280-d860-11ef-98f5-0275dc2ded29",
+                            "8713e6cc-d860-11ef-98f5-0275dc2ded29",
+                            "8713ee88-d860-11ef-98f5-0275dc2ded29",
+                            "8713f270-d860-11ef-98f5-0275dc2ded29",
+                            "8713f66c-d860-11ef-98f5-0275dc2ded29",
+                            "8713fa40-d860-11ef-98f5-0275dc2ded29",
+                            "8713fe14-d860-11ef-98f5-0275dc2ded29",
+                            "871401fc-d860-11ef-98f5-0275dc2ded29",
+                            "871405ee-d860-11ef-98f5-0275dc2ded29",
+                            "87140a94-d860-11ef-98f5-0275dc2ded29",
+                            "87140e9a-d860-11ef-98f5-0275dc2ded29",
+                            "881597fe-1fab-11f0-b604-0ae672297eff",
+                            "8815c026-1fab-11f0-b604-0ae672297eff",
+                            "8815d656-1fab-11f0-b604-0ae672297eff",
+                            "8815f92e-1fab-11f0-b604-0ae672297eff",
+                            "881626a6-1fab-11f0-b604-0ae672297eff",
+                            "881635c4-1fab-11f0-b604-0ae672297eff",
+                            "881645aa-1fab-11f0-b604-0ae672297eff",
+                            "88166314-1fab-11f0-b604-0ae672297eff",
+                            "88168074-1fab-11f0-b604-0ae672297eff",
+                            "8816a3e2-1fab-11f0-b604-0ae672297eff",
+                            "8816c3c2-1fab-11f0-b604-0ae672297eff",
+                            "8816f0cc-1fab-11f0-b604-0ae672297eff",
+                            "8817004e-1fab-11f0-b604-0ae672297eff",
+                            "88171746-1fab-11f0-b604-0ae672297eff",
+                            "88172a9c-1fab-11f0-b604-0ae672297eff",
+                            "88174130-1fab-11f0-b604-0ae672297eff",
+                            "88175260-1fab-11f0-b604-0ae672297eff",
+                            "8dee0daa-1fab-11f0-b604-0ae672297eff",
+                            "8dee5b20-1fab-11f0-b604-0ae672297eff",
+                            "8dee7b5a-1fab-11f0-b604-0ae672297eff",
+                            "8dee8a78-1fab-11f0-b604-0ae672297eff",
+                            "8dee99a0-1fab-11f0-b604-0ae672297eff",
+                            "8deea90e-1fab-11f0-b604-0ae672297eff",
+                            "8deeba7a-1fab-11f0-b604-0ae672297eff",
+                            "8deeca10-1fab-11f0-b604-0ae672297eff",
+                            "8deed91a-1fab-11f0-b604-0ae672297eff",
+                            "8deee86a-1fab-11f0-b604-0ae672297eff",
+                            "8deef756-1fab-11f0-b604-0ae672297eff",
+                            "8def070a-1fab-11f0-b604-0ae672297eff",
+                            "8def1b3c-1fab-11f0-b604-0ae672297eff",
+                            "8def30e0-1fab-11f0-b604-0ae672297eff",
+                            "8def4530-1fab-11f0-b604-0ae672297eff",
+                            "8def7906-1fab-11f0-b604-0ae672297eff",
+                            "93036484-1fab-11f0-b604-0ae672297eff",
+                            "93038630-1fab-11f0-b604-0ae672297eff",
+                            "930399fe-1fab-11f0-b604-0ae672297eff",
+                            "9303aa84-1fab-11f0-b604-0ae672297eff",
+                            "9303ba9c-1fab-11f0-b604-0ae672297eff",
+                            "9303c988-1fab-11f0-b604-0ae672297eff",
+                            "9303d8a6-1fab-11f0-b604-0ae672297eff",
+                            "9303e79c-1fab-11f0-b604-0ae672297eff",
+                            "9303f69c-1fab-11f0-b604-0ae672297eff",
+                            "930404de-1fab-11f0-b604-0ae672297eff",
+                            "930412a8-1fab-11f0-b604-0ae672297eff",
+                            "9304234c-1fab-11f0-b604-0ae672297eff",
+                            "930438e6-1fab-11f0-b604-0ae672297eff",
+                            "930449da-1fab-11f0-b604-0ae672297eff",
+                            "97047318-d71a-11ef-ac5a-0275dc2ded29",
+                            "97047d4a-d71a-11ef-ac5a-0275dc2ded29",
+                            "9704874a-d71a-11ef-ac5a-0275dc2ded29",
+                            "97048a56-d71a-11ef-ac5a-0275dc2ded29",
+                            "9704901e-d71a-11ef-ac5a-0275dc2ded29",
+                            "9867633a-1fab-11f0-b604-0ae672297eff",
+                            "98677c44-1fab-11f0-b604-0ae672297eff",
+                            "98678e0a-1fab-11f0-b604-0ae672297eff",
+                            "9867ad5e-1fab-11f0-b604-0ae672297eff",
+                            "9867c0dc-1fab-11f0-b604-0ae672297eff",
+                            "9867d428-1fab-11f0-b604-0ae672297eff",
+                            "9867e44a-1fab-11f0-b604-0ae672297eff",
+                            "98680362-1fab-11f0-b604-0ae672297eff",
+                            "986831f2-1fab-11f0-b604-0ae672297eff",
+                            "98684098-1fab-11f0-b604-0ae672297eff",
+                            "98686456-1fab-11f0-b604-0ae672297eff",
+                            "98687842-1fab-11f0-b604-0ae672297eff",
+                            "98689b06-1fab-11f0-b604-0ae672297eff",
+                            "9868ab0a-1fab-11f0-b604-0ae672297eff",
+                            "9868e8cc-1fab-11f0-b604-0ae672297eff",
+                            "9868f984-1fab-11f0-b604-0ae672297eff",
+                            "9e729fcc-d714-11ef-8c40-0275dc2ded29",
+                            "9e72aaa8-d714-11ef-8c40-0275dc2ded29",
+                            "9e72b3fe-d714-11ef-8c40-0275dc2ded29",
+                            "9e72b714-d714-11ef-8c40-0275dc2ded29",
+                            "9e72be4e-d714-11ef-8c40-0275dc2ded29",
+                            "a38f1ac8-1fab-11f0-b604-0ae672297eff",
+                            "a38f3d32-1fab-11f0-b604-0ae672297eff",
+                            "a38f506a-1fab-11f0-b604-0ae672297eff",
+                            "a38f6168-1fab-11f0-b604-0ae672297eff",
+                            "a38f72de-1fab-11f0-b604-0ae672297eff",
+                            "a38f888c-1fab-11f0-b604-0ae672297eff",
+                            "a38f9aac-1fab-11f0-b604-0ae672297eff",
+                            "a38fabbe-1fab-11f0-b604-0ae672297eff",
+                            "a38fbd20-1fab-11f0-b604-0ae672297eff",
+                            "a38fd508-1fab-11f0-b604-0ae672297eff",
+                            "a38fe6ba-1fab-11f0-b604-0ae672297eff",
+                            "a38ff6b4-1fab-11f0-b604-0ae672297eff",
+                            "a3900654-1fab-11f0-b604-0ae672297eff",
+                            "a39010a4-d834-11ef-b730-0275dc2ded29",
+                            "a39016b2-1fab-11f0-b604-0ae672297eff",
+                            "a390173e-d834-11ef-b730-0275dc2ded29",
+                            "a3901b76-d834-11ef-b730-0275dc2ded29",
+                            "a3901f5e-d834-11ef-b730-0275dc2ded29",
+                            "a3902332-d834-11ef-b730-0275dc2ded29",
+                            "a39026fc-d834-11ef-b730-0275dc2ded29",
+                            "a3902738-1fab-11f0-b604-0ae672297eff",
+                            "a3902e9a-d834-11ef-b730-0275dc2ded29",
+                            "a3903264-d834-11ef-b730-0275dc2ded29",
+                            "a39036a6-d834-11ef-b730-0275dc2ded29",
+                            "a39037c8-1fab-11f0-b604-0ae672297eff",
+                            "a3904312-d834-11ef-b730-0275dc2ded29",
+                            "a39046f0-d834-11ef-b730-0275dc2ded29",
+                            "a3904aa6-d834-11ef-b730-0275dc2ded29",
+                            "a3904e52-d834-11ef-b730-0275dc2ded29",
+                            "a39051e0-d834-11ef-b730-0275dc2ded29",
+                            "a3905582-d834-11ef-b730-0275dc2ded29",
+                            "a3905898-1fab-11f0-b604-0ae672297eff",
+                            "a390592e-d834-11ef-b730-0275dc2ded29",
+                            "a3905cda-d834-11ef-b730-0275dc2ded29",
+                            "a390652c-d834-11ef-b730-0275dc2ded29",
+                            "a3906914-d834-11ef-b730-0275dc2ded29",
+                            "a3906cca-d834-11ef-b730-0275dc2ded29",
+                            "a3906e64-1fab-11f0-b604-0ae672297eff",
+                            "a3908098-1fab-11f0-b604-0ae672297eff",
+                            "a39090c4-1fab-11f0-b604-0ae672297eff",
+                            "a390a08c-1fab-11f0-b604-0ae672297eff",
+                            "a390b022-1fab-11f0-b604-0ae672297eff",
+                            "a390c0bc-1fab-11f0-b604-0ae672297eff",
+                            "a390d0d4-1fab-11f0-b604-0ae672297eff",
+                            "a390e10a-1fab-11f0-b604-0ae672297eff",
+                            "a390f05a-1fab-11f0-b604-0ae672297eff",
+                            "a390ffc8-1fab-11f0-b604-0ae672297eff",
+                            "a3910efa-1fab-11f0-b604-0ae672297eff",
+                            "a3911ef4-1fab-11f0-b604-0ae672297eff",
+                            "a3912e62-1fab-11f0-b604-0ae672297eff",
+                            "a391606c-1fab-11f0-b604-0ae672297eff",
+                            "a391702a-1fab-11f0-b604-0ae672297eff",
+                            "a3917fac-1fab-11f0-b604-0ae672297eff",
+                            "a3918f56-1fab-11f0-b604-0ae672297eff",
+                            "a3919f82-1fab-11f0-b604-0ae672297eff",
+                            "a391afcc-1fab-11f0-b604-0ae672297eff",
+                            "a391bf9e-1fab-11f0-b604-0ae672297eff",
+                            "a391ceee-1fab-11f0-b604-0ae672297eff",
+                            "a391e276-1fab-11f0-b604-0ae672297eff",
+                            "afe99ae6-1fab-11f0-b604-0ae672297eff",
+                            "afe9b4ea-1fab-11f0-b604-0ae672297eff",
+                            "afe9c5f2-1fab-11f0-b604-0ae672297eff",
+                            "afe9d57e-1fab-11f0-b604-0ae672297eff",
+                            "afe9feb4-1fab-11f0-b604-0ae672297eff",
+                            "afea12e6-1fab-11f0-b604-0ae672297eff",
+                            "afea2380-1fab-11f0-b604-0ae672297eff",
+                            "afea3352-1fab-11f0-b604-0ae672297eff",
+                            "afea5382-1fab-11f0-b604-0ae672297eff",
+                            "afea7286-1fab-11f0-b604-0ae672297eff",
+                            "afea815e-1fab-11f0-b604-0ae672297eff",
+                            "afea9040-1fab-11f0-b604-0ae672297eff",
+                            "afeaae0e-1fab-11f0-b604-0ae672297eff",
+                            "afeabd0e-1fab-11f0-b604-0ae672297eff",
+                            "afeacca4-1fab-11f0-b604-0ae672297eff",
+                            "afeadc30-1fab-11f0-b604-0ae672297eff",
+                            "afeaeb1c-1fab-11f0-b604-0ae672297eff",
+                            "afeaf9cc-1fab-11f0-b604-0ae672297eff",
+                            "afeb0976-1fab-11f0-b604-0ae672297eff",
+                            "afeb1880-1fab-11f0-b604-0ae672297eff",
+                            "afeb27b2-1fab-11f0-b604-0ae672297eff",
+                            "b7d075cc-1fab-11f0-b604-0ae672297eff",
+                            "b7d09214-1fab-11f0-b604-0ae672297eff",
+                            "b7d0a42a-1fab-11f0-b604-0ae672297eff",
+                            "b7d0f484-1fab-11f0-b604-0ae672297eff",
+                            "b7d103a2-1fab-11f0-b604-0ae672297eff",
+                            "b7d13372-1fab-11f0-b604-0ae672297eff",
+                            "b7d14286-1fab-11f0-b604-0ae672297eff",
+                            "b7d15104-1fab-11f0-b604-0ae672297eff",
+                            "b7d16e14-1fab-11f0-b604-0ae672297eff",
+                            "b7d18cf0-1fab-11f0-b604-0ae672297eff",
+                            "b7d19cae-1fab-11f0-b604-0ae672297eff",
+                            "b7d1ada2-1fab-11f0-b604-0ae672297eff",
+                            "b7d1bd56-1fab-11f0-b604-0ae672297eff",
+                            "b7d1ce7c-1fab-11f0-b604-0ae672297eff",
+                            "b7d1de44-1fab-11f0-b604-0ae672297eff",
+                            "b7d1ed94-1fab-11f0-b604-0ae672297eff",
+                            "bda23c46-d376-11ef-a239-0275dc2ded29",
+                            "bda25802-d376-11ef-a239-0275dc2ded29",
+                            "bda2600e-d376-11ef-a239-0275dc2ded29",
+                            "bda267d4-d376-11ef-a239-0275dc2ded29",
+                            "bda27ff8-d376-11ef-a239-0275dc2ded29",
+                            "bda287b4-d376-11ef-a239-0275dc2ded29",
+                            "bda28f52-d376-11ef-a239-0275dc2ded29",
+                            "bda296b4-d376-11ef-a239-0275dc2ded29",
+                            "bda2a05a-d376-11ef-a239-0275dc2ded29",
+                            "bda2b810-d376-11ef-a239-0275dc2ded29",
+                            "bda2bf90-d376-11ef-a239-0275dc2ded29",
+                            "bda2cf44-d376-11ef-a239-0275dc2ded29",
+                            "bda2d6a6-d376-11ef-a239-0275dc2ded29",
+                            "bda2de08-d376-11ef-a239-0275dc2ded29",
+                            "bda2eccc-d376-11ef-a239-0275dc2ded29",
+                            "bda2f500-d376-11ef-a239-0275dc2ded29",
+                            "bda30414-d376-11ef-a239-0275dc2ded29",
+                            "bda30b6c-d376-11ef-a239-0275dc2ded29",
+                            "bda322a0-d376-11ef-a239-0275dc2ded29",
+                            "bda33164-d376-11ef-a239-0275dc2ded29",
+                            "bda34898-d376-11ef-a239-0275dc2ded29",
+                            "bda36f9e-d376-11ef-a239-0275dc2ded29",
+                            "bda37764-d376-11ef-a239-0275dc2ded29",
+                            "bda37eda-d376-11ef-a239-0275dc2ded29",
+                            "bda3863c-d376-11ef-a239-0275dc2ded29",
+                            "bda38e5c-d376-11ef-a239-0275dc2ded29",
+                            "bda3962c-d376-11ef-a239-0275dc2ded29",
+                            "bda39db6-d376-11ef-a239-0275dc2ded29",
+                            "bda3a50e-d376-11ef-a239-0275dc2ded29",
+                            "bda3ac5c-d376-11ef-a239-0275dc2ded29",
+                            "bda3b60c-d376-11ef-a239-0275dc2ded29",
+                            "bda3bdb4-d376-11ef-a239-0275dc2ded29",
+                            "bda3c516-d376-11ef-a239-0275dc2ded29",
+                            "bda3cc8c-d376-11ef-a239-0275dc2ded29",
+                            "bda3dc0e-d376-11ef-a239-0275dc2ded29",
+                            "bda3f2ca-d376-11ef-a239-0275dc2ded29",
+                            "bda40256-d376-11ef-a239-0275dc2ded29",
+                            "bda409e0-d376-11ef-a239-0275dc2ded29",
+                            "bda41138-d376-11ef-a239-0275dc2ded29",
+                            "bda4189a-d376-11ef-a239-0275dc2ded29",
+                            "bda42830-d376-11ef-a239-0275dc2ded29",
+                            "bda42fba-d376-11ef-a239-0275dc2ded29",
+                            "bda43726-d376-11ef-a239-0275dc2ded29",
+                            "bda445c2-d376-11ef-a239-0275dc2ded29",
+                            "bda44d06-d376-11ef-a239-0275dc2ded29",
+                            "bda455bc-d376-11ef-a239-0275dc2ded29",
+                            "bda46458-d376-11ef-a239-0275dc2ded29",
+                            "bda47b64-d376-11ef-a239-0275dc2ded29",
+                            "bda4923e-d376-11ef-a239-0275dc2ded29",
+                            "bda499a0-d376-11ef-a239-0275dc2ded29",
+                            "bda4a1b6-d376-11ef-a239-0275dc2ded29",
+                            "bda4b822-d376-11ef-a239-0275dc2ded29",
+                            "bda4c786-d376-11ef-a239-0275dc2ded29",
+                            "bda4cefc-d376-11ef-a239-0275dc2ded29",
+                            "bfc0333a-1fab-11f0-b604-0ae672297eff",
+                            "bfc04988-1fab-11f0-b604-0ae672297eff",
+                            "bfc0794e-1fab-11f0-b604-0ae672297eff",
+                            "bfc087d6-1fab-11f0-b604-0ae672297eff",
+                            "bfc09884-1fab-11f0-b604-0ae672297eff",
+                            "bfc0a90a-1fab-11f0-b604-0ae672297eff",
+                            "bfc0b7ec-1fab-11f0-b604-0ae672297eff",
+                            "bfc0c64c-1fab-11f0-b604-0ae672297eff",
+                            "bfc0d47a-1fab-11f0-b604-0ae672297eff",
+                            "bfc0e37a-1fab-11f0-b604-0ae672297eff",
+                            "bfc0f220-1fab-11f0-b604-0ae672297eff",
+                            "bfc10314-1fab-11f0-b604-0ae672297eff",
+                            "bfc12a1a-1fab-11f0-b604-0ae672297eff",
+                            "bfc13afa-1fab-11f0-b604-0ae672297eff",
+                            "bfc14b44-1fab-11f0-b604-0ae672297eff",
+                            "bfc15b66-1fab-11f0-b604-0ae672297eff",
+                            "bfc16a20-1fab-11f0-b604-0ae672297eff",
+                            "bfc17880-1fab-11f0-b604-0ae672297eff",
+                            "bfc1878a-1fab-11f0-b604-0ae672297eff",
+                            "c5a2a2e8-fadd-11e6-9849-6c4008b05c4c",
+                            "c5a2b1dc-fadd-11e6-a726-6c4008b05c4c",
+                            "c5a2b530-fadd-11e6-b5f6-6c4008b05c4c",
+                            "c5ebed80-1fab-11f0-b604-0ae672297eff",
+                            "c5ec00b8-1fab-11f0-b604-0ae672297eff",
+                            "c5ec1e7c-1fab-11f0-b604-0ae672297eff",
+                            "c5ec2d40-1fab-11f0-b604-0ae672297eff",
+                            "c5ec3b3c-1fab-11f0-b604-0ae672297eff",
+                            "c5ec48b6-1fab-11f0-b604-0ae672297eff",
+                            "c5ec5626-1fab-11f0-b604-0ae672297eff",
+                            "c5ec8aec-1fab-11f0-b604-0ae672297eff",
+                            "c5ec991a-1fab-11f0-b604-0ae672297eff",
+                            "c7ab9e8a-08e1-11f0-a3e8-0275dc2ded29",
+                            "c7b35b72-d833-11ef-a368-0275dc2ded29",
+                            "c7b35fd2-d833-11ef-a368-0275dc2ded29",
+                            "c7b36374-d833-11ef-a368-0275dc2ded29",
+                            "c7b36766-d833-11ef-a368-0275dc2ded29",
+                            "c7b36ad6-d833-11ef-a368-0275dc2ded29",
+                            "c7b36e32-d833-11ef-a368-0275dc2ded29",
+                            "c7b37382-d833-11ef-a368-0275dc2ded29",
+                            "c7b37724-d833-11ef-a368-0275dc2ded29",
+                            "c7b37a80-d833-11ef-a368-0275dc2ded29",
+                            "c7b37ddc-d833-11ef-a368-0275dc2ded29",
+                            "c7b3812e-d833-11ef-a368-0275dc2ded29",
+                            "c7b3849e-d833-11ef-a368-0275dc2ded29",
+                            "c7b387e6-d833-11ef-a368-0275dc2ded29",
+                            "c7b38b9c-d833-11ef-a368-0275dc2ded29",
+                            "cfb52246-1fab-11f0-b604-0ae672297eff",
+                            "cfb5483e-1fab-11f0-b604-0ae672297eff",
+                            "cfb55e64-1fab-11f0-b604-0ae672297eff",
+                            "cfb57174-1fab-11f0-b604-0ae672297eff",
+                            "cfb5944c-1fab-11f0-b604-0ae672297eff",
+                            "cfb5a31a-1fab-11f0-b604-0ae672297eff",
+                            "cfb5b7b0-1fab-11f0-b604-0ae672297eff",
+                            "cfb5c868-1fab-11f0-b604-0ae672297eff",
+                            "cfb5d7cc-1fab-11f0-b604-0ae672297eff",
+                            "cfb5e672-1fab-11f0-b604-0ae672297eff",
+                            "cfb5f4b4-1fab-11f0-b604-0ae672297eff",
+                            "cfb602c4-1fab-11f0-b604-0ae672297eff",
+                            "cfb613b8-1fab-11f0-b604-0ae672297eff",
+                            "cfb6240c-1fab-11f0-b604-0ae672297eff",
+                            "cfb637ee-1fab-11f0-b604-0ae672297eff",
+                            "cfb64cca-1fab-11f0-b604-0ae672297eff",
+                            "cfb65f6c-1fab-11f0-b604-0ae672297eff",
+                            "cfb66fac-1fab-11f0-b604-0ae672297eff",
+                            "cfb680dc-1fab-11f0-b604-0ae672297eff",
+                            "cfb69392-1fab-11f0-b604-0ae672297eff",
+                            "cfb6a454-1fab-11f0-b604-0ae672297eff",
+                            "cfb6b4bc-1fab-11f0-b604-0ae672297eff",
+                            "cfb6c434-1fab-11f0-b604-0ae672297eff",
+                            "cfb6d438-1fab-11f0-b604-0ae672297eff",
+                            "cfb6e284-1fab-11f0-b604-0ae672297eff",
+                            "cfb6f116-1fab-11f0-b604-0ae672297eff",
+                            "cfb70d5e-1fab-11f0-b604-0ae672297eff",
+                            "d7cd4102-d834-11ef-a75a-0275dc2ded29",
+                            "d7cd4634-d834-11ef-a75a-0275dc2ded29",
+                            "d7cd5200-d834-11ef-a75a-0275dc2ded29",
+                            "d7cd56f6-d834-11ef-a75a-0275dc2ded29",
+                            "d7cd5b1a-d834-11ef-a75a-0275dc2ded29",
+                            "d7cd5f02-d834-11ef-a75a-0275dc2ded29",
+                            "d7cd62fe-d834-11ef-a75a-0275dc2ded29",
+                            "d7cd66fa-d834-11ef-a75a-0275dc2ded29",
+                            "d7cd6ace-d834-11ef-a75a-0275dc2ded29",
+                            "d7cd6ea2-d834-11ef-a75a-0275dc2ded29",
+                            "d7cd724e-d834-11ef-a75a-0275dc2ded29",
+                            "d7cd7618-d834-11ef-a75a-0275dc2ded29",
+                            "d7cd7e42-d834-11ef-a75a-0275dc2ded29",
+                            "d7cd822a-d834-11ef-a75a-0275dc2ded29",
+                            "d7cd85fe-d834-11ef-a75a-0275dc2ded29",
+                            "d7cd89aa-d834-11ef-a75a-0275dc2ded29",
+                            "d7cd8d7e-d834-11ef-a75a-0275dc2ded29",
+                            "d7cd9120-d834-11ef-a75a-0275dc2ded29",
+                            "d7cd94ae-d834-11ef-a75a-0275dc2ded29",
+                            "da0ed73c-d771-11ef-af99-0275dc2ded29",
+                            "da0edb9c-d771-11ef-af99-0275dc2ded29",
+                            "da0edf48-d771-11ef-af99-0275dc2ded29",
+                            "da0ee2e0-d771-11ef-af99-0275dc2ded29",
+                            "da0ee682-d771-11ef-af99-0275dc2ded29",
+                            "da0ee9fc-d771-11ef-af99-0275dc2ded29",
+                            "da0eef2e-d771-11ef-af99-0275dc2ded29",
+                            "da0ef2f8-d771-11ef-af99-0275dc2ded29",
+                            "da0ef672-d771-11ef-af99-0275dc2ded29",
+                            "da0ef9d8-d771-11ef-af99-0275dc2ded29",
+                            "da0efd3e-d771-11ef-af99-0275dc2ded29",
+                            "da0f00b8-d771-11ef-af99-0275dc2ded29",
+                            "da0f0414-d771-11ef-af99-0275dc2ded29",
+                            "da0f0766-d771-11ef-af99-0275dc2ded29",
+                            "da0f0afe-d771-11ef-af99-0275dc2ded29",
+                            "da0f0e50-d771-11ef-af99-0275dc2ded29",
+                            "dbf61754-1fab-11f0-b604-0ae672297eff",
+                            "dbf630b8-1fab-11f0-b604-0ae672297eff",
+                            "dbf643dc-1fab-11f0-b604-0ae672297eff",
+                            "dbf65462-1fab-11f0-b604-0ae672297eff",
+                            "dbf662fe-1fab-11f0-b604-0ae672297eff",
+                            "dbf672e4-1fab-11f0-b604-0ae672297eff",
+                            "dbf681ee-1fab-11f0-b604-0ae672297eff",
+                            "dbf6908a-1fab-11f0-b604-0ae672297eff",
+                            "dbf69f6c-1fab-11f0-b604-0ae672297eff",
+                            "dbf6b330-1fab-11f0-b604-0ae672297eff",
+                            "dbf6c56e-1fab-11f0-b604-0ae672297eff",
+                            "dbf6d4f0-1fab-11f0-b604-0ae672297eff",
+                            "dbf6e3a0-1fab-11f0-b604-0ae672297eff",
+                            "dbf6f1d8-1fab-11f0-b604-0ae672297eff",
+                            "dbf700ba-1fab-11f0-b604-0ae672297eff",
+                            "dbf70f60-1fab-11f0-b604-0ae672297eff",
+                            "e1d0ec0e-d770-11ef-8c40-0275dc2ded29",
+                            "e1d0f244-d770-11ef-8c40-0275dc2ded29",
+                            "e1d0f88e-d770-11ef-8c40-0275dc2ded29",
+                            "e1d0fea6-d770-11ef-8c40-0275dc2ded29",
+                            "e1d103e2-d770-11ef-8c40-0275dc2ded29",
+                            "e1d108d8-d770-11ef-8c40-0275dc2ded29",
+                            "e1d10dc4-d770-11ef-8c40-0275dc2ded29",
+                            "e1d11292-d770-11ef-8c40-0275dc2ded29",
+                            "e1d1176a-d770-11ef-8c40-0275dc2ded29",
+                            "e1d11c42-d770-11ef-8c40-0275dc2ded29",
+                            "e1d121f6-d770-11ef-8c40-0275dc2ded29",
+                            "e1d12714-d770-11ef-8c40-0275dc2ded29",
+                            "e1d12bf6-d770-11ef-8c40-0275dc2ded29",
+                            "e1d130ce-d770-11ef-8c40-0275dc2ded29",
+                            "e1d135a6-d770-11ef-8c40-0275dc2ded29",
+                            "e1d13a74-d770-11ef-8c40-0275dc2ded29",
+                            "e1d143fc-d770-11ef-8c40-0275dc2ded29",
+                            "e1d1499c-d770-11ef-8c40-0275dc2ded29",
+                            "e1d14eb0-d770-11ef-8c40-0275dc2ded29",
+                            "e1d15388-d770-11ef-8c40-0275dc2ded29",
+                            "e1d15860-d770-11ef-8c40-0275dc2ded29",
+                            "e1d15d74-d770-11ef-8c40-0275dc2ded29",
+                            "e1d1624c-d770-11ef-8c40-0275dc2ded29",
+                            "e1d16742-d770-11ef-8c40-0275dc2ded29",
+                            "e1d16cec-d770-11ef-8c40-0275dc2ded29",
+                            "e1d1721e-d770-11ef-8c40-0275dc2ded29",
+                            "e1d176ce-d770-11ef-8c40-0275dc2ded29",
+                            "e1d17b92-d770-11ef-8c40-0275dc2ded29",
+                            "e1d18042-d770-11ef-8c40-0275dc2ded29",
+                            "e1d184f2-d770-11ef-8c40-0275dc2ded29",
+                            "e1d193c0-d770-11ef-8c40-0275dc2ded29",
+                            "e1d198fc-d770-11ef-8c40-0275dc2ded29",
+                            "e1d19dac-d770-11ef-8c40-0275dc2ded29",
+                            "e1d1a252-d770-11ef-8c40-0275dc2ded29",
+                            "e1d1a70c-d770-11ef-8c40-0275dc2ded29",
+                            "e1d1aba8-d770-11ef-8c40-0275dc2ded29",
+                            "e1d1b058-d770-11ef-8c40-0275dc2ded29",
+                            "e1d1b4fe-d770-11ef-8c40-0275dc2ded29",
+                            "e1d1ba58-d770-11ef-8c40-0275dc2ded29",
+                            "e771a9b8-1fab-11f0-b604-0ae672297eff",
+                            "e771c2ae-1fab-11f0-b604-0ae672297eff",
+                            "e771d3ca-1fab-11f0-b604-0ae672297eff",
+                            "e771fcba-1fab-11f0-b604-0ae672297eff",
+                            "e7720eda-1fab-11f0-b604-0ae672297eff",
+                            "e7721fec-1fab-11f0-b604-0ae672297eff",
+                            "e7722ec4-1fab-11f0-b604-0ae672297eff",
+                            "e7724b20-1fab-11f0-b604-0ae672297eff",
+                            "e7725912-1fab-11f0-b604-0ae672297eff",
+                            "e77267b8-1fab-11f0-b604-0ae672297eff",
+                            "e77276e0-1fab-11f0-b604-0ae672297eff",
+                            "e77284f0-1fab-11f0-b604-0ae672297eff",
+                            "e77292ce-1fab-11f0-b604-0ae672297eff",
+                            "e772af52-1fab-11f0-b604-0ae672297eff",
+                            "e772bf06-1fab-11f0-b604-0ae672297eff",
+                            "e772cd84-1fab-11f0-b604-0ae672297eff",
+                            "e7731726-1fab-11f0-b604-0ae672297eff",
+                            "e7732a22-1fab-11f0-b604-0ae672297eff",
+                            "e7733c60-1fab-11f0-b604-0ae672297eff",
+                            "e7734bb0-1fab-11f0-b604-0ae672297eff",
+                            "e7735b78-1fab-11f0-b604-0ae672297eff",
+                            "e7736a6e-1fab-11f0-b604-0ae672297eff",
+                            "e77378ce-1fab-11f0-b604-0ae672297eff",
+                            "e9b8d73c-09b7-11f0-b84f-0275dc2ded29",
+                            "eaac50da-d832-11ef-a368-0275dc2ded29",
+                            "eaac6836-d832-11ef-a368-0275dc2ded29",
+                            "eaac6cf0-d832-11ef-a368-0275dc2ded29",
+                            "eaac75c4-d832-11ef-a368-0275dc2ded29",
+                            "eaac79fc-d832-11ef-a368-0275dc2ded29",
+                            "eaac7efc-d832-11ef-a368-0275dc2ded29",
+                            "eaac833e-d832-11ef-a368-0275dc2ded29",
+                            "eaac8b72-d832-11ef-a368-0275dc2ded29",
+                            "eaac97d4-d832-11ef-a368-0275dc2ded29",
+                            "eaac9bd0-d832-11ef-a368-0275dc2ded29",
+                            "eaaca3be-d832-11ef-a368-0275dc2ded29",
+                            "eaaca88c-d832-11ef-a368-0275dc2ded29",
+                            "eaacb0b6-d832-11ef-a368-0275dc2ded29",
+                            "eaacb4d0-d832-11ef-a368-0275dc2ded29",
+                            "eaacc4b6-d832-11ef-a368-0275dc2ded29",
+                            "eaacc894-d832-11ef-a368-0275dc2ded29",
+                            "f9c82772-1fab-11f0-b604-0ae672297eff",
+                            "f9c843a6-1fab-11f0-b604-0ae672297eff",
+                            "f9c85576-1fab-11f0-b604-0ae672297eff",
+                            "f9c8652a-1fab-11f0-b604-0ae672297eff",
+                            "f9c8743e-1fab-11f0-b604-0ae672297eff",
+                            "f9c884b0-1fab-11f0-b604-0ae672297eff",
+                            "f9c8b282-1fab-11f0-b604-0ae672297eff",
+                            "f9c8c114-1fab-11f0-b604-0ae672297eff",
+                            "f9c8d42e-1fab-11f0-b604-0ae672297eff",
+                            "f9c8e3f6-1fab-11f0-b604-0ae672297eff",
+                            "f9c8f9cc-1fab-11f0-b604-0ae672297eff",
+                            "f9c9129a-1fab-11f0-b604-0ae672297eff",
+                            "f9c924ba-1fab-11f0-b604-0ae672297eff",
+                            "f9c934b4-1fab-11f0-b604-0ae672297eff",
+                            "f9c943d2-1fab-11f0-b604-0ae672297eff",
+                            "f9c95746-1fab-11f0-b604-0ae672297eff",
+                            "f9c96876-1fab-11f0-b604-0ae672297eff",
+                            "f9c97942-1fab-11f0-b604-0ae672297eff",
+                            "f9c991a2-1fab-11f0-b604-0ae672297eff",
+                            "f9c9ab74-1fab-11f0-b604-0ae672297eff",
+                            "f9c9c140-1fab-11f0-b604-0ae672297eff",
+                            "f9c9d446-1fab-11f0-b604-0ae672297eff",
+                            "f9c9e4f4-1fab-11f0-b604-0ae672297eff",
+                            "f9c9f408-1fab-11f0-b604-0ae672297eff",
+                            "f9ca02e0-1fab-11f0-b604-0ae672297eff",
+                            "f9ca1168-1fab-11f0-b604-0ae672297eff",
+                            "f9ca204a-1fab-11f0-b604-0ae672297eff",
+                            "f9ca2f68-1fab-11f0-b604-0ae672297eff",
+                            "f9ca3e54-1fab-11f0-b604-0ae672297eff",
+                            "f9ca4d2c-1fab-11f0-b604-0ae672297eff",
+                            "feb95991-fa14-11e6-974f-6c4008b05c4c"
+                        ]
+                    },
+                    "function_id": "c75ebc8d-7aae-4c99-981d-4219dbb4b789",
+                    "graph_id": "bda239c6-d376-11ef-a239-0275dc2ded29",
+                    "id": "428d4491-595e-44c6-8361-7fc3207a8c7e"
+                },
+                {
+                    "config": {
                         "descriptor_types": {
                             "description": {
                                 "nodegroup_id": "bda3962c-d376-11ef-a239-0275dc2ded29",
-                                "string_template": "<Identifier_content>"
+                                "string_template": "Barcode # <Identifier_content>"
                             },
                             "map_popup": {
                                 "nodegroup_id": "",
@@ -18473,7 +18797,7 @@
                     "parentnodegroup_id": null
                 },
                 {
-                    "cardinality": "1",
+                    "cardinality": "n",
                     "grouping_node_id": "3aff54bc-0f3b-11f0-aa84-02460e9d2217",
                     "legacygroupid": null,
                     "nodegroupid": "3aff54bc-0f3b-11f0-aa84-02460e9d2217",
@@ -18482,12 +18806,6 @@
                 {
                     "cardinality": "1",
                     "grouping_node_id": "459afb3e-fdf6-11ef-966f-0275dc2ded29",
-                    "legacygroupid": null,
-                    "nodegroupid": "3aff54bc-0f3b-11f0-aa84-02460e9d2217",
-                    "parentnodegroup_id": null
-                },
-                {
-                    "cardinality": "1",
                     "legacygroupid": null,
                     "nodegroupid": "459afb3e-fdf6-11ef-966f-0275dc2ded29",
                     "parentnodegroup_id": "459b071e-fdf6-11ef-966f-0275dc2ded29"
@@ -18535,25 +18853,11 @@
                     "parentnodegroup_id": null
                 },
                 {
-                    "cardinality": "1",
+                    "cardinality": "n",
                     "grouping_node_id": "6ee83594-08e4-11f0-81c1-0275dc2ded29",
                     "legacygroupid": null,
                     "nodegroupid": "6ee83594-08e4-11f0-81c1-0275dc2ded29",
                     "parentnodegroup_id": null
-                },
-                {
-                    "cardinality": "1",
-                    "grouping_node_id": "6ee839cc-08e4-11f0-81c1-0275dc2ded29",
-                    "legacygroupid": null,
-                    "nodegroupid": "6ee839cc-08e4-11f0-81c1-0275dc2ded29",
-                    "parentnodegroup_id": "6ee8420a-08e4-11f0-81c1-0275dc2ded29"
-                },
-                {
-                    "cardinality": "1",
-                    "grouping_node_id": "6ee83c9c-08e4-11f0-81c1-0275dc2ded29",
-                    "legacygroupid": null,
-                    "nodegroupid": "6ee83c9c-08e4-11f0-81c1-0275dc2ded29",
-                    "parentnodegroup_id": "6ee83594-08e4-11f0-81c1-0275dc2ded29"
                 },
                 {
                     "cardinality": "1",
@@ -19498,52 +19802,6 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "color_highest_possible_value",
-                    "config": {
-                        "en": ""
-                    },
-                    "datatype": "number",
-                    "description": null,
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "bda239c6-d376-11ef-a239-0275dc2ded29",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "color_highest possible value",
-                    "nodegroup_id": "3aff54bc-0f3b-11f0-aa84-02460e9d2217",
-                    "nodeid": "2a60f7df-0f3c-11f0-b938-02460e9d2217",
-                    "ontologyclass": "http://www.w3.org/2000/01/rdf-schema#Literal",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P90b_has_upper_value_limit",
-                    "sortorder": 0,
-                    "sourcebranchpublication_id": null
-                },
-                {
-                    "alias": "color_name_label",
-                    "config": {
-                        "en": ""
-                    },
-                    "datatype": "string",
-                    "description": null,
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "bda239c6-d376-11ef-a239-0275dc2ded29",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "color_Name_label",
-                    "nodegroup_id": "3aff54bc-0f3b-11f0-aa84-02460e9d2217",
-                    "nodeid": "2bfe64b7-0f3d-11f0-8705-02460e9d2217",
-                    "ontologyclass": "http://www.w3.org/2001/XMLSchema#string",
-                    "parentproperty": "http://www.w3.org/2000/01/rdf-schema#label",
-                    "sortorder": 0,
-                    "sourcebranchpublication_id": null
-                },
-                {
                     "alias": "attribute_type",
                     "config": {
                         "rdmCollection": "9a61af90-9fd1-48fd-b5e1-e45bb8a6db5b"
@@ -19641,29 +19899,6 @@
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P43_has_dimension",
                     "sortorder": 0,
                     "source_identifier_id": null,
-                    "sourcebranchpublication_id": null
-                },
-                {
-                    "alias": "has_color",
-                    "config": {
-                        "en": ""
-                    },
-                    "datatype": "semantic",
-                    "description": null,
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "bda239c6-d376-11ef-a239-0275dc2ded29",
-                    "hascustomalias": false,
-                    "is_collector": true,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "has_color",
-                    "nodegroup_id": "3aff54bc-0f3b-11f0-aa84-02460e9d2217",
-                    "nodeid": "3aff54bc-0f3b-11f0-aa84-02460e9d2217",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E54_Dimension",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P43_has_dimension",
-                    "sortorder": 0,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -20525,59 +20760,6 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "color_source",
-                    "config": {
-                        "graphs": [
-                            {
-                                "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
-                                "name": "Textual Work"
-                            }
-                        ],
-                        "searchDsl": "",
-                        "searchString": ""
-                    },
-                    "datatype": "resource-instance-list",
-                    "description": null,
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "bda239c6-d376-11ef-a239-0275dc2ded29",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "color_source",
-                    "nodegroup_id": "3aff54bc-0f3b-11f0-aa84-02460e9d2217",
-                    "nodeid": "4f640ba5-0f3c-11f0-a329-02460e9d2217",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by",
-                    "sortorder": 0,
-                    "sourcebranchpublication_id": null
-                },
-                {
-                    "alias": "color_name_content",
-                    "config": {
-                        "en": ""
-                    },
-                    "datatype": "string",
-                    "description": null,
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "bda239c6-d376-11ef-a239-0275dc2ded29",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "color_Name_content",
-                    "nodegroup_id": "3aff54bc-0f3b-11f0-aa84-02460e9d2217",
-                    "nodeid": "536eb7e1-0f3d-11f0-af39-02460e9d2217",
-                    "ontologyclass": "http://www.w3.org/2001/XMLSchema#string",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P190_has_symbolic_content",
-                    "sortorder": 0,
-                    "sourcebranchpublication_id": null
-                },
-                {
                     "alias": "mixture_type",
                     "config": {
                         "rdmCollection": "ce9c94e3-bb70-4e87-9fef-eb0c8a6ac1ac"
@@ -20678,29 +20860,6 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "color_value",
-                    "config": {
-                        "rdmCollection": "1008354b-3ac2-4a8c-88b8-6aad2302a916"
-                    },
-                    "datatype": "concept",
-                    "description": null,
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "bda239c6-d376-11ef-a239-0275dc2ded29",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "color_value",
-                    "nodegroup_id": "3aff54bc-0f3b-11f0-aa84-02460e9d2217",
-                    "nodeid": "599508f7-0f3b-11f0-8547-02460e9d2217",
-                    "ontologyclass": "http://www.w3.org/2000/01/rdf-schema#Literal",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P90_has_value",
-                    "sortorder": 0,
-                    "sourcebranchpublication_id": null
-                },
-                {
                     "alias": "has_part",
                     "config": {
                         "en": ""
@@ -20726,31 +20885,6 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "part_dimension_name",
-                    "config": {
-                        "en": ""
-                    },
-                    "datatype": "semantic",
-                    "description": "# Specific:\n\n\n# General:\nIt is strongly recommended that every resource that should be rendered to an end user have at least one name. Different types of name can be distinguished using classifications. See: https://linked.art/model/base/#names\n\n# Arches Note:\nThis node's content should be the value for the title descriptor function, when used for a resource model.\n\n* BranchId: la-name\n* FieldId: \n",
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "bda239c6-d376-11ef-a239-0275dc2ded29",
-                    "hascustomalias": false,
-                    "is_collector": true,
-                    "is_immutable": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "part_Dimension_Name",
-                    "nodegroup_id": "6ee839cc-08e4-11f0-81c1-0275dc2ded29",
-                    "nodeid": "6ee839cc-08e4-11f0-81c1-0275dc2ded29",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E33_E41_Linguistic_Appellation",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
-                    "sortorder": 0,
-                    "source_identifier_id": null,
-                    "sourcebranchpublication_id": null
-                },
-                {
                     "alias": "part_name",
                     "config": {
                         "en": ""
@@ -20761,13 +20895,13 @@
                     "fieldname": null,
                     "graph_id": "bda239c6-d376-11ef-a239-0275dc2ded29",
                     "hascustomalias": false,
-                    "is_collector": true,
+                    "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": false,
                     "name": "part_Name",
-                    "nodegroup_id": "6ee83c9c-08e4-11f0-81c1-0275dc2ded29",
+                    "nodegroup_id": "6ee83594-08e4-11f0-81c1-0275dc2ded29",
                     "nodeid": "6ee83c9c-08e4-11f0-81c1-0275dc2ded29",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E33_E41_Linguistic_Appellation",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
@@ -20796,7 +20930,7 @@
                     "nodeid": "6ee83f62-08e4-11f0-81c1-0275dc2ded29",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P129i_is_subject_of",
-                    "sortorder": 0,
+                    "sortorder": 2,
                     "source_identifier_id": null,
                     "sourcebranchpublication_id": null
                 },
@@ -20846,7 +20980,7 @@
                     "nodeid": "6ee84494-08e4-11f0-81c1-0275dc2ded29",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E55_Type",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
-                    "sortorder": 0,
+                    "sortorder": 1,
                     "source_identifier_id": null,
                     "sourcebranchpublication_id": null
                 },
@@ -20976,67 +21110,6 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "part_dimension_name_source_",
-                    "config": {
-                        "graphs": [
-                            {
-                                "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
-                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
-                                "name": "Textual Work",
-                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
-                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
-                                "useOntologyRelationship": false
-                            }
-                        ],
-                        "searchDsl": "",
-                        "searchString": ""
-                    },
-                    "datatype": "resource-instance-list",
-                    "description": "# Specific:\n\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "bda239c6-d376-11ef-a239-0275dc2ded29",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "is_immutable": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "part_Dimension_Name_source ",
-                    "nodegroup_id": "6ee839cc-08e4-11f0-81c1-0275dc2ded29",
-                    "nodeid": "6ee84b42-08e4-11f0-81c1-0275dc2ded29",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by",
-                    "sortorder": 0,
-                    "source_identifier_id": null,
-                    "sourcebranchpublication_id": null
-                },
-                {
-                    "alias": "part_dimension_name_language_",
-                    "config": {
-                        "rdmCollection": "f7fc4f6d-fd46-4881-846f-4a08bc1a3fef"
-                    },
-                    "datatype": "concept-list",
-                    "description": "# Specific:\n\n\n# General:\nThe language of the name, selected from a controlled vocabulary.\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "bda239c6-d376-11ef-a239-0275dc2ded29",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "is_immutable": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "part_Dimension_Name_language ",
-                    "nodegroup_id": "6ee839cc-08e4-11f0-81c1-0275dc2ded29",
-                    "nodeid": "6ee84c32-08e4-11f0-81c1-0275dc2ded29",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E56_Language",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P72_has_language",
-                    "sortorder": 0,
-                    "source_identifier_id": null,
-                    "sourcebranchpublication_id": null
-                },
-                {
                     "alias": "part_dimension_value_",
                     "config": {
                         "en": ""
@@ -21057,81 +21130,6 @@
                     "nodeid": "6ee84d04-08e4-11f0-81c1-0275dc2ded29",
                     "ontologyclass": "http://www.w3.org/2000/01/rdf-schema#Literal",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P90_has_value",
-                    "sortorder": 0,
-                    "source_identifier_id": null,
-                    "sourcebranchpublication_id": null
-                },
-                {
-                    "alias": "part_dimension_name_type_",
-                    "config": {
-                        "rdmCollection": "9f1cf9a8-ce65-455f-ab1e-a9b36e9e23ce"
-                    },
-                    "datatype": "concept-list",
-                    "description": "# Specific:\n\n\n# General:\nIn order to make data both consistent and able to be customized to specific scenarios, nodes can be classified with terms from controlled vocabularies. This field gives a way to be more specific about the sort of entity, while maintaining the core information using the ontology class. See: https://linked.art/model/base/#types-and-classifications\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "bda239c6-d376-11ef-a239-0275dc2ded29",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "is_immutable": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "part_Dimension_Name_type ",
-                    "nodegroup_id": "6ee839cc-08e4-11f0-81c1-0275dc2ded29",
-                    "nodeid": "6ee84de0-08e4-11f0-81c1-0275dc2ded29",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E55_Type",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
-                    "sortorder": 0,
-                    "source_identifier_id": null,
-                    "sourcebranchpublication_id": null
-                },
-                {
-                    "alias": "part_dimension_name_content_",
-                    "config": {
-                        "en": ""
-                    },
-                    "datatype": "string",
-                    "description": "# Specific:\n\n\n# General:\nThe string value of the full name.\n\n# Arches Note:\n\n\n* BranchId: la-name-content\n* FieldId: \n",
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "bda239c6-d376-11ef-a239-0275dc2ded29",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "is_immutable": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "part_Dimension_Name_content ",
-                    "nodegroup_id": "6ee839cc-08e4-11f0-81c1-0275dc2ded29",
-                    "nodeid": "6ee84eb2-08e4-11f0-81c1-0275dc2ded29",
-                    "ontologyclass": "http://www.w3.org/2001/XMLSchema#string",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P190_has_symbolic_content",
-                    "sortorder": 0,
-                    "source_identifier_id": null,
-                    "sourcebranchpublication_id": null
-                },
-                {
-                    "alias": "part_dimension_name_label_",
-                    "config": {
-                        "en": ""
-                    },
-                    "datatype": "string",
-                    "description": "# Specific:\n\n\n# General:\nEvery node should have a _label that provides a human-readable summary label for the node. This is intended not for end users, but for developers looking at the data. See:  https://linked.art/model/base/#core-properties\n\n# Arches Note:\n\n\n* BranchId: la-label\n* FieldId: \n",
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "bda239c6-d376-11ef-a239-0275dc2ded29",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "is_immutable": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "part_Dimension_Name_label ",
-                    "nodegroup_id": "6ee839cc-08e4-11f0-81c1-0275dc2ded29",
-                    "nodeid": "6ee84f8e-08e4-11f0-81c1-0275dc2ded29",
-                    "ontologyclass": "http://www.w3.org/2001/XMLSchema#string",
-                    "parentproperty": "http://www.w3.org/2000/01/rdf-schema#label",
                     "sortorder": 0,
                     "source_identifier_id": null,
                     "sourcebranchpublication_id": null
@@ -21189,7 +21187,7 @@
                     "issearchable": true,
                     "istopnode": false,
                     "name": "part_Name_type",
-                    "nodegroup_id": "6ee83c9c-08e4-11f0-81c1-0275dc2ded29",
+                    "nodegroup_id": "6ee83594-08e4-11f0-81c1-0275dc2ded29",
                     "nodeid": "6ee85150-08e4-11f0-81c1-0275dc2ded29",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E55_Type",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
@@ -21219,7 +21217,7 @@
                     "issearchable": true,
                     "istopnode": false,
                     "name": "part_Name_source",
-                    "nodegroup_id": "6ee83c9c-08e4-11f0-81c1-0275dc2ded29",
+                    "nodegroup_id": "6ee83594-08e4-11f0-81c1-0275dc2ded29",
                     "nodeid": "6ee85218-08e4-11f0-81c1-0275dc2ded29",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by",
@@ -21244,7 +21242,7 @@
                     "issearchable": true,
                     "istopnode": false,
                     "name": "part_Name_label",
-                    "nodegroup_id": "6ee83c9c-08e4-11f0-81c1-0275dc2ded29",
+                    "nodegroup_id": "6ee83594-08e4-11f0-81c1-0275dc2ded29",
                     "nodeid": "6ee852f4-08e4-11f0-81c1-0275dc2ded29",
                     "ontologyclass": "http://www.w3.org/2001/XMLSchema#string",
                     "parentproperty": "http://www.w3.org/2000/01/rdf-schema#label",
@@ -21269,7 +21267,7 @@
                     "issearchable": true,
                     "istopnode": false,
                     "name": "part_Name_content",
-                    "nodegroup_id": "6ee83c9c-08e4-11f0-81c1-0275dc2ded29",
+                    "nodegroup_id": "6ee83594-08e4-11f0-81c1-0275dc2ded29",
                     "nodeid": "6ee853d0-08e4-11f0-81c1-0275dc2ded29",
                     "ontologyclass": "http://www.w3.org/2001/XMLSchema#string",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P190_has_symbolic_content",
@@ -21294,7 +21292,7 @@
                     "issearchable": true,
                     "istopnode": false,
                     "name": "part_Name_language",
-                    "nodegroup_id": "6ee83c9c-08e4-11f0-81c1-0275dc2ded29",
+                    "nodegroup_id": "6ee83594-08e4-11f0-81c1-0275dc2ded29",
                     "nodeid": "6ee854c0-08e4-11f0-81c1-0275dc2ded29",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E56_Language",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P72_has_language",
@@ -21461,7 +21459,7 @@
                 {
                     "alias": "color_type",
                     "config": {
-                        "rdmCollection": "c9e838f8-7660-4701-821c-721dac98a10b"
+                        "rdmCollection": "1008354b-3ac2-4a8c-88b8-6aad2302a916"
                     },
                     "datatype": "concept",
                     "description": null,
@@ -21481,52 +21479,6 @@
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
                     "sortorder": 0,
                     "source_identifier_id": null,
-                    "sourcebranchpublication_id": null
-                },
-                {
-                    "alias": "color_name_language",
-                    "config": {
-                        "rdmCollection": "f7fc4f6d-fd46-4881-846f-4a08bc1a3fef"
-                    },
-                    "datatype": "concept",
-                    "description": null,
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "bda239c6-d376-11ef-a239-0275dc2ded29",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "color_Name_language",
-                    "nodegroup_id": "3aff54bc-0f3b-11f0-aa84-02460e9d2217",
-                    "nodeid": "791375b6-0f3d-11f0-bdd9-02460e9d2217",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E56_Language",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P72_has_language",
-                    "sortorder": 0,
-                    "sourcebranchpublication_id": null
-                },
-                {
-                    "alias": "color_type",
-                    "config": {
-                        "rdmCollection": "c9e838f8-7660-4701-821c-721dac98a10b"
-                    },
-                    "datatype": "concept",
-                    "description": null,
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "bda239c6-d376-11ef-a239-0275dc2ded29",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "color_type",
-                    "nodegroup_id": "3aff54bc-0f3b-11f0-aa84-02460e9d2217",
-                    "nodeid": "7c124187-0f3c-11f0-99ef-02460e9d2217",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E55_Type",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
-                    "sortorder": 0,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -21602,29 +21554,6 @@
                     "parentproperty": "http://www.w3.org/2000/01/rdf-schema#label",
                     "sortorder": 0,
                     "source_identifier_id": null,
-                    "sourcebranchpublication_id": null
-                },
-                {
-                    "alias": "color_label",
-                    "config": {
-                        "en": ""
-                    },
-                    "datatype": "string",
-                    "description": null,
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "bda239c6-d376-11ef-a239-0275dc2ded29",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "color_label",
-                    "nodegroup_id": "3aff54bc-0f3b-11f0-aa84-02460e9d2217",
-                    "nodeid": "84ce26e4-0f3b-11f0-9fbb-02460e9d2217",
-                    "ontologyclass": "http://www.w3.org/2001/XMLSchema#string",
-                    "parentproperty": "http://www.w3.org/2000/01/rdf-schema#label",
-                    "sortorder": 0,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -23292,36 +23221,6 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "color_name_source",
-                    "config": {
-                        "graphs": [
-                            {
-                                "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
-                                "name": "Textual Work"
-                            }
-                        ],
-                        "searchDsl": "",
-                        "searchString": ""
-                    },
-                    "datatype": "resource-instance-list",
-                    "description": null,
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "bda239c6-d376-11ef-a239-0275dc2ded29",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "color_Name_source",
-                    "nodegroup_id": "3aff54bc-0f3b-11f0-aa84-02460e9d2217",
-                    "nodeid": "a0feb94a-0f3d-11f0-8ebf-02460e9d2217",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by",
-                    "sortorder": 0,
-                    "sourcebranchpublication_id": null
-                },
-                {
                     "alias": "addition_to_collection_statement_type_metatype",
                     "config": {
                         "rdmCollection": "c82d6f85-ae67-4c28-b07a-c114f6d6ba50"
@@ -23372,29 +23271,6 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "color_lowest_possible_value",
-                    "config": {
-                        "en": ""
-                    },
-                    "datatype": "number",
-                    "description": null,
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "bda239c6-d376-11ef-a239-0275dc2ded29",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "color_lowest possible value",
-                    "nodegroup_id": "3aff54bc-0f3b-11f0-aa84-02460e9d2217",
-                    "nodeid": "aa0ce4cf-0f3b-11f0-adf6-02460e9d2217",
-                    "ontologyclass": "http://www.w3.org/2000/01/rdf-schema#Literal",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P90a_has_lower_value_limit",
-                    "sortorder": 0,
-                    "sourcebranchpublication_id": null
-                },
-                {
                     "alias": "standard_type_metatype",
                     "config": {
                         "rdmCollection": "c82d6f85-ae67-4c28-b07a-c114f6d6ba50"
@@ -23442,29 +23318,6 @@
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P91_has_unit",
                     "sortorder": 0,
                     "source_identifier_id": null,
-                    "sourcebranchpublication_id": null
-                },
-                {
-                    "alias": "color_unit",
-                    "config": {
-                        "rdmCollection": "44295221-1215-4359-a079-234b317f65b7"
-                    },
-                    "datatype": "concept",
-                    "description": null,
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "bda239c6-d376-11ef-a239-0275dc2ded29",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "color_unit",
-                    "nodegroup_id": "3aff54bc-0f3b-11f0-aa84-02460e9d2217",
-                    "nodeid": "af2516b6-0f3c-11f0-a69e-02460e9d2217",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E58_Measurement_Unit",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P91_has_unit",
-                    "sortorder": 0,
                     "sourcebranchpublication_id": null
                 },
                 {
@@ -32840,29 +32693,6 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "color_name",
-                    "config": {
-                        "en": ""
-                    },
-                    "datatype": "semantic",
-                    "description": null,
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "bda239c6-d376-11ef-a239-0275dc2ded29",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "color_Name",
-                    "nodegroup_id": "3aff54bc-0f3b-11f0-aa84-02460e9d2217",
-                    "nodeid": "daa92019-0f3c-11f0-870d-02460e9d2217",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E33_E41_Linguistic_Appellation",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
-                    "sortorder": 0,
-                    "sourcebranchpublication_id": null
-                },
-                {
                     "alias": "facet_type",
                     "config": {
                         "rdmCollection": "44984237-b8fc-49c1-a94d-06fc8e38c48e"
@@ -32936,29 +32766,6 @@
                     "sortorder": 0,
                     "source_identifier_id": null,
                     "sourcebranchpublication_id": null
-                },
-                {
-                    "alias": "color_name_type",
-                    "config": {
-                        "rdmCollection": "9f1cf9a8-ce65-455f-ab1e-a9b36e9e23ce"
-                    },
-                    "datatype": "concept-list",
-                    "description": null,
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "bda239c6-d376-11ef-a239-0275dc2ded29",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "color_Name_type",
-                    "nodegroup_id": "3aff54bc-0f3b-11f0-aa84-02460e9d2217",
-                    "nodeid": "fc75e787-0f3c-11f0-aa25-02460e9d2217",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E55_Type",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
-                    "sortorder": 0,
-                    "sourcebranchpublication_id": null
                 }
             ],
             "ontology_id": "0b1f5462-faa7-11e9-8f09-3af9d3b32b71",
@@ -32966,8 +32773,8 @@
                 "graph_id": "bda239c6-d376-11ef-a239-0275dc2ded29",
                 "most_recent_edit_id": null,
                 "notes": null,
-                "publicationid": "9e5abc3f-59bd-4101-9e8d-9e8cdc8d34ad",
-                "published_time": "2025-04-06T13:08:47.343"
+                "publicationid": "4440a7c5-f8a9-47f3-8f6a-07edabc7fd32",
+                "published_time": "2025-05-14T17:59:39.934"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -33051,9 +32858,9 @@
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 16.3 (Debian 16.3-1.pgdg110+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 64-bit",
-        "git hash": "6b4ed2e6f 2025-04-04 09:13:08 -0700",
-        "os": "Darwin",
-        "os version": "23.3.0"
+        "db": "PostgreSQL 16.4 on aarch64-unknown-linux-gnu, compiled by gcc (GCC) 7.3.1 20180712 (Red Hat 7.3.1-17), 64-bit",
+        "git hash": "fatal: not a git repository (or any of the parent directories): .git",
+        "os": "Linux",
+        "os version": "6.8.0-1021-aws"
     }
 }
