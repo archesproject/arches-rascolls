@@ -54,10 +54,9 @@ function selectResult(resourceid: string) {
     resultSelected.value = resourceid;
     resultsSelected.value = [resourceid];
     if (props.searchResult._source?.points?.length && showMap.value) {
-        zoomFeature.value = {resourceid: resourceid, action: "zoom"};
+        zoomFeature.value = { resourceid: resourceid, action: "zoom" };
     }
 }
-
 </script>
 
 <template>
@@ -91,13 +90,14 @@ function selectResult(resourceid: string) {
     <section v-else>
         <div
             class="result"
+            :class="{ selected: resultSelected === props.searchResult._id }"
             @mouseover="setHighlightResult(props.searchResult._id)"
             @mouseleave="clearHighlightResult"
-            :class="{ selected: resultSelected === props.searchResult._id }"
         >
             <div class="image-placeholder">
-                <img class="item-image"
+                <img
                     v-if="image"
+                    class="item-image"
                     :src="image"
                 />
                 <div
