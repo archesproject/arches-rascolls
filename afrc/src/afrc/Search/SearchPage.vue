@@ -279,7 +279,7 @@ onMounted(async () => {
                     </div>
                 </div>
                 <div class="search-result-list">
-                    <DataView
+                    <DataView v-if="resultsCount"
                         :key="forcePaginatorRepaint"
                         data-key="id"
                         lazy
