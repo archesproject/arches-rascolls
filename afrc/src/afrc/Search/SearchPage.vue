@@ -7,6 +7,7 @@ import Toast from "primevue/toast";
 import { useToast } from "primevue/usetoast";
 import Button from "primevue/button";
 import DataView from "primevue/dataview";
+import ToggleButton from 'primevue/togglebutton';
 
 import { DEFAULT_ERROR_TOAST_LIFE, ERROR } from "@/afrc/Search/constants.ts";
 
@@ -44,6 +45,7 @@ const sources: Ref<MapSource[]> = ref([]);
 const searchFilters: Ref<SearchFilter[]> = ref([]);
 const resultsSelected: Ref<string[]> = ref([]);
 const dataLoaded = ref(false);
+const showFacets = ref(false);
 const loadingSearchResults = ref(true);
 const pageSize = ref();
 const newQuery = ref(true);
@@ -247,6 +249,15 @@ onMounted(async () => {
                     :outlined="showMap"
                     @click="showMap = true"
                 />
+                <ToggleButton
+                    :style="{ fontSize: '1.4rem', borderRadius: '3px', marginInlineStart: '5px', width: '12rem' }"
+                    v-if="showMap"
+                    v-model="showFacets"
+                    onIcon="pi pi-filter"
+                    offIcon="pi pi-filter"
+                    onLabel="Hide Facets"
+                    offLabel="Show Facets"
+                />
             </div>
         </header>
 
@@ -329,6 +340,9 @@ onMounted(async () => {
             </div>
 
             <aside v-if="!showMap">
+                <SearchFacet />
+            </aside>
+            <aside v-if="showMap && showFacets" style="position: absolute; right:0rem; height:100%; z-index: 9">
                 <SearchFacet />
             </aside>
         </main>
