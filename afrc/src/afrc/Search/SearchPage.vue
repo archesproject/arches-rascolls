@@ -290,7 +290,7 @@ onMounted(async () => {
                     </div>
                 </div>
                 <div class="search-result-list">
-                    <DataView
+                    <DataView v-if="resultsCount"
                         :key="forcePaginatorRepaint"
                         data-key="id"
                         lazy
@@ -417,9 +417,10 @@ header {
 .view-buttons button {
     border-color: #ddd;
     width: 100px;
+    background: #fff;
 }
 .view-buttons button.active {
-    background: #fff;
+    background: var(--p-button-outlined-secondary-hover-background);
 }
 .p-button-label {
     font-size: 0.5em;

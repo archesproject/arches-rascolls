@@ -13,6 +13,7 @@ const showMap = inject("showMap") as Ref<string>;
 
 const displayname: Ref<string> = ref("");
 const displaydescription: Ref<string> = ref("");
+const currentLocation: Ref<string> = ref("");
 const images: Ref<string[]> = ref([]);
 const acquisitions: Ref<Acquisition[]> = ref([]);
 const composition: Ref<Composition[]> = ref([]);
@@ -47,14 +48,25 @@ async function getData() {
     const resp = await fetchResourceData(resultSelected.value);
     const imageResourceids = resp.resource["Digital Reference"]?.map(
         (tile: UnspecifiedObject) =>
-            (tile["Digital Source"] as UnspecifiedObject)?.["resourceId"],
+        (tile["Digital Source"] as UnspecifiedObject)?.["resourceId"],
     );
     const accessionNumber = resp.resource["Identifier"]?.find(
         (identifier: UnspecifiedObject) =>
-            (identifier[
-                "Identifier_type"
-            ] as UnspecifiedObject["@display_value"]) === "Accession Number",
+        (identifier[
+            "Identifier_type"
+        ] as UnspecifiedObject["@display_value"]) === "Accession Number",
     );
+    const currentPlace = resp.resource["current location"]?.["@display_value"];
+    const currentLocationStatement = resp.resource["current location"]?.[
+        "current location_Statement"
+    ]?.["current location_Statement_content"]?.["@display_value"];
+    const fullCurrentLocation = [currentPlace, currentLocationStatement]
+        .filter((item) => item)
+        .join(" | ");
+    currentLocation.value = fullCurrentLocation
+        ? fullCurrentLocation
+        : "No location provided";
+    
     hasGeom.value =
         !!resp.resource["Production "]?.[0]["Production_location"]?.[
             "Production_location_geo"
@@ -67,12 +79,12 @@ async function getData() {
     }));
     acquisitions.value = resp.resource["Addition to Collection"]?.map(
         (tile: GenericObject) => ({
-            person: tile?.["Addition to Collection_carried out by"][
+            person: tile?.["Addition to Collection_carried out by"]?.[
                 "@display_value"
             ],
-            date: tile?.["Addition to Collection_time"][
+            date: tile?.["Addition to Collection_time"]?.[
                 "Addition to Collection_time_begin of the begin"
-            ]["@display_value"],
+            ]?.["@display_value"],
             details: tile?.["Addition to Collection_Statement"]
                 ?.map(
                     (statement: GenericObject) =>
@@ -126,7 +138,7 @@ function zoomToSearchResult(resourceid: string, action: string) {
                     {{ displayname || "No name provided" }}
                 </div>
                 <div class="current-location">
-                    {{ identifier }}
+                    {{ currentLocation || "No location provided" }}
                 </div>
             </div>
             <div>
