@@ -6341,8 +6341,9 @@
                 "source_identifier_id": null,
                 "sourcebranchpublication_id": null
             },
-            "slug": null,
+            "slug": "modification_1",
             "source_identifier_id": null,
+            "spatial_views": [],
             "subtitle": {
                 "en": "A modification to a physical object that changes but does not destroy it"
             },
@@ -6352,8 +6353,8 @@
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 16.3 (Debian 16.3-1.pgdg110+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 64-bit",
-        "git hash": "6b4ed2e6f 2025-04-04 09:13:08 -0700",
+        "db": "PostgreSQL 14.11 (Postgres.app) on aarch64-apple-darwin20.6.0, compiled by Apple clang version 12.0.5 (clang-1205.0.22.9), 64-bit",
+        "git hash": "6ec898d71a 2025-05-27 17:19:47 -0700",
         "os": "Darwin",
         "os version": "23.3.0"
     }
