@@ -3617,51 +3617,6 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Classificatory Status Source Reference Type",
-                        "options": [],
-                        "placeholder": {
-                            "en": "Select an option"
-                        }
-                    },
-                    "id": "459b2758-fdf6-11ef-966f-0275dc2ded29",
-                    "label": {
-                        "en": "Classificatory Status Source Reference Type"
-                    },
-                    "node_id": "459b166e-fdf6-11ef-966f-0275dc2ded29",
-                    "sortorder": 2,
-                    "source_identifier_id": null,
-                    "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000002"
-                },
-                {
-                    "card_id": "459b08b8-fdf6-11ef-966f-0275dc2ded29",
-                    "config": {
-                        "defaultResourceInstance": [],
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "Classificatory Status Source Reference",
-                        "placeholder": {
-                            "en": ""
-                        }
-                    },
-                    "id": "459b27da-fdf6-11ef-966f-0275dc2ded29",
-                    "label": {
-                        "en": "Classificatory Status Source Reference"
-                    },
-                    "node_id": "459b10c4-fdf6-11ef-966f-0275dc2ded29",
-                    "sortorder": 1,
-                    "source_identifier_id": null,
-                    "visible": true,
-                    "widget_id": "ff3c400a-76ec-11e7-a793-784f435179ea"
-                },
-                {
-                    "card_id": "459b08b8-fdf6-11ef-966f-0275dc2ded29",
-                    "config": {
-                        "defaultValue": "",
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
                         "label": "Reactivity Safety Classification Type",
                         "options": [],
                         "placeholder": {
@@ -6143,51 +6098,6 @@
                     "widget_id": "10000000-0000-0000-0000-000000000002"
                 },
                 {
-                    "card_id": "bda2f6ae-d376-11ef-a239-0275dc2ded29",
-                    "config": {
-                        "defaultResourceInstance": [],
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "Classificatory Status Source Reference",
-                        "placeholder": {
-                            "en": ""
-                        }
-                    },
-                    "id": "bda64f66-d376-11ef-a239-0275dc2ded29",
-                    "label": {
-                        "en": "Classificatory Status Source Reference"
-                    },
-                    "node_id": "bda53144-d376-11ef-a239-0275dc2ded29",
-                    "sortorder": 1,
-                    "source_identifier_id": null,
-                    "visible": true,
-                    "widget_id": "ff3c400a-76ec-11e7-a793-784f435179ea"
-                },
-                {
-                    "card_id": "bda2f6ae-d376-11ef-a239-0275dc2ded29",
-                    "config": {
-                        "defaultValue": "",
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "Classificatory Status Source Reference Type",
-                        "options": [],
-                        "placeholder": {
-                            "en": "Select an option"
-                        }
-                    },
-                    "id": "bda64ff2-d376-11ef-a239-0275dc2ded29",
-                    "label": {
-                        "en": "Classificatory Status Source Reference Type"
-                    },
-                    "node_id": "bda52cee-d376-11ef-a239-0275dc2ded29",
-                    "sortorder": 2,
-                    "source_identifier_id": null,
-                    "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000002"
-                },
-                {
                     "card_id": "bda259f6-d376-11ef-a239-0275dc2ded29",
                     "config": {
                         "defaultValue": "b500d6cd-781a-45f5-9adc-f94b60e23984",
@@ -6228,51 +6138,6 @@
                         "en": "Health Safety Classification Type"
                     },
                     "node_id": "bda5a89a-d376-11ef-a239-0275dc2ded29",
-                    "sortorder": 2,
-                    "source_identifier_id": null,
-                    "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000002"
-                },
-                {
-                    "card_id": "bda259f6-d376-11ef-a239-0275dc2ded29",
-                    "config": {
-                        "defaultResourceInstance": [],
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "Classificatory Status Source Reference",
-                        "placeholder": {
-                            "en": ""
-                        }
-                    },
-                    "id": "bda651a0-d376-11ef-a239-0275dc2ded29",
-                    "label": {
-                        "en": "Classificatory Status Source Reference"
-                    },
-                    "node_id": "bda4f13e-d376-11ef-a239-0275dc2ded29",
-                    "sortorder": 1,
-                    "source_identifier_id": null,
-                    "visible": true,
-                    "widget_id": "ff3c400a-76ec-11e7-a793-784f435179ea"
-                },
-                {
-                    "card_id": "bda259f6-d376-11ef-a239-0275dc2ded29",
-                    "config": {
-                        "defaultValue": "",
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "Classificatory Status Source Reference Type",
-                        "options": [],
-                        "placeholder": {
-                            "en": "Select an option"
-                        }
-                    },
-                    "id": "bda6522c-d376-11ef-a239-0275dc2ded29",
-                    "label": {
-                        "en": "Classificatory Status Source Reference Type"
-                    },
-                    "node_id": "bda4e3ba-d376-11ef-a239-0275dc2ded29",
                     "sortorder": 2,
                     "source_identifier_id": null,
                     "visible": true,
@@ -12115,51 +11980,6 @@
                     "sortorder": 1,
                     "source_identifier_id": null,
                     "visible": false,
-                    "widget_id": "10000000-0000-0000-0000-000000000002"
-                },
-                {
-                    "card_id": "bda45b2a-d376-11ef-a239-0275dc2ded29",
-                    "config": {
-                        "defaultResourceInstance": [],
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "Classificatory Status Source Reference",
-                        "placeholder": {
-                            "en": ""
-                        }
-                    },
-                    "id": "bda70f3c-d376-11ef-a239-0275dc2ded29",
-                    "label": {
-                        "en": "Classificatory Status Source Reference"
-                    },
-                    "node_id": "bda599f4-d376-11ef-a239-0275dc2ded29",
-                    "sortorder": 1,
-                    "source_identifier_id": null,
-                    "visible": true,
-                    "widget_id": "ff3c400a-76ec-11e7-a793-784f435179ea"
-                },
-                {
-                    "card_id": "bda45b2a-d376-11ef-a239-0275dc2ded29",
-                    "config": {
-                        "defaultValue": "",
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "Classificatory Status Source Reference Type",
-                        "options": [],
-                        "placeholder": {
-                            "en": "Select an option"
-                        }
-                    },
-                    "id": "bda70fc8-d376-11ef-a239-0275dc2ded29",
-                    "label": {
-                        "en": "Classificatory Status Source Reference Type"
-                    },
-                    "node_id": "bda546f2-d376-11ef-a239-0275dc2ded29",
-                    "sortorder": 2,
-                    "source_identifier_id": null,
-                    "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000002"
                 },
                 {
@@ -32847,8 +32667,9 @@
                 "source_identifier_id": null,
                 "sourcebranchpublication_id": null
             },
-            "slug": null,
+            "slug": "reference_and_sample_collection_item_1",
             "source_identifier_id": null,
+            "spatial_views": [],
             "subtitle": {
                 "en": "A physical object that can be touched"
             },
@@ -32858,9 +32679,9 @@
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 16.4 on aarch64-unknown-linux-gnu, compiled by gcc (GCC) 7.3.1 20180712 (Red Hat 7.3.1-17), 64-bit",
-        "git hash": "fatal: not a git repository (or any of the parent directories): .git",
-        "os": "Linux",
-        "os version": "6.8.0-1021-aws"
+        "db": "PostgreSQL 14.11 (Postgres.app) on aarch64-apple-darwin20.6.0, compiled by Apple clang version 12.0.5 (clang-1205.0.22.9), 64-bit",
+        "git hash": "6ec898d71a 2025-05-27 17:19:47 -0700",
+        "os": "Darwin",
+        "os version": "23.3.0"
     }
 }
