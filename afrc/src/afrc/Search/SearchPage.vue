@@ -7,7 +7,7 @@ import Toast from "primevue/toast";
 import { useToast } from "primevue/usetoast";
 import Button from "primevue/button";
 import DataView from "primevue/dataview";
-import ToggleButton from 'primevue/togglebutton';
+import ToggleButton from "primevue/togglebutton";
 
 import { DEFAULT_ERROR_TOAST_LIFE, ERROR } from "@/afrc/Search/constants.ts";
 
@@ -250,7 +250,12 @@ onMounted(async () => {
                     @click="showMap = true"
                 />
                 <ToggleButton
-                    :style="{ fontSize: '1.4rem', borderRadius: '3px', marginInlineStart: '5px', width: '12rem' }"
+                    :style="{
+                        fontSize: '1.4rem',
+                        borderRadius: '3px',
+                        marginInlineStart: '5px',
+                        width: '12rem',
+                    }"
                     v-if="showMap"
                     v-model="showFacets"
                     onIcon="pi pi-filter"
@@ -290,7 +295,8 @@ onMounted(async () => {
                     </div>
                 </div>
                 <div class="search-result-list">
-                    <DataView v-if="resultsCount"
+                    <DataView
+                        v-if="resultsCount"
                         :key="forcePaginatorRepaint"
                         data-key="id"
                         lazy
@@ -342,7 +348,15 @@ onMounted(async () => {
             <aside v-if="!showMap">
                 <SearchFacet />
             </aside>
-            <aside v-if="showMap && showFacets" style="position: absolute; right:0rem; height:100%; z-index: 9">
+            <aside
+                v-if="showMap && showFacets"
+                style="
+                    position: absolute;
+                    right: 0rem;
+                    height: 100%;
+                    z-index: 9;
+                "
+            >
                 <SearchFacet />
             </aside>
         </main>

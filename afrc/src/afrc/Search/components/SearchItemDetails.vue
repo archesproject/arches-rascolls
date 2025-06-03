@@ -48,25 +48,26 @@ async function getData() {
     const resp = await fetchResourceData(resultSelected.value);
     const imageResourceids = resp.resource["Digital Reference"]?.map(
         (tile: UnspecifiedObject) =>
-        (tile["Digital Source"] as UnspecifiedObject)?.["resourceId"],
+            (tile["Digital Source"] as UnspecifiedObject)?.["resourceId"],
     );
     const accessionNumber = resp.resource["Identifier"]?.find(
         (identifier: UnspecifiedObject) =>
-        (identifier[
-            "Identifier_type"
-        ] as UnspecifiedObject["@display_value"]) === "Accession Number",
+            (identifier[
+                "Identifier_type"
+            ] as UnspecifiedObject["@display_value"]) === "Accession Number",
     );
     const currentPlace = resp.resource["current location"]?.["@display_value"];
-    const currentLocationStatement = resp.resource["current location"]?.[
-        "current location_Statement"
-    ]?.["current location_Statement_content"]?.["@display_value"];
+    const currentLocationStatement =
+        resp.resource["current location"]?.["current location_Statement"]?.[
+            "current location_Statement_content"
+        ]?.["@display_value"];
     const fullCurrentLocation = [currentPlace, currentLocationStatement]
         .filter((item) => item)
         .join(" | ");
     currentLocation.value = fullCurrentLocation
         ? fullCurrentLocation
         : "No location provided";
-    
+
     hasGeom.value =
         !!resp.resource["Production "]?.[0]["Production_location"]?.[
             "Production_location_geo"
