@@ -13,17 +13,23 @@ class GeoUtils(ArchesGeoUtils):
         """
         If a polygon is drawn starting in the west and extends into the east, its eastern coordinates
         will be less that -180. If a polygon starts in the east and extends west, its western coordinates
-        will exceed 180. 
-        To correct for this, adjust the coordinates in the extended area, and split the polygon into two 
+        will exceed 180.
+        To correct for this, adjust the coordinates in the extended area, and split the polygon into two
         using an intersection with polygon for the corresponding hemisphere.
         """
 
         if geom.dims == 2:
             geom_coords = geom.coords[0]
             extends_into_western_hemisphere = max(lon for lon, lat in geom_coords) > 180
-            extends_into_eastern_hemisphere = min(lon for lon, lat in geom_coords) < -180 
-            east = GEOSGeometry('{"coordinates": [[[180.0, 86.0],[0.0,    86.0],[0.0,    -86.0],[180.0, -86.0],[180.0, 86.0]]],"type": "Polygon"}')
-            west = GEOSGeometry('{"coordinates": [[[0.0,   86.0],[-180.0, 86.0],[-180.0, -86.0],[0.0,   -86.0],[0.0, 86.0]]],"type": "Polygon"}')
+            extends_into_eastern_hemisphere = (
+                min(lon for lon, lat in geom_coords) < -180
+            )
+            east = GEOSGeometry(
+                '{"coordinates": [[[180.0, 86.0],[0.0,    86.0],[0.0,    -86.0],[180.0, -86.0],[180.0, 86.0]]],"type": "Polygon"}'
+            )
+            west = GEOSGeometry(
+                '{"coordinates": [[[0.0,   86.0],[-180.0, 86.0],[-180.0, -86.0],[0.0,   -86.0],[0.0, 86.0]]],"type": "Polygon"}'
+            )
 
             if extends_into_western_hemisphere or extends_into_eastern_hemisphere:
                 new_coords = []
@@ -34,7 +40,16 @@ class GeoUtils(ArchesGeoUtils):
                     elif extends_into_eastern_hemisphere:
                         lon = lon + 360 if lon < 180 else 179.99
                     new_coords.append([lon, lat])
-                updated_geom = GEOSGeometry(json.dumps({"coordinates": [new_coords,], "type":"Polygon"}))
+                updated_geom = GEOSGeometry(
+                    json.dumps(
+                        {
+                            "coordinates": [
+                                new_coords,
+                            ],
+                            "type": "Polygon",
+                        }
+                    )
+                )
                 if extends_into_western_hemisphere:
                     return (geom.intersection(east), updated_geom.intersection(west))
                 elif extends_into_eastern_hemisphere:
@@ -61,7 +76,10 @@ class GeoUtils(ArchesGeoUtils):
         for feature in feature_collection["features"]:
             geom = GEOSGeometry(json.dumps(feature["geometry"]))
 
-            distance_meters = feature["properties"]["buffer_distance"] * unit_factors[feature["properties"]["buffer_units"]]
+            distance_meters = (
+                feature["properties"]["buffer_distance"]
+                * unit_factors[feature["properties"]["buffer_units"]]
+            )
 
             geom.transform(settings.ANALYSIS_COORDINATE_SYSTEM_SRID)
             buffered_geom = geom.buffer(distance_meters)
