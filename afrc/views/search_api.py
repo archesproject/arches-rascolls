@@ -64,7 +64,10 @@ class SearchAPI(View):
             for feature in map_filter:
                 raw_geom = GEOSGeometry(json.dumps(feature["geometry"]), srid=4326)
                 for geom in geo_utils.split_polygon_at_antimeridian(raw_geom):
-                    spatial_filters |= Q(geom__intersects=geom)
+                    if geom.geom_type == 'Point':
+                        spatial_filters |= Q(geom__intersects=geom.buffer(0.000001))
+                    else:
+                        spatial_filters |= Q(geom__intersects=geom)
 
             resourceids_in_buffer = GeoJSONGeometry.objects.filter(
                 spatial_filters, Q(node_id="bda54e4a-d376-11ef-a239-0275dc2ded29")
