@@ -1725,7 +1725,7 @@ class Migration(migrations.Migration):
                     "referencecollections": {
                         "type": "vector",
                         "tiles": ["/api-reference-collection-mvt/{z}/{x}/{y}.pbf"],
-                        "minzoom": 1,
+                        "minzoom": 0,
                     }
                 },
                 "layers": [
@@ -1739,8 +1739,8 @@ class Migration(migrations.Migration):
                             "circle-radius": [
                                 "case",
                                 ["boolean", ["feature-state", "selected"], False],
+                                7,
                                 6,
-                                4,
                             ],
                             "circle-opacity": 1,
                             "circle-color": "#00f",
@@ -1752,7 +1752,7 @@ class Migration(migrations.Migration):
                         "source-layer": "referencecollections",
                         "type": "circle",
                         "filter": ["all", ["==", "$type", "Point"]],
-                        "paint": {"circle-radius": 3, "circle-color": "#aaf"},
+                        "paint": {"circle-radius": 5, "circle-color": "#00A1FF"},
                     },
                     {
                         "id": "referencecollections-line",

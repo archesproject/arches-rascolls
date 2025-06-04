@@ -34,7 +34,7 @@ class Migration(migrations.Migration):
                         "type": "circle",
                         "paint": {
                             "circle-color": "#DE5C1B",
-                            "circle-radius": 6,
+                            "circle-radius": 7,
                             "circle-opacity": 1,
                         },
                         "filter": ["all", ["==", "$type", "Point"]],
@@ -44,7 +44,7 @@ class Migration(migrations.Migration):
                     {
                         "id": "rascolls-search-point",
                         "type": "circle",
-                        "paint": {"circle-color": "#FEA811", "circle-radius": 4},
+                        "paint": {"circle-color": "#FEA811", "circle-radius": 5},
                         "filter": ["all", ["==", "$type", "Point"]],
                         "source": "rascolls-search",
                         "source-layer": "rascolls-search",
