@@ -179,7 +179,7 @@ function selectResult(resourceid: string) {
                         <Button
                             class="action-button"
                             label="show more"
-                              severity="secondary"
+                            severity="secondary"
                             text
                             icon="pi pi-plus-circle"
                             size="large"
