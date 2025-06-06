@@ -117,17 +117,60 @@ function selectResult(resourceid: string) {
                     <div class="result-displayname">
                         {{ props.searchResult.displayname }}
                     </div>
-                    <div class="item-current-location">
-                        <span class="breadcrumb-title">Current location:</span>
-                        <span class="breadcrumb">{{
-                            props.searchResult.currentlocation
-                        }}</span>
-                    </div>
                     <div class="scope-note">
-                        <span class="scope-note-title">Item description:</span>
+                        <span class="scope-note-title">Barcode:</span>
                         <span
                             class="scope-note-content"
-                            v-html="searchResult.displaydescription"
+                            v-html="searchResult.barcode"
+                        ></span>
+                    </div>
+                    <div class="scope-note">
+                        <span class="scope-note-title">Common name:</span>
+                        <span
+                            class="scope-note-content"
+                            v-html="searchResult.common_name"
+                        ></span>
+                    </div>
+                    <div class="scope-note">
+                        <span class="scope-note-title">Additional names:</span>
+                        <span
+                            class="scope-note-content"
+                            v-html="searchResult.additional_names"
+                        ></span>
+                    </div>
+                    <div class="scope-note">
+                        <span class="scope-note-title">Sample type:</span>
+                        <span
+                            class="scope-note-content"
+                            v-html="searchResult.sample_type"
+                        ></span>
+                    </div>
+                    <div class="scope-note">
+                        <span class="scope-note-title">Origination date:</span>
+                        <span
+                            class="scope-note-content"
+                            v-html="searchResult.origination_date"
+                        ></span>
+                    </div>
+                    <div class="scope-note">
+                        <span class="scope-note-title">Acquisition date:</span>
+                        <span
+                            class="scope-note-content"
+                            v-html="searchResult.acquisition_date"
+                        ></span>
+                    </div>
+                    <div class="scope-note">
+                        <span class="scope-note-title">Geographic origin:</span>
+                        <span
+                            class="scope-note-content"
+                            v-html="searchResult.geographic_origin"
+                        ></span>
+                    </div>
+                    <div class="scope-note">
+                        <span class="scope-note-title">Manufacturer:</span>
+                        <span
+                            class="scope-note-content"
+                            v-html="searchResult.manufacturer"
                         ></span>
                     </div>
                 </div>
@@ -136,7 +179,7 @@ function selectResult(resourceid: string) {
                         <Button
                             class="action-button"
                             label="show more"
-                            severity="secondary"
+                              severity="secondary"
                             text
                             icon="pi pi-plus-circle"
                             size="large"
