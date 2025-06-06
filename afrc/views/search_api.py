@@ -198,17 +198,18 @@ def get_names(resource):
     name_nodeid = "bda5cf14-d376-11ef-a239-0275dc2ded29"
     name_type_nodeid = "bda5ce4c-d376-11ef-a239-0275dc2ded29"
     primary_name_valueid = "e7d4b0bf-f37a-4af3-aa0b-4f63152ef9f6"
+    preferred_term_valueid = "8f40c740-3c02-4839-b1a4-f1460823a9fe"
     tiles = resource.tilemodel_set.filter(nodegroup_id=name_nodegroup_id)
 
     primary_name = ''
     additional_names = []
     for tile in tiles:
-        if not primary_name and primary_name_valueid in tile.data.get(name_type_nodeid):
+        if not primary_name and preferred_term_valueid in tile.data.get(name_type_nodeid):
             primary_name = pre_prcoess_node_value(tile.data.get(name_nodeid, None), "string")
         else:
             additional_names.append(pre_prcoess_node_value(tile.data.get(name_nodeid, None), "string"))
-        if not primary_name:
-            primary_name = additional_names.pop()
+    if not primary_name:
+        primary_name = additional_names.pop()
     return primary_name, ', '.join(additional_names)
 
 def get_search_results_by_resourceids(
