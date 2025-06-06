@@ -65,7 +65,7 @@ class SearchAPI(View):
             for feature in map_filter:
                 raw_geom = GEOSGeometry(json.dumps(feature["geometry"]), srid=4326)
                 for geom in geo_utils.split_polygon_at_antimeridian(raw_geom):
-                    if geom.geom_type == 'Point':
+                    if geom.geom_type == "Point":
                         spatial_filters |= Q(geom__intersects=geom.buffer(0.000001))
                     else:
                         spatial_filters |= Q(geom__intersects=geom)
@@ -160,6 +160,7 @@ def get_related_resources_by_text(search_query, graphid):
         rows = cursor.fetchall()
     return rows
 
+
 def pre_prcoess_node_value(value, datatype):
     lang = get_language()
     transformed_value = value
@@ -173,15 +174,20 @@ def pre_prcoess_node_value(value, datatype):
             concept = get_preflabel_from_valueid(v, lang)["value"] if v else None
             if concept:
                 transformed_values.append(concept)
-        transformed_value = ", ".join(transformed_values) if len(transformed_values) > 0 else None
+        transformed_value = (
+            ", ".join(transformed_values) if len(transformed_values) > 0 else None
+        )
 
     elif datatype == "resource_instance":
         related_resources = []
         for rr in value:
             related_resource = ResourceInstance.objects.get(pk=rr["resourceId"])
             related_resources.append(related_resource.descriptors[lang]["name"])
-        transformed_value = ", ".join(related_resources) if len(related_resources) > 0 else None
+        transformed_value = (
+            ", ".join(related_resources) if len(related_resources) > 0 else None
+        )
     return transformed_value
+
 
 def get_node_value(resource, nodegroup_id, node_id, datatype):
     tiles = resource.tilemodel_set.filter(nodegroup_id=nodegroup_id)
@@ -193,6 +199,7 @@ def get_node_value(resource, nodegroup_id, node_id, datatype):
             nodevalue.append(transform_value)
     return ", ".join(nodevalue) if nodevalue else None
 
+
 def get_names(resource):
     name_nodegroup_id = "bda409e0-d376-11ef-a239-0275dc2ded29"
     name_nodeid = "bda5cf14-d376-11ef-a239-0275dc2ded29"
@@ -201,16 +208,23 @@ def get_names(resource):
     preferred_term_valueid = "8f40c740-3c02-4839-b1a4-f1460823a9fe"
     tiles = resource.tilemodel_set.filter(nodegroup_id=name_nodegroup_id)
 
-    primary_name = ''
+    primary_name = ""
     additional_names = []
     for tile in tiles:
-        if not primary_name and preferred_term_valueid in tile.data.get(name_type_nodeid):
-            primary_name = pre_prcoess_node_value(tile.data.get(name_nodeid, None), "string")
+        if not primary_name and preferred_term_valueid in tile.data.get(
+            name_type_nodeid
+        ):
+            primary_name = pre_prcoess_node_value(
+                tile.data.get(name_nodeid, None), "string"
+            )
         else:
-            additional_names.append(pre_prcoess_node_value(tile.data.get(name_nodeid, None), "string"))
+            additional_names.append(
+                pre_prcoess_node_value(tile.data.get(name_nodeid, None), "string")
+            )
     if not primary_name:
         primary_name = additional_names.pop()
-    return primary_name, ', '.join(additional_names)
+    return primary_name, ", ".join(additional_names)
+
 
 def get_search_results_by_resourceids(
     resourceids, start=0, limit=settings.SEARCH_ITEMS_PER_PAGE
@@ -240,14 +254,15 @@ def get_search_results_by_resourceids(
     limit = 2
     resource_paginator = Paginator(resourceids, limit)
     page = math.ceil((start + 1) / limit)
-    resources = ResourceInstance.objects.filter(
-        pk__in=resource_paginator.page(page).object_list
-    ).prefetch_related(
-        "geojsongeometry_set"
-    ).prefetch_related(
-        Prefetch("tilemodel_set",
-            queryset=TileModel.objects.filter(
-                nodegroup_id__in=nodegroup_ids
+    resources = (
+        ResourceInstance.objects.filter(
+            pk__in=resource_paginator.page(page).object_list
+        )
+        .prefetch_related("geojsongeometry_set")
+        .prefetch_related(
+            Prefetch(
+                "tilemodel_set",
+                queryset=TileModel.objects.filter(nodegroup_id__in=nodegroup_ids),
             )
         )
     )
@@ -268,12 +283,36 @@ def get_search_results_by_resourceids(
                 .first()
                 .wgs.coords
             )
-        res["barcode"] = get_node_value(resource_instance, identifier_nodegroup_id, barcode_nodeid, "string")
-        res["sample_type"] = get_node_value(resource_instance, facet_type_nodegroup_id, sample_type_nodeid, "concept")
-        res["origination_date"] = get_node_value(resource_instance, production_time_nodegroup_id, origination_date_nodeid, "date")
-        res["acquisition_date"] = get_node_value(resource_instance, addition_to_collection_time_nodegroup_id, acquisition_date_nodeid, "date")
-        res["geographic_origin"] = get_node_value(resource_instance, production_nodegroup_id, geographic_origin_nodeid, "resource_instance")
-        res["manufacturer"] = get_node_value(resource_instance, production_nodegroup_id, manufacturer_nodeid, "resource_instance")
+        res["barcode"] = get_node_value(
+            resource_instance, identifier_nodegroup_id, barcode_nodeid, "string"
+        )
+        res["sample_type"] = get_node_value(
+            resource_instance, facet_type_nodegroup_id, sample_type_nodeid, "concept"
+        )
+        res["origination_date"] = get_node_value(
+            resource_instance,
+            production_time_nodegroup_id,
+            origination_date_nodeid,
+            "date",
+        )
+        res["acquisition_date"] = get_node_value(
+            resource_instance,
+            addition_to_collection_time_nodegroup_id,
+            acquisition_date_nodeid,
+            "date",
+        )
+        res["geographic_origin"] = get_node_value(
+            resource_instance,
+            production_nodegroup_id,
+            geographic_origin_nodeid,
+            "resource_instance",
+        )
+        res["manufacturer"] = get_node_value(
+            resource_instance,
+            production_nodegroup_id,
+            manufacturer_nodeid,
+            "resource_instance",
+        )
         res["common_name"], res["additional_names"] = get_names(resource_instance)
         results.append(res)
     return results

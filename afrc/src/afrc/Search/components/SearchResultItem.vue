@@ -132,7 +132,9 @@ function selectResult(resourceid: string) {
                         ></span>
                     </div>
                     <div class="summary-item-container">
-                        <span class="summary-item-title">Additional names:</span>
+                        <span class="summary-item-title"
+                            >Additional names:</span
+                        >
                         <span
                             class="summary-item"
                             v-html="searchResult.additional_names"
@@ -146,21 +148,27 @@ function selectResult(resourceid: string) {
                         ></span>
                     </div>
                     <div class="summary-item-container">
-                        <span class="summary-item-title">Origination date:</span>
+                        <span class="summary-item-title"
+                            >Origination date:</span
+                        >
                         <span
                             class="summary-item"
                             v-html="searchResult.origination_date"
                         ></span>
                     </div>
                     <div class="summary-item-container">
-                        <span class="summary-item-title">Acquisition date:</span>
+                        <span class="summary-item-title"
+                            >Acquisition date:</span
+                        >
                         <span
                             class="summary-item"
                             v-html="searchResult.acquisition_date"
                         ></span>
                     </div>
                     <div class="summary-item-container">
-                        <span class="summary-item-title">Geographic origin:</span>
+                        <span class="summary-item-title"
+                            >Geographic origin:</span
+                        >
                         <span
                             class="summary-item"
                             v-html="searchResult.geographic_origin"
