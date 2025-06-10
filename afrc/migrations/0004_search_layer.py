@@ -14,7 +14,7 @@ class Migration(migrations.Migration):
         MapSource = apps.get_model("models", "MapSource")
         MapLayer = apps.get_model("models", "MapLayer")
 
-        reference_collection_search = {
+        config = {
             "maplayerid": uuid.UUID("0fd1ef37-f3c8-4e0a-85ce-173068173808"),
             "sortorder": 0,
             "style": {
@@ -34,7 +34,7 @@ class Migration(migrations.Migration):
                         "type": "circle",
                         "paint": {
                             "circle-color": "#DE5C1B",
-                            "circle-radius": 6,
+                            "circle-radius": 7,
                             "circle-opacity": 1,
                         },
                         "filter": ["all", ["==", "$type", "Point"]],
@@ -44,7 +44,7 @@ class Migration(migrations.Migration):
                     {
                         "id": "rascolls-search-point",
                         "type": "circle",
-                        "paint": {"circle-color": "#FEA811", "circle-radius": 4},
+                        "paint": {"circle-color": "#FEA811", "circle-radius": 5},
                         "filter": ["all", ["==", "$type", "Point"]],
                         "source": "rascolls-search",
                         "source-layer": "rascolls-search",
@@ -87,29 +87,21 @@ class Migration(migrations.Migration):
             },
         }
 
-        layer_configs = (reference_collection_search,)
+        layer_name = config["style"]["name"]
+        for layer in config["style"]["layers"]:
+            if "source" in layer:
+                layer["source"] = layer["source"]
+        for source_name, source_dict in config["style"]["sources"].items():
+            MapSource.objects.get_or_create(name=source_name, source=source_dict)
 
-        for config in layer_configs:
-            try:
-                config["style"] = json.loads(config["style"])
-            except:
-                print("Could not parse style")
-
-            layer_name = config["style"]["name"]
-            for layer in config["style"]["layers"]:
-                if "source" in layer:
-                    layer["source"] = layer["source"]
-            for source_name, source_dict in config["style"]["sources"].items():
-                MapSource.objects.get_or_create(name=source_name, source=source_dict)
-
-            map_layer = MapLayer(
-                maplayerid=config["maplayerid"],
-                name=layer_name,
-                sortorder=config["sortorder"],
-                layerdefinitions=config["style"]["layers"],
-                **config["arches_metadata"],
-            )
-            map_layer.save()
+        map_layer = MapLayer(
+            maplayerid=config["maplayerid"],
+            name=layer_name,
+            sortorder=config["sortorder"],
+            layerdefinitions=config["style"]["layers"],
+            **config["arches_metadata"],
+        )
+        map_layer.save()
 
     def remove_map_layers(apps, schema_editor):
         MapSource = apps.get_model("models", "MapSource")
