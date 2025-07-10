@@ -35,6 +35,12 @@ class Migration(migrations.Migration):
 
         ALTER TABLE IF EXISTS public.afrc_searchable_values
             OWNER to postgres;
+
+        ALTER TABLE IF EXISTS public.afrc_searchable_values 
+            ADD COLUMN search_vector tsvector;
+
+        CREATE INDEX afrc_searchable_values_idx 
+            ON afrc_searchable_values USING GIN(search_vector);      
     """
 
     reverse_create_searchable_values_table = """
@@ -62,6 +68,9 @@ class Migration(migrations.Migration):
                 (n.datatype = 'string' AND data.value::jsonb->'en'->>'value' IS NOT NULL) OR
                 (n.datatype IN ('concept', 'concept-list') AND data.value IS NOT NULL)
             );
+    
+        UPDATE public.afrc_searchable_values
+            SET search_vector = setweight(to_tsvector('english', coalesce(value,'')), 'A');  
     """
 
     reverse_populate_searchable_values_table = """
@@ -94,6 +103,8 @@ class Migration(migrations.Migration):
                     (n.datatype IN ('concept', 'concept-list') AND data.value IS NOT NULL)
                 )
                 AND t.tileid = _tileid;
+            UPDATE public.afrc_searchable_values
+                SET search_vector = setweight(to_tsvector('english', coalesce(value,'')), 'A'); 
         END; 
 
         $$ LANGUAGE plpgsql;
@@ -132,7 +143,7 @@ class Migration(migrations.Migration):
                 SELECT sv.resourceinstanceid, r.graphid, r.graphid = target_graphid AS is_matching
                 FROM afrc_searchable_values sv
                 JOIN resource_instances r ON r.resourceinstanceid = sv.resourceinstanceid
-                WHERE sv.value @@ plainto_tsquery(term)
+                WHERE to_tsquery(term) @@ sv.search_vector
                 ON CONFLICT (resourceinstanceid) DO NOTHING;
 
                 WITH first_level AS (
