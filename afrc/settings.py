@@ -265,6 +265,9 @@ INSTALLED_APPS = (
     "pgtrigger",
     # "silk",
     "afrc",  # Ensure the project is listed before any other arches applications
+    "arches_modular_reports",
+    "arches_querysets",
+    "arches_component_lab",
 )
 
 # Placing this last ensures any templates provided by Arches Applications

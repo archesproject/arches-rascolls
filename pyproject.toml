@@ -26,6 +26,7 @@ requires-python = ">=3.11"
 dependencies = [
     "arches>=8.0.0b1,<8.1.0",
     "django_csp==3.8",
+    "arches_modular_reports==1.0.0b0"
 ]
 version = "0.0.1"
 
