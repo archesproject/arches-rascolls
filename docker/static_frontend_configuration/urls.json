@@ -1,0 +1,2984 @@
+{
+    "_comment": "This file is auto-generated. Do not edit manually.",
+    "admin": [
+        {
+            "url": "/admin/auth/group/{object_id}/",
+            "params": [
+                "object_id"
+            ]
+        },
+        {
+            "url": "/admin/auth/user/{object_id}/",
+            "params": [
+                "object_id"
+            ]
+        },
+        {
+            "url": "/admin/models/mapsource/{object_id}/",
+            "params": [
+                "object_id"
+            ]
+        },
+        {
+            "url": "/admin/models/geocoder/{object_id}/",
+            "params": [
+                "object_id"
+            ]
+        },
+        {
+            "url": "/admin/models/mapmarker/{object_id}/",
+            "params": [
+                "object_id"
+            ]
+        },
+        {
+            "url": "/admin/models/ddatatype/{object_id}/",
+            "params": [
+                "object_id"
+            ]
+        },
+        {
+            "url": "/admin/models/widget/{object_id}/",
+            "params": [
+                "object_id"
+            ]
+        },
+        {
+            "url": "/admin/models/userprofile/{object_id}/",
+            "params": [
+                "object_id"
+            ]
+        },
+        {
+            "url": "/admin/models/graphmodel/{object_id}/",
+            "params": [
+                "object_id"
+            ]
+        },
+        {
+            "url": "/admin/models/resourceinstancelifecycle/{object_id}/",
+            "params": [
+                "object_id"
+            ]
+        },
+        {
+            "url": "/admin/models/resourceinstancelifecyclestate/{object_id}/",
+            "params": [
+                "object_id"
+            ]
+        },
+        {
+            "url": "/admin/models/searchcomponent/{object_id}/",
+            "params": [
+                "object_id"
+            ]
+        },
+        {
+            "url": "/admin/models/iiifmanifest/{object_id}/",
+            "params": [
+                "object_id"
+            ]
+        },
+        {
+            "url": "/admin/models/groupmapsettings/{object_id}/",
+            "params": [
+                "object_id"
+            ]
+        },
+        {
+            "url": "/admin/models/language/{object_id}/",
+            "params": [
+                "object_id"
+            ]
+        },
+        {
+            "url": "/admin/models/nodegroup/{object_id}/",
+            "params": [
+                "object_id"
+            ]
+        },
+        {
+            "url": "/admin/models/spatialview/{object_id}/",
+            "params": [
+                "object_id"
+            ]
+        },
+        {
+            "url": "/admin/models/userpreference/{object_id}/",
+            "params": [
+                "object_id"
+            ]
+        },
+        {
+            "url": "/admin/models/plugin/{object_id}/",
+            "params": [
+                "object_id"
+            ]
+        },
+        {
+            "url": "/admin/models/maplayer/{object_id}/",
+            "params": [
+                "object_id"
+            ]
+        },
+        {
+            "url": "/admin/models/etlmodule/{object_id}/",
+            "params": [
+                "object_id"
+            ]
+        },
+        {
+            "url": "/admin/oauth2_provider/application/{object_id}/",
+            "params": [
+                "object_id"
+            ]
+        },
+        {
+            "url": "/admin/oauth2_provider/accesstoken/{object_id}/",
+            "params": [
+                "object_id"
+            ]
+        },
+        {
+            "url": "/admin/oauth2_provider/grant/{object_id}/",
+            "params": [
+                "object_id"
+            ]
+        },
+        {
+            "url": "/admin/oauth2_provider/idtoken/{object_id}/",
+            "params": [
+                "object_id"
+            ]
+        },
+        {
+            "url": "/admin/oauth2_provider/refreshtoken/{object_id}/",
+            "params": [
+                "object_id"
+            ]
+        },
+        {
+            "url": "/admin/django_celery_results/taskresult/{object_id}/",
+            "params": [
+                "object_id"
+            ]
+        },
+        {
+            "url": "/admin/django_celery_results/groupresult/{object_id}/",
+            "params": [
+                "object_id"
+            ]
+        },
+        {
+            "url": "/admin/arches_modular_reports/reportconfig/{object_id}/",
+            "params": [
+                "object_id"
+            ]
+        },
+        {
+            "url": "/admin/{url}",
+            "params": [
+                "url"
+            ]
+        }
+    ],
+    "api-card-data": [
+        {
+            "url": "/arches-component-lab/api/card-data/{graph_slug}/{nodegroup_alias}",
+            "params": [
+                "graph_slug",
+                "nodegroup_alias"
+            ]
+        }
+    ],
+    "api-card-x-node-x-widget": [
+        {
+            "url": "/arches-component-lab/api/widget-data/{graph_slug}/{node_alias}",
+            "params": [
+                "graph_slug",
+                "node_alias"
+            ]
+        }
+    ],
+    "api-card-x-node-x-widget-list-from-nodegroup": [
+        {
+            "url": "/arches-component-lab/api/card-x-node-x-widget-list-from-nodegroup/{graph_slug}/{nodegroup_alias}",
+            "params": [
+                "graph_slug",
+                "nodegroup_alias"
+            ]
+        }
+    ],
+    "api-feature-buffer": [
+        {
+            "url": "/api-feature-buffer",
+            "params": []
+        }
+    ],
+    "api-file-data": [
+        {
+            "url": "/api-file-data",
+            "params": []
+        }
+    ],
+    "api-geojson-bounds": [
+        {
+            "url": "/api-geojson-bounds",
+            "params": []
+        }
+    ],
+    "api-map-data": [
+        {
+            "url": "/api-map-data",
+            "params": []
+        }
+    ],
+    "api-node-data": [
+        {
+            "url": "/arches-component-lab/api/node-data/{graph_slug}/{node_alias}",
+            "params": [
+                "graph_slug",
+                "node_alias"
+            ]
+        }
+    ],
+    "api-reference-collection-mvt": [
+        {
+            "url": "/api-reference-collection-mvt/{zoom}/{x}/{y}.pbf",
+            "params": [
+                "zoom",
+                "x",
+                "y"
+            ]
+        }
+    ],
+    "api-reference-collection-search-mvt": [
+        {
+            "url": "/api-reference-collection-search-mvt/{zoom}/{x}/{y}.pbf",
+            "params": [
+                "zoom",
+                "x",
+                "y"
+            ]
+        }
+    ],
+    "api-relatable-resources": [
+        {
+            "url": "/arches-component-lab/api/relatable-resources/{graph}/{node_alias}",
+            "params": [
+                "graph",
+                "node_alias"
+            ]
+        }
+    ],
+    "api-resource-bounds": [
+        {
+            "url": "/api-resource-bounds/{resource_id}",
+            "params": [
+                "resource_id"
+            ]
+        }
+    ],
+    "api-resource-geojson": [
+        {
+            "url": "/api-resource-geojson/{resource_id}",
+            "params": [
+                "resource_id"
+            ]
+        }
+    ],
+    "api-search": [
+        {
+            "url": "/api-search",
+            "params": []
+        }
+    ],
+    "api-settings": [
+        {
+            "url": "/api-settings",
+            "params": []
+        }
+    ],
+    "api-tile": [
+        {
+            "url": "/arches-component-lab/api/tile/{graph}/{nodegroup_alias}/{pk}",
+            "params": [
+                "graph",
+                "nodegroup_alias",
+                "pk"
+            ]
+        },
+        {
+            "url": "/arches-component-lab/api/tile/{graph}/{nodegroup_alias}",
+            "params": [
+                "graph",
+                "nodegroup_alias"
+            ]
+        }
+    ],
+    "api_has_permissions": [
+        {
+            "url": "/api/has_permissions",
+            "params": []
+        }
+    ],
+    "api_node_presentation": [
+        {
+            "url": "/api/node_presentation/{resourceid}",
+            "params": [
+                "resourceid"
+            ]
+        }
+    ],
+    "api_node_tile_data": [
+        {
+            "url": "/api/node_tile_data/{resourceid}",
+            "params": [
+                "resourceid"
+            ]
+        }
+    ],
+    "api_nodegroup_tile_data": [
+        {
+            "url": "/api/nodegroup_tile_data/{resourceid}/{nodegroup_alias}",
+            "params": [
+                "resourceid",
+                "nodegroup_alias"
+            ]
+        }
+    ],
+    "api_related_resources": [
+        {
+            "url": "/api/related_resources/{resourceid}/{related_graph_slug}",
+            "params": [
+                "resourceid",
+                "related_graph_slug"
+            ]
+        }
+    ],
+    "arches_querysets:add_resource": [
+        {
+            "url": "/add-resource/{graphid}",
+            "params": [
+                "graphid"
+            ]
+        }
+    ],
+    "arches_querysets:admin:app_list": [
+        {
+            "url": "/admin/{app_label}/",
+            "params": [
+                "app_label"
+            ]
+        }
+    ],
+    "arches_querysets:admin:arches_modular_reports_reportconfig_add": [
+        {
+            "url": "/admin/arches_modular_reports/reportconfig/add/",
+            "params": []
+        }
+    ],
+    "arches_querysets:admin:arches_modular_reports_reportconfig_change": [
+        {
+            "url": "/admin/arches_modular_reports/reportconfig/{object_id}/change/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:arches_modular_reports_reportconfig_changelist": [
+        {
+            "url": "/admin/arches_modular_reports/reportconfig",
+            "params": []
+        }
+    ],
+    "arches_querysets:admin:arches_modular_reports_reportconfig_delete": [
+        {
+            "url": "/admin/arches_modular_reports/reportconfig/{object_id}/delete/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:arches_modular_reports_reportconfig_history": [
+        {
+            "url": "/admin/arches_modular_reports/reportconfig/{object_id}/history/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:auth_group_add": [
+        {
+            "url": "/admin/auth/group/add/",
+            "params": []
+        }
+    ],
+    "arches_querysets:admin:auth_group_change": [
+        {
+            "url": "/admin/auth/group/{object_id}/change/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:auth_group_changelist": [
+        {
+            "url": "/admin/auth/group",
+            "params": []
+        }
+    ],
+    "arches_querysets:admin:auth_group_delete": [
+        {
+            "url": "/admin/auth/group/{object_id}/delete/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:auth_group_history": [
+        {
+            "url": "/admin/auth/group/{object_id}/history/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:auth_user_add": [
+        {
+            "url": "/admin/auth/user/add/",
+            "params": []
+        }
+    ],
+    "arches_querysets:admin:auth_user_change": [
+        {
+            "url": "/admin/auth/user/{object_id}/change/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:auth_user_changelist": [
+        {
+            "url": "/admin/auth/user",
+            "params": []
+        }
+    ],
+    "arches_querysets:admin:auth_user_delete": [
+        {
+            "url": "/admin/auth/user/{object_id}/delete/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:auth_user_history": [
+        {
+            "url": "/admin/auth/user/{object_id}/history/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:auth_user_password_change": [
+        {
+            "url": "/admin/auth/user/{id}/password/",
+            "params": [
+                "id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:autocomplete": [
+        {
+            "url": "/admin/autocomplete/",
+            "params": []
+        }
+    ],
+    "arches_querysets:admin:django_celery_results_groupresult_add": [
+        {
+            "url": "/admin/django_celery_results/groupresult/add/",
+            "params": []
+        }
+    ],
+    "arches_querysets:admin:django_celery_results_groupresult_change": [
+        {
+            "url": "/admin/django_celery_results/groupresult/{object_id}/change/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:django_celery_results_groupresult_changelist": [
+        {
+            "url": "/admin/django_celery_results/groupresult",
+            "params": []
+        }
+    ],
+    "arches_querysets:admin:django_celery_results_groupresult_delete": [
+        {
+            "url": "/admin/django_celery_results/groupresult/{object_id}/delete/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:django_celery_results_groupresult_history": [
+        {
+            "url": "/admin/django_celery_results/groupresult/{object_id}/history/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:django_celery_results_taskresult_add": [
+        {
+            "url": "/admin/django_celery_results/taskresult/add/",
+            "params": []
+        }
+    ],
+    "arches_querysets:admin:django_celery_results_taskresult_change": [
+        {
+            "url": "/admin/django_celery_results/taskresult/{object_id}/change/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:django_celery_results_taskresult_changelist": [
+        {
+            "url": "/admin/django_celery_results/taskresult",
+            "params": []
+        }
+    ],
+    "arches_querysets:admin:django_celery_results_taskresult_delete": [
+        {
+            "url": "/admin/django_celery_results/taskresult/{object_id}/delete/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:django_celery_results_taskresult_history": [
+        {
+            "url": "/admin/django_celery_results/taskresult/{object_id}/history/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:index": [
+        {
+            "url": "/admin",
+            "params": []
+        }
+    ],
+    "arches_querysets:admin:jsi18n": [
+        {
+            "url": "/admin/jsi18n/",
+            "params": []
+        }
+    ],
+    "arches_querysets:admin:login": [
+        {
+            "url": "/admin/login/",
+            "params": []
+        }
+    ],
+    "arches_querysets:admin:logout": [
+        {
+            "url": "/admin/logout/",
+            "params": []
+        }
+    ],
+    "arches_querysets:admin:models_ddatatype_add": [
+        {
+            "url": "/admin/models/ddatatype/add/",
+            "params": []
+        }
+    ],
+    "arches_querysets:admin:models_ddatatype_change": [
+        {
+            "url": "/admin/models/ddatatype/{object_id}/change/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:models_ddatatype_changelist": [
+        {
+            "url": "/admin/models/ddatatype",
+            "params": []
+        }
+    ],
+    "arches_querysets:admin:models_ddatatype_delete": [
+        {
+            "url": "/admin/models/ddatatype/{object_id}/delete/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:models_ddatatype_history": [
+        {
+            "url": "/admin/models/ddatatype/{object_id}/history/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:models_etlmodule_add": [
+        {
+            "url": "/admin/models/etlmodule/add/",
+            "params": []
+        }
+    ],
+    "arches_querysets:admin:models_etlmodule_change": [
+        {
+            "url": "/admin/models/etlmodule/{object_id}/change/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:models_etlmodule_changelist": [
+        {
+            "url": "/admin/models/etlmodule",
+            "params": []
+        }
+    ],
+    "arches_querysets:admin:models_etlmodule_delete": [
+        {
+            "url": "/admin/models/etlmodule/{object_id}/delete/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:models_etlmodule_history": [
+        {
+            "url": "/admin/models/etlmodule/{object_id}/history/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:models_etlmodule_permissions": [
+        {
+            "url": "/admin/models/etlmodule/{object_pk}/permissions/",
+            "params": [
+                "object_pk"
+            ]
+        }
+    ],
+    "arches_querysets:admin:models_etlmodule_permissions_manage_group": [
+        {
+            "url": "/admin/models/etlmodule/{object_pk}/permissions/group-manage/{group_id}/",
+            "params": [
+                "object_pk",
+                "group_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:models_etlmodule_permissions_manage_user": [
+        {
+            "url": "/admin/models/etlmodule/{object_pk}/permissions/user-manage/{user_id}/",
+            "params": [
+                "object_pk",
+                "user_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:models_geocoder_add": [
+        {
+            "url": "/admin/models/geocoder/add/",
+            "params": []
+        }
+    ],
+    "arches_querysets:admin:models_geocoder_change": [
+        {
+            "url": "/admin/models/geocoder/{object_id}/change/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:models_geocoder_changelist": [
+        {
+            "url": "/admin/models/geocoder",
+            "params": []
+        }
+    ],
+    "arches_querysets:admin:models_geocoder_delete": [
+        {
+            "url": "/admin/models/geocoder/{object_id}/delete/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:models_geocoder_history": [
+        {
+            "url": "/admin/models/geocoder/{object_id}/history/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:models_graphmodel_add": [
+        {
+            "url": "/admin/models/graphmodel/add/",
+            "params": []
+        }
+    ],
+    "arches_querysets:admin:models_graphmodel_change": [
+        {
+            "url": "/admin/models/graphmodel/{object_id}/change/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:models_graphmodel_changelist": [
+        {
+            "url": "/admin/models/graphmodel",
+            "params": []
+        }
+    ],
+    "arches_querysets:admin:models_graphmodel_delete": [
+        {
+            "url": "/admin/models/graphmodel/{object_id}/delete/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:models_graphmodel_history": [
+        {
+            "url": "/admin/models/graphmodel/{object_id}/history/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:models_groupmapsettings_add": [
+        {
+            "url": "/admin/models/groupmapsettings/add/",
+            "params": []
+        }
+    ],
+    "arches_querysets:admin:models_groupmapsettings_change": [
+        {
+            "url": "/admin/models/groupmapsettings/{object_id}/change/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:models_groupmapsettings_changelist": [
+        {
+            "url": "/admin/models/groupmapsettings",
+            "params": []
+        }
+    ],
+    "arches_querysets:admin:models_groupmapsettings_delete": [
+        {
+            "url": "/admin/models/groupmapsettings/{object_id}/delete/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:models_groupmapsettings_history": [
+        {
+            "url": "/admin/models/groupmapsettings/{object_id}/history/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:models_iiifmanifest_add": [
+        {
+            "url": "/admin/models/iiifmanifest/add/",
+            "params": []
+        }
+    ],
+    "arches_querysets:admin:models_iiifmanifest_change": [
+        {
+            "url": "/admin/models/iiifmanifest/{object_id}/change/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:models_iiifmanifest_changelist": [
+        {
+            "url": "/admin/models/iiifmanifest",
+            "params": []
+        }
+    ],
+    "arches_querysets:admin:models_iiifmanifest_delete": [
+        {
+            "url": "/admin/models/iiifmanifest/{object_id}/delete/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:models_iiifmanifest_history": [
+        {
+            "url": "/admin/models/iiifmanifest/{object_id}/history/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:models_language_add": [
+        {
+            "url": "/admin/models/language/add/",
+            "params": []
+        }
+    ],
+    "arches_querysets:admin:models_language_change": [
+        {
+            "url": "/admin/models/language/{object_id}/change/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:models_language_changelist": [
+        {
+            "url": "/admin/models/language",
+            "params": []
+        }
+    ],
+    "arches_querysets:admin:models_language_delete": [
+        {
+            "url": "/admin/models/language/{object_id}/delete/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:models_language_history": [
+        {
+            "url": "/admin/models/language/{object_id}/history/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:models_maplayer_add": [
+        {
+            "url": "/admin/models/maplayer/add/",
+            "params": []
+        }
+    ],
+    "arches_querysets:admin:models_maplayer_change": [
+        {
+            "url": "/admin/models/maplayer/{object_id}/change/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:models_maplayer_changelist": [
+        {
+            "url": "/admin/models/maplayer",
+            "params": []
+        }
+    ],
+    "arches_querysets:admin:models_maplayer_delete": [
+        {
+            "url": "/admin/models/maplayer/{object_id}/delete/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:models_maplayer_history": [
+        {
+            "url": "/admin/models/maplayer/{object_id}/history/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:models_maplayer_permissions": [
+        {
+            "url": "/admin/models/maplayer/{object_pk}/permissions/",
+            "params": [
+                "object_pk"
+            ]
+        }
+    ],
+    "arches_querysets:admin:models_maplayer_permissions_manage_group": [
+        {
+            "url": "/admin/models/maplayer/{object_pk}/permissions/group-manage/{group_id}/",
+            "params": [
+                "object_pk",
+                "group_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:models_maplayer_permissions_manage_user": [
+        {
+            "url": "/admin/models/maplayer/{object_pk}/permissions/user-manage/{user_id}/",
+            "params": [
+                "object_pk",
+                "user_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:models_mapmarker_add": [
+        {
+            "url": "/admin/models/mapmarker/add/",
+            "params": []
+        }
+    ],
+    "arches_querysets:admin:models_mapmarker_change": [
+        {
+            "url": "/admin/models/mapmarker/{object_id}/change/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:models_mapmarker_changelist": [
+        {
+            "url": "/admin/models/mapmarker",
+            "params": []
+        }
+    ],
+    "arches_querysets:admin:models_mapmarker_delete": [
+        {
+            "url": "/admin/models/mapmarker/{object_id}/delete/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:models_mapmarker_history": [
+        {
+            "url": "/admin/models/mapmarker/{object_id}/history/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:models_mapsource_add": [
+        {
+            "url": "/admin/models/mapsource/add/",
+            "params": []
+        }
+    ],
+    "arches_querysets:admin:models_mapsource_change": [
+        {
+            "url": "/admin/models/mapsource/{object_id}/change/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:models_mapsource_changelist": [
+        {
+            "url": "/admin/models/mapsource",
+            "params": []
+        }
+    ],
+    "arches_querysets:admin:models_mapsource_delete": [
+        {
+            "url": "/admin/models/mapsource/{object_id}/delete/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:models_mapsource_history": [
+        {
+            "url": "/admin/models/mapsource/{object_id}/history/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:models_nodegroup_add": [
+        {
+            "url": "/admin/models/nodegroup/add/",
+            "params": []
+        }
+    ],
+    "arches_querysets:admin:models_nodegroup_change": [
+        {
+            "url": "/admin/models/nodegroup/{object_id}/change/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:models_nodegroup_changelist": [
+        {
+            "url": "/admin/models/nodegroup",
+            "params": []
+        }
+    ],
+    "arches_querysets:admin:models_nodegroup_delete": [
+        {
+            "url": "/admin/models/nodegroup/{object_id}/delete/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:models_nodegroup_history": [
+        {
+            "url": "/admin/models/nodegroup/{object_id}/history/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:models_plugin_add": [
+        {
+            "url": "/admin/models/plugin/add/",
+            "params": []
+        }
+    ],
+    "arches_querysets:admin:models_plugin_change": [
+        {
+            "url": "/admin/models/plugin/{object_id}/change/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:models_plugin_changelist": [
+        {
+            "url": "/admin/models/plugin",
+            "params": []
+        }
+    ],
+    "arches_querysets:admin:models_plugin_delete": [
+        {
+            "url": "/admin/models/plugin/{object_id}/delete/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:models_plugin_history": [
+        {
+            "url": "/admin/models/plugin/{object_id}/history/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:models_plugin_permissions": [
+        {
+            "url": "/admin/models/plugin/{object_pk}/permissions/",
+            "params": [
+                "object_pk"
+            ]
+        }
+    ],
+    "arches_querysets:admin:models_plugin_permissions_manage_group": [
+        {
+            "url": "/admin/models/plugin/{object_pk}/permissions/group-manage/{group_id}/",
+            "params": [
+                "object_pk",
+                "group_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:models_plugin_permissions_manage_user": [
+        {
+            "url": "/admin/models/plugin/{object_pk}/permissions/user-manage/{user_id}/",
+            "params": [
+                "object_pk",
+                "user_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:models_resourceinstancelifecycle_add": [
+        {
+            "url": "/admin/models/resourceinstancelifecycle/add/",
+            "params": []
+        }
+    ],
+    "arches_querysets:admin:models_resourceinstancelifecycle_change": [
+        {
+            "url": "/admin/models/resourceinstancelifecycle/{object_id}/change/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:models_resourceinstancelifecycle_changelist": [
+        {
+            "url": "/admin/models/resourceinstancelifecycle",
+            "params": []
+        }
+    ],
+    "arches_querysets:admin:models_resourceinstancelifecycle_delete": [
+        {
+            "url": "/admin/models/resourceinstancelifecycle/{object_id}/delete/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:models_resourceinstancelifecycle_history": [
+        {
+            "url": "/admin/models/resourceinstancelifecycle/{object_id}/history/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:models_resourceinstancelifecyclestate_add": [
+        {
+            "url": "/admin/models/resourceinstancelifecyclestate/add/",
+            "params": []
+        }
+    ],
+    "arches_querysets:admin:models_resourceinstancelifecyclestate_change": [
+        {
+            "url": "/admin/models/resourceinstancelifecyclestate/{object_id}/change/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:models_resourceinstancelifecyclestate_changelist": [
+        {
+            "url": "/admin/models/resourceinstancelifecyclestate",
+            "params": []
+        }
+    ],
+    "arches_querysets:admin:models_resourceinstancelifecyclestate_delete": [
+        {
+            "url": "/admin/models/resourceinstancelifecyclestate/{object_id}/delete/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:models_resourceinstancelifecyclestate_history": [
+        {
+            "url": "/admin/models/resourceinstancelifecyclestate/{object_id}/history/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:models_searchcomponent_add": [
+        {
+            "url": "/admin/models/searchcomponent/add/",
+            "params": []
+        }
+    ],
+    "arches_querysets:admin:models_searchcomponent_change": [
+        {
+            "url": "/admin/models/searchcomponent/{object_id}/change/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:models_searchcomponent_changelist": [
+        {
+            "url": "/admin/models/searchcomponent",
+            "params": []
+        }
+    ],
+    "arches_querysets:admin:models_searchcomponent_delete": [
+        {
+            "url": "/admin/models/searchcomponent/{object_id}/delete/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:models_searchcomponent_history": [
+        {
+            "url": "/admin/models/searchcomponent/{object_id}/history/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:models_spatialview_add": [
+        {
+            "url": "/admin/models/spatialview/add/",
+            "params": []
+        }
+    ],
+    "arches_querysets:admin:models_spatialview_change": [
+        {
+            "url": "/admin/models/spatialview/{object_id}/change/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:models_spatialview_changelist": [
+        {
+            "url": "/admin/models/spatialview",
+            "params": []
+        }
+    ],
+    "arches_querysets:admin:models_spatialview_delete": [
+        {
+            "url": "/admin/models/spatialview/{object_id}/delete/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:models_spatialview_history": [
+        {
+            "url": "/admin/models/spatialview/{object_id}/history/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:models_userpreference_add": [
+        {
+            "url": "/admin/models/userpreference/add/",
+            "params": []
+        }
+    ],
+    "arches_querysets:admin:models_userpreference_change": [
+        {
+            "url": "/admin/models/userpreference/{object_id}/change/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:models_userpreference_changelist": [
+        {
+            "url": "/admin/models/userpreference",
+            "params": []
+        }
+    ],
+    "arches_querysets:admin:models_userpreference_delete": [
+        {
+            "url": "/admin/models/userpreference/{object_id}/delete/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:models_userpreference_history": [
+        {
+            "url": "/admin/models/userpreference/{object_id}/history/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:models_userprofile_add": [
+        {
+            "url": "/admin/models/userprofile/add/",
+            "params": []
+        }
+    ],
+    "arches_querysets:admin:models_userprofile_change": [
+        {
+            "url": "/admin/models/userprofile/{object_id}/change/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:models_userprofile_changelist": [
+        {
+            "url": "/admin/models/userprofile",
+            "params": []
+        }
+    ],
+    "arches_querysets:admin:models_userprofile_delete": [
+        {
+            "url": "/admin/models/userprofile/{object_id}/delete/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:models_userprofile_history": [
+        {
+            "url": "/admin/models/userprofile/{object_id}/history/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:models_widget_add": [
+        {
+            "url": "/admin/models/widget/add/",
+            "params": []
+        }
+    ],
+    "arches_querysets:admin:models_widget_change": [
+        {
+            "url": "/admin/models/widget/{object_id}/change/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:models_widget_changelist": [
+        {
+            "url": "/admin/models/widget",
+            "params": []
+        }
+    ],
+    "arches_querysets:admin:models_widget_delete": [
+        {
+            "url": "/admin/models/widget/{object_id}/delete/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:models_widget_history": [
+        {
+            "url": "/admin/models/widget/{object_id}/history/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:oauth2_provider_accesstoken_add": [
+        {
+            "url": "/admin/oauth2_provider/accesstoken/add/",
+            "params": []
+        }
+    ],
+    "arches_querysets:admin:oauth2_provider_accesstoken_change": [
+        {
+            "url": "/admin/oauth2_provider/accesstoken/{object_id}/change/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:oauth2_provider_accesstoken_changelist": [
+        {
+            "url": "/admin/oauth2_provider/accesstoken",
+            "params": []
+        }
+    ],
+    "arches_querysets:admin:oauth2_provider_accesstoken_delete": [
+        {
+            "url": "/admin/oauth2_provider/accesstoken/{object_id}/delete/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:oauth2_provider_accesstoken_history": [
+        {
+            "url": "/admin/oauth2_provider/accesstoken/{object_id}/history/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:oauth2_provider_application_add": [
+        {
+            "url": "/admin/oauth2_provider/application/add/",
+            "params": []
+        }
+    ],
+    "arches_querysets:admin:oauth2_provider_application_change": [
+        {
+            "url": "/admin/oauth2_provider/application/{object_id}/change/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:oauth2_provider_application_changelist": [
+        {
+            "url": "/admin/oauth2_provider/application",
+            "params": []
+        }
+    ],
+    "arches_querysets:admin:oauth2_provider_application_delete": [
+        {
+            "url": "/admin/oauth2_provider/application/{object_id}/delete/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:oauth2_provider_application_history": [
+        {
+            "url": "/admin/oauth2_provider/application/{object_id}/history/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:oauth2_provider_grant_add": [
+        {
+            "url": "/admin/oauth2_provider/grant/add/",
+            "params": []
+        }
+    ],
+    "arches_querysets:admin:oauth2_provider_grant_change": [
+        {
+            "url": "/admin/oauth2_provider/grant/{object_id}/change/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:oauth2_provider_grant_changelist": [
+        {
+            "url": "/admin/oauth2_provider/grant",
+            "params": []
+        }
+    ],
+    "arches_querysets:admin:oauth2_provider_grant_delete": [
+        {
+            "url": "/admin/oauth2_provider/grant/{object_id}/delete/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:oauth2_provider_grant_history": [
+        {
+            "url": "/admin/oauth2_provider/grant/{object_id}/history/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:oauth2_provider_idtoken_add": [
+        {
+            "url": "/admin/oauth2_provider/idtoken/add/",
+            "params": []
+        }
+    ],
+    "arches_querysets:admin:oauth2_provider_idtoken_change": [
+        {
+            "url": "/admin/oauth2_provider/idtoken/{object_id}/change/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:oauth2_provider_idtoken_changelist": [
+        {
+            "url": "/admin/oauth2_provider/idtoken",
+            "params": []
+        }
+    ],
+    "arches_querysets:admin:oauth2_provider_idtoken_delete": [
+        {
+            "url": "/admin/oauth2_provider/idtoken/{object_id}/delete/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:oauth2_provider_idtoken_history": [
+        {
+            "url": "/admin/oauth2_provider/idtoken/{object_id}/history/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:oauth2_provider_refreshtoken_add": [
+        {
+            "url": "/admin/oauth2_provider/refreshtoken/add/",
+            "params": []
+        }
+    ],
+    "arches_querysets:admin:oauth2_provider_refreshtoken_change": [
+        {
+            "url": "/admin/oauth2_provider/refreshtoken/{object_id}/change/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:oauth2_provider_refreshtoken_changelist": [
+        {
+            "url": "/admin/oauth2_provider/refreshtoken",
+            "params": []
+        }
+    ],
+    "arches_querysets:admin:oauth2_provider_refreshtoken_delete": [
+        {
+            "url": "/admin/oauth2_provider/refreshtoken/{object_id}/delete/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:oauth2_provider_refreshtoken_history": [
+        {
+            "url": "/admin/oauth2_provider/refreshtoken/{object_id}/history/",
+            "params": [
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:admin:password_change": [
+        {
+            "url": "/admin/password_change/",
+            "params": []
+        }
+    ],
+    "arches_querysets:admin:password_change_done": [
+        {
+            "url": "/admin/password_change/done/",
+            "params": []
+        }
+    ],
+    "arches_querysets:admin:view_on_site": [
+        {
+            "url": "/admin/r/{content_type_id}/{object_id}/",
+            "params": [
+                "content_type_id",
+                "object_id"
+            ]
+        }
+    ],
+    "arches_querysets:api-resource": [
+        {
+            "url": "/api/resource/{graph}/{pk}",
+            "params": [
+                "graph",
+                "pk"
+            ]
+        }
+    ],
+    "arches_querysets:api-resources": [
+        {
+            "url": "/api/resource/{graph}",
+            "params": [
+                "graph"
+            ]
+        }
+    ],
+    "arches_querysets:api-tile": [
+        {
+            "url": "/api/tile/{graph}/{nodegroup_alias}/{pk}",
+            "params": [
+                "graph",
+                "nodegroup_alias",
+                "pk"
+            ]
+        }
+    ],
+    "arches_querysets:api-tiles": [
+        {
+            "url": "/api/tile/{graph}/{nodegroup_alias}",
+            "params": [
+                "graph",
+                "nodegroup_alias"
+            ]
+        }
+    ],
+    "arches_querysets:api_bulk_disambiguated_resource_instance": [
+        {
+            "url": "/api/bulk_disambiguated_resource_instance",
+            "params": []
+        }
+    ],
+    "arches_querysets:api_bulk_resource_report": [
+        {
+            "url": "/api/bulk_resource_report",
+            "params": []
+        }
+    ],
+    "arches_querysets:api_card": [
+        {
+            "url": "/cards/{resourceid}",
+            "params": [
+                "resourceid"
+            ]
+        }
+    ],
+    "arches_querysets:api_export_results": [
+        {
+            "url": "/api/search/export_results",
+            "params": []
+        }
+    ],
+    "arches_querysets:api_get_nodegroup_tree": [
+        {
+            "url": "/api/get_nodegroup_tree",
+            "params": []
+        }
+    ],
+    "arches_querysets:api_instance_permissions": [
+        {
+            "url": "/api/instance_permissions/",
+            "params": []
+        }
+    ],
+    "arches_querysets:api_login": [
+        {
+            "url": "/api/login",
+            "params": []
+        }
+    ],
+    "arches_querysets:api_logout": [
+        {
+            "url": "/api/logout",
+            "params": []
+        }
+    ],
+    "arches_querysets:api_node_value": [
+        {
+            "url": "/api/node_value/",
+            "params": []
+        }
+    ],
+    "arches_querysets:api_nodegroup": [
+        {
+            "url": "/api/nodegroup/{nodegroupid}",
+            "params": [
+                "nodegroupid"
+            ]
+        }
+    ],
+    "arches_querysets:api_nodes": [
+        {
+            "url": "/api/nodes/{nodeid}",
+            "params": [
+                "nodeid"
+            ]
+        }
+    ],
+    "arches_querysets:api_plugins": [
+        {
+            "url": "/api/plugins/{pluginid}",
+            "params": [
+                "pluginid"
+            ]
+        }
+    ],
+    "arches_querysets:api_resource_instance_lifecycle_state": [
+        {
+            "url": "/api/resource_instance_lifecycle_state/{resourceid}",
+            "params": [
+                "resourceid"
+            ]
+        }
+    ],
+    "arches_querysets:api_resource_instance_lifecycle_states": [
+        {
+            "url": "/api/resource_instance_lifecycle/",
+            "params": []
+        }
+    ],
+    "arches_querysets:api_resource_report": [
+        {
+            "url": "/api/resource_report/{resourceid}",
+            "params": [
+                "resourceid"
+            ]
+        }
+    ],
+    "arches_querysets:api_search_component_data": [
+        {
+            "url": "/search_component_data/{componentname}",
+            "params": [
+                "componentname"
+            ]
+        }
+    ],
+    "arches_querysets:api_tiles": [
+        {
+            "url": "/api/tiles/{tileid}",
+            "params": [
+                "tileid"
+            ]
+        }
+    ],
+    "arches_querysets:api_user": [
+        {
+            "url": "/api/user",
+            "params": []
+        }
+    ],
+    "arches_querysets:api_user_incomplete_workflows": [
+        {
+            "url": "/api/user_incomplete_workflows",
+            "params": []
+        }
+    ],
+    "arches_querysets:api_user_preference_detail_view": [
+        {
+            "url": "/api/user_preference/{identifier}/",
+            "params": [
+                "identifier"
+            ]
+        }
+    ],
+    "arches_querysets:api_user_preference_list_view": [
+        {
+            "url": "/api/user_preference/",
+            "params": []
+        }
+    ],
+    "arches_querysets:append_branch": [
+        {
+            "url": "/graph/{graphid}/append_branch",
+            "params": [
+                "graphid"
+            ]
+        }
+    ],
+    "arches_querysets:append_node": [
+        {
+            "url": "/graph/{graphid}/append_node",
+            "params": [
+                "graphid"
+            ]
+        }
+    ],
+    "arches_querysets:apply_functions": [
+        {
+            "url": "/graph/{graphid}/apply_functions",
+            "params": [
+                "graphid"
+            ]
+        }
+    ],
+    "arches_querysets:as_stream_collection": [
+        {
+            "url": "/history/",
+            "params": []
+        }
+    ],
+    "arches_querysets:as_stream_page": [
+        {
+            "url": "/history/{page}",
+            "params": [
+                "page"
+            ]
+        }
+    ],
+    "arches_querysets:auth": [
+        {
+            "url": "/auth/",
+            "params": []
+        }
+    ],
+    "arches_querysets:buffer": [
+        {
+            "url": "/buffer/",
+            "params": []
+        }
+    ],
+    "arches_querysets:card": [
+        {
+            "url": "/card/{cardid}",
+            "params": [
+                "cardid"
+            ]
+        }
+    ],
+    "arches_querysets:change_password": [
+        {
+            "url": "/auth/password",
+            "params": []
+        }
+    ],
+    "arches_querysets:clear_user_permission_cache": [
+        {
+            "url": "/clear-user-permission-cache",
+            "params": []
+        }
+    ],
+    "arches_querysets:clone_graph": [
+        {
+            "url": "/graph/{graphid}/clone",
+            "params": [
+                "graphid"
+            ]
+        }
+    ],
+    "arches_querysets:concept": [
+        {
+            "url": "/concepts/{conceptid}",
+            "params": [
+                "conceptid"
+            ]
+        }
+    ],
+    "arches_querysets:concept_manage_parents": [
+        {
+            "url": "/concepts/{conceptid}/manage_parents/",
+            "params": [
+                "conceptid"
+            ]
+        }
+    ],
+    "arches_querysets:concept_search": [
+        {
+            "url": "/concepts/search",
+            "params": []
+        }
+    ],
+    "arches_querysets:concept_tree": [
+        {
+            "url": "/concepts/tree/{mode}",
+            "params": [
+                "mode"
+            ]
+        }
+    ],
+    "arches_querysets:concept_value": [
+        {
+            "url": "/conceptvalue/",
+            "params": []
+        }
+    ],
+    "arches_querysets:concepts": [
+        {
+            "url": "/rdm/concepts/{conceptid}",
+            "params": [
+                "conceptid"
+            ]
+        }
+    ],
+    "arches_querysets:config": [
+        {
+            "url": "/settings/",
+            "params": []
+        }
+    ],
+    "arches_querysets:confirm_delete": [
+        {
+            "url": "/concepts/{conceptid}/confirm_delete/",
+            "params": [
+                "conceptid"
+            ]
+        }
+    ],
+    "arches_querysets:confirm_signup": [
+        {
+            "url": "/auth/confirm_signup",
+            "params": []
+        }
+    ],
+    "arches_querysets:datatype_template": [
+        {
+            "url": "/components/datatypes/{template}",
+            "params": [
+                "template"
+            ]
+        }
+    ],
+    "arches_querysets:delete_graph": [
+        {
+            "url": "/graph/{graphid}/delete",
+            "params": [
+                "graphid"
+            ]
+        }
+    ],
+    "arches_querysets:delete_instances": [
+        {
+            "url": "/graph/{graphid}/delete_instances",
+            "params": [
+                "graphid"
+            ]
+        }
+    ],
+    "arches_querysets:delete_node": [
+        {
+            "url": "/graph/{graphid}/delete_node",
+            "params": [
+                "graphid"
+            ]
+        }
+    ],
+    "arches_querysets:delete_provisional_tile": [
+        {
+            "url": "/tiles/delete_provisional_tile",
+            "params": []
+        }
+    ],
+    "arches_querysets:delete_published_graph": [
+        {
+            "url": "/graph/{graphid}/delete_published_graph",
+            "params": [
+                "graphid"
+            ]
+        }
+    ],
+    "arches_querysets:dismiss_notifications": [
+        {
+            "url": "/notifications/dismiss",
+            "params": []
+        }
+    ],
+    "arches_querysets:download_files": [
+        {
+            "url": "/tiles/download_files",
+            "params": []
+        }
+    ],
+    "arches_querysets:draft_graph_api": [
+        {
+            "url": "/draft_graph/{graph_id}",
+            "params": [
+                "graph_id"
+            ]
+        }
+    ],
+    "arches_querysets:dropdown": [
+        {
+            "url": "/concepts/dropdown",
+            "params": []
+        }
+    ],
+    "arches_querysets:edit_history": [
+        {
+            "url": "/resource/history",
+            "params": []
+        }
+    ],
+    "arches_querysets:etl_manager": [
+        {
+            "url": "/etl-manager",
+            "params": []
+        }
+    ],
+    "arches_querysets:export_branch": [
+        {
+            "url": "/graph/{graphid}/export_branch",
+            "params": [
+                "graphid"
+            ]
+        }
+    ],
+    "arches_querysets:export_concept": [
+        {
+            "url": "/concepts/export/{conceptid}",
+            "params": [
+                "conceptid"
+            ]
+        }
+    ],
+    "arches_querysets:export_concept_collections": [
+        {
+            "url": "/concepts/export/collections",
+            "params": []
+        }
+    ],
+    "arches_querysets:export_graph": [
+        {
+            "url": "/graph/{graphid}/export",
+            "params": [
+                "graphid"
+            ]
+        }
+    ],
+    "arches_querysets:export_mapping_file": [
+        {
+            "url": "/graph/{graphid}/export_mapping_file",
+            "params": [
+                "graphid"
+            ]
+        }
+    ],
+    "arches_querysets:export_results": [
+        {
+            "url": "/search/export_results",
+            "params": []
+        }
+    ],
+    "arches_querysets:external_oauth_callback": [
+        {
+            "url": "/auth/eoauth_cb",
+            "params": []
+        }
+    ],
+    "arches_querysets:external_oauth_start": [
+        {
+            "url": "/auth/eoauth_start",
+            "params": []
+        }
+    ],
+    "arches_querysets:feature_popup_content": [
+        {
+            "url": "/feature_popup_content",
+            "params": []
+        }
+    ],
+    "arches_querysets:file_access": [
+        {
+            "url": "/files/{fileid}",
+            "params": [
+                "fileid"
+            ]
+        }
+    ],
+    "arches_querysets:from_sparql_endpoint": [
+        {
+            "url": "/concepts/{conceptid}/from_sparql_endpoint",
+            "params": [
+                "conceptid"
+            ]
+        }
+    ],
+    "arches_querysets:function-templates": [
+        {
+            "url": "/function-templates/{template}",
+            "params": [
+                "template"
+            ]
+        }
+    ],
+    "arches_querysets:function_manager": [
+        {
+            "url": "/graph/{graphid}/function_manager",
+            "params": [
+                "graphid"
+            ]
+        }
+    ],
+    "arches_querysets:geojson": [
+        {
+            "url": "/geojson",
+            "params": []
+        }
+    ],
+    "arches_querysets:get_client_id": [
+        {
+            "url": "/auth/get_client_id",
+            "params": []
+        }
+    ],
+    "arches_querysets:get_concept_collections": [
+        {
+            "url": "/concepts/collections",
+            "params": []
+        }
+    ],
+    "arches_querysets:get_dev_token": [
+        {
+            "url": "/auth/get_dev_token",
+            "params": []
+        }
+    ],
+    "arches_querysets:get_domain_connections": [
+        {
+            "url": "/graph/{graphid}/get_domain_connections",
+            "params": [
+                "graphid"
+            ]
+        }
+    ],
+    "arches_querysets:get_dsl": [
+        {
+            "url": "/search/get_dsl",
+            "params": []
+        }
+    ],
+    "arches_querysets:get_export_file": [
+        {
+            "url": "/search/get_export_file",
+            "params": []
+        }
+    ],
+    "arches_querysets:get_frontend_i18n_data": [
+        {
+            "url": "/api/get_frontend_i18n_data",
+            "params": []
+        }
+    ],
+    "arches_querysets:get_graph_models_api": [
+        {
+            "url": "/graphs",
+            "params": []
+        }
+    ],
+    "arches_querysets:get_notification_types": [
+        {
+            "url": "/notifications/get_types",
+            "params": []
+        }
+    ],
+    "arches_querysets:get_notifications": [
+        {
+            "url": "/notifications",
+            "params": []
+        }
+    ],
+    "arches_querysets:get_pref_label": [
+        {
+            "url": "/concepts/get_pref_label",
+            "params": []
+        }
+    ],
+    "arches_querysets:get_related_nodes": [
+        {
+            "url": "/graph/{graphid}/get_related_nodes/{nodeid}",
+            "params": [
+                "graphid",
+                "nodeid"
+            ]
+        }
+    ],
+    "arches_querysets:get_user_names": [
+        {
+            "url": "/user/get_user_names",
+            "params": []
+        }
+    ],
+    "arches_querysets:get_valid_domain_nodes": [
+        {
+            "url": "/graph/{graphid}/get_valid_domain_nodes/{nodeid}",
+            "params": [
+                "graphid",
+                "nodeid"
+            ]
+        }
+    ],
+    "arches_querysets:graph": [
+        {
+            "url": "/graph/{graphid}",
+            "params": [
+                "graphid"
+            ]
+        }
+    ],
+    "arches_querysets:graph_designer": [
+        {
+            "url": "/graph_designer/{graphid}",
+            "params": [
+                "graphid"
+            ]
+        }
+    ],
+    "arches_querysets:graph_is_active_api": [
+        {
+            "url": "/graph_is_active/{graph_id}",
+            "params": [
+                "graph_id"
+            ]
+        }
+    ],
+    "arches_querysets:graph_nodes": [
+        {
+            "url": "/graph/{graphid}/nodes",
+            "params": [
+                "graphid"
+            ]
+        }
+    ],
+    "arches_querysets:graph_settings": [
+        {
+            "url": "/graph_settings/{graphid}",
+            "params": [
+                "graphid"
+            ]
+        }
+    ],
+    "arches_querysets:graphs_api": [
+        {
+            "url": "/graphs/{graph_id}",
+            "params": [
+                "graph_id"
+            ]
+        }
+    ],
+    "arches_querysets:help_templates": [
+        {
+            "url": "/help-templates",
+            "params": []
+        }
+    ],
+    "arches_querysets:home": [
+        {
+            "url": "/index.htm",
+            "params": []
+        }
+    ],
+    "arches_querysets:icons": [
+        {
+            "url": "/icons",
+            "params": []
+        }
+    ],
+    "arches_querysets:iiifannotationnodes": [
+        {
+            "url": "/iiifannotationnodes",
+            "params": []
+        }
+    ],
+    "arches_querysets:iiifannotations": [
+        {
+            "url": "/iiifannotations",
+            "params": []
+        }
+    ],
+    "arches_querysets:iiifmanifest": [
+        {
+            "url": "/iiifmanifest",
+            "params": []
+        }
+    ],
+    "arches_querysets:images": [
+        {
+            "url": "/images",
+            "params": []
+        }
+    ],
+    "arches_querysets:import_graph": [
+        {
+            "url": "/graph/import/",
+            "params": []
+        }
+    ],
+    "arches_querysets:language": [
+        {
+            "url": "/language/",
+            "params": []
+        }
+    ],
+    "arches_querysets:make_collection": [
+        {
+            "url": "/concepts/{conceptid}/make_collection/",
+            "params": [
+                "conceptid"
+            ]
+        }
+    ],
+    "arches_querysets:manifest": [
+        {
+            "url": "/manifest/{id}",
+            "params": [
+                "id"
+            ]
+        }
+    ],
+    "arches_querysets:manifest_manager": [
+        {
+            "url": "/image-service-manager",
+            "params": []
+        }
+    ],
+    "arches_querysets:map_layer_manager": [
+        {
+            "url": "/map_layer_manager/",
+            "params": []
+        }
+    ],
+    "arches_querysets:map_layer_update": [
+        {
+            "url": "/map_layer_manager/{maplayerid}",
+            "params": [
+                "maplayerid"
+            ]
+        }
+    ],
+    "arches_querysets:model_history": [
+        {
+            "url": "/graph/{graphid}/model_history",
+            "params": [
+                "graphid"
+            ]
+        }
+    ],
+    "arches_querysets:move_node": [
+        {
+            "url": "/graph/{graphid}/move_node",
+            "params": [
+                "graphid"
+            ]
+        }
+    ],
+    "arches_querysets:mvt": [
+        {
+            "url": "/mvt/{nodeid}/{zoom}/{x}/{y}.pbf",
+            "params": [
+                "nodeid",
+                "zoom",
+                "x",
+                "y"
+            ]
+        }
+    ],
+    "arches_querysets:new_graph": [
+        {
+            "url": "/graph/new",
+            "params": []
+        }
+    ],
+    "arches_querysets:node": [
+        {
+            "url": "/node/{graphid}",
+            "params": [
+                "graphid"
+            ]
+        }
+    ],
+    "arches_querysets:node_layer": [
+        {
+            "url": "/node_layer/{graphid}",
+            "params": [
+                "graphid"
+            ]
+        }
+    ],
+    "arches_querysets:nodegroup": [
+        {
+            "url": "/nodegroup/",
+            "params": []
+        }
+    ],
+    "arches_querysets:oauth2:authorize": [
+        {
+            "url": "/o/authorize/",
+            "params": []
+        }
+    ],
+    "arches_querysets:oauth2:authorized-token-delete": [
+        {
+            "url": "/o/authorized_tokens/{pk}/delete/",
+            "params": [
+                "pk"
+            ]
+        }
+    ],
+    "arches_querysets:oauth2:authorized-token-list": [
+        {
+            "url": "/o/authorized_tokens/",
+            "params": []
+        }
+    ],
+    "arches_querysets:oauth2:delete": [
+        {
+            "url": "/o/applications/{pk}/delete/",
+            "params": [
+                "pk"
+            ]
+        }
+    ],
+    "arches_querysets:oauth2:detail": [
+        {
+            "url": "/o/applications/{pk}/",
+            "params": [
+                "pk"
+            ]
+        }
+    ],
+    "arches_querysets:oauth2:introspect": [
+        {
+            "url": "/o/introspect/",
+            "params": []
+        }
+    ],
+    "arches_querysets:oauth2:jwks-info": [
+        {
+            "url": "/o/.well-known/jwks.json",
+            "params": []
+        }
+    ],
+    "arches_querysets:oauth2:list": [
+        {
+            "url": "/o/applications/",
+            "params": []
+        }
+    ],
+    "arches_querysets:oauth2:oidc-connect-discovery-info": [
+        {
+            "url": "/o/.well-known/openid-configuration/",
+            "params": []
+        }
+    ],
+    "arches_querysets:oauth2:register": [
+        {
+            "url": "/o/applications/register/",
+            "params": []
+        }
+    ],
+    "arches_querysets:oauth2:revoke-token": [
+        {
+            "url": "/o/revoke_token/",
+            "params": []
+        }
+    ],
+    "arches_querysets:oauth2:rp-initiated-logout": [
+        {
+            "url": "/o/logout/",
+            "params": []
+        }
+    ],
+    "arches_querysets:oauth2:token": [
+        {
+            "url": "/o/token/",
+            "params": []
+        }
+    ],
+    "arches_querysets:oauth2:update": [
+        {
+            "url": "/o/applications/{pk}/update/",
+            "params": [
+                "pk"
+            ]
+        }
+    ],
+    "arches_querysets:oauth2:user-info": [
+        {
+            "url": "/o/userinfo/",
+            "params": []
+        }
+    ],
+    "arches_querysets:ontology_properties": [
+        {
+            "url": "/ontology_properties",
+            "params": []
+        }
+    ],
+    "arches_querysets:paged_dropdown": [
+        {
+            "url": "/concepts/paged_dropdown",
+            "params": []
+        }
+    ],
+    "arches_querysets:password_reset": [
+        {
+            "url": "/password_reset/",
+            "params": []
+        }
+    ],
+    "arches_querysets:password_reset_complete": [
+        {
+            "url": "/reset/done/",
+            "params": []
+        }
+    ],
+    "arches_querysets:password_reset_confirm": [
+        {
+            "url": "/reset/{uidb64}/{token}/",
+            "params": [
+                "uidb64",
+                "token"
+            ]
+        }
+    ],
+    "arches_querysets:password_reset_done": [
+        {
+            "url": "/password_reset/done/",
+            "params": []
+        }
+    ],
+    "arches_querysets:permission_data": [
+        {
+            "url": "/graph/permissions",
+            "params": []
+        }
+    ],
+    "arches_querysets:permission_manager_data": [
+        {
+            "url": "/graph/permissions/permission_manager_data",
+            "params": []
+        }
+    ],
+    "arches_querysets:plugins": [
+        {
+            "url": "/plugins/{pluginid}",
+            "params": [
+                "pluginid"
+            ]
+        },
+        {
+            "url": "/plugins/{pluginid}/{path}",
+            "params": [
+                "pluginid",
+                "path"
+            ]
+        },
+        {
+            "url": "/plugins/{slug}",
+            "params": [
+                "slug"
+            ]
+        },
+        {
+            "url": "/plugins/{slug}/{path}",
+            "params": [
+                "slug",
+                "path"
+            ]
+        }
+    ],
+    "arches_querysets:publish_graph": [
+        {
+            "url": "/graph/{graphid}/publish",
+            "params": [
+                "graphid"
+            ]
+        }
+    ],
+    "arches_querysets:rdm": [
+        {
+            "url": "/rdm/{conceptid}",
+            "params": [
+                "conceptid"
+            ]
+        }
+    ],
+    "arches_querysets:reindex": [
+        {
+            "url": "/admin/reindex/resources",
+            "params": []
+        }
+    ],
+    "arches_querysets:relatable_resources": [
+        {
+            "url": "/resource/related/relatable",
+            "params": []
+        }
+    ],
+    "arches_querysets:related_resource_candidates": [
+        {
+            "url": "/resource/related/candidates",
+            "params": []
+        }
+    ],
+    "arches_querysets:related_resources": [
+        {
+            "url": "/resource/related/{resourceid}",
+            "params": [
+                "resourceid"
+            ]
+        }
+    ],
+    "arches_querysets:remove_functions": [
+        {
+            "url": "/graph/{graphid}/remove_functions",
+            "params": [
+                "graphid"
+            ]
+        }
+    ],
+    "arches_querysets:reorder_cards": [
+        {
+            "url": "/reorder_cards/",
+            "params": []
+        }
+    ],
+    "arches_querysets:reorder_nodes": [
+        {
+            "url": "/graph/reorder_nodes",
+            "params": []
+        }
+    ],
+    "arches_querysets:reorder_tiles": [
+        {
+            "url": "/tiles/reorder_tiles",
+            "params": []
+        }
+    ],
+    "arches_querysets:report-templates": [
+        {
+            "url": "/report-templates/{template}",
+            "params": [
+                "template"
+            ]
+        }
+    ],
+    "arches_querysets:resource": [
+        {
+            "url": "/resource",
+            "params": []
+        }
+    ],
+    "arches_querysets:resource_cards": [
+        {
+            "url": "/resource/{resourceid}/cards",
+            "params": [
+                "resourceid"
+            ]
+        }
+    ],
+    "arches_querysets:resource_copy": [
+        {
+            "url": "/resource/{resourceid}/copy",
+            "params": [
+                "resourceid"
+            ]
+        }
+    ],
+    "arches_querysets:resource_data": [
+        {
+            "url": "/resource/{resourceid}/data/{formid}",
+            "params": [
+                "resourceid",
+                "formid"
+            ]
+        }
+    ],
+    "arches_querysets:resource_descriptors": [
+        {
+            "url": "/resource/descriptors/{resourceid}",
+            "params": [
+                "resourceid"
+            ]
+        }
+    ],
+    "arches_querysets:resource_edit_log": [
+        {
+            "url": "/resource/{resourceid}/history",
+            "params": [
+                "resourceid"
+            ]
+        }
+    ],
+    "arches_querysets:resource_editor": [
+        {
+            "url": "/resource/{resourceid}",
+            "params": [
+                "resourceid"
+            ]
+        }
+    ],
+    "arches_querysets:resource_permission_data": [
+        {
+            "url": "/resource/permissions",
+            "params": []
+        }
+    ],
+    "arches_querysets:resource_tiles": [
+        {
+            "url": "/resource/{resourceid}/tiles",
+            "params": [
+                "resourceid"
+            ]
+        }
+    ],
+    "arches_querysets:resources": [
+        {
+            "url": "/resources/{resourceid}",
+            "params": [
+                "resourceid"
+            ]
+        }
+    ],
+    "arches_querysets:resources_graphid": [
+        {
+            "url": "/resources/{graphid}/{resourceid}",
+            "params": [
+                "graphid",
+                "resourceid"
+            ]
+        }
+    ],
+    "arches_querysets:resources_slug": [
+        {
+            "url": "/resources/{slug}/{resourceid}",
+            "params": [
+                "slug",
+                "resourceid"
+            ]
+        }
+    ],
+    "arches_querysets:restore_state_from_serialized_graph": [
+        {
+            "url": "/graph/{graphid}/restore_state_from_serialized_graph",
+            "params": [
+                "graphid"
+            ]
+        }
+    ],
+    "arches_querysets:revert_graph": [
+        {
+            "url": "/graph/{graphid}/revert",
+            "params": [
+                "graphid"
+            ]
+        }
+    ],
+    "arches_querysets:root": [
+        {
+            "url": "/",
+            "params": []
+        }
+    ],
+    "arches_querysets:search_home": [
+        {
+            "url": "/search",
+            "params": []
+        }
+    ],
+    "arches_querysets:search_results": [
+        {
+            "url": "/search/resources",
+            "params": []
+        }
+    ],
+    "arches_querysets:search_sparql_endpoint": [
+        {
+            "url": "/concepts/search_sparql_endpoint",
+            "params": []
+        }
+    ],
+    "arches_querysets:search_terms": [
+        {
+            "url": "/search/terms",
+            "params": []
+        }
+    ],
+    "arches_querysets:server_settings": [
+        {
+            "url": "/auth/server_settings",
+            "params": []
+        }
+    ],
+    "arches_querysets:signup": [
+        {
+            "url": "/auth/signup",
+            "params": []
+        }
+    ],
+    "arches_querysets:spatialview_api": [
+        {
+            "url": "/api/spatialview/{identifier}/",
+            "params": [
+                "identifier"
+            ]
+        }
+    ],
+    "arches_querysets:temp_file": [
+        {
+            "url": "/temp_file/{file_id}",
+            "params": [
+                "file_id"
+            ]
+        },
+        {
+            "url": "/temp_file",
+            "params": []
+        }
+    ],
+    "arches_querysets:templates": [
+        {
+            "url": "/templates/{template}",
+            "params": [
+                "template"
+            ]
+        }
+    ],
+    "arches_querysets:thumbnail": [
+        {
+            "url": "/thumbnail/{resource_id}",
+            "params": [
+                "resource_id"
+            ]
+        }
+    ],
+    "arches_querysets:tile": [
+        {
+            "url": "/tile",
+            "params": []
+        }
+    ],
+    "arches_querysets:tile_history": [
+        {
+            "url": "/tiles/tile_history",
+            "params": []
+        }
+    ],
+    "arches_querysets:time_wheel_config": [
+        {
+            "url": "/search/time_wheel_config",
+            "params": []
+        }
+    ],
+    "arches_querysets:transaction_reverse": [
+        {
+            "url": "/transaction/{transactionid}/reverse",
+            "params": [
+                "transactionid"
+            ]
+        }
+    ],
+    "arches_querysets:transform_edtf_for_tile": [
+        {
+            "url": "/transform-edtf-for-tile",
+            "params": []
+        }
+    ],
+    "arches_querysets:two-factor-authentication-login": [
+        {
+            "url": "/two-factor-authentication-login",
+            "params": []
+        }
+    ],
+    "arches_querysets:two-factor-authentication-reset": [
+        {
+            "url": "/two-factor-authentication-reset",
+            "params": []
+        }
+    ],
+    "arches_querysets:two-factor-authentication-settings": [
+        {
+            "url": "/two-factor-authentication-settings",
+            "params": []
+        }
+    ],
+    "arches_querysets:update_node": [
+        {
+            "url": "/graph/{graphid}/update_node",
+            "params": [
+                "graphid"
+            ]
+        }
+    ],
+    "arches_querysets:update_notification_types": [
+        {
+            "url": "/notifications/update_types",
+            "params": []
+        }
+    ],
+    "arches_querysets:update_published_graph": [
+        {
+            "url": "/graph/{graphid}/update_published_graph",
+            "params": [
+                "graphid"
+            ]
+        }
+    ],
+    "arches_querysets:update_published_graphs": [
+        {
+            "url": "/graph/{graphid}/update_published_graphs",
+            "params": [
+                "graphid"
+            ]
+        }
+    ],
+    "arches_querysets:user_profile": [
+        {
+            "url": "/auth/user_profile",
+            "params": []
+        }
+    ],
+    "arches_querysets:user_profile_manager": [
+        {
+            "url": "/user",
+            "params": []
+        }
+    ],
+    "arches_querysets:validate": [
+        {
+            "url": "/validate/{itemtype}/{itemid}",
+            "params": [
+                "itemtype",
+                "itemid"
+            ]
+        }
+    ],
+    "arches_querysets:validatejson": [
+        {
+            "url": "/validate/{itemtype}",
+            "params": [
+                "itemtype"
+            ]
+        }
+    ],
+    "arches_querysets:widgets": [
+        {
+            "url": "/widgets/{template}",
+            "params": [
+                "template"
+            ]
+        }
+    ],
+    "arches_querysets:workflow_history": [
+        {
+            "url": "/workflow_history/{workflowid}",
+            "params": [
+                "workflowid"
+            ]
+        }
+    ],
+    "files": [
+        {
+            "url": "/files/{path}",
+            "params": [
+                "path"
+            ]
+        }
+    ],
+    "iiifserver": [
+        {
+            "url": "/iiifserver/{path}",
+            "params": [
+                "path"
+            ]
+        }
+    ],
+    "kibana": [
+        {
+            "url": "/kibana/{path}",
+            "params": [
+                "path"
+            ]
+        }
+    ],
+    "media_url": [
+        {
+            "url": "/files/",
+            "params": []
+        }
+    ],
+    "modular_report_config": [
+        {
+            "url": "/modular_report_config",
+            "params": []
+        }
+    ],
+    "rascoll-search": [
+        {
+            "url": "/rascoll-search",
+            "params": []
+        }
+    ],
+    "resource_report": [
+        {
+            "url": "/report/{resourceid}",
+            "params": [
+                "resourceid"
+            ]
+        }
+    ],
+    "set_language": [
+        {
+            "url": "/i18n/setlang/",
+            "params": []
+        }
+    ],
+    "static_url": [
+        {
+            "url": "/static/",
+            "params": []
+        }
+    ],
+    "tileserver": [
+        {
+            "url": "/tileserver/{path}",
+            "params": [
+                "path"
+            ]
+        }
+    ]
+}

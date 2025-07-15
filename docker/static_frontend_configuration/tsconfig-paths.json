@@ -1,0 +1,25 @@
+{
+    "_comment": "This is a generated file. Do not edit directly.",
+    "compilerOptions": {
+        "paths": {
+            "@/arches/*": [
+                "/web_root/ENV/lib/python3.12/site-packages/arches/app/src/arches/*"
+            ],
+            "@/arches_for_reference_and_sample_collection/*": [
+                "/web_root/arches-for-reference-and-sample-collection/afrc/src/afrc/*"
+            ],
+            "@/arches_querysets/*": [
+                "/web_root/ENV/lib/python3.12/site-packages/arches_querysets/src/arches_querysets/*"
+            ],
+            "@/arches_modular_reports/*": [
+                "/web_root/ENV/lib/python3.12/site-packages/arches_modular_reports/src/arches_modular_reports/*"
+            ],
+            "@/arches_component_lab/*": [
+                "/web_root/ENV/lib/python3.12/site-packages/arches_component_lab/src/arches_component_lab/*"
+            ],
+            "*": [
+                "../node_modules/*"
+            ]
+        }
+    }
+}

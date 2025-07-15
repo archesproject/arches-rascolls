@@ -13,6 +13,8 @@ services:
             # To change these variables, modify/add the .env file prior to launch - NOT env_file.env
             - ${ARCHES_CORE_HOST_DIR:-../arches/}:/web_root/arches
             - ./:/web_root/arches-for-reference-and-sample-collection
+            - ../arches-querysets:/web_root/arches-querysets            
+            - ../arches-modular-reports:/web_root/arches-modular-reports
             - $HOME/.aws/:/root/.aws/
         ports:
             - ${HOST_PROJECT_PORT:-8060}:80

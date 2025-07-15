@@ -125,7 +125,8 @@ run_django_server() {
 	echo ""
 	cd ${APP_FOLDER}
     echo "Running Django"
-	exec /bin/bash -c "source ${WEB_ROOT}/ENV/bin/activate && gunicorn afrc.wsgi"
+	service memcached start&
+	exec /bin/bash -c "source ${WEB_ROOT}/ENV/bin/activate && gunicorn arches_lingo.wsgi"
 }
 
 run_dev_server() {
@@ -134,7 +135,7 @@ run_dev_server() {
 	echo ""
 	cd ${APP_FOLDER}
     echo "Running Django"
-	exec /bin/bash -c "source ../ENV/bin/activate && pip3 install debugpy -t /tmp && python -Wdefault /tmp/debugpy --listen 0.0.0.0:5678 manage.py runserver 0.0.0.0:${DJANGO_PORT}"
+	exec /bin/bash -c "source ../ENV/bin/activate && cd ../arches-modular-reports/ && pip install -e . && cd ../arches-querysets/ && pip install -e .  && cd ../arches && pip install -e . && cd ../arches-for-reference-and-sample-collection && pip3 install debugpy -t /tmp && python -Wdefault /tmp/debugpy --listen 0.0.0.0:5678 manage.py runserver 0.0.0.0:${DJANGO_PORT}"
 }
 
 # "exec" means that it will finish building???
@@ -144,7 +145,7 @@ run_gunicorn() {
 	echo ""
 	cd ${APP_ROOT}
     echo "Running Django"
-	exec /bin/bash -c "source ../ENV/bin/activate && (/etc/init.d/nginx start&) && gunicorn afrc.wsgi"
+	exec /bin/bash -c "source ../ENV/bin/activate && (/etc/init.d/nginx start&) && gunicorn --workers=$(($(nproc)+1)) afrc.wsgi"
 }
 
 
@@ -157,6 +158,7 @@ reset_database() {
 	(test $(echo "SELECT FROM pg_database WHERE datname = 'template_postgis'" | ../ENV/bin/python manage.py dbshell | grep -c "1 row") = 1 || \
 	(echo "CREATE DATABASE template_postgis" | ../ENV/bin/python manage.py dbshell --database postgres && \
 	echo "CREATE EXTENSION postgis" | ../ENV/bin/python manage.py dbshell --database postgres))
+	service memcached start&
 	../ENV/bin/python manage.py packages -o load_package -a afrc -db -dev -y
 	../ENV/bin/python manage.py es reindex_database -mp
 }
