@@ -28,6 +28,7 @@ const placeNames: Ref<GenericObject[]> = ref([]);
 const reference = ref();
 provide("graphSlug", 'reference_and_sample_collection_item_1')
 provide("resourceInstanceId", resultSelected);
+provide("reportConfigName", "Search Item Details");
 
 interface Acquisition {
     person: string;
@@ -443,5 +444,10 @@ function zoomToSearchResult(resourceid: string, action: string) {
 
 :deep(.p-splitter.p-component.p-splitter-horizontal) {
     position: inherit;
+}
+
+:deep(.linked-section-container) {
+    max-height: 52.5rem;
+    overflow-y: auto;
 }
 </style>
