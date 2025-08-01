@@ -11,10 +11,6 @@ const resultSelected = inject("resultSelected") as Ref<string>;
 const resultsSelected = inject("resultsSelected") as Ref<string[]>;
 const zoomFeature = inject("zoomFeature") as GenericObject;
 const showMap = inject("showMap") as Ref<string>;
-const foo = ref();
-const settableThing = ref(false);
-const theKey = ref(0);
-
 
 const displayname: Ref<string> = ref("");
 const displaydescription: Ref<string> = ref("");
@@ -26,9 +22,6 @@ const identifier: Ref<string> = ref("");
 const hasGeom: Ref<boolean> = ref(false);
 const placeNames: Ref<GenericObject[]> = ref([]);
 const reference = ref();
-provide("graphSlug", 'reference_and_sample_collection_item_1')
-provide("resourceInstanceId", resultSelected);
-provide("reportConfigName", "Search Item Details");
 
 interface Acquisition {
     person: string;
@@ -167,7 +160,7 @@ function zoomToSearchResult(resourceid: string, action: string) {
             </div>
         </div>
         <div v-if="reference">
-            <ModularReport></ModularReport>
+            <ModularReport report-config-name="Search Item Details" :resource-instance-id="resultSelected" :key="resultSelected" graph-slug="reference_and_sample_collection_item_1"></ModularReport>
         </div>
         <div class="description">
             <div class="value-header">Description</div>
