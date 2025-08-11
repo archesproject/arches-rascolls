@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, inject, ref, watch, provide, computed, nextTick } from "vue";
+import { onMounted, inject, ref, watch } from "vue";
 import type { UnspecifiedObject, GenericObject } from "@/afrc/Search/types";
 import { fetchResourceData, fetchImageData } from "@/afrc/Search/api.ts";
 import type { Ref } from "vue";
