@@ -26,7 +26,7 @@ requires-python = ">=3.11"
 dependencies = [
     "arches>=8.0.0b1,<8.1.0",
     "django_csp==3.8",
-    "arches_modular_reports @ git+https://github.com/archesproject/arches-modular-reports@dev/7.6.x_report_editor",
+    "arches_modular_reports @ git+https://github.com/archesproject/arches-modular-reports@main",
     "arches_querysets @ git+https://github.com/archesproject/arches-querysets@main"
 ]
 version = "0.0.1"
