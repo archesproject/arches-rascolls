@@ -5,7 +5,7 @@ import { fetchResourceData, fetchImageData } from "@/afrc/Search/api.ts";
 import type { Ref } from "vue";
 import Button from "primevue/button";
 import Carousel from "primevue/carousel";
-import ModularReport from '@/arches_modular_reports/ModularReport/ModularReport.vue';
+import ModularReport from "@/arches_modular_reports/ModularReport/ModularReport.vue";
 
 const resultSelected = inject("resultSelected") as Ref<string>;
 const resultsSelected = inject("resultsSelected") as Ref<string[]>;
@@ -63,7 +63,7 @@ async function getData() {
     const currentPlace = resp.resource["current location"]?.["@display_value"];
     const currentLocationStatement =
         resp.resource["current location"]?.["current location_Statement"]?.[
-        "current location_Statement_content"
+            "current location_Statement_content"
         ]?.["@display_value"];
     const fullCurrentLocation = [currentPlace, currentLocationStatement]
         .filter((item) => item)
@@ -94,7 +94,7 @@ async function getData() {
                 ?.map(
                     (statement: GenericObject) =>
                         statement?.[
-                        "Addition to Collection_Statement_content"
+                            "Addition to Collection_Statement_content"
                         ]?.["@display_value"],
                 )
                 .join(" "),
@@ -160,7 +160,12 @@ function zoomToSearchResult(resourceid: string, action: string) {
             </div>
         </div>
         <div v-if="reference">
-            <ModularReport report-config-name="Search Item Details" :resource-instance-id="resultSelected" :key="resultSelected" graph-slug="reference_and_sample_collection_item_1"></ModularReport>
+            <ModularReport
+                report-config-name="Search Item Details"
+                :resource-instance-id="resultSelected"
+                :key="resultSelected"
+                graph-slug="reference_and_sample_collection_item_1"
+            ></ModularReport>
         </div>
         <div class="description">
             <div class="value-header">Description</div>
@@ -316,7 +321,7 @@ function zoomToSearchResult(resourceid: string, action: string) {
                                             place.resourceid,
                                             'zoom',
                                         )
-                                        "
+                                    "
                                 />
                             </div>
                             <div v-if="hasGeom && showMap">
@@ -332,7 +337,7 @@ function zoomToSearchResult(resourceid: string, action: string) {
                                             place.resourceid,
                                             'search',
                                         )
-                                        "
+                                    "
                                 />
                             </div>
                         </div>
