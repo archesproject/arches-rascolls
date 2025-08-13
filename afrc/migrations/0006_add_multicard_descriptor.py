@@ -18,19 +18,6 @@ ORIGINAL_DESCRIPTOR_FUNCTION_PK = "60000000-0000-0000-0000-000000000001"
 MULTICARD_DESCRIPTOR_FUNCTION_PK = "00b2d15a-fda0-4578-b79a-784e4138664b"
 
 
-def update_graphs(apps, from_function, to_function, string_replacement_map):
-    FunctionXGraph = apps.get_model("models", "FunctionXGraph")
-
-    for fn_x_graph in FunctionXGraph.objects.filter(function=from_function):
-        fn_x_graph.function = to_function
-        for descriptor_object in fn_x_graph.config["descriptor_types"].values():
-            for before, after in string_replacement_map.items():
-                descriptor_object["string_template"] = descriptor_object[
-                    "string_template"
-                ].replace(before, after)
-        fn_x_graph.save()
-
-
 def add_multicard_resource_descriptor(apps, schema_editor):
     Function = apps.get_model("models", "Function")
     primary_descriptor_fn = Function.objects.get(pk=ORIGINAL_DESCRIPTOR_FUNCTION_PK)
