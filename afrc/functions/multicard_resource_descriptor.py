@@ -40,7 +40,9 @@ class MulticardResourceDescriptor(AbstractPrimaryDescriptorsFunction):
     """Updates multicard
     This implementation just fetches the calculated result from the db."""
 
-    def get_primary_descriptor_from_nodes(self, resource, config, context=None, descriptor=None):
+    def get_primary_descriptor_from_nodes(
+        self, resource, config, context=None, descriptor=None
+    ):
         resource.get_descriptor_language(context)
 
         result = ""
@@ -51,13 +53,20 @@ class MulticardResourceDescriptor(AbstractPrimaryDescriptorsFunction):
         result = config["string_template"]
 
         node_aliases = extract_substrings(result)
-        nodes = models.Node.objects.filter(alias__in=node_aliases, graph_id=resource.graph_id)
+        nodes = models.Node.objects.filter(
+            alias__in=node_aliases, graph_id=resource.graph_id
+        )
         for node in nodes:
             datatype_factory = DataTypeFactory()
             datatype = datatype_factory.get_instance(node.datatype)
-            tiles = models.TileModel.objects.filter(resourceinstance_id=resource.resourceinstanceid, nodegroup_id=node.nodegroup_id)
+            tiles = models.TileModel.objects.filter(
+                resourceinstance_id=resource.resourceinstanceid,
+                nodegroup_id=node.nodegroup_id,
+            )
             if len(tiles) > 0:
-                value = datatype.get_display_value(tiles[0], node, language=lookup_language)
+                value = datatype.get_display_value(
+                    tiles[0], node, language=lookup_language
+                )
             else:
                 value = ""
             result = result.replace("<%s>" % node.alias, str(value))
