@@ -52,7 +52,6 @@ urlpatterns = [
 urlpatterns.append(path("", include("arches_modular_reports.urls")))
 # Ensure Arches core urls are superseded by project-level urls
 urlpatterns.append(path("", include("arches.urls")))
-
 # Adds URL pattern to serve media files during development
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

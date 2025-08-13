@@ -1,0 +1,167 @@
+{
+    "name": "Search Item Details",
+    "components": [
+        {
+            "config": {
+                "descriptor": "Reference and Sample Collection Item descriptor template",
+                "node_alias_options": {}
+            },
+            "component": "arches_modular_reports/ModularReport/components/ReportHeader"
+        },
+        {
+            "config": {
+                "node_aliases": [],
+                "custom_labels": {},
+                "image_node_alias": null
+            },
+            "component": "arches_modular_reports/ModularReport/components/ReportTombstone"
+        },
+        {
+            "config": {
+                "sections": [
+                    {
+                        "name": "Name of Object",
+                        "components": [
+                            {
+                                "config": {
+                                    "node_aliases": [
+                                        "name_content",
+                                        "name_type_",
+                                        "name_language_"
+                                    ],
+                                    "custom_labels": {},
+                                    "nodegroup_alias": "name",
+                                    "custom_card_name": null
+                                },
+                                "component": "arches_modular_reports/ModularReport/components/DataSection"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Statement or Interpretation about Object",
+                        "components": [
+                            {
+                                "config": {
+                                    "node_aliases": [
+                                        "statement_content",
+                                        "statement_type",
+                                        "statement_type_metatype",
+                                        "statement_language_"
+                                    ],
+                                    "custom_labels": {},
+                                    "nodegroup_alias": "statement",
+                                    "custom_card_name": null
+                                },
+                                "component": "arches_modular_reports/ModularReport/components/DataSection"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Type of Mixture",
+                        "components": [
+                            {
+                                "config": {
+                                    "node_aliases": [
+                                        "mixture_type",
+                                        "mixture_type_metatype"
+                                    ],
+                                    "custom_labels": {},
+                                    "nodegroup_alias": "mixture_type",
+                                    "custom_card_name": null
+                                },
+                                "component": "arches_modular_reports/ModularReport/components/DataSection"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Type of Object",
+                        "components": [
+                            {
+                                "config": {
+                                    "node_aliases": [
+                                        "object_type"
+                                    ],
+                                    "custom_labels": {},
+                                    "nodegroup_alias": "object_type",
+                                    "custom_card_name": null
+                                },
+                                "component": "arches_modular_reports/ModularReport/components/DataSection"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Attribute Type",
+                        "components": [
+                            {
+                                "config": {
+                                    "node_aliases": [
+                                        "attribute_type",
+                                        "attribute_type_metatype"
+                                    ],
+                                    "custom_labels": {},
+                                    "nodegroup_alias": "attribute_type",
+                                    "custom_card_name": null
+                                },
+                                "component": "arches_modular_reports/ModularReport/components/DataSection"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Identifier of Object",
+                        "components": [
+                            {
+                                "config": {
+                                    "node_aliases": [
+                                        "identifier_content",
+                                        "identifier_type"
+                                    ],
+                                    "custom_labels": {},
+                                    "nodegroup_alias": "identifier",
+                                    "custom_card_name": null
+                                },
+                                "component": "arches_modular_reports/ModularReport/components/DataSection"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Dimension of Object",
+                        "components": [
+                            {
+                                "config": {
+                                    "node_aliases": [
+                                        "dimension_type_",
+                                        "dimension_value_",
+                                        "dimension_lowest_possible_value",
+                                        "dimension_highest_possible_value",
+                                        "dimension_unit"
+                                    ],
+                                    "custom_labels": {},
+                                    "nodegroup_alias": "dimension",
+                                    "custom_card_name": null
+                                },
+                                "component": "arches_modular_reports/ModularReport/components/DataSection"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Material(s) of Object",
+                        "components": [
+                            {
+                                "config": {
+                                    "node_aliases": [
+                                        "material"
+                                    ],
+                                    "custom_labels": {},
+                                    "nodegroup_alias": "material",
+                                    "custom_card_name": null
+                                },
+                                "component": "arches_modular_reports/ModularReport/components/DataSection"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "component": "arches_modular_reports/ModularReport/components/LinkedSections"
+        }
+    ]
+}
