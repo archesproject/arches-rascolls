@@ -161,9 +161,9 @@ function zoomToSearchResult(resourceid: string, action: string) {
         </div>
         <div v-if="reference">
             <ModularReport
+                :key="resultSelected"
                 report-config-name="Search Item Details"
                 :resource-instance-id="resultSelected"
-                :key="resultSelected"
                 graph-slug="reference_and_sample_collection_item_1"
             ></ModularReport>
         </div>
