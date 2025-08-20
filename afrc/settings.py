@@ -265,7 +265,9 @@ INSTALLED_APPS = (
     "pgtrigger",
     # "silk",
     "afrc",  # Ensure the project is listed before any other arches applications
+    "django_sql_migrate",
     "arches_modular_reports",
+    "rest_framework",
     "arches_querysets",
     "arches_component_lab",
 )

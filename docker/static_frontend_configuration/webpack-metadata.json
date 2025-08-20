@@ -1,7 +1,7 @@
 {
     "_comment": "This is a generated file. Do not edit directly.",
     "APP_RELATIVE_PATH": "arches_lingo",
-    "APP_ROOT": "/web_root/arches-for-reference-and-sample-collection/afrc/",
+    "APP_ROOT": "/web_root/arches-rascolls/afrc/",
     "ARCHES_APPLICATIONS": [
         "afrc",
         "arches_modular_reports",
@@ -9,7 +9,7 @@
         "arches_component_lab"
     ],
     "ARCHES_APPLICATIONS_PATHS": {
-        "afrc": "/web_root/arches-for-reference-and-sample-collection/afrc/",
+        "afrc": "/web_root/arches-rascolls/afrc/",
         "arches_modular_reports": "/web_root/ENV/lib/python3.12/site-packages/arches_modular_reports/",
         "arches_querysets": "/web_root/ENV/lib/python3.12/site-packages/arches_querysets/",
         "arches_component_lab": "/web_root/ENV/lib/python3.12/site-packages/arches_component_lab/"
