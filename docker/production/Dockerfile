@@ -1,5 +1,5 @@
 FROM public.ecr.aws/l1p7h1f9/archesproject-fargeo:8.0.x-base-prod AS base
-ENV APP_ROOT=${WEB_ROOT}/arches-for-reference-and-sample-collection
+ENV APP_ROOT=${WEB_ROOT}/arches-rascolls
 ENV ARCHES_DJANGO_DEBUG=True
 
 WORKDIR ${WEB_ROOT}
@@ -7,9 +7,10 @@ RUN apt-get install nginx -y && ENV/bin/pip install gunicorn botocore boto3 djan
 
 RUN openssl ecparam -out /etc/ssl/private/nginx-selfsigned.key -name prime256v1 -genkey && openssl req -x509 -nodes -days 365 -newkey rsa:2048 -key /etc/ssl/private/nginx-selfsigned.key -out /etc/ssl/certs/nginx-selfsigned.crt -subj "/C=US/ST=Denial/L=Springfield/O=Dis/CN=localhost"
 
-COPY . ${WEB_ROOT}/arches-for-reference-and-sample-collection
+COPY . ${WEB_ROOT}/arches-rascolls
 RUN source ${WEB_ROOT}/ENV/bin/activate && cd ${APP_ROOT} && pip install .
-COPY ./docker/static_frontend_configuration ${WEB_ROOT}/arches-for-reference-and-sample-collection/frontend_configuration
+RUN source ${WEB_ROOT}/ENV/bin/activate && pip show django-migrate-sql-deux && return 1
+COPY ./docker/static_frontend_configuration ${WEB_ROOT}/arches-rascolls/frontend_configuration
 WORKDIR ${APP_ROOT}
 RUN npm i
 RUN source ../ENV/bin/activate && ls /web_root/ENV/lib/python3.12/site-packages/arches_modular_reports/media/js/reports && npm run build_production_unsafe && python3 manage.py collectstatic
@@ -19,9 +20,9 @@ FROM public.ecr.aws/l1p7h1f9/archesproject-fargeo:8.0.x-base-prod AS deploy
 USER root
 ENV DEBIAN_FRONTEND=noninteractive
 ENV WEB_ROOT=/web_root
-ENV APP_ROOT=${WEB_ROOT}/arches-for-reference-and-sample-collection
+ENV APP_ROOT=${WEB_ROOT}/arches-rascolls
 ENV BASE_WEB=/web_root
-ENV BASE_APP=${BASE_WEB}/arches-for-reference-and-sample-collection
+ENV BASE_APP=${BASE_WEB}/arches-rascolls
 COPY --from=base ${BASE_APP}/afrc/staticfiles /var/www/media
 COPY --from=base ${BASE_APP}/webpack/webpack-stats.json ${APP_ROOT}/webpack/webpack-stats.json
 COPY --from=base /etc/ssl/private/nginx-selfsigned.key /etc/ssl/private/nginx-selfsigned.key
@@ -46,7 +47,7 @@ COPY docker/entrypoint.sh ${WEB_ROOT}/entrypoint.sh
 RUN chmod -R 700 ${WEB_ROOT}/entrypoint.sh &&\
   dos2unix ${WEB_ROOT}/entrypoint.sh
 
-COPY . ${WEB_ROOT}/arches-for-reference-and-sample-collection
+COPY . ${WEB_ROOT}/arches-rascolls
 
 # Set default workdir
 WORKDIR ${APP_ROOT}

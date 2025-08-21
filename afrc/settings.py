@@ -263,9 +263,11 @@ INSTALLED_APPS = (
     "oauth2_provider",
     "django_celery_results",
     "pgtrigger",
+    "django_migrate_sql",
     # "silk",
     "afrc",  # Ensure the project is listed before any other arches applications
     "arches_modular_reports",
+    "rest_framework",
     "arches_querysets",
     "arches_component_lab",
 )
