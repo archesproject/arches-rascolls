@@ -19,12 +19,12 @@
         "vitest": "vitest --run --coverage"
     },
     "dependencies": {
-        "arches": "archesproject/arches#dev/8.0.x",
+        "arches": "archesproject/arches#dev/8.1.x",
         "maplibre-gl": "^4.6.0",
         "arches-modular-reports": "archesproject/arches-modular-reports#main"
     },
     "devDependencies": {
-        "arches-dev-dependencies": "archesproject/arches-dev-dependencies#dev/8.0.x"
+        "arches-dev-dependencies": "archesproject/arches-dev-dependencies#dev/8.1.x"
     },
     "nodeModulesPaths": {
     },
