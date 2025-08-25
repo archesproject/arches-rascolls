@@ -159,7 +159,10 @@ function zoomToSearchResult(resourceid: string, action: string) {
                 />
             </div>
         </div>
-        <div v-if="reference">
+        <div
+            v-if="reference"
+            style="height: 100%; overflow: hidden"
+        >
             <ModularReport
                 :key="resultSelected"
                 report-config-name="Search Item Details"
@@ -167,179 +170,109 @@ function zoomToSearchResult(resourceid: string, action: string) {
                 graph-slug="reference_and_sample_collection_item_1"
             ></ModularReport>
         </div>
-        <div class="description">
-            <div class="value-header">Description</div>
-            <div class="resource-details-value">
-                <template
-                    v-if="
-                        displaydescription && displaydescription != 'Undefined'
-                    "
-                >
-                    <!-- eslint-disable-next-line vue/no-v-html -->
-                    <div v-html="displaydescription"></div>
-                </template>
-                <div v-else>No description provided</div>
-            </div>
-        </div>
-        <div
-            class="value-header"
-            style="padding: 0 10px"
-        >
-            Images
-        </div>
-        <div
-            v-if="images.length"
-            class="images"
-        >
-            <Carousel
-                :value="images"
-                :num-visible="1"
-                :num-scroll="1"
-                container-class="flex items-center"
-            >
-                <template #item="image">
-                    <div
-                        class="border border-surface-200 dark:border-surface-700 rounded m-2 p-4"
+        <div style="display: none">
+            <div class="description">
+                <div class="value-header">Description</div>
+                <div class="resource-details-value">
+                    <template
+                        v-if="
+                            displaydescription &&
+                            displaydescription != 'Undefined'
+                        "
                     >
-                        <div class="mb-4">
-                            <div class="relative mx-auto">
-                                <div
-                                    class="carousel-image-container"
-                                    style="padding: 3px"
-                                >
-                                    <img
-                                        :src="image.data"
-                                        class="w-full rounded carousel-image"
-                                    />
+                        <!-- eslint-disable-next-line vue/no-v-html -->
+                        <div v-html="displaydescription"></div>
+                    </template>
+                    <div v-else>No description provided</div>
+                </div>
+            </div>
+            <div
+                class="value-header"
+                style="padding: 0 10px"
+            >
+                Images
+            </div>
+            <div
+                v-if="images.length"
+                class="images"
+            >
+                <Carousel
+                    :value="images"
+                    :num-visible="1"
+                    :num-scroll="1"
+                    container-class="flex items-center"
+                >
+                    <template #item="image">
+                        <div
+                            class="border border-surface-200 dark:border-surface-700 rounded m-2 p-4"
+                        >
+                            <div class="mb-4">
+                                <div class="relative mx-auto">
+                                    <div
+                                        class="carousel-image-container"
+                                        style="padding: 3px"
+                                    >
+                                        <img
+                                            :src="image.data"
+                                            class="w-full rounded carousel-image"
+                                        />
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </template>
-            </Carousel>
-        </div>
-        <div
-            v-else
-            class="resource-details-value"
-            style="padding: 0 13px"
-        >
-            <div>No images available</div>
-        </div>
-        <div
-            class="resource-details"
-            style="color: grey"
-        >
-            <div
-                v-for="(material, index) in composition"
-                :key="index"
-            >
-                <div class="value-header">Material Information</div>
-                <div class="value-entry">
-                    Materials:<span class="resource-details-value">{{
-                        material.type || "No material type provided"
-                    }}</span>
-                </div>
-                <div class="value-entry">
-                    Mixture Type:<span class="resource-details-value">{{
-                        material.mixture || "No mixture type provided"
-                    }}</span>
-                </div>
-            </div>
-        </div>
-        <div class="resource-details">
-            <div class="value-header">Acquisition Information</div>
-            <div v-if="acquisitions">
-                <div
-                    v-for="(acquisition, index) in acquisitions"
-                    :key="index"
-                >
-                    <div class="value-entry">
-                        Acquired by:<span class="resource-details-value">{{
-                            acquisition.person
-                        }}</span>
-                    </div>
-                    <div class="value-entry">
-                        Acquired on:<span class="resource-details-value">{{
-                            acquisition.date
-                        }}</span>
-                    </div>
-                    <div class="value-entry">
-                        Acquisition Details:<span
-                            class="resource-details-value"
-                            >{{ acquisition.details }}</span
-                        >
-                    </div>
-                </div>
+                    </template>
+                </Carousel>
             </div>
             <div
                 v-else
                 class="resource-details-value"
+                style="padding: 0 13px"
             >
-                No acquisition information available
+                <div>No images available</div>
             </div>
-        </div>
-        <div class="resource-details">
-            <div class="value-header">Analytic Data</div>
-            <div class="value-entry">
-                <span class="resource-details-value"
-                    >No analytic data available</span
+            <div
+                class="resource-details"
+                style="color: grey"
+            >
+                <div
+                    v-for="(material, index) in composition"
+                    :key="index"
                 >
+                    <div class="value-header">Material Information</div>
+                    <div class="value-entry">
+                        Materials:<span class="resource-details-value">{{
+                            material.type || "No material type provided"
+                        }}</span>
+                    </div>
+                    <div class="value-entry">
+                        Mixture Type:<span class="resource-details-value">{{
+                            material.mixture || "No mixture type provided"
+                        }}</span>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div>
             <div class="resource-details">
-                <div class="value-header">Associated Places</div>
-                <div v-if="placeNames?.length">
+                <div class="value-header">Acquisition Information</div>
+                <div v-if="acquisitions">
                     <div
-                        v-for="place in placeNames"
-                        :key="place.resourceid"
-                        style="
-                            display: flex;
-                            flex-direction: row;
-                            align-items: center;
-                            justify-content: space-between;
-                        "
+                        v-for="(acquisition, index) in acquisitions"
+                        :key="index"
                     >
                         <div class="value-entry">
-                            <span
-                                class="resource-details-value"
-                                @click="console.log(place)"
-                                >{{ place.name }}</span
-                            >
+                            Acquired by:<span class="resource-details-value">{{
+                                acquisition.person
+                            }}</span>
                         </div>
-                        <div style="display: flex; flex-direction: row">
-                            <div v-if="hasGeom && showMap">
-                                <Button
-                                    class="action-button"
-                                    label="Zoom to Place"
-                                    severity="secondary"
-                                    text
-                                    icon="pi pi-map-marker"
-                                    size="large"
-                                    @click="
-                                        zoomToSearchResult(
-                                            place.resourceid,
-                                            'zoom',
-                                        )
-                                    "
-                                />
-                            </div>
-                            <div v-if="hasGeom && showMap">
-                                <Button
-                                    class="action-button"
-                                    label="Search Here"
-                                    severity="secondary"
-                                    text
-                                    icon="pi pi-search"
-                                    size="large"
-                                    @click="
-                                        zoomToSearchResult(
-                                            place.resourceid,
-                                            'search',
-                                        )
-                                    "
-                                />
-                            </div>
+                        <div class="value-entry">
+                            Acquired on:<span class="resource-details-value">{{
+                                acquisition.date
+                            }}</span>
+                        </div>
+                        <div class="value-entry">
+                            Acquisition Details:<span
+                                class="resource-details-value"
+                                >{{ acquisition.details }}</span
+                            >
                         </div>
                     </div>
                 </div>
@@ -347,7 +280,80 @@ function zoomToSearchResult(resourceid: string, action: string) {
                     v-else
                     class="resource-details-value"
                 >
-                    No associated places available
+                    No acquisition information available
+                </div>
+            </div>
+            <div class="resource-details">
+                <div class="value-header">Analytic Data</div>
+                <div class="value-entry">
+                    <span class="resource-details-value"
+                        >No analytic data available</span
+                    >
+                </div>
+            </div>
+            <div>
+                <div class="resource-details">
+                    <div class="value-header">Associated Places</div>
+                    <div v-if="placeNames?.length">
+                        <div
+                            v-for="place in placeNames"
+                            :key="place.resourceid"
+                            style="
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                justify-content: space-between;
+                            "
+                        >
+                            <div class="value-entry">
+                                <span
+                                    class="resource-details-value"
+                                    @click="console.log(place)"
+                                    >{{ place.name }}</span
+                                >
+                            </div>
+                            <div style="display: flex; flex-direction: row">
+                                <div v-if="hasGeom && showMap">
+                                    <Button
+                                        class="action-button"
+                                        label="Zoom to Place"
+                                        severity="secondary"
+                                        text
+                                        icon="pi pi-map-marker"
+                                        size="large"
+                                        @click="
+                                            zoomToSearchResult(
+                                                place.resourceid,
+                                                'zoom',
+                                            )
+                                        "
+                                    />
+                                </div>
+                                <div v-if="hasGeom && showMap">
+                                    <Button
+                                        class="action-button"
+                                        label="Search Here"
+                                        severity="secondary"
+                                        text
+                                        icon="pi pi-search"
+                                        size="large"
+                                        @click="
+                                            zoomToSearchResult(
+                                                place.resourceid,
+                                                'search',
+                                            )
+                                        "
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        v-else
+                        class="resource-details-value"
+                    >
+                        No associated places available
+                    </div>
                 </div>
             </div>
         </div>
@@ -412,7 +418,7 @@ function zoomToSearchResult(resourceid: string, action: string) {
     padding: 10px;
 }
 
-.value-header {
+:deep(.value-header) {
     color: steelblue;
     font-size: 1.1em;
     font-weight: bold;
@@ -442,10 +448,5 @@ function zoomToSearchResult(resourceid: string, action: string) {
 
 :deep(.p-splitter.p-component.p-splitter-horizontal) {
     position: inherit;
-}
-
-:deep(.linked-section-container) {
-    max-height: 52.5rem;
-    overflow-y: auto;
 }
 </style>
