@@ -250,23 +250,23 @@ onMounted(async () => {
                     @click="showMap = true"
                 />
                 <ToggleButton
+                    v-if="showMap"
+                    v-model="showFacets"
                     :style="{
                         fontSize: '1.4rem',
                         borderRadius: '3px',
                         marginInlineStart: '5px',
                         width: '12rem',
                     }"
-                    v-if="showMap"
-                    v-model="showFacets"
-                    onIcon="pi pi-filter"
-                    offIcon="pi pi-filter"
-                    onLabel="Hide Facets"
-                    offLabel="Show Facets"
+                    on-icon="pi pi-filter"
+                    off-icon="pi pi-filter"
+                    on-label="Hide Facets"
+                    off-label="Show Facets"
                 />
             </div>
         </header>
 
-        <main>
+        <main style="height: 100%; overflow: hidden">
             <section
                 class="afrc-search-results-panel"
                 :class="{ 'map-sidebar': showMap }"
@@ -428,26 +428,29 @@ header {
     gap: 5px;
     margin-left: 20px;
 }
+
 .view-buttons button {
     border-color: #ddd;
     width: 100px;
     background: #fff;
 }
+
 .view-buttons button.active {
     background: var(--p-button-outlined-secondary-hover-background);
 }
+
 .p-button-label {
     font-size: 0.5em;
 }
+
 section.afrc-search-results-panel {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
     padding: 15px;
     overflow-y: auto;
-    height: calc(
-        100vh - 50px
-    ); /* for display in a standalone plugin or embedded in AFS */
+    height: 100%;
+    /* for display in a standalone plugin or embedded in AFS */
     min-width: 400px;
     background: #fff;
 }
