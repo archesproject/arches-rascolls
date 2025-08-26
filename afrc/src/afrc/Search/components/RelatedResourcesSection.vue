@@ -2,23 +2,14 @@
 import { computed, onMounted, ref, watch } from "vue";
 import { useGettext } from "vue3-gettext";
 
-import Button from "primevue/button";
-import Column from "primevue/column";
-import DataTable from "primevue/datatable";
-import IconField from "primevue/iconfield";
-import InputIcon from "primevue/inputicon";
-import InputText from "primevue/inputtext";
 import Message from "primevue/message";
 
 import {
     ASC,
-    DESC,
     ROWS_PER_PAGE_OPTIONS,
 } from "@/arches_modular_reports/constants.ts";
 import { fetchRelatedResourceData } from "@/arches_modular_reports/ModularReport/api.ts";
 import FileListViewer from "@/arches_modular_reports/ModularReport/components/FileListViewer.vue";
-
-import type { DataTablePageEvent } from "primevue/datatable";
 
 const props = defineProps<{
     component: {
@@ -51,13 +42,6 @@ const resettingToFirstPage = ref(false);
 
 const pageNumberToNodegroupTileData = ref<Record<number, unknown[]>>({});
 
-const first = computed(() => {
-    if (resettingToFirstPage.value) {
-        return 0;
-    }
-    return (currentPage.value - 1) * rowsPerPage.value;
-});
-
 const isEmpty = computed(
     () =>
         !isLoading.value &&
@@ -65,19 +49,6 @@ const isEmpty = computed(
         !searchResultsTotalCount.value &&
         !timeout,
 );
-
-function onPageTurn(event: DataTablePageEvent) {
-    currentPage.value = resettingToFirstPage.value ? 1 : event.page + 1;
-    rowsPerPage.value = event.rows;
-}
-
-function onUpdateSortOrder(event: number | undefined) {
-    if (event === 1) {
-        direction.value = ASC;
-    } else if (event === -1) {
-        direction.value = DESC;
-    }
-}
 
 const columnData = computed(() => {
     return [
@@ -201,8 +172,12 @@ onMounted(fetchData);
     <div
         v-for="row in currentlyDisplayedTableData"
         v-else
+        :key="row.id"
     >
-        <div v-for="field in columnData">
+        <div
+            v-for="field in columnData"
+            :key="field.nodeAlias"
+        >
             <template v-if="row[field.nodeAlias as string].links?.length > 0">
                 <FileListViewer
                     v-if="row[field.nodeAlias].links[0]?.is_file"
@@ -218,91 +193,6 @@ onMounted(fetchData);
             </template>
         </div>
     </div>
-    <!-- <DataTable
-        v-else
-        class="section-table"
-        :value="currentlyDisplayedTableData"
-        :loading="isLoading"
-        :total-records="searchResultsTotalCount"
-        :expanded-rows="[]"
-        :first
-        paginator
-        :always-show-paginator="searchResultsTotalCount >
-            Math.min(rowsPerPage, ROWS_PER_PAGE_OPTIONS[0])
-            "
-        :lazy="true"
-        :rows="rowsPerPage"
-        :rows-per-page-options="ROWS_PER_PAGE_OPTIONS"
-        :sortable="true"
-        @page="onPageTurn"
-        @update:first="resettingToFirstPage = false"
-        @update:sort-field="sortField = $event"
-        @update:sort-order="onUpdateSortOrder"
-    >
-        <template #header>
-            <div style="display:none" class="section-table-header">
-                <h4>{{ graphName }}</h4>
-                <div class="section-table-header-functions">
-                    <IconField>
-                        <InputIcon
-                            class="pi pi-search"
-                            aria-hidden="true"
-                            style="font-size: 1rem"
-                        />
-                        <InputText
-                            v-model="query"
-                            :placeholder="$gettext('Search')"
-                            :aria-label="$gettext('Search')"
-                        />
-                    </IconField>
-                </div>
-            </div>
-        </template>
-        <template #empty>
-            <Message
-                size="large"
-                severity="info"
-                icon="pi pi-info-circle"
-            >
-                {{ $gettext("No results match your search.") }}
-            </Message>
-        </template>
-
-        <Column
-            v-for="columnDatum of columnData"
-            :key="columnDatum.nodeAlias"
-            :field="columnDatum.nodeAlias"
-            :header="columnDatum.widgetLabel"
-            :sortable="true"
-        >
-            <template #body="{ data, field }">
-                <template v-if="data[field as string].links.length > 0">
-                    <FileListViewer
-                        v-if="data[field as string].links[0]?.is_file"
-                        :file-data="data[field as string].links"
-                    />
-                    <template v-else>
-                        <Button
-                            v-for="link in data[field as string].links"
-                            :key="JSON.stringify(link)"
-                            as="a"
-                            variant="link"
-                            target="_blank"
-                            :href="link.link"
-                            class="node-value-link"
-                        >
-                            {{ link.label }}
-                        </Button>
-                    </template>
-                </template>
-                <template v-else>
-                    {{
-                        formatDisplayValue(data[field as string].display_value)
-                    }}
-                </template>
-            </template>
-        </Column>
-    </DataTable> -->
 </template>
 
 <style scoped>

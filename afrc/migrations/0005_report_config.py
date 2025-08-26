@@ -16,7 +16,10 @@ class Migration(migrations.Migration):
 
     dependencies = [
         ("afrc", "0004_search_layer"),
-        ("arches_modular_reports", "0002_add_modular_report"),
+        (
+            "arches_modular_reports",
+            "0007_reportconfig_slug",
+        ),
     ]
 
     def update_report_configs(apps, schema_editor):
@@ -42,7 +45,7 @@ class Migration(migrations.Migration):
                             graph.template = editable_report_template
                             graph.save()
                             config = ReportConfig.objects.create(
-                                graph=graph, config=data
+                                graph=graph, config=data, slug=Path(file).stem
                             )
                             config.clean()
                         except Graph.DoesNotExist:
