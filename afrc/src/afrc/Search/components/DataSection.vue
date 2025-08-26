@@ -3,28 +3,17 @@ import { computed, inject, onMounted, ref, watch } from "vue";
 import { useGettext } from "vue3-gettext";
 
 import Button from "primevue/button";
-import Column from "primevue/column";
-import DataTable from "primevue/datatable";
-import IconField from "primevue/iconfield";
-import InputIcon from "primevue/inputicon";
-import InputText from "primevue/inputtext";
 import Message from "primevue/message";
 
 import {
     ASC,
-    DESC,
     ROWS_PER_PAGE_OPTIONS,
 } from "@/arches_modular_reports/constants.ts";
 import { fetchNodegroupTileData } from "@/arches_modular_reports/ModularReport/api.ts";
 import FileListViewer from "@/arches_modular_reports/ModularReport/components/FileListViewer.vue";
-import HierarchicalTileViewer from "@/arches_modular_reports/ModularReport/components/HierarchicalTileViewer.vue";
 
 import type { Ref } from "vue";
-import type { DataTablePageEvent } from "primevue/datatable";
-import type {
-    LabelBasedCard,
-    NodePresentationLookup,
-} from "@/arches_modular_reports/ModularReport/types";
+import type { NodePresentationLookup } from "@/arches_modular_reports/ModularReport/types";
 
 const props = defineProps<{
     component: {
@@ -68,13 +57,6 @@ const { setSelectedNodegroupAlias } = inject("selectedNodegroupAlias") as {
 const { setSelectedTileId } = inject("selectedTileId") as {
     setSelectedTileId: (tileId: string | null | undefined) => void;
 };
-
-const first = computed(() => {
-    if (resettingToFirstPage.value) {
-        return 0;
-    }
-    return (currentPage.value - 1) * rowsPerPage.value;
-});
 
 const isEmpty = computed(
     () =>
@@ -190,27 +172,6 @@ async function fetchData(page: number = 1) {
     }
 }
 
-function onPageTurn(event: DataTablePageEvent) {
-    currentPage.value = resettingToFirstPage.value ? 1 : event.page + 1;
-    rowsPerPage.value = event.rows;
-}
-
-function onUpdateSortField(event: string) {
-    sortNodeId.value = nodePresentationLookup.value![event].nodeid;
-}
-
-function onUpdateSortOrder(event: number | undefined) {
-    if (event === 1) {
-        direction.value = ASC;
-    } else if (event === -1) {
-        direction.value = DESC;
-    }
-}
-
-function rowClass(data: LabelBasedCard) {
-    return [{ "no-children": data["@has_children"] === false }];
-}
-
 function initiateEdit(tileId: string | null) {
     setSelectedNodegroupAlias(props.component.config.nodegroup_alias);
     setSelectedTileId(tileId);
@@ -247,9 +208,13 @@ function initiateEdit(tileId: string | null) {
         </div>
     </div>
     <div v-else>
-        <div v-for="row in currentlyDisplayedTableData">
+        <div
+            v-for="row in currentlyDisplayedTableData"
+            :key="row.id"
+        >
             <div
                 v-for="field in columnData"
+                :key="field.nodeAlias"
                 style="padding: var(--p-panel-toggleable-header-padding)"
             >
                 <template v-if="row[field.nodeAlias as string]?.has_links">
@@ -283,107 +248,6 @@ function initiateEdit(tileId: string | null) {
             </div>
         </div>
     </div>
-    <!--
-    <div v-else>
-        <DataTable
-            class="section-table"
-            :value="currentlyDisplayedTableData"
-            :loading="isLoading"
-            :total-records="searchResultsTotalCount"
-            :expanded-rows="[]"
-            :first="first"
-            :row-class="rowClass"
-            :always-show-paginator="searchResultsTotalCount >
-                Math.min(rowsPerPage, ROWS_PER_PAGE_OPTIONS[0])
-                "
-            :lazy="true"
-            :rows="rowsPerPage"
-            :rows-per-page-options="ROWS_PER_PAGE_OPTIONS"
-            :sortable="cardinality === CARDINALITY_N"
-            paginator
-            @page="onPageTurn"
-            @update:first="resettingToFirstPage = false"
-            @update:sort-field="onUpdateSortField"
-            @update:sort-order="onUpdateSortOrder"
-        >
-            <template #header>
-                <div style="display:none;" class="section-table-header">
-                    <div class="value-header">{{ cardName }}</div>
-                    <Button
-                        v-if="shouldShowAddButton"
-                        :label="$gettext('Add %{cardName}', { cardName })"
-                        icon="pi pi-plus"
-                        variant="outlined"
-                        @click="initiateEdit(null)"
-                    />
-
-                    <div class="section-table-header-functions">
-                    </div>
-                </div>
-            </template>
-            <template #empty>
-                <Message
-                    size="large"
-                    severity="info"
-                    icon="pi pi-info-circle"
-                >
-                    {{ $gettext("No results match your search.") }}
-                </Message>
-            </template>
-
-            <Column
-                expander
-                style="width: 25px"
-            />
-            <Column
-                v-for="columnDatum of columnData"
-                :key="columnDatum.nodeAlias"
-                :field="columnDatum.nodeAlias"
-                :header="columnDatum.widgetLabel"
-                :sortable="cardinality === CARDINALITY_N"
-            >
-                <template #body="{ data, field }">
-                    <div
-                        :style="{
-                            maxHeight: data[field as string].file_data
-                                ? '32rem'
-                                : '12rem',
-                            overflow: 'auto',
-                        }"
-                    >
-                        <template v-if="data[field as string]?.has_links">
-                            <Button
-                                v-for="item in data[field as string].display_value"
-                                :key="item.link"
-                                :href="item.link"
-                                target="_blank"
-                                as="a"
-                                variant="link"
-                                :label="item.label"
-                                style="display: block; width: fit-content"
-                            />
-                        </template>
-                        <FileListViewer
-                            v-else-if="data[field as string]?.is_file"
-                            :file-data="data[field as string].file_data"
-                        />
-                        <template v-else>
-                            {{ data[field as string]?.display_value }}
-                        </template>
-                    </div>
-                </template>
-            </Column>
-
-            <template #expansion="slotProps">
-                <HierarchicalTileViewer
-                    :nodegroup-alias="props.component.config.nodegroup_alias"
-                    :tile-id="slotProps.data['@tile_id']"
-                    :custom-labels="props.component.config.custom_labels"
-                    :show-empty-nodes="true"
-                />
-            </template>
-        </DataTable>
-    </div> -->
 </template>
 
 <style scoped>
