@@ -165,7 +165,7 @@ function zoomToSearchResult(resourceid: string, action: string) {
         >
             <ModularReport
                 :key="resultSelected"
-                slug="rascolls-search"
+                slug="search-item-details"
                 :resource-instance-id="resultSelected"
                 graph-slug="reference_and_sample_collection_item_1"
             ></ModularReport>
