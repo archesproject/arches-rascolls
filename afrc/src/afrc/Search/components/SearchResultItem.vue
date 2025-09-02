@@ -117,17 +117,68 @@ function selectResult(resourceid: string) {
                     <div class="result-displayname">
                         {{ props.searchResult.displayname }}
                     </div>
-                    <div class="item-current-location">
-                        <span class="breadcrumb-title">Current location:</span>
-                        <span class="breadcrumb">{{
-                            props.searchResult.currentlocation
-                        }}</span>
-                    </div>
-                    <div class="scope-note">
-                        <span class="scope-note-title">Item description:</span>
+                    <div class="summary-item-container">
+                        <span class="summary-item-title">Barcode:</span>
                         <span
-                            class="scope-note-content"
-                            v-html="searchResult.displaydescription"
+                            class="summary-item"
+                            v-html="searchResult.barcode"
+                        ></span>
+                    </div>
+                    <div class="summary-item-container">
+                        <span class="summary-item-title">Common name:</span>
+                        <span
+                            class="summary-item"
+                            v-html="searchResult.common_name"
+                        ></span>
+                    </div>
+                    <div class="summary-item-container">
+                        <span class="summary-item-title"
+                            >Additional names:</span
+                        >
+                        <span
+                            class="summary-item"
+                            v-html="searchResult.additional_names"
+                        ></span>
+                    </div>
+                    <div class="summary-item-container">
+                        <span class="summary-item-title">Facet type:</span>
+                        <span
+                            class="summary-item"
+                            v-html="searchResult.sample_type"
+                        ></span>
+                    </div>
+                    <div class="summary-item-container">
+                        <span class="summary-item-title"
+                            >Origination date:</span
+                        >
+                        <span
+                            class="summary-item"
+                            v-html="searchResult.origination_date"
+                        ></span>
+                    </div>
+                    <div class="summary-item-container">
+                        <span class="summary-item-title"
+                            >Acquisition date:</span
+                        >
+                        <span
+                            class="summary-item"
+                            v-html="searchResult.acquisition_date"
+                        ></span>
+                    </div>
+                    <div class="summary-item-container">
+                        <span class="summary-item-title"
+                            >Geographic origin:</span
+                        >
+                        <span
+                            class="summary-item"
+                            v-html="searchResult.geographic_origin"
+                        ></span>
+                    </div>
+                    <div class="summary-item-container">
+                        <span class="summary-item-title">Manufacturer:</span>
+                        <span
+                            class="summary-item"
+                            v-html="searchResult.manufacturer"
                         ></span>
                     </div>
                 </div>
@@ -225,18 +276,18 @@ function selectResult(resourceid: string) {
     margin: 0 0 10px;
     font-size: 1.2rem;
 }
-.item-current-location {
+.summary-item-container {
     line-height: 1;
 }
 
-.result .breadcrumb-title {
+.result .summary-item-title {
     color: #454545;
     font-size: 1.25rem;
     margin-bottom: 10px;
     padding-right: 5px;
 }
 
-.result .breadcrumb {
+.result .summary-item {
     color: #25476a;
     font-size: 1.25rem;
     margin-bottom: 10px;
