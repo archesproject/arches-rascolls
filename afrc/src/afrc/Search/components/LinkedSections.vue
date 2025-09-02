@@ -1,19 +1,8 @@
 <script setup lang="ts">
-import {
-    computed,
-    inject,
-    onMounted,
-    ref,
-    useTemplateRef,
-    type Ref,
-} from "vue";
+import { inject, onMounted, ref, type Ref } from "vue";
 import { useGettext } from "vue3-gettext";
 import Panel from "primevue/panel";
-import Button from "primevue/button";
-import type {
-    LabelBasedCard,
-    NodePresentationLookup,
-} from "@/arches_modular_reports/ModularReport/types";
+import type { NodePresentationLookup } from "@/arches_modular_reports/ModularReport/types";
 
 import {
     importComponents,
@@ -54,38 +43,7 @@ const cardName = (component: {
         nodePresentationLookup.value[firstNodeAlias].card_name
     );
 };
-const buttonSectionRef = useTemplateRef<HTMLElement>("buttonSectionRef");
-const linkedSectionsRef = useTemplateRef<HTMLElement[]>("linked_sections");
 const linkedSections = ref<CollapsibleSection[]>([]);
-
-function scrollToSection(linked_section: CollapsibleSection): void {
-    const sectionElement = linkedSectionsRef.value!.find((el) => {
-        const panelRoot = el.closest(".p-panel");
-        const headerText = panelRoot
-            ?.querySelector(".p-panel-header")
-            ?.textContent?.trim();
-        return headerText === linked_section.name;
-    });
-
-    if (sectionElement) {
-        linked_section.collapsed = false;
-
-        const panelRoot = sectionElement.closest(".p-panel") as HTMLElement;
-        if (panelRoot) {
-            panelRoot.scrollIntoView({
-                behavior: "smooth",
-                block: "start",
-            });
-        }
-    }
-}
-
-function backToTop() {
-    buttonSectionRef.value?.scrollIntoView({
-        behavior: "smooth",
-        block: "end",
-    });
-}
 
 onMounted(async () => {
     await importComponents(component.config.sections, componentLookup);
