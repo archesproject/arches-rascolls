@@ -11,7 +11,7 @@ class Migration(migrations.Migration):
 
     dependencies = [
         ("casf_database", "0006_add_multicard_descriptor"),
-        ("arches_controlled_lists", "0004_reconfigure_listitem_sortorder_constraints"),
+        ("arches_controlled_lists", "0007_change_listitemvalue_value_from_char_to_text_field.py"),
     ]
 
     def load_lists(apps, schema_editor):
