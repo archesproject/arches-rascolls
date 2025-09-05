@@ -4,14 +4,14 @@ import os
 from django.core import management
 from django.db import migrations
 
-from casf_database.settings import APP_ROOT
+from afrc.settings import APP_ROOT
 
 
 class Migration(migrations.Migration):
 
     dependencies = [
-        ("casf_database", "0006_add_multicard_descriptor"),
-        ("arches_controlled_lists", "0007_change_listitemvalue_value_from_char_to_text_field.py"),
+        ("afrc", "0006_add_multicard_descriptor"),
+        ("arches_controlled_lists", "0007_change_listitemvalue_value_from_char_to_text_field"),
     ]
 
     def load_lists(apps, schema_editor):
