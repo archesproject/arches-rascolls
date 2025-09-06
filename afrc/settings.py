@@ -600,10 +600,11 @@ LANGUAGE_CODE = "en"
 # {langcode}-{regioncode} eg: en, en-gb ....
 # a list of language codes can be found here http://www.i18nguy.com/unicode/language-identifiers.html
 LANGUAGES = [
-    #   ('de', _('German')),
-    ("en", _("English")),
-    #   ('en-gb', _('British English')),
-    #   ('es', _('Spanish')),
+    ("fr", "French"),
+    ("en", "English"),
+    ("de", "German"),
+    ("pt", "Portuguese"),
+    ("en-US", "English"),
 ]
 
 # override this to permenantly display/hide the language switcher
