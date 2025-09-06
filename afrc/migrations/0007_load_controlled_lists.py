@@ -11,7 +11,7 @@ class Migration(migrations.Migration):
 
     dependencies = [
         ("afrc", "0006_add_multicard_descriptor"),
-        ("arches_controlled_lists", "0007_change_listitemvalue_value_from_char_to_text_field"),
+        ("arches_controlled_lists", "0008_ensure_languages_in_sync"),
     ]
 
     def load_lists(apps, schema_editor):
