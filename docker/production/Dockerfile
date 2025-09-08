@@ -9,7 +9,6 @@ RUN openssl ecparam -out /etc/ssl/private/nginx-selfsigned.key -name prime256v1 
 
 COPY . ${WEB_ROOT}/arches-rascolls
 RUN source ${WEB_ROOT}/ENV/bin/activate && cd ${APP_ROOT} && pip install .
-RUN source ${WEB_ROOT}/ENV/bin/activate && pip show django-migrate-sql-deux && return 1
 COPY ./docker/static_frontend_configuration ${WEB_ROOT}/arches-rascolls/frontend_configuration
 WORKDIR ${APP_ROOT}
 RUN npm i

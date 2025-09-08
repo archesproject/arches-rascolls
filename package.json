@@ -19,6 +19,8 @@
         "vitest": "vitest --run --coverage"
     },
     "dependencies": {
+        "@primeuix/themes": "1.0.1",
+        "@primeuix/styles": "1.0.3",
         "arches": "archesproject/arches#dev/8.1.x",
         "maplibre-gl": "^4.6.0",
         "arches-modular-reports": "archesproject/arches-modular-reports#main",

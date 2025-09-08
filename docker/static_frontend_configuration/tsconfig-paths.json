@@ -17,6 +17,9 @@
             "@/arches_component_lab/*": [
                 "/web_root/ENV/lib/python3.12/site-packages/arches_component_lab/src/arches_component_lab/*"
             ],
+            "@/arches_controlled_lists/*": [
+                "/web_root/ENV/lib/python3.12/site-packages/arches_controlled_lists/src/arches_controlled_lists/*"
+            ],
             "*": [
                 "../node_modules/*"
             ]
