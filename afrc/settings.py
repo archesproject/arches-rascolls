@@ -190,12 +190,41 @@ DEFAULT_HOST = "afrc"
 # a prefix to append to all elasticsearch indexes, note: must be lower case
 ELASTICSEARCH_PREFIX = get_optional_env_variable("ARCHES_ES_INDEX_PREFIX", APP_NAME)
 
-ELASTICSEARCH_CUSTOM_INDEXES = []
+REFERENCES_INDEX_NAME = "references"
+ELASTICSEARCH_CUSTOM_INDEXES = [
+    {
+        "module": "arches_controlled_lists.search_indexes.reference_index.ReferenceIndex",
+        "name": REFERENCES_INDEX_NAME,
+        "should_update_asynchronously": True,
+    }
+]
+TERM_SEARCH_TYPES = [
+    {
+        "type": "term",
+        "label": _("Term Matches"),
+        "key": "terms",
+        "module": "arches.app.search.search_term.TermSearch",
+    },
+    {
+        "type": "concept",
+        "label": _("Concepts"),
+        "key": "concepts",
+        "module": "arches.app.search.concept_search.ConceptSearch",
+    },
+    {
+        "type": "reference",
+        "label": _("References"),
+        "key": REFERENCES_INDEX_NAME,
+        "module": "arches_controlled_lists.search_indexes.reference_index.ReferenceIndex",
+    },
+]
+
+ES_MAPPING_MODIFIER_CLASSES = [
+    "arches_controlled_lists.search.references_es_mapping_modifier.ReferencesEsMappingModifier"
+]
 
 LOAD_DEFAULT_ONTOLOGY = False
 LOAD_PACKAGE_ONTOLOGIES = True
-
-ELASTICSEARCH_CUSTOM_INDEXES = []
 
 PUBLIC_SERVER_ADDRESS = get_optional_env_variable(
     "ARCHES_PUBLIC_SERVER_ADDRESS", "http://localhost:8000/"
@@ -261,14 +290,16 @@ INSTALLED_APPS = (
     "corsheaders",
     "oauth2_provider",
     "django_celery_results",
-    "pgtrigger",
     "django_migrate_sql",
     # "silk",
     "afrc",  # Ensure the project is listed before any other arches applications
+    "django.contrib.postgres",
     "arches_modular_reports",
     "rest_framework",
     "arches_querysets",
     "arches_component_lab",
+    "arches_controlled_lists",
+    "pgtrigger",
 )
 
 # Placing this last ensures any templates provided by Arches Applications
@@ -569,10 +600,11 @@ LANGUAGE_CODE = "en"
 # {langcode}-{regioncode} eg: en, en-gb ....
 # a list of language codes can be found here http://www.i18nguy.com/unicode/language-identifiers.html
 LANGUAGES = [
-    #   ('de', _('German')),
-    ("en", _("English")),
-    #   ('en-gb', _('British English')),
-    #   ('es', _('Spanish')),
+    ("fr", "French"),
+    ("en", "English"),
+    ("de", "German"),
+    ("pt", "Portuguese"),
+    ("en-US", "English"),
 ]
 
 # override this to permenantly display/hide the language switcher
