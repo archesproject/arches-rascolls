@@ -28,14 +28,14 @@
         "maplibre-gl": "^4.6.0"
     },
     "devDependencies": {
+        "@types/numeral": "^2.0.5",
         "arches-dev-dependencies": "archesproject/arches-dev-dependencies#dev/8.1.x"
     },
-    "nodeModulesPaths": {
-    },
+    "nodeModulesPaths": {},
     "overrides": {
         "moment-timezone": "^0.5.45",
         "nomnom": "npm:@gerhobbelt/nomnom",
-        "rimraf": "^5.0.7", 
+        "rimraf": "^5.0.7",
         "underscore": "^1.13.6"
     }
 }

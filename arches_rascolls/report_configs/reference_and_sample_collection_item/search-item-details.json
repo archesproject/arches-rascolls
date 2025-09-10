@@ -1,24 +1,90 @@
 {
     "name": "Search Item Details",
-    "slug": "rascolls-search",
     "components": [
         {
             "config": {
                 "sections": [
                     {
+                        "name": "Material Information",
+                        "components": [
+                            {
+                                "config": {
+                                    "node_aliases": [
+                                        "material"
+                                    ],
+                                    "custom_labels": {
+                                        "material": "Materials"
+                                    },
+                                    "nodegroup_alias": "material",
+                                    "custom_card_name": "Sample Type",
+                                    "has_write_permission": false
+                                },
+                                "component": "afrc/Search/components/DataSection"
+                            }
+                        ]
+                    },
+                    {
                         "name": "Statement or Interpretation about Object",
                         "components": [
                             {
                                 "config": {
+                                    "filters": [
+                                        {
+                                            "alias": "statement_type",
+                                            "value": [
+                                                {
+                                                    "labels": [
+                                                        {
+                                                            "list_item_id": "f147d843-7622-4109-bd73-c7fb05f1adea"
+                                                        }
+                                                    ]
+                                                }
+                                            ],
+                                            "field_lookup": "contains"
+                                        }
+                                    ],
                                     "node_aliases": [
                                         "statement_content"
                                     ],
                                     "custom_labels": {},
                                     "nodegroup_alias": "statement",
-                                    "custom_card_name": "Description",
+                                    "custom_card_name": "Physical Form",
                                     "has_write_permission": false
                                 },
                                 "component": "arches_rascolls/Search/components/DataSection"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Attribute Type",
+                        "components": [
+                            {
+                                "config": {
+                                    "node_aliases": [
+                                        "attribute_type",
+                                        "attribute_type_metatype"
+                                    ],
+                                    "custom_labels": {},
+                                    "nodegroup_alias": "attribute_type",
+                                    "custom_card_name": "Natural/Synthetic"
+                                },
+                                "component": "arches_modular_reports/ModularReport/components/DataSection"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Current Location of Object",
+                        "components": [
+                            {
+                                "config": {
+                                    "node_aliases": [
+                                        "current_location"
+                                    ],
+                                    "custom_labels": {},
+                                    "nodegroup_alias": "current_location",
+                                    "custom_card_name": "Grid Location"
+                                },
+                                "component": "arches_modular_reports/ModularReport/components/DataSection"
                             }
                         ]
                     },
@@ -39,18 +105,31 @@
                         ]
                     },
                     {
-                        "name": "Material Information",
+                        "name": "Statement or Interpretation about Object",
                         "components": [
                             {
                                 "config": {
-                                    "node_aliases": [
-                                        "material"
+                                    "filters": [
+                                        {
+                                            "alias": "statement_type",
+                                            "value": [
+                                                {
+                                                    "labels": [
+                                                        {
+                                                            "list_item_id": "20d28e7a-0d4f-4055-b1cd-cf6f264e8432"
+                                                        }
+                                                    ]
+                                                }
+                                            ],
+                                            "field_lookup": "contains"
+                                        }
                                     ],
-                                    "custom_labels": {
-                                        "material": "Materials"
-                                    },
-                                    "nodegroup_alias": "material",
-                                    "custom_card_name": "Material Information",
+                                    "node_aliases": [
+                                        "statement_content"
+                                    ],
+                                    "custom_labels": {},
+                                    "nodegroup_alias": "statement",
+                                    "custom_card_name": "Notes",
                                     "has_write_permission": false
                                 },
                                 "component": "arches_rascolls/Search/components/DataSection"
@@ -67,7 +146,11 @@
                                         "addition_to_collection_type",
                                         "addition_to_collection_carried_out_by"
                                     ],
-                                    "custom_labels": {"addition_to_collection_carried_out_by": "Acquired By", "addition_to_collection_type": "Acquisition Details", "addition_to_collection_added_to": "Acquired on"},
+                                    "custom_labels": {
+                                        "addition_to_collection_type": "Acquisition Details",
+                                        "addition_to_collection_added_to": "Acquired on",
+                                        "addition_to_collection_carried_out_by": "Acquired By"
+                                    },
                                     "nodegroup_alias": "addition_to_collection",
                                     "custom_card_name": "Acquisition Information",
                                     "has_write_permission": false
