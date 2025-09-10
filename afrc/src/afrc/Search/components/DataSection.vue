@@ -24,6 +24,7 @@ const props = defineProps<{
             custom_labels: Record<string, string>;
             custom_card_name: string | null;
             has_write_permission: boolean;
+            filters: { alias: string; value: string }[] | null;
         };
     };
     resourceInstanceId: string;
@@ -163,6 +164,7 @@ async function fetchData(page: number = 1) {
             sortNodeId.value,
             direction.value,
             query.value,
+            props.component.config?.filters,
         );
 
         const typedResults = results as unknown as DataRow[];
