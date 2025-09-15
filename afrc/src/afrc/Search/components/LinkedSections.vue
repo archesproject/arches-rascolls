@@ -25,15 +25,7 @@ const nodePresentationLookup = inject("nodePresentationLookup") as Ref<
 >;
 
 const { $gettext } = useGettext();
-const cardName = (component: {
-    config: {
-        nodegroup_alias: string;
-        node_aliases: string[];
-        custom_labels: Record<string, string>;
-        custom_card_name: string | null;
-        has_write_permission: boolean;
-    };
-}) => {
+const cardName = (component: SectionContent) => {
     const firstNodeAlias = component.config.node_aliases[0];
     if (!nodePresentationLookup.value || !firstNodeAlias) {
         return "";
