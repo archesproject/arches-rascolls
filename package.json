@@ -25,7 +25,8 @@
         "arches": "archesproject/arches#dev/8.1.x",
         "maplibre-gl": "^4.6.0",
         "arches-modular-reports": "archesproject/arches-modular-reports#main",
-        "arches_controlled_lists": "archesproject/arches-controlled-lists#main"
+        "arches_controlled_lists": "archesproject/arches-controlled-lists#main",
+        "arches-component-lab": "archesproject/arches-component-lab#main"
     },
     "devDependencies": {
         "arches-dev-dependencies": "archesproject/arches-dev-dependencies#dev/8.1.x"
