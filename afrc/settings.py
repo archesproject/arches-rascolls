@@ -302,6 +302,8 @@ INSTALLED_APPS = (
     "pgtrigger",
 )
 
+FOO = True
+
 # Placing this last ensures any templates provided by Arches Applications
 # take precedence over core arches templates in arches/app/templates.
 INSTALLED_APPS += (
