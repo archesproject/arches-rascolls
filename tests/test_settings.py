@@ -57,6 +57,9 @@ CACHES = {
         "BACKEND": "django.core.cache.backends.dummy.DummyCache",
         "LOCATION": "user_permission_cache",
     },
+    "searchresults": {
+        "BACKEND": "django.core.cache.backends.locmem.LocMemCache",
+    },
 }
 
 LOGGING["loggers"]["arches"]["level"] = "ERROR"
