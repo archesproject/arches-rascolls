@@ -299,7 +299,7 @@ INSTALLED_APPS = (
     "arches_querysets",
     "arches_component_lab",
     "arches_controlled_lists",
-    "arches_advanced_search",
+    "arches_search",
     "pgtrigger",
 )
 
