@@ -10,6 +10,11 @@ import {
 } from "@/arches_modular_reports/constants.ts";
 import { fetchRelatedResourceData } from "@/arches_modular_reports/ModularReport/api.ts";
 import FileListViewer from "@/arches_modular_reports/ModularReport/components/FileListViewer.vue";
+import type { FileReference } from "@/arches_component_lab/datatypes/file-list/types";
+
+type FileLink = FileReference & { is_file?: boolean };
+type DataCell = { display_value: string; links?: FileLink[] };
+export type DataRow = { id: string | number } & Record<string, DataCell>;
 
 const props = defineProps<{
     component: {
@@ -32,7 +37,7 @@ const currentPage = ref(1);
 const query = ref("");
 const sortField = ref("@relation_name");
 const direction = ref(ASC);
-const currentlyDisplayedTableData = ref<unknown[]>([]);
+const currentlyDisplayedTableData = ref<DataRow[]>([]);
 const searchResultsTotalCount = ref(0);
 const isLoading = ref(false);
 const hasLoadingError = ref(false);
@@ -40,7 +45,7 @@ const graphName = ref("");
 const widgetLabelLookup = ref<Record<string, string>>({});
 const resettingToFirstPage = ref(false);
 
-const pageNumberToNodegroupTileData = ref<Record<number, unknown[]>>({});
+const pageNumberToNodegroupTileData = ref<Record<number, DataRow[]>>({});
 
 const isEmpty = computed(
     () =>
@@ -178,15 +183,15 @@ onMounted(fetchData);
             v-for="field in columnData"
             :key="field.nodeAlias"
         >
-            <template v-if="row[field.nodeAlias as string].links?.length > 0">
+            <template v-if="row[field.nodeAlias]?.links?.length">
                 <FileListViewer
-                    v-if="row[field.nodeAlias].links[0]?.is_file"
-                    :file-data="row[field.nodeAlias].links"
+                    v-if="row[field.nodeAlias]?.links?.[0]?.is_file"
+                    :file-data="row[field.nodeAlias]?.links ?? []"
                 />
                 <template v-else>
                     {{
                         formatDisplayValue(
-                            data[field.nodeAlias as string].display_value,
+                            row[field.nodeAlias]?.display_value ?? "",
                         )
                     }}
                 </template>
