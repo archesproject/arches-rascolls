@@ -29,6 +29,7 @@ dependencies = [
     "arches_modular_reports @ git+https://github.com/archesproject/arches-modular-reports@main",
     "arches_querysets @ git+https://github.com/archesproject/arches-querysets@main",
     "arches_controlled_lists @ git+https://github.com/archesproject/arches-controlled-lists@main",
+    "arches_search @ git+https://github.com/archesproject/arches-search@main",
 ]
 version = "0.0.1"
 
