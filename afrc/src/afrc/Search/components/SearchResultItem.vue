@@ -2,6 +2,8 @@
 import { onMounted, inject, ref } from "vue";
 import type { Ref } from "vue";
 
+import DOMPurify from "dompurify";
+
 import Button from "primevue/button";
 import Skeleton from "primevue/skeleton";
 
@@ -39,6 +41,11 @@ const props = defineProps({
         required: true,
     },
 });
+
+const sanitizedDescription = DOMPurify.sanitize(
+    props.searchResult.displaydescription,
+    { USE_PROFILES: { html: true } },
+);
 
 function setHighlightResult(resourceid: string) {
     if (highlightResult.value !== resourceid) {
@@ -125,10 +132,12 @@ function selectResult(resourceid: string) {
                     </div>
                     <div class="scope-note">
                         <span class="scope-note-title">Item description:</span>
+                        <!-- eslint-disable vue/no-v-html -->
                         <span
                             class="scope-note-content"
-                            v-html="searchResult.displaydescription"
+                            v-html="sanitizedDescription"
                         ></span>
+                        <!-- eslint-enable vue/no-v-html -->
                     </div>
                 </div>
                 <div>

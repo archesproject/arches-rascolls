@@ -14,6 +14,7 @@ import FileListViewer from "@/arches_modular_reports/ModularReport/components/Fi
 
 import type { Ref } from "vue";
 import type { NodePresentationLookup } from "@/arches_modular_reports/ModularReport/types";
+import type { FileReference } from "@/arches_component_lab/datatypes/file-list/types";
 
 const props = defineProps<{
     component: {
@@ -28,6 +29,15 @@ const props = defineProps<{
     resourceInstanceId: string;
 }>();
 
+type LinkDisplayItem = { link: string; label: string };
+type DataCell = {
+    display_value?: string | LinkDisplayItem[];
+    has_links?: boolean;
+    is_file?: boolean;
+    file_data?: FileReference[];
+};
+type DataRow = { id: string | number } & Record<string, DataCell>;
+
 const { $gettext } = useGettext();
 const CARDINALITY_N = "n";
 const queryTimeoutValue = 500;
@@ -38,12 +48,12 @@ const currentPage = ref(1);
 const query = ref("");
 const sortNodeId = ref("");
 const direction = ref(ASC);
-const currentlyDisplayedTableData = ref<unknown[]>([]);
+const currentlyDisplayedTableData = ref<DataRow[]>([]);
 const searchResultsTotalCount = ref(0);
 const isLoading = ref(false);
 const hasLoadingError = ref(false);
 const resettingToFirstPage = ref(false);
-const pageNumberToNodegroupTileData = ref<Record<number, unknown[]>>({});
+const pageNumberToNodegroupTileData = ref<Record<number, DataRow[]>>({});
 
 const userCanEditResourceInstance = inject(
     "userCanEditResourceInstance",
@@ -112,7 +122,6 @@ watch(query, () => {
     if (timeout) {
         clearTimeout(timeout);
     }
-
     timeout = setTimeout(() => {
         pageNumberToNodegroupTileData.value = {};
         resettingToFirstPage.value = true;
@@ -130,7 +139,6 @@ watch(currentPage, () => {
     if (currentPage.value in pageNumberToNodegroupTileData.value) {
         currentlyDisplayedTableData.value =
             pageNumberToNodegroupTileData.value[currentPage.value];
-        console.log("watcher", currentlyDisplayedTableData.value);
     } else {
         resettingToFirstPage.value = false;
         fetchData(currentPage.value);
@@ -157,17 +165,15 @@ async function fetchData(page: number = 1) {
             query.value,
         );
 
-        pageNumberToNodegroupTileData.value[fetchedPage] = results;
-        currentlyDisplayedTableData.value = results;
-
-        console.log("ohai", currentlyDisplayedTableData.value);
+        const typedResults = results as unknown as DataRow[];
+        pageNumberToNodegroupTileData.value[fetchedPage] = typedResults;
+        currentlyDisplayedTableData.value = typedResults;
         currentPage.value = fetchedPage;
         searchResultsTotalCount.value = totalCount;
     } catch (error) {
         hasLoadingError.value = true;
         throw error;
     } finally {
-        console.log("SETTING IS LOADING TO FALSE");
         isLoading.value = false;
     }
 }
@@ -225,7 +231,7 @@ function initiateEdit(tileId: string | null) {
                                 <Button
                                     v-for="item in row[
                                         field.nodeAlias as string
-                                    ].display_value"
+                                    ].display_value as LinkDisplayItem[]"
                                     :key="item.link"
                                     :href="item.link"
                                     target="_blank"
@@ -240,7 +246,7 @@ function initiateEdit(tileId: string | null) {
                 </template>
                 <FileListViewer
                     v-else-if="row[field.nodeAlias as string]?.is_file"
-                    :file-data="row[field.nodeAlias as string].file_data"
+                    :file-data="row[field.nodeAlias as string].file_data!"
                 />
                 <template v-else>
                     {{ row[field.nodeAlias as string]?.display_value }}
