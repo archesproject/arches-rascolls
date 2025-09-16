@@ -4716,7 +4716,7 @@
                     "sortorder": 0,
                     "source_identifier_id": null,
                     "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                    "widget_id": "10000000-0000-0000-0000-000000000005"
                 },
                 {
                     "card_id": "970491ea-d71a-11ef-ac5a-0275dc2ded29",
@@ -5404,7 +5404,7 @@
                     "sortorder": 0,
                     "source_identifier_id": null,
                     "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                    "widget_id": "10000000-0000-0000-0000-000000000005"
                 },
                 {
                     "card_id": "9e72c06a-d714-11ef-8c40-0275dc2ded29",
@@ -6242,7 +6242,7 @@
                     "sortorder": 0,
                     "source_identifier_id": null,
                     "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                    "widget_id": "10000000-0000-0000-0000-000000000005"
                 },
                 {
                     "card_id": "bda39f64-d376-11ef-a239-0275dc2ded29",
@@ -6794,7 +6794,7 @@
                     "sortorder": 0,
                     "source_identifier_id": null,
                     "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                    "widget_id": "10000000-0000-0000-0000-000000000005"
                 },
                 {
                     "card_id": "bda2d8ae-d376-11ef-a239-0275dc2ded29",
@@ -6872,7 +6872,7 @@
                     "sortorder": 0,
                     "source_identifier_id": null,
                     "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                    "widget_id": "10000000-0000-0000-0000-000000000005"
                 },
                 {
                     "card_id": "bda371a6-d376-11ef-a239-0275dc2ded29",
@@ -8244,7 +8244,7 @@
                     "sortorder": 0,
                     "source_identifier_id": null,
                     "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                    "widget_id": "10000000-0000-0000-0000-000000000005"
                 },
                 {
                     "card_id": "bda33466-d376-11ef-a239-0275dc2ded29",
@@ -8788,7 +8788,7 @@
                     "sortorder": 0,
                     "source_identifier_id": null,
                     "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                    "widget_id": "10000000-0000-0000-0000-000000000005"
                 },
                 {
                     "card_id": "bda44946-d376-11ef-a239-0275dc2ded29",
@@ -9533,7 +9533,7 @@
                     "sortorder": 0,
                     "source_identifier_id": null,
                     "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                    "widget_id": "10000000-0000-0000-0000-000000000005"
                 },
                 {
                     "card_id": "bda41516-d376-11ef-a239-0275dc2ded29",
@@ -11053,7 +11053,7 @@
                     "sortorder": 0,
                     "source_identifier_id": null,
                     "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                    "widget_id": "10000000-0000-0000-0000-000000000005"
                 },
                 {
                     "card_id": "bda40774-d376-11ef-a239-0275dc2ded29",
@@ -12164,7 +12164,7 @@
                     "sortorder": 0,
                     "source_identifier_id": null,
                     "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                    "widget_id": "10000000-0000-0000-0000-000000000005"
                 },
                 {
                     "card_id": "bda3e1c2-d376-11ef-a239-0275dc2ded29",
@@ -12459,7 +12459,7 @@
                     "sortorder": 0,
                     "source_identifier_id": null,
                     "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                    "widget_id": "10000000-0000-0000-0000-000000000005"
                 },
                 {
                     "card_id": "bda4cdc6-d376-11ef-a239-0275dc2ded29",
@@ -17811,6 +17811,28 @@
             "functions_x_graphs": [
                 {
                     "config": {
+                        "descriptor_types": {
+                            "description": {
+                                "nodegroup_id": "",
+                                "string_template": "<statement_content>"
+                            },
+                            "map_popup": {
+                                "nodegroup_id": "",
+                                "string_template": "<statement_content>"
+                            },
+                            "name": {
+                                "nodegroup_id": "",
+                                "string_template": "<name_content>  #<identifier_content>"
+                            }
+                        },
+                        "triggering_nodegroups": []
+                    },
+                    "function_id": "00b2d15a-fda0-4578-b79a-784e4138664b",
+                    "graph_id": "bda239c6-d376-11ef-a239-0275dc2ded29",
+                    "id": "cff8ef6f-2cee-4218-b6a9-425c26a10686"
+                },
+                {
+                    "config": {
                         "triggering_nodegroups": [
                             "04f87f4e-d834-11ef-a75a-0275dc2ded29",
                             "04f89204-d834-11ef-a75a-0275dc2ded29",
@@ -18558,29 +18580,7 @@
                     },
                     "function_id": "c75ebc8d-7aae-4c99-981d-4219dbb4b789",
                     "graph_id": "bda239c6-d376-11ef-a239-0275dc2ded29",
-                    "id": "428d4491-595e-44c6-8361-7fc3207a8c7e"
-                },
-                {
-                    "config": {
-                        "descriptor_types": {
-                            "description": {
-                                "nodegroup_id": "bda3962c-d376-11ef-a239-0275dc2ded29",
-                                "string_template": "Barcode # <Identifier_content>"
-                            },
-                            "map_popup": {
-                                "nodegroup_id": "",
-                                "string_template": ""
-                            },
-                            "name": {
-                                "nodegroup_id": "bda409e0-d376-11ef-a239-0275dc2ded29",
-                                "string_template": "<Name_content>"
-                            }
-                        },
-                        "triggering_nodegroups": []
-                    },
-                    "function_id": "60000000-0000-0000-0000-000000000001",
-                    "graph_id": "bda239c6-d376-11ef-a239-0275dc2ded29",
-                    "id": "81bdba25-a6d0-43a0-a9d0-fcb3affec6d2"
+                    "id": "e508af15-7a07-47b7-9635-caf8d954e7de"
                 }
             ],
             "graphid": "bda239c6-d376-11ef-a239-0275dc2ded29",
@@ -18680,14 +18680,14 @@
                     "parentnodegroup_id": null
                 },
                 {
-                    "cardinality": "1",
+                    "cardinality": "n",
                     "grouping_node_id": "6ee83f62-08e4-11f0-81c1-0275dc2ded29",
                     "legacygroupid": null,
                     "nodegroupid": "6ee83f62-08e4-11f0-81c1-0275dc2ded29",
                     "parentnodegroup_id": "6ee83594-08e4-11f0-81c1-0275dc2ded29"
                 },
                 {
-                    "cardinality": "1",
+                    "cardinality": "n",
                     "grouping_node_id": "6ee8420a-08e4-11f0-81c1-0275dc2ded29",
                     "legacygroupid": null,
                     "nodegroupid": "6ee8420a-08e4-11f0-81c1-0275dc2ded29",
@@ -32592,23 +32592,29 @@
             "publication": {
                 "graph_id": "bda239c6-d376-11ef-a239-0275dc2ded29",
                 "most_recent_edit_id": null,
-                "notes": null,
-                "publicationid": "4440a7c5-f8a9-47f3-8f6a-07edabc7fd32",
-                "published_time": "2025-05-14T17:59:39.934"
+                "notes": "#174 Missing full text widgets for statements: Changed template from text-widget to rich-text-widget for all statement nodes across all RaSColls resource models.\n\n#169 Component dimension node allows only one value to be entered regardless of the number of components entered:  All dimension nodes now allow multiple values.",
+                "publicationid": "1d2509cf-9d45-4497-be27-e089d840b9ab",
+                "published_time": "2025-08-20T13:27:52.757"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
             "resource_instance_lifecycle": {
                 "id": "7e3cce56-fbfb-4a4b-8e83-59b9f9e7cb75",
-                "name": "Standard",
+                "name": {
+                    "en": "Standard"
+                },
                 "resource_instance_lifecycle_states": [
                     {
-                        "action_label": "Revert to Draft",
+                        "action_label": {
+                            "en": "Revert to Draft"
+                        },
                         "can_delete_resource_instances": true,
                         "can_edit_resource_instances": true,
                         "id": "9375c9a7-dad2-4f14-a5c1-d7e329fdde4f",
                         "is_initial_state": true,
-                        "name": "Draft",
+                        "name": {
+                            "en": "Draft"
+                        },
                         "next_resource_instance_lifecycle_states": [
                             "f75bb034-36e3-4ab4-8167-f520cf0b4c58"
                         ],
@@ -32616,12 +32622,16 @@
                         "resource_instance_lifecycle_id": "7e3cce56-fbfb-4a4b-8e83-59b9f9e7cb75"
                     },
                     {
-                        "action_label": "Make Active",
+                        "action_label": {
+                            "en": "Make Active"
+                        },
                         "can_delete_resource_instances": false,
                         "can_edit_resource_instances": true,
                         "id": "f75bb034-36e3-4ab4-8167-f520cf0b4c58",
                         "is_initial_state": false,
-                        "name": "Active",
+                        "name": {
+                            "en": "Active"
+                        },
                         "next_resource_instance_lifecycle_states": [
                             "d95d9c0e-0e2c-4450-93a3-d788b91abcc8"
                         ],
@@ -32631,12 +32641,16 @@
                         "resource_instance_lifecycle_id": "7e3cce56-fbfb-4a4b-8e83-59b9f9e7cb75"
                     },
                     {
-                        "action_label": "Retire",
+                        "action_label": {
+                            "en": "Retire"
+                        },
                         "can_delete_resource_instances": false,
                         "can_edit_resource_instances": false,
                         "id": "d95d9c0e-0e2c-4450-93a3-d788b91abcc8",
                         "is_initial_state": false,
-                        "name": "Retired",
+                        "name": {
+                            "en": "Retired"
+                        },
                         "next_resource_instance_lifecycle_states": [],
                         "previous_resource_instance_lifecycle_states": [
                             "f75bb034-36e3-4ab4-8167-f520cf0b4c58"
@@ -32673,15 +32687,15 @@
             "subtitle": {
                 "en": "A physical object that can be touched"
             },
-            "template_id": "50000000-0000-0000-0000-000000000002",
+            "template_id": "b0908227-ecc2-48dd-931b-314a9031caa0",
             "user_permissions": {},
             "version": ""
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 14.11 (Postgres.app) on aarch64-apple-darwin20.6.0, compiled by Apple clang version 12.0.5 (clang-1205.0.22.9), 64-bit",
-        "git hash": "6ec898d71a 2025-05-27 17:19:47 -0700",
-        "os": "Darwin",
-        "os version": "23.3.0"
+        "db": "PostgreSQL 16.8 on aarch64-unknown-linux-gnu, compiled by gcc (GCC) 7.3.1 20180712 (Red Hat 7.3.1-17), 64-bit",
+        "git hash": "fatal: not a git repository (or any of the parent directories): .git",
+        "os": "Linux",
+        "os version": "6.8.0-1021-aws"
     }
 }
