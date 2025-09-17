@@ -214,14 +214,11 @@
                 {
                     "card_id": "a90b321d-8900-4c2e-beeb-2e4c5ba48ebe",
                     "config": {
-                        "defaultValue": [
-                            "0fa02b3a-eb9b-4e6c-a0fd-3e948795df10"
-                        ],
+                        "defaultValue": [],
                         "i18n_properties": [
                             "placeholder"
                         ],
                         "label": "General Safety Classification Timespan Type of Name",
-                        "options": [],
                         "placeholder": {
                             "en": "Select an option"
                         }
@@ -234,7 +231,7 @@
                     "sortorder": 1,
                     "source_identifier_id": null,
                     "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000012"
+                    "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
                 },
                 {
                     "card_id": "a76d04de-f19c-4693-83ba-355025cc34b6",
@@ -266,7 +263,6 @@
                             "placeholder"
                         ],
                         "label": "GHS Safety Classification",
-                        "options": [],
                         "placeholder": {
                             "en": "Select an option"
                         }
@@ -279,19 +275,44 @@
                     "sortorder": 9,
                     "source_identifier_id": null,
                     "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000002"
+                    "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
                 },
                 {
                     "card_id": "a90b321d-8900-4c2e-beeb-2e4c5ba48ebe",
                     "config": {
                         "defaultValue": [
-                            "bc35776b-996f-4fc1-bd25-9f6432c1f349"
+                            {
+                                "labels": [
+                                    {
+                                        "id": "bf48b2c6-3485-470c-be5d-37e53f76bade",
+                                        "language_id": "fr",
+                                        "list_item_id": "38729dbe-6d1c-48ce-bf47-e2a18945600e",
+                                        "value": "anglais",
+                                        "valuetype_id": "prefLabel"
+                                    },
+                                    {
+                                        "id": "e32d8c6d-319a-4382-8c26-06e4afb153bf",
+                                        "language_id": "de",
+                                        "list_item_id": "38729dbe-6d1c-48ce-bf47-e2a18945600e",
+                                        "value": "Englisch",
+                                        "valuetype_id": "prefLabel"
+                                    },
+                                    {
+                                        "id": "bc35776b-996f-4fc1-bd25-9f6432c1f349",
+                                        "language_id": "en",
+                                        "list_item_id": "38729dbe-6d1c-48ce-bf47-e2a18945600e",
+                                        "value": "English (language)",
+                                        "valuetype_id": "prefLabel"
+                                    }
+                                ],
+                                "list_id": "f7fc4f6d-fd46-4881-846f-4a08bc1a3fef",
+                                "uri": "http://localhost:8000/plugins/controlled-list-manager/item/38729dbe-6d1c-48ce-bf47-e2a18945600e"
+                            }
                         ],
                         "i18n_properties": [
                             "placeholder"
                         ],
                         "label": "General Safety Classification Timespan Language of Name",
-                        "options": [],
                         "placeholder": {
                             "en": "Select an option"
                         }
@@ -304,7 +325,7 @@
                     "sortorder": 2,
                     "source_identifier_id": null,
                     "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000012"
+                    "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
                 },
                 {
                     "card_id": "4a1e04cb-6073-436e-8ac1-553e0da85421",
@@ -387,7 +408,6 @@
                             "placeholder"
                         ],
                         "label": "GHS Safety Classification",
-                        "options": [],
                         "placeholder": {
                             "en": "Select an option"
                         }
@@ -400,7 +420,7 @@
                     "sortorder": 8,
                     "source_identifier_id": null,
                     "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000012"
+                    "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
                 },
                 {
                     "card_id": "a76d04de-f19c-4693-83ba-355025cc34b6",
@@ -432,7 +452,6 @@
                             "placeholder"
                         ],
                         "label": "NFPA Safety Classification Classification",
-                        "options": [],
                         "placeholder": {
                             "en": "Select an option"
                         }
@@ -445,7 +464,7 @@
                     "sortorder": 4,
                     "source_identifier_id": null,
                     "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000002"
+                    "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
                 },
                 {
                     "card_id": "b3e745f4-b2d8-45f7-8992-8cd8012c2ad4",
@@ -529,7 +548,6 @@
                             "placeholder"
                         ],
                         "label": "NFPA Safety Classification",
-                        "options": [],
                         "placeholder": {
                             "en": "Select an option"
                         }
@@ -542,7 +560,7 @@
                     "sortorder": 3,
                     "source_identifier_id": null,
                     "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000012"
+                    "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
                 },
                 {
                     "card_id": "b3e745f4-b2d8-45f7-8992-8cd8012c2ad4",
@@ -552,7 +570,6 @@
                             "placeholder"
                         ],
                         "label": "Safety Information Document Type",
-                        "options": [],
                         "placeholder": {
                             "en": "Select an option"
                         }
@@ -565,7 +582,7 @@
                     "sortorder": 1,
                     "source_identifier_id": null,
                     "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000002"
+                    "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
                 },
                 {
                     "card_id": "4a1e04cb-6073-436e-8ac1-553e0da85421",
@@ -575,7 +592,6 @@
                             "placeholder"
                         ],
                         "label": "Classificatory Status Time-Span Type",
-                        "options": [],
                         "placeholder": {
                             "en": "Select an option"
                         }
@@ -588,7 +604,7 @@
                     "sortorder": 4,
                     "source_identifier_id": null,
                     "visible": false,
-                    "widget_id": "10000000-0000-0000-0000-000000000012"
+                    "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
                 },
                 {
                     "card_id": "4a1e04cb-6073-436e-8ac1-553e0da85421",
@@ -619,7 +635,6 @@
                             "placeholder"
                         ],
                         "label": "General Safety Classification Type",
-                        "options": [],
                         "placeholder": {
                             "en": "Select an option"
                         }
@@ -632,17 +647,30 @@
                     "sortorder": 2,
                     "source_identifier_id": null,
                     "visible": false,
-                    "widget_id": "10000000-0000-0000-0000-000000000002"
+                    "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
                 },
                 {
                     "card_id": "a76d04de-f19c-4693-83ba-355025cc34b6",
                     "config": {
-                        "defaultValue": "b500d6cd-781a-45f5-9adc-f94b60e23984",
+                        "defaultValue": [
+                            {
+                                "labels": [
+                                    {
+                                        "id": "b500d6cd-781a-45f5-9adc-f94b60e23984",
+                                        "language_id": "en",
+                                        "list_item_id": "17e5dc0a-6e9b-4a9c-8aaf-850c53bb7743",
+                                        "value": "NFPA 704 Hazard Identification System",
+                                        "valuetype_id": "prefLabel"
+                                    }
+                                ],
+                                "list_id": "de36422b-71cb-49dd-9dd6-4366753497bc",
+                                "uri": "http://localhost:8000/plugins/controlled-list-manager/item/17e5dc0a-6e9b-4a9c-8aaf-850c53bb7743"
+                            }
+                        ],
                         "i18n_properties": [
                             "placeholder"
                         ],
                         "label": "General Safety Classification ",
-                        "options": [],
                         "placeholder": {
                             "en": "Select an option"
                         }
@@ -655,7 +683,7 @@
                     "sortorder": 1,
                     "source_identifier_id": null,
                     "visible": false,
-                    "widget_id": "10000000-0000-0000-0000-000000000002"
+                    "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
                 }
             ],
             "color": "rgba(42,157,143,0.5)",
@@ -1171,10 +1199,10 @@
                 {
                     "alias": "general_safety_classification_statement_language",
                     "config": {
-                        "graphid": null,
-                        "rdmCollection": "f7fc4f6d-fd46-4881-846f-4a08bc1a3fef"
+                        "controlledList": "f7fc4f6d-fd46-4881-846f-4a08bc1a3fef",
+                        "multiValue": true
                     },
-                    "datatype": "concept-list",
+                    "datatype": "reference",
                     "description": "# Specific:\n\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
                     "exportable": false,
                     "fieldname": null,
@@ -1197,9 +1225,10 @@
                 {
                     "alias": "ghs_safety_classification_type",
                     "config": {
-                        "rdmCollection": null
+                        "controlledList": "00000000-0000-0000-0000-000000000005",
+                        "multiValue": true
                     },
-                    "datatype": "concept-list",
+                    "datatype": "reference",
                     "description": null,
                     "exportable": false,
                     "fieldname": null,
@@ -1222,9 +1251,10 @@
                 {
                     "alias": "general_safety_classification_type",
                     "config": {
-                        "rdmCollection": "36b79d28-3aef-4d14-97c7-e31777ce3299"
+                        "controlledList": "36b79d28-3aef-4d14-97c7-e31777ce3299",
+                        "multiValue": false
                     },
-                    "datatype": "concept",
+                    "datatype": "reference",
                     "description": null,
                     "exportable": false,
                     "fieldname": null,
@@ -1247,9 +1277,10 @@
                 {
                     "alias": "general_safety_classification_timespan_name_type",
                     "config": {
-                        "rdmCollection": "9f1cf9a8-ce65-455f-ab1e-a9b36e9e23ce"
+                        "controlledList": "9f1cf9a8-ce65-455f-ab1e-a9b36e9e23ce",
+                        "multiValue": true
                     },
-                    "datatype": "concept-list",
+                    "datatype": "reference",
                     "description": "# Specific:\n\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
                     "exportable": false,
                     "fieldname": null,
@@ -1322,9 +1353,10 @@
                 {
                     "alias": "nfpa_safety_classifcation_type",
                     "config": {
-                        "rdmCollection": null
+                        "controlledList": "00000000-0000-0000-0000-000000000005",
+                        "multiValue": true
                     },
-                    "datatype": "concept-list",
+                    "datatype": "reference",
                     "description": null,
                     "exportable": false,
                     "fieldname": null,
@@ -1422,9 +1454,10 @@
                 {
                     "alias": "general_safety_classification_timespan_type",
                     "config": {
-                        "rdmCollection": "c53d3557-e033-4aa1-b020-0dc2b690025f"
+                        "controlledList": "c53d3557-e033-4aa1-b020-0dc2b690025f",
+                        "multiValue": true
                     },
-                    "datatype": "concept-list",
+                    "datatype": "reference",
                     "description": "# Specific:\n\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
                     "exportable": false,
                     "fieldname": null,
@@ -1472,9 +1505,10 @@
                 {
                     "alias": "nfpa_safety_classification_classification",
                     "config": {
-                        "rdmCollection": null
+                        "controlledList": "00000000-0000-0000-0000-000000000005",
+                        "multiValue": false
                     },
-                    "datatype": "concept",
+                    "datatype": "reference",
                     "description": null,
                     "exportable": false,
                     "fieldname": null,
@@ -1534,10 +1568,10 @@
                         "graphs": [
                             {
                                 "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
-                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "name": "Textual Work",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
-                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "useOntologyRelationship": false
                             }
                         ],
@@ -1665,9 +1699,10 @@
                 {
                     "alias": "general_safety_classification_source_reference_type",
                     "config": {
-                        "rdmCollection": "8b7faa16-3846-4360-b767-bb2c823b6550"
+                        "controlledList": "8b7faa16-3846-4360-b767-bb2c823b6550",
+                        "multiValue": false
                     },
-                    "datatype": "concept",
+                    "datatype": "reference",
                     "description": null,
                     "exportable": false,
                     "fieldname": null,
@@ -1693,7 +1728,11 @@
                         "graphs": [
                             {
                                 "graphid": "36956e50-d770-11ef-8f5d-0275dc2ded29",
-                                "name": "Group "
+                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "name": "Group ",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "useOntologyRelationship": false
                             }
                         ],
                         "searchDsl": "",
@@ -1722,9 +1761,10 @@
                 {
                     "alias": "general_safety_classification_statement_type_metatype",
                     "config": {
-                        "rdmCollection": "c82d6f85-ae67-4c28-b07a-c114f6d6ba50"
+                        "controlledList": "c82d6f85-ae67-4c28-b07a-c114f6d6ba50",
+                        "multiValue": false
                     },
-                    "datatype": "concept",
+                    "datatype": "reference",
                     "description": null,
                     "exportable": false,
                     "fieldname": null,
@@ -1753,10 +1793,10 @@
                         "graphs": [
                             {
                                 "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
-                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "name": "Textual Work",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
-                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "useOntologyRelationship": false
                             }
                         ],
@@ -1793,7 +1833,11 @@
                         "graphs": [
                             {
                                 "graphid": "36956e50-d770-11ef-8f5d-0275dc2ded29",
-                                "name": "Group "
+                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "name": "Group ",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "useOntologyRelationship": false
                             }
                         ],
                         "multiplier_if_approximate": 1,
@@ -1825,9 +1869,10 @@
                 {
                     "alias": "general_safety_classification_classification",
                     "config": {
-                        "rdmCollection": "de36422b-71cb-49dd-9dd6-4366753497bc"
+                        "controlledList": "de36422b-71cb-49dd-9dd6-4366753497bc",
+                        "multiValue": false
                     },
-                    "datatype": "concept",
+                    "datatype": "reference",
                     "description": null,
                     "exportable": false,
                     "fieldname": null,
@@ -1901,10 +1946,10 @@
                         "graphs": [
                             {
                                 "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
-                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "name": "Textual Work",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
-                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "useOntologyRelationship": false
                             }
                         ],
@@ -1987,10 +2032,10 @@
                         "graphs": [
                             {
                                 "graphid": "36956e50-d770-11ef-8f5d-0275dc2ded29",
-                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "name": "Group",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
-                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "useOntologyRelationship": false
                             }
                         ],
@@ -2045,9 +2090,10 @@
                 {
                     "alias": "ghs_safety_classification_classification",
                     "config": {
-                        "rdmCollection": null
+                        "controlledList": "00000000-0000-0000-0000-000000000005",
+                        "multiValue": false
                     },
-                    "datatype": "concept",
+                    "datatype": "reference",
                     "description": null,
                     "exportable": false,
                     "fieldname": null,
@@ -2101,9 +2147,10 @@
                 {
                     "alias": "general_safety_classification_timespan_name_language",
                     "config": {
-                        "rdmCollection": "f7fc4f6d-fd46-4881-846f-4a08bc1a3fef"
+                        "controlledList": "f7fc4f6d-fd46-4881-846f-4a08bc1a3fef",
+                        "multiValue": true
                     },
-                    "datatype": "concept-list",
+                    "datatype": "reference",
                     "description": "# Specific:\n\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
                     "exportable": false,
                     "fieldname": null,
@@ -2126,9 +2173,10 @@
                 {
                     "alias": "general_safety_classification_statement_type",
                     "config": {
-                        "rdmCollection": "1adae7ea-4884-432f-af44-c9aea3a48a3d"
+                        "controlledList": "1adae7ea-4884-432f-af44-c9aea3a48a3d",
+                        "multiValue": true
                     },
-                    "datatype": "concept-list",
+                    "datatype": "reference",
                     "description": "# Specific:\n\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
                     "exportable": false,
                     "fieldname": null,
@@ -2153,9 +2201,9 @@
             "publication": {
                 "graph_id": "8debd7bb-a37d-4c87-9ca9-74e96b6b086f",
                 "most_recent_edit_id": null,
-                "notes": null,
-                "publicationid": "97c938d9-9d64-4e32-b5cb-0f77ea53ebd1",
-                "published_time": "2025-07-23T13:32:55.272"
+                "notes": "Migrated resource-instance/resource-instance-list nodes to use ",
+                "publicationid": "772fbd45-5c69-4216-8a4f-39d3b24f2dae",
+                "published_time": "2025-09-16T18:33:32.247"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -2196,9 +2244,9 @@
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 16.8 on aarch64-unknown-linux-gnu, compiled by gcc (GCC) 7.3.1 20180712 (Red Hat 7.3.1-17), 64-bit",
-        "git hash": "fatal: not a git repository (or any of the parent directories): .git",
-        "os": "Linux",
-        "os version": "6.8.0-1021-aws"
+        "db": "PostgreSQL 16.4 (Postgres.app) on aarch64-apple-darwin21.6.0, compiled by Apple clang version 14.0.0 (clang-1400.0.29.102), 64-bit",
+        "git hash": "85d6c42fbd 2025-09-05 17:08:16 -0700",
+        "os": "Darwin",
+        "os version": "24.6.0"
     }
 }

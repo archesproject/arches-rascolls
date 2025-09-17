@@ -131,7 +131,6 @@
                             "placeholder"
                         ],
                         "label": "Dimension Type",
-                        "options": [],
                         "placeholder": {
                             "en": "Select an option"
                         }
@@ -144,7 +143,7 @@
                     "sortorder": 0,
                     "source_identifier_id": null,
                     "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000002"
+                    "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
                 },
                 {
                     "card_id": "504730b1-b921-402e-b5b1-f78172b20267",
@@ -154,7 +153,6 @@
                             "placeholder"
                         ],
                         "label": "Unit",
-                        "options": [],
                         "placeholder": {
                             "en": "Select an option"
                         }
@@ -167,7 +165,7 @@
                     "sortorder": 2,
                     "source_identifier_id": null,
                     "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000002"
+                    "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
                 },
                 {
                     "card_id": "504730b1-b921-402e-b5b1-f78172b20267",
@@ -1150,9 +1148,10 @@
                 {
                     "alias": "part_dimension_unit",
                     "config": {
-                        "rdmCollection": "44295221-1215-4359-a079-234b317f65b7"
+                        "controlledList": "44295221-1215-4359-a079-234b317f65b7",
+                        "multiValue": false
                     },
-                    "datatype": "concept",
+                    "datatype": "reference",
                     "description": "# Specific:\n\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
                     "exportable": false,
                     "fieldname": null,
@@ -1275,9 +1274,10 @@
                 {
                     "alias": "part_dimension_type_",
                     "config": {
-                        "rdmCollection": "c9e838f8-7660-4701-821c-721dac98a10b"
+                        "controlledList": "c9e838f8-7660-4701-821c-721dac98a10b",
+                        "multiValue": false
                     },
-                    "datatype": "concept",
+                    "datatype": "reference",
                     "description": "# Specific:\n\n\n# General:\nIn order to make data both consistent and able to be customized to specific scenarios, nodes can be classified with terms from controlled vocabularies. This field gives a way to be more specific about the sort of entity, while maintaining the core information using the ontology class. See: https://linked.art/model/base/#types-and-classifications\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
                     "exportable": false,
                     "fieldname": null,
@@ -1328,10 +1328,10 @@
                         "graphs": [
                             {
                                 "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
-                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "name": "Textual Work",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
-                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "useOntologyRelationship": false
                             }
                         ],
@@ -1363,9 +1363,9 @@
             "publication": {
                 "graph_id": "00e92c81-92e7-4996-9e58-ca94bd948967",
                 "most_recent_edit_id": null,
-                "notes": null,
-                "publicationid": "3add2526-568d-4039-b95a-47583dba5bc9",
-                "published_time": "2025-08-15T14:27:04.430"
+                "notes": "Migrated resource-instance/resource-instance-list nodes to use ",
+                "publicationid": "a8e7d06e-e179-49e5-ab52-ee03b54ae184",
+                "published_time": "2025-09-16T18:33:40.332"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -1406,9 +1406,9 @@
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 16.8 on aarch64-unknown-linux-gnu, compiled by gcc (GCC) 7.3.1 20180712 (Red Hat 7.3.1-17), 64-bit",
-        "git hash": "fatal: not a git repository (or any of the parent directories): .git",
-        "os": "Linux",
-        "os version": "6.8.0-1021-aws"
+        "db": "PostgreSQL 16.4 (Postgres.app) on aarch64-apple-darwin21.6.0, compiled by Apple clang version 14.0.0 (clang-1400.0.29.102), 64-bit",
+        "git hash": "85d6c42fbd 2025-09-05 17:08:16 -0700",
+        "os": "Darwin",
+        "os version": "24.6.0"
     }
 }
