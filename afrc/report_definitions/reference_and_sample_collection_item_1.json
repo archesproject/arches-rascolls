@@ -1,0 +1,84 @@
+{
+    "section_definitions": {
+        "General": {"components": [
+            {"name":"Common name, Additional names", "nodegroup": "name", "nodes": ["name_content", "name_type_", "name_language_"]},
+            {"name":"Sample Type", "nodegroup": "material", "nodes": ["material"]},
+            {"name":"Physical Form", "nodegroup": "statement", "nodes": ["statement_content"]},
+            {"name":"Color", "nodegroup": "has_color", "nodes": ["color_name_content", "color_type"]},
+            {"name":"Color Index (cnh - not mapped afaik)", "nodegroup": "", "nodes": []},
+            {"name":"Origination date", "nodegroup": "production_time", "nodes": ["production_time_begin_of_the_begin"]},
+            {"name":"Barcode", "nodegroup": "identifier", "nodes": ["identifier_content", "identifier_type"]},
+            {"name":"Old barcode (cnh - note mapped afaik)", "nodegroup": "", "nodes": []},
+            {"name":"Grid location (current location)", "nodegroup": "current_location", "nodes": ["current_location"]}
+        ]},
+        "Acquisition": {"components": [
+            {"name": "Manufacturer", "nodegroup": "production", "nodes": ["production_carried_out_by"]},
+            {"name": "Catalog number (cnh - not mapped afaik)", "nodegroup": "", "nodes": []},
+            {"name": "Acquisition date (cnh - provenance)", "nodegroup": "", "nodes": []},
+            {"name": "Geographic origin", "nodegroup": "production_location", "nodes": ["production_location"]},
+            {"name": "Acquired by (cnh - provenance)", "nodegroup": "", "nodes": []},
+            {"name": "Acquired from (cnh - provenance)", "nodegroup": "", "nodes": []},
+            {"name": "Contact Name (cnh - provenance -> person)", "nodegroup": "", "nodes": []},
+            {"name": "Phone number (cnh - provenance -> person)", "nodegroup": "", "nodes": []},
+            {"name": "Email (cnh - provenance -> person)", "nodegroup": "", "nodes": []},
+            {"name": "Part of a collection (yes/no)", "nodegroup": "", "nodes": []},
+            {"name": "Collection name", "nodegroup": "member_of", "nodes": ["member_of"]}
+        ]},
+        "Chemical": {"components": [
+            {"name": "Chemical name", "nodegroup": "material_data_assignment_name", "nodes": ["material_data_assignment_name_content"]},
+            {"name": "Chemical formula (cnh - not mapped afaik)", "nodegroup": "", "nodes": []},
+            {"name": "CAS number (cnh - not mapped afaik)", "nodegroup": "", "nodes": []},
+            {"name": "Mass or volume", "nodegroup": "", "nodes": []},
+            {"name": "Compound type  (cnh - not mapped afaik)", "nodegroup": "", "nodes": []},
+            {"name": "Natural/Synthetic (cnh - mapped to attribute type, but attribute not restricted to this property)", "nodegroup": "attribute_type", "nodes": ["attribute_type"]},
+            {"name": "Preparation (cnh - not mapped afaik)", "nodegroup": "", "nodes": []},
+            {"name": "Certified standard (cnh - not mapped in mappings, but using standard type", "nodegroup": "standard_type", "nodes": ["standard_type"]}
+        ]},
+        "Health and Safety": {"components": [
+            {"name": "MSDS available? (yes/no/does not exist) (cnh - not mapped)", "nodegroup": "", "nodes": []},
+            {"name": "NFPA information", "nodegroup": "health_safety_classification", "nodes": ["health_safety_classification_classification", "health_safety_classification_type"]},
+            {"name": "GHS information", "nodegroup": "general_safety_classification", "nodes": ["general_safety_classification_classification", "general_safety_classification_type"]}
+        ]},
+        "Mixture": {"components": [
+            {"name": "Mixture type", "nodegroup": "mixture_type", "nodes": ["mixture_type"]},
+            {"name": "Component 1", "nodegroup": "", "nodes": []},
+            {"name": "Component 2", "nodegroup": "", "nodes": []},
+            {"name": "Component 3", "nodegroup": "", "nodes": []},
+            {"name": "Component 4", "nodegroup": "", "nodes": []}
+        ]},
+        "Additional": {"components": [
+            {"name":"Notes", "nodegroup": "statement", "nodes": ["statement_content"]},
+            {"name": "Experiments on sample (note yet mapped)", "nodegroup": "", "nodes": []}
+        ]},
+        "Available": {"components": [
+            {"name": "Any analysis info/links/references", "nodegroup": "", "nodes": []}
+        ]}
+    },
+    "tabs": [
+        {
+        "name": "Full",
+        "sections": [
+            "General",
+            "Acquisition",
+            "Chemical",
+            "Health and Safety",
+            "Mixture",
+            "Additional",
+            "Available"
+        ]},{
+        "name": "Analysis",
+        "sections": [
+            "General",
+            "Chemical",
+            "Mixture",
+            "Additional",
+            "Available"
+        ]},{
+        "name": "Chemical and Safety",
+        "sections": [
+            "Chemical",
+            "Health and Safety"
+        ]
+    }
+    ]
+}
