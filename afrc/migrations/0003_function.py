@@ -247,7 +247,8 @@ class Migration(migrations.Migration):
         );
     """
 
-    reverse_register_searchable_values_function = """
+    reverse_register_searchable_values_function = """        
+        DELETE FROM public.functions_x_graphs WHERE functionid = 'c75ebc8d-7aae-4c99-981d-4219dbb4b789';
         DELETE FROM public.functions WHERE functionid = 'c75ebc8d-7aae-4c99-981d-4219dbb4b789';
     """
 

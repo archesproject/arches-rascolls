@@ -1,6 +1,5 @@
 {
     "name": "Search Item Details",
-    "slug": "rascolls-search",
     "components": [
         {
             "config": {
@@ -32,7 +31,16 @@
                                     "filters": [
                                         {
                                             "alias": "statement_type",
-                                            "value": "df8e4cf6-9b0b-472f-8986-83d5b2ca28a0"
+                                            "value": [
+                                                {
+                                                    "labels": [
+                                                        {
+                                                            "list_item_id": "f147d843-7622-4109-bd73-c7fb05f1adea"
+                                                        }
+                                                    ]
+                                                }
+                                            ],
+                                            "field_lookup": "contains"
                                         }
                                     ],
                                     "node_aliases": [
@@ -104,7 +112,16 @@
                                     "filters": [
                                         {
                                             "alias": "statement_type",
-                                            "value": "5e89d4e0-392c-4ad4-bd02-e5254e8a4740"
+                                            "value": [
+                                                {
+                                                    "labels": [
+                                                        {
+                                                            "list_item_id": "20d28e7a-0d4f-4055-b1cd-cf6f264e8432"
+                                                        }
+                                                    ]
+                                                }
+                                            ],
+                                            "field_lookup": "contains"
                                         }
                                     ],
                                     "node_aliases": [
