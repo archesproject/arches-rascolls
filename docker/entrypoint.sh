@@ -115,7 +115,7 @@ run_load_package() {
 	echo "----- *** LOADING PACKAGE: ${ARCHES_PROJECT} *** -----"
 	echo ""
 	cd ${APP_FOLDER}
-	python3 manage.py packages -o load_package -a afrc -db -dev -y
+	python3 manage.py packages -o load_package -a arches_rascolls -db -dev -y
 }
 
 # "exec" means that it will finish building???
@@ -135,7 +135,7 @@ run_dev_server() {
 	echo ""
 	cd ${APP_FOLDER}
     echo "Running Django"
-	exec /bin/bash -c "source ../ENV/bin/activate && cd /web_root/arches-rascolls/ && pip install -e . && cd ../arches-controlled-lists/ && pip install -e . && cd ../arches-modular-reports/ && pip install -e . && cd ../arches-querysets/ && pip install -e . && cd ../arches-component-lab/ && pip install -e . && cd ../arches && pip install -e . && cd ../arches-rascolls && pip3 install debugpy -t /tmp && python -Wdefault /tmp/debugpy --listen 0.0.0.0:5678 manage.py runserver 0.0.0.0:${DJANGO_PORT}"
+	exec /bin/bash -c "source ../ENV/bin/activate && cd /web_root/arches-rascolls/ && pip install -e . && cd ../arches-controlled-lists/ && pip install -e . && cd ../arches-modular-reports/ && pip install -e . && cd ../arches-querysets/ && cd ../arches-search && pip install -e . && pip install -e . && cd ../arches-component-lab/ && pip install -e . && cd ../arches && pip install -e . && cd ../arches-rascolls && pip3 install debugpy -t /tmp && python -Wdefault /tmp/debugpy --listen 0.0.0.0:5678 manage.py runserver 0.0.0.0:${DJANGO_PORT}"
 }
 
 # "exec" means that it will finish building???
@@ -145,7 +145,7 @@ run_gunicorn() {
 	echo ""
 	cd ${APP_ROOT}
     echo "Running Django"
-	exec /bin/bash -c "source ../ENV/bin/activate && (/etc/init.d/nginx start&) && gunicorn --workers=$(($(nproc)+1)) afrc.wsgi"
+	exec /bin/bash -c "source ../ENV/bin/activate && (/etc/init.d/nginx start&) && gunicorn --workers=$(($(nproc)+1)) arches_rascolls.wsgi"
 }
 
 
@@ -159,7 +159,7 @@ reset_database() {
 	(echo "CREATE DATABASE template_postgis" | ../ENV/bin/python manage.py dbshell --database postgres && \
 	echo "CREATE EXTENSION postgis" | ../ENV/bin/python manage.py dbshell --database postgres))
 	service memcached start&
-	../ENV/bin/python manage.py packages -o load_package -a afrc -db -dev -y
+	../ENV/bin/python manage.py packages -o load_package -a arches_rascolls -db -dev -y
 	../ENV/bin/python manage.py es reindex_database -mp
 }
 
