@@ -1,20 +1,22 @@
 {
     "_comment": "This is a generated file. Do not edit directly.",
     "APP_RELATIVE_PATH": "arches_lingo",
-    "APP_ROOT": "/web_root/arches-rascolls/afrc/",
+    "APP_ROOT": "/web_root/arches-rascolls/arches_rascolls/",
     "ARCHES_APPLICATIONS": [
-        "afrc",
+        "arches_rascolls",
         "arches_modular_reports",
         "arches_querysets",
         "arches_component_lab",
-        "arches_controlled_lists"
+        "arches_controlled_lists",
+        "arches_search"
     ],
     "ARCHES_APPLICATIONS_PATHS": {
-        "afrc": "/web_root/arches-rascolls/afrc/",
+        "arches_rascolls": "/web_root/arches-rascolls/arches_rascolls/",
         "arches_modular_reports": "/web_root/ENV/lib/python3.12/site-packages/arches_modular_reports/",
         "arches_querysets": "/web_root/ENV/lib/python3.12/site-packages/arches_querysets/",
         "arches_component_lab": "/web_root/ENV/lib/python3.12/site-packages/arches_component_lab/",
-        "arches_controlled_lists": "/web_root/ENV/lib/python3.12/site-packages/arches_controlled_lists/"
+        "arches_controlled_lists": "/web_root/ENV/lib/python3.12/site-packages/arches_controlled_lists/",
+        "arches_search": "/web_root/ENV/lib/python3.12/site-packages/arches_search/"
     },
     "SITE_PACKAGES_DIRECTORY": "/web_root/ENV/lib/python3.12/site-packages",
     "ROOT_DIR": "/web_root/ENV/lib/python3.12/site-packages/arches",

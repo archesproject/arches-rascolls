@@ -5,8 +5,8 @@
             "@/arches/*": [
                 "/web_root/ENV/lib/python3.12/site-packages/arches/app/src/arches/*"
             ],
-            "@/arches_for_reference_and_sample_collection/*": [
-                "/web_root/arches-rascolls/afrc/src/afrc/*"
+            "@/arches_rascolls/*": [
+                "/web_root/arches-rascolls/arches_rascolls/src/arches_rascolls/*"
             ],
             "@/arches_querysets/*": [
                 "/web_root/ENV/lib/python3.12/site-packages/arches_querysets/src/arches_querysets/*"
@@ -19,6 +19,9 @@
             ],
             "@/arches_controlled_lists/*": [
                 "/web_root/ENV/lib/python3.12/site-packages/arches_controlled_lists/src/arches_controlled_lists/*"
+            ],            
+            "@/arches_search/*": [
+                "/web_root/ENV/lib/python3.12/site-packages/arches_search/src/arches_search/*"
             ],
             "*": [
                 "../node_modules/*"

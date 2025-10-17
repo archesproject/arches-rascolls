@@ -16,6 +16,7 @@ services:
             - ../arches-modular-reports:/web_root/arches-modular-reports
             - ../arches-controlled-lists:/web_root/arches-controlled-lists
             - ../arches-component-lab:/web_root/arches-component-lab
+            - ../arches-search:/web_root/arches-search
             - $HOME/.aws/:/root/.aws/
         ports:
             - ${HOST_PROJECT_PORT:-8060}:80
