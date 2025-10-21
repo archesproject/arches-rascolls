@@ -22,7 +22,7 @@ class Migration(migrations.Migration):
                 "pkg",
                 "reference_data",
                 "controlled_lists",
-                "rascolls_lists.json",
+                "rascolls_lists.xml",
             ),
             stdout=io.StringIO(),
         )
