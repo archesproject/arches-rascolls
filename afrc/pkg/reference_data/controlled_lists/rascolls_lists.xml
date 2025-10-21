@@ -262,7 +262,7 @@
     <dcterms:identifier>http://localhost:8000/plugins/controlled-list-manager/item/55801709-9719-473f-9608-949f08b32eb7</dcterms:identifier>
   </skos:Concept>
   <skos:Concept rdf:about="https://rascoll.usw1.gci.fargeo.net/31ea3a41-4561-4e0e-af20-00157fe9715b">
-    <skos:prefLabel xml:lang="en-US">printmaking</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">printmaking</skos:prefLabel>
     <dcterms:identifier>http://localhost:8000/plugins/controlled-list-manager/item/31ea3a41-4561-4e0e-af20-00157fe9715b</dcterms:identifier>
     <skos:inScheme>
       <skos:ConceptScheme rdf:about="https://rascoll.usw1.gci.fargeo.net/f0b85b97-f3ae-41dd-ac4e-6f1e249a9dbb">
@@ -306,7 +306,7 @@
   </skos:Concept>
   <skos:Concept rdf:about="https://rascoll.usw1.gci.fargeo.net/fde9f103-4536-4d8d-8882-9efb5084362c">
     <dcterms:identifier>http://localhost:8000/plugins/controlled-list-manager/item/fde9f103-4536-4d8d-8882-9efb5084362c</dcterms:identifier>
-    <skos:prefLabel xml:lang="en-US">display title</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">display title</skos:prefLabel>
     <skos:inScheme>
       <skos:ConceptScheme rdf:about="https://rascoll.usw1.gci.fargeo.net/9f1cf9a8-ce65-455f-ab1e-a9b36e9e23ce">
         <dcterms:title>Name Types - Physical Thing</dcterms:title>
@@ -594,7 +594,7 @@
     <skos:prefLabel xml:lang="en">resolution (optical concept)</skos:prefLabel>
   </skos:Concept>
   <skos:Concept rdf:about="https://rascoll.usw1.gci.fargeo.net/b42fd6eb-b396-4ae0-926c-09f9a516f873">
-    <skos:prefLabel xml:lang="en-US">exhibition catalogs</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">exhibition catalogs</skos:prefLabel>
     <skos:inScheme rdf:resource="https://rascoll.usw1.gci.fargeo.net/e480165f-44d2-4ec4-b13a-f246270f06af"/>
     <skos:prefLabel xml:lang="de">Ausstellungskatalog</skos:prefLabel>
     <arches:sortorder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</arches:sortorder>
@@ -931,8 +931,8 @@
     <skos:inScheme rdf:resource="https://rascoll.usw1.gci.fargeo.net/1adae7ea-4884-432f-af44-c9aea3a48a3d"/>
   </skos:Concept>
   <skos:Concept rdf:about="https://rascoll.usw1.gci.fargeo.net/06f2d128-8ee0-4562-a8c8-509a22ae6958">
-    <skos:scopeNote xml:lang="en-US">No AAT Identifier yet</skos:scopeNote>
-    <skos:prefLabel xml:lang="en-US">Spreadsheet</skos:prefLabel>
+    <skos:scopeNote xml:lang="en">No AAT Identifier yet</skos:scopeNote>
+    <skos:prefLabel xml:lang="en">Spreadsheet</skos:prefLabel>
     <dcterms:identifier>http://localhost:8000/plugins/controlled-list-manager/item/f7dda933-9221-4555-a828-493962ab9411</dcterms:identifier>
     <skos:inScheme>
       <skos:ConceptScheme rdf:about="https://rascoll.usw1.gci.fargeo.net/933cf221-2d71-478f-998a-a5e088457971">
@@ -1103,7 +1103,7 @@
   </skos:Concept>
   <skos:Concept rdf:about="https://rascoll.usw1.gci.fargeo.net/d6a36ca5-c661-4dfd-9903-6a502eb52bbb">
     <dcterms:identifier>http://localhost:8000/plugins/controlled-list-manager/item/d6a36ca5-c661-4dfd-9903-6a502eb52bbb</dcterms:identifier>
-    <skos:prefLabel xml:lang="en-US">treatment study</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">treatment study</skos:prefLabel>
     <skos:inScheme>
       <skos:ConceptScheme rdf:about="https://rascoll.usw1.gci.fargeo.net/35ed167d-ab89-4f38-b046-3349256be725">
         <dcterms:title>Techniques</dcterms:title>
@@ -1290,7 +1290,7 @@
     <arches:sortorder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</arches:sortorder>
     <dcterms:identifier>http://localhost:8000/plugins/controlled-list-manager/item/1682fbb6-52a3-46be-9488-8e50d1804172</dcterms:identifier>
     <skos:inScheme rdf:resource="https://rascoll.usw1.gci.fargeo.net/079561dc-4c8f-40db-b658-c2fd5acdb3f2"/>
-    <skos:prefLabel xml:lang="en-US">infrared radiation</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">infrared radiation</skos:prefLabel>
     <skos:prefLabel xml:lang="en">infrared radiation</skos:prefLabel>
     <skos:scopeNote xml:lang="en">Refers to that portion of the electromagnetic spectrum beyond that visible to the human eye. Infrared radiation has waves longer than red light and shorter than the shortest microwaves. Though not visible, it may be detected as the sensation of heat.</skos:scopeNote>
   </skos:Concept>
@@ -1970,7 +1970,7 @@
   </skos:Concept>
   <skos:Concept rdf:about="https://rascoll.usw1.gci.fargeo.net/a217dc9a-65c8-4029-907e-c16af90e3995">
     <skos:prefLabel xml:lang="pt">cinza</skos:prefLabel>
-    <skos:prefLabel xml:lang="en-US">gray (color)</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">gray (color)</skos:prefLabel>
     <skos:inScheme rdf:resource="https://rascoll.usw1.gci.fargeo.net/1008354b-3ac2-4a8c-88b8-6aad2302a916"/>
     <dcterms:identifier>http://localhost:8000/plugins/controlled-list-manager/item/a217dc9a-65c8-4029-907e-c16af90e3995</dcterms:identifier>
     <arches:sortorder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</arches:sortorder>
@@ -2177,7 +2177,7 @@
     <dcterms:identifier>http://localhost:8000/plugins/controlled-list-manager/item/97c77b61-26be-4e34-8b03-0938feb915a3</dcterms:identifier>
     <skos:inScheme rdf:resource="https://rascoll.usw1.gci.fargeo.net/35ed167d-ab89-4f38-b046-3349256be725"/>
     <skos:scopeNote xml:lang="en">Teaching methodology using cases as a pedagogical tool in fields such as law, business, medicine, and education. Cases may include real and imagined scenarios, critical incident analysis, case studies, vignettes, and anecdotal accounts.</skos:scopeNote>
-    <skos:prefLabel xml:lang="en-US">case study</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">case study</skos:prefLabel>
     <arches:sortorder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</arches:sortorder>
   </skos:Concept>
   <skos:Concept rdf:about="https://rascoll.usw1.gci.fargeo.net/fdb282ff-4e71-4334-9993-46956fc2b64d">
@@ -2243,7 +2243,7 @@
   <skos:Concept rdf:about="https://rascoll.usw1.gci.fargeo.net/6d8445c5-45ad-4a3b-855d-2613bb5d8351">
     <skos:inScheme rdf:resource="https://rascoll.usw1.gci.fargeo.net/1adae7ea-4884-432f-af44-c9aea3a48a3d"/>
     <arches:sortorder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</arches:sortorder>
-    <skos:prefLabel xml:lang="en-US">producer description</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">producer description</skos:prefLabel>
     <dcterms:identifier>http://localhost:8000/plugins/controlled-list-manager/item/8a8ee459-ed32-4bd5-9235-518529188060</dcterms:identifier>
   </skos:Concept>
   <skos:Concept rdf:about="https://rascoll.usw1.gci.fargeo.net/3c0e3888-fe18-4140-9341-05cbb6d9f1bf">
@@ -2592,7 +2592,7 @@
   </skos:Concept>
   <skos:Concept rdf:about="https://rascoll.usw1.gci.fargeo.net/1bef9076-8fcc-421f-9ac9-7efd152570ef">
     <dcterms:identifier>http://localhost:8000/plugins/controlled-list-manager/item/1bef9076-8fcc-421f-9ac9-7efd152570ef</dcterms:identifier>
-    <skos:prefLabel xml:lang="en-US">fundamental methods research</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">fundamental methods research</skos:prefLabel>
     <skos:inScheme rdf:resource="https://rascoll.usw1.gci.fargeo.net/35ed167d-ab89-4f38-b046-3349256be725"/>
     <arches:sortorder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</arches:sortorder>
   </skos:Concept>
@@ -2739,7 +2739,7 @@
     <skos:prefLabel xml:lang="pt">multicolorido</skos:prefLabel>
     <skos:scopeNote xml:lang="pt">Refere-se geralmente ao uso de muitas cores.</skos:scopeNote>
     <skos:scopeNote xml:lang="en">Refers generally to the use of many colors.</skos:scopeNote>
-    <skos:prefLabel xml:lang="en-US">multicolored</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">multicolored</skos:prefLabel>
     <skos:inScheme rdf:resource="https://rascoll.usw1.gci.fargeo.net/1008354b-3ac2-4a8c-88b8-6aad2302a916"/>
     <dcterms:identifier>http://localhost:8000/plugins/controlled-list-manager/item/c5138b91-6783-4e66-88e9-2758d55148f3</dcterms:identifier>
     <arches:sortorder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</arches:sortorder>
@@ -2773,7 +2773,7 @@
     <skos:scopeNote xml:lang="en">Transparent aqueous based paint produced by mixing ground pigments with water and, generally, gum arabic; paints made with vegetable gum binders were used by Egyptian, Greek, and Roman artists for wall paintings. Japanese and Chinese painters extensively used watercolor paints on silk panels and delicate paper scrolls. In the 16th through18th century, watercolor paints were used for miniature illustrations on porcelain, ivory, cards, books and manuscripts. By the 18th and early 19th centuries, watercolors rapidly increased in popularity due to the availability of small cakes of watercolor paints in metal pans, usually applied to a paper support by using a brush.</skos:scopeNote>
     <skos:prefLabel xml:lang="de">Aquarell</skos:prefLabel>
     <dcterms:identifier>http://localhost:8000/plugins/controlled-list-manager/item/1914c881-21d4-4de3-8637-301b2178ebec</dcterms:identifier>
-    <skos:prefLabel xml:lang="en-US">watercolor (paint)</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">watercolor (paint)</skos:prefLabel>
     <skos:prefLabel xml:lang="fr">aquarelle (peinture)</skos:prefLabel>
   </skos:Concept>
   <skos:Concept rdf:about="https://rascoll.usw1.gci.fargeo.net/d914f4ea-64f4-3ec6-a37c-2b83e1f92c80">
@@ -2887,7 +2887,7 @@
     <skos:scopeNote xml:lang="pt">Sem cor, ou sem atributos de cor óbvios. Geralmente usado para descrever vidro ou gemas</skos:scopeNote>
     <skos:prefLabel xml:lang="pt">incolor</skos:prefLabel>
     <arches:sortorder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</arches:sortorder>
-    <skos:prefLabel xml:lang="en-US">colorless</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">colorless</skos:prefLabel>
     <skos:inScheme rdf:resource="https://rascoll.usw1.gci.fargeo.net/1008354b-3ac2-4a8c-88b8-6aad2302a916"/>
   </skos:Concept>
   <skos:Concept rdf:about="https://rascoll.usw1.gci.fargeo.net/d615bfb7-1503-42ab-8bdf-ab384ca24be6">
@@ -3548,7 +3548,7 @@
   </skos:Concept>
   <skos:Concept rdf:about="https://rascoll.usw1.gci.fargeo.net/5bc20189-e804-45e2-bb65-b8d6c0ceda3b">
     <skos:inScheme rdf:resource="https://rascoll.usw1.gci.fargeo.net/7a8d3213-0a64-4f31-92a4-191b41236ae9"/>
-    <skos:prefLabel xml:lang="en-US">Getty Digital Object Repository (DOR) Integer Identifier (ID)</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Getty Digital Object Repository (DOR) Integer Identifier (ID)</skos:prefLabel>
     <arches:sortorder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</arches:sortorder>
     <dcterms:identifier>http://localhost:8000/plugins/controlled-list-manager/item/5bc20189-e804-45e2-bb65-b8d6c0ceda3b</dcterms:identifier>
   </skos:Concept>
@@ -3567,7 +3567,7 @@
   </skos:Concept>
   <skos:Concept rdf:about="https://rascoll.usw1.gci.fargeo.net/60a64ca0-b6db-40da-b18c-6310515d22da">
     <arches:sortorder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</arches:sortorder>
-    <skos:prefLabel xml:lang="en-US">applied research</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">applied research</skos:prefLabel>
     <dcterms:identifier>http://localhost:8000/plugins/controlled-list-manager/item/60a64ca0-b6db-40da-b18c-6310515d22da</dcterms:identifier>
     <skos:inScheme rdf:resource="https://rascoll.usw1.gci.fargeo.net/35ed167d-ab89-4f38-b046-3349256be725"/>
   </skos:Concept>
@@ -3868,7 +3868,7 @@
     <skos:inScheme rdf:resource="https://rascoll.usw1.gci.fargeo.net/7a8d3213-0a64-4f31-92a4-191b41236ae9"/>
     <arches:sortorder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</arches:sortorder>
     <dcterms:identifier>http://localhost:8000/plugins/controlled-list-manager/item/45eeaca7-077d-45d2-9a3b-34268ddd9ea6</dcterms:identifier>
-    <skos:prefLabel xml:lang="en-US">Gallery Systems' The Museum System (TMS) Integer Identifier (ID)</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Gallery Systems' The Museum System (TMS) Integer Identifier (ID)</skos:prefLabel>
   </skos:Concept>
   <skos:Concept rdf:about="https://rascoll.usw1.gci.fargeo.net/2b43ddad-7ab5-44c8-b943-020f7771de06">
     <skos:prefLabel xml:lang="en">Portuguese (language)</skos:prefLabel>
@@ -4068,7 +4068,7 @@
     <skos:inScheme rdf:resource="https://rascoll.usw1.gci.fargeo.net/8b7faa16-3846-4360-b767-bb2c823b6550"/>
     <arches:sortorder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</arches:sortorder>
     <skos:scopeNote xml:lang="en">Studying or investigating a particular subject in its natural setting.</skos:scopeNote>
-    <skos:prefLabel xml:lang="en-US">fieldwork (research)</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">fieldwork (research)</skos:prefLabel>
   </skos:Concept>
   <skos:Concept rdf:about="https://rascoll.usw1.gci.fargeo.net/1421293e-ad4d-4166-a199-d076622b2596">
     <skos:prefLabel xml:lang="en">first names</skos:prefLabel>
@@ -4172,7 +4172,7 @@
   </skos:Concept>
   <skos:Concept rdf:about="https://rascoll.usw1.gci.fargeo.net/e0cb15ca-32ae-497b-8d65-cab3ba98c4cc">
     <arches:sortorder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</arches:sortorder>
-    <skos:prefLabel xml:lang="en-US">color (perceived attribute)</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">color (perceived attribute)</skos:prefLabel>
     <skos:scopeNote xml:lang="pt">Refere-se a um atributo geral percebido de um objeto ou luz resultante da resposta da visão ao comprimento de onda da luz refletida ou transmitida. As principais dimensões da cor ao discutir pintura são as variáveis ​​ou atributos de matiz, tom e intensidade. Ao se referir a cores cromáticas individuais e cores acromáticas ou neutras, use "cores (ou matizes)</skos:scopeNote>
     <dcterms:identifier>http://localhost:8000/plugins/controlled-list-manager/item/e0cb15ca-32ae-497b-8d65-cab3ba98c4cc</dcterms:identifier>
     <skos:scopeNote xml:lang="en">Refers to a general perceived attribute of an object or light resulting from the response of vision to the wavelength of reflected or transmitted light. The principal dimensions of color when discussing painting are the variables or attributes of hue, tone, and intensity. When referring to individual chromatic colors and achromatic colors or neutrals, use "colors (hues or tints)."</skos:scopeNote>
@@ -4687,7 +4687,7 @@ See: https://en.wikipedia.org/wiki/Chemical_nomenclature</skos:scopeNote>
   </skos:Concept>
   <skos:Concept rdf:about="https://rascoll.usw1.gci.fargeo.net/d3a32755-c1ab-4e04-9a3b-9bc1b20583b1">
     <dcterms:identifier>http://localhost:8000/plugins/controlled-list-manager/item/d3a32755-c1ab-4e04-9a3b-9bc1b20583b1</dcterms:identifier>
-    <skos:prefLabel xml:lang="en-US">auction catalogs</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">auction catalogs</skos:prefLabel>
     <skos:inScheme rdf:resource="https://rascoll.usw1.gci.fargeo.net/e480165f-44d2-4ec4-b13a-f246270f06af"/>
     <arches:sortorder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</arches:sortorder>
     <skos:scopeNote xml:lang="en">A listing of items, including works of art, manuscripts, books, or other items, that are for sale by auction.</skos:scopeNote>
@@ -4770,7 +4770,7 @@ See: https://en.wikipedia.org/wiki/Chemical_nomenclature</skos:scopeNote>
         <dcterms:title>Group Joining Types</dcterms:title>
       </skos:ConceptScheme>
     </skos:inScheme>
-    <skos:prefLabel xml:lang="en-US">Joining as Participant</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Joining as Participant</skos:prefLabel>
     <arches:sortorder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</arches:sortorder>
   </skos:Concept>
   <skos:Concept rdf:about="https://rascoll.usw1.gci.fargeo.net/e7befa7c-6fc9-49c4-b7a0-162aecf4923c">
@@ -5235,7 +5235,7 @@ See: https://en.wikipedia.org/wiki/Chemical_nomenclature</skos:scopeNote>
     <dcterms:identifier>http://localhost:8000/plugins/controlled-list-manager/item/5bc20189-e804-45e2-bb65-b8d6c0ceda3b</dcterms:identifier>
     <arches:sortorder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</arches:sortorder>
     <skos:inScheme rdf:resource="https://rascoll.usw1.gci.fargeo.net/f4a87a34-8288-4cec-8e20-b28bd567ce0a"/>
-    <skos:prefLabel xml:lang="en-US">Getty Digital Object Repository (DOR) Integer Identifier (ID)</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Getty Digital Object Repository (DOR) Integer Identifier (ID)</skos:prefLabel>
   </skos:Concept>
   <skos:Concept rdf:about="https://rascoll.usw1.gci.fargeo.net/85b8c15a-2c36-4241-b0f8-2b6bbda80758">
     <skos:prefLabel xml:lang="en">internal identifier</skos:prefLabel>
@@ -5554,7 +5554,7 @@ See: https://en.wikipedia.org/wiki/Chemical_nomenclature</skos:scopeNote>
   </skos:Concept>
   <skos:Concept rdf:about="https://rascoll.usw1.gci.fargeo.net/f3612d52-0bdb-471d-afec-a3378c25b452">
     <skos:prefLabel xml:lang="de">Verkaufskatalog</skos:prefLabel>
-    <skos:prefLabel xml:lang="en-US">sales catalogs</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">sales catalogs</skos:prefLabel>
     <skos:scopeNote xml:lang="en">Catalogs that enumerate items that are for sale.</skos:scopeNote>
     <skos:inScheme rdf:resource="https://rascoll.usw1.gci.fargeo.net/e480165f-44d2-4ec4-b13a-f246270f06af"/>
     <arches:sortorder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</arches:sortorder>
@@ -5796,7 +5796,7 @@ See: https://en.wikipedia.org/wiki/Chemical_nomenclature</skos:scopeNote>
     <skos:inScheme rdf:resource="https://rascoll.usw1.gci.fargeo.net/f44f7240-35c5-49e8-a0e3-2ffe308f0862"/>
   </skos:Concept>
   <skos:Concept rdf:about="https://rascoll.usw1.gci.fargeo.net/0cb8fa21-80b6-4afe-aeca-c9863ed725d6">
-    <skos:prefLabel xml:lang="en-US">place found</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">place found</skos:prefLabel>
     <skos:inScheme rdf:resource="https://rascoll.usw1.gci.fargeo.net/a16a4edc-c916-4293-af98-44d76ce6cba7"/>
     <dcterms:identifier>http://localhost:8000/plugins/controlled-list-manager/item/0cb8fa21-80b6-4afe-aeca-c9863ed725d6</dcterms:identifier>
     <arches:sortorder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</arches:sortorder>
@@ -5816,10 +5816,10 @@ See: https://en.wikipedia.org/wiki/Chemical_nomenclature</skos:scopeNote>
   </skos:Concept>
   <skos:Concept rdf:about="https://rascoll.usw1.gci.fargeo.net/f7dda933-9221-4555-a828-493962ab9411">
     <arches:sortorder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</arches:sortorder>
-    <skos:scopeNote xml:lang="en-US">No AAT Identifier yet</skos:scopeNote>
+    <skos:scopeNote xml:lang="en">No AAT Identifier yet</skos:scopeNote>
     <dcterms:identifier>http://localhost:8000/plugins/controlled-list-manager/item/f7dda933-9221-4555-a828-493962ab9411</dcterms:identifier>
     <skos:inScheme rdf:resource="https://rascoll.usw1.gci.fargeo.net/5da484cb-7537-43be-91cb-dc28c4369efb"/>
-    <skos:prefLabel xml:lang="en-US">Spreadsheet</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Spreadsheet</skos:prefLabel>
   </skos:Concept>
   <skos:Concept rdf:about="https://rascoll.usw1.gci.fargeo.net/680ee22a-cfa1-4e75-8bd8-bc9a8059f979">
     <skos:prefLabel xml:lang="en">location of production of</skos:prefLabel>
@@ -5915,7 +5915,7 @@ See: https://en.wikipedia.org/wiki/Chemical_nomenclature</skos:scopeNote>
   </skos:Concept>
   <skos:Concept rdf:about="https://rascoll.usw1.gci.fargeo.net/0f0f9727-0dee-4ff5-bc8d-201aaf6ab338">
     <arches:sortorder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</arches:sortorder>
-    <skos:prefLabel xml:lang="en-US">catalogue title</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">catalogue title</skos:prefLabel>
     <dcterms:identifier>http://localhost:8000/plugins/controlled-list-manager/item/0f0f9727-0dee-4ff5-bc8d-201aaf6ab338</dcterms:identifier>
     <skos:inScheme rdf:resource="https://rascoll.usw1.gci.fargeo.net/9f1cf9a8-ce65-455f-ab1e-a9b36e9e23ce"/>
   </skos:Concept>
@@ -6222,7 +6222,7 @@ See: https://en.wikipedia.org/wiki/CAS_Registry_Number</skos:scopeNote>
     <dcterms:identifier>http://localhost:8000/plugins/controlled-list-manager/item/1f0d2c15-fdaa-4809-84f6-165cf66a1d3d</dcterms:identifier>
   </skos:Concept>
   <skos:Concept rdf:about="https://rascoll.usw1.gci.fargeo.net/f5cb952f-d620-4a1f-a982-fa8b370412d3">
-    <skos:prefLabel xml:lang="en-US">Getty Digital Object Repository (DOR) Universally Unique Identifier (UUID)</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Getty Digital Object Repository (DOR) Universally Unique Identifier (UUID)</skos:prefLabel>
     <dcterms:identifier>http://localhost:8000/plugins/controlled-list-manager/item/fbc4dc2f-61f7-4d80-969d-d61fdd71de23</dcterms:identifier>
     <skos:inScheme rdf:resource="https://rascoll.usw1.gci.fargeo.net/f4a87a34-8288-4cec-8e20-b28bd567ce0a"/>
     <arches:sortorder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</arches:sortorder>
@@ -6267,7 +6267,7 @@ See: https://en.wikipedia.org/wiki/CAS_Registry_Number</skos:scopeNote>
   <skos:Concept rdf:about="https://rascoll.usw1.gci.fargeo.net/47e940a3-b483-41c9-9430-34c990014764">
     <skos:inScheme rdf:resource="https://rascoll.usw1.gci.fargeo.net/1ad61b29-95db-4885-a5ad-0d037e609488"/>
     <arches:sortorder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</arches:sortorder>
-    <skos:prefLabel xml:lang="en-US">Joining as Contact Point</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Joining as Contact Point</skos:prefLabel>
     <dcterms:identifier>http://localhost:8000/plugins/controlled-list-manager/item/47e940a3-b483-41c9-9430-34c990014764</dcterms:identifier>
   </skos:Concept>
   <skos:Concept rdf:about="https://rascoll.usw1.gci.fargeo.net/90da0a47-a16e-4c3b-9fb5-07fb9df00729">
@@ -6479,7 +6479,7 @@ See: https://en.wikipedia.org/wiki/CAS_Registry_Number</skos:scopeNote>
   </skos:Concept>
   <skos:Concept rdf:about="https://rascoll.usw1.gci.fargeo.net/2c276821-6d7b-421d-bea4-814669f7aa7f">
     <skos:inScheme rdf:resource="https://rascoll.usw1.gci.fargeo.net/44295221-1215-4359-a079-234b317f65b7"/>
-    <skos:prefLabel xml:lang="en-US">centimeters</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">centimeters</skos:prefLabel>
     <skos:scopeNote xml:lang="en">In the metric system, units of length equal to 1/100 of a meter, or .3937 (nearly 2/5) of an inch. </skos:scopeNote>
     <arches:sortorder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</arches:sortorder>
     <dcterms:identifier>http://localhost:8000/plugins/controlled-list-manager/item/2c276821-6d7b-421d-bea4-814669f7aa7f</dcterms:identifier>
@@ -7135,7 +7135,7 @@ See: https://en.wikipedia.org/wiki/CAS_Registry_Number</skos:scopeNote>
     <skos:inScheme rdf:resource="https://rascoll.usw1.gci.fargeo.net/7a8d3213-0a64-4f31-92a4-191b41236ae9"/>
     <arches:sortorder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</arches:sortorder>
     <skos:scopeNote xml:lang="en">Numbers that firms such as commercial art dealers or galleries may assign to objects when taking them in to stock. These are typically written or affixed on the objects themselves, and can be used to associate particular objects with entries in a stock or sales book. These numbers are not necessarily unique, and objects may have multiple stock numbers.</skos:scopeNote>
-    <skos:prefLabel xml:lang="en-US">Object Stock Number</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Object Stock Number</skos:prefLabel>
   </skos:Concept>
   <skos:Concept rdf:about="https://rascoll.usw1.gci.fargeo.net/e49fda8f-fc61-47e3-9d66-127323d9aadb">
     <skos:scopeNote xml:lang="en">Proper names of geographic locations, such as a nations, empires, towns, villages, hills, or lakes.</skos:scopeNote>
@@ -7195,7 +7195,7 @@ See: https://en.wikipedia.org/wiki/CAS_Registry_Number</skos:scopeNote>
   <skos:Concept rdf:about="https://rascoll.usw1.gci.fargeo.net/f899df4e-86eb-4579-aca8-d0cbadc31994">
     <dcterms:identifier>http://localhost:8000/plugins/controlled-list-manager/item/f899df4e-86eb-4579-aca8-d0cbadc31994</dcterms:identifier>
     <arches:sortorder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</arches:sortorder>
-    <skos:prefLabel xml:lang="en-US">Joining as Leader</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Joining as Leader</skos:prefLabel>
     <skos:inScheme rdf:resource="https://rascoll.usw1.gci.fargeo.net/1ad61b29-95db-4885-a5ad-0d037e609488"/>
   </skos:Concept>
   <skos:Concept rdf:about="https://rascoll.usw1.gci.fargeo.net/aba04d36-88c4-4ece-89d5-a7fa4fe8a54e">
@@ -7393,7 +7393,7 @@ See: https://en.wikipedia.org/wiki/CAS_Registry_Number</skos:scopeNote>
     <arches:sortorder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</arches:sortorder>
     <dcterms:identifier>http://localhost:8000/plugins/controlled-list-manager/item/0cb8fa21-80b6-4afe-aeca-c9863ed725d6</dcterms:identifier>
     <skos:inScheme rdf:resource="https://rascoll.usw1.gci.fargeo.net/1adae7ea-4884-432f-af44-c9aea3a48a3d"/>
-    <skos:prefLabel xml:lang="en-US">place found</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">place found</skos:prefLabel>
   </skos:Concept>
   <skos:Concept rdf:about="https://rascoll.usw1.gci.fargeo.net/94326469-5f79-4830-96be-0beb2d3cfc6f">
     <skos:prefLabel xml:lang="en">hypothesis</skos:prefLabel>
@@ -7578,7 +7578,7 @@ See: https://en.wikipedia.org/wiki/CAS_Registry_Number</skos:scopeNote>
   <skos:Concept rdf:about="https://rascoll.usw1.gci.fargeo.net/6ecfc5d9-6082-465b-8294-670ad9c9270e">
     <skos:scopeNote xml:lang="en">Refers to the activity of producing prints as works of art; for the specific processes employed, use such terms as "intaglio printing" or "mezzotint." For the production of other types of printed material, use "printing."</skos:scopeNote>
     <dcterms:identifier>http://localhost:8000/plugins/controlled-list-manager/item/6ecfc5d9-6082-465b-8294-670ad9c9270e</dcterms:identifier>
-    <skos:prefLabel xml:lang="en-US">printmaking</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">printmaking</skos:prefLabel>
     <skos:inScheme rdf:resource="https://rascoll.usw1.gci.fargeo.net/a4095d09-de02-4675-ab63-42227d9e94bc"/>
     <arches:sortorder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</arches:sortorder>
     <skos:prefLabel xml:lang="de">Druckgrafik</skos:prefLabel>
@@ -7602,7 +7602,7 @@ See: https://en.wikipedia.org/wiki/CAS_Registry_Number</skos:scopeNote>
     <skos:prefLabel xml:lang="en">digital source for</skos:prefLabel>
   </skos:Concept>
   <skos:Concept rdf:about="https://rascoll.usw1.gci.fargeo.net/15599306-151c-4508-8e9c-ba0f10a709b0">
-    <skos:prefLabel xml:lang="en-US">scholarly title </skos:prefLabel>
+    <skos:prefLabel xml:lang="en">scholarly title </skos:prefLabel>
     <arches:sortorder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</arches:sortorder>
     <skos:inScheme rdf:resource="https://rascoll.usw1.gci.fargeo.net/9f1cf9a8-ce65-455f-ab1e-a9b36e9e23ce"/>
     <dcterms:identifier>http://localhost:8000/plugins/controlled-list-manager/item/15599306-151c-4508-8e9c-ba0f10a709b0</dcterms:identifier>
@@ -7636,7 +7636,7 @@ See: https://en.wikipedia.org/wiki/CAS_Registry_Number</skos:scopeNote>
       </skos:ConceptScheme>
     </skos:inScheme>
     <arches:sortorder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</arches:sortorder>
-    <skos:prefLabel xml:lang="en-US">is related to</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">is related to</skos:prefLabel>
     <dcterms:identifier>http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007</dcterms:identifier>
   </skos:Concept>
   <skos:Concept rdf:about="https://rascoll.usw1.gci.fargeo.net/bb7e66d2-5567-44fe-ae31-95c6d6419a55">
@@ -8135,7 +8135,7 @@ See: https://en.wikipedia.org/wiki/CAS_Registry_Number</skos:scopeNote>
     <skos:inScheme rdf:resource="https://rascoll.usw1.gci.fargeo.net/1008354b-3ac2-4a8c-88b8-6aad2302a916"/>
     <skos:prefLabel xml:lang="pt">bege</skos:prefLabel>
     <dcterms:identifier>http://localhost:8000/plugins/controlled-list-manager/item/b377fd93-e8ef-4005-ba14-07480fd4e1c6</dcterms:identifier>
-    <skos:prefLabel xml:lang="en-US">beige (color)</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">beige (color)</skos:prefLabel>
     <skos:scopeNote xml:lang="pt">Uma cor variável, geralmente marrom-amarelado-acinzentado claro, referindo-se originalmente à cor da lã não branqueada.</skos:scopeNote>
     <skos:scopeNote xml:lang="en">A variable color generally light grayish-yellowish brown, originally referring to the color of unbleached wool.</skos:scopeNote>
   </skos:Concept>
@@ -8148,7 +8148,7 @@ See: https://en.wikipedia.org/wiki/CAS_Registry_Number</skos:scopeNote>
   <skos:Concept rdf:about="https://rascoll.usw1.gci.fargeo.net/8a8ee459-ed32-4bd5-9235-518529188060">
     <dcterms:identifier>http://localhost:8000/plugins/controlled-list-manager/item/8a8ee459-ed32-4bd5-9235-518529188060</dcterms:identifier>
     <arches:sortorder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</arches:sortorder>
-    <skos:prefLabel xml:lang="en-US">producer description</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">producer description</skos:prefLabel>
     <skos:inScheme rdf:resource="https://rascoll.usw1.gci.fargeo.net/a16a4edc-c916-4293-af98-44d76ce6cba7"/>
   </skos:Concept>
   <skos:Concept rdf:about="https://rascoll.usw1.gci.fargeo.net/3d5fe8da-ee28-44d1-bb12-d736c9ebc8b9">
@@ -8315,7 +8315,7 @@ See: https://en.wikipedia.org/wiki/CAS_Registry_Number</skos:scopeNote>
   <skos:Concept rdf:about="https://rascoll.usw1.gci.fargeo.net/fbc4dc2f-61f7-4d80-969d-d61fdd71de23">
     <skos:inScheme rdf:resource="https://rascoll.usw1.gci.fargeo.net/7a8d3213-0a64-4f31-92a4-191b41236ae9"/>
     <arches:sortorder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</arches:sortorder>
-    <skos:prefLabel xml:lang="en-US">Getty Digital Object Repository (DOR) Universally Unique Identifier (UUID)</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Getty Digital Object Repository (DOR) Universally Unique Identifier (UUID)</skos:prefLabel>
     <dcterms:identifier>http://localhost:8000/plugins/controlled-list-manager/item/fbc4dc2f-61f7-4d80-969d-d61fdd71de23</dcterms:identifier>
   </skos:Concept>
   <skos:Concept rdf:about="https://rascoll.usw1.gci.fargeo.net/914fdcfd-ea1c-445e-84a0-3f00184d23a6">
@@ -8544,7 +8544,7 @@ See: https://en.wikipedia.org/wiki/CAS_Registry_Number</skos:scopeNote>
     <skos:inScheme rdf:resource="https://rascoll.usw1.gci.fargeo.net/cb3e0447-a6f4-4137-b376-99c3c32bd4c6"/>
   </skos:Concept>
   <skos:Concept rdf:about="https://rascoll.usw1.gci.fargeo.net/17324c42-eb04-4527-8ea4-fe6b37ba03d2">
-    <skos:prefLabel xml:lang="en-US">pilot project</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">pilot project</skos:prefLabel>
     <arches:sortorder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</arches:sortorder>
     <skos:inScheme rdf:resource="https://rascoll.usw1.gci.fargeo.net/35ed167d-ab89-4f38-b046-3349256be725"/>
     <dcterms:identifier>http://localhost:8000/plugins/controlled-list-manager/item/17324c42-eb04-4527-8ea4-fe6b37ba03d2</dcterms:identifier>
@@ -8663,7 +8663,7 @@ See: https://en.wikipedia.org/wiki/CAS_Registry_Number</skos:scopeNote>
   </skos:Concept>
   <skos:Concept rdf:about="https://rascoll.usw1.gci.fargeo.net/ce042b1c-f512-4933-9aeb-0552974d51ca">
     <arches:sortorder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</arches:sortorder>
-    <skos:prefLabel xml:lang="en-US">method development</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">method development</skos:prefLabel>
     <skos:inScheme rdf:resource="https://rascoll.usw1.gci.fargeo.net/35ed167d-ab89-4f38-b046-3349256be725"/>
     <dcterms:identifier>http://localhost:8000/plugins/controlled-list-manager/item/ce042b1c-f512-4933-9aeb-0552974d51ca</dcterms:identifier>
   </skos:Concept>
@@ -8750,7 +8750,7 @@ See: https://en.wikipedia.org/wiki/CAS_Registry_Number</skos:scopeNote>
     <skos:scopeNote xml:lang="en">The fundamental units of length in the metric system (International Systems of Units, SI), equivalent to approximately 39.37 inches. Defined as the distance travelled by light in a vacuum in 1/299,792,458 second. Historically, the meter was defined by the French Academy of Sciences in 1791 as 1/10,000,000 of the quadrant of the Earth’s circumference from the North Pole through Paris to the equator. </skos:scopeNote>
     <skos:inScheme rdf:resource="https://rascoll.usw1.gci.fargeo.net/44295221-1215-4359-a079-234b317f65b7"/>
     <dcterms:identifier>http://localhost:8000/plugins/controlled-list-manager/item/ca88ef39-c76c-412a-bf9b-e9c8e3e89e08</dcterms:identifier>
-    <skos:prefLabel xml:lang="en-US">meters (units for distance)</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">meters (units for distance)</skos:prefLabel>
   </skos:Concept>
   <skos:Concept rdf:about="https://rascoll.usw1.gci.fargeo.net/39bbc2d5-6e04-4537-812d-850b91f43549">
     <skos:prefLabel xml:lang="en">session number</skos:prefLabel>
@@ -8861,7 +8861,7 @@ See: https://en.wikipedia.org/wiki/CAS_Registry_Number</skos:scopeNote>
     <dcterms:identifier>http://localhost:8000/plugins/controlled-list-manager/item/929b011e-3cdb-449e-b155-8cd2808ed4c5</dcterms:identifier>
   </skos:Concept>
   <skos:Concept rdf:about="https://rascoll.usw1.gci.fargeo.net/fa5108b1-0643-4605-ad0d-e7a3c22e7fd6">
-    <skos:prefLabel xml:lang="en-US">crowdsourcing</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">crowdsourcing</skos:prefLabel>
     <skos:inScheme rdf:resource="https://rascoll.usw1.gci.fargeo.net/35ed167d-ab89-4f38-b046-3349256be725"/>
     <dcterms:identifier>http://localhost:8000/plugins/controlled-list-manager/item/fa5108b1-0643-4605-ad0d-e7a3c22e7fd6</dcterms:identifier>
     <arches:sortorder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</arches:sortorder>
@@ -8946,7 +8946,7 @@ See: https://en.wikipedia.org/wiki/CAS_Registry_Number</skos:scopeNote>
         <dcterms:title>Properties</dcterms:title>
       </skos:ConceptScheme>
     </skos:inScheme>
-    <skos:prefLabel xml:lang="en-US">p1_is_identified_by</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">p1_is_identified_by</skos:prefLabel>
     <dcterms:identifier>http://localhost:8000/plugins/controlled-list-manager/item/6b031c2a-888a-4637-b853-2c01dc38c132</dcterms:identifier>
     <arches:sortorder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</arches:sortorder>
   </skos:Concept>
@@ -9113,7 +9113,7 @@ See: https://en.wikipedia.org/wiki/CAS_Registry_Number</skos:scopeNote>
   </skos:Concept>
   <skos:Concept rdf:about="https://rascoll.usw1.gci.fargeo.net/9d6c478a-40a9-47df-98df-99d1ae7a86a7">
     <skos:inScheme rdf:resource="https://rascoll.usw1.gci.fargeo.net/f4a87a34-8288-4cec-8e20-b28bd567ce0a"/>
-    <skos:prefLabel xml:lang="en-US">Gallery Systems' The Museum System (TMS) Integer Identifier (ID)</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Gallery Systems' The Museum System (TMS) Integer Identifier (ID)</skos:prefLabel>
     <arches:sortorder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</arches:sortorder>
     <dcterms:identifier>http://localhost:8000/plugins/controlled-list-manager/item/45eeaca7-077d-45d2-9a3b-34268ddd9ea6</dcterms:identifier>
   </skos:Concept>
@@ -9463,7 +9463,7 @@ See: https://en.wikipedia.org/wiki/CAS_Registry_Number</skos:scopeNote>
     <skos:broader rdf:resource="https://rascoll.usw1.gci.fargeo.net/faeaa555-3942-4a7e-9c22-bcfae7e3076b"/>
     <skos:inScheme rdf:resource="https://rascoll.usw1.gci.fargeo.net/1bb3db74-3dff-4e44-a629-7d6a0c1383e9"/>
     <arches:sortorder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</arches:sortorder>
-    <skos:prefLabel xml:lang="en-US">watercolor painting (technique)</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">watercolor painting (technique)</skos:prefLabel>
     <dcterms:identifier>http://localhost:8000/plugins/controlled-list-manager/item/afbf17a2-4e83-4de6-963a-b985dc0f7c35</dcterms:identifier>
   </skos:Concept>
   <skos:Concept rdf:about="https://rascoll.usw1.gci.fargeo.net/2e3e64b3-c802-4bbc-b284-5dbcd50ee4da">
@@ -9515,7 +9515,7 @@ See: https://en.wikipedia.org/wiki/CAS_Registry_Number</skos:scopeNote>
         <skos:narrower rdf:resource="https://rascoll.usw1.gci.fargeo.net/b96656eb-094b-48c3-a491-148df2d5fec0"/>
       </skos:Concept>
     </skos:broader>
-    <skos:prefLabel xml:lang="en-US">color photography</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">color photography</skos:prefLabel>
     <skos:inScheme rdf:resource="https://rascoll.usw1.gci.fargeo.net/3e46a547-fa4b-418d-bca7-18b2a5a50536"/>
     <arches:sortorder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</arches:sortorder>
     <dcterms:identifier>http://localhost:8000/plugins/controlled-list-manager/item/f74ebcee-1474-423a-98e0-eec4a6f70599</dcterms:identifier>
@@ -9526,7 +9526,7 @@ See: https://en.wikipedia.org/wiki/CAS_Registry_Number</skos:scopeNote>
     <arches:sortorder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</arches:sortorder>
     <dcterms:identifier>http://localhost:8000/plugins/controlled-list-manager/item/94bb858b-3d17-41c7-a145-d70fda1822c5</dcterms:identifier>
     <skos:scopeNote xml:lang="en">The technique of painting with pigments in a water-soluble binder and thinned with water, usually on paper. Includes gouache painting, although gouache is not technically watercolor paint.</skos:scopeNote>
-    <skos:prefLabel xml:lang="en-US">watercolor painting (technique)</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">watercolor painting (technique)</skos:prefLabel>
   </skos:Concept>
   <skos:Concept rdf:about="https://rascoll.usw1.gci.fargeo.net/96c6ba52-ac8b-4c26-a020-a8199a851e42">
     <skos:scopeNote xml:lang="en">The art or practice of producing creative works with acrylic paint.</skos:scopeNote>
@@ -9571,7 +9571,7 @@ See: https://en.wikipedia.org/wiki/CAS_Registry_Number</skos:scopeNote>
   </skos:Concept>
   <skos:Concept rdf:about="https://rascoll.usw1.gci.fargeo.net/b96a5716-1e25-4697-b5f9-3afad1627ed4">
     <dcterms:identifier>http://localhost:8000/plugins/controlled-list-manager/item/b96a5716-1e25-4697-b5f9-3afad1627ed4</dcterms:identifier>
-    <skos:prefLabel xml:lang="en-US">color photography</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">color photography</skos:prefLabel>
     <skos:scopeNote xml:lang="en">Generally, the art or practice of taking and/or processing photographs that reproduce hues perceptible to the human eye. Extended to include imagery in which colors have been artificially enhanced or altered. </skos:scopeNote>
     <skos:broader rdf:resource="https://rascoll.usw1.gci.fargeo.net/f2bd260c-a4ba-4b27-ba3b-961f37ca8016"/>
     <skos:inScheme rdf:resource="https://rascoll.usw1.gci.fargeo.net/1bb3db74-3dff-4e44-a629-7d6a0c1383e9"/>
