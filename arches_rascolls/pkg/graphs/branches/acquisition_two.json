@@ -1,0 +1,2964 @@
+{
+    "graph": [
+        {
+            "author": "",
+            "cards": [
+                {
+                    "active": true,
+                    "cardid": "a1855432-7a61-4496-aa82-479d6eb403c5",
+                    "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
+                    "config": null,
+                    "constraints": [],
+                    "cssclass": null,
+                    "description": {
+                        "en": "# Specific:\n\n\n# General:\nIn many cases, current data does not support the level of specificity that the full ontology allows, or the information is simply best expressed in human-readable form. For example, instead of a completely modeled set of parts with materials, many museum collection management systems allow only a single human-readable string for the \"medium\" or \"materials statement\".  Any time that there is a description of the resource, with or without qualification as to the type of description, then this branch can be used to record the descriptive text. See: https://linked.art/model/base/#statements-about-a-resource\n\n# Arches Note:\n\n\n* BranchId: la-statement\n* FieldId: \n"
+                    },
+                    "graph_id": "b1d66bb2-a87c-4faf-8471-1362d7074523",
+                    "helpenabled": false,
+                    "helptext": {
+                        "en": ""
+                    },
+                    "helptitle": {
+                        "en": ""
+                    },
+                    "instructions": {
+                        "en": ""
+                    },
+                    "name": {
+                        "en": "Statement"
+                    },
+                    "nodegroup_id": "82e18ecc-deb4-4981-b49c-aac5187027ae",
+                    "sortorder": 2,
+                    "source_identifier_id": null,
+                    "visible": false
+                },
+                {
+                    "active": true,
+                    "cardid": "baa683dc-45e7-4af0-ac8a-5ddac210090c",
+                    "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
+                    "config": null,
+                    "constraints": [],
+                    "cssclass": null,
+                    "description": {
+                        "en": ""
+                    },
+                    "graph_id": "b1d66bb2-a87c-4faf-8471-1362d7074523",
+                    "helpenabled": false,
+                    "helptext": {
+                        "en": ""
+                    },
+                    "helptitle": {
+                        "en": ""
+                    },
+                    "instructions": {
+                        "en": "Provide the name(s) of a person(s) or group(s) responsible for carrying out the transfer of ownership (organization; gallery, agent) if applicable."
+                    },
+                    "name": {
+                        "en": "acquisition"
+                    },
+                    "nodegroup_id": "d97f1408-41d0-49b6-aa8d-fc06a3ac0861",
+                    "sortorder": 7,
+                    "source_identifier_id": null,
+                    "visible": true
+                },
+                {
+                    "active": true,
+                    "cardid": "bc386b4e-7ec4-4a32-baa2-08e097d09a9e",
+                    "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
+                    "config": null,
+                    "constraints": [],
+                    "cssclass": null,
+                    "description": {
+                        "en": "# Specific:\n\n\n# General:\nTimeSpan is used to record a span of time between two, possibly fuzzy, points. It can also have a known duration between those points.  For example, a 1 week activity might occur sometime between the first and third quarters of the year. See: https://linked.art/model/base/#time-span-details\n\n# Arches Note:\n\n\n* BranchId: la-timespan\n* FieldId: \n"
+                    },
+                    "graph_id": "b1d66bb2-a87c-4faf-8471-1362d7074523",
+                    "helpenabled": false,
+                    "helptext": {
+                        "en": ""
+                    },
+                    "helptitle": {
+                        "en": ""
+                    },
+                    "instructions": {
+                        "en": ""
+                    },
+                    "name": {
+                        "en": "TimeSpan of Transfer of Ownership"
+                    },
+                    "nodegroup_id": "4e3add35-8db4-465e-a0d6-7d004e9aef1e",
+                    "sortorder": 0,
+                    "source_identifier_id": null,
+                    "visible": false
+                },
+                {
+                    "active": true,
+                    "cardid": "f406e2a0-d2be-4c61-a1e8-eeea55758db7",
+                    "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
+                    "config": null,
+                    "constraints": [],
+                    "cssclass": null,
+                    "description": {
+                        "en": "# Specific:\n\n\n# General:\nIt is strongly recommended that every resource that should be rendered to an end user have at least one name. Different types of name can be distinguished using classifications. See: https://linked.art/model/base/#names\n\n# Arches Note:\nThis node's content should be the value for the title descriptor function, when used for a resource model.\n\n* BranchId: la-name\n* FieldId: \n"
+                    },
+                    "graph_id": "b1d66bb2-a87c-4faf-8471-1362d7074523",
+                    "helpenabled": false,
+                    "helptext": {
+                        "en": ""
+                    },
+                    "helptitle": {
+                        "en": ""
+                    },
+                    "instructions": {
+                        "en": ""
+                    },
+                    "name": {
+                        "en": "Name of Timespan"
+                    },
+                    "nodegroup_id": "a52b7c84-bf21-4612-9825-a6b541f20623",
+                    "sortorder": 0,
+                    "source_identifier_id": null,
+                    "visible": true
+                }
+            ],
+            "cards_x_nodes_x_widgets": [
+                {
+                    "card_id": "bc386b4e-7ec4-4a32-baa2-08e097d09a9e",
+                    "config": {
+                        "dateFormat": "YYYY-MM-DD",
+                        "defaultValue": "",
+                        "label": "Beginning of the end",
+                        "maxDate": false,
+                        "minDate": false,
+                        "placeholder": "Enter date",
+                        "viewMode": "days"
+                    },
+                    "id": "0bbbe9c2-6f38-48fe-bd49-cb916dbbeaf2",
+                    "label": {
+                        "en": "Beginning of the end"
+                    },
+                    "node_id": "d231f324-8d34-46fd-aacf-8425e9917e5d",
+                    "sortorder": 2,
+                    "source_identifier_id": null,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000004"
+                },
+                {
+                    "card_id": "f406e2a0-d2be-4c61-a1e8-eeea55758db7",
+                    "config": {
+                        "defaultResourceInstance": [],
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Source Reference Work for Name",
+                        "placeholder": {
+                            "en": ""
+                        }
+                    },
+                    "id": "143c872f-0649-43c5-a9f1-594f100ea804",
+                    "label": {
+                        "en": "Source Reference Work for Name"
+                    },
+                    "node_id": "cf01e390-9dab-41b7-8a6b-a60b05927d8d",
+                    "sortorder": 3,
+                    "source_identifier_id": null,
+                    "visible": false,
+                    "widget_id": "ff3c400a-76ec-11e7-a793-784f435179ea"
+                },
+                {
+                    "card_id": "a1855432-7a61-4496-aa82-479d6eb403c5",
+                    "config": {
+                        "defaultValue": {
+                            "__ko_mapping__": {
+                                "copiedProperties": {},
+                                "copy": [],
+                                "ignore": [],
+                                "include": [
+                                    "_destroy"
+                                ],
+                                "mappedProperties": {
+                                    "en": true,
+                                    "en.direction": true,
+                                    "en.value": true
+                                },
+                                "observe": []
+                            },
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "acquisition_statement_label",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "16a64157-461e-45ef-8954-accf3fae9d2b",
+                    "label": {
+                        "en": "acquisition_statement_label"
+                    },
+                    "node_id": "2dd7c0b0-5bc9-4b9f-9ff2-77677a0f9fa8",
+                    "sortorder": 2,
+                    "source_identifier_id": null,
+                    "visible": false,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "baa683dc-45e7-4af0-ac8a-5ddac210090c",
+                    "config": {
+                        "defaultResourceInstance": [],
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Person relinquishing (or ceding) Ownership",
+                        "placeholder": {
+                            "en": ""
+                        }
+                    },
+                    "id": "297f4539-eea5-49ff-afc4-ba0ec0989638",
+                    "label": {
+                        "en": "Person relinquishing (or ceding) Ownership"
+                    },
+                    "node_id": "2f2c33c2-c9e4-4190-a3f4-95cbb76fa903",
+                    "sortorder": 2,
+                    "source_identifier_id": null,
+                    "visible": true,
+                    "widget_id": "ff3c400a-76ec-11e7-a793-784f435179ea"
+                },
+                {
+                    "card_id": "bc386b4e-7ec4-4a32-baa2-08e097d09a9e",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Extended Date Time Format",
+                        "placeholder": {
+                            "en": ""
+                        }
+                    },
+                    "id": "2d352a74-63da-491c-9d5c-061316ecaa12",
+                    "label": {
+                        "en": "Extended Date Time Format"
+                    },
+                    "node_id": "631aae1c-aa3b-4dd9-811d-91d34dd3a275",
+                    "sortorder": 6,
+                    "source_identifier_id": null,
+                    "visible": true,
+                    "widget_id": "adfd15ce-dbab-11e7-86d1-0fcf08612b27"
+                },
+                {
+                    "card_id": "baa683dc-45e7-4af0-ac8a-5ddac210090c",
+                    "config": {
+                        "defaultValue": {
+                            "__ko_mapping__": {
+                                "copiedProperties": {},
+                                "copy": [],
+                                "ignore": [],
+                                "include": [
+                                    "_destroy"
+                                ],
+                                "mappedProperties": {
+                                    "en": true,
+                                    "en.direction": true,
+                                    "en.value": true
+                                },
+                                "observe": []
+                            },
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Transfer of Ownership Label",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "3cd98d0e-0fcb-48f6-8ac2-da7d546c9a79",
+                    "label": {
+                        "en": "Transfer of Ownership Label"
+                    },
+                    "node_id": "0ef599d3-7845-4a36-a459-d47bc31e4825",
+                    "sortorder": 7,
+                    "source_identifier_id": null,
+                    "visible": false,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "bc386b4e-7ec4-4a32-baa2-08e097d09a9e",
+                    "config": {
+                        "defaultValue": {
+                            "__ko_mapping__": {
+                                "copiedProperties": {},
+                                "copy": [],
+                                "ignore": [],
+                                "include": [
+                                    "_destroy"
+                                ],
+                                "mappedProperties": {
+                                    "en": true,
+                                    "en.direction": true,
+                                    "en.value": true
+                                },
+                                "observe": []
+                            },
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Timespan Label",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "3eaefb5a-e330-4245-9002-81d19125cd5a",
+                    "label": {
+                        "en": "Timespan Label"
+                    },
+                    "node_id": "33a687cb-3fae-4404-ba91-1e35182f9d04",
+                    "sortorder": 5,
+                    "source_identifier_id": null,
+                    "visible": false,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "f406e2a0-d2be-4c61-a1e8-eeea55758db7",
+                    "config": {
+                        "defaultValue": [],
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Type of Name",
+                        "placeholder": {
+                            "en": "Select an option"
+                        }
+                    },
+                    "id": "3fc6620b-6d63-4f78-8365-0c44d79dcd26",
+                    "label": {
+                        "en": "Type of Name"
+                    },
+                    "node_id": "0fa3e399-0090-4a9e-9f52-b085f365bc5e",
+                    "sortorder": 1,
+                    "source_identifier_id": null,
+                    "visible": true,
+                    "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
+                },
+                {
+                    "card_id": "bc386b4e-7ec4-4a32-baa2-08e097d09a9e",
+                    "config": {
+                        "dateFormat": "YYYY-MM-DD",
+                        "defaultValue": "",
+                        "label": "Beginning of the beginning",
+                        "maxDate": false,
+                        "minDate": false,
+                        "placeholder": "Enter date",
+                        "viewMode": "days"
+                    },
+                    "id": "43c0d305-b3c9-43db-8473-315078b737cc",
+                    "label": {
+                        "en": "Beginning of the beginning"
+                    },
+                    "node_id": "d417f6e5-eb37-42e0-979a-df18a32a2eff",
+                    "sortorder": 0,
+                    "source_identifier_id": null,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000004"
+                },
+                {
+                    "card_id": "baa683dc-45e7-4af0-ac8a-5ddac210090c",
+                    "config": {
+                        "defaultResourceInstance": [],
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Source Reference Work ",
+                        "placeholder": {
+                            "en": ""
+                        }
+                    },
+                    "id": "45fb6b56-01f5-4453-92c2-cf463b2f2158",
+                    "label": {
+                        "en": "Source Reference Work "
+                    },
+                    "node_id": "1a4c4e9f-daf1-45e2-a515-50e35669f4bb",
+                    "sortorder": 6,
+                    "source_identifier_id": null,
+                    "visible": false,
+                    "widget_id": "ff3c400a-76ec-11e7-a793-784f435179ea"
+                },
+                {
+                    "card_id": "baa683dc-45e7-4af0-ac8a-5ddac210090c",
+                    "config": {
+                        "defaultResourceInstance": [],
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Reference or Sample Collection Item that Changed Ownership",
+                        "placeholder": {
+                            "en": ""
+                        }
+                    },
+                    "id": "4815e778-898b-48d4-a744-b715b480d76c",
+                    "label": {
+                        "en": "Reference or Sample Collection Item that Changed Ownership"
+                    },
+                    "node_id": "eb571172-2034-4295-ad19-9f512291499f",
+                    "sortorder": 0,
+                    "source_identifier_id": null,
+                    "visible": true,
+                    "widget_id": "31f3728c-7613-11e7-a139-784f435179ea"
+                },
+                {
+                    "card_id": "baa683dc-45e7-4af0-ac8a-5ddac210090c",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Type of Acquisition",
+                        "placeholder": {
+                            "en": "Select an option"
+                        }
+                    },
+                    "id": "5aee37e9-1fa3-4391-9a67-19807c36ece4",
+                    "label": {
+                        "en": "Type of Acquisition"
+                    },
+                    "node_id": "12a21d5c-eae7-40ce-bf7f-ee514273125e",
+                    "sortorder": 3,
+                    "source_identifier_id": null,
+                    "visible": true,
+                    "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
+                },
+                {
+                    "card_id": "bc386b4e-7ec4-4a32-baa2-08e097d09a9e",
+                    "config": {
+                        "dateFormat": "YYYY-MM-DD",
+                        "defaultValue": "",
+                        "label": "End of the end",
+                        "maxDate": false,
+                        "minDate": false,
+                        "placeholder": "Enter date",
+                        "viewMode": "days"
+                    },
+                    "id": "6a7f143a-efb1-4dd1-a3c7-84b0b43b0167",
+                    "label": {
+                        "en": "End of the end"
+                    },
+                    "node_id": "615881b5-2071-431c-86e4-8d487b2082c2",
+                    "sortorder": 3,
+                    "source_identifier_id": null,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000004"
+                },
+                {
+                    "card_id": "baa683dc-45e7-4af0-ac8a-5ddac210090c",
+                    "config": {
+                        "defaultResourceInstance": [],
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Location of Acquisition",
+                        "placeholder": {
+                            "en": ""
+                        }
+                    },
+                    "id": "6f819e00-1dfd-4fe4-bdef-65771f060325",
+                    "label": {
+                        "en": "Location of Acquisition"
+                    },
+                    "node_id": "585160d9-18df-4e85-9e93-e4e69e017f9d",
+                    "sortorder": 5,
+                    "source_identifier_id": null,
+                    "visible": true,
+                    "widget_id": "31f3728c-7613-11e7-a139-784f435179ea"
+                },
+                {
+                    "card_id": "baa683dc-45e7-4af0-ac8a-5ddac210090c",
+                    "config": {
+                        "defaultResourceInstance": [],
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Person taking Ownership",
+                        "placeholder": {
+                            "en": ""
+                        }
+                    },
+                    "id": "7cf74cfd-725b-4dbb-af63-0c280b71097a",
+                    "label": {
+                        "en": "Person taking Ownership"
+                    },
+                    "node_id": "505d0393-e080-422c-a178-e3f16a70fce0",
+                    "sortorder": 1,
+                    "source_identifier_id": null,
+                    "visible": true,
+                    "widget_id": "ff3c400a-76ec-11e7-a793-784f435179ea"
+                },
+                {
+                    "card_id": "a1855432-7a61-4496-aa82-479d6eb403c5",
+                    "config": {
+                        "defaultValue": {
+                            "__ko_mapping__": {
+                                "copiedProperties": {},
+                                "copy": [],
+                                "ignore": [],
+                                "include": [
+                                    "_destroy"
+                                ],
+                                "mappedProperties": {
+                                    "en": true,
+                                    "en.direction": true,
+                                    "en.value": true
+                                },
+                                "observe": []
+                            },
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "acquisition_statement_content",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "980653b9-e178-49a8-ab8d-b74d0fd5edf9",
+                    "label": {
+                        "en": "acquisition_statement_content"
+                    },
+                    "node_id": "fdfff2e2-8877-43ca-91f1-1c7856740c98",
+                    "sortorder": 5,
+                    "source_identifier_id": null,
+                    "visible": false,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "bc386b4e-7ec4-4a32-baa2-08e097d09a9e",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Timespan Type",
+                        "placeholder": {
+                            "en": "Select an option"
+                        }
+                    },
+                    "id": "9a251045-970a-471d-aee8-d8ed6ed31949",
+                    "label": {
+                        "en": "Timespan Type"
+                    },
+                    "node_id": "5d0c6621-ce0e-4905-9f51-a101e2ae4b15",
+                    "sortorder": 4,
+                    "source_identifier_id": null,
+                    "visible": false,
+                    "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
+                },
+                {
+                    "card_id": "baa683dc-45e7-4af0-ac8a-5ddac210090c",
+                    "config": {
+                        "defaultResourceInstance": [],
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Person(s) / Group(s) Involved in Transfer",
+                        "placeholder": {
+                            "en": ""
+                        }
+                    },
+                    "id": "9a2749e5-270a-4802-a60c-3cdace102472",
+                    "label": {
+                        "en": "Person(s) / Group(s) Involved in Transfer"
+                    },
+                    "node_id": "a27203d3-b9b8-4662-bd17-1b215278a641",
+                    "sortorder": 4,
+                    "source_identifier_id": null,
+                    "visible": true,
+                    "widget_id": "31f3728c-7613-11e7-a139-784f435179ea"
+                },
+                {
+                    "card_id": "f406e2a0-d2be-4c61-a1e8-eeea55758db7",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Name Label",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "a0b76c9a-fcb6-4428-bddb-b93c128ca9d9",
+                    "label": {
+                        "en": "Name Label"
+                    },
+                    "node_id": "e1c4daae-422f-49fe-9eb5-e937d0699dad",
+                    "sortorder": 4,
+                    "source_identifier_id": null,
+                    "visible": false,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "f406e2a0-d2be-4c61-a1e8-eeea55758db7",
+                    "config": {
+                        "defaultValue": [
+                            {
+                                "labels": [
+                                    {
+                                        "id": "bf48b2c6-3485-470c-be5d-37e53f76bade",
+                                        "language_id": "fr",
+                                        "list_item_id": "38729dbe-6d1c-48ce-bf47-e2a18945600e",
+                                        "value": "anglais",
+                                        "valuetype_id": "prefLabel"
+                                    },
+                                    {
+                                        "id": "e32d8c6d-319a-4382-8c26-06e4afb153bf",
+                                        "language_id": "de",
+                                        "list_item_id": "38729dbe-6d1c-48ce-bf47-e2a18945600e",
+                                        "value": "Englisch",
+                                        "valuetype_id": "prefLabel"
+                                    },
+                                    {
+                                        "id": "bc35776b-996f-4fc1-bd25-9f6432c1f349",
+                                        "language_id": "en",
+                                        "list_item_id": "38729dbe-6d1c-48ce-bf47-e2a18945600e",
+                                        "value": "English (language)",
+                                        "valuetype_id": "prefLabel"
+                                    }
+                                ],
+                                "list_id": "f7fc4f6d-fd46-4881-846f-4a08bc1a3fef",
+                                "uri": "http://localhost:8000/plugins/controlled-list-manager/item/38729dbe-6d1c-48ce-bf47-e2a18945600e"
+                            }
+                        ],
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Language of Text",
+                        "placeholder": {
+                            "en": "Select an option"
+                        }
+                    },
+                    "id": "acd4d58d-81c8-483f-82ab-3863de9caf37",
+                    "label": {
+                        "en": "Language of Text"
+                    },
+                    "node_id": "366e7395-1d7a-41f5-a85c-64eb09eec59b",
+                    "sortorder": 2,
+                    "source_identifier_id": null,
+                    "visible": true,
+                    "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
+                },
+                {
+                    "card_id": "a1855432-7a61-4496-aa82-479d6eb403c5",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "acquisition_statement_type_metatype",
+                        "placeholder": {
+                            "en": "Select an option"
+                        }
+                    },
+                    "id": "b455a309-65b3-4a67-9661-ead6e72bcbef",
+                    "label": {
+                        "en": "acquisition_statement_type_metatype"
+                    },
+                    "node_id": "338d756b-fd7b-4354-8045-9176ff3221f7",
+                    "sortorder": 1,
+                    "source_identifier_id": null,
+                    "visible": false,
+                    "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
+                },
+                {
+                    "card_id": "a1855432-7a61-4496-aa82-479d6eb403c5",
+                    "config": {
+                        "defaultValue": [
+                            {
+                                "labels": [
+                                    {
+                                        "id": "bf48b2c6-3485-470c-be5d-37e53f76bade",
+                                        "language_id": "fr",
+                                        "list_item_id": "38729dbe-6d1c-48ce-bf47-e2a18945600e",
+                                        "value": "anglais",
+                                        "valuetype_id": "prefLabel"
+                                    },
+                                    {
+                                        "id": "e32d8c6d-319a-4382-8c26-06e4afb153bf",
+                                        "language_id": "de",
+                                        "list_item_id": "38729dbe-6d1c-48ce-bf47-e2a18945600e",
+                                        "value": "Englisch",
+                                        "valuetype_id": "prefLabel"
+                                    },
+                                    {
+                                        "id": "bc35776b-996f-4fc1-bd25-9f6432c1f349",
+                                        "language_id": "en",
+                                        "list_item_id": "38729dbe-6d1c-48ce-bf47-e2a18945600e",
+                                        "value": "English (language)",
+                                        "valuetype_id": "prefLabel"
+                                    }
+                                ],
+                                "list_id": "f7fc4f6d-fd46-4881-846f-4a08bc1a3fef",
+                                "uri": "http://localhost:8000/plugins/controlled-list-manager/item/38729dbe-6d1c-48ce-bf47-e2a18945600e"
+                            }
+                        ],
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "acquisition_statement_language",
+                        "placeholder": {
+                            "en": "Select an option"
+                        }
+                    },
+                    "id": "e082749d-618e-494c-b144-1e80c4db35bb",
+                    "label": {
+                        "en": "acquisition_statement_language"
+                    },
+                    "node_id": "d380f093-ecd8-4304-b33d-13e41ea66feb",
+                    "sortorder": 3,
+                    "source_identifier_id": null,
+                    "visible": false,
+                    "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
+                },
+                {
+                    "card_id": "a1855432-7a61-4496-aa82-479d6eb403c5",
+                    "config": {
+                        "defaultValue": [
+                            {
+                                "labels": [
+                                    {
+                                        "id": "1149efe3-87cd-4557-9e18-04ceb3fdeec6",
+                                        "language_id": "en",
+                                        "list_item_id": "52946693-29d9-4292-a223-b20465e187ea",
+                                        "value": "brief text",
+                                        "valuetype_id": "prefLabel"
+                                    }
+                                ],
+                                "list_id": "1adae7ea-4884-432f-af44-c9aea3a48a3d",
+                                "uri": "http://localhost:8000/plugins/controlled-list-manager/item/b2f45594-6c10-49d7-a4b7-24e5ca839838"
+                            }
+                        ],
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "acquisition_statement_type",
+                        "placeholder": {
+                            "en": "Select an option"
+                        }
+                    },
+                    "id": "e516bf63-7824-472a-955e-1d4486c7bfeb",
+                    "label": {
+                        "en": "acquisition_statement_type"
+                    },
+                    "node_id": "a2967a6a-6ffe-4de7-9172-0eda858371fb",
+                    "sortorder": 4,
+                    "source_identifier_id": null,
+                    "visible": false,
+                    "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
+                },
+                {
+                    "card_id": "f406e2a0-d2be-4c61-a1e8-eeea55758db7",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Text of Name",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "e5e9d415-445d-4048-9bcf-5f52a79dd9a2",
+                    "label": {
+                        "en": "Text of Name"
+                    },
+                    "node_id": "40fb70f7-5432-4a6c-bf2d-57402d502d5c",
+                    "sortorder": 0,
+                    "source_identifier_id": null,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "bc386b4e-7ec4-4a32-baa2-08e097d09a9e",
+                    "config": {
+                        "dateFormat": "YYYY-MM-DD",
+                        "defaultValue": "",
+                        "label": "End of the beginning",
+                        "maxDate": false,
+                        "minDate": false,
+                        "placeholder": "Enter date",
+                        "viewMode": "days"
+                    },
+                    "id": "e9e40669-0bb3-46d0-bcfd-c827af93416c",
+                    "label": {
+                        "en": "End of the beginning"
+                    },
+                    "node_id": "ee0de354-4de2-4403-b830-402b8379ef4c",
+                    "sortorder": 1,
+                    "source_identifier_id": null,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000004"
+                },
+                {
+                    "card_id": "a1855432-7a61-4496-aa82-479d6eb403c5",
+                    "config": {
+                        "defaultResourceInstance": [],
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "acquisition_statement_source",
+                        "placeholder": {
+                            "en": ""
+                        }
+                    },
+                    "id": "f076a0c0-652b-4b68-8d40-00bb3c5a3be3",
+                    "label": {
+                        "en": "acquisition_statement_source"
+                    },
+                    "node_id": "9c4a6429-6095-4545-bc97-429c1b3e7b36",
+                    "sortorder": 0,
+                    "source_identifier_id": null,
+                    "visible": false,
+                    "widget_id": "ff3c400a-76ec-11e7-a793-784f435179ea"
+                }
+            ],
+            "color": "rgba(42,157,143,0.5)",
+            "config": {
+                "activeTabIndex": 0,
+                "basemap": "streets",
+                "bearing": 0,
+                "centerX": -122.3979693,
+                "centerY": 37.79,
+                "featureColor": "#FF0000",
+                "featureEditingDisabled": true,
+                "featureLineWidth": 1,
+                "featurePointSize": 3,
+                "geocodePlaceholder": "Search",
+                "geocodeProvider": "10000000-0000-0000-0000-010000000000",
+                "geocoderVisible": true,
+                "geometryTypes": [
+                    {
+                        "id": "Point",
+                        "text": "Point"
+                    },
+                    {
+                        "id": "Line",
+                        "text": "Line"
+                    },
+                    {
+                        "id": "Polygon",
+                        "text": "Polygon"
+                    }
+                ],
+                "mapControlsHidden": false,
+                "maxZoom": 20,
+                "minZoom": 0,
+                "overlayConfigs": [],
+                "overlayOpacity": 0,
+                "pitch": 0,
+                "tabs": [
+                    {
+                        "icon": "fa fa-info",
+                        "name": "Identity",
+                        "nodegroup_ids": [
+                            "b9c1ced7-b497-11e9-a4da-a4d18cec433a",
+                            "8ddfe3ab-b31d-11e9-aff0-a4d18cec433a",
+                            "1952bb0a-b498-11e9-a679-a4d18cec433a",
+                            "22c150ca-b498-11e9-9adc-a4d18cec433a",
+                            "0b7f8d0a-b498-11e9-a189-a4d18cec433a",
+                            "cbf9ba14-b31d-11e9-8529-a4d18cec433a"
+                        ]
+                    },
+                    {
+                        "icon": "fa fa-chain",
+                        "name": "Links",
+                        "nodegroup_ids": [
+                            "f8d5fe4c-b31d-11e9-9625-a4d18cec433a",
+                            "63e49254-c444-11e9-afbe-a4d18cec433a",
+                            "2fe9f066-b31e-11e9-b3be-a4d18cec433a",
+                            "23bf9ca1-b31e-11e9-8dd7-a4d18cec433a",
+                            "b008dacc-b31d-11e9-84af-a4d18cec433a",
+                            "a030e34f-b31d-11e9-8c0b-a4d18cec433a",
+                            "4869c09e-b31e-11e9-ba58-a4d18cec433a",
+                            "fec59582-8593-11ea-97eb-acde48001122"
+                        ]
+                    },
+                    {
+                        "icon": "fa fa-calendar",
+                        "name": "Events",
+                        "nodegroup_ids": [
+                            "cc15650c-b497-11e9-a64d-a4d18cec433a",
+                            "fc651451-b497-11e9-9d7b-a4d18cec433a",
+                            "b11f217a-d2bc-11e9-8dfa-a4d18cec433a",
+                            "57f25133-d2bd-11e9-9131-a4d18cec433a",
+                            "a1490580-d2bd-11e9-af41-a4d18cec433a"
+                        ]
+                    }
+                ],
+                "zoom": 10
+            },
+            "deploymentdate": null,
+            "deploymentfile": null,
+            "description": {
+                "en": ""
+            },
+            "edges": [
+                {
+                    "description": null,
+                    "domainnode_id": "4e3add35-8db4-465e-a0d6-7d004e9aef1e",
+                    "edgeid": "01fdd897-3d4b-4a60-b106-daa7344912c7",
+                    "graph_id": "b1d66bb2-a87c-4faf-8471-1362d7074523",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P82b_end_of_the_end",
+                    "rangenode_id": "615881b5-2071-431c-86e4-8d487b2082c2",
+                    "source_identifier_id": null
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "4e3add35-8db4-465e-a0d6-7d004e9aef1e",
+                    "edgeid": "0a633adb-98d7-416a-9464-f5e6461d8e84",
+                    "graph_id": "b1d66bb2-a87c-4faf-8471-1362d7074523",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P81b_begin_of_the_end",
+                    "rangenode_id": "d231f324-8d34-46fd-aacf-8425e9917e5d",
+                    "source_identifier_id": null
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "4e3add35-8db4-465e-a0d6-7d004e9aef1e",
+                    "edgeid": "0d6ba497-b590-4363-ba9a-c716dc8840b9",
+                    "graph_id": "b1d66bb2-a87c-4faf-8471-1362d7074523",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
+                    "rangenode_id": "5d0c6621-ce0e-4905-9f51-a101e2ae4b15",
+                    "source_identifier_id": null
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "4e3add35-8db4-465e-a0d6-7d004e9aef1e",
+                    "edgeid": "1d9d6d06-4588-400d-b7ad-29af0113365a",
+                    "graph_id": "b1d66bb2-a87c-4faf-8471-1362d7074523",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P81a_end_of_the_begin",
+                    "rangenode_id": "ee0de354-4de2-4403-b830-402b8379ef4c",
+                    "source_identifier_id": null
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "d97f1408-41d0-49b6-aa8d-fc06a3ac0861",
+                    "edgeid": "351f9994-9340-48dc-99ec-539aec435ef2",
+                    "graph_id": "b1d66bb2-a87c-4faf-8471-1362d7074523",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at",
+                    "rangenode_id": "585160d9-18df-4e85-9e93-e4e69e017f9d",
+                    "source_identifier_id": null
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "82e18ecc-deb4-4981-b49c-aac5187027ae",
+                    "edgeid": "352de070-dbe3-4bc5-838d-6a3071313188",
+                    "graph_id": "b1d66bb2-a87c-4faf-8471-1362d7074523",
+                    "name": null,
+                    "ontologyproperty": "http://www.w3.org/2000/01/rdf-schema#label",
+                    "rangenode_id": "2dd7c0b0-5bc9-4b9f-9ff2-77677a0f9fa8",
+                    "source_identifier_id": null
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "4e3add35-8db4-465e-a0d6-7d004e9aef1e",
+                    "edgeid": "35340a82-bab3-4da6-b858-6ce71abcb395",
+                    "graph_id": "b1d66bb2-a87c-4faf-8471-1362d7074523",
+                    "name": null,
+                    "ontologyproperty": "http://www.w3.org/2000/01/rdf-schema#label",
+                    "rangenode_id": "33a687cb-3fae-4404-ba91-1e35182f9d04",
+                    "source_identifier_id": null
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "d97f1408-41d0-49b6-aa8d-fc06a3ac0861",
+                    "edgeid": "3d9a7d7b-5b92-4207-9e50-c61c425acf5c",
+                    "graph_id": "b1d66bb2-a87c-4faf-8471-1362d7074523",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span",
+                    "rangenode_id": "4e3add35-8db4-465e-a0d6-7d004e9aef1e",
+                    "source_identifier_id": null
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "82e18ecc-deb4-4981-b49c-aac5187027ae",
+                    "edgeid": "41b36372-c820-4df3-b041-f883dae40ff1",
+                    "graph_id": "b1d66bb2-a87c-4faf-8471-1362d7074523",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P190_has_symbolic_content",
+                    "rangenode_id": "fdfff2e2-8877-43ca-91f1-1c7856740c98",
+                    "source_identifier_id": null
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "d97f1408-41d0-49b6-aa8d-fc06a3ac0861",
+                    "edgeid": "5d09e84c-542f-41aa-9aa9-db8be71d6eb6",
+                    "graph_id": "b1d66bb2-a87c-4faf-8471-1362d7074523",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by",
+                    "rangenode_id": "1a4c4e9f-daf1-45e2-a515-50e35669f4bb",
+                    "source_identifier_id": null
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "d97f1408-41d0-49b6-aa8d-fc06a3ac0861",
+                    "edgeid": "7020e584-0743-456e-b95d-6814e89a6636",
+                    "graph_id": "b1d66bb2-a87c-4faf-8471-1362d7074523",
+                    "name": null,
+                    "ontologyproperty": "http://www.w3.org/2000/01/rdf-schema#label",
+                    "rangenode_id": "0ef599d3-7845-4a36-a459-d47bc31e4825",
+                    "source_identifier_id": null
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "d97f1408-41d0-49b6-aa8d-fc06a3ac0861",
+                    "edgeid": "74ae5f75-c30b-41e3-b5e8-760a242f1c75",
+                    "graph_id": "b1d66bb2-a87c-4faf-8471-1362d7074523",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P23_transferred_title_from",
+                    "rangenode_id": "2f2c33c2-c9e4-4190-a3f4-95cbb76fa903",
+                    "source_identifier_id": null
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "4e3add35-8db4-465e-a0d6-7d004e9aef1e",
+                    "edgeid": "8d444c10-8895-445c-a9a1-9c5485c46026",
+                    "graph_id": "b1d66bb2-a87c-4faf-8471-1362d7074523",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
+                    "rangenode_id": "a52b7c84-bf21-4612-9825-a6b541f20623",
+                    "source_identifier_id": null
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "4e3add35-8db4-465e-a0d6-7d004e9aef1e",
+                    "edgeid": "8d4d77af-0c50-47e4-a54f-6e1f1dc44880",
+                    "graph_id": "b1d66bb2-a87c-4faf-8471-1362d7074523",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P82a_begin_of_the_begin",
+                    "rangenode_id": "d417f6e5-eb37-42e0-979a-df18a32a2eff",
+                    "source_identifier_id": null
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "a52b7c84-bf21-4612-9825-a6b541f20623",
+                    "edgeid": "8f89b042-5a23-4905-8b1a-13d0b59073cd",
+                    "graph_id": "b1d66bb2-a87c-4faf-8471-1362d7074523",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P72_has_language",
+                    "rangenode_id": "366e7395-1d7a-41f5-a85c-64eb09eec59b",
+                    "source_identifier_id": null
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "82e18ecc-deb4-4981-b49c-aac5187027ae",
+                    "edgeid": "90918c3e-c2b0-49ab-ae18-a44cd75efad6",
+                    "graph_id": "b1d66bb2-a87c-4faf-8471-1362d7074523",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P72_has_language",
+                    "rangenode_id": "d380f093-ecd8-4304-b33d-13e41ea66feb",
+                    "source_identifier_id": null
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "d97f1408-41d0-49b6-aa8d-fc06a3ac0861",
+                    "edgeid": "95a24c4a-0b9d-4d4b-b3cf-29c6478a283c",
+                    "graph_id": "b1d66bb2-a87c-4faf-8471-1362d7074523",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by",
+                    "rangenode_id": "a27203d3-b9b8-4662-bd17-1b215278a641",
+                    "source_identifier_id": null
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "82e18ecc-deb4-4981-b49c-aac5187027ae",
+                    "edgeid": "9755275b-f9db-4be2-83f3-2ab31c567da8",
+                    "graph_id": "b1d66bb2-a87c-4faf-8471-1362d7074523",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
+                    "rangenode_id": "a2967a6a-6ffe-4de7-9172-0eda858371fb",
+                    "source_identifier_id": null
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "4e3add35-8db4-465e-a0d6-7d004e9aef1e",
+                    "edgeid": "a2550c07-5b88-4d4d-b008-229ee0e1d737",
+                    "graph_id": "b1d66bb2-a87c-4faf-8471-1362d7074523",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P82_at_some_time_within",
+                    "rangenode_id": "631aae1c-aa3b-4dd9-811d-91d34dd3a275",
+                    "source_identifier_id": null
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "d97f1408-41d0-49b6-aa8d-fc06a3ac0861",
+                    "edgeid": "a975c0ec-9a59-40c1-9197-d01fc81afcfc",
+                    "graph_id": "b1d66bb2-a87c-4faf-8471-1362d7074523",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by",
+                    "rangenode_id": "82e18ecc-deb4-4981-b49c-aac5187027ae",
+                    "source_identifier_id": null
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "a52b7c84-bf21-4612-9825-a6b541f20623",
+                    "edgeid": "b176346b-2605-4fcf-9deb-6e3f31c0a1b3",
+                    "graph_id": "b1d66bb2-a87c-4faf-8471-1362d7074523",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
+                    "rangenode_id": "0fa3e399-0090-4a9e-9f52-b085f365bc5e",
+                    "source_identifier_id": null
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "d97f1408-41d0-49b6-aa8d-fc06a3ac0861",
+                    "edgeid": "b2c67e1e-8b77-45ad-ad32-896c6ef68995",
+                    "graph_id": "b1d66bb2-a87c-4faf-8471-1362d7074523",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
+                    "rangenode_id": "12a21d5c-eae7-40ce-bf7f-ee514273125e",
+                    "source_identifier_id": null
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "d97f1408-41d0-49b6-aa8d-fc06a3ac0861",
+                    "edgeid": "c41148ef-a4bc-4cd9-b497-220a6605b2e1",
+                    "graph_id": "b1d66bb2-a87c-4faf-8471-1362d7074523",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P22_transferred_title_to",
+                    "rangenode_id": "505d0393-e080-422c-a178-e3f16a70fce0",
+                    "source_identifier_id": null
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "d97f1408-41d0-49b6-aa8d-fc06a3ac0861",
+                    "edgeid": "c8d25a83-c750-4154-97fe-b4cc49a9daaf",
+                    "graph_id": "b1d66bb2-a87c-4faf-8471-1362d7074523",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P24_transferred_title_of",
+                    "rangenode_id": "eb571172-2034-4295-ad19-9f512291499f",
+                    "source_identifier_id": null
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "a52b7c84-bf21-4612-9825-a6b541f20623",
+                    "edgeid": "cd85ebe1-4175-456d-b317-ab2fdbb2f575",
+                    "graph_id": "b1d66bb2-a87c-4faf-8471-1362d7074523",
+                    "name": null,
+                    "ontologyproperty": "http://www.w3.org/2000/01/rdf-schema#label",
+                    "rangenode_id": "e1c4daae-422f-49fe-9eb5-e937d0699dad",
+                    "source_identifier_id": null
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "82e18ecc-deb4-4981-b49c-aac5187027ae",
+                    "edgeid": "d24bc023-99a5-4c92-b6d9-8ff7ea1c6618",
+                    "graph_id": "b1d66bb2-a87c-4faf-8471-1362d7074523",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by",
+                    "rangenode_id": "9c4a6429-6095-4545-bc97-429c1b3e7b36",
+                    "source_identifier_id": null
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "a52b7c84-bf21-4612-9825-a6b541f20623",
+                    "edgeid": "d531c022-b573-4902-bbf5-f61b8d3b4a36",
+                    "graph_id": "b1d66bb2-a87c-4faf-8471-1362d7074523",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P190_has_symbolic_content",
+                    "rangenode_id": "40fb70f7-5432-4a6c-bf2d-57402d502d5c",
+                    "source_identifier_id": null
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "a52b7c84-bf21-4612-9825-a6b541f20623",
+                    "edgeid": "fc015ccb-1542-4055-84b7-bf6691bf175d",
+                    "graph_id": "b1d66bb2-a87c-4faf-8471-1362d7074523",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by",
+                    "rangenode_id": "cf01e390-9dab-41b7-8a6b-a60b05927d8d",
+                    "source_identifier_id": null
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "a2967a6a-6ffe-4de7-9172-0eda858371fb",
+                    "edgeid": "feb3350a-04e1-4a60-91be-1cd02341923c",
+                    "graph_id": "b1d66bb2-a87c-4faf-8471-1362d7074523",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
+                    "rangenode_id": "338d756b-fd7b-4354-8045-9176ff3221f7",
+                    "source_identifier_id": null
+                }
+            ],
+            "functions_x_graphs": [
+                {
+                    "config": {
+                        "descriptor_types": {
+                            "description": {
+                                "nodegroup_id": "",
+                                "string_template": "<statement_content>"
+                            },
+                            "map_popup": {
+                                "nodegroup_id": "",
+                                "string_template": "<statement_content>"
+                            },
+                            "name": {
+                                "nodegroup_id": "",
+                                "string_template": "<name_content>  #<identifier_content>"
+                            }
+                        },
+                        "triggering_nodegroups": []
+                    },
+                    "function_id": "00b2d15a-fda0-4578-b79a-784e4138664b",
+                    "graph_id": "b1d66bb2-a87c-4faf-8471-1362d7074523",
+                    "id": "98ce52ff-a9c7-466b-8bcc-bb5920fdff6e"
+                },
+                {
+                    "config": {
+                        "triggering_nodegroups": [
+                            "04f87f4e-d834-11ef-a75a-0275dc2ded29",
+                            "04f89204-d834-11ef-a75a-0275dc2ded29",
+                            "04f89a24-d834-11ef-a75a-0275dc2ded29",
+                            "04f89e20-d834-11ef-a75a-0275dc2ded29",
+                            "04f8a208-d834-11ef-a75a-0275dc2ded29",
+                            "04f8a5dc-d834-11ef-a75a-0275dc2ded29",
+                            "04f8a9c4-d834-11ef-a75a-0275dc2ded29",
+                            "04f8adca-d834-11ef-a75a-0275dc2ded29",
+                            "04f8b1c6-d834-11ef-a75a-0275dc2ded29",
+                            "04f8b66c-d834-11ef-a75a-0275dc2ded29",
+                            "04f8ba68-d834-11ef-a75a-0275dc2ded29",
+                            "04f8be78-d834-11ef-a75a-0275dc2ded29",
+                            "04f8c260-d834-11ef-a75a-0275dc2ded29",
+                            "04f8c648-d834-11ef-a75a-0275dc2ded29",
+                            "04f8ca3a-d834-11ef-a75a-0275dc2ded29",
+                            "04f8d9c6-d834-11ef-a75a-0275dc2ded29",
+                            "0e8fe457-4148-11e7-9c10-c4b301baab9f",
+                            "0fcf0fc2-d70e-11ef-82a5-0275dc2ded29",
+                            "0fcf144a-d70e-11ef-82a5-0275dc2ded29",
+                            "25a81ad2-1fac-11f0-b604-0ae672297eff",
+                            "25a848d6-1fac-11f0-b604-0ae672297eff",
+                            "25a863d4-1fac-11f0-b604-0ae672297eff",
+                            "25a8789c-1fac-11f0-b604-0ae672297eff",
+                            "25a88c38-1fac-11f0-b604-0ae672297eff",
+                            "25a89f5c-1fac-11f0-b604-0ae672297eff",
+                            "25a8b1a4-1fac-11f0-b604-0ae672297eff",
+                            "25a8c752-1fac-11f0-b604-0ae672297eff",
+                            "25a8da8a-1fac-11f0-b604-0ae672297eff",
+                            "25a8ed40-1fac-11f0-b604-0ae672297eff",
+                            "25a8fef2-1fac-11f0-b604-0ae672297eff",
+                            "25a9109a-1fac-11f0-b604-0ae672297eff",
+                            "25a92184-1fac-11f0-b604-0ae672297eff",
+                            "25a9332c-1fac-11f0-b604-0ae672297eff",
+                            "25a9447a-1fac-11f0-b604-0ae672297eff",
+                            "25a95564-1fac-11f0-b604-0ae672297eff",
+                            "25a96c66-1fac-11f0-b604-0ae672297eff",
+                            "25a98052-1fac-11f0-b604-0ae672297eff",
+                            "25a9934e-1fac-11f0-b604-0ae672297eff",
+                            "25a9a4a6-1fac-11f0-b604-0ae672297eff",
+                            "25a9b70c-1fac-11f0-b604-0ae672297eff",
+                            "25a9c936-1fac-11f0-b604-0ae672297eff",
+                            "25a9dae8-1fac-11f0-b604-0ae672297eff",
+                            "25a9ec18-1fac-11f0-b604-0ae672297eff",
+                            "25a9fd52-1fac-11f0-b604-0ae672297eff",
+                            "25aa0f86-1fac-11f0-b604-0ae672297eff",
+                            "25aa21a6-1fac-11f0-b604-0ae672297eff",
+                            "25aa32e0-1fac-11f0-b604-0ae672297eff",
+                            "25aa437a-1fac-11f0-b604-0ae672297eff",
+                            "25aa555e-1fac-11f0-b604-0ae672297eff",
+                            "25aa6ad0-1fac-11f0-b604-0ae672297eff",
+                            "25aa7e26-1fac-11f0-b604-0ae672297eff",
+                            "25aa8fec-1fac-11f0-b604-0ae672297eff",
+                            "25aaa16c-1fac-11f0-b604-0ae672297eff",
+                            "25aab274-1fac-11f0-b604-0ae672297eff",
+                            "25aac818-1fac-11f0-b604-0ae672297eff",
+                            "25aada24-1fac-11f0-b604-0ae672297eff",
+                            "25aaec1c-1fac-11f0-b604-0ae672297eff",
+                            "25aafcfc-1fac-11f0-b604-0ae672297eff",
+                            "25ab1214-1fac-11f0-b604-0ae672297eff",
+                            "25ab2664-1fac-11f0-b604-0ae672297eff",
+                            "25ab3820-1fac-11f0-b604-0ae672297eff",
+                            "25ab4996-1fac-11f0-b604-0ae672297eff",
+                            "25ab5b34-1fac-11f0-b604-0ae672297eff",
+                            "25ab7f42-1fac-11f0-b604-0ae672297eff",
+                            "25ab904a-1fac-11f0-b604-0ae672297eff",
+                            "25aba152-1fac-11f0-b604-0ae672297eff",
+                            "25abb1ba-1fac-11f0-b604-0ae672297eff",
+                            "25abc902-1fac-11f0-b604-0ae672297eff",
+                            "25abdb04-1fac-11f0-b604-0ae672297eff",
+                            "25abf17a-1fac-11f0-b604-0ae672297eff",
+                            "25ac0282-1fac-11f0-b604-0ae672297eff",
+                            "25ac1466-1fac-11f0-b604-0ae672297eff",
+                            "25ac2672-1fac-11f0-b604-0ae672297eff",
+                            "25ac38ba-1fac-11f0-b604-0ae672297eff",
+                            "25ac4d00-1fac-11f0-b604-0ae672297eff",
+                            "25ac5f66-1fac-11f0-b604-0ae672297eff",
+                            "25ac7140-1fac-11f0-b604-0ae672297eff",
+                            "25ac8266-1fac-11f0-b604-0ae672297eff",
+                            "25ac94d6-1fac-11f0-b604-0ae672297eff",
+                            "25aca6e2-1fac-11f0-b604-0ae672297eff",
+                            "25acb7ae-1fac-11f0-b604-0ae672297eff",
+                            "25acc8ac-1fac-11f0-b604-0ae672297eff",
+                            "25acd91e-1fac-11f0-b604-0ae672297eff",
+                            "25acef1c-1fac-11f0-b604-0ae672297eff",
+                            "25ad01a0-1fac-11f0-b604-0ae672297eff",
+                            "25ad2392-1fac-11f0-b604-0ae672297eff",
+                            "25ad3468-1fac-11f0-b604-0ae672297eff",
+                            "25ad4516-1fac-11f0-b604-0ae672297eff",
+                            "25ad56b4-1fac-11f0-b604-0ae672297eff",
+                            "25ad6802-1fac-11f0-b604-0ae672297eff",
+                            "25ad78ce-1fac-11f0-b604-0ae672297eff",
+                            "25ad8a4e-1fac-11f0-b604-0ae672297eff",
+                            "25ad9bba-1fac-11f0-b604-0ae672297eff",
+                            "25adac72-1fac-11f0-b604-0ae672297eff",
+                            "25adbd98-1fac-11f0-b604-0ae672297eff",
+                            "25ae0848-1fac-11f0-b604-0ae672297eff",
+                            "25ae35d4-1fac-11f0-b604-0ae672297eff",
+                            "25ae4920-1fac-11f0-b604-0ae672297eff",
+                            "25ae5aaa-1fac-11f0-b604-0ae672297eff",
+                            "25ae6c20-1fac-11f0-b604-0ae672297eff",
+                            "25ae7d00-1fac-11f0-b604-0ae672297eff",
+                            "26a55c6a-d772-11ef-825b-0275dc2ded29",
+                            "26a561e2-d772-11ef-825b-0275dc2ded29",
+                            "26a5678c-d772-11ef-825b-0275dc2ded29",
+                            "26a56c3c-d772-11ef-825b-0275dc2ded29",
+                            "26a570a6-d772-11ef-825b-0275dc2ded29",
+                            "26a57510-d772-11ef-825b-0275dc2ded29",
+                            "26a5823a-d772-11ef-825b-0275dc2ded29",
+                            "26a586a4-d772-11ef-825b-0275dc2ded29",
+                            "26a58b04-d772-11ef-825b-0275dc2ded29",
+                            "26a59072-d772-11ef-825b-0275dc2ded29",
+                            "26a5952c-d772-11ef-825b-0275dc2ded29",
+                            "26a59978-d772-11ef-825b-0275dc2ded29",
+                            "26a59da6-d772-11ef-825b-0275dc2ded29",
+                            "26a5a1de-d772-11ef-825b-0275dc2ded29",
+                            "26a5a616-d772-11ef-825b-0275dc2ded29",
+                            "26a5aa6c-d772-11ef-825b-0275dc2ded29",
+                            "26a5aea4-d772-11ef-825b-0275dc2ded29",
+                            "26a5b2c8-d772-11ef-825b-0275dc2ded29",
+                            "26a5b7e6-d772-11ef-825b-0275dc2ded29",
+                            "26a5bc28-d772-11ef-825b-0275dc2ded29",
+                            "26a5c09c-d772-11ef-825b-0275dc2ded29",
+                            "26a5c4f2-d772-11ef-825b-0275dc2ded29",
+                            "26a5c934-d772-11ef-825b-0275dc2ded29",
+                            "26a5cd58-d772-11ef-825b-0275dc2ded29",
+                            "26a5d1ea-d772-11ef-825b-0275dc2ded29",
+                            "26a5d640-d772-11ef-825b-0275dc2ded29",
+                            "26a5db36-d772-11ef-825b-0275dc2ded29",
+                            "26a5dfc8-d772-11ef-825b-0275dc2ded29",
+                            "26a5e414-d772-11ef-825b-0275dc2ded29",
+                            "26a5e84c-d772-11ef-825b-0275dc2ded29",
+                            "32f2d663-fae4-11e6-83ad-6c4008b05c4c",
+                            "36956ff4-d770-11ef-8f5d-0275dc2ded29",
+                            "369574ae-d770-11ef-8f5d-0275dc2ded29",
+                            "369578b4-d770-11ef-8f5d-0275dc2ded29",
+                            "36957c88-d770-11ef-8f5d-0275dc2ded29",
+                            "36958048-d770-11ef-8f5d-0275dc2ded29",
+                            "369588ae-d770-11ef-8f5d-0275dc2ded29",
+                            "369590ec-d770-11ef-8f5d-0275dc2ded29",
+                            "369594b6-d770-11ef-8f5d-0275dc2ded29",
+                            "36959876-d770-11ef-8f5d-0275dc2ded29",
+                            "36959c54-d770-11ef-8f5d-0275dc2ded29",
+                            "3695a01e-d770-11ef-8f5d-0275dc2ded29",
+                            "3695a3c0-d770-11ef-8f5d-0275dc2ded29",
+                            "3695a76c-d770-11ef-8f5d-0275dc2ded29",
+                            "3695b2a2-d770-11ef-8f5d-0275dc2ded29",
+                            "3695b676-d770-11ef-8f5d-0275dc2ded29",
+                            "3695ba22-d770-11ef-8f5d-0275dc2ded29",
+                            "3695bdce-d770-11ef-8f5d-0275dc2ded29",
+                            "3695c15c-d770-11ef-8f5d-0275dc2ded29",
+                            "3695c4ea-d770-11ef-8f5d-0275dc2ded29",
+                            "3695c896-d770-11ef-8f5d-0275dc2ded29",
+                            "3695cc56-d770-11ef-8f5d-0275dc2ded29",
+                            "3695cff8-d770-11ef-8f5d-0275dc2ded29",
+                            "3695d476-d770-11ef-8f5d-0275dc2ded29",
+                            "398111dc-0907-11f0-9e45-0275dc2ded29",
+                            "3aff54bc-0f3b-11f0-aa84-02460e9d2217",
+                            "3ddaa0f8-d771-11ef-825b-0275dc2ded29",
+                            "3ddaa8e6-d771-11ef-825b-0275dc2ded29",
+                            "3ddaade6-d771-11ef-825b-0275dc2ded29",
+                            "3ddab19c-d771-11ef-825b-0275dc2ded29",
+                            "3ddab4e4-d771-11ef-825b-0275dc2ded29",
+                            "3ddab854-d771-11ef-825b-0275dc2ded29",
+                            "3ddac218-d771-11ef-825b-0275dc2ded29",
+                            "3ddac588-d771-11ef-825b-0275dc2ded29",
+                            "3ddac8d0-d771-11ef-825b-0275dc2ded29",
+                            "42fb861a-d834-11ef-a75a-0275dc2ded29",
+                            "42fb8b10-d834-11ef-a75a-0275dc2ded29",
+                            "42fb8f2a-d834-11ef-a75a-0275dc2ded29",
+                            "42fba384-d834-11ef-a75a-0275dc2ded29",
+                            "42fba88e-d834-11ef-a75a-0275dc2ded29",
+                            "42fbb4f0-d834-11ef-a75a-0275dc2ded29",
+                            "42fbb8ba-d834-11ef-a75a-0275dc2ded29",
+                            "42fbbc84-d834-11ef-a75a-0275dc2ded29",
+                            "42fbc422-d834-11ef-a75a-0275dc2ded29",
+                            "42fbcbac-d834-11ef-a75a-0275dc2ded29",
+                            "42fbd05c-d834-11ef-a75a-0275dc2ded29",
+                            "42fbd444-d834-11ef-a75a-0275dc2ded29",
+                            "42fbd822-d834-11ef-a75a-0275dc2ded29",
+                            "42fbdbf6-d834-11ef-a75a-0275dc2ded29",
+                            "42fbdfe8-d834-11ef-a75a-0275dc2ded29",
+                            "42fbe3b2-d834-11ef-a75a-0275dc2ded29",
+                            "459afb3e-fdf6-11ef-966f-0275dc2ded29",
+                            "459afed6-fdf6-11ef-966f-0275dc2ded29",
+                            "459b01ba-fdf6-11ef-966f-0275dc2ded29",
+                            "459b0476-fdf6-11ef-966f-0275dc2ded29",
+                            "459b071e-fdf6-11ef-966f-0275dc2ded29",
+                            "53f96a86-0908-11f0-9f70-0275dc2ded29",
+                            "55e4c424-090a-11f0-9f70-0275dc2ded29",
+                            "57d7b53c-d833-11ef-ab38-0275dc2ded29",
+                            "57d7bc26-d833-11ef-ab38-0275dc2ded29",
+                            "57d7c0d6-d833-11ef-ab38-0275dc2ded29",
+                            "57d7c96e-d833-11ef-ab38-0275dc2ded29",
+                            "57d7d602-d833-11ef-ab38-0275dc2ded29",
+                            "57d7da26-d833-11ef-ab38-0275dc2ded29",
+                            "57d7de54-d833-11ef-ab38-0275dc2ded29",
+                            "57d7e840-d833-11ef-ab38-0275dc2ded29",
+                            "57d7f0ba-d833-11ef-ab38-0275dc2ded29",
+                            "57d7f920-d833-11ef-ab38-0275dc2ded29",
+                            "57d80168-d833-11ef-ab38-0275dc2ded29",
+                            "57d80e9c-d833-11ef-ab38-0275dc2ded29",
+                            "57d812d4-d833-11ef-ab38-0275dc2ded29",
+                            "57d81720-d833-11ef-ab38-0275dc2ded29",
+                            "57d81b4e-d833-11ef-ab38-0275dc2ded29",
+                            "57d81f54-d833-11ef-ab38-0275dc2ded29",
+                            "57d82378-d833-11ef-ab38-0275dc2ded29",
+                            "67288b96-1fab-11f0-809a-0ae672297eff",
+                            "6728b17a-1fab-11f0-809a-0ae672297eff",
+                            "6728f37e-1fab-11f0-809a-0ae672297eff",
+                            "6729030a-1fab-11f0-809a-0ae672297eff",
+                            "6729298e-1fab-11f0-809a-0ae672297eff",
+                            "67293852-1fab-11f0-809a-0ae672297eff",
+                            "6ee83594-08e4-11f0-81c1-0275dc2ded29",
+                            "6ee839cc-08e4-11f0-81c1-0275dc2ded29",
+                            "6ee83c9c-08e4-11f0-81c1-0275dc2ded29",
+                            "6ee83f62-08e4-11f0-81c1-0275dc2ded29",
+                            "6ee8420a-08e4-11f0-81c1-0275dc2ded29",
+                            "7ce194c2-d772-11ef-825b-0275dc2ded29",
+                            "7ce19a44-d772-11ef-825b-0275dc2ded29",
+                            "7ce19ecc-d772-11ef-825b-0275dc2ded29",
+                            "7ce1a336-d772-11ef-825b-0275dc2ded29",
+                            "7ce1adc2-d772-11ef-825b-0275dc2ded29",
+                            "7ce1b24a-d772-11ef-825b-0275dc2ded29",
+                            "7ce1b6b4-d772-11ef-825b-0275dc2ded29",
+                            "7ce1bb0a-d772-11ef-825b-0275dc2ded29",
+                            "7ce1bf4c-d772-11ef-825b-0275dc2ded29",
+                            "7ce1c384-d772-11ef-825b-0275dc2ded29",
+                            "7ce1c7e4-d772-11ef-825b-0275dc2ded29",
+                            "7ce1cc30-d772-11ef-825b-0275dc2ded29",
+                            "7ce1d19e-d772-11ef-825b-0275dc2ded29",
+                            "7ce1d612-d772-11ef-825b-0275dc2ded29",
+                            "7ce1da72-d772-11ef-825b-0275dc2ded29",
+                            "7ce1deb4-d772-11ef-825b-0275dc2ded29",
+                            "7ce1e2ec-d772-11ef-825b-0275dc2ded29",
+                            "7ce1e74c-d772-11ef-825b-0275dc2ded29",
+                            "7ce1eb70-d772-11ef-825b-0275dc2ded29",
+                            "7ce1ef9e-d772-11ef-825b-0275dc2ded29",
+                            "7ce1f412-d772-11ef-825b-0275dc2ded29",
+                            "7ce1f926-d772-11ef-825b-0275dc2ded29",
+                            "7ce1fd90-d772-11ef-825b-0275dc2ded29",
+                            "7ce201c8-d772-11ef-825b-0275dc2ded29",
+                            "7ce205f6-d772-11ef-825b-0275dc2ded29",
+                            "7ce20a1a-d772-11ef-825b-0275dc2ded29",
+                            "7ce2124e-d772-11ef-825b-0275dc2ded29",
+                            "82059936-1fab-11f0-b604-0ae672297eff",
+                            "8205bbaa-1fab-11f0-b604-0ae672297eff",
+                            "8205ccbc-1fab-11f0-b604-0ae672297eff",
+                            "8205dc2a-1fab-11f0-b604-0ae672297eff",
+                            "8205ed5a-1fab-11f0-b604-0ae672297eff",
+                            "8205fe44-1fab-11f0-b604-0ae672297eff",
+                            "82061b72-1fab-11f0-b604-0ae672297eff",
+                            "82062a0e-1fab-11f0-b604-0ae672297eff",
+                            "8206390e-1fab-11f0-b604-0ae672297eff",
+                            "820663fc-1fab-11f0-b604-0ae672297eff",
+                            "820672e8-1fab-11f0-b604-0ae672297eff",
+                            "820681ac-1fab-11f0-b604-0ae672297eff",
+                            "82068fee-1fab-11f0-b604-0ae672297eff",
+                            "82069e62-1fab-11f0-b604-0ae672297eff",
+                            "8206ac7c-1fab-11f0-b604-0ae672297eff",
+                            "8206bb4a-1fab-11f0-b604-0ae672297eff",
+                            "8206d4a4-1fab-11f0-b604-0ae672297eff",
+                            "8206f970-1fab-11f0-b604-0ae672297eff",
+                            "820708d4-1fab-11f0-b604-0ae672297eff",
+                            "82071874-1fab-11f0-b604-0ae672297eff",
+                            "87139870-d860-11ef-98f5-0275dc2ded29",
+                            "8713ae0a-d860-11ef-98f5-0275dc2ded29",
+                            "8713b6de-d860-11ef-98f5-0275dc2ded29",
+                            "8713bc60-d860-11ef-98f5-0275dc2ded29",
+                            "8713c124-d860-11ef-98f5-0275dc2ded29",
+                            "8713c548-d860-11ef-98f5-0275dc2ded29",
+                            "8713cde0-d860-11ef-98f5-0275dc2ded29",
+                            "8713d5d8-d860-11ef-98f5-0275dc2ded29",
+                            "8713d9ca-d860-11ef-98f5-0275dc2ded29",
+                            "8713ddc6-d860-11ef-98f5-0275dc2ded29",
+                            "8713e280-d860-11ef-98f5-0275dc2ded29",
+                            "8713e6cc-d860-11ef-98f5-0275dc2ded29",
+                            "8713ee88-d860-11ef-98f5-0275dc2ded29",
+                            "8713f270-d860-11ef-98f5-0275dc2ded29",
+                            "8713f66c-d860-11ef-98f5-0275dc2ded29",
+                            "8713fa40-d860-11ef-98f5-0275dc2ded29",
+                            "8713fe14-d860-11ef-98f5-0275dc2ded29",
+                            "871401fc-d860-11ef-98f5-0275dc2ded29",
+                            "871405ee-d860-11ef-98f5-0275dc2ded29",
+                            "87140a94-d860-11ef-98f5-0275dc2ded29",
+                            "87140e9a-d860-11ef-98f5-0275dc2ded29",
+                            "881597fe-1fab-11f0-b604-0ae672297eff",
+                            "8815c026-1fab-11f0-b604-0ae672297eff",
+                            "8815d656-1fab-11f0-b604-0ae672297eff",
+                            "8815f92e-1fab-11f0-b604-0ae672297eff",
+                            "881626a6-1fab-11f0-b604-0ae672297eff",
+                            "881635c4-1fab-11f0-b604-0ae672297eff",
+                            "881645aa-1fab-11f0-b604-0ae672297eff",
+                            "88166314-1fab-11f0-b604-0ae672297eff",
+                            "88168074-1fab-11f0-b604-0ae672297eff",
+                            "8816a3e2-1fab-11f0-b604-0ae672297eff",
+                            "8816c3c2-1fab-11f0-b604-0ae672297eff",
+                            "8816f0cc-1fab-11f0-b604-0ae672297eff",
+                            "8817004e-1fab-11f0-b604-0ae672297eff",
+                            "88171746-1fab-11f0-b604-0ae672297eff",
+                            "88172a9c-1fab-11f0-b604-0ae672297eff",
+                            "88174130-1fab-11f0-b604-0ae672297eff",
+                            "88175260-1fab-11f0-b604-0ae672297eff",
+                            "8dee0daa-1fab-11f0-b604-0ae672297eff",
+                            "8dee5b20-1fab-11f0-b604-0ae672297eff",
+                            "8dee7b5a-1fab-11f0-b604-0ae672297eff",
+                            "8dee8a78-1fab-11f0-b604-0ae672297eff",
+                            "8dee99a0-1fab-11f0-b604-0ae672297eff",
+                            "8deea90e-1fab-11f0-b604-0ae672297eff",
+                            "8deeba7a-1fab-11f0-b604-0ae672297eff",
+                            "8deeca10-1fab-11f0-b604-0ae672297eff",
+                            "8deed91a-1fab-11f0-b604-0ae672297eff",
+                            "8deee86a-1fab-11f0-b604-0ae672297eff",
+                            "8deef756-1fab-11f0-b604-0ae672297eff",
+                            "8def070a-1fab-11f0-b604-0ae672297eff",
+                            "8def1b3c-1fab-11f0-b604-0ae672297eff",
+                            "8def30e0-1fab-11f0-b604-0ae672297eff",
+                            "8def4530-1fab-11f0-b604-0ae672297eff",
+                            "8def7906-1fab-11f0-b604-0ae672297eff",
+                            "93036484-1fab-11f0-b604-0ae672297eff",
+                            "93038630-1fab-11f0-b604-0ae672297eff",
+                            "930399fe-1fab-11f0-b604-0ae672297eff",
+                            "9303aa84-1fab-11f0-b604-0ae672297eff",
+                            "9303ba9c-1fab-11f0-b604-0ae672297eff",
+                            "9303c988-1fab-11f0-b604-0ae672297eff",
+                            "9303d8a6-1fab-11f0-b604-0ae672297eff",
+                            "9303e79c-1fab-11f0-b604-0ae672297eff",
+                            "9303f69c-1fab-11f0-b604-0ae672297eff",
+                            "930404de-1fab-11f0-b604-0ae672297eff",
+                            "930412a8-1fab-11f0-b604-0ae672297eff",
+                            "9304234c-1fab-11f0-b604-0ae672297eff",
+                            "930438e6-1fab-11f0-b604-0ae672297eff",
+                            "930449da-1fab-11f0-b604-0ae672297eff",
+                            "97047318-d71a-11ef-ac5a-0275dc2ded29",
+                            "97047d4a-d71a-11ef-ac5a-0275dc2ded29",
+                            "9704874a-d71a-11ef-ac5a-0275dc2ded29",
+                            "97048a56-d71a-11ef-ac5a-0275dc2ded29",
+                            "9704901e-d71a-11ef-ac5a-0275dc2ded29",
+                            "9867633a-1fab-11f0-b604-0ae672297eff",
+                            "98677c44-1fab-11f0-b604-0ae672297eff",
+                            "98678e0a-1fab-11f0-b604-0ae672297eff",
+                            "9867ad5e-1fab-11f0-b604-0ae672297eff",
+                            "9867c0dc-1fab-11f0-b604-0ae672297eff",
+                            "9867d428-1fab-11f0-b604-0ae672297eff",
+                            "9867e44a-1fab-11f0-b604-0ae672297eff",
+                            "98680362-1fab-11f0-b604-0ae672297eff",
+                            "986831f2-1fab-11f0-b604-0ae672297eff",
+                            "98684098-1fab-11f0-b604-0ae672297eff",
+                            "98686456-1fab-11f0-b604-0ae672297eff",
+                            "98687842-1fab-11f0-b604-0ae672297eff",
+                            "98689b06-1fab-11f0-b604-0ae672297eff",
+                            "9868ab0a-1fab-11f0-b604-0ae672297eff",
+                            "9868e8cc-1fab-11f0-b604-0ae672297eff",
+                            "9868f984-1fab-11f0-b604-0ae672297eff",
+                            "9e729fcc-d714-11ef-8c40-0275dc2ded29",
+                            "9e72aaa8-d714-11ef-8c40-0275dc2ded29",
+                            "9e72b3fe-d714-11ef-8c40-0275dc2ded29",
+                            "9e72b714-d714-11ef-8c40-0275dc2ded29",
+                            "9e72be4e-d714-11ef-8c40-0275dc2ded29",
+                            "a38f1ac8-1fab-11f0-b604-0ae672297eff",
+                            "a38f3d32-1fab-11f0-b604-0ae672297eff",
+                            "a38f506a-1fab-11f0-b604-0ae672297eff",
+                            "a38f6168-1fab-11f0-b604-0ae672297eff",
+                            "a38f72de-1fab-11f0-b604-0ae672297eff",
+                            "a38f888c-1fab-11f0-b604-0ae672297eff",
+                            "a38f9aac-1fab-11f0-b604-0ae672297eff",
+                            "a38fabbe-1fab-11f0-b604-0ae672297eff",
+                            "a38fbd20-1fab-11f0-b604-0ae672297eff",
+                            "a38fd508-1fab-11f0-b604-0ae672297eff",
+                            "a38fe6ba-1fab-11f0-b604-0ae672297eff",
+                            "a38ff6b4-1fab-11f0-b604-0ae672297eff",
+                            "a3900654-1fab-11f0-b604-0ae672297eff",
+                            "a39010a4-d834-11ef-b730-0275dc2ded29",
+                            "a39016b2-1fab-11f0-b604-0ae672297eff",
+                            "a390173e-d834-11ef-b730-0275dc2ded29",
+                            "a3901b76-d834-11ef-b730-0275dc2ded29",
+                            "a3901f5e-d834-11ef-b730-0275dc2ded29",
+                            "a3902332-d834-11ef-b730-0275dc2ded29",
+                            "a39026fc-d834-11ef-b730-0275dc2ded29",
+                            "a3902738-1fab-11f0-b604-0ae672297eff",
+                            "a3902e9a-d834-11ef-b730-0275dc2ded29",
+                            "a3903264-d834-11ef-b730-0275dc2ded29",
+                            "a39036a6-d834-11ef-b730-0275dc2ded29",
+                            "a39037c8-1fab-11f0-b604-0ae672297eff",
+                            "a3904312-d834-11ef-b730-0275dc2ded29",
+                            "a39046f0-d834-11ef-b730-0275dc2ded29",
+                            "a3904aa6-d834-11ef-b730-0275dc2ded29",
+                            "a3904e52-d834-11ef-b730-0275dc2ded29",
+                            "a39051e0-d834-11ef-b730-0275dc2ded29",
+                            "a3905582-d834-11ef-b730-0275dc2ded29",
+                            "a3905898-1fab-11f0-b604-0ae672297eff",
+                            "a390592e-d834-11ef-b730-0275dc2ded29",
+                            "a3905cda-d834-11ef-b730-0275dc2ded29",
+                            "a390652c-d834-11ef-b730-0275dc2ded29",
+                            "a3906914-d834-11ef-b730-0275dc2ded29",
+                            "a3906cca-d834-11ef-b730-0275dc2ded29",
+                            "a3906e64-1fab-11f0-b604-0ae672297eff",
+                            "a3908098-1fab-11f0-b604-0ae672297eff",
+                            "a39090c4-1fab-11f0-b604-0ae672297eff",
+                            "a390a08c-1fab-11f0-b604-0ae672297eff",
+                            "a390b022-1fab-11f0-b604-0ae672297eff",
+                            "a390c0bc-1fab-11f0-b604-0ae672297eff",
+                            "a390d0d4-1fab-11f0-b604-0ae672297eff",
+                            "a390e10a-1fab-11f0-b604-0ae672297eff",
+                            "a390f05a-1fab-11f0-b604-0ae672297eff",
+                            "a390ffc8-1fab-11f0-b604-0ae672297eff",
+                            "a3910efa-1fab-11f0-b604-0ae672297eff",
+                            "a3911ef4-1fab-11f0-b604-0ae672297eff",
+                            "a3912e62-1fab-11f0-b604-0ae672297eff",
+                            "a391606c-1fab-11f0-b604-0ae672297eff",
+                            "a391702a-1fab-11f0-b604-0ae672297eff",
+                            "a3917fac-1fab-11f0-b604-0ae672297eff",
+                            "a3918f56-1fab-11f0-b604-0ae672297eff",
+                            "a3919f82-1fab-11f0-b604-0ae672297eff",
+                            "a391afcc-1fab-11f0-b604-0ae672297eff",
+                            "a391bf9e-1fab-11f0-b604-0ae672297eff",
+                            "a391ceee-1fab-11f0-b604-0ae672297eff",
+                            "a391e276-1fab-11f0-b604-0ae672297eff",
+                            "afe99ae6-1fab-11f0-b604-0ae672297eff",
+                            "afe9b4ea-1fab-11f0-b604-0ae672297eff",
+                            "afe9c5f2-1fab-11f0-b604-0ae672297eff",
+                            "afe9d57e-1fab-11f0-b604-0ae672297eff",
+                            "afe9feb4-1fab-11f0-b604-0ae672297eff",
+                            "afea12e6-1fab-11f0-b604-0ae672297eff",
+                            "afea2380-1fab-11f0-b604-0ae672297eff",
+                            "afea3352-1fab-11f0-b604-0ae672297eff",
+                            "afea5382-1fab-11f0-b604-0ae672297eff",
+                            "afea7286-1fab-11f0-b604-0ae672297eff",
+                            "afea815e-1fab-11f0-b604-0ae672297eff",
+                            "afea9040-1fab-11f0-b604-0ae672297eff",
+                            "afeaae0e-1fab-11f0-b604-0ae672297eff",
+                            "afeabd0e-1fab-11f0-b604-0ae672297eff",
+                            "afeacca4-1fab-11f0-b604-0ae672297eff",
+                            "afeadc30-1fab-11f0-b604-0ae672297eff",
+                            "afeaeb1c-1fab-11f0-b604-0ae672297eff",
+                            "afeaf9cc-1fab-11f0-b604-0ae672297eff",
+                            "afeb0976-1fab-11f0-b604-0ae672297eff",
+                            "afeb1880-1fab-11f0-b604-0ae672297eff",
+                            "afeb27b2-1fab-11f0-b604-0ae672297eff",
+                            "b7d075cc-1fab-11f0-b604-0ae672297eff",
+                            "b7d09214-1fab-11f0-b604-0ae672297eff",
+                            "b7d0a42a-1fab-11f0-b604-0ae672297eff",
+                            "b7d0f484-1fab-11f0-b604-0ae672297eff",
+                            "b7d103a2-1fab-11f0-b604-0ae672297eff",
+                            "b7d13372-1fab-11f0-b604-0ae672297eff",
+                            "b7d14286-1fab-11f0-b604-0ae672297eff",
+                            "b7d15104-1fab-11f0-b604-0ae672297eff",
+                            "b7d16e14-1fab-11f0-b604-0ae672297eff",
+                            "b7d18cf0-1fab-11f0-b604-0ae672297eff",
+                            "b7d19cae-1fab-11f0-b604-0ae672297eff",
+                            "b7d1ada2-1fab-11f0-b604-0ae672297eff",
+                            "b7d1bd56-1fab-11f0-b604-0ae672297eff",
+                            "b7d1ce7c-1fab-11f0-b604-0ae672297eff",
+                            "b7d1de44-1fab-11f0-b604-0ae672297eff",
+                            "b7d1ed94-1fab-11f0-b604-0ae672297eff",
+                            "bda23c46-d376-11ef-a239-0275dc2ded29",
+                            "bda25802-d376-11ef-a239-0275dc2ded29",
+                            "bda2600e-d376-11ef-a239-0275dc2ded29",
+                            "bda267d4-d376-11ef-a239-0275dc2ded29",
+                            "bda27ff8-d376-11ef-a239-0275dc2ded29",
+                            "bda287b4-d376-11ef-a239-0275dc2ded29",
+                            "bda28f52-d376-11ef-a239-0275dc2ded29",
+                            "bda296b4-d376-11ef-a239-0275dc2ded29",
+                            "bda2a05a-d376-11ef-a239-0275dc2ded29",
+                            "bda2b810-d376-11ef-a239-0275dc2ded29",
+                            "bda2bf90-d376-11ef-a239-0275dc2ded29",
+                            "bda2cf44-d376-11ef-a239-0275dc2ded29",
+                            "bda2d6a6-d376-11ef-a239-0275dc2ded29",
+                            "bda2de08-d376-11ef-a239-0275dc2ded29",
+                            "bda2eccc-d376-11ef-a239-0275dc2ded29",
+                            "bda2f500-d376-11ef-a239-0275dc2ded29",
+                            "bda30414-d376-11ef-a239-0275dc2ded29",
+                            "bda30b6c-d376-11ef-a239-0275dc2ded29",
+                            "bda322a0-d376-11ef-a239-0275dc2ded29",
+                            "bda33164-d376-11ef-a239-0275dc2ded29",
+                            "bda34898-d376-11ef-a239-0275dc2ded29",
+                            "bda36f9e-d376-11ef-a239-0275dc2ded29",
+                            "bda37764-d376-11ef-a239-0275dc2ded29",
+                            "bda37eda-d376-11ef-a239-0275dc2ded29",
+                            "bda3863c-d376-11ef-a239-0275dc2ded29",
+                            "bda38e5c-d376-11ef-a239-0275dc2ded29",
+                            "bda3962c-d376-11ef-a239-0275dc2ded29",
+                            "bda39db6-d376-11ef-a239-0275dc2ded29",
+                            "bda3a50e-d376-11ef-a239-0275dc2ded29",
+                            "bda3ac5c-d376-11ef-a239-0275dc2ded29",
+                            "bda3b60c-d376-11ef-a239-0275dc2ded29",
+                            "bda3bdb4-d376-11ef-a239-0275dc2ded29",
+                            "bda3c516-d376-11ef-a239-0275dc2ded29",
+                            "bda3cc8c-d376-11ef-a239-0275dc2ded29",
+                            "bda3dc0e-d376-11ef-a239-0275dc2ded29",
+                            "bda3f2ca-d376-11ef-a239-0275dc2ded29",
+                            "bda40256-d376-11ef-a239-0275dc2ded29",
+                            "bda409e0-d376-11ef-a239-0275dc2ded29",
+                            "bda41138-d376-11ef-a239-0275dc2ded29",
+                            "bda4189a-d376-11ef-a239-0275dc2ded29",
+                            "bda42830-d376-11ef-a239-0275dc2ded29",
+                            "bda42fba-d376-11ef-a239-0275dc2ded29",
+                            "bda43726-d376-11ef-a239-0275dc2ded29",
+                            "bda445c2-d376-11ef-a239-0275dc2ded29",
+                            "bda44d06-d376-11ef-a239-0275dc2ded29",
+                            "bda455bc-d376-11ef-a239-0275dc2ded29",
+                            "bda46458-d376-11ef-a239-0275dc2ded29",
+                            "bda47b64-d376-11ef-a239-0275dc2ded29",
+                            "bda4923e-d376-11ef-a239-0275dc2ded29",
+                            "bda499a0-d376-11ef-a239-0275dc2ded29",
+                            "bda4a1b6-d376-11ef-a239-0275dc2ded29",
+                            "bda4b822-d376-11ef-a239-0275dc2ded29",
+                            "bda4c786-d376-11ef-a239-0275dc2ded29",
+                            "bda4cefc-d376-11ef-a239-0275dc2ded29",
+                            "bfc0333a-1fab-11f0-b604-0ae672297eff",
+                            "bfc04988-1fab-11f0-b604-0ae672297eff",
+                            "bfc0794e-1fab-11f0-b604-0ae672297eff",
+                            "bfc087d6-1fab-11f0-b604-0ae672297eff",
+                            "bfc09884-1fab-11f0-b604-0ae672297eff",
+                            "bfc0a90a-1fab-11f0-b604-0ae672297eff",
+                            "bfc0b7ec-1fab-11f0-b604-0ae672297eff",
+                            "bfc0c64c-1fab-11f0-b604-0ae672297eff",
+                            "bfc0d47a-1fab-11f0-b604-0ae672297eff",
+                            "bfc0e37a-1fab-11f0-b604-0ae672297eff",
+                            "bfc0f220-1fab-11f0-b604-0ae672297eff",
+                            "bfc10314-1fab-11f0-b604-0ae672297eff",
+                            "bfc12a1a-1fab-11f0-b604-0ae672297eff",
+                            "bfc13afa-1fab-11f0-b604-0ae672297eff",
+                            "bfc14b44-1fab-11f0-b604-0ae672297eff",
+                            "bfc15b66-1fab-11f0-b604-0ae672297eff",
+                            "bfc16a20-1fab-11f0-b604-0ae672297eff",
+                            "bfc17880-1fab-11f0-b604-0ae672297eff",
+                            "bfc1878a-1fab-11f0-b604-0ae672297eff",
+                            "c5a2a2e8-fadd-11e6-9849-6c4008b05c4c",
+                            "c5a2b1dc-fadd-11e6-a726-6c4008b05c4c",
+                            "c5a2b530-fadd-11e6-b5f6-6c4008b05c4c",
+                            "c5ebed80-1fab-11f0-b604-0ae672297eff",
+                            "c5ec00b8-1fab-11f0-b604-0ae672297eff",
+                            "c5ec1e7c-1fab-11f0-b604-0ae672297eff",
+                            "c5ec2d40-1fab-11f0-b604-0ae672297eff",
+                            "c5ec3b3c-1fab-11f0-b604-0ae672297eff",
+                            "c5ec48b6-1fab-11f0-b604-0ae672297eff",
+                            "c5ec5626-1fab-11f0-b604-0ae672297eff",
+                            "c5ec8aec-1fab-11f0-b604-0ae672297eff",
+                            "c5ec991a-1fab-11f0-b604-0ae672297eff",
+                            "c7ab9e8a-08e1-11f0-a3e8-0275dc2ded29",
+                            "c7b35b72-d833-11ef-a368-0275dc2ded29",
+                            "c7b35fd2-d833-11ef-a368-0275dc2ded29",
+                            "c7b36374-d833-11ef-a368-0275dc2ded29",
+                            "c7b36766-d833-11ef-a368-0275dc2ded29",
+                            "c7b36ad6-d833-11ef-a368-0275dc2ded29",
+                            "c7b36e32-d833-11ef-a368-0275dc2ded29",
+                            "c7b37382-d833-11ef-a368-0275dc2ded29",
+                            "c7b37724-d833-11ef-a368-0275dc2ded29",
+                            "c7b37a80-d833-11ef-a368-0275dc2ded29",
+                            "c7b37ddc-d833-11ef-a368-0275dc2ded29",
+                            "c7b3812e-d833-11ef-a368-0275dc2ded29",
+                            "c7b3849e-d833-11ef-a368-0275dc2ded29",
+                            "c7b387e6-d833-11ef-a368-0275dc2ded29",
+                            "c7b38b9c-d833-11ef-a368-0275dc2ded29",
+                            "cfb52246-1fab-11f0-b604-0ae672297eff",
+                            "cfb5483e-1fab-11f0-b604-0ae672297eff",
+                            "cfb55e64-1fab-11f0-b604-0ae672297eff",
+                            "cfb57174-1fab-11f0-b604-0ae672297eff",
+                            "cfb5944c-1fab-11f0-b604-0ae672297eff",
+                            "cfb5a31a-1fab-11f0-b604-0ae672297eff",
+                            "cfb5b7b0-1fab-11f0-b604-0ae672297eff",
+                            "cfb5c868-1fab-11f0-b604-0ae672297eff",
+                            "cfb5d7cc-1fab-11f0-b604-0ae672297eff",
+                            "cfb5e672-1fab-11f0-b604-0ae672297eff",
+                            "cfb5f4b4-1fab-11f0-b604-0ae672297eff",
+                            "cfb602c4-1fab-11f0-b604-0ae672297eff",
+                            "cfb613b8-1fab-11f0-b604-0ae672297eff",
+                            "cfb6240c-1fab-11f0-b604-0ae672297eff",
+                            "cfb637ee-1fab-11f0-b604-0ae672297eff",
+                            "cfb64cca-1fab-11f0-b604-0ae672297eff",
+                            "cfb65f6c-1fab-11f0-b604-0ae672297eff",
+                            "cfb66fac-1fab-11f0-b604-0ae672297eff",
+                            "cfb680dc-1fab-11f0-b604-0ae672297eff",
+                            "cfb69392-1fab-11f0-b604-0ae672297eff",
+                            "cfb6a454-1fab-11f0-b604-0ae672297eff",
+                            "cfb6b4bc-1fab-11f0-b604-0ae672297eff",
+                            "cfb6c434-1fab-11f0-b604-0ae672297eff",
+                            "cfb6d438-1fab-11f0-b604-0ae672297eff",
+                            "cfb6e284-1fab-11f0-b604-0ae672297eff",
+                            "cfb6f116-1fab-11f0-b604-0ae672297eff",
+                            "cfb70d5e-1fab-11f0-b604-0ae672297eff",
+                            "d7cd4102-d834-11ef-a75a-0275dc2ded29",
+                            "d7cd4634-d834-11ef-a75a-0275dc2ded29",
+                            "d7cd5200-d834-11ef-a75a-0275dc2ded29",
+                            "d7cd56f6-d834-11ef-a75a-0275dc2ded29",
+                            "d7cd5b1a-d834-11ef-a75a-0275dc2ded29",
+                            "d7cd5f02-d834-11ef-a75a-0275dc2ded29",
+                            "d7cd62fe-d834-11ef-a75a-0275dc2ded29",
+                            "d7cd66fa-d834-11ef-a75a-0275dc2ded29",
+                            "d7cd6ace-d834-11ef-a75a-0275dc2ded29",
+                            "d7cd6ea2-d834-11ef-a75a-0275dc2ded29",
+                            "d7cd724e-d834-11ef-a75a-0275dc2ded29",
+                            "d7cd7618-d834-11ef-a75a-0275dc2ded29",
+                            "d7cd7e42-d834-11ef-a75a-0275dc2ded29",
+                            "d7cd822a-d834-11ef-a75a-0275dc2ded29",
+                            "d7cd85fe-d834-11ef-a75a-0275dc2ded29",
+                            "d7cd89aa-d834-11ef-a75a-0275dc2ded29",
+                            "d7cd8d7e-d834-11ef-a75a-0275dc2ded29",
+                            "d7cd9120-d834-11ef-a75a-0275dc2ded29",
+                            "d7cd94ae-d834-11ef-a75a-0275dc2ded29",
+                            "da0ed73c-d771-11ef-af99-0275dc2ded29",
+                            "da0edb9c-d771-11ef-af99-0275dc2ded29",
+                            "da0edf48-d771-11ef-af99-0275dc2ded29",
+                            "da0ee2e0-d771-11ef-af99-0275dc2ded29",
+                            "da0ee682-d771-11ef-af99-0275dc2ded29",
+                            "da0ee9fc-d771-11ef-af99-0275dc2ded29",
+                            "da0eef2e-d771-11ef-af99-0275dc2ded29",
+                            "da0ef2f8-d771-11ef-af99-0275dc2ded29",
+                            "da0ef672-d771-11ef-af99-0275dc2ded29",
+                            "da0ef9d8-d771-11ef-af99-0275dc2ded29",
+                            "da0efd3e-d771-11ef-af99-0275dc2ded29",
+                            "da0f00b8-d771-11ef-af99-0275dc2ded29",
+                            "da0f0414-d771-11ef-af99-0275dc2ded29",
+                            "da0f0766-d771-11ef-af99-0275dc2ded29",
+                            "da0f0afe-d771-11ef-af99-0275dc2ded29",
+                            "da0f0e50-d771-11ef-af99-0275dc2ded29",
+                            "dbf61754-1fab-11f0-b604-0ae672297eff",
+                            "dbf630b8-1fab-11f0-b604-0ae672297eff",
+                            "dbf643dc-1fab-11f0-b604-0ae672297eff",
+                            "dbf65462-1fab-11f0-b604-0ae672297eff",
+                            "dbf662fe-1fab-11f0-b604-0ae672297eff",
+                            "dbf672e4-1fab-11f0-b604-0ae672297eff",
+                            "dbf681ee-1fab-11f0-b604-0ae672297eff",
+                            "dbf6908a-1fab-11f0-b604-0ae672297eff",
+                            "dbf69f6c-1fab-11f0-b604-0ae672297eff",
+                            "dbf6b330-1fab-11f0-b604-0ae672297eff",
+                            "dbf6c56e-1fab-11f0-b604-0ae672297eff",
+                            "dbf6d4f0-1fab-11f0-b604-0ae672297eff",
+                            "dbf6e3a0-1fab-11f0-b604-0ae672297eff",
+                            "dbf6f1d8-1fab-11f0-b604-0ae672297eff",
+                            "dbf700ba-1fab-11f0-b604-0ae672297eff",
+                            "dbf70f60-1fab-11f0-b604-0ae672297eff",
+                            "e1d0ec0e-d770-11ef-8c40-0275dc2ded29",
+                            "e1d0f244-d770-11ef-8c40-0275dc2ded29",
+                            "e1d0f88e-d770-11ef-8c40-0275dc2ded29",
+                            "e1d0fea6-d770-11ef-8c40-0275dc2ded29",
+                            "e1d103e2-d770-11ef-8c40-0275dc2ded29",
+                            "e1d108d8-d770-11ef-8c40-0275dc2ded29",
+                            "e1d10dc4-d770-11ef-8c40-0275dc2ded29",
+                            "e1d11292-d770-11ef-8c40-0275dc2ded29",
+                            "e1d1176a-d770-11ef-8c40-0275dc2ded29",
+                            "e1d11c42-d770-11ef-8c40-0275dc2ded29",
+                            "e1d121f6-d770-11ef-8c40-0275dc2ded29",
+                            "e1d12714-d770-11ef-8c40-0275dc2ded29",
+                            "e1d12bf6-d770-11ef-8c40-0275dc2ded29",
+                            "e1d130ce-d770-11ef-8c40-0275dc2ded29",
+                            "e1d135a6-d770-11ef-8c40-0275dc2ded29",
+                            "e1d13a74-d770-11ef-8c40-0275dc2ded29",
+                            "e1d143fc-d770-11ef-8c40-0275dc2ded29",
+                            "e1d1499c-d770-11ef-8c40-0275dc2ded29",
+                            "e1d14eb0-d770-11ef-8c40-0275dc2ded29",
+                            "e1d15388-d770-11ef-8c40-0275dc2ded29",
+                            "e1d15860-d770-11ef-8c40-0275dc2ded29",
+                            "e1d15d74-d770-11ef-8c40-0275dc2ded29",
+                            "e1d1624c-d770-11ef-8c40-0275dc2ded29",
+                            "e1d16742-d770-11ef-8c40-0275dc2ded29",
+                            "e1d16cec-d770-11ef-8c40-0275dc2ded29",
+                            "e1d1721e-d770-11ef-8c40-0275dc2ded29",
+                            "e1d176ce-d770-11ef-8c40-0275dc2ded29",
+                            "e1d17b92-d770-11ef-8c40-0275dc2ded29",
+                            "e1d18042-d770-11ef-8c40-0275dc2ded29",
+                            "e1d184f2-d770-11ef-8c40-0275dc2ded29",
+                            "e1d193c0-d770-11ef-8c40-0275dc2ded29",
+                            "e1d198fc-d770-11ef-8c40-0275dc2ded29",
+                            "e1d19dac-d770-11ef-8c40-0275dc2ded29",
+                            "e1d1a252-d770-11ef-8c40-0275dc2ded29",
+                            "e1d1a70c-d770-11ef-8c40-0275dc2ded29",
+                            "e1d1aba8-d770-11ef-8c40-0275dc2ded29",
+                            "e1d1b058-d770-11ef-8c40-0275dc2ded29",
+                            "e1d1b4fe-d770-11ef-8c40-0275dc2ded29",
+                            "e1d1ba58-d770-11ef-8c40-0275dc2ded29",
+                            "e771a9b8-1fab-11f0-b604-0ae672297eff",
+                            "e771c2ae-1fab-11f0-b604-0ae672297eff",
+                            "e771d3ca-1fab-11f0-b604-0ae672297eff",
+                            "e771fcba-1fab-11f0-b604-0ae672297eff",
+                            "e7720eda-1fab-11f0-b604-0ae672297eff",
+                            "e7721fec-1fab-11f0-b604-0ae672297eff",
+                            "e7722ec4-1fab-11f0-b604-0ae672297eff",
+                            "e7724b20-1fab-11f0-b604-0ae672297eff",
+                            "e7725912-1fab-11f0-b604-0ae672297eff",
+                            "e77267b8-1fab-11f0-b604-0ae672297eff",
+                            "e77276e0-1fab-11f0-b604-0ae672297eff",
+                            "e77284f0-1fab-11f0-b604-0ae672297eff",
+                            "e77292ce-1fab-11f0-b604-0ae672297eff",
+                            "e772af52-1fab-11f0-b604-0ae672297eff",
+                            "e772bf06-1fab-11f0-b604-0ae672297eff",
+                            "e772cd84-1fab-11f0-b604-0ae672297eff",
+                            "e7731726-1fab-11f0-b604-0ae672297eff",
+                            "e7732a22-1fab-11f0-b604-0ae672297eff",
+                            "e7733c60-1fab-11f0-b604-0ae672297eff",
+                            "e7734bb0-1fab-11f0-b604-0ae672297eff",
+                            "e7735b78-1fab-11f0-b604-0ae672297eff",
+                            "e7736a6e-1fab-11f0-b604-0ae672297eff",
+                            "e77378ce-1fab-11f0-b604-0ae672297eff",
+                            "e9b8d73c-09b7-11f0-b84f-0275dc2ded29",
+                            "eaac50da-d832-11ef-a368-0275dc2ded29",
+                            "eaac6836-d832-11ef-a368-0275dc2ded29",
+                            "eaac6cf0-d832-11ef-a368-0275dc2ded29",
+                            "eaac75c4-d832-11ef-a368-0275dc2ded29",
+                            "eaac79fc-d832-11ef-a368-0275dc2ded29",
+                            "eaac7efc-d832-11ef-a368-0275dc2ded29",
+                            "eaac833e-d832-11ef-a368-0275dc2ded29",
+                            "eaac8b72-d832-11ef-a368-0275dc2ded29",
+                            "eaac97d4-d832-11ef-a368-0275dc2ded29",
+                            "eaac9bd0-d832-11ef-a368-0275dc2ded29",
+                            "eaaca3be-d832-11ef-a368-0275dc2ded29",
+                            "eaaca88c-d832-11ef-a368-0275dc2ded29",
+                            "eaacb0b6-d832-11ef-a368-0275dc2ded29",
+                            "eaacb4d0-d832-11ef-a368-0275dc2ded29",
+                            "eaacc4b6-d832-11ef-a368-0275dc2ded29",
+                            "eaacc894-d832-11ef-a368-0275dc2ded29",
+                            "f9c82772-1fab-11f0-b604-0ae672297eff",
+                            "f9c843a6-1fab-11f0-b604-0ae672297eff",
+                            "f9c85576-1fab-11f0-b604-0ae672297eff",
+                            "f9c8652a-1fab-11f0-b604-0ae672297eff",
+                            "f9c8743e-1fab-11f0-b604-0ae672297eff",
+                            "f9c884b0-1fab-11f0-b604-0ae672297eff",
+                            "f9c8b282-1fab-11f0-b604-0ae672297eff",
+                            "f9c8c114-1fab-11f0-b604-0ae672297eff",
+                            "f9c8d42e-1fab-11f0-b604-0ae672297eff",
+                            "f9c8e3f6-1fab-11f0-b604-0ae672297eff",
+                            "f9c8f9cc-1fab-11f0-b604-0ae672297eff",
+                            "f9c9129a-1fab-11f0-b604-0ae672297eff",
+                            "f9c924ba-1fab-11f0-b604-0ae672297eff",
+                            "f9c934b4-1fab-11f0-b604-0ae672297eff",
+                            "f9c943d2-1fab-11f0-b604-0ae672297eff",
+                            "f9c95746-1fab-11f0-b604-0ae672297eff",
+                            "f9c96876-1fab-11f0-b604-0ae672297eff",
+                            "f9c97942-1fab-11f0-b604-0ae672297eff",
+                            "f9c991a2-1fab-11f0-b604-0ae672297eff",
+                            "f9c9ab74-1fab-11f0-b604-0ae672297eff",
+                            "f9c9c140-1fab-11f0-b604-0ae672297eff",
+                            "f9c9d446-1fab-11f0-b604-0ae672297eff",
+                            "f9c9e4f4-1fab-11f0-b604-0ae672297eff",
+                            "f9c9f408-1fab-11f0-b604-0ae672297eff",
+                            "f9ca02e0-1fab-11f0-b604-0ae672297eff",
+                            "f9ca1168-1fab-11f0-b604-0ae672297eff",
+                            "f9ca204a-1fab-11f0-b604-0ae672297eff",
+                            "f9ca2f68-1fab-11f0-b604-0ae672297eff",
+                            "f9ca3e54-1fab-11f0-b604-0ae672297eff",
+                            "f9ca4d2c-1fab-11f0-b604-0ae672297eff",
+                            "feb95991-fa14-11e6-974f-6c4008b05c4c"
+                        ]
+                    },
+                    "function_id": "c75ebc8d-7aae-4c99-981d-4219dbb4b789",
+                    "graph_id": "b1d66bb2-a87c-4faf-8471-1362d7074523",
+                    "id": "fd5bf3e6-8562-4571-8058-8505a6eb29de"
+                }
+            ],
+            "graphid": "b1d66bb2-a87c-4faf-8471-1362d7074523",
+            "group_permissions": {},
+            "has_unpublished_changes": true,
+            "iconclass": "fa fa-asterisk",
+            "is_active": true,
+            "is_copy_immutable": false,
+            "isresource": false,
+            "jsonldcontext": "https://linked.art/ns/v1/linked-art.json",
+            "name": {
+                "en": "acquisition"
+            },
+            "nodegroups": [
+                {
+                    "cardinality": "1",
+                    "grouping_node_id": "4e3add35-8db4-465e-a0d6-7d004e9aef1e",
+                    "legacygroupid": null,
+                    "nodegroupid": "4e3add35-8db4-465e-a0d6-7d004e9aef1e",
+                    "parentnodegroup_id": "d97f1408-41d0-49b6-aa8d-fc06a3ac0861"
+                },
+                {
+                    "cardinality": "1",
+                    "grouping_node_id": "82e18ecc-deb4-4981-b49c-aac5187027ae",
+                    "legacygroupid": null,
+                    "nodegroupid": "82e18ecc-deb4-4981-b49c-aac5187027ae",
+                    "parentnodegroup_id": "d97f1408-41d0-49b6-aa8d-fc06a3ac0861"
+                },
+                {
+                    "cardinality": "1",
+                    "grouping_node_id": "a52b7c84-bf21-4612-9825-a6b541f20623",
+                    "legacygroupid": null,
+                    "nodegroupid": "a52b7c84-bf21-4612-9825-a6b541f20623",
+                    "parentnodegroup_id": "4e3add35-8db4-465e-a0d6-7d004e9aef1e"
+                },
+                {
+                    "cardinality": "1",
+                    "grouping_node_id": "d97f1408-41d0-49b6-aa8d-fc06a3ac0861",
+                    "legacygroupid": null,
+                    "nodegroupid": "d97f1408-41d0-49b6-aa8d-fc06a3ac0861",
+                    "parentnodegroup_id": null
+                }
+            ],
+            "nodes": [
+                {
+                    "alias": "acquisition_label",
+                    "config": {},
+                    "datatype": "string",
+                    "description": "# Specific:\n\n\n# General:\nEvery node should have a _label that provides a human-readable summary label for the node. This is intended not for end users, but for developers looking at the data. See:  https://linked.art/model/base/#core-properties\n\n# Arches Note:\n\n\n* BranchId: la-label\n* FieldId: \n",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "b1d66bb2-a87c-4faf-8471-1362d7074523",
+                    "hascustomalias": true,
+                    "is_collector": false,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "acquisition_label",
+                    "nodegroup_id": "d97f1408-41d0-49b6-aa8d-fc06a3ac0861",
+                    "nodeid": "0ef599d3-7845-4a36-a459-d47bc31e4825",
+                    "ontologyclass": "http://www.w3.org/2001/XMLSchema#string",
+                    "parentproperty": "http://www.w3.org/2000/01/rdf-schema#label",
+                    "sortorder": 7,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": "bd4bd9b1-38d3-421b-a2e1-105545c080d8"
+                },
+                {
+                    "alias": "acquisition_timespan_name_type",
+                    "config": {
+                        "controlledList": "9f1cf9a8-ce65-455f-ab1e-a9b36e9e23ce",
+                        "multiValue": true
+                    },
+                    "datatype": "reference",
+                    "description": "# Specific:\n\n\n# General:\nIn order to make data both consistent and able to be customized to specific scenarios, nodes can be classified with terms from controlled vocabularies. This field gives a way to be more specific about the sort of entity, while maintaining the core information using the ontology class. See: https://linked.art/model/base/#types-and-classifications\n\n# Arches Note:\n\n\n* BranchId: la-classification\n* FieldId: \n",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "b1d66bb2-a87c-4faf-8471-1362d7074523",
+                    "hascustomalias": true,
+                    "is_collector": false,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "acquisition_timespan_name_type",
+                    "nodegroup_id": "a52b7c84-bf21-4612-9825-a6b541f20623",
+                    "nodeid": "0fa3e399-0090-4a9e-9f52-b085f365bc5e",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E55_Type",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
+                    "sortorder": 3,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": "bd4bd9b1-38d3-421b-a2e1-105545c080d8"
+                },
+                {
+                    "alias": "acquisition_type",
+                    "config": {
+                        "controlledList": "f3eca78c-7547-4ca5-a7eb-b130391b40ed",
+                        "multiValue": true
+                    },
+                    "datatype": "reference",
+                    "description": "# Specific:\n\n\n# General:\nIn order to make data both consistent and able to be customized to specific scenarios, nodes can be classified with terms from controlled vocabularies. This field gives a way to be more specific about the sort of entity, while maintaining the core information using the ontology class. See: https://linked.art/model/base/#types-and-classifications\n\n# Arches Note:\n\n\n* BranchId: la-classification\n* FieldId: \n",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "b1d66bb2-a87c-4faf-8471-1362d7074523",
+                    "hascustomalias": true,
+                    "is_collector": false,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "acquisition_type",
+                    "nodegroup_id": "d97f1408-41d0-49b6-aa8d-fc06a3ac0861",
+                    "nodeid": "12a21d5c-eae7-40ce-bf7f-ee514273125e",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E55_Type",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
+                    "sortorder": 3,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": "bd4bd9b1-38d3-421b-a2e1-105545c080d8"
+                },
+                {
+                    "alias": "acquisition_source",
+                    "config": {
+                        "graphs": [
+                            {
+                                "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
+                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "name": "Textual Work",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "useOntologyRelationship": false
+                            }
+                        ],
+                        "searchDsl": "",
+                        "searchString": ""
+                    },
+                    "datatype": "resource-instance-list",
+                    "description": "# Specific:\n\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "b1d66bb2-a87c-4faf-8471-1362d7074523",
+                    "hascustomalias": true,
+                    "is_collector": false,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "acquisition_source",
+                    "nodegroup_id": "d97f1408-41d0-49b6-aa8d-fc06a3ac0861",
+                    "nodeid": "1a4c4e9f-daf1-45e2-a515-50e35669f4bb",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by",
+                    "sortorder": 6,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": "bd4bd9b1-38d3-421b-a2e1-105545c080d8"
+                },
+                {
+                    "alias": "acquisition_statement_label",
+                    "config": {},
+                    "datatype": "string",
+                    "description": "# Specific:\n\n\n# General:\nEvery node should have a _label that provides a human-readable summary label for the node. This is intended not for end users, but for developers looking at the data. See:  https://linked.art/model/base/#core-properties\n\n# Arches Note:\n\n\n* BranchId: la-label\n* FieldId: \n",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "b1d66bb2-a87c-4faf-8471-1362d7074523",
+                    "hascustomalias": true,
+                    "is_collector": false,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "acquisition_statement_label",
+                    "nodegroup_id": "82e18ecc-deb4-4981-b49c-aac5187027ae",
+                    "nodeid": "2dd7c0b0-5bc9-4b9f-9ff2-77677a0f9fa8",
+                    "ontologyclass": "http://www.w3.org/2001/XMLSchema#string",
+                    "parentproperty": "http://www.w3.org/2000/01/rdf-schema#label",
+                    "sortorder": 4,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": "bd4bd9b1-38d3-421b-a2e1-105545c080d8"
+                },
+                {
+                    "alias": "acquisition_transferred_title_from",
+                    "config": {
+                        "graphs": [
+                            {
+                                "graphid": "e1d0ea1a-d770-11ef-8c40-0275dc2ded29",
+                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "name": "Person",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "useOntologyRelationship": false
+                            },
+                            {
+                                "graphid": "36956e50-d770-11ef-8f5d-0275dc2ded29",
+                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "name": "Group ",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "useOntologyRelationship": false
+                            }
+                        ],
+                        "searchDsl": "",
+                        "searchString": ""
+                    },
+                    "datatype": "resource-instance-list",
+                    "description": "# Specific:\n\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "b1d66bb2-a87c-4faf-8471-1362d7074523",
+                    "hascustomalias": true,
+                    "is_collector": false,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "acquisition_transferred_title_from",
+                    "nodegroup_id": "d97f1408-41d0-49b6-aa8d-fc06a3ac0861",
+                    "nodeid": "2f2c33c2-c9e4-4190-a3f4-95cbb76fa903",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E39_Actor",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P23_transferred_title_from",
+                    "sortorder": 1,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": "bd4bd9b1-38d3-421b-a2e1-105545c080d8"
+                },
+                {
+                    "alias": "acquisition_statement_type_metatype",
+                    "config": {
+                        "controlledList": "c82d6f85-ae67-4c28-b07a-c114f6d6ba50",
+                        "multiValue": false
+                    },
+                    "datatype": "reference",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "b1d66bb2-a87c-4faf-8471-1362d7074523",
+                    "hascustomalias": true,
+                    "is_collector": false,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "acquisition_statement_type_metatype",
+                    "nodegroup_id": "82e18ecc-deb4-4981-b49c-aac5187027ae",
+                    "nodeid": "338d756b-fd7b-4354-8045-9176ff3221f7",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E55_Type",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
+                    "sortorder": 0,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": "bd4bd9b1-38d3-421b-a2e1-105545c080d8"
+                },
+                {
+                    "alias": "acquisition_timespan_label",
+                    "config": {},
+                    "datatype": "string",
+                    "description": "# Specific:\n\n\n# General:\nEvery node should have a _label that provides a human-readable summary label for the node. This is intended not for end users, but for developers looking at the data. See:  https://linked.art/model/base/#core-properties\n\n# Arches Note:\n\n\n* BranchId: la-label\n* FieldId: \n",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "b1d66bb2-a87c-4faf-8471-1362d7074523",
+                    "hascustomalias": true,
+                    "is_collector": false,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "acquisition_timespan_label",
+                    "nodegroup_id": "4e3add35-8db4-465e-a0d6-7d004e9aef1e",
+                    "nodeid": "33a687cb-3fae-4404-ba91-1e35182f9d04",
+                    "ontologyclass": "http://www.w3.org/2001/XMLSchema#string",
+                    "parentproperty": "http://www.w3.org/2000/01/rdf-schema#label",
+                    "sortorder": 7,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": "bd4bd9b1-38d3-421b-a2e1-105545c080d8"
+                },
+                {
+                    "alias": "acquisition_timespan_name_language",
+                    "config": {
+                        "controlledList": "f7fc4f6d-fd46-4881-846f-4a08bc1a3fef",
+                        "multiValue": true
+                    },
+                    "datatype": "reference",
+                    "description": "# Specific:\n\n\n# General:\nThe language of the name, selected from a controlled vocabulary.\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "b1d66bb2-a87c-4faf-8471-1362d7074523",
+                    "hascustomalias": true,
+                    "is_collector": false,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "acquisition_timespan_name_language",
+                    "nodegroup_id": "a52b7c84-bf21-4612-9825-a6b541f20623",
+                    "nodeid": "366e7395-1d7a-41f5-a85c-64eb09eec59b",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E56_Language",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P72_has_language",
+                    "sortorder": 2,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": "bd4bd9b1-38d3-421b-a2e1-105545c080d8"
+                },
+                {
+                    "alias": "acquisition_timespan_name_content",
+                    "config": {},
+                    "datatype": "string",
+                    "description": "# Specific:\n\n\n# General:\nThe string value of the full name.\n\n# Arches Note:\n\n\n* BranchId: la-name-content\n* FieldId: \n",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "b1d66bb2-a87c-4faf-8471-1362d7074523",
+                    "hascustomalias": true,
+                    "is_collector": false,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "acquisition_timespan_name_content",
+                    "nodegroup_id": "a52b7c84-bf21-4612-9825-a6b541f20623",
+                    "nodeid": "40fb70f7-5432-4a6c-bf2d-57402d502d5c",
+                    "ontologyclass": "http://www.w3.org/2001/XMLSchema#string",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P190_has_symbolic_content",
+                    "sortorder": 1,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": "bd4bd9b1-38d3-421b-a2e1-105545c080d8"
+                },
+                {
+                    "alias": "acquisition_timespan",
+                    "config": {
+                        "en": ""
+                    },
+                    "datatype": "semantic",
+                    "description": "# Specific:\n\n\n# General:\nTimeSpan is used to record a span of time between two, possibly fuzzy, points. It can also have a known duration between those points.  For example, a 1 week activity might occur sometime between the first and third quarters of the year. See: https://linked.art/model/base/#time-span-details\n\n# Arches Note:\n\n\n* BranchId: la-timespan\n* FieldId: \n",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "b1d66bb2-a87c-4faf-8471-1362d7074523",
+                    "hascustomalias": false,
+                    "is_collector": true,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "acquisition_timespan",
+                    "nodegroup_id": "4e3add35-8db4-465e-a0d6-7d004e9aef1e",
+                    "nodeid": "4e3add35-8db4-465e-a0d6-7d004e9aef1e",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span",
+                    "sortorder": 9,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": "bd4bd9b1-38d3-421b-a2e1-105545c080d8"
+                },
+                {
+                    "alias": "acquisition_transferred_title_to",
+                    "config": {
+                        "graphs": [
+                            {
+                                "graphid": "e1d0ea1a-d770-11ef-8c40-0275dc2ded29",
+                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "name": "Person",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "useOntologyRelationship": false
+                            },
+                            {
+                                "graphid": "36956e50-d770-11ef-8f5d-0275dc2ded29",
+                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "name": "Group ",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "useOntologyRelationship": false
+                            }
+                        ],
+                        "searchDsl": "",
+                        "searchString": ""
+                    },
+                    "datatype": "resource-instance-list",
+                    "description": "# Specific:\n\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "b1d66bb2-a87c-4faf-8471-1362d7074523",
+                    "hascustomalias": true,
+                    "is_collector": false,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "acquisition_transferred_title_to",
+                    "nodegroup_id": "d97f1408-41d0-49b6-aa8d-fc06a3ac0861",
+                    "nodeid": "505d0393-e080-422c-a178-e3f16a70fce0",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E39_Actor",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P22_transferred_title_to",
+                    "sortorder": 2,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": "bd4bd9b1-38d3-421b-a2e1-105545c080d8"
+                },
+                {
+                    "alias": "acquisition_location",
+                    "config": {
+                        "graphs": [
+                            {
+                                "graphid": "3dda9f54-d771-11ef-825b-0275dc2ded29",
+                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "name": "Place",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "useOntologyRelationship": false
+                            }
+                        ],
+                        "searchDsl": "",
+                        "searchString": ""
+                    },
+                    "datatype": "resource-instance",
+                    "description": "# Specific:\n\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "b1d66bb2-a87c-4faf-8471-1362d7074523",
+                    "hascustomalias": true,
+                    "is_collector": false,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "acquisition_location",
+                    "nodegroup_id": "d97f1408-41d0-49b6-aa8d-fc06a3ac0861",
+                    "nodeid": "585160d9-18df-4e85-9e93-e4e69e017f9d",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at",
+                    "sortorder": 5,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": "bd4bd9b1-38d3-421b-a2e1-105545c080d8"
+                },
+                {
+                    "alias": "acquisition_timespan_type",
+                    "config": {
+                        "controlledList": "c53d3557-e033-4aa1-b020-0dc2b690025f",
+                        "multiValue": true
+                    },
+                    "datatype": "reference",
+                    "description": "# Specific:\n\n\n# General:\nIn order to make data both consistent and able to be customized to specific scenarios, nodes can be classified with terms from controlled vocabularies. This field gives a way to be more specific about the sort of entity, while maintaining the core information using the ontology class. See: https://linked.art/model/base/#types-and-classifications\n\n# Arches Note:\n\n\n* BranchId: la-classification\n* FieldId: \n",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "b1d66bb2-a87c-4faf-8471-1362d7074523",
+                    "hascustomalias": true,
+                    "is_collector": false,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "acquisition_timespan_type",
+                    "nodegroup_id": "4e3add35-8db4-465e-a0d6-7d004e9aef1e",
+                    "nodeid": "5d0c6621-ce0e-4905-9f51-a101e2ae4b15",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E55_Type",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
+                    "sortorder": 1,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": "bd4bd9b1-38d3-421b-a2e1-105545c080d8"
+                },
+                {
+                    "alias": "acquisition_timespan_end_of_the_end",
+                    "config": {
+                        "dateFormat": "YYYY-MM-DD"
+                    },
+                    "datatype": "date",
+                    "description": "# Specific:\n\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "b1d66bb2-a87c-4faf-8471-1362d7074523",
+                    "hascustomalias": true,
+                    "is_collector": false,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "acquisition_timespan_end_of_the_end",
+                    "nodegroup_id": "4e3add35-8db4-465e-a0d6-7d004e9aef1e",
+                    "nodeid": "615881b5-2071-431c-86e4-8d487b2082c2",
+                    "ontologyclass": "http://www.w3.org/2001/XMLSchema#dateTime",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P82b_end_of_the_end",
+                    "sortorder": 5,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": "bd4bd9b1-38d3-421b-a2e1-105545c080d8"
+                },
+                {
+                    "alias": "acquisition_timespan_production_time_edtf",
+                    "config": {
+                        "fuzzy_day_padding": 1,
+                        "fuzzy_month_padding": 1,
+                        "fuzzy_season_padding": 12,
+                        "fuzzy_year_padding": 1,
+                        "multiplier_if_approximate": 1,
+                        "multiplier_if_both": 1,
+                        "multiplier_if_uncertain": 1
+                    },
+                    "datatype": "edtf",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "b1d66bb2-a87c-4faf-8471-1362d7074523",
+                    "hascustomalias": true,
+                    "is_collector": false,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "acquisition_timespan_edtf",
+                    "nodegroup_id": "4e3add35-8db4-465e-a0d6-7d004e9aef1e",
+                    "nodeid": "631aae1c-aa3b-4dd9-811d-91d34dd3a275",
+                    "ontologyclass": "http://www.w3.org/2000/01/rdf-schema#Literal",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P82_at_some_time_within",
+                    "sortorder": 6,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "acquisition_statement",
+                    "config": {},
+                    "datatype": "semantic",
+                    "description": "# Specific:\n\n\n# General:\nIn many cases, current data does not support the level of specificity that the full ontology allows, or the information is simply best expressed in human-readable form. For example, instead of a completely modeled set of parts with materials, many museum collection management systems allow only a single human-readable string for the \"medium\" or \"materials statement\".  Any time that there is a description of the resource, with or without qualification as to the type of description, then this branch can be used to record the descriptive text. See: https://linked.art/model/base/#statements-about-a-resource\n\n# Arches Note:\n\n\n* BranchId: la-statement\n* FieldId: \n",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "b1d66bb2-a87c-4faf-8471-1362d7074523",
+                    "hascustomalias": true,
+                    "is_collector": true,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "acquisition_statement",
+                    "nodegroup_id": "82e18ecc-deb4-4981-b49c-aac5187027ae",
+                    "nodeid": "82e18ecc-deb4-4981-b49c-aac5187027ae",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by",
+                    "sortorder": 8,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": "bd4bd9b1-38d3-421b-a2e1-105545c080d8"
+                },
+                {
+                    "alias": "acquisition_statement_source",
+                    "config": {
+                        "graphs": [
+                            {
+                                "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
+                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "name": "Textual Work",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "useOntologyRelationship": false
+                            }
+                        ],
+                        "searchDsl": "",
+                        "searchString": ""
+                    },
+                    "datatype": "resource-instance-list",
+                    "description": "# Specific:\n\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "b1d66bb2-a87c-4faf-8471-1362d7074523",
+                    "hascustomalias": true,
+                    "is_collector": false,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "acquisition_statement_source",
+                    "nodegroup_id": "82e18ecc-deb4-4981-b49c-aac5187027ae",
+                    "nodeid": "9c4a6429-6095-4545-bc97-429c1b3e7b36",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by",
+                    "sortorder": 3,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": "bd4bd9b1-38d3-421b-a2e1-105545c080d8"
+                },
+                {
+                    "alias": "acquisition_carried_out_by",
+                    "config": {
+                        "graphs": [
+                            {
+                                "graphid": "36956e50-d770-11ef-8f5d-0275dc2ded29",
+                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "name": "Group ",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "useOntologyRelationship": false
+                            },
+                            {
+                                "graphid": "e1d0ea1a-d770-11ef-8c40-0275dc2ded29",
+                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "name": "Person",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "useOntologyRelationship": false
+                            }
+                        ],
+                        "searchDsl": "",
+                        "searchString": ""
+                    },
+                    "datatype": "resource-instance",
+                    "description": "# Specific:\n\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "b1d66bb2-a87c-4faf-8471-1362d7074523",
+                    "hascustomalias": true,
+                    "is_collector": false,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "acquisition_carried_out_by",
+                    "nodegroup_id": "d97f1408-41d0-49b6-aa8d-fc06a3ac0861",
+                    "nodeid": "a27203d3-b9b8-4662-bd17-1b215278a641",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E39_Actor",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by",
+                    "sortorder": 4,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": "bd4bd9b1-38d3-421b-a2e1-105545c080d8"
+                },
+                {
+                    "alias": "acquisition_statement_type",
+                    "config": {
+                        "controlledList": "1adae7ea-4884-432f-af44-c9aea3a48a3d",
+                        "multiValue": true
+                    },
+                    "datatype": "reference",
+                    "description": "# Specific:\n\n\n# General:\nThis branch allows the classifications themselves to be classified in order to know what sort of type it is, without recognizing all of them individually. This is important when the set of first degree types is not easily enumerable, such as classifications for the type of object or work.  See: https://linked.art/model/base/#types-of-types\n\n# Arches Note:\nNote that the metatype is hidden from view. Ensure that it has a default set when imported into another branch or model.\n\n* BranchId: la-meta-classification\n* FieldId: \n",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "b1d66bb2-a87c-4faf-8471-1362d7074523",
+                    "hascustomalias": true,
+                    "is_collector": false,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "acquisition_statement_type",
+                    "nodegroup_id": "82e18ecc-deb4-4981-b49c-aac5187027ae",
+                    "nodeid": "a2967a6a-6ffe-4de7-9172-0eda858371fb",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E55_Type",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
+                    "sortorder": 2,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": "bd4bd9b1-38d3-421b-a2e1-105545c080d8"
+                },
+                {
+                    "alias": "acquisition_timespan_name",
+                    "config": {},
+                    "datatype": "semantic",
+                    "description": "# Specific:\n\n\n# General:\nIt is strongly recommended that every resource that should be rendered to an end user have at least one name. Different types of name can be distinguished using classifications. See: https://linked.art/model/base/#names\n\n# Arches Note:\nThis node's content should be the value for the title descriptor function, when used for a resource model.\n\n* BranchId: la-name\n* FieldId: \n",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "b1d66bb2-a87c-4faf-8471-1362d7074523",
+                    "hascustomalias": true,
+                    "is_collector": true,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "acquisition_timespan_name",
+                    "nodegroup_id": "a52b7c84-bf21-4612-9825-a6b541f20623",
+                    "nodeid": "a52b7c84-bf21-4612-9825-a6b541f20623",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E33_E41_Linguistic_Appellation",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
+                    "sortorder": 0,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": "bd4bd9b1-38d3-421b-a2e1-105545c080d8"
+                },
+                {
+                    "alias": "acquisition_timespan_name_source",
+                    "config": {
+                        "graphs": [
+                            {
+                                "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
+                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "name": "Textual Work",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "useOntologyRelationship": false
+                            }
+                        ],
+                        "searchDsl": "",
+                        "searchString": ""
+                    },
+                    "datatype": "resource-instance-list",
+                    "description": "# Specific:\n\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "b1d66bb2-a87c-4faf-8471-1362d7074523",
+                    "hascustomalias": true,
+                    "is_collector": false,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "acquisition_timespan_name_source",
+                    "nodegroup_id": "a52b7c84-bf21-4612-9825-a6b541f20623",
+                    "nodeid": "cf01e390-9dab-41b7-8a6b-a60b05927d8d",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by",
+                    "sortorder": 4,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": "bd4bd9b1-38d3-421b-a2e1-105545c080d8"
+                },
+                {
+                    "alias": "acquisition_timespan_begin_of_the_end",
+                    "config": {
+                        "dateFormat": "YYYY-MM-DD"
+                    },
+                    "datatype": "date",
+                    "description": "# Specific:\n\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "b1d66bb2-a87c-4faf-8471-1362d7074523",
+                    "hascustomalias": true,
+                    "is_collector": false,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "acquisition_timespan_begin_of_the_end",
+                    "nodegroup_id": "4e3add35-8db4-465e-a0d6-7d004e9aef1e",
+                    "nodeid": "d231f324-8d34-46fd-aacf-8425e9917e5d",
+                    "ontologyclass": "http://www.w3.org/2001/XMLSchema#dateTime",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P81b_begin_of_the_end",
+                    "sortorder": 4,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": "bd4bd9b1-38d3-421b-a2e1-105545c080d8"
+                },
+                {
+                    "alias": "acquisition_statement_language",
+                    "config": {
+                        "controlledList": "f7fc4f6d-fd46-4881-846f-4a08bc1a3fef",
+                        "multiValue": true
+                    },
+                    "datatype": "reference",
+                    "description": "# Specific:\n\n\n# General:\nThis is the language of the statement, drawn from a controlled vocabulary.\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "b1d66bb2-a87c-4faf-8471-1362d7074523",
+                    "hascustomalias": true,
+                    "is_collector": false,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "acquisition_statement_language",
+                    "nodegroup_id": "82e18ecc-deb4-4981-b49c-aac5187027ae",
+                    "nodeid": "d380f093-ecd8-4304-b33d-13e41ea66feb",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E56_Language",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P72_has_language",
+                    "sortorder": 1,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": "bd4bd9b1-38d3-421b-a2e1-105545c080d8"
+                },
+                {
+                    "alias": "acquisition_timespan_begin_of_the_begin",
+                    "config": {
+                        "dateFormat": "YYYY-MM-DD"
+                    },
+                    "datatype": "date",
+                    "description": "# Specific:\n\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "b1d66bb2-a87c-4faf-8471-1362d7074523",
+                    "hascustomalias": true,
+                    "is_collector": false,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "acquisition_timespan_begin_of_the_begin",
+                    "nodegroup_id": "4e3add35-8db4-465e-a0d6-7d004e9aef1e",
+                    "nodeid": "d417f6e5-eb37-42e0-979a-df18a32a2eff",
+                    "ontologyclass": "http://www.w3.org/2001/XMLSchema#dateTime",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P82a_begin_of_the_begin",
+                    "sortorder": 2,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": "bd4bd9b1-38d3-421b-a2e1-105545c080d8"
+                },
+                {
+                    "alias": "acquisition",
+                    "config": {},
+                    "datatype": "semantic",
+                    "description": "{\"en\": \"\"}",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "b1d66bb2-a87c-4faf-8471-1362d7074523",
+                    "hascustomalias": false,
+                    "is_collector": true,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": true,
+                    "name": "acquisition",
+                    "nodegroup_id": "d97f1408-41d0-49b6-aa8d-fc06a3ac0861",
+                    "nodeid": "d97f1408-41d0-49b6-aa8d-fc06a3ac0861",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E8_Acquisition",
+                    "parentproperty": "",
+                    "sortorder": 30,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": "bd4bd9b1-38d3-421b-a2e1-105545c080d8"
+                },
+                {
+                    "alias": "acquisition_timespan_name_label",
+                    "config": {},
+                    "datatype": "string",
+                    "description": "# Specific:\n\n\n# General:\nEvery node should have a _label that provides a human-readable summary label for the node. This is intended not for end users, but for developers looking at the data. See:  https://linked.art/model/base/#core-properties\n\n# Arches Note:\n\n\n* BranchId: la-label\n* FieldId: \n",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "b1d66bb2-a87c-4faf-8471-1362d7074523",
+                    "hascustomalias": true,
+                    "is_collector": false,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "acquisition_timespan_name_label",
+                    "nodegroup_id": "a52b7c84-bf21-4612-9825-a6b541f20623",
+                    "nodeid": "e1c4daae-422f-49fe-9eb5-e937d0699dad",
+                    "ontologyclass": "http://www.w3.org/2001/XMLSchema#string",
+                    "parentproperty": "http://www.w3.org/2000/01/rdf-schema#label",
+                    "sortorder": 0,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": "bd4bd9b1-38d3-421b-a2e1-105545c080d8"
+                },
+                {
+                    "alias": "acquisition_transferred_title_of",
+                    "config": {
+                        "graphs": [
+                            {
+                                "graphid": "bda239c6-d376-11ef-a239-0275dc2ded29",
+                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "name": "Reference and Sample Collection Item",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "useOntologyRelationship": false
+                            }
+                        ],
+                        "searchDsl": "",
+                        "searchString": ""
+                    },
+                    "datatype": "resource-instance",
+                    "description": "# Specific:\n\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "b1d66bb2-a87c-4faf-8471-1362d7074523",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "acquisition_transferred_title_of",
+                    "nodegroup_id": "d97f1408-41d0-49b6-aa8d-fc06a3ac0861",
+                    "nodeid": "eb571172-2034-4295-ad19-9f512291499f",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E22_Human-Made_Object",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P24_transferred_title_of",
+                    "sortorder": 0,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": "bd4bd9b1-38d3-421b-a2e1-105545c080d8"
+                },
+                {
+                    "alias": "acquisition_timespan_end_of_the_begin",
+                    "config": {
+                        "dateFormat": "YYYY-MM-DD"
+                    },
+                    "datatype": "date",
+                    "description": "# Specific:\n\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "b1d66bb2-a87c-4faf-8471-1362d7074523",
+                    "hascustomalias": true,
+                    "is_collector": false,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "acquisition_timespan_end_of_the_begin",
+                    "nodegroup_id": "4e3add35-8db4-465e-a0d6-7d004e9aef1e",
+                    "nodeid": "ee0de354-4de2-4403-b830-402b8379ef4c",
+                    "ontologyclass": "http://www.w3.org/2001/XMLSchema#dateTime",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P81a_end_of_the_begin",
+                    "sortorder": 3,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": "bd4bd9b1-38d3-421b-a2e1-105545c080d8"
+                },
+                {
+                    "alias": "acquisition_statement_content",
+                    "config": {},
+                    "datatype": "string",
+                    "description": "# Specific:\n\n\n# General:\nThis field records the string content of the statement.\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "b1d66bb2-a87c-4faf-8471-1362d7074523",
+                    "hascustomalias": true,
+                    "is_collector": false,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "acquisition_statement_content",
+                    "nodegroup_id": "82e18ecc-deb4-4981-b49c-aac5187027ae",
+                    "nodeid": "fdfff2e2-8877-43ca-91f1-1c7856740c98",
+                    "ontologyclass": "http://www.w3.org/2001/XMLSchema#string",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P190_has_symbolic_content",
+                    "sortorder": 0,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": "bd4bd9b1-38d3-421b-a2e1-105545c080d8"
+                }
+            ],
+            "ontology_id": "0b1f5462-faa7-11e9-8f09-3af9d3b32b71",
+            "publication": {
+                "graph_id": "b1d66bb2-a87c-4faf-8471-1362d7074523",
+                "most_recent_edit_id": null,
+                "notes": null,
+                "publicationid": "c6204aa4-6cb3-4fe8-8fc1-915d05ec81f3",
+                "published_time": "2025-09-25T08:18:23.293"
+            },
+            "relatable_resource_model_ids": [],
+            "resource_2_resource_constraints": [],
+            "resource_instance_lifecycle": null,
+            "root": {
+                "alias": "acquisition",
+                "config": {},
+                "datatype": "semantic",
+                "description": "{\"en\": \"\"}",
+                "exportable": false,
+                "fieldname": null,
+                "graph_id": "b1d66bb2-a87c-4faf-8471-1362d7074523",
+                "hascustomalias": false,
+                "is_collector": true,
+                "is_immutable": false,
+                "isrequired": false,
+                "issearchable": true,
+                "istopnode": true,
+                "name": "acquisition",
+                "nodegroup_id": "d97f1408-41d0-49b6-aa8d-fc06a3ac0861",
+                "nodeid": "d97f1408-41d0-49b6-aa8d-fc06a3ac0861",
+                "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E8_Acquisition",
+                "sortorder": 30,
+                "source_identifier_id": null,
+                "sourcebranchpublication_id": "bd4bd9b1-38d3-421b-a2e1-105545c080d8"
+            },
+            "slug": "reference_and_sample_collection_item_1",
+            "source_identifier_id": null,
+            "spatial_views": [],
+            "subtitle": {
+                "en": ""
+            },
+            "template_id": "b0908227-ecc2-48dd-931b-314a9031caa0",
+            "user_permissions": {},
+            "version": ""
+        }
+    ],
+    "metadata": {
+        "db": "PostgreSQL 16.8 on aarch64-unknown-linux-gnu, compiled by gcc (GCC) 7.3.1 20180712 (Red Hat 7.3.1-17), 64-bit",
+        "git hash": "fatal: not a git repository (or any of the parent directories): .git",
+        "os": "Linux",
+        "os version": "6.8.0-1021-aws"
+    }
+}
