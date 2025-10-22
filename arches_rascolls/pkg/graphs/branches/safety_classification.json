@@ -5,7 +5,7 @@
             "cards": [
                 {
                     "active": true,
-                    "cardid": "4a1e04cb-6073-436e-8ac1-553e0da85421",
+                    "cardid": "36d22a9e-3527-48bf-b7c5-188c0b552c1a",
                     "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
                     "config": null,
                     "constraints": [],
@@ -23,12 +23,12 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "General Safety Classification Timespan"
+                        "en": "Safety Information Statement"
                     },
-                    "nodegroup_id": "d95bb34e-3367-44de-8cb1-dd09cd478b2c",
-                    "sortorder": 0,
+                    "nodegroup_id": "4e6b36fd-2a47-47a0-8b4e-80321956bf69",
+                    "sortorder": null,
                     "source_identifier_id": null,
-                    "visible": false
+                    "visible": true
                 },
                 {
                     "active": true,
@@ -56,35 +56,6 @@
                     },
                     "nodegroup_id": "39245ad5-2326-4ccc-abb9-eaa96952c818",
                     "sortorder": 18,
-                    "source_identifier_id": null,
-                    "visible": true
-                },
-                {
-                    "active": true,
-                    "cardid": "a90b321d-8900-4c2e-beeb-2e4c5ba48ebe",
-                    "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
-                    "config": null,
-                    "constraints": [],
-                    "cssclass": null,
-                    "description": {
-                        "en": "# Specific:\n\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n"
-                    },
-                    "graph_id": "8debd7bb-a37d-4c87-9ca9-74e96b6b086f",
-                    "helpenabled": false,
-                    "helptext": {
-                        "en": ""
-                    },
-                    "helptitle": {
-                        "en": ""
-                    },
-                    "instructions": {
-                        "en": ""
-                    },
-                    "name": {
-                        "en": "General Safety Classification Timespan Name"
-                    },
-                    "nodegroup_id": "0bc1ca32-ca45-488d-a6c1-0713fabda730",
-                    "sortorder": 0,
                     "source_identifier_id": null,
                     "visible": true
                 },
@@ -118,55 +89,48 @@
             ],
             "cards_x_nodes_x_widgets": [
                 {
-                    "card_id": "4a1e04cb-6073-436e-8ac1-553e0da85421",
+                    "card_id": "36d22a9e-3527-48bf-b7c5-188c0b552c1a",
                     "config": {
-                        "dateFormat": "YYYY-MM-DD",
-                        "defaultValue": "",
-                        "label": "General Safety Classification Time-Span Beginning of the Beginning",
-                        "maxDate": false,
-                        "minDate": false,
-                        "placeholder": "Enter date",
-                        "viewMode": "days"
-                    },
-                    "id": "0edc4756-0c88-4d90-98dc-65d2fa49010a",
-                    "label": {
-                        "en": "General Safety Classification Time-Span Beginning of the Beginning"
-                    },
-                    "node_id": "5e024752-71af-4fad-a11b-97dc0b9039d3",
-                    "sortorder": 0,
-                    "source_identifier_id": null,
-                    "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000004"
-                },
-                {
-                    "card_id": "a90b321d-8900-4c2e-beeb-2e4c5ba48ebe",
-                    "config": {
-                        "defaultValue": {
-                            "en": {
-                                "direction": "ltr",
-                                "value": ""
-                            }
-                        },
+                        "defaultResourceInstance": [],
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "General Safety Classification Timespan Text of Name",
-                        "maxLength": null,
+                        "label": "safety_classification_statement_source_reference",
                         "placeholder": {
-                            "en": "Enter text"
-                        },
-                        "uneditable": false,
-                        "width": "100%"
+                            "en": ""
+                        }
                     },
-                    "id": "12b3ddc2-ae18-48e7-abc1-aec316b14b85",
+                    "id": "00452648-362e-4cce-8b00-1ae2ef24449e",
                     "label": {
-                        "en": "General Safety Classification Timespan Text of Name"
+                        "en": "safety_classification_statement_source_reference"
                     },
-                    "node_id": "9357c54a-c9c6-41e4-8fdf-bc2cf8942b81",
-                    "sortorder": 0,
+                    "node_id": "ae7dbbbd-ec8b-42b2-b21d-923ee02a79c4",
+                    "sortorder": 1,
+                    "source_identifier_id": null,
+                    "visible": false,
+                    "widget_id": "ff3c400a-76ec-11e7-a793-784f435179ea"
+                },
+                {
+                    "card_id": "a76d04de-f19c-4693-83ba-355025cc34b6",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "GHS Safety Classification Time Span",
+                        "placeholder": {
+                            "en": ""
+                        }
+                    },
+                    "id": "0b9a093d-1b54-4d35-bef2-d3f866dddb8f",
+                    "label": {
+                        "en": "GHS Safety Classification Time Span"
+                    },
+                    "node_id": "6965df47-e478-4fd4-99c7-2161a1a73d97",
+                    "sortorder": 7,
                     "source_identifier_id": null,
                     "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                    "widget_id": "adfd15ce-dbab-11e7-86d1-0fcf08612b27"
                 },
                 {
                     "card_id": "a76d04de-f19c-4693-83ba-355025cc34b6",
@@ -185,50 +149,114 @@
                         "en": "NFPA Organization"
                     },
                     "node_id": "9ebeae9a-79c7-40f3-8378-772e814d120d",
-                    "sortorder": 5,
+                    "sortorder": 2,
                     "source_identifier_id": null,
-                    "visible": true,
+                    "visible": false,
                     "widget_id": "31f3728c-7613-11e7-a139-784f435179ea"
                 },
                 {
-                    "card_id": "4a1e04cb-6073-436e-8ac1-553e0da85421",
+                    "card_id": "36d22a9e-3527-48bf-b7c5-188c0b552c1a",
                     "config": {
-                        "dateFormat": "YYYY-MM-DD",
-                        "defaultValue": "",
-                        "label": "Classificatory Status Time-Span End of the Beginning",
-                        "maxDate": false,
-                        "minDate": false,
-                        "placeholder": "Enter date",
-                        "viewMode": "days"
-                    },
-                    "id": "4a5bcc15-d702-4e02-bef8-e14c7e1021a0",
-                    "label": {
-                        "en": "Classificatory Status Time-Span End of the Beginning"
-                    },
-                    "node_id": "7ff00f9f-0cf8-42dc-b2e2-841ed6867071",
-                    "sortorder": 1,
-                    "source_identifier_id": null,
-                    "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000004"
-                },
-                {
-                    "card_id": "a90b321d-8900-4c2e-beeb-2e4c5ba48ebe",
-                    "config": {
-                        "defaultValue": [],
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "General Safety Classification Timespan Type of Name",
+                        "label": "safety_classification_statement_type_metatype",
                         "placeholder": {
                             "en": "Select an option"
                         }
                     },
-                    "id": "5117b3c6-d23c-41dd-99ac-f681c0f7f5e8",
+                    "id": "393b59b1-1957-4dca-b9af-95816ec6abe6",
                     "label": {
-                        "en": "General Safety Classification Timespan Type of Name"
+                        "en": "safety_classification_statement_type_metatype"
                     },
-                    "node_id": "26f27f44-ea31-45d5-ab92-11313fbdaa9c",
-                    "sortorder": 1,
+                    "node_id": "a7acd9f1-3363-4041-af53-875a4f8f2e7c",
+                    "sortorder": 0,
+                    "source_identifier_id": null,
+                    "visible": false,
+                    "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
+                },
+                {
+                    "card_id": "36d22a9e-3527-48bf-b7c5-188c0b552c1a",
+                    "config": {
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Safety Information Statement Language",
+                        "placeholder": {
+                            "en": "Select an option"
+                        }
+                    },
+                    "id": "3ee468ba-b62d-4768-8140-cf5a913e928c",
+                    "label": {
+                        "en": "Safety Information Statement Language"
+                    },
+                    "node_id": "19184d3b-e052-4990-a20e-7b37dc96e676",
+                    "sortorder": 4,
+                    "source_identifier_id": null,
+                    "visible": true,
+                    "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
+                },
+                {
+                    "card_id": "36d22a9e-3527-48bf-b7c5-188c0b552c1a",
+                    "config": {
+                        "defaultValue": {
+                            "__ko_mapping__": {
+                                "copiedProperties": {},
+                                "copy": [],
+                                "ignore": [],
+                                "include": [
+                                    "_destroy"
+                                ],
+                                "mappedProperties": {
+                                    "en": true,
+                                    "en.direction": true,
+                                    "en.value": true
+                                },
+                                "observe": []
+                            },
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "safety_classification_statement_label",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "4126e17e-3959-4888-bfff-a31407df54c8",
+                    "label": {
+                        "en": "safety_classification_statement_label"
+                    },
+                    "node_id": "27d21802-d9ef-40f4-95b6-72babeaa3589",
+                    "sortorder": 5,
+                    "source_identifier_id": null,
+                    "visible": false,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "36d22a9e-3527-48bf-b7c5-188c0b552c1a",
+                    "config": {
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Safety Information Statement Type",
+                        "placeholder": {
+                            "en": "Select an option"
+                        }
+                    },
+                    "id": "48a89bf7-090c-4da7-a8ef-33d99c9e48c6",
+                    "label": {
+                        "en": "Safety Information Statement Type"
+                    },
+                    "node_id": "f356dea4-a95f-4ddd-aaf3-88b27fc11dbd",
+                    "sortorder": 3,
                     "source_identifier_id": null,
                     "visible": true,
                     "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
@@ -240,17 +268,17 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "General Safety Classification Hold For",
+                        "label": "GHS Organization",
                         "placeholder": {
                             "en": ""
                         }
                     },
-                    "id": "528a8b6f-6e35-4caa-9590-61a83fa9e43c",
+                    "id": "4a90b52e-e3f9-415a-9434-a891d44b31e1",
                     "label": {
-                        "en": "General Safety Classification Hold For"
+                        "en": "GHS Organization"
                     },
-                    "node_id": "e2f0935b-ef0d-4afa-ab86-b4dad840d365",
-                    "sortorder": 0,
+                    "node_id": "b659ed9c-ab9c-431c-87e5-ea5b77bf16ba",
+                    "sortorder": 5,
                     "source_identifier_id": null,
                     "visible": false,
                     "widget_id": "31f3728c-7613-11e7-a139-784f435179ea"
@@ -258,95 +286,38 @@
                 {
                     "card_id": "a76d04de-f19c-4693-83ba-355025cc34b6",
                     "config": {
-                        "defaultValue": "",
+                        "defaultValue": [
+                            {
+                                "labels": [
+                                    {
+                                        "id": "21738836-428a-4191-8f2d-6072c07e96ea",
+                                        "language_id": "en",
+                                        "list_item_id": "86d2535d-d2d3-4efb-bbe8-a5bf5d8d3fd8",
+                                        "value": "GHS (Globally Harmonized System)",
+                                        "valuetype_id": "prefLabel"
+                                    }
+                                ],
+                                "list_id": "de36422b-71cb-49dd-9dd6-4366753497bc",
+                                "uri": "https://rascoll.usw1.gci.fargeo.net/plugins/controlled-list-manager/item/86d2535d-d2d3-4efb-bbe8-a5bf5d8d3fd8"
+                            }
+                        ],
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "GHS Safety Classification",
+                        "label": "GHS Safety Classification Classification",
                         "placeholder": {
                             "en": "Select an option"
                         }
                     },
                     "id": "5f193e70-3b51-4305-b6e5-d7bea1c5cb04",
                     "label": {
-                        "en": "GHS Safety Classification"
+                        "en": "GHS Safety Classification Classification"
                     },
                     "node_id": "ea0aadf2-3bde-46fc-bed7-2d2420a0a415",
-                    "sortorder": 9,
+                    "sortorder": 6,
                     "source_identifier_id": null,
-                    "visible": true,
+                    "visible": false,
                     "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
-                },
-                {
-                    "card_id": "a90b321d-8900-4c2e-beeb-2e4c5ba48ebe",
-                    "config": {
-                        "defaultValue": [
-                            {
-                                "labels": [
-                                    {
-                                        "id": "bf48b2c6-3485-470c-be5d-37e53f76bade",
-                                        "language_id": "fr",
-                                        "list_item_id": "38729dbe-6d1c-48ce-bf47-e2a18945600e",
-                                        "value": "anglais",
-                                        "valuetype_id": "prefLabel"
-                                    },
-                                    {
-                                        "id": "e32d8c6d-319a-4382-8c26-06e4afb153bf",
-                                        "language_id": "de",
-                                        "list_item_id": "38729dbe-6d1c-48ce-bf47-e2a18945600e",
-                                        "value": "Englisch",
-                                        "valuetype_id": "prefLabel"
-                                    },
-                                    {
-                                        "id": "bc35776b-996f-4fc1-bd25-9f6432c1f349",
-                                        "language_id": "en",
-                                        "list_item_id": "38729dbe-6d1c-48ce-bf47-e2a18945600e",
-                                        "value": "English (language)",
-                                        "valuetype_id": "prefLabel"
-                                    }
-                                ],
-                                "list_id": "f7fc4f6d-fd46-4881-846f-4a08bc1a3fef",
-                                "uri": "http://localhost:8000/plugins/controlled-list-manager/item/38729dbe-6d1c-48ce-bf47-e2a18945600e"
-                            }
-                        ],
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "General Safety Classification Timespan Language of Name",
-                        "placeholder": {
-                            "en": "Select an option"
-                        }
-                    },
-                    "id": "75b1bc66-3c63-4844-9421-4263ad135c8c",
-                    "label": {
-                        "en": "General Safety Classification Timespan Language of Name"
-                    },
-                    "node_id": "f1164739-c33c-41f3-9c47-d62e079f11bc",
-                    "sortorder": 2,
-                    "source_identifier_id": null,
-                    "visible": true,
-                    "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
-                },
-                {
-                    "card_id": "4a1e04cb-6073-436e-8ac1-553e0da85421",
-                    "config": {
-                        "dateFormat": "YYYY-MM-DD",
-                        "defaultValue": "",
-                        "label": "Classificatory Status Time-Span End of the End",
-                        "maxDate": false,
-                        "minDate": false,
-                        "placeholder": "Enter date",
-                        "viewMode": "days"
-                    },
-                    "id": "7797a4bb-4640-4216-962b-40a6c750caeb",
-                    "label": {
-                        "en": "Classificatory Status Time-Span End of the End"
-                    },
-                    "node_id": "e4c23e68-633f-4b72-842d-9a73ee700778",
-                    "sortorder": 3,
-                    "source_identifier_id": null,
-                    "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000004"
                 },
                 {
                     "card_id": "a76d04de-f19c-4693-83ba-355025cc34b6",
@@ -355,50 +326,20 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "nfpa_safety_time-span_edtf",
+                        "label": "NFPA Safety Classification Time Span",
                         "placeholder": {
                             "en": ""
                         }
                     },
                     "id": "79fb20b8-6a40-45c6-badb-a952a73c55e1",
                     "label": {
-                        "en": "nfpa_safety_time-span_edtf"
+                        "en": "NFPA Safety Classification Time Span"
                     },
                     "node_id": "ebe24d24-12ff-4a12-b5fa-f82788b84dab",
-                    "sortorder": 6,
+                    "sortorder": 3,
                     "source_identifier_id": null,
                     "visible": true,
                     "widget_id": "adfd15ce-dbab-11e7-86d1-0fcf08612b27"
-                },
-                {
-                    "card_id": "a90b321d-8900-4c2e-beeb-2e4c5ba48ebe",
-                    "config": {
-                        "defaultValue": {
-                            "en": {
-                                "direction": "ltr",
-                                "value": ""
-                            }
-                        },
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "General Safety Classification Timespan Name Label",
-                        "maxLength": null,
-                        "placeholder": {
-                            "en": "Enter text"
-                        },
-                        "uneditable": false,
-                        "width": "100%"
-                    },
-                    "id": "850061c0-b296-4214-812e-af5ff0bde9ef",
-                    "label": {
-                        "en": "General Safety Classification Timespan Name Label"
-                    },
-                    "node_id": "da4a9b02-1ffb-47cf-9cc3-ea700a630fb1",
-                    "sortorder": 4,
-                    "source_identifier_id": null,
-                    "visible": false,
-                    "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
                 {
                     "card_id": "a76d04de-f19c-4693-83ba-355025cc34b6",
@@ -417,7 +358,7 @@
                         "en": "GHS Safety Classification"
                     },
                     "node_id": "23b8a059-c2d1-4d5b-a5d6-c0cb602c2f2b",
-                    "sortorder": 8,
+                    "sortorder": 4,
                     "source_identifier_id": null,
                     "visible": true,
                     "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
@@ -447,7 +388,21 @@
                 {
                     "card_id": "a76d04de-f19c-4693-83ba-355025cc34b6",
                     "config": {
-                        "defaultValue": "",
+                        "defaultValue": [
+                            {
+                                "labels": [
+                                    {
+                                        "id": "b500d6cd-781a-45f5-9adc-f94b60e23984",
+                                        "language_id": "en",
+                                        "list_item_id": "17e5dc0a-6e9b-4a9c-8aaf-850c53bb7743",
+                                        "value": "NFPA 704 Hazard Identification System",
+                                        "valuetype_id": "prefLabel"
+                                    }
+                                ],
+                                "list_id": "de36422b-71cb-49dd-9dd6-4366753497bc",
+                                "uri": "http://localhost:8000/plugins/controlled-list-manager/item/17e5dc0a-6e9b-4a9c-8aaf-850c53bb7743"
+                            }
+                        ],
                         "i18n_properties": [
                             "placeholder"
                         ],
@@ -461,9 +416,9 @@
                         "en": "NFPA Safety Classification Classification"
                     },
                     "node_id": "781d33a3-3269-4eaf-9a9b-4773e296b24a",
-                    "sortorder": 4,
+                    "sortorder": 1,
                     "source_identifier_id": null,
-                    "visible": true,
+                    "visible": false,
                     "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
                 },
                 {
@@ -489,9 +444,23 @@
                     "widget_id": "ff3c400a-76ec-11e7-a793-784f435179ea"
                 },
                 {
-                    "card_id": "4a1e04cb-6073-436e-8ac1-553e0da85421",
+                    "card_id": "36d22a9e-3527-48bf-b7c5-188c0b552c1a",
                     "config": {
                         "defaultValue": {
+                            "__ko_mapping__": {
+                                "copiedProperties": {},
+                                "copy": [],
+                                "ignore": [],
+                                "include": [
+                                    "_destroy"
+                                ],
+                                "mappedProperties": {
+                                    "en": true,
+                                    "en.direction": true,
+                                    "en.value": true
+                                },
+                                "observe": []
+                            },
                             "en": {
                                 "direction": "ltr",
                                 "value": ""
@@ -500,7 +469,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Classificatory Status Time-Span Label",
+                        "label": "Safety Information Statement",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -508,37 +477,15 @@
                         "uneditable": false,
                         "width": "100%"
                     },
-                    "id": "ca08b2d6-fae7-43a7-9081-272efd8c0c90",
+                    "id": "e6de136e-8f15-40f4-a54c-f91339a5652e",
                     "label": {
-                        "en": "Classificatory Status Time-Span Label"
+                        "en": "Safety Information Statement"
                     },
-                    "node_id": "70dee6da-b9c5-4694-9372-d817d4f314e1",
-                    "sortorder": 5,
+                    "node_id": "d44d4aad-600c-45e2-b29a-9a89346fcfff",
+                    "sortorder": 2,
                     "source_identifier_id": null,
-                    "visible": false,
-                    "widget_id": "10000000-0000-0000-0000-000000000001"
-                },
-                {
-                    "card_id": "a90b321d-8900-4c2e-beeb-2e4c5ba48ebe",
-                    "config": {
-                        "defaultResourceInstance": [],
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "General Safety Classification Timespan Name Source",
-                        "placeholder": {
-                            "en": ""
-                        }
-                    },
-                    "id": "d0f476db-58e5-4113-848b-7ed4412d756e",
-                    "label": {
-                        "en": "General Safety Classification Timespan Name Source"
-                    },
-                    "node_id": "7d573fbc-96fe-479d-9518-a06736d65383",
-                    "sortorder": 3,
-                    "source_identifier_id": null,
-                    "visible": false,
-                    "widget_id": "ff3c400a-76ec-11e7-a793-784f435179ea"
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000005"
                 },
                 {
                     "card_id": "a76d04de-f19c-4693-83ba-355025cc34b6",
@@ -557,7 +504,7 @@
                         "en": "NFPA Safety Classification"
                     },
                     "node_id": "3bbb8506-e2d1-4672-a624-635096fa19c1",
-                    "sortorder": 3,
+                    "sortorder": 0,
                     "source_identifier_id": null,
                     "visible": true,
                     "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
@@ -582,107 +529,6 @@
                     "sortorder": 1,
                     "source_identifier_id": null,
                     "visible": true,
-                    "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
-                },
-                {
-                    "card_id": "4a1e04cb-6073-436e-8ac1-553e0da85421",
-                    "config": {
-                        "defaultValue": "",
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "Classificatory Status Time-Span Type",
-                        "placeholder": {
-                            "en": "Select an option"
-                        }
-                    },
-                    "id": "f75820fa-52a4-45e7-8cb9-9554152e24d3",
-                    "label": {
-                        "en": "Classificatory Status Time-Span Type"
-                    },
-                    "node_id": "6985e771-bcde-41f4-8394-3d855be61ec7",
-                    "sortorder": 4,
-                    "source_identifier_id": null,
-                    "visible": false,
-                    "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
-                },
-                {
-                    "card_id": "4a1e04cb-6073-436e-8ac1-553e0da85421",
-                    "config": {
-                        "dateFormat": "YYYY-MM-DD",
-                        "defaultValue": "",
-                        "label": "Classificatory Status Time-Span Beginning of the End",
-                        "maxDate": false,
-                        "minDate": false,
-                        "placeholder": "Enter date",
-                        "viewMode": "days"
-                    },
-                    "id": "f969162b-1021-4089-8df2-593412c17798",
-                    "label": {
-                        "en": "Classificatory Status Time-Span Beginning of the End"
-                    },
-                    "node_id": "46b6b219-8829-492b-bc2e-e3178a2e4f0f",
-                    "sortorder": 2,
-                    "source_identifier_id": null,
-                    "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000004"
-                },
-                {
-                    "card_id": "a76d04de-f19c-4693-83ba-355025cc34b6",
-                    "config": {
-                        "defaultValue": "",
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "General Safety Classification Type",
-                        "placeholder": {
-                            "en": "Select an option"
-                        }
-                    },
-                    "id": "fcb3902b-5922-44f5-a1ef-0ecef6c340ae",
-                    "label": {
-                        "en": "General Safety Classification Type"
-                    },
-                    "node_id": "249defa2-96ab-4920-8293-5a7c5f2af12a",
-                    "sortorder": 2,
-                    "source_identifier_id": null,
-                    "visible": false,
-                    "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
-                },
-                {
-                    "card_id": "a76d04de-f19c-4693-83ba-355025cc34b6",
-                    "config": {
-                        "defaultValue": [
-                            {
-                                "labels": [
-                                    {
-                                        "id": "b500d6cd-781a-45f5-9adc-f94b60e23984",
-                                        "language_id": "en",
-                                        "list_item_id": "17e5dc0a-6e9b-4a9c-8aaf-850c53bb7743",
-                                        "value": "NFPA 704 Hazard Identification System",
-                                        "valuetype_id": "prefLabel"
-                                    }
-                                ],
-                                "list_id": "de36422b-71cb-49dd-9dd6-4366753497bc",
-                                "uri": "http://localhost:8000/plugins/controlled-list-manager/item/17e5dc0a-6e9b-4a9c-8aaf-850c53bb7743"
-                            }
-                        ],
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "General Safety Classification ",
-                        "placeholder": {
-                            "en": "Select an option"
-                        }
-                    },
-                    "id": "fe197e4c-ff55-4d68-a8ba-c7c4e4e2bb23",
-                    "label": {
-                        "en": "General Safety Classification "
-                    },
-                    "node_id": "ba6202cd-2c21-4abd-8157-b4c0479fb351",
-                    "sortorder": 1,
-                    "source_identifier_id": null,
-                    "visible": false,
                     "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
                 }
             ],
@@ -779,16 +625,6 @@
                 },
                 {
                     "description": null,
-                    "domainnode_id": "d95bb34e-3367-44de-8cb1-dd09cd478b2c",
-                    "edgeid": "0dc9741e-6418-45b1-9459-fe9569f14349",
-                    "graph_id": "8debd7bb-a37d-4c87-9ca9-74e96b6b086f",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P82b_end_of_the_end",
-                    "rangenode_id": "e4c23e68-633f-4b72-842d-9a73ee700778",
-                    "source_identifier_id": null
-                },
-                {
-                    "description": null,
                     "domainnode_id": "4e6b36fd-2a47-47a0-8b4e-80321956bf69",
                     "edgeid": "0dd71918-7aba-43f8-8301-e7734a7d1fd9",
                     "graph_id": "8debd7bb-a37d-4c87-9ca9-74e96b6b086f",
@@ -805,26 +641,6 @@
                     "name": null,
                     "ontologyproperty": "https://takin.solutions/ontologies/CRMaaa/ZP4_holds_for",
                     "rangenode_id": "b659ed9c-ab9c-431c-87e5-ea5b77bf16ba",
-                    "source_identifier_id": null
-                },
-                {
-                    "description": null,
-                    "domainnode_id": "d95bb34e-3367-44de-8cb1-dd09cd478b2c",
-                    "edgeid": "18656ece-9058-4ae4-ab1e-6d1190a7ca5f",
-                    "graph_id": "8debd7bb-a37d-4c87-9ca9-74e96b6b086f",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
-                    "rangenode_id": "0bc1ca32-ca45-488d-a6c1-0713fabda730",
-                    "source_identifier_id": null
-                },
-                {
-                    "description": null,
-                    "domainnode_id": "d95bb34e-3367-44de-8cb1-dd09cd478b2c",
-                    "edgeid": "1b847fcc-9a9b-4c7b-b3f6-3d0f517fd7b8",
-                    "graph_id": "8debd7bb-a37d-4c87-9ca9-74e96b6b086f",
-                    "name": null,
-                    "ontologyproperty": "http://www.w3.org/2000/01/rdf-schema#label",
-                    "rangenode_id": "70dee6da-b9c5-4694-9372-d817d4f314e1",
                     "source_identifier_id": null
                 },
                 {
@@ -889,12 +705,22 @@
                 },
                 {
                     "description": null,
-                    "domainnode_id": "0bc1ca32-ca45-488d-a6c1-0713fabda730",
-                    "edgeid": "588694b0-6601-4966-b63b-cc6a2fc895b0",
+                    "domainnode_id": "bb198502-3d08-4309-98de-9c21d06cac9d",
+                    "edgeid": "51e92208-e175-4ec0-9498-0baf24291e52",
                     "graph_id": "8debd7bb-a37d-4c87-9ca9-74e96b6b086f",
                     "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P190_has_symbolic_content",
-                    "rangenode_id": "9357c54a-c9c6-41e4-8fdf-bc2cf8942b81",
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P82_at_some_time_within",
+                    "rangenode_id": "6965df47-e478-4fd4-99c7-2161a1a73d97",
+                    "source_identifier_id": null
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "810be190-0d8f-494d-9fda-8fe8ed4374cb",
+                    "edgeid": "57c78ffd-26c1-4910-a555-5e4f9f515e61",
+                    "graph_id": "8debd7bb-a37d-4c87-9ca9-74e96b6b086f",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span",
+                    "rangenode_id": "bb198502-3d08-4309-98de-9c21d06cac9d",
                     "source_identifier_id": null
                 },
                 {
@@ -919,56 +745,6 @@
                 },
                 {
                     "description": null,
-                    "domainnode_id": "d95bb34e-3367-44de-8cb1-dd09cd478b2c",
-                    "edgeid": "77337120-3020-4af6-88b4-7b68c7f04e44",
-                    "graph_id": "8debd7bb-a37d-4c87-9ca9-74e96b6b086f",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P81b_begin_of_the_end",
-                    "rangenode_id": "46b6b219-8829-492b-bc2e-e3178a2e4f0f",
-                    "source_identifier_id": null
-                },
-                {
-                    "description": null,
-                    "domainnode_id": "39245ad5-2326-4ccc-abb9-eaa96952c818",
-                    "edgeid": "7a333b69-f395-4557-87eb-891e217c25a8",
-                    "graph_id": "8debd7bb-a37d-4c87-9ca9-74e96b6b086f",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
-                    "rangenode_id": "249defa2-96ab-4920-8293-5a7c5f2af12a",
-                    "source_identifier_id": null
-                },
-                {
-                    "description": null,
-                    "domainnode_id": "39245ad5-2326-4ccc-abb9-eaa96952c818",
-                    "edgeid": "7aaad189-2880-4fa3-b3c3-8893783260b3",
-                    "graph_id": "8debd7bb-a37d-4c87-9ca9-74e96b6b086f",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span",
-                    "rangenode_id": "d95bb34e-3367-44de-8cb1-dd09cd478b2c",
-                    "source_identifier_id": null
-                },
-                {
-                    "description": null,
-                    "domainnode_id": "d95bb34e-3367-44de-8cb1-dd09cd478b2c",
-                    "edgeid": "837993b3-e71d-45a7-9410-03bbf1022196",
-                    "graph_id": "8debd7bb-a37d-4c87-9ca9-74e96b6b086f",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P82a_begin_of_the_begin",
-                    "rangenode_id": "5e024752-71af-4fad-a11b-97dc0b9039d3",
-                    "source_identifier_id": null
-                },
-                {
-                    "description": null,
-                    "domainnode_id": "d95bb34e-3367-44de-8cb1-dd09cd478b2c",
-                    "edgeid": "83dd0558-6254-48c8-ade4-68c4c9ea0b9b",
-                    "graph_id": "8debd7bb-a37d-4c87-9ca9-74e96b6b086f",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P81a_end_of_the_begin",
-                    "rangenode_id": "7ff00f9f-0cf8-42dc-b2e2-841ed6867071",
-                    "source_identifier_id": null
-                },
-                {
-                    "description": null,
                     "domainnode_id": "bf44ef81-9a19-4ecf-874a-5b3bb9134066",
                     "edgeid": "8e32075b-8367-44fa-bcd4-10f7f4507d17",
                     "graph_id": "8debd7bb-a37d-4c87-9ca9-74e96b6b086f",
@@ -989,16 +765,6 @@
                 },
                 {
                     "description": null,
-                    "domainnode_id": "39245ad5-2326-4ccc-abb9-eaa96952c818",
-                    "edgeid": "99bd93c9-5bf4-42c2-aefe-78cab558bdeb",
-                    "graph_id": "8debd7bb-a37d-4c87-9ca9-74e96b6b086f",
-                    "name": null,
-                    "ontologyproperty": "https://takin.solutions/ontologies/CRMaaa/ZP4_holds_for",
-                    "rangenode_id": "e2f0935b-ef0d-4afa-ab86-b4dad840d365",
-                    "source_identifier_id": null
-                },
-                {
-                    "description": null,
                     "domainnode_id": "4e6b36fd-2a47-47a0-8b4e-80321956bf69",
                     "edgeid": "aefb3fbe-8b78-43a4-a310-1daa8d676b37",
                     "graph_id": "8debd7bb-a37d-4c87-9ca9-74e96b6b086f",
@@ -1009,32 +775,12 @@
                 },
                 {
                     "description": null,
-                    "domainnode_id": "0bc1ca32-ca45-488d-a6c1-0713fabda730",
-                    "edgeid": "b4c645da-9201-436b-8e1d-a77ecfeac5fc",
-                    "graph_id": "8debd7bb-a37d-4c87-9ca9-74e96b6b086f",
-                    "name": null,
-                    "ontologyproperty": "http://www.w3.org/2000/01/rdf-schema#label",
-                    "rangenode_id": "da4a9b02-1ffb-47cf-9cc3-ea700a630fb1",
-                    "source_identifier_id": null
-                },
-                {
-                    "description": null,
                     "domainnode_id": "83502e8e-b315-4e1a-93e8-be172417a825",
                     "edgeid": "c4ab857e-72ac-4e87-ac6d-137d6df99404",
                     "graph_id": "8debd7bb-a37d-4c87-9ca9-74e96b6b086f",
                     "name": null,
                     "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P67.1_has_type",
                     "rangenode_id": "9ddb0510-9df5-4dc9-b083-a6776d261a8e",
-                    "source_identifier_id": null
-                },
-                {
-                    "description": null,
-                    "domainnode_id": "0bc1ca32-ca45-488d-a6c1-0713fabda730",
-                    "edgeid": "c77e3444-c1f0-4726-bc76-04e69ba8c8d6",
-                    "graph_id": "8debd7bb-a37d-4c87-9ca9-74e96b6b086f",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
-                    "rangenode_id": "26f27f44-ea31-45d5-ab92-11313fbdaa9c",
                     "source_identifier_id": null
                 },
                 {
@@ -1086,46 +832,6 @@
                     "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P117_occurs_during",
                     "rangenode_id": "810be190-0d8f-494d-9fda-8fe8ed4374cb",
                     "source_identifier_id": null
-                },
-                {
-                    "description": null,
-                    "domainnode_id": "39245ad5-2326-4ccc-abb9-eaa96952c818",
-                    "edgeid": "f2b8e2d7-b42f-477e-931e-304e456e900d",
-                    "graph_id": "8debd7bb-a37d-4c87-9ca9-74e96b6b086f",
-                    "name": null,
-                    "ontologyproperty": "https://takin.solutions/ontologies/CRMaaa/ZP12_ascribes_classification",
-                    "rangenode_id": "ba6202cd-2c21-4abd-8157-b4c0479fb351",
-                    "source_identifier_id": null
-                },
-                {
-                    "description": null,
-                    "domainnode_id": "0bc1ca32-ca45-488d-a6c1-0713fabda730",
-                    "edgeid": "f6e48a77-675f-4f0b-beaa-a6971c6fadac",
-                    "graph_id": "8debd7bb-a37d-4c87-9ca9-74e96b6b086f",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by",
-                    "rangenode_id": "7d573fbc-96fe-479d-9518-a06736d65383",
-                    "source_identifier_id": null
-                },
-                {
-                    "description": null,
-                    "domainnode_id": "d95bb34e-3367-44de-8cb1-dd09cd478b2c",
-                    "edgeid": "f7f16fdf-64d9-42d9-b6b8-e07e1a133d60",
-                    "graph_id": "8debd7bb-a37d-4c87-9ca9-74e96b6b086f",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
-                    "rangenode_id": "6985e771-bcde-41f4-8394-3d855be61ec7",
-                    "source_identifier_id": null
-                },
-                {
-                    "description": null,
-                    "domainnode_id": "0bc1ca32-ca45-488d-a6c1-0713fabda730",
-                    "edgeid": "fbfdcab2-fec9-405f-b0a3-f2ed2c2ed6c8",
-                    "graph_id": "8debd7bb-a37d-4c87-9ca9-74e96b6b086f",
-                    "name": null,
-                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P72_has_language",
-                    "rangenode_id": "f1164739-c33c-41f3-9c47-d62e079f11bc",
-                    "source_identifier_id": null
                 }
             ],
             "functions_x_graphs": [],
@@ -1143,13 +849,6 @@
             "nodegroups": [
                 {
                     "cardinality": "1",
-                    "grouping_node_id": "0bc1ca32-ca45-488d-a6c1-0713fabda730",
-                    "legacygroupid": null,
-                    "nodegroupid": "0bc1ca32-ca45-488d-a6c1-0713fabda730",
-                    "parentnodegroup_id": "d95bb34e-3367-44de-8cb1-dd09cd478b2c"
-                },
-                {
-                    "cardinality": "1",
                     "grouping_node_id": "39245ad5-2326-4ccc-abb9-eaa96952c818",
                     "legacygroupid": null,
                     "nodegroupid": "39245ad5-2326-4ccc-abb9-eaa96952c818",
@@ -1157,47 +856,22 @@
                 },
                 {
                     "cardinality": "1",
-                    "grouping_node_id": "83502e8e-b315-4e1a-93e8-be172417a825",
+                    "grouping_node_id": "4e6b36fd-2a47-47a0-8b4e-80321956bf69",
                     "legacygroupid": null,
-                    "nodegroupid": "83502e8e-b315-4e1a-93e8-be172417a825",
+                    "nodegroupid": "4e6b36fd-2a47-47a0-8b4e-80321956bf69",
                     "parentnodegroup_id": "39245ad5-2326-4ccc-abb9-eaa96952c818"
                 },
                 {
                     "cardinality": "1",
-                    "grouping_node_id": "d95bb34e-3367-44de-8cb1-dd09cd478b2c",
+                    "grouping_node_id": "83502e8e-b315-4e1a-93e8-be172417a825",
                     "legacygroupid": null,
-                    "nodegroupid": "d95bb34e-3367-44de-8cb1-dd09cd478b2c",
+                    "nodegroupid": "83502e8e-b315-4e1a-93e8-be172417a825",
                     "parentnodegroup_id": "39245ad5-2326-4ccc-abb9-eaa96952c818"
                 }
             ],
             "nodes": [
                 {
-                    "alias": "general_safety_classification_timespan_name",
-                    "config": {
-                        "en": ""
-                    },
-                    "datatype": "semantic",
-                    "description": "# Specific:\n\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "8debd7bb-a37d-4c87-9ca9-74e96b6b086f",
-                    "hascustomalias": false,
-                    "is_collector": true,
-                    "is_immutable": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "general_safety_classification_timespan_name",
-                    "nodegroup_id": "0bc1ca32-ca45-488d-a6c1-0713fabda730",
-                    "nodeid": "0bc1ca32-ca45-488d-a6c1-0713fabda730",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E33_E41_Linguistic_Appellation",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
-                    "sortorder": 0,
-                    "source_identifier_id": null,
-                    "sourcebranchpublication_id": null
-                },
-                {
-                    "alias": "general_safety_classification_statement_language",
+                    "alias": "safety_classification_statement_language",
                     "config": {
                         "controlledList": "f7fc4f6d-fd46-4881-846f-4a08bc1a3fef",
                         "multiValue": true
@@ -1213,8 +887,8 @@
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": false,
-                    "name": "general_safety_classification_statement_language",
-                    "nodegroup_id": "39245ad5-2326-4ccc-abb9-eaa96952c818",
+                    "name": "safety_classification_statement_language",
+                    "nodegroup_id": "4e6b36fd-2a47-47a0-8b4e-80321956bf69",
                     "nodeid": "19184d3b-e052-4990-a20e-7b37dc96e676",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E56_Language",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P72_has_language",
@@ -1225,7 +899,7 @@
                 {
                     "alias": "ghs_safety_classification_type",
                     "config": {
-                        "controlledList": "00000000-0000-0000-0000-000000000005",
+                        "controlledList": "f1f7840d-dc3c-4ee5-b16e-8b36452f2bd2",
                         "multiValue": true
                     },
                     "datatype": "reference",
@@ -1249,59 +923,7 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "general_safety_classification_type",
-                    "config": {
-                        "controlledList": "36b79d28-3aef-4d14-97c7-e31777ce3299",
-                        "multiValue": false
-                    },
-                    "datatype": "reference",
-                    "description": null,
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "8debd7bb-a37d-4c87-9ca9-74e96b6b086f",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "is_immutable": false,
-                    "isrequired": true,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "general_safety_classification_type",
-                    "nodegroup_id": "39245ad5-2326-4ccc-abb9-eaa96952c818",
-                    "nodeid": "249defa2-96ab-4920-8293-5a7c5f2af12a",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E55_Type",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
-                    "sortorder": 0,
-                    "source_identifier_id": null,
-                    "sourcebranchpublication_id": null
-                },
-                {
-                    "alias": "general_safety_classification_timespan_name_type",
-                    "config": {
-                        "controlledList": "9f1cf9a8-ce65-455f-ab1e-a9b36e9e23ce",
-                        "multiValue": true
-                    },
-                    "datatype": "reference",
-                    "description": "# Specific:\n\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "8debd7bb-a37d-4c87-9ca9-74e96b6b086f",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "is_immutable": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "general_safety_classification_timespan_name_type",
-                    "nodegroup_id": "0bc1ca32-ca45-488d-a6c1-0713fabda730",
-                    "nodeid": "26f27f44-ea31-45d5-ab92-11313fbdaa9c",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E55_Type",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
-                    "sortorder": 0,
-                    "source_identifier_id": null,
-                    "sourcebranchpublication_id": null
-                },
-                {
-                    "alias": "general_safety_classification_statement_label",
+                    "alias": "safety_classification_statement_label",
                     "config": {
                         "en": ""
                     },
@@ -1316,8 +938,8 @@
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": false,
-                    "name": "general_safety_classification_statement_label",
-                    "nodegroup_id": "39245ad5-2326-4ccc-abb9-eaa96952c818",
+                    "name": "safety_classification_statement_label",
+                    "nodegroup_id": "4e6b36fd-2a47-47a0-8b4e-80321956bf69",
                     "nodeid": "27d21802-d9ef-40f4-95b6-72babeaa3589",
                     "ontologyclass": "http://www.w3.org/2001/XMLSchema#string",
                     "parentproperty": "http://www.w3.org/2000/01/rdf-schema#label",
@@ -1353,7 +975,7 @@
                 {
                     "alias": "nfpa_safety_classifcation_type",
                     "config": {
-                        "controlledList": "00000000-0000-0000-0000-000000000005",
+                        "controlledList": "66fe06b4-9a61-4ee0-82cd-d33866e2be0c",
                         "multiValue": true
                     },
                     "datatype": "reference",
@@ -1377,32 +999,7 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "general_safety_classification_timespan_begin_of_the_end",
-                    "config": {
-                        "dateFormat": "YYYY-MM-DD"
-                    },
-                    "datatype": "date",
-                    "description": "# Specific:\n\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "8debd7bb-a37d-4c87-9ca9-74e96b6b086f",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "is_immutable": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "general_safety_classification_timespan_begin_of_the_end",
-                    "nodegroup_id": "d95bb34e-3367-44de-8cb1-dd09cd478b2c",
-                    "nodeid": "46b6b219-8829-492b-bc2e-e3178a2e4f0f",
-                    "ontologyclass": "http://www.w3.org/2001/XMLSchema#dateTime",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P81b_begin_of_the_end",
-                    "sortorder": 0,
-                    "source_identifier_id": null,
-                    "sourcebranchpublication_id": null
-                },
-                {
-                    "alias": "general_safety_classification_statement",
+                    "alias": "safety_classification_statement",
                     "config": {
                         "en": ""
                     },
@@ -1412,27 +1009,33 @@
                     "fieldname": null,
                     "graph_id": "8debd7bb-a37d-4c87-9ca9-74e96b6b086f",
                     "hascustomalias": false,
-                    "is_collector": false,
+                    "is_collector": true,
                     "is_immutable": false,
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": false,
-                    "name": "general_safety_classification_statement",
-                    "nodegroup_id": "39245ad5-2326-4ccc-abb9-eaa96952c818",
+                    "name": "safety_classification_statement",
+                    "nodegroup_id": "4e6b36fd-2a47-47a0-8b4e-80321956bf69",
                     "nodeid": "4e6b36fd-2a47-47a0-8b4e-80321956bf69",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by",
-                    "sortorder": 0,
+                    "sortorder": 3,
                     "source_identifier_id": null,
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "general_safety_classification_timespan_begin_of_the_begin",
+                    "alias": "ghs_safety_classification_time_span_edtf",
                     "config": {
-                        "dateFormat": "YYYY-MM-DD"
+                        "fuzzy_day_padding": 1,
+                        "fuzzy_month_padding": 1,
+                        "fuzzy_season_padding": 12,
+                        "fuzzy_year_padding": 1,
+                        "multiplier_if_approximate": 1,
+                        "multiplier_if_both": 1,
+                        "multiplier_if_uncertain": 1
                     },
-                    "datatype": "date",
-                    "description": "# Specific:\n\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
+                    "datatype": "edtf",
+                    "description": null,
                     "exportable": false,
                     "fieldname": null,
                     "graph_id": "8debd7bb-a37d-4c87-9ca9-74e96b6b086f",
@@ -1442,62 +1045,11 @@
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": false,
-                    "name": "general_safety_classification_timespan_begin_of_the_begin",
-                    "nodegroup_id": "d95bb34e-3367-44de-8cb1-dd09cd478b2c",
-                    "nodeid": "5e024752-71af-4fad-a11b-97dc0b9039d3",
-                    "ontologyclass": "http://www.w3.org/2001/XMLSchema#dateTime",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P82a_begin_of_the_begin",
-                    "sortorder": 0,
-                    "source_identifier_id": null,
-                    "sourcebranchpublication_id": null
-                },
-                {
-                    "alias": "general_safety_classification_timespan_type",
-                    "config": {
-                        "controlledList": "c53d3557-e033-4aa1-b020-0dc2b690025f",
-                        "multiValue": true
-                    },
-                    "datatype": "reference",
-                    "description": "# Specific:\n\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "8debd7bb-a37d-4c87-9ca9-74e96b6b086f",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "is_immutable": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "general_safety_classification_timespan_type",
-                    "nodegroup_id": "d95bb34e-3367-44de-8cb1-dd09cd478b2c",
-                    "nodeid": "6985e771-bcde-41f4-8394-3d855be61ec7",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E55_Type",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
-                    "sortorder": 0,
-                    "source_identifier_id": null,
-                    "sourcebranchpublication_id": null
-                },
-                {
-                    "alias": "general_safety_classification_timespan_label",
-                    "config": {
-                        "en": ""
-                    },
-                    "datatype": "string",
-                    "description": "# Specific:\n\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "8debd7bb-a37d-4c87-9ca9-74e96b6b086f",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "is_immutable": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "general_safety_classification_timespan_label",
-                    "nodegroup_id": "d95bb34e-3367-44de-8cb1-dd09cd478b2c",
-                    "nodeid": "70dee6da-b9c5-4694-9372-d817d4f314e1",
-                    "ontologyclass": "http://www.w3.org/2001/XMLSchema#string",
-                    "parentproperty": "http://www.w3.org/2000/01/rdf-schema#label",
+                    "name": "ghs_safety_classification_time-span_edtf",
+                    "nodegroup_id": "39245ad5-2326-4ccc-abb9-eaa96952c818",
+                    "nodeid": "6965df47-e478-4fd4-99c7-2161a1a73d97",
+                    "ontologyclass": "http://www.w3.org/2000/01/rdf-schema#Literal",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P82_at_some_time_within",
                     "sortorder": 0,
                     "source_identifier_id": null,
                     "sourcebranchpublication_id": null
@@ -1505,7 +1057,7 @@
                 {
                     "alias": "nfpa_safety_classification_classification",
                     "config": {
-                        "controlledList": "00000000-0000-0000-0000-000000000005",
+                        "controlledList": "de36422b-71cb-49dd-9dd6-4366753497bc",
                         "multiValue": false
                     },
                     "datatype": "reference",
@@ -1560,70 +1112,6 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "general_safety_classification_timespan_name_source_reference",
-                    "config": {
-                        "graphid": [
-                            "a7b1a7c5-b25b-11e9-8a4e-a4d18cec433a"
-                        ],
-                        "graphs": [
-                            {
-                                "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
-                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
-                                "name": "Textual Work",
-                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
-                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
-                                "useOntologyRelationship": false
-                            }
-                        ],
-                        "searchDsl": "",
-                        "searchString": ""
-                    },
-                    "datatype": "resource-instance-list",
-                    "description": "# Specific:\n\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "8debd7bb-a37d-4c87-9ca9-74e96b6b086f",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "is_immutable": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "general_safety_classification_timespan_name_source_reference",
-                    "nodegroup_id": "0bc1ca32-ca45-488d-a6c1-0713fabda730",
-                    "nodeid": "7d573fbc-96fe-479d-9518-a06736d65383",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by",
-                    "sortorder": 0,
-                    "source_identifier_id": null,
-                    "sourcebranchpublication_id": null
-                },
-                {
-                    "alias": "general_safety_classification_timespan_end_of_the_begin",
-                    "config": {
-                        "dateFormat": "YYYY-MM-DD"
-                    },
-                    "datatype": "date",
-                    "description": "# Specific:\n\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "8debd7bb-a37d-4c87-9ca9-74e96b6b086f",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "is_immutable": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "general_safety_classification_timespan_end_of_the_begin",
-                    "nodegroup_id": "d95bb34e-3367-44de-8cb1-dd09cd478b2c",
-                    "nodeid": "7ff00f9f-0cf8-42dc-b2e2-841ed6867071",
-                    "ontologyclass": "http://www.w3.org/2001/XMLSchema#dateTime",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P81a_end_of_the_begin",
-                    "sortorder": 0,
-                    "source_identifier_id": null,
-                    "sourcebranchpublication_id": null
-                },
-                {
                     "alias": "ghs_safety_classification",
                     "config": {},
                     "datatype": "semantic",
@@ -1642,12 +1130,12 @@
                     "nodeid": "810be190-0d8f-494d-9fda-8fe8ed4374cb",
                     "ontologyclass": "https://takin.solutions/ontologies/CRMaaa/ZE4_Classificatory_Status",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P117_occurs_during",
-                    "sortorder": 0,
+                    "sortorder": 1,
                     "source_identifier_id": null,
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "general_safety_classification_reference",
+                    "alias": "safety_classification_reference",
                     "config": {
                         "en": ""
                     },
@@ -1662,44 +1150,19 @@
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": false,
-                    "name": "general_safety_classification_reference",
+                    "name": "safety_classification_reference",
                     "nodegroup_id": "83502e8e-b315-4e1a-93e8-be172417a825",
                     "nodeid": "83502e8e-b315-4e1a-93e8-be172417a825",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/PC67_refers_to",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P02i_is_range_of",
-                    "sortorder": 0,
+                    "sortorder": 2,
                     "source_identifier_id": null,
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "general_safety_classification_timespan_name_content",
+                    "alias": "safety_classification_source_reference_type",
                     "config": {
-                        "en": ""
-                    },
-                    "datatype": "string",
-                    "description": "# Specific:\n\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "8debd7bb-a37d-4c87-9ca9-74e96b6b086f",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "is_immutable": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "general_safety_classification_timespan_name_content",
-                    "nodegroup_id": "0bc1ca32-ca45-488d-a6c1-0713fabda730",
-                    "nodeid": "9357c54a-c9c6-41e4-8fdf-bc2cf8942b81",
-                    "ontologyclass": "http://www.w3.org/2001/XMLSchema#string",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P190_has_symbolic_content",
-                    "sortorder": 0,
-                    "source_identifier_id": null,
-                    "sourcebranchpublication_id": null
-                },
-                {
-                    "alias": "general_safety_classification_source_reference_type",
-                    "config": {
-                        "controlledList": "8b7faa16-3846-4360-b767-bb2c823b6550",
+                        "controlledList": "c98b09ea-20de-4414-bfaa-84aac769291a",
                         "multiValue": false
                     },
                     "datatype": "reference",
@@ -1713,7 +1176,7 @@
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": false,
-                    "name": "general_safety_classification_source_reference_type",
+                    "name": "safety_classification_source_reference_type",
                     "nodegroup_id": "83502e8e-b315-4e1a-93e8-be172417a825",
                     "nodeid": "9ddb0510-9df5-4dc9-b083-a6776d261a8e",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E55_Type",
@@ -1759,7 +1222,7 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "general_safety_classification_statement_type_metatype",
+                    "alias": "safety_classification_statement_type_metatype",
                     "config": {
                         "controlledList": "c82d6f85-ae67-4c28-b07a-c114f6d6ba50",
                         "multiValue": false
@@ -1775,8 +1238,8 @@
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": false,
-                    "name": "general_safety_classification_statement_type_metatype",
-                    "nodegroup_id": "39245ad5-2326-4ccc-abb9-eaa96952c818",
+                    "name": "safety_classification_statement_type_metatype",
+                    "nodegroup_id": "4e6b36fd-2a47-47a0-8b4e-80321956bf69",
                     "nodeid": "a7acd9f1-3363-4041-af53-875a4f8f2e7c",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E55_Type",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
@@ -1785,7 +1248,7 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "general_safety_classification_statement_source_reference",
+                    "alias": "safety_classification_statement_source_reference",
                     "config": {
                         "graphid": [
                             "a7b1a7c5-b25b-11e9-8a4e-a4d18cec433a"
@@ -1814,8 +1277,8 @@
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": false,
-                    "name": "general_safety_classification_statement_source_reference",
-                    "nodegroup_id": "39245ad5-2326-4ccc-abb9-eaa96952c818",
+                    "name": "safety_classification_statement_source_reference",
+                    "nodegroup_id": "4e6b36fd-2a47-47a0-8b4e-80321956bf69",
                     "nodeid": "ae7dbbbd-ec8b-42b2-b21d-923ee02a79c4",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by",
@@ -1867,12 +1330,9 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "general_safety_classification_classification",
-                    "config": {
-                        "controlledList": "de36422b-71cb-49dd-9dd6-4366753497bc",
-                        "multiValue": false
-                    },
-                    "datatype": "reference",
+                    "alias": "ghs_safety_classification_time_span",
+                    "config": {},
+                    "datatype": "semantic",
                     "description": null,
                     "exportable": false,
                     "fieldname": null,
@@ -1881,13 +1341,13 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": false,
+                    "issearchable": true,
                     "istopnode": false,
-                    "name": "general_safety_classification_classification",
+                    "name": "ghs_safety_classification_time-span",
                     "nodegroup_id": "39245ad5-2326-4ccc-abb9-eaa96952c818",
-                    "nodeid": "ba6202cd-2c21-4abd-8157-b4c0479fb351",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E55_Type",
-                    "parentproperty": "https://takin.solutions/ontologies/CRMaaa/ZP12_ascribes_classification",
+                    "nodeid": "bb198502-3d08-4309-98de-9c21d06cac9d",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span",
                     "sortorder": 0,
                     "source_identifier_id": null,
                     "sourcebranchpublication_id": null
@@ -1916,7 +1376,7 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "general_safety_classification_statement_content",
+                    "alias": "safety_classification_statement_content",
                     "config": {
                         "en": ""
                     },
@@ -1931,8 +1391,8 @@
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": false,
-                    "name": "general_safety_classification_statement_content",
-                    "nodegroup_id": "39245ad5-2326-4ccc-abb9-eaa96952c818",
+                    "name": "safety_classification_statement_content",
+                    "nodegroup_id": "4e6b36fd-2a47-47a0-8b4e-80321956bf69",
                     "nodeid": "d44d4aad-600c-45e2-b29a-9a89346fcfff",
                     "ontologyclass": "http://www.w3.org/2001/XMLSchema#string",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P190_has_symbolic_content",
@@ -1941,7 +1401,7 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "general_safety_classification_source_reference",
+                    "alias": "safety_classification_source_reference",
                     "config": {
                         "graphs": [
                             {
@@ -1967,7 +1427,7 @@
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": false,
-                    "name": "general_safety_classification_source_reference",
+                    "name": "safety_classification_source_reference",
                     "nodegroup_id": "83502e8e-b315-4e1a-93e8-be172417a825",
                     "nodeid": "d6f5593d-ce61-499f-944a-4d2cad8d5d84",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object",
@@ -1977,120 +1437,9 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "general_safety_classification_time_span",
-                    "config": {
-                        "en": ""
-                    },
-                    "datatype": "semantic",
-                    "description": "{\"en\": \"\"}",
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "8debd7bb-a37d-4c87-9ca9-74e96b6b086f",
-                    "hascustomalias": false,
-                    "is_collector": true,
-                    "is_immutable": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "general_safety_classification_time-span",
-                    "nodegroup_id": "d95bb34e-3367-44de-8cb1-dd09cd478b2c",
-                    "nodeid": "d95bb34e-3367-44de-8cb1-dd09cd478b2c",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span",
-                    "sortorder": 0,
-                    "source_identifier_id": null,
-                    "sourcebranchpublication_id": null
-                },
-                {
-                    "alias": "general_safety_classification_timespan_name_label",
-                    "config": {
-                        "en": ""
-                    },
-                    "datatype": "string",
-                    "description": "# Specific:\n\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "8debd7bb-a37d-4c87-9ca9-74e96b6b086f",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "is_immutable": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "general_safety_classification_timespan_name_label",
-                    "nodegroup_id": "0bc1ca32-ca45-488d-a6c1-0713fabda730",
-                    "nodeid": "da4a9b02-1ffb-47cf-9cc3-ea700a630fb1",
-                    "ontologyclass": "http://www.w3.org/2001/XMLSchema#string",
-                    "parentproperty": "http://www.w3.org/2000/01/rdf-schema#label",
-                    "sortorder": 0,
-                    "source_identifier_id": null,
-                    "sourcebranchpublication_id": null
-                },
-                {
-                    "alias": "general_safety_classification_hold_for",
-                    "config": {
-                        "graphs": [
-                            {
-                                "graphid": "36956e50-d770-11ef-8f5d-0275dc2ded29",
-                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
-                                "name": "Group",
-                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
-                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
-                                "useOntologyRelationship": false
-                            }
-                        ],
-                        "searchDsl": "",
-                        "searchString": ""
-                    },
-                    "datatype": "resource-instance",
-                    "description": null,
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "8debd7bb-a37d-4c87-9ca9-74e96b6b086f",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "is_immutable": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "general_safety_classification_hold_for",
-                    "nodegroup_id": "39245ad5-2326-4ccc-abb9-eaa96952c818",
-                    "nodeid": "e2f0935b-ef0d-4afa-ab86-b4dad840d365",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E74_Group",
-                    "parentproperty": "https://takin.solutions/ontologies/CRMaaa/ZP4_holds_for",
-                    "sortorder": 0,
-                    "source_identifier_id": null,
-                    "sourcebranchpublication_id": null
-                },
-                {
-                    "alias": "general_safety_classification_timespan_end_of_the_end",
-                    "config": {
-                        "dateFormat": "YYYY-MM-DD"
-                    },
-                    "datatype": "date",
-                    "description": "# Specific:\n\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "8debd7bb-a37d-4c87-9ca9-74e96b6b086f",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "is_immutable": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "general_safety_classification_timespan_end_of_the_end",
-                    "nodegroup_id": "d95bb34e-3367-44de-8cb1-dd09cd478b2c",
-                    "nodeid": "e4c23e68-633f-4b72-842d-9a73ee700778",
-                    "ontologyclass": "http://www.w3.org/2001/XMLSchema#dateTime",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P82b_end_of_the_end",
-                    "sortorder": 0,
-                    "source_identifier_id": null,
-                    "sourcebranchpublication_id": null
-                },
-                {
                     "alias": "ghs_safety_classification_classification",
                     "config": {
-                        "controlledList": "00000000-0000-0000-0000-000000000005",
+                        "controlledList": "de36422b-71cb-49dd-9dd6-4366753497bc",
                         "multiValue": false
                     },
                     "datatype": "reference",
@@ -2145,33 +1494,7 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "general_safety_classification_timespan_name_language",
-                    "config": {
-                        "controlledList": "f7fc4f6d-fd46-4881-846f-4a08bc1a3fef",
-                        "multiValue": true
-                    },
-                    "datatype": "reference",
-                    "description": "# Specific:\n\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
-                    "exportable": false,
-                    "fieldname": null,
-                    "graph_id": "8debd7bb-a37d-4c87-9ca9-74e96b6b086f",
-                    "hascustomalias": false,
-                    "is_collector": false,
-                    "is_immutable": false,
-                    "isrequired": false,
-                    "issearchable": true,
-                    "istopnode": false,
-                    "name": "general_safety_classification_timespan_name_language",
-                    "nodegroup_id": "0bc1ca32-ca45-488d-a6c1-0713fabda730",
-                    "nodeid": "f1164739-c33c-41f3-9c47-d62e079f11bc",
-                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E56_Language",
-                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P72_has_language",
-                    "sortorder": 0,
-                    "source_identifier_id": null,
-                    "sourcebranchpublication_id": null
-                },
-                {
-                    "alias": "general_safety_classification_statement_type",
+                    "alias": "safety_classification_statement_type",
                     "config": {
                         "controlledList": "1adae7ea-4884-432f-af44-c9aea3a48a3d",
                         "multiValue": true
@@ -2187,8 +1510,8 @@
                     "isrequired": false,
                     "issearchable": true,
                     "istopnode": false,
-                    "name": "general_safety_classification_statement_type",
-                    "nodegroup_id": "39245ad5-2326-4ccc-abb9-eaa96952c818",
+                    "name": "safety_classification_statement_type",
+                    "nodegroup_id": "4e6b36fd-2a47-47a0-8b4e-80321956bf69",
                     "nodeid": "f356dea4-a95f-4ddd-aaf3-88b27fc11dbd",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E55_Type",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
@@ -2201,9 +1524,9 @@
             "publication": {
                 "graph_id": "8debd7bb-a37d-4c87-9ca9-74e96b6b086f",
                 "most_recent_edit_id": null,
-                "notes": "Migrated resource-instance/resource-instance-list nodes to use ",
-                "publicationid": "772fbd45-5c69-4216-8a4f-39d3b24f2dae",
-                "published_time": "2025-09-16T18:33:32.247"
+                "notes": "consolidates NPFA and GHS classifications in one tile, allows for linkage to Safety Data Sheet (currently textual work resource relationship) and general statements about safety",
+                "publicationid": "f569ec84-5d29-4ce4-a29a-af4033aada38",
+                "published_time": "2025-09-24T00:26:32.623"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -2244,9 +1567,9 @@
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 16.4 (Postgres.app) on aarch64-apple-darwin21.6.0, compiled by Apple clang version 14.0.0 (clang-1400.0.29.102), 64-bit",
-        "git hash": "85d6c42fbd 2025-09-05 17:08:16 -0700",
-        "os": "Darwin",
-        "os version": "24.6.0"
+        "db": "PostgreSQL 16.8 on aarch64-unknown-linux-gnu, compiled by gcc (GCC) 7.3.1 20180712 (Red Hat 7.3.1-17), 64-bit",
+        "git hash": "fatal: not a git repository (or any of the parent directories): .git",
+        "os": "Linux",
+        "os version": "6.8.0-1021-aws"
     }
 }
