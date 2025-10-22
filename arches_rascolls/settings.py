@@ -605,7 +605,6 @@ LANGUAGES = [
     ("en", "English"),
     ("de", "German"),
     ("pt", "Portuguese"),
-    ("en-US", "English"),
 ]
 
 # override this to permenantly display/hide the language switcher
