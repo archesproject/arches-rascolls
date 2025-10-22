@@ -1,0 +1,101 @@
+{
+    "name": "Search Item Details",
+    "slug": "rascolls-search",
+    "components": [
+        {
+            "config": {
+                "sections": [
+                    {
+                        "name": "Statement or Interpretation about Object",
+                        "components": [
+                            {
+                                "config": {
+                                    "node_aliases": [
+                                        "statement_content"
+                                    ],
+                                    "custom_labels": {},
+                                    "nodegroup_alias": "statement",
+                                    "custom_card_name": "Description",
+                                    "has_write_permission": false
+                                },
+                                "component": "arches_rascolls/Search/components/DataSection"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Digital Resources",
+                        "components": [
+                            {
+                                "config": {
+                                    "graph_slug": "digital_resources_1",
+                                    "node_aliases": [
+                                        "file"
+                                    ],
+                                    "custom_labels": {},
+                                    "custom_card_name": "Images"
+                                },
+                                "component": "arches_rascolls/Search/components/RelatedResourcesSection"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Material Information",
+                        "components": [
+                            {
+                                "config": {
+                                    "node_aliases": [
+                                        "material"
+                                    ],
+                                    "custom_labels": {
+                                        "material": "Materials"
+                                    },
+                                    "nodegroup_alias": "material",
+                                    "custom_card_name": "Material Information",
+                                    "has_write_permission": false
+                                },
+                                "component": "arches_rascolls/Search/components/DataSection"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Addition Event of Object to Collection",
+                        "components": [
+                            {
+                                "config": {
+                                    "node_aliases": [
+                                        "addition_to_collection_added_to",
+                                        "addition_to_collection_type",
+                                        "addition_to_collection_carried_out_by"
+                                    ],
+                                    "custom_labels": {"addition_to_collection_carried_out_by": "Acquired By", "addition_to_collection_type": "Acquisition Details", "addition_to_collection_added_to": "Acquired on"},
+                                    "nodegroup_alias": "addition_to_collection",
+                                    "custom_card_name": "Acquisition Information",
+                                    "has_write_permission": false
+                                },
+                                "component": "arches_rascolls/Search/components/DataSection"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Production Event of Object",
+                        "components": [
+                            {
+                                "config": {
+                                    "node_aliases": [
+                                        "production_location"
+                                    ],
+                                    "custom_labels": {},
+                                    "nodegroup_alias": "production_",
+                                    "custom_card_name": "Associated Places",
+                                    "has_write_permission": false
+                                },
+                                "component": "arches_rascolls/Search/components/DataSection"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "component": "arches_rascolls/Search/components/LinkedSections"
+        }
+    ]
+}
