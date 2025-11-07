@@ -28,7 +28,7 @@ dependencies = [
     "django_csp==3.8",
     "arches_modular_reports @ git+https://github.com/archesproject/arches-modular-reports@main",
     "arches_querysets @ git+https://github.com/archesproject/arches-querysets@main",
-    "arches_controlled_lists @ git+https://github.com/archesproject/arches-controlled-lists@dev/1.0.x",
+    "arches_controlled_lists @ git+https://github.com/archesproject/arches-controlled-lists@dev/1.1.x",
     "arches_search @ git+https://github.com/archesproject/arches-search@main",
 ]
 version = "0.0.1"
