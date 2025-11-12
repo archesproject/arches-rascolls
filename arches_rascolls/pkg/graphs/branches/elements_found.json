@@ -551,20 +551,6 @@
                     "card_id": "ed19e759-4305-44fc-accc-83e9031a5a6f",
                     "config": {
                         "defaultValue": {
-                            "__ko_mapping__": {
-                                "copiedProperties": {},
-                                "copy": [],
-                                "ignore": [],
-                                "include": [
-                                    "_destroy"
-                                ],
-                                "mappedProperties": {
-                                    "en": true,
-                                    "en.direction": true,
-                                    "en.value": true
-                                },
-                                "observe": []
-                            },
                             "en": {
                                 "direction": "ltr",
                                 "value": ""
