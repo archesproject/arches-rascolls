@@ -27011,7 +27011,7 @@
                 {
                     "alias": "part_statement_type",
                     "config": {
-                        "controlledList": "1adae7ea-4884-432f-af44-c9aea3a48a3d",
+                        "controlledList": "a16a4edc-c916-4293-af98-44d76ce6cba7",
                         "multiValue": true
                     },
                     "datatype": "reference",
@@ -39400,9 +39400,9 @@
             "publication": {
                 "graph_id": "bda239c6-d376-11ef-a239-0275dc2ded29",
                 "most_recent_edit_id": null,
-                "notes": "Remove node in acquisition branch: transferred title of\nBreak out elements_found into separate branch, include digital resource link\nAdd pigments branch, include digital resource link",
-                "publicationid": "d75f8879-97f6-4cf1-81c6-b079a038eac7",
-                "published_time": "2025-11-04T23:55:26.187"
+                "notes": "Addressed:\nChange \"Statement Types\" controlled list to \"Statement Types - Physical Thing\" for part_Statement_type node #304",
+                "publicationid": "6fc66e47-06ea-4cc8-9cf5-a7a3c6f21f7b",
+                "published_time": "2025-11-10T16:25:16.052"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
