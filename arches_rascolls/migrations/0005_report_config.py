@@ -7,10 +7,6 @@ from django.utils.translation import gettext as _
 import json
 from arches.app.models.system_settings import settings
 
-config_to_graph_slug_mappings = {
-    "reference_and_sample_collection_item": "reference_and_sample_collection_item_1",
-}
-
 
 class Migration(migrations.Migration):
 
@@ -36,9 +32,7 @@ class Migration(migrations.Migration):
             for file in glob.glob(os.path.join(config_dir, "*.json")):
                 with open(file) as f:
                     data = json.load(f)
-                    graph_slug = config_to_graph_slug_mappings.get(
-                        Path(config_dir).stem, None
-                    )
+                    graph_slug = Path(config_dir).stem
                     if graph_slug:
                         try:
                             graph = Graph.objects.get(slug=graph_slug)
@@ -66,7 +60,7 @@ class Migration(migrations.Migration):
         config_dirs = glob.glob(reports_dir)
         for config_dir in config_dirs:
             print("CONFIG_DIR", config_dir)
-            graph_slug = config_to_graph_slug_mappings.get(Path(config_dir).stem, None)
+            graph_slug = Path(config_dir).stem
             print("SLUG", graph_slug)
             if graph_slug:
                 graph = Graph.objects.get(slug=graph_slug)
