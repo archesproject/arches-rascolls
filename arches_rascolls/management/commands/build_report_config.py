@@ -34,8 +34,15 @@ class Command(BaseCommand):
         parser.add_argument(
             "graph",
             nargs="?",
-            default="reference_and_sample_collection_item_1",
+            default="reference_and_sample_collection_item",
             help="graph slug",
+        )
+
+        parser.add_argument(
+            "report_slug",
+            nargs="?",
+            default="default",
+            help="report slug",
         )
 
     def handle(self, **options):
@@ -46,18 +53,21 @@ class Command(BaseCommand):
             exit()
 
         slug = options["graph"]
+        report_slug = options["report_slug"]
         graphid = self.get_graph_id(slug)
-        graph_config = self.get_config(graphid)
+        graph_config = self.get_config(graphid, report_slug)
         layout = self.get_layout(slug)
         updated_config = self.modify_config(graph_config, layout)
-        ReportConfig.objects.filter(graph_id=graphid).update(config=updated_config)
+        ReportConfig.objects.filter(graph_id=graphid, slug=report_slug).update(
+            config=updated_config
+        )
         sys.stdout.write("Report config updated")
 
     def get_layout(self, graph):
         data = None
         layout_location = os.path.join(
             os.getcwd(),
-            "afrc",
+            "arches_rascolls",
             "report_definitions",
             f"{graph}.json",
         )
@@ -75,27 +85,37 @@ class Command(BaseCommand):
 
         return graphid
 
-    def get_config(self, graphid):
+    def get_config(self, graphid, slug):
         if graphid:
             try:
-                return ReportConfig.objects.get(graph_id=graphid).config
+                return ReportConfig.objects.get(graph_id=graphid, slug=slug).config
             except:
                 sys.stderr.write("No report config available for this graph")
 
     def build_nodegroups(self, components):
         nodegroups = []
         for component in components:
-            nodegroup = {
-                "component": "arches_modular_reports/ModularReport/components/DataSection",
-                "config": {
-                    "node_aliases": component["nodes"],
-                    "custom_labels": {},
-                    "nodegroup_alias": component["nodegroup"],
-                    "custom_card_name": component["name"],
-                },
-            }
+            print(component["nodes"])
+            nodegroup = self.build_data_section(
+                component["name"],
+                component["nodegroup"],
+                component["nodes"],
+                component.get("filters", []),
+            )
             nodegroups.append(nodegroup)
         return nodegroups
+
+    def build_data_section(self, name, nodegroup, nodes, filters):
+        return {
+            "component": "arches_modular_reports/ModularReport/components/DataSection",
+            "config": {
+                "node_aliases": nodes,
+                "custom_labels": {},
+                "nodegroup_alias": nodegroup,
+                "custom_card_name": name,
+                "filters": filters,
+            },
+        }
 
     def build_sections(self, sections):
         return [
@@ -106,6 +126,17 @@ class Command(BaseCommand):
                         self.build_section(section, self.section_definitions[section])
                         for section in sections
                     ]
+                },
+            }
+        ]
+
+    def build_related_resources_section(self, graph_slug, node_aliases):
+        return [
+            {
+                "component": "arches_modular_reports/ModularReport/components/RelatedResourcesSection",
+                "config": {
+                    "graph_slug": graph_slug,
+                    "node_aliases": node_aliases,
                 },
             }
         ]
@@ -121,6 +152,7 @@ class Command(BaseCommand):
 
     def modify_config(self, config, layout):
         self.section_definitions = layout["section_definitions"]
+        print(config)
         for item in config["components"]:
             if item["component"].endswith("ReportTabs"):
                 item["config"]["tabs"] = [self.build_tab(tab) for tab in layout["tabs"]]
