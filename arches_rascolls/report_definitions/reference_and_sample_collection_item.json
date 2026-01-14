@@ -1,0 +1,81 @@
+{
+    "section_definitions": {
+        "General": {"components": [
+            {"name":"Common name, Additional names", "nodegroup": "name", "nodes": ["name_content", "name_type_", "name_language_"]},
+            {"name":"Sample Type", "nodegroup": "material", "nodes": ["material"]}, 
+            {"name":"Physical Form", "nodegroup": "statement", "nodes": ["statement_content"]},
+            {"name":"Color", "nodegroup": "has_color", "nodes": [ "color_type"]},
+            {"name":"Color Index (NOT MAPPED)", "nodegroup": "", "nodes": []},
+            {"name":"Origination date", "nodegroup": "production_time", "nodes": ["production_time_begin_of_the_begin"]},
+            {"name":"Barcode", "nodegroup": "identifier", "nodes": ["identifier_content", "identifier_type"], "filters": [{"alias": "identifier_type", "value": "5b7771f0-ec01-4d87-bac4-0efbafe5a802", "field_lookup": "0__uri__icontains"}]}, 
+            {"name":"Old Barcode", "nodegroup": "identifier", "nodes": ["identifier_content", "identifier_type"], "filters": [{"alias": "identifier_type", "value": "1c32efcd-999c-4b07-9b1f-df8279755bb8", "field_lookup": "0__uri__icontains"}]}, 
+            {"name":"Grid location (current location)", "nodegroup": "current_location", "nodes": ["current_location"]}
+        ]},
+        "Acquisition": {"components": [
+            {"name": "Manufacturer (adg - part of production?)", "nodegroup": "production_", "nodes": ["production_carried_out_by"]},
+            {"name": "Catalog Number (adg - identifier in separate nodegroup)", "nodegroup": "identifier", "nodes": ["identifier_content", "identifier_type"], "filters": [{"alias": "identifier_type", "value": "cf1011fb-f600-47aa-8fc8-fde647f962b7", "field_lookup": "0__uri__icontains"}]}, 
+            {"name": "Acquisition date (adg - not visible?)", "nodegroup": "", "nodes": []},
+            {"name": "Geographic origin (adg - part of production?)", "nodegroup": "production_location", "nodes": ["production_location_geo"]},
+            {"name": "Acquired by", "nodegroup": "acquisition", "nodes": ["acquisition_carried_out_by", "acquisition_transferred_title_to"]},
+            {"name": "Acquired from", "nodegroup": "acquisition", "nodes": ["acquisition_transferred_title_from"]},
+            {"name": "Contact Name (through resource supporting not supported)", "graph_slug": "", "nodegroup": "", "nodes": []},
+            {"name": "Phone number (through resource supporting not supported)", "graph_slug": "", "nodegroup": "", "nodes": []},
+            {"name": "Email (through resource supporting not supported)", "nodegroup": "", "nodes": []},
+            {"name": "Part of a collection", "nodegroup": "part_of", "nodes": ["part_of"]},
+            {"name": "Collection name", "nodegroup": "member_of", "nodes": ["member_of"]}
+        ]},
+        "Chemical": {"components": [
+            {"name": "Chemical name", "nodegroup": "material_data_assignment_name_n1", "nodes": ["material_data_assignment_name_content_n1"]},
+            {"name": "Chemical formula", "nodegroup": "chemical_material_name", "nodes": ["chemical_material_name_content"]},
+            {"name": "CAS number", "nodegroup": "chemical_material_identifier", "nodes": ["chemical_material_identifier_content"]},
+            {"name": "Mass or volume (adg - NOT MAPPED)", "nodegroup": "", "nodes": []},
+            {"name": "Compound type  (adg - NOT MAPPED)", "nodegroup": "", "nodes": []},
+            {"name": "Natural/Synthetic (adg - mapped to attribute type, but attribute not restricted to this property)", "nodegroup": "attribute_type", "nodes": ["attribute_type"]},
+            {"name": "Preparation (adg - NOT MAPPED)", "nodegroup": "", "nodes": []},
+            {"name": "Certified standard (adg - not mapped in mappings/restricted to this property, but using standard type", "nodegroup": "standard_type", "nodes": ["standard_type"]}
+        ]},
+        "Health and Safety": {"components": [
+            {"name": "MSDS", "nodegroup": "safety_classification_reference", "nodes": ["safety_classification_source_reference"], "filters": [{"alias": "safety_classification_source_reference_type", "value": "04d31848-6945-478c-8ea6-f2d0814c0aee", "field_lookup": "0__uri__icontains"}]},
+            {"name": "NFPA information", "nodegroup": "nfpa_safety_classification", "nodes": ["nfpa_safety_classification_type"]},
+            {"name": "GHS information", "nodegroup": "ghs_safety_classification", "nodes": ["ghs_safety_classification_type"]}
+        ]},
+        "Mixture": {"components": [
+            {"name": "Mixture type", "nodegroup": "mixture_type", "nodes": ["mixture_type"]},
+            {"name": "Components", "nodegroup": "part_name", "nodes": ["part_name_content", "part_name_type"]}
+        ]},
+        "Additional": {"components": [
+            {"name":"Notes", "nodegroup": "statement", "nodes": ["statement_content"], "filters": [{"alias": "statement_type", "value": "aat/300027200", "field_lookup": "0__uri__icontains"}]},
+            {"name": "Experiments on sample", "nodegroup": "statement", "nodes": ["statement_content"], "filters": [{"alias": "statement_type", "value": "1ad601d9-219b-4edb-abeb-61b76671c6e6", "field_lookup": "0__uri__icontains"}]} 
+        ]},
+        "Available": {"components": [
+            {"name": "Any analysis info/links/references (?)", "nodegroup": "", "nodes": []}
+        ]}
+    },
+    "tabs": [
+        {
+        "name": "Full",
+        "sections": [
+            "General",
+            "Acquisition",
+            "Chemical",
+            "Health and Safety",
+            "Mixture",
+            "Additional",
+            "Available"
+        ]},{
+        "name": "Analysis",
+        "sections": [
+            "General",
+            "Chemical",
+            "Mixture",
+            "Additional",
+            "Available"
+        ]},{
+        "name": "Chemical and Safety",
+        "sections": [
+            "Chemical",
+            "Health and Safety"
+        ]
+    }
+    ]
+}
