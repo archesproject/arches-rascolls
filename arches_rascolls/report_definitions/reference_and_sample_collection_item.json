@@ -76,6 +76,9 @@
             "Chemical",
             "Health and Safety"
         ]
+    }],
+    "header": {
+        "component":"arches_rascolls/ModularReport/components/ReportHeader",
+        "descriptor":"<name_content>"
     }
-    ]
 }
