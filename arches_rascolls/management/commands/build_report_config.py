@@ -129,7 +129,7 @@ class Command(BaseCommand):
     def build_sections(self, sections):
         return [
             {
-                "component": "arches_modular_reports/ModularReport/components/LinkedSections",
+                "component": "arches_rascolls/ModularReport/components/LinkedSections",
                 "config": {
                     "sections": [
                         self.build_section(section, self.section_definitions[section])
@@ -161,8 +161,10 @@ class Command(BaseCommand):
 
     def modify_config(self, config, layout):
         self.section_definitions = layout["section_definitions"]
-        print(config)
         for item in config["components"]:
+            if item["component"].endswith("ReportHeader"):
+                item["component"] = layout["header"]["component"]
+                item["config"]["descriptor"] = layout["header"]["descriptor"]
             if item["component"].endswith("ReportTabs"):
                 item["config"]["tabs"] = [self.build_tab(tab) for tab in layout["tabs"]]
         return config
