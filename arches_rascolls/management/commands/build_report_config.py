@@ -44,13 +44,22 @@ class Command(BaseCommand):
             default="default",
             help="report slug",
         )
+    
+        parser.add_argument(
+            "-y",
+            "--yes",
+            action="store_true",
+            dest="yes",
+            help='used to force a yes answer to any user input "continue? y/n" prompt',
+        )
 
     def handle(self, **options):
-        response = input(
-            "This will overwrite the report config in your database. Proceed? (Y/N): "
-        )
-        if response.lower() not in ("t", "true", "y", "yes"):
-            exit()
+        if options["yes"] is False:
+            response = input(
+                "This will overwrite the report config in your database. Proceed? (Y/N): "
+            )
+            if response.lower() not in ("t", "true", "y", "yes"):
+                exit()
 
         slug = options["graph"]
         report_slug = options["report_slug"]
