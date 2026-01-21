@@ -7,6 +7,8 @@ import Card from "primevue/card";
 
 import { fetchNodeTileData } from "@/arches_modular_reports/ModularReport/api.ts";
 import { truncateDisplayData } from "@/arches_modular_reports/ModularReport/utils.ts";
+import ReportToolbar from "@/arches_rascolls/ModularReport/components/ReportToolbar.vue";
+
 
 import type { Ref } from "vue";
 import type {
@@ -86,16 +88,17 @@ async function fetchData() {
 
 onMounted(fetchData);
 </script>
-
-<template>
-    <Card class="report-header">
-        <template #content>
-            <div class="header-toolbar">
-                <div class="header-row">
-                    <h2>{{ descriptor }}</h2>
-                </div>
+    <template #content class="report-header">
+        <div style="background-color: #f8fafc;">
+            <div class="header-row">
+                <div class="report-title">{{ descriptor }}</div>
+                <ReportToolbar
+                        :export-formats='["json", "csv"]'
+                        :resource-instance-id="resourceInstanceId"
+                    >
+                </ReportToolbar>
             </div>
-        </template>
+        </div>
         <Message
             v-if="hasLoadingError"
             severity="error"
@@ -103,25 +106,11 @@ onMounted(fetchData);
         >
             {{ $gettext("Unable to fetch resource") }}
         </Message>
-    </Card>
-</template>
-
+    </template>
 <style scoped>
 
-.header-toolbar {
-	min-height: 3rem;
-	height: auto;
-	background: var(--p-header-background);
-	border-bottom: 0.0625rem solid var(--p-header-border);
-	padding-inline-start: 1rem;
-	padding-inline-end: 1rem;
-	padding-top: 0.375rem;
-	padding-bottom: 0.375rem;
-	box-sizing: border-box;
-}
-
 .header-row {
-	display: flex;
+    display: flex;
 	justify-content: space-between;
 	align-items: center;
 	flex-wrap: wrap;
@@ -129,6 +118,7 @@ onMounted(fetchData);
 	row-gap: 0.5rem;
 	padding: 0.2rem 0 0 0;
 	min-width: 0;
+    border-bottom: 0.0625rem solid #d7d7d7;
 }
 
 .report-header {
@@ -140,9 +130,11 @@ onMounted(fetchData);
     box-shadow: unset;
 }
 
-.report-header h2 {
-    font-size: 2rem;
-    margin: 1rem;
+.header-row .report-title {
+    font-size: 2.1rem;
+    font-weight: 600;
+    color: #474747;
+    padding-left: 1rem;
 }
 
 @media print {
