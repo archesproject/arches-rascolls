@@ -161,10 +161,15 @@ class Command(BaseCommand):
 
     def modify_config(self, config, layout):
         self.section_definitions = layout["section_definitions"]
-        for item in config["components"]:
+        toolbar_index = None
+        for index, item in enumerate(config["components"]):
             if item["component"].endswith("ReportHeader"):
                 item["component"] = layout["header"]["component"]
                 item["config"]["descriptor"] = layout["header"]["descriptor"]
             if item["component"].endswith("ReportTabs"):
                 item["config"]["tabs"] = [self.build_tab(tab) for tab in layout["tabs"]]
+            if item["component"].endswith("ReportToolbar"):
+                toolbar_index = index
+        if toolbar_index:
+            del config["components"][toolbar_index]
         return config
