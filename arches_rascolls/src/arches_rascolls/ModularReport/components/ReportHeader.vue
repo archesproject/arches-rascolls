@@ -93,7 +93,7 @@ onMounted(fetchData);
             <div class="header-row">
                 <div class="report-title">{{ descriptor }}</div>
                 <ReportToolbar
-                        :export-formats='["json", "csv"]'
+                        :export-formats='["json", "csv", "json-ld"]'
                         :resource-instance-id="resourceInstanceId"
                     >
                 </ReportToolbar>
