@@ -44,7 +44,7 @@ class Command(BaseCommand):
             default="default",
             help="report slug",
         )
-    
+
         parser.add_argument(
             "-y",
             "--yes",
