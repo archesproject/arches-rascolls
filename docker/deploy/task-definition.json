@@ -18,15 +18,15 @@
             "environment": [
                 {
                     "name": "ARCHES_ES_SECRET_ID",
-                    "value": "prod/arches_rascolls/elastic"
+                    "value": "prod/rascolls-ci/elastic"
                 },
                 {
                     "name": "ARCHES_DB_SECRET_ID",
-                    "value": "archesDbSecretC996653C-9RvtCl4Ud1ud"
+                    "value": "archesDbSecretC996653C-H15qhWG0qSzA"
                 },
                 {
                     "name": "ARCHES_PUBLIC_SERVER_ADDRESS",
-                    "value": "https://arches_rascolls.dev.fargeo.com"
+                    "value": "https://rascolls-ci.usw1.gci.fargeo.com"
                 },
                 {
                     "name": "ARCHES_SECRETS_MODE",
@@ -34,7 +34,7 @@
                 },
                 {
                     "name": "ARCHES_ALLOWED_HOSTS",
-                    "value": "*"
+                    "value": "rascolls-ci.usw1.gci.fargeo.com"
                 },
                 {
                     "name": "ARCHES_ESVALIDATE",
@@ -58,7 +58,7 @@
                 },
                 {
                     "name": "ARCHES_S3BUCKETNAME",
-                    "value": "fargeo-1-arches-rascolls-media-files"
+                    "value": "fargeo-rascolls-ci-media-files"
                 }
             ],
             "healthCheck": {
