@@ -71,7 +71,7 @@
                 "logDriver": "awslogs",
                 "options": {
                     "awslogs-stream-prefix": "arches",
-                    "awslogs-group": "TODO",
+                    "awslogs-group": "rascolls-ci-logs",
                     "awslogs-region": "us-west-1"
                 }
             }
@@ -81,8 +81,8 @@
     "networkMode": "awsvpc",
     "memory": "8192",
     "cpu": "4096",
-    "executionRoleArn": "TODO",
-    "family": "TODO",
-    "taskRoleArn": "TODO",
+    "executionRoleArn": "arn:aws:iam::408807229061:role/arches-execution-role-rascolls-ci",
+    "family": "rascollscibaseinfrastructureesArchesTaskDefinition37367DA1",
+    "taskRoleArn": "arn:aws:iam::408807229061:role/arches-task-role-rascolls-ci",
     "placementConstraints": []
 }
