@@ -154,13 +154,39 @@ reset_database() {
 	echo "----- RESETTING DATABASE -----"
 	echo ""
 	cd ${APP_ROOT}
-	pwd && ../ENV/bin/python --version
-	(test $(echo "SELECT FROM pg_database WHERE datname = 'template_postgis'" | ../ENV/bin/python manage.py dbshell | grep -c "1 row") = 1 || \
-	(echo "CREATE DATABASE template_postgis" | ../ENV/bin/python manage.py dbshell --database postgres && \
-	echo "CREATE EXTENSION postgis" | ../ENV/bin/python manage.py dbshell --database postgres))
+	pwd && ${WEB_ROOT}/ENV/bin/python --version
+	(test $(echo "SELECT FROM pg_database WHERE datname = 'template_postgis'" | ${WEB_ROOT}/ENV/bin/python manage.py dbshell | grep -c "1 row") = 1 || \
+	(echo "CREATE DATABASE template_postgis" | ${WEB_ROOT}/ENV/bin/python manage.py dbshell --database postgres && \
+	echo "CREATE EXTENSION postgis" | ${WEB_ROOT}/ENV/bin/python manage.py dbshell --database postgres))
 	service memcached start&
-	../ENV/bin/python manage.py packages -o load_package -a arches_rascolls -db -dev -y
-	../ENV/bin/python manage.py es reindex_database -mp
+	../ENV/bin/python manage.py packages -o load_package -a arches_rascolls -db -y
+
+	if [ "$FETCH_PRIVATE_DATA" = "true" ]; then
+		echo "Fetching secret from AWS Secrets Manager..."
+		apt-get install 	
+		# Retrieve the secret value using AWS CLI
+		# We use --query to extract the string and --output text for a raw value
+		GITHUB_TOKEN=$(aws secretsmanager get-secret-value \
+			--secret-id "ci/rascolls/load" \
+			--query "SecretString" \
+			--output text | jq -r '.github')
+
+		ADMIN_PW=$(aws secretsmanager get-secret-value \
+			--secret-id "ci/rascolls/load" \
+			--query "SecretString" \
+			--output text | jq -r '.password')
+
+		echo "Cloning private repository..."
+		git clone "https://x-access-token:${GITHUB_TOKEN}@github.com/archesproject/rascolls-data-pkg.git" /tmp/rascolls-data-pkg
+		printf "$ADMIN_PW\n$ADMIN_PW" | ${WEB_ROOT}/ENV/bin/python manage.py changepassword admin
+		${WEB_ROOT}/ENV/bin/python manage.py etl tile-excel-importer -s /tmp/rascolls-data-pkg/Reference_and_Sample_Collection_Item.xlsx
+		${WEB_ROOT}/ENV/bin/python manage.py etl tile-excel-importer -s /tmp/rascolls-data-pkg/Place.xlsx
+		${WEB_ROOT}/ENV/bin/python manage.py etl tile-excel-importer -s /tmp/rascolls-data-pkg/Person.xlsx
+		${WEB_ROOT}/ENV/bin/python manage.py etl tile-excel-importer -s /tmp/rascolls-data-pkg/Group.xlsx
+		${WEB_ROOT}/ENV/bin/python manage.py etl tile-excel-importer -s /tmp/rascolls-data-pkg/Collection_or_Set.xlsx
+	fi
+
+	${WEB_ROOT}/ENV/bin/python manage.py es reindex_database -mp
 }
 
 activate_virtualenv() {

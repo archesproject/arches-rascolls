@@ -28,14 +28,14 @@ COPY --from=base /etc/ssl/private/nginx-selfsigned.key /etc/ssl/private/nginx-se
 COPY --from=base /etc/ssl/certs/nginx-selfsigned.crt /etc/ssl/certs/nginx-selfsigned.crt
 
 RUN chgrp www-data /var/www/media -R
-RUN apt-get update && apt-get install -y make software-properties-common && apt-get install -y ca-certificates curl gnupg nginx vim && apt-add-repository ppa:deadsnakes/ppa && apt-get update
+RUN  apt-add-repository ppa:deadsnakes/ppa && apt-get update && apt-get install -y make software-properties-common jq ca-certificates curl gnupg nginx vim memcached
 
 # Root project folder
 ENV WHEELS=/wheels
 ENV PYTHONUNBUFFERED=1
 
 WORKDIR ${WEB_ROOT}
-
+  
 # Install the Arches application
 # FIXME: ADD from github repository instead?
 
