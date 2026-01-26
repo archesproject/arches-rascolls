@@ -57,10 +57,6 @@ jobs:
           task-definition: arches-rascolls/docker/deploy/task-definition.json
           container-name: arches
           image: ${{ steps.build-image.outputs.image }}
-          log-configuration-options: |
-            awslogs-group=${{ secrets.AWS_ACCESS_KEY_ID }}
-            awslogs-region=us-west-1
-            awslogs-stream-prefix=arches
 
       - name: Fill in the new image ID in the Amazon ECS task definition to reset db
         id: task-def-run-reset
@@ -71,7 +67,7 @@ jobs:
           image: ${{ steps.build-image.outputs.image }}
 
       - name: Deploy Reset Amazon ECS task definition to reset db
-        uses: aws-actions/amazon-ecs-deploy-task-definition@v1
+        uses: aws-actions/amazon-ecs-deploy-task-definition@v2.6.0
         id: task-def-deploy-reset
         with:
           task-definition: ${{ steps.task-def-run-reset.outputs.task-definition }}
@@ -86,7 +82,7 @@ jobs:
           aws ecs run-task --cluster rascolls-ci-cluster --task-definition ${{ steps.task-def-deploy-reset.outputs.task-definition-arn }} --count 1 --launch-type FARGATE --network-configuration "awsvpcConfiguration={subnets=['subnet-0329280e193981720','subnet-058e540e25d6aa20e'],securityGroups=['sg-023374e2170173f29']}"
 
       - name: Deploy Amazon ECS task definition to arches service
-        uses: aws-actions/amazon-ecs-deploy-task-definition@v1
+        uses: aws-actions/amazon-ecs-deploy-task-definition@v2.6.0
         with:
           task-definition: ${{ steps.task-def.outputs.task-definition }}
           service: rascolls-ci-arches-service

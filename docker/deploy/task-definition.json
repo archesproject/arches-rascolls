@@ -71,7 +71,7 @@
                 "logDriver": "awslogs",
                 "options": {
                     "awslogs-stream-prefix": "arches",
-                    "awslogs-group": "rascolls-ci-logs",
+                    "awslogs-group": "rascolls-ci-base-infrastructure-rascollscicontainerloggroupDB677B70-anD150zPxQEM",
                     "awslogs-region": "us-west-1"
                 }
             }
