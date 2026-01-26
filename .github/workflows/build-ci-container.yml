@@ -20,6 +20,11 @@ jobs:
         with:
           path: arches-rascolls
 
+      - name: Debug OIDC Claims
+        uses: github/actions-oidc-debugger@v1
+        with:
+          audience: sts.amazonaws.com
+          
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v5.1.1
         with:
