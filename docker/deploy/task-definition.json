@@ -1,7 +1,5 @@
 {
-    "requiresCompatibilities": [
-        "FARGATE"
-    ],
+    "requiresCompatibilities": ["FARGATE"],
     "inferenceAccelerators": [],
     "containerDefinitions": [
         {
@@ -34,7 +32,7 @@
                 },
                 {
                     "name": "ARCHES_ALLOWED_HOSTS",
-                    "value": "rascolls-ci.usw1.gci.fargeo.com"
+                    "value": "*"
                 },
                 {
                     "name": "ARCHES_ESVALIDATE",

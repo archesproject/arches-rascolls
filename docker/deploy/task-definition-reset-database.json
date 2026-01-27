@@ -1,7 +1,5 @@
 {
-    "requiresCompatibilities": [
-        "FARGATE"
-    ],
+    "requiresCompatibilities": ["FARGATE"],
     "inferenceAccelerators": [],
     "containerDefinitions": [
         {
@@ -21,9 +19,7 @@
                     "test $(echo | ps aux | grep -c manage.py) > 1 || exit 1"
                 ]
             },
-            "command": [
-                "reset_database"
-            ],
+            "command": ["reset_database"],
             "environment": [
                 {
                     "name": "ARCHES_ES_SECRET_ID",
@@ -47,7 +43,7 @@
                 },
                 {
                     "name": "ARCHES_ALLOWED_HOSTS",
-                    "value": "rascolls-ci.usw1.gci.fargeo.com"
+                    "value": "*"
                 },
                 {
                     "name": "ARCHES_ESPROTOCOL",
