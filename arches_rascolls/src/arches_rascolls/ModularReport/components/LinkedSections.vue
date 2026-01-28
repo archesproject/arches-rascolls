@@ -51,7 +51,6 @@ onMounted(async () => {
 
 <template>
     <div class="linked-section-outer-container">
-
         <div class="linked-section-container">
             <Panel
                 v-for="linked_section in linkedSections"
