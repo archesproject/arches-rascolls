@@ -3,7 +3,6 @@ import { computed, inject, onMounted, ref } from "vue";
 import { useGettext } from "vue3-gettext";
 
 import Message from "primevue/message";
-import Card from "primevue/card";
 
 import { fetchNodeTileData } from "@/arches_modular_reports/ModularReport/api.ts";
 import { truncateDisplayData } from "@/arches_modular_reports/ModularReport/utils.ts";
@@ -88,7 +87,7 @@ async function fetchData() {
 
 onMounted(fetchData);
 </script>
-    <template #content class="report-header">
+    <template class="report-header">
         <div style="background-color: #f8fafc;">
             <div class="header-row">
                 <div class="report-title">{{ descriptor }}</div>

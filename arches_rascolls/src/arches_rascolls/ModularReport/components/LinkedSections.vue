@@ -24,30 +24,7 @@ const { component, resourceInstanceId } = defineProps<{
 const { $gettext } = useGettext();
 
 const buttonSectionRef = useTemplateRef<HTMLElement>("buttonSectionRef");
-const linkedSectionsRef = useTemplateRef<HTMLElement[]>("linked_sections");
 const linkedSections = ref<CollapsibleSection[]>([]);
-
-function scrollToSection(linked_section: CollapsibleSection): void {
-    const sectionElement = linkedSectionsRef.value!.find((el) => {
-        const panelRoot = el.closest(".p-panel");
-        const headerText = panelRoot
-            ?.querySelector(".p-panel-header")
-            ?.textContent?.trim();
-        return headerText === linked_section.name;
-    });
-
-    if (sectionElement) {
-        linked_section.collapsed = false;
-
-        const panelRoot = sectionElement.closest(".p-panel") as HTMLElement;
-        if (panelRoot) {
-            panelRoot.scrollIntoView({
-                behavior: "smooth",
-                block: "start",
-            });
-        }
-    }
-}
 
 function backToTop() {
     buttonSectionRef.value?.scrollIntoView({
