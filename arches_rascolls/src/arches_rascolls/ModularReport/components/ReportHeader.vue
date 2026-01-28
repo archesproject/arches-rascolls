@@ -3,12 +3,10 @@ import { computed, inject, onMounted, ref } from "vue";
 import { useGettext } from "vue3-gettext";
 
 import Message from "primevue/message";
-import Card from "primevue/card";
 
 import { fetchNodeTileData } from "@/arches_modular_reports/ModularReport/api.ts";
 import { truncateDisplayData } from "@/arches_modular_reports/ModularReport/utils.ts";
 import ReportToolbar from "@/arches_rascolls/ModularReport/components/ReportToolbar.vue";
-
 
 import type { Ref } from "vue";
 import type {
@@ -42,7 +40,6 @@ const maxTileLimit = computed(() => {
 });
 
 const descriptor = computed(() => {
-    console.log('yo yo!');
     if (!displayDataByAlias.value) {
         return null;
     }
@@ -50,7 +47,6 @@ const descriptor = computed(() => {
     let returnVal = props.component.config.descriptor;
 
     descriptorAliases.value.forEach((alias: string) => {
-        console.log('alias', alias);
         const options = props.component.config.node_alias_options?.[alias];
         const limit = options?.limit ?? 1;
         const separator = options?.separator ?? ", ";
@@ -88,36 +84,35 @@ async function fetchData() {
 
 onMounted(fetchData);
 </script>
-    <template #content class="report-header">
-        <div style="background-color: #f8fafc;">
-            <div class="header-row">
-                <div class="report-title">{{ descriptor }}</div>
-                <ReportToolbar
-                        :export-formats='["json", "csv", "json-ld"]'
-                        :resource-instance-id="resourceInstanceId"
-                    >
-                </ReportToolbar>
-            </div>
+<template class="report-header">
+    <div style="background-color: #f8fafc">
+        <div class="header-row">
+            <div class="report-title">{{ descriptor }}</div>
+            <ReportToolbar
+                :export-formats="['json', 'csv', 'json-ld']"
+                :resource-instance-id="resourceInstanceId"
+            >
+            </ReportToolbar>
         </div>
-        <Message
-            v-if="hasLoadingError"
-            severity="error"
-            style="width: fit-content"
-        >
-            {{ $gettext("Unable to fetch resource") }}
-        </Message>
-    </template>
+    </div>
+    <Message
+        v-if="hasLoadingError"
+        severity="error"
+        style="width: fit-content"
+    >
+        {{ $gettext("Unable to fetch resource") }}
+    </Message>
+</template>
 <style scoped>
-
 .header-row {
     display: flex;
-	justify-content: space-between;
-	align-items: center;
-	flex-wrap: wrap;
-	column-gap: 1rem;
-	row-gap: 0.5rem;
-	padding: 0.2rem 0 0 0;
-	min-width: 0;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 1rem;
+    row-gap: 0.5rem;
+    padding: 0.2rem 0 0 0;
+    min-width: 0;
     border-bottom: 0.0625rem solid #d7d7d7;
 }
 
