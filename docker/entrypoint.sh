@@ -179,7 +179,11 @@ reset_database() {
 		echo "Cloning private repository..."
 		git clone "https://x-access-token:${GITHUB_TOKEN}@github.com/archesproject/rascolls-data-pkg.git" /tmp/rascolls-data-pkg
 		printf "$ADMIN_PW\n$ADMIN_PW" | ${WEB_ROOT}/ENV/bin/python manage.py changepassword admin
-		${WEB_ROOT}/ENV/bin/python manage.py packages -o load_package -s /tmp/rascolls-data-pkg -y
+		${WEB_ROOT}/ENV/bin/python manage.py etl tile-excel-importer -s /tmp/rascolls-data-pkg/Reference_and_Sample_Collection_Item.xlsx
+		${WEB_ROOT}/ENV/bin/python manage.py etl tile-excel-importer -s /tmp/rascolls-data-pkg/Place.xlsx
+		${WEB_ROOT}/ENV/bin/python manage.py etl tile-excel-importer -s /tmp/rascolls-data-pkg/Person.xlsx
+		${WEB_ROOT}/ENV/bin/python manage.py etl tile-excel-importer -s /tmp/rascolls-data-pkg/Group.xlsx
+		${WEB_ROOT}/ENV/bin/python manage.py etl tile-excel-importer -s /tmp/rascolls-data-pkg/Collection_or_Set.xlsx
 	fi
 
 	${WEB_ROOT}/ENV/bin/python manage.py es reindex_database -mp
