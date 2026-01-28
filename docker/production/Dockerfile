@@ -3,7 +3,7 @@ ENV APP_ROOT=${WEB_ROOT}/arches-rascolls
 ENV ARCHES_DJANGO_DEBUG=True
 
 WORKDIR ${WEB_ROOT}
-RUN apt-get update && apt-get install nginx jq -y && ENV/bin/pip install gunicorn botocore boto3 django-storages psutil
+RUN apt-get update && apt-get install nginx -y && ENV/bin/pip install gunicorn botocore boto3 django-storages psutil
 
 RUN openssl ecparam -out /etc/ssl/private/nginx-selfsigned.key -name prime256v1 -genkey && openssl req -x509 -nodes -days 365 -newkey rsa:2048 -key /etc/ssl/private/nginx-selfsigned.key -out /etc/ssl/certs/nginx-selfsigned.crt -subj "/C=US/ST=Denial/L=Springfield/O=Dis/CN=localhost"
 
@@ -28,7 +28,7 @@ COPY --from=base /etc/ssl/private/nginx-selfsigned.key /etc/ssl/private/nginx-se
 COPY --from=base /etc/ssl/certs/nginx-selfsigned.crt /etc/ssl/certs/nginx-selfsigned.crt
 
 RUN chgrp www-data /var/www/media -R
-RUN  apt-add-repository ppa:deadsnakes/ppa && apt-get update && apt-get install -y make software-properties-common ca-certificates curl gnupg nginx vim memcached
+RUN  apt-add-repository ppa:deadsnakes/ppa && apt-get update && apt-get install -y make software-properties-common jq ca-certificates curl gnupg nginx vim memcached
 
 # Root project folder
 ENV WHEELS=/wheels
