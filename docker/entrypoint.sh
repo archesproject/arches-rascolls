@@ -160,6 +160,29 @@ reset_database() {
 	echo "CREATE EXTENSION postgis" | ../ENV/bin/python manage.py dbshell --database postgres))
 	service memcached start&
 	../ENV/bin/python manage.py packages -o load_package -a arches_rascolls -db -dev -y
+
+	if [ "$FETCH_PRIVATE_DATA" = "true" ]; then
+		echo "Fetching secret from AWS Secrets Manager..."
+		apt-get install 	
+		# Retrieve the secret value using AWS CLI
+		# We use --query to extract the string and --output text for a raw value
+		GITHUB_TOKEN=$(aws secretsmanager get-secret-value \
+			--secret-id "ci/rascolls/load" \
+			--query "SecretString" \
+			--output text | jq -r '.github')
+
+		ADMIN_PW=$(aws secretsmanager get-secret-value \
+			--secret-id "ci/rascolls/load" \
+			--query "SecretString" \
+			--output text | jq -r '.password')
+
+		echo "Cloning private repository..."
+		git clone "https://x-access-token:${GITHUB_TOKEN}@github.com/fargeo/rascolls-data-pkg.git" /tmp/rascolls-data-pkg
+		cd /tmp/rascolls-data-pkg
+		printf "$ADMIN_PW\n$ADMIN_PW" | ../ENV/bin/python manage.py changepassword admin
+		../ENV/bin/python manage.py packages -o load_package -s ./ -y
+	fi
+
 	../ENV/bin/python manage.py es reindex_database -mp
 }
 
