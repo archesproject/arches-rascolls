@@ -177,7 +177,7 @@ reset_database() {
 			--output text | jq -r '.password')
 
 		echo "Cloning private repository..."
-		git clone "https://x-access-token:${GITHUB_TOKEN}@github.com/fargeo/rascolls-data-pkg.git" /tmp/rascolls-data-pkg
+		git clone "https://x-access-token:${GITHUB_TOKEN}@github.com/archesproject/rascolls-data-pkg.git" /tmp/rascolls-data-pkg
 		cd /tmp/rascolls-data-pkg
 		printf "$ADMIN_PW\n$ADMIN_PW" | ../ENV/bin/python manage.py changepassword admin
 		../ENV/bin/python manage.py packages -o load_package -s ./ -y
