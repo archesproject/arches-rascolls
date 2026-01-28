@@ -154,12 +154,12 @@ reset_database() {
 	echo "----- RESETTING DATABASE -----"
 	echo ""
 	cd ${APP_ROOT}
-	pwd && ../ENV/bin/python --version
-	(test $(echo "SELECT FROM pg_database WHERE datname = 'template_postgis'" | ../ENV/bin/python manage.py dbshell | grep -c "1 row") = 1 || \
-	(echo "CREATE DATABASE template_postgis" | ../ENV/bin/python manage.py dbshell --database postgres && \
-	echo "CREATE EXTENSION postgis" | ../ENV/bin/python manage.py dbshell --database postgres))
+	pwd && ${WEB_ROOT}/ENV/bin/python --version
+	(test $(echo "SELECT FROM pg_database WHERE datname = 'template_postgis'" | ${WEB_ROOT}/ENV/bin/python manage.py dbshell | grep -c "1 row") = 1 || \
+	(echo "CREATE DATABASE template_postgis" | ${WEB_ROOT}/ENV/bin/python manage.py dbshell --database postgres && \
+	echo "CREATE EXTENSION postgis" | ${WEB_ROOT}/ENV/bin/python manage.py dbshell --database postgres))
 	service memcached start&
-	../ENV/bin/python manage.py packages -o load_package -a arches_rascolls -db -dev -y
+	../ENV/bin/python manage.py packages -o load_package -a arches_rascolls -db -y
 
 	if [ "$FETCH_PRIVATE_DATA" = "true" ]; then
 		echo "Fetching secret from AWS Secrets Manager..."
