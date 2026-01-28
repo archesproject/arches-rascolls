@@ -57,6 +57,10 @@
                 {
                     "name": "ARCHES_S3BUCKETNAME",
                     "value": "fargeo-rascolls-ci-media-files"
+                },
+                {
+                    "name": "ARCHES_SECRET_KEY_ID",
+                    "value": "/prod/rascolls-ci/secret-key"
                 }
             ],
             "healthCheck": {
