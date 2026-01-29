@@ -3,21 +3,10 @@
   "components": [
     {
       "config": {
-        "descriptor": "Reference and Sample Collection Item descriptor template",
+        "descriptor": "<name_content>",
         "node_alias_options": {}
       },
-      "component": "arches_modular_reports/ModularReport/components/ReportHeader"
-    },
-    {
-      "config": {
-        "lists": true,
-        "export_formats": [
-          "csv",
-          "json-ld",
-          "json"
-        ]
-      },
-      "component": "arches_modular_reports/ModularReport/components/ReportToolbar"
+      "component": "arches_rascolls/ModularReport/components/ReportHeader"
     },
     {
       "config": {
@@ -31,16 +20,17 @@
       "config": {
         "tabs": [
           {
-            "name": "Data",
+            "name": "Full",
             "components": [
               {
                 "config": {
                   "sections": [
                     {
-                      "name": "Name of Object",
+                      "name": "General",
                       "components": [
                         {
                           "config": {
+                            "filters": [],
                             "node_aliases": [
                               "name_content",
                               "name_type_",
@@ -48,535 +38,480 @@
                             ],
                             "custom_labels": {},
                             "nodegroup_alias": "name",
-                            "custom_card_name": null
+                            "custom_card_name": "Common name, Additional names"
                           },
                           "component": "arches_modular_reports/ModularReport/components/DataSection"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Statement or Interpretation about Object",
-                      "components": [
+                        },
                         {
                           "config": {
+                            "filters": [],
                             "node_aliases": [
-                              "statement_content",
-                              "statement_type",
-                              "statement_type_metatype",
-                              "statement_language_"
+                              "material"
+                            ],
+                            "custom_labels": {},
+                            "nodegroup_alias": "material",
+                            "custom_card_name": "Sample Type"
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        },
+                        {
+                          "config": {
+                            "filters": [],
+                            "node_aliases": [
+                              "statement_content"
                             ],
                             "custom_labels": {},
                             "nodegroup_alias": "statement",
-                            "custom_card_name": null
+                            "custom_card_name": "Physical Form"
                           },
                           "component": "arches_modular_reports/ModularReport/components/DataSection"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Type of Mixture",
-                      "components": [
+                        },
                         {
                           "config": {
+                            "filters": [],
                             "node_aliases": [
-                              "mixture_type",
-                              "mixture_type_metatype"
+                              "color_type"
                             ],
                             "custom_labels": {},
-                            "nodegroup_alias": "mixture_type",
-                            "custom_card_name": null
+                            "nodegroup_alias": "has_color",
+                            "custom_card_name": "Color"
                           },
                           "component": "arches_modular_reports/ModularReport/components/DataSection"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Type of Object",
-                      "components": [
+                        },
                         {
                           "config": {
+                            "filters": [],
+                            "node_aliases": [],
+                            "custom_labels": {},
+                            "nodegroup_alias": "",
+                            "custom_card_name": "Color Index (NOT MAPPED)"
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        },
+                        {
+                          "config": {
+                            "filters": [],
                             "node_aliases": [
-                              "object_type"
+                              "production_time_begin_of_the_begin"
                             ],
                             "custom_labels": {},
-                            "nodegroup_alias": "object_type",
-                            "custom_card_name": null
+                            "nodegroup_alias": "production_time",
+                            "custom_card_name": "Origination date"
                           },
                           "component": "arches_modular_reports/ModularReport/components/DataSection"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Attribute Type",
-                      "components": [
+                        },
                         {
                           "config": {
-                            "node_aliases": [
-                              "attribute_type",
-                              "attribute_type_metatype"
+                            "filters": [
+                              {
+                                "alias": "identifier_type",
+                                "value": "5b7771f0-ec01-4d87-bac4-0efbafe5a802",
+                                "field_lookup": "0__uri__icontains"
+                              }
                             ],
-                            "custom_labels": {},
-                            "nodegroup_alias": "attribute_type",
-                            "custom_card_name": null
-                          },
-                          "component": "arches_modular_reports/ModularReport/components/DataSection"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Identifier of Object",
-                      "components": [
-                        {
-                          "config": {
                             "node_aliases": [
                               "identifier_content",
                               "identifier_type"
                             ],
                             "custom_labels": {},
                             "nodegroup_alias": "identifier",
-                            "custom_card_name": null
+                            "custom_card_name": "Barcode"
                           },
                           "component": "arches_modular_reports/ModularReport/components/DataSection"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Dimension of Object",
-                      "components": [
+                        },
                         {
                           "config": {
+                            "filters": [
+                              {
+                                "alias": "identifier_type",
+                                "value": "1c32efcd-999c-4b07-9b1f-df8279755bb8",
+                                "field_lookup": "0__uri__icontains"
+                              }
+                            ],
                             "node_aliases": [
-                              "dimension_type_",
-                              "dimension_value_",
-                              "dimension_lowest_possible_value",
-                              "dimension_highest_possible_value",
-                              "dimension_unit"
+                              "identifier_content",
+                              "identifier_type"
                             ],
                             "custom_labels": {},
-                            "nodegroup_alias": "dimension",
-                            "custom_card_name": null
+                            "nodegroup_alias": "identifier",
+                            "custom_card_name": "Old Barcode"
                           },
                           "component": "arches_modular_reports/ModularReport/components/DataSection"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Material(s) of Object",
-                      "components": [
+                        },
                         {
                           "config": {
-                            "node_aliases": [
-                              "material"
-                            ],
-                            "custom_labels": {},
-                            "nodegroup_alias": "material",
-                            "custom_card_name": null
-                          },
-                          "component": "arches_modular_reports/ModularReport/components/DataSection"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Parent Object",
-                      "components": [
-                        {
-                          "config": {
-                            "node_aliases": [
-                              "part_of"
-                            ],
-                            "custom_labels": {},
-                            "nodegroup_alias": "part_of",
-                            "custom_card_name": null
-                          },
-                          "component": "arches_modular_reports/ModularReport/components/DataSection"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Parts of Object",
-                      "components": [
-                        {
-                          "config": {
-                            "node_aliases": [
-                              "part_identifier_assignment_label",
-                              "part_identifier_assignment_physical_part_of_object",
-                              "part_identifier_assignment_annotator"
-                            ],
-                            "custom_labels": {},
-                            "nodegroup_alias": "part_identifier_assignment",
-                            "custom_card_name": null
-                          },
-                          "component": "arches_modular_reports/ModularReport/components/DataSection"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Collection Object is Part of ",
-                      "components": [
-                        {
-                          "config": {
-                            "node_aliases": [
-                              "member_of"
-                            ],
-                            "custom_labels": {},
-                            "nodegroup_alias": "member_of",
-                            "custom_card_name": null
-                          },
-                          "component": "arches_modular_reports/ModularReport/components/DataSection"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Textual Reference",
-                      "components": [
-                        {
-                          "config": {
-                            "node_aliases": [
-                              "textual_source",
-                              "textual_reference_type"
-                            ],
-                            "custom_labels": {},
-                            "nodegroup_alias": "textual_reference",
-                            "custom_card_name": null
-                          },
-                          "component": "arches_modular_reports/ModularReport/components/DataSection"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Label of Object",
-                      "components": [
-                        {
-                          "config": {
-                            "node_aliases": [
-                              "_label"
-                            ],
-                            "custom_labels": {},
-                            "nodegroup_alias": "_label",
-                            "custom_card_name": null
-                          },
-                          "component": "arches_modular_reports/ModularReport/components/DataSection"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Text Carried by Object",
-                      "components": [
-                        {
-                          "config": {
-                            "node_aliases": [
-                              "carries"
-                            ],
-                            "custom_labels": {},
-                            "nodegroup_alias": "carries",
-                            "custom_card_name": null
-                          },
-                          "component": "arches_modular_reports/ModularReport/components/DataSection"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Current Owner of Object",
-                      "components": [
-                        {
-                          "config": {
-                            "node_aliases": [
-                              "current_owner"
-                            ],
-                            "custom_labels": {},
-                            "nodegroup_alias": "current_owner",
-                            "custom_card_name": null
-                          },
-                          "component": "arches_modular_reports/ModularReport/components/DataSection"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Current Location of Object",
-                      "components": [
-                        {
-                          "config": {
+                            "filters": [],
                             "node_aliases": [
                               "current_location"
                             ],
                             "custom_labels": {},
                             "nodegroup_alias": "current_location",
-                            "custom_card_name": null
+                            "custom_card_name": "Grid location (current location)"
                           },
                           "component": "arches_modular_reports/ModularReport/components/DataSection"
                         }
                       ]
                     },
                     {
-                      "name": "Production Event of Object",
+                      "name": "Acquisition",
                       "components": [
                         {
                           "config": {
+                            "filters": [],
                             "node_aliases": [
-                              "production_type",
-                              "production_carried_out_by",
-                              "production_location",
-                              "production_used_object",
-                              "production_technique"
+                              "production_carried_out_by"
                             ],
                             "custom_labels": {},
                             "nodegroup_alias": "production_",
-                            "custom_card_name": null
+                            "custom_card_name": "Manufacturer (adg - part of production?)"
                           },
                           "component": "arches_modular_reports/ModularReport/components/DataSection"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Destruction Event of Object",
-                      "components": [
+                        },
                         {
                           "config": {
+                            "filters": [
+                              {
+                                "alias": "identifier_type",
+                                "value": "cf1011fb-f600-47aa-8fc8-fde647f962b7",
+                                "field_lookup": "0__uri__icontains"
+                              }
+                            ],
                             "node_aliases": [
-                              "destruction_location_",
-                              "destruction_type_"
+                              "identifier_content",
+                              "identifier_type"
                             ],
                             "custom_labels": {},
-                            "nodegroup_alias": "destruction",
-                            "custom_card_name": null
+                            "nodegroup_alias": "identifier",
+                            "custom_card_name": "Catalog Number (adg - identifier in separate nodegroup)"
                           },
                           "component": "arches_modular_reports/ModularReport/components/DataSection"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Part Removal Event of Object",
-                      "components": [
+                        },
                         {
                           "config": {
+                            "filters": [],
+                            "node_aliases": [],
+                            "custom_labels": {},
+                            "nodegroup_alias": "",
+                            "custom_card_name": "Acquisition date (adg - not visible?)"
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        },
+                        {
+                          "config": {
+                            "filters": [],
                             "node_aliases": [
-                              "removal_from_object_removed_from",
-                              "removal_from_object_carried_out_by",
-                              "removal_from_object_technique",
-                              "removal_from_object_location"
+                              "production_location_geo"
                             ],
                             "custom_labels": {},
-                            "nodegroup_alias": "removal_from_object",
-                            "custom_card_name": null
+                            "nodegroup_alias": "production_location",
+                            "custom_card_name": "Geographic origin (adg - part of production?)"
                           },
                           "component": "arches_modular_reports/ModularReport/components/DataSection"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Addition Event of Object to Collection",
-                      "components": [
+                        },
                         {
                           "config": {
+                            "filters": [],
                             "node_aliases": [
-                              "addition_to_collection_added_to",
-                              "addition_to_collection_type",
-                              "addition_to_collection_carried_out_by"
+                              "acquisition_carried_out_by",
+                              "acquisition_transferred_title_to"
                             ],
                             "custom_labels": {},
-                            "nodegroup_alias": "addition_to_collection",
-                            "custom_card_name": null
+                            "nodegroup_alias": "acquisition",
+                            "custom_card_name": "Acquired by"
                           },
                           "component": "arches_modular_reports/ModularReport/components/DataSection"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "General Safety Classification",
-                      "components": [
+                        },
                         {
                           "config": {
+                            "filters": [],
                             "node_aliases": [
-                              "general_safety_classification_hold_for",
-                              "general_safety_classification_type"
+                              "acquisition_transferred_title_from"
                             ],
                             "custom_labels": {},
-                            "nodegroup_alias": "general_safety_classification",
-                            "custom_card_name": null
+                            "nodegroup_alias": "acquisition",
+                            "custom_card_name": "Acquired from"
                           },
                           "component": "arches_modular_reports/ModularReport/components/DataSection"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Removal Event of Object from Collection",
-                      "components": [
+                        },
                         {
                           "config": {
+                            "filters": [],
+                            "node_aliases": [],
+                            "custom_labels": {},
+                            "nodegroup_alias": "",
+                            "custom_card_name": "Contact Name (through resource supporting not supported)"
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        },
+                        {
+                          "config": {
+                            "filters": [],
+                            "node_aliases": [],
+                            "custom_labels": {},
+                            "nodegroup_alias": "",
+                            "custom_card_name": "Phone number (through resource supporting not supported)"
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        },
+                        {
+                          "config": {
+                            "filters": [],
+                            "node_aliases": [],
+                            "custom_labels": {},
+                            "nodegroup_alias": "",
+                            "custom_card_name": "Email (through resource supporting not supported)"
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        },
+                        {
+                          "config": {
+                            "filters": [],
                             "node_aliases": [
-                              "removal_from_set_removed_from",
-                              "removal_from_set_type",
-                              "removal_from_set_carried_out_by"
+                              "part_of"
                             ],
                             "custom_labels": {},
-                            "nodegroup_alias": "removal_from_set",
-                            "custom_card_name": null
+                            "nodegroup_alias": "part_of",
+                            "custom_card_name": "Part of a collection"
                           },
                           "component": "arches_modular_reports/ModularReport/components/DataSection"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Health Safety Classification",
-                      "components": [
+                        },
                         {
                           "config": {
+                            "filters": [],
                             "node_aliases": [
-                              "health_safety_classification_hold_for",
-                              "health_safety_classification_type"
+                              "member_of"
                             ],
                             "custom_labels": {},
-                            "nodegroup_alias": "health_safety_classification",
-                            "custom_card_name": null
+                            "nodegroup_alias": "member_of",
+                            "custom_card_name": "Collection name"
                           },
                           "component": "arches_modular_reports/ModularReport/components/DataSection"
                         }
                       ]
                     },
                     {
-                      "name": "Reactivity Safety Classification",
+                      "name": "Chemical",
                       "components": [
                         {
                           "config": {
+                            "filters": [],
                             "node_aliases": [
-                              "reactivity_safety_classification_hold_for",
-                              "reactivity_safety_classification_type"
+                              "material_data_assignment_name_content_n1"
                             ],
                             "custom_labels": {},
-                            "nodegroup_alias": "reactivity_safety_classification",
-                            "custom_card_name": null
+                            "nodegroup_alias": "material_data_assignment_name_n1",
+                            "custom_card_name": "Chemical name"
                           },
                           "component": "arches_modular_reports/ModularReport/components/DataSection"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Fire Safety Classification",
-                      "components": [
+                        },
                         {
                           "config": {
+                            "filters": [],
                             "node_aliases": [
-                              "fire_safety_classification_hold_for",
-                              "fire_safety_classification_type"
+                              "chemical_material_name_content"
                             ],
                             "custom_labels": {},
-                            "nodegroup_alias": "fire_safety_classification",
-                            "custom_card_name": null
+                            "nodegroup_alias": "chemical_material_name",
+                            "custom_card_name": "Chemical formula"
                           },
                           "component": "arches_modular_reports/ModularReport/components/DataSection"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Digital Reference to Object",
-                      "components": [
+                        },
                         {
                           "config": {
+                            "filters": [],
                             "node_aliases": [
-                              "digital_source",
-                              "digital_reference_type"
+                              "chemical_material_identifier_content"
                             ],
                             "custom_labels": {},
-                            "nodegroup_alias": "digital_reference",
-                            "custom_card_name": null
+                            "nodegroup_alias": "chemical_material_identifier",
+                            "custom_card_name": "CAS number"
                           },
                           "component": "arches_modular_reports/ModularReport/components/DataSection"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "External URI for Object",
-                      "components": [
+                        },
                         {
                           "config": {
+                            "filters": [],
+                            "node_aliases": [],
+                            "custom_labels": {},
+                            "nodegroup_alias": "",
+                            "custom_card_name": "Mass or volume (adg - NOT MAPPED)"
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        },
+                        {
+                          "config": {
+                            "filters": [],
+                            "node_aliases": [],
+                            "custom_labels": {},
+                            "nodegroup_alias": "",
+                            "custom_card_name": "Compound type  (adg - NOT MAPPED)"
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        },
+                        {
+                          "config": {
+                            "filters": [],
                             "node_aliases": [
-                              "exactmatch"
+                              "attribute_type"
                             ],
                             "custom_labels": {},
-                            "nodegroup_alias": "exactmatch",
-                            "custom_card_name": null
+                            "nodegroup_alias": "attribute_type",
+                            "custom_card_name": "Natural/Synthetic (adg - mapped to attribute type, but attribute not restricted to this property)"
                           },
                           "component": "arches_modular_reports/ModularReport/components/DataSection"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Depicted by Object",
-                      "components": [
+                        },
                         {
                           "config": {
-                            "node_aliases": [
-                              "depicts"
-                            ],
+                            "filters": [],
+                            "node_aliases": [],
                             "custom_labels": {},
-                            "nodegroup_alias": "depicts",
-                            "custom_card_name": null
+                            "nodegroup_alias": "",
+                            "custom_card_name": "Preparation (adg - NOT MAPPED)"
                           },
                           "component": "arches_modular_reports/ModularReport/components/DataSection"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Type of Standard",
-                      "components": [
+                        },
                         {
                           "config": {
+                            "filters": [],
                             "node_aliases": [
                               "standard_type"
                             ],
                             "custom_labels": {},
                             "nodegroup_alias": "standard_type",
-                            "custom_card_name": null
+                            "custom_card_name": "Certified standard (adg - not mapped in mappings/restricted to this property, but using standard type"
                           },
                           "component": "arches_modular_reports/ModularReport/components/DataSection"
                         }
                       ]
                     },
                     {
-                      "name": "has_part",
+                      "name": "Health and Safety",
                       "components": [
                         {
                           "config": {
+                            "filters": [
+                              {
+                                "alias": "safety_classification_source_reference_type",
+                                "value": "04d31848-6945-478c-8ea6-f2d0814c0aee",
+                                "field_lookup": "0__uri__icontains"
+                              }
+                            ],
                             "node_aliases": [
-                              "part_type"
+                              "safety_classification_source_reference"
                             ],
                             "custom_labels": {},
-                            "nodegroup_alias": "has_part",
-                            "custom_card_name": null
+                            "nodegroup_alias": "safety_classification_reference",
+                            "custom_card_name": "MSDS"
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        },
+                        {
+                          "config": {
+                            "filters": [],
+                            "node_aliases": [
+                              "nfpa_safety_classification_type"
+                            ],
+                            "custom_labels": {},
+                            "nodegroup_alias": "nfpa_safety_classification",
+                            "custom_card_name": "NFPA information"
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        },
+                        {
+                          "config": {
+                            "filters": [],
+                            "node_aliases": [
+                              "ghs_safety_classification_type"
+                            ],
+                            "custom_labels": {},
+                            "nodegroup_alias": "ghs_safety_classification",
+                            "custom_card_name": "GHS information"
                           },
                           "component": "arches_modular_reports/ModularReport/components/DataSection"
                         }
                       ]
                     },
                     {
-                      "name": "Search Facet",
+                      "name": "Mixture",
                       "components": [
                         {
                           "config": {
+                            "filters": [],
                             "node_aliases": [
-                              "facet_type"
+                              "mixture_type"
                             ],
                             "custom_labels": {},
-                            "nodegroup_alias": "facet_type",
-                            "custom_card_name": null
+                            "nodegroup_alias": "mixture_type",
+                            "custom_card_name": "Mixture type"
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        },
+                        {
+                          "config": {
+                            "filters": [],
+                            "node_aliases": [
+                              "part_name_content",
+                              "part_name_type"
+                            ],
+                            "custom_labels": {},
+                            "nodegroup_alias": "part_name",
+                            "custom_card_name": "Components"
                           },
                           "component": "arches_modular_reports/ModularReport/components/DataSection"
                         }
                       ]
                     },
                     {
-                      "name": "Color",
+                      "name": "Additional",
                       "components": [
                         {
                           "config": {
+                            "filters": [
+                              {
+                                "alias": "statement_type",
+                                "value": "aat/300027200",
+                                "field_lookup": "0__uri__icontains"
+                              }
+                            ],
                             "node_aliases": [
-                              "color_value",
-                              "color_label",
-                              "color_source"
+                              "statement_content"
                             ],
                             "custom_labels": {},
-                            "nodegroup_alias": "has_color",
-                            "custom_card_name": null
+                            "nodegroup_alias": "statement",
+                            "custom_card_name": "Notes"
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        },
+                        {
+                          "config": {
+                            "filters": [
+                              {
+                                "alias": "statement_type",
+                                "value": "1ad601d9-219b-4edb-abeb-61b76671c6e6",
+                                "field_lookup": "0__uri__icontains"
+                              }
+                            ],
+                            "node_aliases": [
+                              "statement_content"
+                            ],
+                            "custom_labels": {},
+                            "nodegroup_alias": "statement",
+                            "custom_card_name": "Experiments on sample"
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Available",
+                      "components": [
+                        {
+                          "config": {
+                            "filters": [],
+                            "node_aliases": [],
+                            "custom_labels": {},
+                            "nodegroup_alias": "",
+                            "custom_card_name": "Any analysis info/links/references (?)"
                           },
                           "component": "arches_modular_reports/ModularReport/components/DataSection"
                         }
@@ -584,214 +519,481 @@
                     }
                   ]
                 },
-                "component": "arches_modular_reports/ModularReport/components/LinkedSections"
+                "component": "arches_rascolls/ModularReport/components/LinkedSections"
               }
             ]
           },
           {
-            "name": "Related Resources",
+            "name": "Analysis",
             "components": [
               {
                 "config": {
                   "sections": [
                     {
-                      "name": "Sampling Activity",
+                      "name": "General",
                       "components": [
                         {
                           "config": {
-                            "graph_slug": "sampling_activity_1",
-                            "node_aliases": [],
-                            "custom_labels": {}
+                            "filters": [],
+                            "node_aliases": [
+                              "name_content",
+                              "name_type_",
+                              "name_language_"
+                            ],
+                            "custom_labels": {},
+                            "nodegroup_alias": "name",
+                            "custom_card_name": "Common name, Additional names"
                           },
-                          "component": "arches_modular_reports/ModularReport/components/RelatedResourcesSection"
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        },
+                        {
+                          "config": {
+                            "filters": [],
+                            "node_aliases": [
+                              "material"
+                            ],
+                            "custom_labels": {},
+                            "nodegroup_alias": "material",
+                            "custom_card_name": "Sample Type"
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        },
+                        {
+                          "config": {
+                            "filters": [],
+                            "node_aliases": [
+                              "statement_content"
+                            ],
+                            "custom_labels": {},
+                            "nodegroup_alias": "statement",
+                            "custom_card_name": "Physical Form"
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        },
+                        {
+                          "config": {
+                            "filters": [],
+                            "node_aliases": [
+                              "color_type"
+                            ],
+                            "custom_labels": {},
+                            "nodegroup_alias": "has_color",
+                            "custom_card_name": "Color"
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        },
+                        {
+                          "config": {
+                            "filters": [],
+                            "node_aliases": [],
+                            "custom_labels": {},
+                            "nodegroup_alias": "",
+                            "custom_card_name": "Color Index (NOT MAPPED)"
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        },
+                        {
+                          "config": {
+                            "filters": [],
+                            "node_aliases": [
+                              "production_time_begin_of_the_begin"
+                            ],
+                            "custom_labels": {},
+                            "nodegroup_alias": "production_time",
+                            "custom_card_name": "Origination date"
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        },
+                        {
+                          "config": {
+                            "filters": [
+                              {
+                                "alias": "identifier_type",
+                                "value": "5b7771f0-ec01-4d87-bac4-0efbafe5a802",
+                                "field_lookup": "0__uri__icontains"
+                              }
+                            ],
+                            "node_aliases": [
+                              "identifier_content",
+                              "identifier_type"
+                            ],
+                            "custom_labels": {},
+                            "nodegroup_alias": "identifier",
+                            "custom_card_name": "Barcode"
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        },
+                        {
+                          "config": {
+                            "filters": [
+                              {
+                                "alias": "identifier_type",
+                                "value": "1c32efcd-999c-4b07-9b1f-df8279755bb8",
+                                "field_lookup": "0__uri__icontains"
+                              }
+                            ],
+                            "node_aliases": [
+                              "identifier_content",
+                              "identifier_type"
+                            ],
+                            "custom_labels": {},
+                            "nodegroup_alias": "identifier",
+                            "custom_card_name": "Old Barcode"
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        },
+                        {
+                          "config": {
+                            "filters": [],
+                            "node_aliases": [
+                              "current_location"
+                            ],
+                            "custom_labels": {},
+                            "nodegroup_alias": "current_location",
+                            "custom_card_name": "Grid location (current location)"
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
                         }
                       ]
                     },
                     {
-                      "name": "Period",
+                      "name": "Chemical",
                       "components": [
                         {
                           "config": {
-                            "graph_slug": "period_1",
-                            "node_aliases": [],
-                            "custom_labels": {}
+                            "filters": [],
+                            "node_aliases": [
+                              "material_data_assignment_name_content_n1"
+                            ],
+                            "custom_labels": {},
+                            "nodegroup_alias": "material_data_assignment_name_n1",
+                            "custom_card_name": "Chemical name"
                           },
-                          "component": "arches_modular_reports/ModularReport/components/RelatedResourcesSection"
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        },
+                        {
+                          "config": {
+                            "filters": [],
+                            "node_aliases": [
+                              "chemical_material_name_content"
+                            ],
+                            "custom_labels": {},
+                            "nodegroup_alias": "chemical_material_name",
+                            "custom_card_name": "Chemical formula"
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        },
+                        {
+                          "config": {
+                            "filters": [],
+                            "node_aliases": [
+                              "chemical_material_identifier_content"
+                            ],
+                            "custom_labels": {},
+                            "nodegroup_alias": "chemical_material_identifier",
+                            "custom_card_name": "CAS number"
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        },
+                        {
+                          "config": {
+                            "filters": [],
+                            "node_aliases": [],
+                            "custom_labels": {},
+                            "nodegroup_alias": "",
+                            "custom_card_name": "Mass or volume (adg - NOT MAPPED)"
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        },
+                        {
+                          "config": {
+                            "filters": [],
+                            "node_aliases": [],
+                            "custom_labels": {},
+                            "nodegroup_alias": "",
+                            "custom_card_name": "Compound type  (adg - NOT MAPPED)"
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        },
+                        {
+                          "config": {
+                            "filters": [],
+                            "node_aliases": [
+                              "attribute_type"
+                            ],
+                            "custom_labels": {},
+                            "nodegroup_alias": "attribute_type",
+                            "custom_card_name": "Natural/Synthetic (adg - mapped to attribute type, but attribute not restricted to this property)"
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        },
+                        {
+                          "config": {
+                            "filters": [],
+                            "node_aliases": [],
+                            "custom_labels": {},
+                            "nodegroup_alias": "",
+                            "custom_card_name": "Preparation (adg - NOT MAPPED)"
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        },
+                        {
+                          "config": {
+                            "filters": [],
+                            "node_aliases": [
+                              "standard_type"
+                            ],
+                            "custom_labels": {},
+                            "nodegroup_alias": "standard_type",
+                            "custom_card_name": "Certified standard (adg - not mapped in mappings/restricted to this property, but using standard type"
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
                         }
                       ]
                     },
                     {
-                      "name": "Visual Work",
+                      "name": "Mixture",
                       "components": [
                         {
                           "config": {
-                            "graph_slug": "visual_work_1",
-                            "node_aliases": [],
-                            "custom_labels": {}
+                            "filters": [],
+                            "node_aliases": [
+                              "mixture_type"
+                            ],
+                            "custom_labels": {},
+                            "nodegroup_alias": "mixture_type",
+                            "custom_card_name": "Mixture type"
                           },
-                          "component": "arches_modular_reports/ModularReport/components/RelatedResourcesSection"
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        },
+                        {
+                          "config": {
+                            "filters": [],
+                            "node_aliases": [
+                              "part_name_content",
+                              "part_name_type"
+                            ],
+                            "custom_labels": {},
+                            "nodegroup_alias": "part_name",
+                            "custom_card_name": "Components"
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
                         }
                       ]
                     },
                     {
-                      "name": "Place",
+                      "name": "Additional",
                       "components": [
                         {
                           "config": {
-                            "graph_slug": "place_1",
-                            "node_aliases": [],
-                            "custom_labels": {}
+                            "filters": [
+                              {
+                                "alias": "statement_type",
+                                "value": "aat/300027200",
+                                "field_lookup": "0__uri__icontains"
+                              }
+                            ],
+                            "node_aliases": [
+                              "statement_content"
+                            ],
+                            "custom_labels": {},
+                            "nodegroup_alias": "statement",
+                            "custom_card_name": "Notes"
                           },
-                          "component": "arches_modular_reports/ModularReport/components/RelatedResourcesSection"
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        },
+                        {
+                          "config": {
+                            "filters": [
+                              {
+                                "alias": "statement_type",
+                                "value": "1ad601d9-219b-4edb-abeb-61b76671c6e6",
+                                "field_lookup": "0__uri__icontains"
+                              }
+                            ],
+                            "node_aliases": [
+                              "statement_content"
+                            ],
+                            "custom_labels": {},
+                            "nodegroup_alias": "statement",
+                            "custom_card_name": "Experiments on sample"
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
                         }
                       ]
                     },
                     {
-                      "name": "Group ",
+                      "name": "Available",
                       "components": [
                         {
                           "config": {
-                            "graph_slug": "group_1",
+                            "filters": [],
                             "node_aliases": [],
-                            "custom_labels": {}
+                            "custom_labels": {},
+                            "nodegroup_alias": "",
+                            "custom_card_name": "Any analysis info/links/references (?)"
                           },
-                          "component": "arches_modular_reports/ModularReport/components/RelatedResourcesSection"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Instrument",
-                      "components": [
-                        {
-                          "config": {
-                            "graph_slug": "instrument_1",
-                            "node_aliases": [],
-                            "custom_labels": {}
-                          },
-                          "component": "arches_modular_reports/ModularReport/components/RelatedResourcesSection"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Digital Resources",
-                      "components": [
-                        {
-                          "config": {
-                            "graph_slug": "digital_resources_1",
-                            "node_aliases": [],
-                            "custom_labels": {}
-                          },
-                          "component": "arches_modular_reports/ModularReport/components/RelatedResourcesSection"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Textual Work",
-                      "components": [
-                        {
-                          "config": {
-                            "graph_slug": "textual_work_1",
-                            "node_aliases": [],
-                            "custom_labels": {}
-                          },
-                          "component": "arches_modular_reports/ModularReport/components/RelatedResourcesSection"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Project",
-                      "components": [
-                        {
-                          "config": {
-                            "graph_slug": "project_1",
-                            "node_aliases": [],
-                            "custom_labels": {}
-                          },
-                          "component": "arches_modular_reports/ModularReport/components/RelatedResourcesSection"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Provenance Activity",
-                      "components": [
-                        {
-                          "config": {
-                            "graph_slug": "provenance_activity_1",
-                            "node_aliases": [],
-                            "custom_labels": {}
-                          },
-                          "component": "arches_modular_reports/ModularReport/components/RelatedResourcesSection"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Observation",
-                      "components": [
-                        {
-                          "config": {
-                            "graph_slug": "observation_1",
-                            "node_aliases": [],
-                            "custom_labels": {}
-                          },
-                          "component": "arches_modular_reports/ModularReport/components/RelatedResourcesSection"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Modification",
-                      "components": [
-                        {
-                          "config": {
-                            "graph_slug": "modification_1",
-                            "node_aliases": [],
-                            "custom_labels": {}
-                          },
-                          "component": "arches_modular_reports/ModularReport/components/RelatedResourcesSection"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Person",
-                      "components": [
-                        {
-                          "config": {
-                            "graph_slug": "person_1",
-                            "node_aliases": [],
-                            "custom_labels": {}
-                          },
-                          "component": "arches_modular_reports/ModularReport/components/RelatedResourcesSection"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Collection or Set",
-                      "components": [
-                        {
-                          "config": {
-                            "graph_slug": "collection_or_set_1",
-                            "node_aliases": [],
-                            "custom_labels": {}
-                          },
-                          "component": "arches_modular_reports/ModularReport/components/RelatedResourcesSection"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Reference and Sample Collection Item",
-                      "components": [
-                        {
-                          "config": {
-                            "graph_slug": "reference_and_sample_collection_item_1",
-                            "node_aliases": [],
-                            "custom_labels": {}
-                          },
-                          "component": "arches_modular_reports/ModularReport/components/RelatedResourcesSection"
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
                         }
                       ]
                     }
                   ]
                 },
-                "component": "arches_modular_reports/ModularReport/components/LinkedSections"
+                "component": "arches_rascolls/ModularReport/components/LinkedSections"
+              }
+            ]
+          },
+          {
+            "name": "Chemical and Safety",
+            "components": [
+              {
+                "config": {
+                  "sections": [
+                    {
+                      "name": "Chemical",
+                      "components": [
+                        {
+                          "config": {
+                            "filters": [],
+                            "node_aliases": [
+                              "material_data_assignment_name_content_n1"
+                            ],
+                            "custom_labels": {},
+                            "nodegroup_alias": "material_data_assignment_name_n1",
+                            "custom_card_name": "Chemical name"
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        },
+                        {
+                          "config": {
+                            "filters": [],
+                            "node_aliases": [
+                              "chemical_material_name_content"
+                            ],
+                            "custom_labels": {},
+                            "nodegroup_alias": "chemical_material_name",
+                            "custom_card_name": "Chemical formula"
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        },
+                        {
+                          "config": {
+                            "filters": [],
+                            "node_aliases": [
+                              "chemical_material_identifier_content"
+                            ],
+                            "custom_labels": {},
+                            "nodegroup_alias": "chemical_material_identifier",
+                            "custom_card_name": "CAS number"
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        },
+                        {
+                          "config": {
+                            "filters": [],
+                            "node_aliases": [],
+                            "custom_labels": {},
+                            "nodegroup_alias": "",
+                            "custom_card_name": "Mass or volume (adg - NOT MAPPED)"
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        },
+                        {
+                          "config": {
+                            "filters": [],
+                            "node_aliases": [],
+                            "custom_labels": {},
+                            "nodegroup_alias": "",
+                            "custom_card_name": "Compound type  (adg - NOT MAPPED)"
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        },
+                        {
+                          "config": {
+                            "filters": [],
+                            "node_aliases": [
+                              "attribute_type"
+                            ],
+                            "custom_labels": {},
+                            "nodegroup_alias": "attribute_type",
+                            "custom_card_name": "Natural/Synthetic (adg - mapped to attribute type, but attribute not restricted to this property)"
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        },
+                        {
+                          "config": {
+                            "filters": [],
+                            "node_aliases": [],
+                            "custom_labels": {},
+                            "nodegroup_alias": "",
+                            "custom_card_name": "Preparation (adg - NOT MAPPED)"
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        },
+                        {
+                          "config": {
+                            "filters": [],
+                            "node_aliases": [
+                              "standard_type"
+                            ],
+                            "custom_labels": {},
+                            "nodegroup_alias": "standard_type",
+                            "custom_card_name": "Certified standard (adg - not mapped in mappings/restricted to this property, but using standard type"
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Health and Safety",
+                      "components": [
+                        {
+                          "config": {
+                            "filters": [
+                              {
+                                "alias": "safety_classification_source_reference_type",
+                                "value": "04d31848-6945-478c-8ea6-f2d0814c0aee",
+                                "field_lookup": "0__uri__icontains"
+                              }
+                            ],
+                            "node_aliases": [
+                              "safety_classification_source_reference"
+                            ],
+                            "custom_labels": {},
+                            "nodegroup_alias": "safety_classification_reference",
+                            "custom_card_name": "MSDS"
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        },
+                        {
+                          "config": {
+                            "filters": [],
+                            "node_aliases": [
+                              "nfpa_safety_classification_type"
+                            ],
+                            "custom_labels": {},
+                            "nodegroup_alias": "nfpa_safety_classification",
+                            "custom_card_name": "NFPA information"
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        },
+                        {
+                          "config": {
+                            "filters": [],
+                            "node_aliases": [
+                              "ghs_safety_classification_type"
+                            ],
+                            "custom_labels": {},
+                            "nodegroup_alias": "ghs_safety_classification",
+                            "custom_card_name": "GHS information"
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "component": "arches_rascolls/ModularReport/components/LinkedSections"
               }
             ]
           }
