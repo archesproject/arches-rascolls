@@ -50,7 +50,9 @@ ko.components.register('views/components/functions/multicard-resource-descriptor
         this.groupedNodesForSelect2 = [];
         sortedCards.forEach(card => {
             const stringNodes = this.graph.nodes.filter(
-                node => (node.datatype === 'string' || node.datatype === 'non-localized-string') && node.nodegroup_id === card.nodegroup_id
+                (node) => {
+                    return (node.nodegroup_id === card.nodegroup_id);
+                }
             );
 
             if (stringNodes.length) {
