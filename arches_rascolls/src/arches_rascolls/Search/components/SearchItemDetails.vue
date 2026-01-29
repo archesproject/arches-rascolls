@@ -173,7 +173,7 @@ function zoomToSearchResult(resourceid: string, action: string) {
                 :key="resultSelected"
                 report-config-slug="search-item-details"
                 :resource-instance-id="resultSelected"
-                graph-slug="reference_and_sample_collection_item_1"
+                graph-slug="reference_and_sample_collection_item"
             ></ModularReport>
         </div>
         <div style="display: none">
