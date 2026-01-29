@@ -75,6 +75,7 @@ runs:
 
     - name: Check for missing migrations
       run: |
+        export ARCHES_DJANGO_DEBUG=True
         python manage.py makemigrations --check
       shell: bash
 
