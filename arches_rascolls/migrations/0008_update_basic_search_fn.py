@@ -108,7 +108,6 @@ class Migration(migrations.Migration):
         $$ LANGUAGE plpgsql;
     """
 
-
     reverse_table_name = """
             CREATE OR REPLACE FUNCTION __arches_rascolls_get_related_resources_by_searchable_values(
                 search_terms TEXT[],
