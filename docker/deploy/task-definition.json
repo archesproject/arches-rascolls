@@ -1,7 +1,5 @@
 {
-    "requiresCompatibilities": [
-        "FARGATE"
-    ],
+    "requiresCompatibilities": ["FARGATE"],
     "inferenceAccelerators": [],
     "containerDefinitions": [
         {
@@ -11,22 +9,22 @@
             "essential": true,
             "portMappings": [
                 {
-                    "containerPort": "443",
+                    "containerPort": 443,
                     "protocol": "tcp"
                 }
             ],
             "environment": [
                 {
                     "name": "ARCHES_ES_SECRET_ID",
-                    "value": "prod/arches_rascolls/elastic"
+                    "value": "prod/rascolls-ci/elastic"
                 },
                 {
                     "name": "ARCHES_DB_SECRET_ID",
-                    "value": "archesDbSecretC996653C-9RvtCl4Ud1ud"
+                    "value": "archesDbSecretC996653C-H15qhWG0qSzA"
                 },
                 {
                     "name": "ARCHES_PUBLIC_SERVER_ADDRESS",
-                    "value": "https://arches_rascolls.dev.fargeo.com"
+                    "value": "https://rascolls-ci.usw1.gci.fargeo.com"
                 },
                 {
                     "name": "ARCHES_SECRETS_MODE",
@@ -38,7 +36,7 @@
                 },
                 {
                     "name": "ARCHES_ESVALIDATE",
-                    "value": "False"
+                    "value": "True"
                 },
                 {
                     "name": "ARCHES_PROJECT",
@@ -58,7 +56,11 @@
                 },
                 {
                     "name": "ARCHES_S3BUCKETNAME",
-                    "value": "fargeo-1-arches-rascolls-media-files"
+                    "value": "fargeo-rascolls-ci-media-files"
+                },
+                {
+                    "name": "ARCHES_SECRET_KEY_ID",
+                    "value": "/prod/rascolls-ci/secret-key"
                 }
             ],
             "healthCheck": {
@@ -71,7 +73,7 @@
                 "logDriver": "awslogs",
                 "options": {
                     "awslogs-stream-prefix": "arches",
-                    "awslogs-group": "TODO",
+                    "awslogs-group": "rascolls-ci-base-infrastructure-rascollscicontainerloggroupDB677B70-anD150zPxQEM",
                     "awslogs-region": "us-west-1"
                 }
             }
@@ -81,8 +83,8 @@
     "networkMode": "awsvpc",
     "memory": "8192",
     "cpu": "4096",
-    "executionRoleArn": "TODO",
-    "family": "TODO",
-    "taskRoleArn": "TODO",
+    "executionRoleArn": "arn:aws:iam::408807229061:role/arches-execution-role-rascolls-ci",
+    "family": "rascollscibaseinfrastructureesArchesTaskDefinition37367DA1",
+    "taskRoleArn": "arn:aws:iam::408807229061:role/arches-task-role-rascolls-ci",
     "placementConstraints": []
 }

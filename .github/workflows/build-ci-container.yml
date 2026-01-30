@@ -1,0 +1,81 @@
+name: Build Container Image
+
+on:
+    push:
+        branches:
+            - "deploy"
+            - "test/*"
+    repository_dispatch:
+        type:
+            - deploy_project
+permissions:
+    id-token: write
+    contents: read
+jobs:
+    build:
+        name: Build Docker Image and Push
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v5
+              with:
+                  path: arches-rascolls
+
+            - name: Configure AWS credentials
+              uses: aws-actions/configure-aws-credentials@v5.1.1
+              with:
+                  role-to-assume: "arn:aws:iam::408807229061:role/rascolls-ci-base-infrastructure-githubRole822CB25E-WgZVB8QKT9Gq"
+                  aws-region: us-west-1
+
+            - name: Install Python packages
+              run: |
+                  python -m pip install --upgrade pip
+                  pip install awscli --upgrade
+              shell: bash
+
+            - name: Login to Amazon ECR
+              id: login-ecr
+              uses: aws-actions/amazon-ecr-login@v2
+
+            - name: Build, tag, and push image to Amazon ECR
+              id: build-image
+              env:
+                  ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+                  ECR_REPOSITORY: rascolls-ci-repository
+                  IMAGE_TAG: ${{ github.sha }}
+              run: |
+                  # Build a docker container and
+                  # push it to ECR so that it can
+                  # be deployed to ECS.
+                  docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG -f arches-rascolls/docker/production/Dockerfile ./arches-rascolls
+                  docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+                  echo "::set-output name=image::$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
+
+            - name: Fill in the new image ID in the Amazon ECS task definition for service
+              id: task-def
+              uses: aws-actions/amazon-ecs-render-task-definition@v1
+              with:
+                  task-definition: arches-rascolls/docker/deploy/task-definition.json
+                  container-name: arches
+                  image: ${{ steps.build-image.outputs.image }}
+
+            - name: Fill in the new image ID in the Amazon ECS task definition to reset db
+              id: task-def-run-reset
+              uses: aws-actions/amazon-ecs-render-task-definition@v1
+              with:
+                  task-definition: arches-rascolls/docker/deploy/task-definition-reset-database.json
+                  container-name: arches
+                  image: ${{ steps.build-image.outputs.image }}
+
+            - name: Deploy Reset Amazon ECS task definition to reset db
+              uses: aws-actions/amazon-ecs-deploy-task-definition@v2.6.0
+              id: task-def-deploy-reset
+              with:
+                  task-definition: ${{ steps.task-def-run-reset.outputs.task-definition }}
+                  cluster: rascolls-ci-cluster
+
+            - name: Deploy Amazon ECS task definition to arches service
+              uses: aws-actions/amazon-ecs-deploy-task-definition@v2.6.0
+              with:
+                  task-definition: ${{ steps.task-def.outputs.task-definition }}
+                  service: rascolls-ci-arches-service
+                  cluster: rascolls-ci-cluster
