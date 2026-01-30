@@ -24,6 +24,7 @@ from django.core.cache import caches
 from django.core.paginator import Paginator
 from django.views.generic import View
 from django.db import connection
+from django.core.exceptions import ObjectDoesNotExist
 from django.contrib.gis.db.models.aggregates import Union
 from django.contrib.gis.db.models.functions import Transform, Centroid
 from django.contrib.gis.geos import GEOSGeometry
@@ -125,7 +126,7 @@ def get_current_location(resource):
             .first()
             .to_resource.name
         )
-    except AttributeError:
+    except (AttributeError, ObjectDoesNotExist):
         place = None
 
     try:
