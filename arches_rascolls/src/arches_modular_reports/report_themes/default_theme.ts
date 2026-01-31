@@ -1,66 +1,137 @@
-import { definePreset } from "@primeuix/themes";
-import Aura from "@primeuix/themes/aura";
+import { definePreset, palette } from "@primeuix/themes";
+import { ArchesPreset, DEFAULT_THEME } from "@/arches/themes/default.ts";
+import type { archesPreset } from "@/arches_rascolls/types.ts";
 
-// TODO: when dropping support for 7.6, just import from arches 8.
-const DEFAULT_THEME = {
-    theme: {
-        // preset: ArchesPreset,
-        options: {
-            prefix: "p",
-            darkModeSelector: ".arches-dark",
-            cssLayer: false,
-        },
+const lingoColors = Object.freeze({
+    lightBlueGray: "#ebeef0",
+    lightGray: "#ebeef0",
+    gray: "#dddddd",
+});
+
+const archesPrimitives = ArchesPreset.primitive as archesPreset;
+export const ModularReportPreset = definePreset(ArchesPreset, {
+    primitive: {
+        ...archesPrimitives,
+        ...lingoColors,
     },
-};
-
-// TODO: when dropping support for 7.6, extend ArchesPreset.
-const ModularReportPreset = definePreset(Aura, {
     semantic: {
-        primary: {
-            50: "{sky.50}",
-            100: "{sky.100}",
-            200: "{sky.200}",
-            300: "{sky.300}",
-            400: "{sky.400}",
-            500: "{sky.500}",
-            600: "{sky.600}",
-            700: "{sky.700}",
-            800: "{sky.800}",
-            900: "{sky.900}",
-            950: "{sky.950}",
+        lingoFont: {
+            family: "'Open Sans','Lucida Sans','Lucida Sans Regular','Lucida Grande','Lucida Sans Unicode',Geneva,Verdana,sans-serif",
+            size: {
+                xxsmall: "0.75rem",
+                xsmall: "0.8rem",
+                small: "0.875rem",
+                smallnormal: "0.95rem",
+                normal: "1rem",
+                medium: "1.15rem",
+                large: "1.25rem",
+                xlarge: "1.5rem",
+                xxlarge: "2rem",
+            },
+            weight: {
+                light: "300",
+                normal: "400",
+                medium: "500",
+                bold: "600",
+            },
         },
         colorScheme: {
             light: {
-                primary: {
-                    color: "{sky.700}",
-                    inverseColor: "#ffffff",
-                    hoverColor: "{sky.900}",
-                    activeColor: "{sky.800}",
+                primary: palette(archesPrimitives.arches.blue),
+                surface: palette("{slate}"),
+                checkbox: {
+                    background: "{light-gray}",
                 },
-                highlight: {
-                    background: "{sky.300}",
-                    focusBackground: "{sky.700}",
-                    color: "#ffffff",
-                    focusColor: "#ffffff",
+                header: {
+                    background: "{surface.50}",
+                    border: "{neutral.300}",
+                    itemLabel: "{surface.500}",
+                },
+                searchResult: {
+                    color: "{sky.600}",
+                    borderBottom: "{zinc.200}",
+                    isEven: {
+                        background: "{surface.100}",
+                    },
+                    focus: {
+                        background: "{sky.100}",
+                    },
+                },
+                searchResultHierarchy: {
+                    color: "{zinc.400}",
+                },
+                sortAndFilterControls: {
+                    background: "{light-blue-gray}",
+                    border: "{gray}",
                 },
             },
             dark: {
-                primary: {
-                    color: "{sky.300}",
-                    inverseColor: "{sky.950}",
-                    hoverColor: "{sky.100}",
-                    activeColor: "{sky.200}",
+                primary: palette(archesPrimitives.arches.blue),
+                surface: palette("{zinc}"),
+                checkbox: {
+                    background: "{surface.500}",
                 },
-                highlight: {
-                    background: "rgba(250, 250, 250, .16)",
-                    focusBackground: "rgba(250, 250, 250, .24)",
-                    color: "rgba(255,255,255,.87)",
-                    focusColor: "rgba(255,255,255,.87)",
+                footer: {
+                    background: "{surface.900}",
+                },
+                header: {
+                    background: "{surface.700}",
+                    border: "{neutral.500}",
+                    itemLabel: "{surface.400}",
+                },
+                searchResult: {
+                    borderBottom: "{surface.900}",
+                    isEven: {
+                        background: "{surface.800}",
+                    },
+                    focus: {
+                        background: "{sky.900}",
+                    },
+                },
+                searchResultHierarchy: {
+                    color: "{zinc.400}",
+                },
+                sortAndFilterControls: {
+                    background: "{surface.700}",
+                    border: "{surface.900}",
                 },
             },
         },
     },
     components: {
+        button: {
+            border: {
+                radius: "0.25rem",
+            },
+            colorScheme: {
+                light: {
+                    // @ts-expect-error: Ignoring type mismatch for button primary background
+                    primary: {
+                        background: "{primary-800}",
+                        borderColor: "{button-primary-background}",
+                        hover: {
+                            background: "{primary-700}",
+                            borderColor: "{primary-700}",
+                        },
+                    },
+                    danger: {
+                        background: "{orange-700}",
+                        borderColor: "{orange-700}",
+                        hover: {
+                            background: "{orange-500}",
+                            borderColor: "{orange-500}",
+                        },
+                    },
+                },
+                dark: {
+                    // @ts-expect-error: Ignoring type mismatch for button primary background
+                    primary: {
+                        background: "{primary-100}",
+                        borderColor: "{button-primary-background}",
+                    },
+                },
+            },
+        },
         datatable: {
             rowToggleButton: {
                 size: "2.5rem",
@@ -80,6 +151,20 @@ const ModularReportPreset = definePreset(Aura, {
                 },
             },
         },
+        inputtext: {
+            // @ts-expect-error: primevue does have border on inputtext
+            border: {
+                radius: "0.25rem",
+            },
+        },
+        splitter: {
+            colorScheme: {
+                dark: {
+                    // @ts-expect-error: Ignoring type mismatch for button primary background
+                    background: "{surface-900}",
+                },
+            },
+        },
         tabs: {
             colorScheme: {
                 light: {
@@ -93,13 +178,6 @@ const ModularReportPreset = definePreset(Aura, {
                     },
                 },
             },
-        },
-        button: {
-            css: ({ dt }) => `
-                .p-button {
-                    font-size: ${dt("base.button.font.size")};
-                }
-            `,
         },
     },
 });
