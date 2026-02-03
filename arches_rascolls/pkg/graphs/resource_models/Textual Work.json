@@ -6737,28 +6737,6 @@
                     "config": {
                         "descriptor_types": {
                             "description": {
-                                "nodegroup_id": "",
-                                "string_template": ""
-                            },
-                            "map_popup": {
-                                "nodegroup_id": "",
-                                "string_template": ""
-                            },
-                            "name": {
-                                "nodegroup_id": "",
-                                "string_template": "<name_top__content>"
-                            }
-                        },
-                        "triggering_nodegroups": []
-                    },
-                    "function_id": "00b2d15a-fda0-4578-b79a-784e4138664b",
-                    "graph_id": "7ce192f6-d772-11ef-825b-0275dc2ded29",
-                    "id": "693a2da6-f1f5-498b-82e2-6584f11350f2"
-                },
-                {
-                    "config": {
-                        "descriptor_types": {
-                            "description": {
                                 "nodegroup_id": "7ce1e2ec-d772-11ef-825b-0275dc2ded29",
                                 "string_template": "<Statement (top)_content>"
                             },
@@ -11491,6 +11469,6 @@
         "db": "PostgreSQL 16.8 on aarch64-unknown-linux-gnu, compiled by gcc (GCC) 7.3.1 20180712 (Red Hat 7.3.1-17), 64-bit",
         "git hash": "fatal: not a git repository (or any of the parent directories): .git",
         "os": "Linux",
-        "os version": "6.8.0-1021-aws"
+        "os version": "6.14.0-1017-aws"
     }
 }
