@@ -24204,7 +24204,7 @@
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P72_has_language",
                     "sortorder": 2,
                     "source_identifier_id": null,
-                    "sourcebranchpublication_id": "59d3ccd7-86d9-40a2-bbdd-bded4ccff59d"
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "identifier_data_assignment_timespan_name_source_n1",
@@ -24483,7 +24483,7 @@
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P72_has_language",
                     "sortorder": 0,
                     "source_identifier_id": null,
-                    "sourcebranchpublication_id": "0ea5f8d9-6c57-415a-9987-f9b84ebd3484"
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "identifier_data_assignment_statement_language_n1",
@@ -25594,7 +25594,7 @@
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by",
                     "sortorder": 3,
                     "source_identifier_id": null,
-                    "sourcebranchpublication_id": "59d3ccd7-86d9-40a2-bbdd-bded4ccff59d"
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "dimension_statement_label",
@@ -25617,7 +25617,7 @@
                     "parentproperty": "http://www.w3.org/2000/01/rdf-schema#label",
                     "sortorder": 0,
                     "source_identifier_id": null,
-                    "sourcebranchpublication_id": "0ea5f8d9-6c57-415a-9987-f9b84ebd3484"
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "pigment_data_assignment_statement_language",
@@ -26848,7 +26848,7 @@
                     "parentproperty": "http://www.w3.org/2000/01/rdf-schema#label",
                     "sortorder": 4,
                     "source_identifier_id": null,
-                    "sourcebranchpublication_id": "59d3ccd7-86d9-40a2-bbdd-bded4ccff59d"
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "chemical_material_identifier_source_",
@@ -30524,7 +30524,7 @@
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by",
                     "sortorder": 7,
                     "source_identifier_id": null,
-                    "sourcebranchpublication_id": "0ea5f8d9-6c57-415a-9987-f9b84ebd3484"
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "acquisition_statement_type_metatype",
@@ -37885,7 +37885,7 @@
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by",
                     "sortorder": 6,
                     "source_identifier_id": null,
-                    "sourcebranchpublication_id": "59d3ccd7-86d9-40a2-bbdd-bded4ccff59d"
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "acquisition_timespan_name_type",
@@ -38245,7 +38245,7 @@
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
                     "sortorder": 1,
                     "source_identifier_id": null,
-                    "sourcebranchpublication_id": "59d3ccd7-86d9-40a2-bbdd-bded4ccff59d"
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "material_data_assignment_timespan_name_language_n1",
@@ -38485,7 +38485,7 @@
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P190_has_symbolic_content",
                     "sortorder": 0,
                     "source_identifier_id": null,
-                    "sourcebranchpublication_id": "0ea5f8d9-6c57-415a-9987-f9b84ebd3484"
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "pigment_data_assignment_timespan_name_label",
@@ -38988,7 +38988,7 @@
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
                     "sortorder": 0,
                     "source_identifier_id": null,
-                    "sourcebranchpublication_id": "0ea5f8d9-6c57-415a-9987-f9b84ebd3484"
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "safety_classification",
@@ -39266,7 +39266,7 @@
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
                     "sortorder": 0,
                     "source_identifier_id": null,
-                    "sourcebranchpublication_id": "59d3ccd7-86d9-40a2-bbdd-bded4ccff59d"
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "color_name_type",
@@ -39318,7 +39318,7 @@
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
                     "sortorder": 0,
                     "source_identifier_id": null,
-                    "sourcebranchpublication_id": "0ea5f8d9-6c57-415a-9987-f9b84ebd3484"
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "elements_found_data_assignment_statement_source",
@@ -39380,7 +39380,7 @@
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P190_has_symbolic_content",
                     "sortorder": 0,
                     "source_identifier_id": null,
-                    "sourcebranchpublication_id": "59d3ccd7-86d9-40a2-bbdd-bded4ccff59d"
+                    "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "chemical_material_type",
@@ -39514,9 +39514,9 @@
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 16.8 on aarch64-unknown-linux-gnu, compiled by gcc (GCC) 7.3.1 20180712 (Red Hat 7.3.1-17), 64-bit",
-        "git hash": "fatal: not a git repository (or any of the parent directories): .git",
-        "os": "Linux",
-        "os version": "6.14.0-1017-aws"
+        "db": "PostgreSQL 16.3 (Debian 16.3-1.pgdg110+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 64-bit",
+        "git hash": "e2c7c7dcc5 2026-02-08 14:03:07 -0500",
+        "os": "Darwin",
+        "os version": "24.6.0"
     }
 }
