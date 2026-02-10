@@ -79,6 +79,7 @@ if STORAGE_BACKEND == "storages.backends.s3.S3Storage":
         "signature_version": get_optional_env_variable(
             "ARCHES_S3SIGNATUREVERSION", "s3v4"
         ),
+        "location": get_optional_env_variable("ARCHES_S3LOCATION", ""),
         "region": get_optional_env_variable("ARCHES_S3REGION", "us-west-1"),
         "max_memory_size": get_optional_env_variable(
             "ARCHES_S3MAXMEMORY", str(psutil.virtual_memory().available * 0.5)
