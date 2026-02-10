@@ -124,7 +124,7 @@ if SECRETS_MODE == "AWS":
             client.get_secret_value(SecretId=DB_SECRET_ID)["SecretString"]
         )
         ssm_client = boto3.client("ssm", region_name=AWS_REGION)
-        DB_NAME = APP_NAME
+        DB_NAME = get_optional_env_variable("PGDATABASE", APP_NAME)
         DB_USER = db_secret["username"]
         DB_PASSWORD = db_secret["password"]
         DB_HOST = db_secret["host"]
