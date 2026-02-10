@@ -3,7 +3,7 @@ requires = ["setuptools", "setuptools-scm"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "arches_rascolls"
+name = "arches-rascolls"
 readme = "README.md"
 authors = []
 license = {text = "GNU AGPL3"}
@@ -24,10 +24,10 @@ classifiers = [
 ]
 requires-python = ">=3.11"
 dependencies = [
-    "arches>=8.1.0a5,<8.2.0",
+    "arches>=8.1.0a5,<9.0.0",
     "django_csp==3.8",
-    "arches_modular_reports @ git+https://github.com/archesproject/arches-modular-reports@main",
-    "arches_search @ git+https://github.com/archesproject/arches-search@main",
+    "arches_modular_reports>=1.0.0b3",
+    "arches_search>=0.1.0a0",
 ]
 version = "0.0.1"
 
