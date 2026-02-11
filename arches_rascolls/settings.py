@@ -140,6 +140,7 @@ if SECRETS_MODE == "AWS":
     except (ModuleNotFoundError, ImportError):
         pass
 
+print(f"DEBUG DB_USER: {DB_USER}")
 APP_VERSION = semantic_version.Version(major=0, minor=0, patch=0)
 APP_ROOT = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
 
