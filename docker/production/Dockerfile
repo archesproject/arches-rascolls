@@ -12,7 +12,7 @@ RUN source ${WEB_ROOT}/ENV/bin/activate && cd ${APP_ROOT} && pip install .
 COPY ./docker/static_frontend_configuration ${WEB_ROOT}/arches-rascolls/frontend_configuration
 WORKDIR ${APP_ROOT}
 RUN npm i
-RUN source ../ENV/bin/activate && ls /web_root/ENV/lib/python3.12/site-packages/arches_modular_reports/media/js/reports && npm run build_production_unsafe -- --stats errors-warnings && python3 manage.py collectstatic
+RUN source ../ENV/bin/activate && ls /web_root/ENV/lib/python3.12/site-packages/arches_modular_reports/media/js/reports && npm run build_production_unsafe && python3 manage.py collectstatic
 
 
 FROM public.ecr.aws/l1p7h1f9/archesproject-fargeo:8.0.x-base-prod AS deploy 

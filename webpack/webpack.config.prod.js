@@ -14,6 +14,7 @@ module.exports = () => {
                 mode: 'production',
                 devtool: false,
                 bail: true,
+                stats: 'errors-warnings',
                 optimization: {
                     minimize: true,
                     minimizer: [
