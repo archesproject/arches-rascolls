@@ -187,6 +187,7 @@ reset_database() {
 	fi
 
 	${WEB_ROOT}/ENV/bin/python manage.py es reindex_database -mp
+	${WEB_ROOT}/ENV/bin/python manage.py db_index reindex_database
 }
 
 activate_virtualenv() {
