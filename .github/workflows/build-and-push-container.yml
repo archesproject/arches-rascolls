@@ -1,0 +1,78 @@
+# Build and Push Container Image
+#
+# Requires a GitHub Environment with the following variables:
+#   ARCHES_PROJECT          - e.g. arches-myproject
+#   ARCHES_PROJECT_PACKAGE  - e.g. arches_myproject
+#   ECR_REPOSITORY          - e.g. myproject-ci-repository
+#   AWS_ROLE                - e.g. arn:aws:iam::408807229061:role/my-github-role
+#   AWS_REGION              - e.g. us-west-1
+#
+# And a repository secret:
+#   FARGEO_PAT  - GitHub PAT with read access to fargeo/arches-docker
+
+name: Build and Push Container Image to CI Environment
+
+on:
+    push:
+        branches:
+            - "adg/test-overhaul"
+    repository_dispatch:
+        types:
+            - deploy_project
+    workflow_dispatch:
+
+permissions:
+    id-token: write
+    contents: read
+
+jobs:
+    build:
+        name: Build and Push
+        runs-on: ubuntu-latest
+        # UPDATE: Set this to the name of your GitHub Environment containing the required variables.
+        environment: ci-gci
+        steps:
+            - name: Checkout project
+              uses: actions/checkout@v5
+              with:
+                  path: project
+
+            - name: Checkout arches-docker
+              uses: actions/checkout@v5
+              with:
+                  repository: fargeo/arches-docker
+                  ref: main
+                  token: ${{ secrets.FARGEO_PAT }}
+                  path: arches-docker
+
+            - name: Prepare build context
+              run: |
+                  cp arches-docker/entrypoint.sh project/docker/entrypoint.sh
+                  cp arches-docker/supervisor.conf project/docker/supervisor.conf
+                  cp -r arches-docker/conf.d project/docker/
+                  cp -r arches-docker/nginx project/docker/
+
+            - name: Configure AWS credentials
+              uses: aws-actions/configure-aws-credentials@v5.1.1
+              with:
+                  role-to-assume: ${{ vars.AWS_ROLE }}
+                  aws-region: ${{ vars.AWS_REGION }}
+
+            - name: Login to Amazon ECR
+              id: login-ecr
+              uses: aws-actions/amazon-ecr-login@v2
+
+            - name: Build, tag, and push image to Amazon ECR
+              id: build-image
+              env:
+                  ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+                  IMAGE_TAG: ${{ github.sha }}
+              run: |
+                  docker build \
+                    --build-arg ARCHES_PROJECT=${{ vars.ARCHES_PROJECT }} \
+                    --build-arg ARCHES_PROJECT_PACKAGE=${{ vars.ARCHES_PROJECT_PACKAGE }} \
+                    -t $ECR_REGISTRY/${{ vars.ECR_REPOSITORY }}:$IMAGE_TAG \
+                    -f arches-docker/production/Dockerfile \
+                    ./project
+                  docker push $ECR_REGISTRY/${{ vars.ECR_REPOSITORY }}:$IMAGE_TAG
+                  echo "image=$ECR_REGISTRY/${{ vars.ECR_REPOSITORY }}:$IMAGE_TAG" >> $GITHUB_OUTPUT

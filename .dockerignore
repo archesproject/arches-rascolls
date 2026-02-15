@@ -1,0 +1,12 @@
+.git
+.github
+.vscode
+node_modules
+coverage
+*.pyc
+*.egg-info
+.DS_STORE
+.env
+.env.example
+docker-compose.yml
+Makefile
