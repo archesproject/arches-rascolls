@@ -33,6 +33,14 @@ def get_optional_env_variable(var_name, default=None) -> str:
 
 APP_NAME = "arches_rascolls"
 
+# GDAL/GEOS library paths — needed on Alpine/musl where ctypes can't auto-discover them.
+_gdal_path = get_optional_env_variable("GDAL_LIBRARY_PATH")
+if _gdal_path:
+    GDAL_LIBRARY_PATH = _gdal_path
+_geos_path = get_optional_env_variable("GEOS_LIBRARY_PATH")
+if _geos_path:
+    GEOS_LIBRARY_PATH = _geos_path
+
 SECRETS_MODE = get_optional_env_variable("ARCHES_SECRETS_MODE", "ENV")
 
 APP_ROOT = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
@@ -487,7 +495,9 @@ EMAIL_HOST_USER = "xxxx@xxx.com"
 
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
-CELERY_BROKER_URL = ""  # RabbitMQ --> "amqp://guest:guest@localhost",  Redis --> "redis://localhost:6379/0"
+CELERY_BROKER_URL = get_optional_env_variable(
+    "ARCHES_CELERY_BROKER_URL", ""
+)  # RabbitMQ --> "amqp://guest:guest@localhost",  Redis --> "redis://localhost:6379/0"
 CELERY_ACCEPT_CONTENT = ["json"]
 CELERY_RESULT_BACKEND = (
     "django-db"  # Use 'django-cache' if you want to use your cache as your backend
@@ -633,6 +643,11 @@ except ImportError:
         from package_settings import *
     except ImportError as e:
         pass
+
+# Sometimes settings_local needs the arches app name - this is a method of passing it.
+os.environ.setdefault("ARCHES_APP_NAME", APP_NAME)
+
+os.environ.setdefault("ARCHES_SITE_ID", APP_NAME)
 
 try:
     from .settings_local import *
