@@ -155,9 +155,23 @@ reset_database() {
 	echo ""
 	cd ${APP_ROOT}
 	pwd && ${WEB_ROOT}/ENV/bin/python --version
-	(test $(echo "SELECT FROM pg_database WHERE datname = 'template_postgis'" | ${WEB_ROOT}/ENV/bin/python manage.py dbshell | grep -c "1 row") = 1 || \
-	(echo "CREATE DATABASE template_postgis" | ${WEB_ROOT}/ENV/bin/python manage.py dbshell --database postgres && \
-	echo "CREATE EXTENSION postgis" | ${WEB_ROOT}/ENV/bin/python manage.py dbshell --database postgres))
+
+	# Only attempt template_postgis creation if the database user is a superuser.
+	# In managed environments (e.g. RDS), template_postgis should already be provisioned.
+	if echo "SELECT usesuper FROM pg_user WHERE usename = current_user;" | \
+		${WEB_ROOT}/ENV/bin/python manage.py dbshell 2>/dev/null | grep -q t; then
+		if ! echo "SELECT 1 FROM pg_database WHERE datname = 'template_postgis'" | \
+			${WEB_ROOT}/ENV/bin/python manage.py dbshell 2>/dev/null | grep -q 1; then
+			echo "template_postgis does not exist, creating..."
+			echo "CREATE DATABASE template_postgis;" | \
+				${WEB_ROOT}/ENV/bin/python manage.py dbshell && \
+			printf '\\c template_postgis\nCREATE EXTENSION IF NOT EXISTS postgis;' | \
+				${WEB_ROOT}/ENV/bin/python manage.py dbshell
+		fi
+	else
+		echo "Database user is not a superuser, skipping template_postgis creation."
+	fi
+
 	service memcached start&
 	../ENV/bin/python manage.py packages -o load_package -a arches_rascolls -db -y
 
