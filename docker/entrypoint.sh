@@ -126,7 +126,7 @@ run_django_server() {
 	cd ${APP_FOLDER}
     echo "Running Django"
 	service memcached start&
-	exec /bin/bash -c "source ${WEB_ROOT}/ENV/bin/activate && gunicorn arches_lingo.wsgi"
+	exec /bin/bash -c "source ${WEB_ROOT}/ENV/bin/activate && gunicorn arches_rascolls.wsgi"
 }
 
 run_dev_server() {
