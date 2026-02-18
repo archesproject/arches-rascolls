@@ -29,3 +29,5 @@ docker/supervisor.conf
 docker/conf.d/celeryd.conf
 docker/conf.d/celerybeat.conf
 docker/nginx/default.conf
+
+development/env_file.env

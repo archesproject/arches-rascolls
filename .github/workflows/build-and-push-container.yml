@@ -1,0 +1,34 @@
+# Build and Push Container Image
+#
+# Calls the reusable workflow from fargeo/arches-docker.
+#
+# Requires a GitHub Environment with the following variables:
+#   ARCHES_PROJECT          - e.g. arches-rascolls
+#   ARCHES_PROJECT_PACKAGE  - e.g. arches_rascolls
+#   ECR_REPOSITORY          - e.g. rascolls-ci-repository
+#   AWS_ROLE                - e.g. arn:aws:iam::408807229061:role/my-github-role
+#   AWS_REGION              - e.g. us-west-1
+#
+# And a repository secret:
+#   FARGEO_PAT  - GitHub PAT with access to fargeo/arches-docker
+
+name: Build and Push Container Image
+
+on:
+    push:
+        branches:
+            - "deploy"
+            - "test/*"
+    repository_dispatch:
+        types:
+            - deploy_project
+    workflow_dispatch:
+
+jobs:
+    build:
+        # UPDATE: Set the environment input to the name of your
+        # GitHub Environment containing the required variables.
+        uses: fargeo/arches-docker/.github/workflows/build-and-push-container.yml@main
+        with:
+            environment: production
+        secrets: inherit
