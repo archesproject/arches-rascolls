@@ -1,0 +1,63 @@
+# Standalone infrastructure override.
+# Adds local Postgres + Elasticsearch and overrides the arches service
+# to point at them. No edits to env_file.env needed.
+#
+# Usage:
+#   make docker-standalone
+#   -- or --
+#   docker compose -f docker-compose.yml -f docker-compose.standalone.yml up --build
+
+services:
+    arches-rascolls:
+        depends_on:
+            postgres:
+                condition: service_healthy
+            elasticsearch:
+                condition: service_healthy
+        environment:
+            PGHOST: postgres
+            PGPORT: "5432"
+            PGUSERNAME: postgres
+            PGPASSWORD: postgis
+            PGDBNAME: arches_rascolls
+            ARCHES_ESHOST: elasticsearch
+            ARCHES_ESPORT: "9200"
+            ARCHES_ESPASSWORD: changeme
+
+    postgres:
+        image: imresamu/postgis:16-3.6
+        volumes:
+            - postgres-data:/var/lib/postgresql/data
+        environment:
+            POSTGRES_USER: postgres
+            POSTGRES_PASSWORD: postgis
+            POSTGRES_DB: arches_rascolls
+        healthcheck:
+            test: ["CMD-SHELL", "pg_isready -U postgres -d arches_rascolls"]
+            interval: 3s
+            timeout: 5s
+            retries: 10
+
+    elasticsearch:
+        image: elasticsearch:8.15.5
+        volumes:
+            - es-data:/usr/share/elasticsearch/data
+        environment:
+            discovery.type: single-node
+            xpack.security.enabled: "true"
+            ELASTIC_PASSWORD: changeme
+            ES_JAVA_OPTS: "-Xms512m -Xmx512m"
+        healthcheck:
+            test: ["CMD-SHELL", "curl -sf -u elastic:changeme http://localhost:9200/_cluster/health || exit 1"]
+            interval: 5s
+            timeout: 10s
+            retries: 20
+
+volumes:
+    postgres-data:
+    es-data:
+
+networks:
+    default:
+        external: false
+        name: arches-rascolls-standalone

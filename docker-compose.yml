@@ -4,19 +4,14 @@ services:
         image: fargeo/arches-rascolls
         build:
             args:
-                ARCHES_CORE_HOST_DIR: ../arches/
+                ARCHES_PROJECT: arches-rascolls
+                ARCHES_PROJECT_PACKAGE: arches_rascolls
             context: .
-            dockerfile: ./docker/production/Dockerfile
+            dockerfile: ${ARCHES_DOCKER:-../arches-docker}/production/Dockerfile.alpine
         command: run_dev_server
         volumes:
-            # To change these variables, modify/add the .env file prior to launch - NOT env_file.env
-            - ${ARCHES_CORE_HOST_DIR:-../arches/}:/web_root/arches
-            - ./:/web_root/arches-rascolls
-            - ../arches-querysets:/web_root/arches-querysets
-            - ../arches-modular-reports:/web_root/arches-modular-reports
-            - ../arches-controlled-lists:/web_root/arches-controlled-lists
-            - ../arches-component-lab:/web_root/arches-component-lab
-            - ../arches-search:/web_root/arches-search
+            - ${ARCHES_CORE_HOST_DIR:-../arches/}:/opt/arches
+            - ./:/opt/arches-rascolls
             - $HOME/.aws/:/root/.aws/
         ports:
             - ${HOST_PROJECT_PORT:-8060}:80
@@ -32,4 +27,4 @@ services:
 networks:
     default:
         external: true
-        name: arches7-0-dev
+        name: ${DOCKER_NETWORK:-arches7-0-dev}

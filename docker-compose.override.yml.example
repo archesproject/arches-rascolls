@@ -1,0 +1,17 @@
+# Developer overrides — copy this to docker-compose.override.yml and
+# uncomment the sibling packages you want to debug locally.
+#
+# docker-compose.override.yml is automatically merged by `docker compose up`
+# (no -f flags needed) and is gitignored so each developer can customize.
+
+services:
+    arches-rascolls:
+        volumes:
+            # Uncomment to mount sibling packages for editable development.
+            # The pre_dev.sh hook will auto-detect and pip install -e any
+            # that are mounted.
+            - ../arches-querysets:/opt/arches-querysets
+            - ../arches-modular-reports:/opt/arches-modular-reports
+            - ../arches-controlled-lists:/opt/arches-controlled-lists
+            - ../arches-component-lab:/opt/arches-component-lab
+            - ../arches-search:/opt/arches-search

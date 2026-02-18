@@ -17,3 +17,15 @@ webpack-stats.json
 CACHE
 .frontend-configuration-settings.json
 frontend_configuration/*
+
+# Local environment config
+.env
+docker-compose.override.yml
+
+# Docker infrastructure — copied from arches-docker at build time.
+# Do not edit these directly; edit the originals in arches-docker.
+docker/entrypoint.sh
+docker/supervisor.conf
+docker/conf.d/celeryd.conf
+docker/conf.d/celerybeat.conf
+docker/nginx/default.conf

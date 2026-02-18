@@ -33,6 +33,14 @@ def get_optional_env_variable(var_name, default=None) -> str:
 
 APP_NAME = "arches_rascolls"
 
+# GDAL/GEOS library paths — needed on Alpine/musl where ctypes can't auto-discover them.
+_gdal_path = get_optional_env_variable("GDAL_LIBRARY_PATH")
+if _gdal_path:
+    GDAL_LIBRARY_PATH = _gdal_path
+_geos_path = get_optional_env_variable("GEOS_LIBRARY_PATH")
+if _geos_path:
+    GEOS_LIBRARY_PATH = _geos_path
+
 SECRETS_MODE = get_optional_env_variable("ARCHES_SECRETS_MODE", "ENV")
 
 APP_ROOT = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
