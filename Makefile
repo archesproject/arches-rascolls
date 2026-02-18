@@ -10,7 +10,7 @@ ARCHES_DOCKER ?= ../arches-docker
 # These are gitignored — arches-docker is the source of truth.
 # Do not edit them here; edit the originals in $(ARCHES_DOCKER).
 
-.PHONY: docker-prep docker-build docker-up docker-dev docker-standalone docker-init docker-init-standalone docker-clean
+.PHONY: docker-prep docker-build docker-up docker-dev docker-init docker-init-dev docker-clean
 
 $(ARCHES_DOCKER):
 	git clone https://github.com/fargeo/arches-docker.git $(ARCHES_DOCKER)
@@ -27,19 +27,16 @@ docker-build: docker-prep
 	docker compose build
 
 docker-up: docker-prep
-	docker compose up
-
-docker-dev: docker-prep
 	docker compose up --build
 
-docker-standalone: docker-prep
-	docker compose -f docker-compose.yml -f docker-compose.standalone.yml up --build
+docker-dev: docker-prep
+	docker compose -f docker-compose.dev.yml up --build
 
 docker-init: docker-prep
 	docker compose run --rm --build arches-rascolls init_dev_database
 
-docker-init-standalone: docker-prep
-	docker compose -f docker-compose.yml -f docker-compose.standalone.yml run --rm --build arches-rascolls init_dev_database
+docker-init-dev: docker-prep
+	docker compose -f docker-compose.dev.yml run --rm --build arches-rascolls init_dev_database
 
 docker-clean:
 	rm -f docker/entrypoint.sh docker/supervisor.conf

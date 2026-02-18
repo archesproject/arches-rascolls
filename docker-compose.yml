@@ -12,19 +12,65 @@ services:
         volumes:
             - ${ARCHES_CORE_HOST_DIR:-../arches/}:/opt/arches
             - ./:/opt/arches-rascolls
-            - $HOME/.aws/:/root/.aws/
         ports:
             - ${HOST_PROJECT_PORT:-8060}:80
             - ${HOST_PROJECT_DEBUG_PORT:-5692}:5678
         stdin_open: true
-        env_file:
-            - ./docker/development/env_file.env
         tty: true
-        labels:
-            - traefik.http.routers.my-container.rule=Host(`arches-rascolls.local`)
-            - traefik.frontend.passHostHeader=true
+        environment:
+            ARCHES_PROJECT: arches-rascolls
+            INSTALL_DEFAULT_GRAPHS: "False"
+            INSTALL_DEFAULT_CONCEPTS: "False"
+            PGUSERNAME: postgres
+            PGPASSWORD: postgis
+            PGDBNAME: arches_rascolls
+            PGHOST: postgres
+            PGPORT: "5432"
+            DJANGO_MODE: DEV
+            DJANGO_DEBUG: "True"
+            ARCHES_DJANGO_DEBUG: "True"
+            DOMAIN_NAMES: "*"
+            DJANGO_PORT: "80"
+            PYTHONUNBUFFERED: "0"
+            TZ: PST
+            ELASTICSEARCH_PREFIX: arches_rascolls
+            ARCHES_ESHOST: elasticsearch
+            ARCHES_ESPORT: "9200"
+            ARCHES_ESPASSWORD: changeme
+        depends_on:
+            postgres:
+                condition: service_healthy
+            elasticsearch:
+                condition: service_healthy
 
-networks:
-    default:
-        external: true
-        name: ${DOCKER_NETWORK:-arches7-0-dev}
+    postgres:
+        image: postgis/postgis:16-3.5
+        volumes:
+            - postgres-data:/var/lib/postgresql/data
+        environment:
+            POSTGRES_USER: postgres
+            POSTGRES_PASSWORD: postgis
+        healthcheck:
+            test: ["CMD-SHELL", "pg_isready -U postgres"]
+            interval: 3s
+            timeout: 5s
+            retries: 10
+
+    elasticsearch:
+        image: elasticsearch:8.15.5
+        volumes:
+            - es-data:/usr/share/elasticsearch/data
+        environment:
+            discovery.type: single-node
+            xpack.security.enabled: "true"
+            ELASTIC_PASSWORD: changeme
+            ES_JAVA_OPTS: "-Xms512m -Xmx512m"
+        healthcheck:
+            test: ["CMD-SHELL", "curl -sf -u elastic:changeme http://localhost:9200/_cluster/health || exit 1"]
+            interval: 5s
+            timeout: 10s
+            retries: 20
+
+volumes:
+    postgres-data:
+    es-data:

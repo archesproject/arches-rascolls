@@ -1,0 +1,41 @@
+# Custom development setup.
+# Use this when running against shared/external infrastructure
+# (e.g. a shared Postgres + Elasticsearch on a Docker network).
+#
+# Requires docker/development/env_file.env (copy from env_file.env.sample).
+#
+# Usage:
+#   make docker-dev
+#   -- or --
+#   docker compose -f docker-compose.dev.yml up --build
+
+services:
+    arches-rascolls:
+        container_name: arches-rascolls
+        image: fargeo/arches-rascolls
+        build:
+            args:
+                ARCHES_PROJECT: arches-rascolls
+                ARCHES_PROJECT_PACKAGE: arches_rascolls
+            context: .
+            dockerfile: ${ARCHES_DOCKER:-../arches-docker}/production/Dockerfile.alpine
+        command: run_dev_server
+        volumes:
+            - ${ARCHES_CORE_HOST_DIR:-../arches/}:/opt/arches
+            - ./:/opt/arches-rascolls
+            - $HOME/.aws/:/root/.aws/
+        ports:
+            - ${HOST_PROJECT_PORT:-8060}:80
+            - ${HOST_PROJECT_DEBUG_PORT:-5692}:5678
+        stdin_open: true
+        env_file:
+            - ./docker/development/env_file.env
+        tty: true
+        labels:
+            - traefik.http.routers.my-container.rule=Host(`arches-rascolls.local`)
+            - traefik.frontend.passHostHeader=true
+
+networks:
+    default:
+        external: true
+        name: ${DOCKER_NETWORK:-arches7-0-dev}
