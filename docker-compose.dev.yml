@@ -35,6 +35,17 @@ services:
             - traefik.http.routers.my-container.rule=Host(`arches-rascolls.local`)
             - traefik.frontend.passHostHeader=true
 
+    webpack:
+        image: fargeo/arches-rascolls
+        command: run_webpack_dev_server
+        volumes:
+            - ${ARCHES_CORE_HOST_DIR:-../arches/}:/opt/arches
+            - ./:/opt/arches-rascolls
+        env_file:
+            - ./docker/development/env_file.env
+        depends_on:
+            - arches-rascolls
+
 networks:
     default:
         external: true

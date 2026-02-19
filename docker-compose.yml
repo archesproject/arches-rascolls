@@ -43,6 +43,17 @@ services:
             elasticsearch:
                 condition: service_healthy
 
+    webpack:
+        image: fargeo/arches-rascolls
+        command: run_webpack_dev_server
+        volumes:
+            - ${ARCHES_CORE_HOST_DIR:-../arches/}:/opt/arches
+            - ./:/opt/arches-rascolls
+        environment:
+            ARCHES_PROJECT: arches-rascolls
+        depends_on:
+            - arches-rascolls
+
     postgres:
         image: postgis/postgis:16-3.5
         platform: linux/amd64
