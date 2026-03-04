@@ -6,6 +6,8 @@
 # installs it editable. Skips the current project (handled by the
 # entrypoint's own pip install -e).
 #
+# Uninstalls any regular (non-editable) copy first to prevent stale
+# site-packages directories from shadowing the editable install.
 # --no-deps is used because all dependencies are already compiled in
 # the image's venv — we only need to swap in the live source code.
 
@@ -23,9 +25,4 @@ for toml in ${WEB_ROOT}/*/pyproject.toml; do
     pip install --no-deps -e .
 done
 
-echo ""
-echo "----- *** RUNNING REPORT CONFIG LOAD *** -----"
-echo ""
-
 cd ${APP_ROOT}
-${WEB_ROOT}/ENV/bin/python manage.py report_configs load

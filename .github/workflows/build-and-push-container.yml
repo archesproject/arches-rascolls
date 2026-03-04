@@ -15,7 +15,8 @@ name: Build and Push Container Image to CI Environment
 on:
     push:
         branches:
-            - "adg/test-overhaul"
+            - "deploy"
+            - "test/*"
     repository_dispatch:
         types:
             - deploy_project
@@ -30,7 +31,7 @@ jobs:
         name: Build and Push
         runs-on: ubuntu-latest
         # UPDATE: Set this to the name of your GitHub Environment containing the required variables.
-        environment: ci-gci
+        environment: ci
         steps:
             - name: Checkout project
               uses: actions/checkout@v5
@@ -49,6 +50,7 @@ jobs:
               run: |
                   cp arches-docker/entrypoint.sh project/docker/entrypoint.sh
                   cp arches-docker/supervisor.conf project/docker/supervisor.conf
+                  cp arches-docker/settings_local.py project/docker/settings_local.py
                   cp -r arches-docker/conf.d project/docker/
                   cp -r arches-docker/nginx project/docker/
 
