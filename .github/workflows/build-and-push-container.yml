@@ -15,8 +15,7 @@ name: Build and Push Container Image to CI Environment
 on:
     push:
         branches:
-            - "deploy"
-            - "test/*"
+            - "adg/test-overhaul"
     repository_dispatch:
         types:
             - deploy_project
