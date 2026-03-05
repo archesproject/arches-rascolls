@@ -14,13 +14,13 @@ if [ "$FETCH_PRIVATE_DATA" = "true" ]; then
 		--query "SecretString" \
 		--output text | jq -r '.password' 2>/dev/null || true)
     
-	apk add git
+	if command -v apk &>/dev/null; then apk add git; fi
 
 	echo "Cloning private repository..."
 	if [ -n "$GITHUB_TOKEN" ]; then
 		git clone "https://x-access-token:${GITHUB_TOKEN}@github.com/archesproject/rascolls-data-pkg.git" /tmp/rascolls-data-pkg
 	else
-		apk add openssh-client
+		if command -v apk &>/dev/null; then apk add openssh-client; fi
 		git clone "git@github.com:archesproject/rascolls-data-pkg.git" /tmp/rascolls-data-pkg
 	fi
 
