@@ -1,0 +1,422 @@
+{
+  "name": "Untitled Report",
+  "theme": "",
+  "components": [
+    {
+      "config": {
+        "descriptor": "Group  descriptor template",
+        "node_alias_options": {}
+      },
+      "component": "arches_modular_reports/ModularReport/components/ReportHeader"
+    },
+    {
+      "config": {
+        "lists": true,
+        "export_formats": [
+          "csv",
+          "json-ld",
+          "json"
+        ]
+      },
+      "component": "arches_modular_reports/ModularReport/components/ReportToolbar"
+    },
+    {
+      "config": {
+        "node_aliases": [],
+        "custom_labels": {},
+        "image_node_alias": null
+      },
+      "component": "arches_modular_reports/ModularReport/components/ReportTombstone"
+    },
+    {
+      "config": {
+        "tabs": [
+          {
+            "name": "Data",
+            "components": [
+              {
+                "config": {
+                  "sections": [
+                    {
+                      "name": "Name of Group",
+                      "components": [
+                        {
+                          "config": {
+                            "node_aliases": [
+                              "name_content",
+                              "name_type",
+                              "name_language"
+                            ],
+                            "custom_labels": {},
+                            "nodegroup_alias": "name",
+                            "custom_card_name": null
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Type of Group",
+                      "components": [
+                        {
+                          "config": {
+                            "node_aliases": [
+                              "type"
+                            ],
+                            "custom_labels": {},
+                            "nodegroup_alias": "type",
+                            "custom_card_name": null
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Nationality",
+                      "components": [
+                        {
+                          "config": {
+                            "node_aliases": [
+                              "nationality",
+                              "nationality_metatype"
+                            ],
+                            "custom_labels": {},
+                            "nodegroup_alias": "nationality",
+                            "custom_card_name": null
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Statement about Group",
+                      "components": [
+                        {
+                          "config": {
+                            "node_aliases": [
+                              "statement_content",
+                              "statement_type",
+                              "statement_type_metatype",
+                              "statement_language"
+                            ],
+                            "custom_labels": {},
+                            "nodegroup_alias": "statement",
+                            "custom_card_name": null
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Parent Group",
+                      "components": [
+                        {
+                          "config": {
+                            "node_aliases": [
+                              "member_of"
+                            ],
+                            "custom_labels": {},
+                            "nodegroup_alias": "member_of",
+                            "custom_card_name": null
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Address or Contact Point of Group",
+                      "components": [
+                        {
+                          "config": {
+                            "node_aliases": [
+                              "contact_point_content",
+                              "contact_point_type"
+                            ],
+                            "custom_labels": {},
+                            "nodegroup_alias": "contact_point_",
+                            "custom_card_name": null
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Identifier of Group",
+                      "components": [
+                        {
+                          "config": {
+                            "node_aliases": [
+                              "identifier_content",
+                              "identifier_type"
+                            ],
+                            "custom_labels": {},
+                            "nodegroup_alias": "identifier",
+                            "custom_card_name": null
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "External URI of Group",
+                      "components": [
+                        {
+                          "config": {
+                            "node_aliases": [
+                              "exact_match"
+                            ],
+                            "custom_labels": {},
+                            "nodegroup_alias": "exact_match",
+                            "custom_card_name": null
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Internal Label of Group",
+                      "components": [
+                        {
+                          "config": {
+                            "node_aliases": [
+                              "_label"
+                            ],
+                            "custom_labels": {},
+                            "nodegroup_alias": "_label",
+                            "custom_card_name": null
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Textual Reference to Group",
+                      "components": [
+                        {
+                          "config": {
+                            "node_aliases": [
+                              "textual_source",
+                              "textual_reference_type"
+                            ],
+                            "custom_labels": {},
+                            "nodegroup_alias": "textual_reference",
+                            "custom_card_name": null
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Residence or Associated Location of Group",
+                      "components": [
+                        {
+                          "config": {
+                            "node_aliases": [
+                              "residence"
+                            ],
+                            "custom_labels": {},
+                            "nodegroup_alias": "residence",
+                            "custom_card_name": null
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Professional Activity Group Known For",
+                      "components": [
+                        {
+                          "config": {
+                            "node_aliases": [
+                              "professional_activity_type",
+                              "professional_activity_technique",
+                              "professional_activity_location",
+                              "professional_activity_source"
+                            ],
+                            "custom_labels": {},
+                            "nodegroup_alias": "professional_activity",
+                            "custom_card_name": null
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Formation Event of Group",
+                      "components": [
+                        {
+                          "config": {
+                            "node_aliases": [
+                              "formation_carried_out_by",
+                              "formation_location"
+                            ],
+                            "custom_labels": {},
+                            "nodegroup_alias": "formation",
+                            "custom_card_name": null
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Dissolution Event of Group",
+                      "components": [
+                        {
+                          "config": {
+                            "node_aliases": [
+                              "dissolution_location",
+                              "dissolution_source"
+                            ],
+                            "custom_labels": {},
+                            "nodegroup_alias": "dissolution",
+                            "custom_card_name": null
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Digital Reference to Group",
+                      "components": [
+                        {
+                          "config": {
+                            "node_aliases": [
+                              "digital_source",
+                              "digital_reference_type"
+                            ],
+                            "custom_labels": {},
+                            "nodegroup_alias": "digital_reference",
+                            "custom_card_name": null
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "component": "arches_modular_reports/ModularReport/components/LinkedSections"
+              }
+            ]
+          },
+          {
+            "name": "Related Resources",
+            "components": [
+              {
+                "config": {
+                  "sections": [
+                    {
+                      "name": "RaSColl Item - ALE Edit",
+                      "components": [
+                        {
+                          "config": {
+                            "graph_slug": "reference_and_sample_collection_item_6",
+                            "node_aliases": [],
+                            "custom_labels": {}
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/RelatedResourcesSection"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Person",
+                      "components": [
+                        {
+                          "config": {
+                            "graph_slug": "person",
+                            "node_aliases": [],
+                            "custom_labels": {}
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/RelatedResourcesSection"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Collection or Set",
+                      "components": [
+                        {
+                          "config": {
+                            "graph_slug": "collection_or_set",
+                            "node_aliases": [],
+                            "custom_labels": {}
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/RelatedResourcesSection"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Place",
+                      "components": [
+                        {
+                          "config": {
+                            "graph_slug": "place",
+                            "node_aliases": [],
+                            "custom_labels": {}
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/RelatedResourcesSection"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Textual Work",
+                      "components": [
+                        {
+                          "config": {
+                            "graph_slug": "textual_work",
+                            "node_aliases": [],
+                            "custom_labels": {}
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/RelatedResourcesSection"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Group ",
+                      "components": [
+                        {
+                          "config": {
+                            "graph_slug": "group",
+                            "node_aliases": [],
+                            "custom_labels": {}
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/RelatedResourcesSection"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Digital Resources",
+                      "components": [
+                        {
+                          "config": {
+                            "graph_slug": "digital_resources",
+                            "node_aliases": [],
+                            "custom_labels": {}
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/RelatedResourcesSection"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Reference and Sample Collection Item",
+                      "components": [
+                        {
+                          "config": {
+                            "graph_slug": "reference_and_sample_collection_item",
+                            "node_aliases": [],
+                            "custom_labels": {}
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/RelatedResourcesSection"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "component": "arches_modular_reports/ModularReport/components/LinkedSections"
+              }
+            ]
+          }
+        ]
+      },
+      "component": "arches_modular_reports/ModularReport/components/ReportTabs"
+    }
+  ]
+}
