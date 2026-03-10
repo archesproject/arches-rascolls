@@ -105,13 +105,14 @@ class Command(BaseCommand):
         nodegroups = []
         for component in components:
             print(component["nodes"])
-            nodegroup = self.build_data_section(
-                component["name"],
-                component["nodegroup"],
-                component["nodes"],
-                component.get("filters", []),
-            )
-            nodegroups.append(nodegroup)
+            if component["nodegroup"]:
+                nodegroup = self.build_data_section(
+                    component["name"],
+                    component["nodegroup"],
+                    component["nodes"],
+                    component.get("filters", []),
+                )
+                nodegroups.append(nodegroup)
         return nodegroups
 
     def build_data_section(self, name, nodegroup, nodes, filters):
