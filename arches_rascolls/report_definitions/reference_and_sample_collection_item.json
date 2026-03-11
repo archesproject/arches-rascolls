@@ -15,7 +15,6 @@
             {"name": "Manufacturer (adg - part of production?)", "nodegroup": "production_", "nodes": ["production_carried_out_by"]},
             {"name": "Catalog Number (adg - identifier in separate nodegroup)", "nodegroup": "identifier", "nodes": ["identifier_content", "identifier_type"], "filters": [{"alias": "identifier_type", "value": "cf1011fb-f600-47aa-8fc8-fde647f962b7", "field_lookup": "0__uri__icontains"}]}, 
             {"name": "Acquisition date (adg - not visible?)", "nodegroup": "", "nodes": []},
-            {"name": "Geographic origin (adg - part of production?)", "nodegroup": "production_location", "nodes": ["production_location_geo"]},
             {"name": "Acquired by", "nodegroup": "acquisition", "nodes": ["acquisition_carried_out_by", "acquisition_transferred_title_to"]},
             {"name": "Acquired from", "nodegroup": "acquisition", "nodes": ["acquisition_transferred_title_from"]},
             {"name": "Contact Name (through resource supporting not supported)", "graph_slug": "", "nodegroup": "", "nodes": []},
@@ -36,7 +35,6 @@
         ]},
         "Health and Safety": {"components": [
             {"name": "MSDS", "nodegroup": "safety_classification_reference", "nodes": ["safety_classification_source_reference"], "filters": [{"alias": "safety_classification_source_reference_type", "value": "04d31848-6945-478c-8ea6-f2d0814c0aee", "field_lookup": "0__uri__icontains"}]},
-            {"name": "NFPA information", "nodegroup": "nfpa_safety_classification", "nodes": ["nfpa_safety_classification_type"]},
             {"name": "GHS information", "nodegroup": "ghs_safety_classification", "nodes": ["ghs_safety_classification_type"]}
         ]},
         "Mixture": {"components": [

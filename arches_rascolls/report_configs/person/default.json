@@ -1,0 +1,449 @@
+{
+  "name": "Untitled Report",
+  "theme": "",
+  "components": [
+    {
+      "config": {
+        "descriptor": "Person descriptor template",
+        "node_alias_options": {}
+      },
+      "component": "arches_modular_reports/ModularReport/components/ReportHeader"
+    },
+    {
+      "config": {
+        "lists": true,
+        "export_formats": [
+          "csv",
+          "json-ld",
+          "json"
+        ]
+      },
+      "component": "arches_modular_reports/ModularReport/components/ReportToolbar"
+    },
+    {
+      "config": {
+        "node_aliases": [],
+        "custom_labels": {},
+        "image_node_alias": null
+      },
+      "component": "arches_modular_reports/ModularReport/components/ReportTombstone"
+    },
+    {
+      "config": {
+        "tabs": [
+          {
+            "name": "Data",
+            "components": [
+              {
+                "config": {
+                  "sections": [
+                    {
+                      "name": "Name of Person",
+                      "components": [
+                        {
+                          "config": {
+                            "node_aliases": [
+                              "name_content",
+                              "name_language"
+                            ],
+                            "custom_labels": {},
+                            "nodegroup_alias": "name",
+                            "custom_card_name": null
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Statement about Person",
+                      "components": [
+                        {
+                          "config": {
+                            "node_aliases": [
+                              "statement_content",
+                              "statement_type",
+                              "statement_type_metatype",
+                              "statement_language"
+                            ],
+                            "custom_labels": {},
+                            "nodegroup_alias": "statement",
+                            "custom_card_name": null
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Contact Information for Person",
+                      "components": [
+                        {
+                          "config": {
+                            "node_aliases": [
+                              "contact_point_type",
+                              "contact_point_content"
+                            ],
+                            "custom_labels": {},
+                            "nodegroup_alias": "contact_point",
+                            "custom_card_name": null
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Identifier for Person",
+                      "components": [
+                        {
+                          "config": {
+                            "node_aliases": [
+                              "identifier_type",
+                              "identifier_content"
+                            ],
+                            "custom_labels": {},
+                            "nodegroup_alias": "identifier",
+                            "custom_card_name": null
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "External URI for Person",
+                      "components": [
+                        {
+                          "config": {
+                            "node_aliases": [
+                              "exactmatch"
+                            ],
+                            "custom_labels": {},
+                            "nodegroup_alias": "exactmatch",
+                            "custom_card_name": null
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Group Person is Member of",
+                      "components": [
+                        {
+                          "config": {
+                            "node_aliases": [
+                              "member_of"
+                            ],
+                            "custom_labels": {},
+                            "nodegroup_alias": "member_of",
+                            "custom_card_name": null
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Group Joining Event of Person",
+                      "components": [
+                        {
+                          "config": {
+                            "node_aliases": [
+                              "joined_group_joined_to",
+                              "joined_group_type",
+                              "joined_group_location"
+                            ],
+                            "custom_labels": {},
+                            "nodegroup_alias": "joined_group",
+                            "custom_card_name": null
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Group Leaving Event of Person",
+                      "components": [
+                        {
+                          "config": {
+                            "node_aliases": [
+                              "left_group_left_group",
+                              "left_group_type",
+                              "left_group_location"
+                            ],
+                            "custom_labels": {},
+                            "nodegroup_alias": "left_group",
+                            "custom_card_name": null
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Textual Reference to Person",
+                      "components": [
+                        {
+                          "config": {
+                            "node_aliases": [
+                              "textual_source",
+                              "textual_reference_type"
+                            ],
+                            "custom_labels": {},
+                            "nodegroup_alias": "textual_reference",
+                            "custom_card_name": null
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Core Attributes of Person",
+                      "components": [
+                        {
+                          "config": {
+                            "node_aliases": [
+                              "gender"
+                            ],
+                            "custom_labels": {},
+                            "nodegroup_alias": "gender",
+                            "custom_card_name": null
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Nationality of Person",
+                      "components": [
+                        {
+                          "config": {
+                            "node_aliases": [
+                              "nationality"
+                            ],
+                            "custom_labels": {},
+                            "nodegroup_alias": "nationality",
+                            "custom_card_name": null
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Digital Reference for Person",
+                      "components": [
+                        {
+                          "config": {
+                            "node_aliases": [
+                              "digital_source",
+                              "digital_reference_type"
+                            ],
+                            "custom_labels": {},
+                            "nodegroup_alias": "digital_reference",
+                            "custom_card_name": null
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Ethnicity of Person",
+                      "components": [
+                        {
+                          "config": {
+                            "node_aliases": [
+                              "ethnicity"
+                            ],
+                            "custom_labels": {},
+                            "nodegroup_alias": "ethnicity",
+                            "custom_card_name": null
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Birth Event of Person",
+                      "components": [
+                        {
+                          "config": {
+                            "node_aliases": [],
+                            "custom_labels": {},
+                            "nodegroup_alias": "birth",
+                            "custom_card_name": null
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Death Event of Person",
+                      "components": [
+                        {
+                          "config": {
+                            "node_aliases": [],
+                            "custom_labels": {},
+                            "nodegroup_alias": "death",
+                            "custom_card_name": null
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Professional Activity of Person",
+                      "components": [
+                        {
+                          "config": {
+                            "node_aliases": [
+                              "profession_activity_type",
+                              "profession_activity_technique",
+                              "profession_activity_location"
+                            ],
+                            "custom_labels": {},
+                            "nodegroup_alias": "profession_activity",
+                            "custom_card_name": null
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Internal Label for Person",
+                      "components": [
+                        {
+                          "config": {
+                            "node_aliases": [
+                              "_label"
+                            ],
+                            "custom_labels": {},
+                            "nodegroup_alias": "_label",
+                            "custom_card_name": null
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/DataSection"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "component": "arches_modular_reports/ModularReport/components/LinkedSections"
+              }
+            ]
+          },
+          {
+            "name": "Related Resources",
+            "components": [
+              {
+                "config": {
+                  "sections": [
+                    {
+                      "name": "RaSColl Item - ALE Edit",
+                      "components": [
+                        {
+                          "config": {
+                            "graph_slug": "reference_and_sample_collection_item_6",
+                            "node_aliases": [],
+                            "custom_labels": {}
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/RelatedResourcesSection"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Person",
+                      "components": [
+                        {
+                          "config": {
+                            "graph_slug": "person",
+                            "node_aliases": [],
+                            "custom_labels": {}
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/RelatedResourcesSection"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Collection or Set",
+                      "components": [
+                        {
+                          "config": {
+                            "graph_slug": "collection_or_set",
+                            "node_aliases": [],
+                            "custom_labels": {}
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/RelatedResourcesSection"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Place",
+                      "components": [
+                        {
+                          "config": {
+                            "graph_slug": "place",
+                            "node_aliases": [],
+                            "custom_labels": {}
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/RelatedResourcesSection"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Textual Work",
+                      "components": [
+                        {
+                          "config": {
+                            "graph_slug": "textual_work",
+                            "node_aliases": [],
+                            "custom_labels": {}
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/RelatedResourcesSection"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Group ",
+                      "components": [
+                        {
+                          "config": {
+                            "graph_slug": "group",
+                            "node_aliases": [],
+                            "custom_labels": {}
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/RelatedResourcesSection"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Digital Resources",
+                      "components": [
+                        {
+                          "config": {
+                            "graph_slug": "digital_resources",
+                            "node_aliases": [],
+                            "custom_labels": {}
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/RelatedResourcesSection"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Reference and Sample Collection Item",
+                      "components": [
+                        {
+                          "config": {
+                            "graph_slug": "reference_and_sample_collection_item",
+                            "node_aliases": [],
+                            "custom_labels": {}
+                          },
+                          "component": "arches_modular_reports/ModularReport/components/RelatedResourcesSection"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "component": "arches_modular_reports/ModularReport/components/LinkedSections"
+              }
+            ]
+          }
+        ]
+      },
+      "component": "arches_modular_reports/ModularReport/components/ReportTabs"
+    }
+  ]
+}
