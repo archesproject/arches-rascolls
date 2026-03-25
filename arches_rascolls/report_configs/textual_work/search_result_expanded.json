@@ -1,0 +1,19 @@
+{
+  "name": "Search Result Expanded",
+  "theme": "",
+  "components": [
+    {
+      "config": {
+        "node_aliases": [
+          "name_top__content",
+          "name_top__type",
+          "name_top__language"
+        ],
+        "custom_labels": {},
+        "nodegroup_alias": "name_top_",
+        "custom_card_name": null
+      },
+      "component": "arches_modular_reports/ModularReport/components/DataSection"
+    }
+  ]
+}
