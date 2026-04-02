@@ -1,24 +1,18 @@
 <template>
-    <div
-        style="
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            padding: 1rem;
-            gap: 1rem;
-        "
-    >
-        <GraphModelSelect
-            v-model="selectedGraphId"
-            :graphs="resourceModels"
-            :loading="loadingGraphs"
-        />
+    <div style="position: relative; height: 100%; background-color: #fff">
         <GraphNetwork
             v-if="selectedGraphId"
             :graphid="selectedGraphId"
             :all-graphs="resourceModels"
-            style="flex: 1"
+            style="height: 100%"
         />
+        <div style="position: absolute; top: 8px; left: 8px; z-index: 10">
+            <GraphModelSelect
+                v-model="selectedGraphId"
+                :graphs="resourceModels"
+                :loading="loadingGraphs"
+            />
+        </div>
     </div>
 </template>
 
