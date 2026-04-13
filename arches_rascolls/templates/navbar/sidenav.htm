@@ -39,21 +39,6 @@
         </li>
         {% endif %}
 
-        <!-- Search -->
-        <li {% if "views/search" in main_script %} class="active-sub" {% endif %}>
-            <a href="{% url 'plugins' 'arches-search' %}" data-bind="click: navigate.bind(this, '{% url 'plugins' 'arches-search' %}'), attr: {'aria-labelledby': 'arches-search-label'}">                <i class="fa fa-search"></i>
-                <span class="menu-title">
-                    <strong id="search-link-label">{% trans "Advanced Search" %}</strong>
-                </span></a>
-            {% comment %} <a href="{% url 'search_home' %}" aria-labelledby="search-link-label"
-                data-bind="click:function () { navigate('{% url 'search_home' %}') }">
-                <i class="fa fa-search"></i>
-                <span class="menu-title">
-                    <strong id="search-link-label">{% trans "Search" %}</strong>
-                </span>
-            </a> {% endcomment %}
-        </li>
-
         <!-- New Resource -->
         {% if user_can_edit %}
         <li
