@@ -40,11 +40,6 @@ if [ "$FETCH_PRIVATE_DATA" = "true" ]; then
 		--query "SecretString" \
 		--output text | jq -r '.github' 2>/dev/null || true)
 
-	ADMIN_PW=$(aws secretsmanager get-secret-value \
-		--secret-id "ci/rascolls/load" \
-		--query "SecretString" \
-		--output text | jq -r '.password' 2>/dev/null || true)
-
 	if command -v apk &>/dev/null; then apk add git; fi
 
 	echo "[post_load] Cloning private repository..."
@@ -60,14 +55,6 @@ if [ "$FETCH_PRIVATE_DATA" = "true" ]; then
 	echo "[post_load] Repository contents:"
 	ls -la /tmp/rascolls-data-pkg/
 
-	if [ -n "$ADMIN_PW" ]; then
-		echo "[post_load] Changing admin password..."
-		printf "$ADMIN_PW\n$ADMIN_PW" | ${WEB_ROOT}/ENV/bin/python manage.py changepassword admin
-	else
-		echo "[post_load] WARNING: No admin password found, prompting interactively"
-		${WEB_ROOT}/ENV/bin/python manage.py changepassword admin
-	fi
-
 	echo "[post_load] Starting tile-excel imports..."
 
 	run_import /tmp/rascolls-data-pkg/Reference_and_Sample_Collection_Item.xlsx
@@ -75,6 +62,7 @@ if [ "$FETCH_PRIVATE_DATA" = "true" ]; then
 	run_import /tmp/rascolls-data-pkg/Person.xlsx
 	run_import /tmp/rascolls-data-pkg/Group.xlsx
 	run_import /tmp/rascolls-data-pkg/Collection_or_Set.xlsx
+	${WEB_ROOT}/ENV/bin/python manage.py report_configs load
 
 	echo "============================================"
 	if [ "$IMPORT_ERRORS" -gt 0 ]; then
