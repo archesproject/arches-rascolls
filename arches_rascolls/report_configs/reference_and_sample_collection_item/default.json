@@ -81,18 +81,6 @@
                         },
                         {
                           "config": {
-                            "filters": [],
-                            "node_aliases": [
-                              "production_time_begin_of_the_begin"
-                            ],
-                            "custom_labels": {},
-                            "nodegroup_alias": "production_time",
-                            "custom_card_name": "Origination date"
-                          },
-                          "component": "arches_modular_reports/ModularReport/components/DataSection"
-                        },
-                        {
-                          "config": {
                             "filters": [
                               {
                                 "alias": "identifier_type",
@@ -231,18 +219,6 @@
                     {
                       "name": "Chemical",
                       "components": [
-                        {
-                          "config": {
-                            "filters": [],
-                            "node_aliases": [
-                              "material_data_assignment_name_content_n1"
-                            ],
-                            "custom_labels": {},
-                            "nodegroup_alias": "material_data_assignment_name_n1",
-                            "custom_card_name": "Chemical name"
-                          },
-                          "component": "arches_modular_reports/ModularReport/components/DataSection"
-                        },
                         {
                           "config": {
                             "filters": [],
@@ -470,18 +446,6 @@
                         },
                         {
                           "config": {
-                            "filters": [],
-                            "node_aliases": [
-                              "production_time_begin_of_the_begin"
-                            ],
-                            "custom_labels": {},
-                            "nodegroup_alias": "production_time",
-                            "custom_card_name": "Origination date"
-                          },
-                          "component": "arches_modular_reports/ModularReport/components/DataSection"
-                        },
-                        {
-                          "config": {
                             "filters": [
                               {
                                 "alias": "identifier_type",
@@ -539,10 +503,10 @@
                           "config": {
                             "filters": [],
                             "node_aliases": [
-                              "material_data_assignment_name_content_n1"
+                              "material_data_assignment_name_content"
                             ],
                             "custom_labels": {},
-                            "nodegroup_alias": "material_data_assignment_name_n1",
+                            "nodegroup_alias": "material_data_assignment_name",
                             "custom_card_name": "Chemical name"
                           },
                           "component": "arches_modular_reports/ModularReport/components/DataSection"
@@ -691,10 +655,10 @@
                           "config": {
                             "filters": [],
                             "node_aliases": [
-                              "material_data_assignment_name_content_n1"
+                              "material_data_assignment_name_content"
                             ],
                             "custom_labels": {},
-                            "nodegroup_alias": "material_data_assignment_name_n1",
+                            "nodegroup_alias": "material_data_assignment_name",
                             "custom_card_name": "Chemical name"
                           },
                           "component": "arches_modular_reports/ModularReport/components/DataSection"

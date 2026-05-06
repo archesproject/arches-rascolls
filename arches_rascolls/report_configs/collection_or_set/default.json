@@ -108,42 +108,6 @@
                       ]
                     },
                     {
-                      "name": "Creation Event of Collection",
-                      "components": [
-                        {
-                          "config": {
-                            "node_aliases": [
-                              "created_carried_out_by",
-                              "created_location",
-                              "created_type"
-                            ],
-                            "custom_labels": {},
-                            "nodegroup_alias": "created",
-                            "custom_card_name": null
-                          },
-                          "component": "arches_modular_reports/ModularReport/components/DataSection"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Curation Event of Collection",
-                      "components": [
-                        {
-                          "config": {
-                            "node_aliases": [
-                              "curation_carried_out_by",
-                              "curation_location",
-                              "curation_type"
-                            ],
-                            "custom_labels": {},
-                            "nodegroup_alias": "curation",
-                            "custom_card_name": null
-                          },
-                          "component": "arches_modular_reports/ModularReport/components/DataSection"
-                        }
-                      ]
-                    },
-                    {
                       "name": "Internal Label of Collection",
                       "components": [
                         {
@@ -167,23 +131,6 @@
                             "node_aliases": [],
                             "custom_labels": {},
                             "nodegroup_alias": "used_in",
-                            "custom_card_name": null
-                          },
-                          "component": "arches_modular_reports/ModularReport/components/DataSection"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Textual Reference to Collection",
-                      "components": [
-                        {
-                          "config": {
-                            "node_aliases": [
-                              "textual_source",
-                              "textual_reference_type"
-                            ],
-                            "custom_labels": {},
-                            "nodegroup_alias": "textual_reference",
                             "custom_card_name": null
                           },
                           "component": "arches_modular_reports/ModularReport/components/DataSection"
@@ -224,7 +171,7 @@
                       "components": [
                         {
                           "config": {
-                            "graph_slug": "reference_and_sample_collection_item_6",
+                            "graph_slug": "reference_and_sample_collection_item",
                             "node_aliases": [],
                             "custom_labels": {}
                           },

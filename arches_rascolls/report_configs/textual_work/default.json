@@ -43,12 +43,12 @@
                         {
                           "config": {
                             "node_aliases": [
-                              "name_top__content",
-                              "name_top__type",
-                              "name_top__language"
+                              "name_content",
+                              "name_type",
+                              "name_language"
                             ],
                             "custom_labels": {},
-                            "nodegroup_alias": "name_top_",
+                            "nodegroup_alias": "name",
                             "custom_card_name": null
                           },
                           "component": "arches_modular_reports/ModularReport/components/DataSection"
@@ -61,13 +61,13 @@
                         {
                           "config": {
                             "node_aliases": [
-                              "statement_top__content",
-                              "statement_top__type",
-                              "statement_top__type_metatype",
-                              "statement_top__language"
+                              "statement_content",
+                              "statement_type",
+                              "statement_type_metatype",
+                              "statement_language"
                             ],
                             "custom_labels": {},
-                            "nodegroup_alias": "statement_top_",
+                            "nodegroup_alias": "statement",
                             "custom_card_name": null
                           },
                           "component": "arches_modular_reports/ModularReport/components/DataSection"
@@ -176,59 +176,6 @@
                       ]
                     },
                     {
-                      "name": "Creation Event of Textual Work",
-                      "components": [
-                        {
-                          "config": {
-                            "node_aliases": [
-                              "creation_partitioned__type",
-                              "creation_partitioned__carried_out_by",
-                              "creation_partitioned__location"
-                            ],
-                            "custom_labels": {},
-                            "nodegroup_alias": "creation_partitioned_",
-                            "custom_card_name": null
-                          },
-                          "component": "arches_modular_reports/ModularReport/components/DataSection"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Textual Reference to Textual Work",
-                      "components": [
-                        {
-                          "config": {
-                            "node_aliases": [
-                              "textual_source",
-                              "textual_reference_type"
-                            ],
-                            "custom_labels": {},
-                            "nodegroup_alias": "textual_reference",
-                            "custom_card_name": null
-                          },
-                          "component": "arches_modular_reports/ModularReport/components/DataSection"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Publication Event of Textual Work",
-                      "components": [
-                        {
-                          "config": {
-                            "node_aliases": [
-                              "publication_type",
-                              "publication_technique",
-                              "publication_location"
-                            ],
-                            "custom_labels": {},
-                            "nodegroup_alias": "publication",
-                            "custom_card_name": null
-                          },
-                          "component": "arches_modular_reports/ModularReport/components/DataSection"
-                        }
-                      ]
-                    },
-                    {
                       "name": "Subject(s) of Textual Work",
                       "components": [
                         {
@@ -326,7 +273,7 @@
                       "components": [
                         {
                           "config": {
-                            "graph_slug": "reference_and_sample_collection_item_6",
+                            "graph_slug": "reference_and_sample_collection_item",
                             "node_aliases": [],
                             "custom_labels": {}
                           },

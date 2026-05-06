@@ -72,23 +72,6 @@
                       ]
                     },
                     {
-                      "name": "Nationality",
-                      "components": [
-                        {
-                          "config": {
-                            "node_aliases": [
-                              "nationality",
-                              "nationality_metatype"
-                            ],
-                            "custom_labels": {},
-                            "nodegroup_alias": "nationality",
-                            "custom_card_name": null
-                          },
-                          "component": "arches_modular_reports/ModularReport/components/DataSection"
-                        }
-                      ]
-                    },
-                    {
                       "name": "Statement about Group",
                       "components": [
                         {
@@ -190,23 +173,6 @@
                       ]
                     },
                     {
-                      "name": "Textual Reference to Group",
-                      "components": [
-                        {
-                          "config": {
-                            "node_aliases": [
-                              "textual_source",
-                              "textual_reference_type"
-                            ],
-                            "custom_labels": {},
-                            "nodegroup_alias": "textual_reference",
-                            "custom_card_name": null
-                          },
-                          "component": "arches_modular_reports/ModularReport/components/DataSection"
-                        }
-                      ]
-                    },
-                    {
                       "name": "Residence or Associated Location of Group",
                       "components": [
                         {
@@ -235,40 +201,6 @@
                             ],
                             "custom_labels": {},
                             "nodegroup_alias": "professional_activity",
-                            "custom_card_name": null
-                          },
-                          "component": "arches_modular_reports/ModularReport/components/DataSection"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Formation Event of Group",
-                      "components": [
-                        {
-                          "config": {
-                            "node_aliases": [
-                              "formation_carried_out_by",
-                              "formation_location"
-                            ],
-                            "custom_labels": {},
-                            "nodegroup_alias": "formation",
-                            "custom_card_name": null
-                          },
-                          "component": "arches_modular_reports/ModularReport/components/DataSection"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Dissolution Event of Group",
-                      "components": [
-                        {
-                          "config": {
-                            "node_aliases": [
-                              "dissolution_location",
-                              "dissolution_source"
-                            ],
-                            "custom_labels": {},
-                            "nodegroup_alias": "dissolution",
                             "custom_card_name": null
                           },
                           "component": "arches_modular_reports/ModularReport/components/DataSection"
@@ -309,7 +241,7 @@
                       "components": [
                         {
                           "config": {
-                            "graph_slug": "reference_and_sample_collection_item_6",
+                            "graph_slug": "reference_and_sample_collection_item",
                             "node_aliases": [],
                             "custom_labels": {}
                           },
