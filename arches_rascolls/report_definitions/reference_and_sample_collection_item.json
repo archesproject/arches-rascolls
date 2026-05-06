@@ -24,7 +24,7 @@
             {"name": "Collection name", "nodegroup": "member_of", "nodes": ["member_of"]}
         ]},
         "Chemical": {"components": [
-            {"name": "Chemical name", "nodegroup": "material_data_assignment_name_n1", "nodes": ["material_data_assignment_name_content_n1"]},
+            {"name": "Chemical name", "nodegroup": "material_data_assignment_name", "nodes": ["material_data_assignment_name_content"]},
             {"name": "Chemical formula", "nodegroup": "chemical_material_name", "nodes": ["chemical_material_name_content"]},
             {"name": "CAS number", "nodegroup": "chemical_material_identifier", "nodes": ["chemical_material_identifier_content"]},
             {"name": "Mass or volume (adg - NOT MAPPED)", "nodegroup": "", "nodes": []},

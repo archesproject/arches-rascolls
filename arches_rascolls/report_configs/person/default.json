@@ -140,59 +140,6 @@
                       ]
                     },
                     {
-                      "name": "Group Joining Event of Person",
-                      "components": [
-                        {
-                          "config": {
-                            "node_aliases": [
-                              "joined_group_joined_to",
-                              "joined_group_type",
-                              "joined_group_location"
-                            ],
-                            "custom_labels": {},
-                            "nodegroup_alias": "joined_group",
-                            "custom_card_name": null
-                          },
-                          "component": "arches_modular_reports/ModularReport/components/DataSection"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Group Leaving Event of Person",
-                      "components": [
-                        {
-                          "config": {
-                            "node_aliases": [
-                              "left_group_left_group",
-                              "left_group_type",
-                              "left_group_location"
-                            ],
-                            "custom_labels": {},
-                            "nodegroup_alias": "left_group",
-                            "custom_card_name": null
-                          },
-                          "component": "arches_modular_reports/ModularReport/components/DataSection"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Textual Reference to Person",
-                      "components": [
-                        {
-                          "config": {
-                            "node_aliases": [
-                              "textual_source",
-                              "textual_reference_type"
-                            ],
-                            "custom_labels": {},
-                            "nodegroup_alias": "textual_reference",
-                            "custom_card_name": null
-                          },
-                          "component": "arches_modular_reports/ModularReport/components/DataSection"
-                        }
-                      ]
-                    },
-                    {
                       "name": "Core Attributes of Person",
                       "components": [
                         {
@@ -258,34 +205,6 @@
                       ]
                     },
                     {
-                      "name": "Birth Event of Person",
-                      "components": [
-                        {
-                          "config": {
-                            "node_aliases": [],
-                            "custom_labels": {},
-                            "nodegroup_alias": "birth",
-                            "custom_card_name": null
-                          },
-                          "component": "arches_modular_reports/ModularReport/components/DataSection"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Death Event of Person",
-                      "components": [
-                        {
-                          "config": {
-                            "node_aliases": [],
-                            "custom_labels": {},
-                            "nodegroup_alias": "death",
-                            "custom_card_name": null
-                          },
-                          "component": "arches_modular_reports/ModularReport/components/DataSection"
-                        }
-                      ]
-                    },
-                    {
                       "name": "Professional Activity of Person",
                       "components": [
                         {
@@ -336,7 +255,7 @@
                       "components": [
                         {
                           "config": {
-                            "graph_slug": "reference_and_sample_collection_item_6",
+                            "graph_slug": "reference_and_sample_collection_item",
                             "node_aliases": [],
                             "custom_labels": {}
                           },

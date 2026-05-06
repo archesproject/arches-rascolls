@@ -227,26 +227,6 @@
                       ]
                     },
                     {
-                      "name": "Creation Event of Digital Resource",
-                      "components": [
-                        {
-                          "config": {
-                            "node_aliases": [
-                              "creation_carried_out_by",
-                              "creation_location",
-                              "creation_type",
-                              "creation_technique",
-                              "creation_used_object"
-                            ],
-                            "custom_labels": {},
-                            "nodegroup_alias": "creation",
-                            "custom_card_name": null
-                          },
-                          "component": "arches_modular_reports/ModularReport/components/DataSection"
-                        }
-                      ]
-                    },
-                    {
                       "name": "Files of Digital Resource",
                       "components": [
                         {
@@ -298,7 +278,7 @@
                       "components": [
                         {
                           "config": {
-                            "graph_slug": "reference_and_sample_collection_item_6",
+                            "graph_slug": "reference_and_sample_collection_item",
                             "node_aliases": [],
                             "custom_labels": {}
                           },

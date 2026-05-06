@@ -137,29 +137,6 @@
             ]
           },
           {
-            "name": "Addition Event of Object to Collection",
-            "components": [
-              {
-                "config": {
-                  "node_aliases": [
-                    "addition_to_collection_added_to",
-                    "addition_to_collection_type",
-                    "addition_to_collection_carried_out_by"
-                  ],
-                  "custom_labels": {
-                    "addition_to_collection_type": "Acquisition Details",
-                    "addition_to_collection_added_to": "Acquired on",
-                    "addition_to_collection_carried_out_by": "Acquired By"
-                  },
-                  "nodegroup_alias": "addition_to_collection",
-                  "custom_card_name": "Acquisition Information",
-                  "has_write_permission": false
-                },
-                "component": "arches_rascolls/Search/components/DataSection"
-              }
-            ]
-          },
-          {
             "name": "Production Event of Object",
             "components": [
               {

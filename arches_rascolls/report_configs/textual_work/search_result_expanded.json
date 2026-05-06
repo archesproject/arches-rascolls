@@ -5,12 +5,12 @@
     {
       "config": {
         "node_aliases": [
-          "name_top__content",
-          "name_top__type",
-          "name_top__language"
+          "name_content",
+          "name_type",
+          "name_language"
         ],
         "custom_labels": {},
-        "nodegroup_alias": "name_top_",
+        "nodegroup_alias": "name",
         "custom_card_name": null
       },
       "component": "arches_modular_reports/ModularReport/components/DataSection"
