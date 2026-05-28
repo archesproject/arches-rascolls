@@ -24,7 +24,7 @@ classifiers = [
     "Intended Audience :: Information Technology",
     "License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)",
 ]
-requires-python = ">=3.11"
+requires-python = ">=3.12"
 dependencies = [
     "arches>=8.2.0a1,<9.0.0",
     "django_csp==3.8",
