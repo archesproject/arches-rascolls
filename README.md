@@ -21,6 +21,5 @@ python manage.py report_configs load
 If you load in sample data, be sure to index for arches-search-extension:
 
 ```bash
-python manage.py db_index reindex_database
+python manage.py arches_search reindex_database
 ```
-
