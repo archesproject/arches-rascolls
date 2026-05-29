@@ -24,12 +24,12 @@ classifiers = [
     "Intended Audience :: Information Technology",
     "License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)",
 ]
-requires-python = ">=3.11"
+requires-python = ">=3.12"
 dependencies = [
     "arches>=8.2.0a1,<9.0.0",
     "django_csp==3.8",
     "arches_modular_reports>=1.0.0b7",
-    "arches_search>=0.1.0a3",
+    "arches_search>=0.1.0a8",
 ]
 version = "0.0.1"
 
