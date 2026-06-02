@@ -432,6 +432,8 @@ LOGGING = {
 # https://django-ratelimit.readthedocs.io/en/stable/rates.html#rates-chapter
 RATE_LIMIT = "5/m"
 
+INDEX_BATCH_SIZE = 2000
+
 # Sets default max upload size to 15MB
 DATA_UPLOAD_MAX_MEMORY_SIZE = 15728640
 
