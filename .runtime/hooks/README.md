@@ -1,6 +1,6 @@
-# Docker Hooks
+# Runtime Hooks
 
-Hook scripts are sourced by the entrypoint at specific points in the container lifecycle.
+Hook scripts are sourced by the entrypoint at specific points in the app lifecycle.
 Place `.sh` files here named after the hook you want to implement.
 
 All hooks run with the virtualenv already activated and `APP_ROOT` as the working directory.
