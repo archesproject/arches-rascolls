@@ -1,161 +1,386 @@
 {
-  "name": "Search Item Details",
-  "components": [
-    {
-      "config": {
-        "sections": [
-          {
-            "name": "Material Information",
-            "components": [
-              {
-                "config": {
-                  "node_aliases": [
-                    "material"
-                  ],
-                  "custom_labels": {
-                    "material": "Materials"
-                  },
-                  "nodegroup_alias": "material",
-                  "custom_card_name": "Sample Type",
-                  "has_write_permission": false
-                },
-                "component": "afrc/Search/components/DataSection"
-              }
-            ]
-          },
-          {
-            "name": "Statement or Interpretation about Object",
-            "components": [
-              {
-                "config": {
-                  "filters": [
+    "name": "Search Item Details",
+    "components": [
+        {
+            "component": "arches_rascolls/Search/components/LinkedSections",
+            "config": {
+                "sections": [
                     {
-                      "alias": "statement_type",
-                      "value": [
-                        {
-                          "labels": [
+                        "name": "General Info",
+                        "components": [
                             {
-                              "list_item_id": "f147d843-7622-4109-bd73-c7fb05f1adea"
+                                "component": "arches_rascolls/Search/components/DataSection",
+                                "config": {
+                                    "nodegroup_alias": "identifier",
+                                    "node_aliases": ["identifier_content"],
+                                    "custom_labels": {
+                                        "identifier_content": "Barcode"
+                                    },
+                                    "custom_card_name": "Barcode",
+                                    "has_write_permission": false,
+                                    "filters": [
+                                        {
+                                            "alias": "identifier_type",
+                                            "value": [
+                                                {
+                                                    "labels": [
+                                                        {
+                                                            "list_item_id": "5b7771f0-ec01-4d87-bac4-0efbafe5a802"
+                                                        }
+                                                    ]
+                                                }
+                                            ],
+                                            "field_lookup": "contains"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "component": "arches_rascolls/Search/components/DataSection",
+                                "config": {
+                                    "nodegroup_alias": "name",
+                                    "node_aliases": ["name_content"],
+                                    "custom_labels": { "name_content": "Name" },
+                                    "custom_card_name": "Common Name",
+                                    "has_write_permission": false,
+                                    "filters": [
+                                        {
+                                            "alias": "name_type_",
+                                            "value": [
+                                                {
+                                                    "labels": [
+                                                        {
+                                                            "list_item_id": "09c5997e-86f4-4689-bc6e-169e299acb9b"
+                                                        }
+                                                    ]
+                                                }
+                                            ],
+                                            "field_lookup": "contains"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "component": "arches_rascolls/Search/components/DataSection",
+                                "config": {
+                                    "nodegroup_alias": "name",
+                                    "node_aliases": [
+                                        "name_content",
+                                        "name_type_"
+                                    ],
+                                    "custom_labels": {},
+                                    "custom_card_name": "Additional Names",
+                                    "has_write_permission": false,
+                                    "filters": []
+                                }
+                            },
+                            {
+                                "component": "arches_rascolls/Search/components/DataSection",
+                                "config": {
+                                    "nodegroup_alias": "material",
+                                    "node_aliases": ["material"],
+                                    "custom_labels": {
+                                        "material": "Sample Type"
+                                    },
+                                    "custom_card_name": "Sample Type",
+                                    "has_write_permission": false,
+                                    "filters": []
+                                }
+                            },
+                            {
+                                "component": "arches_rascolls/Search/components/DataSection",
+                                "config": {
+                                    "nodegroup_alias": "statement",
+                                    "node_aliases": ["statement_content"],
+                                    "custom_labels": {
+                                        "statement_content": "Physical Form"
+                                    },
+                                    "custom_card_name": "Physical Form",
+                                    "has_write_permission": false,
+                                    "filters": [
+                                        {
+                                            "alias": "statement_type",
+                                            "value": [
+                                                {
+                                                    "labels": [
+                                                        {
+                                                            "list_item_id": "f147d843-7622-4109-bd73-c7fb05f1adea"
+                                                        }
+                                                    ]
+                                                }
+                                            ],
+                                            "field_lookup": "contains"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "component": "arches_rascolls/Search/components/DataSection",
+                                "config": {
+                                    "nodegroup_alias": "attribute_type",
+                                    "node_aliases": ["attribute_type"],
+                                    "custom_labels": {
+                                        "attribute_type": "Natural/Synthetic"
+                                    },
+                                    "custom_card_name": "Natural/Synthetic",
+                                    "has_write_permission": false,
+                                    "filters": []
+                                }
+                            },
+                            {
+                                "component": "arches_rascolls/Search/components/DataSection",
+                                "config": {
+                                    "nodegroup_alias": "current_location",
+                                    "node_aliases": ["current_location"],
+                                    "custom_labels": {},
+                                    "custom_card_name": "Current Location",
+                                    "has_write_permission": false,
+                                    "filters": []
+                                }
+                            },
+                            {
+                                "component": "arches_rascolls/Search/components/DataSection",
+                                "config": {
+                                    "nodegroup_alias": "current_location_statement",
+                                    "node_aliases": [
+                                        "current_location_statement_content"
+                                    ],
+                                    "custom_labels": {
+                                        "current_location_statement_content": "Grid Location"
+                                    },
+                                    "custom_card_name": "Grid Location",
+                                    "has_write_permission": false,
+                                    "filters": []
+                                }
                             }
-                          ]
-                        }
-                      ],
-                      "field_lookup": "contains"
-                    }
-                  ],
-                  "node_aliases": [
-                    "statement_content"
-                  ],
-                  "custom_labels": {},
-                  "nodegroup_alias": "statement",
-                  "custom_card_name": "Physical Form",
-                  "has_write_permission": false
-                },
-                "component": "arches_rascolls/Search/components/DataSection"
-              }
-            ]
-          },
-          {
-            "name": "Attribute Type",
-            "components": [
-              {
-                "config": {
-                  "node_aliases": [
-                    "attribute_type",
-                    "attribute_type_metatype"
-                  ],
-                  "custom_labels": {},
-                  "nodegroup_alias": "attribute_type",
-                  "custom_card_name": "Natural/Synthetic"
-                },
-                "component": "arches_modular_reports/ModularReport/components/DataSection"
-              }
-            ]
-          },
-          {
-            "name": "Current Location of Object",
-            "components": [
-              {
-                "config": {
-                  "node_aliases": [
-                    "current_location"
-                  ],
-                  "custom_labels": {},
-                  "nodegroup_alias": "current_location",
-                  "custom_card_name": "Grid Location"
-                },
-                "component": "arches_modular_reports/ModularReport/components/DataSection"
-              }
-            ]
-          },
-          {
-            "name": "Digital Resources",
-            "components": [
-              {
-                "config": {
-                  "graph_slug": "digital_resources",
-                  "node_aliases": [
-                    "file"
-                  ],
-                  "custom_labels": {},
-                  "custom_card_name": "Images"
-                },
-                "component": "arches_rascolls/Search/components/RelatedResourcesSection"
-              }
-            ]
-          },
-          {
-            "name": "Statement or Interpretation about Object",
-            "components": [
-              {
-                "config": {
-                  "filters": [
+                        ]
+                    },
                     {
-                      "alias": "statement_type",
-                      "value": [
-                        {
-                          "labels": [
+                        "name": "Chemical Information",
+                        "components": [
                             {
-                              "list_item_id": "20d28e7a-0d4f-4055-b1cd-cf6f264e8432"
+                                "component": "arches_rascolls/Search/components/DataSection",
+                                "config": {
+                                    "nodegroup_alias": "chemical_material",
+                                    "node_aliases": [
+                                        "chemical_material_name_content"
+                                    ],
+                                    "custom_labels": {
+                                        "chemical_material_name_content": "Formula"
+                                    },
+                                    "custom_card_name": "Chemical Formula",
+                                    "has_write_permission": false,
+                                    "filters": []
+                                }
+                            },
+                            {
+                                "component": "arches_rascolls/Search/components/DataSection",
+                                "config": {
+                                    "nodegroup_alias": "material_data_assignment_name",
+                                    "node_aliases": [
+                                        "material_data_assignment_name_content"
+                                    ],
+                                    "custom_labels": {
+                                        "material_data_assignment_name_content": "Name"
+                                    },
+                                    "custom_card_name": "Chemical Name",
+                                    "has_write_permission": false,
+                                    "filters": []
+                                }
+                            },
+                            {
+                                "component": "arches_rascolls/Search/components/DataSection",
+                                "config": {
+                                    "nodegroup_alias": "chemical_material",
+                                    "node_aliases": [
+                                        "chemical_material_identifier_content"
+                                    ],
+                                    "custom_labels": {
+                                        "chemical_material_identifier_content": "CAS Number"
+                                    },
+                                    "custom_card_name": "CAS Number",
+                                    "has_write_permission": false,
+                                    "filters": [
+                                        {
+                                            "alias": "chemical_material_identifier_type",
+                                            "value": [
+                                                {
+                                                    "labels": [
+                                                        {
+                                                            "list_item_id": "c543795f-d9a3-4091-939d-fdfa7ea55824"
+                                                        }
+                                                    ]
+                                                }
+                                            ],
+                                            "field_lookup": "contains"
+                                        }
+                                    ]
+                                }
                             }
-                          ]
-                        }
-                      ],
-                      "field_lookup": "contains"
+                        ]
+                    },
+                    {
+                        "name": "Analytical Data",
+                        "components": [
+                            {
+                                "component": "arches_rascolls/Search/components/DataSection",
+                                "config": {
+                                    "nodegroup_alias": "digital_reference",
+                                    "node_aliases": ["digital_reference_type"],
+                                    "custom_labels": {
+                                        "digital_reference_type": "Data Type"
+                                    },
+                                    "custom_card_name": "Available Data",
+                                    "has_write_permission": false,
+                                    "filters": []
+                                }
+                            },
+                            {
+                                "component": "arches_rascolls/Search/components/RelatedResourcesSection",
+                                "config": {
+                                    "graph_slug": "digital_resources",
+                                    "node_aliases": ["file"],
+                                    "custom_labels": {},
+                                    "custom_card_name": "Images"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Acquisition Information",
+                        "components": [
+                            {
+                                "component": "arches_rascolls/Search/components/DataSection",
+                                "config": {
+                                    "nodegroup_alias": "acquisition_timespan",
+                                    "node_aliases": [
+                                        "acquisition_timespan_production_time_edtf"
+                                    ],
+                                    "custom_labels": {
+                                        "acquisition_timespan_production_time_edtf": "Acquisition Date"
+                                    },
+                                    "custom_card_name": "Acquisition Date",
+                                    "has_write_permission": false,
+                                    "filters": []
+                                }
+                            },
+                            {
+                                "component": "arches_rascolls/Search/components/DataSection",
+                                "config": {
+                                    "nodegroup_alias": "production_time",
+                                    "node_aliases": ["production_time_edtf"],
+                                    "custom_labels": {
+                                        "production_time_edtf": "Origination Date"
+                                    },
+                                    "custom_card_name": "Origination Date",
+                                    "has_write_permission": false,
+                                    "filters": []
+                                }
+                            },
+                            {
+                                "component": "arches_rascolls/Search/components/DataSection",
+                                "config": {
+                                    "nodegroup_alias": "production_",
+                                    "node_aliases": ["production_location"],
+                                    "custom_labels": {
+                                        "production_location": "Geographic Origin"
+                                    },
+                                    "custom_card_name": "Geographic Origin",
+                                    "has_write_permission": false,
+                                    "filters": []
+                                }
+                            },
+                            {
+                                "component": "arches_rascolls/Search/components/DataSection",
+                                "config": {
+                                    "nodegroup_alias": "member_of",
+                                    "node_aliases": ["member_of"],
+                                    "custom_labels": {
+                                        "member_of": "Collection Name"
+                                    },
+                                    "custom_card_name": "Collection Name",
+                                    "has_write_permission": false,
+                                    "filters": []
+                                }
+                            },
+                            {
+                                "component": "arches_rascolls/Search/components/DataSection",
+                                "config": {
+                                    "nodegroup_alias": "production_",
+                                    "node_aliases": [
+                                        "production_carried_out_by"
+                                    ],
+                                    "custom_labels": {
+                                        "production_carried_out_by": "Manufacturer"
+                                    },
+                                    "custom_card_name": "Manufacturer",
+                                    "has_write_permission": false,
+                                    "filters": []
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Additional Info",
+                        "components": [
+                            {
+                                "component": "arches_rascolls/Search/components/DataSection",
+                                "config": {
+                                    "nodegroup_alias": "statement",
+                                    "node_aliases": ["statement_content"],
+                                    "custom_labels": {
+                                        "statement_content": "Notes"
+                                    },
+                                    "custom_card_name": "Notes",
+                                    "has_write_permission": false,
+                                    "filters": [
+                                        {
+                                            "alias": "statement_type",
+                                            "value": [
+                                                {
+                                                    "labels": [
+                                                        {
+                                                            "list_item_id": "ed1a239d-cdf7-4860-90e4-53723b668bf3"
+                                                        }
+                                                    ]
+                                                }
+                                            ],
+                                            "field_lookup": "contains"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "component": "arches_rascolls/Search/components/DataSection",
+                                "config": {
+                                    "nodegroup_alias": "statement",
+                                    "node_aliases": ["statement_content"],
+                                    "custom_labels": {
+                                        "statement_content": "Experiments"
+                                    },
+                                    "custom_card_name": "Experiments on Sample",
+                                    "has_write_permission": false,
+                                    "filters": [
+                                        {
+                                            "alias": "statement_type",
+                                            "value": [
+                                                {
+                                                    "labels": [
+                                                        {
+                                                            "list_item_id": "1ad601d9-219b-4edb-abeb-61b76671c6e6"
+                                                        }
+                                                    ]
+                                                }
+                                            ],
+                                            "field_lookup": "contains"
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
                     }
-                  ],
-                  "node_aliases": [
-                    "statement_content"
-                  ],
-                  "custom_labels": {},
-                  "nodegroup_alias": "statement",
-                  "custom_card_name": "Notes",
-                  "has_write_permission": false
-                },
-                "component": "arches_rascolls/Search/components/DataSection"
-              }
-            ]
-          },
-          {
-            "name": "Production Event of Object",
-            "components": [
-              {
-                "config": {
-                  "node_aliases": [
-                    "production_location"
-                  ],
-                  "custom_labels": {},
-                  "nodegroup_alias": "production_",
-                  "custom_card_name": "Associated Places",
-                  "has_write_permission": false
-                },
-                "component": "arches_rascolls/Search/components/DataSection"
-              }
-            ]
-          }
-        ]
-      },
-      "component": "arches_rascolls/Search/components/LinkedSections"
-    }
-  ]
+                ]
+            }
+        }
+    ]
 }

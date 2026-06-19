@@ -1,0 +1,66 @@
+# Reference and Sample Collection Item — Report Field Mapping
+
+Crosswalk from report labels (GitHub issues #145/#147/#172, report comps, and the
+GCI FileMaker → RaSColls mapping summary) to the current graph's nodegroup/node
+aliases. The configs in this directory are the source of truth and are loaded with:
+
+```
+python manage.py report_configs load -g reference_and_sample_collection_item
+```
+
+The load command validates every `nodegroup_alias` / `node_aliases` entry against
+the graph, so a model change that renames an alias will fail loudly here.
+
+## Where each report field comes from
+
+| Report label                     | nodegroup_alias                                   | node alias(es)                                                                                                                                              | Notes                                                                                                                                                                                        |
+| -------------------------------- | ------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Barcode                          | `identifier`                                      | `identifier_content`                                                                                                                                        | filtered: `identifier_type` = Barcode (`5b7771f0-ec01-4d87-bac4-0efbafe5a802`); Old Barcode item is `1c32efcd-999c-4b07-9b1f-df8279755bb8`                                                   |
+| Common name                      | `name`                                            | `name_content`                                                                                                                                              | filtered: `name_type_` = primary name (`09c5997e-86f4-4689-bc6e-169e299acb9b`). The lists XML has a "common names" item but the bound "Name Types - Physical Thing" list uses "primary name" |
+| Additional names                 | `name`                                            | `name_content`, `name_type_`                                                                                                                                | unfiltered; server has no NOT-filter, so excluding the primary name is a Phase 2 (UI) concern                                                                                                |
+| Sample type                      | `material`                                        | `material`                                                                                                                                                  | per GCI crosswalk: FileMaker "Sample Type" (and "Typical Use") were migrated into Material(s); NOT `object_type`/`facet_type`                                                                |
+| Physical form                    | `statement`                                       | `statement_content`                                                                                                                                         | filtered: `statement_type` = sample description (`f147d843-7622-4109-bd73-c7fb05f1adea`)                                                                                                     |
+| Notes                            | `statement`                                       | `statement_content`                                                                                                                                         | filtered: `statement_type` = note (`ed1a239d-cdf7-4860-90e4-53723b668bf3`). The previous config used `20d28e7a-…`, which is not in the bound list                                            |
+| Experiments on sample            | `statement`                                       | `statement_content`                                                                                                                                         | filtered: `statement_type` = experiment description (`1ad601d9-219b-4edb-abeb-61b76671c6e6`)                                                                                                 |
+| Natural/Synthetic                | `attribute_type`                                  | `attribute_type`                                                                                                                                            | attribute type is not restricted to this property (adg)                                                                                                                                      |
+| Certified standard               | `standard_type`                                   | `standard_type`                                                                                                                                             | not in original crosswalk; standard type card used instead (adg)                                                                                                                             |
+| Origination date                 | `production_time`                                 | `production_time_edtf`                                                                                                                                      | replaces removed `production_time_begin_of_the_begin`                                                                                                                                        |
+| Acquisition date                 | `acquisition_timespan`                            | `acquisition_timespan_production_time_edtf`                                                                                                                 |                                                                                                                                                                                              |
+| Geographic origin                | `production_`                                     | `production_location`                                                                                                                                       | `production_location_geo` is geojson — unsupported in DataSections                                                                                                                           |
+| Manufacturer                     | `production_`                                     | `production_carried_out_by`                                                                                                                                 | manufacturer modeled as part of production (adg)                                                                                                                                             |
+| Catalog number                   | `identifier`                                      | `identifier_content`                                                                                                                                        | filter on Manufacturer Catalog Identifier (`cf1011fb-f600-47aa-8fc8-fde647f962b7`) when needed (adg: identifier, separate from barcode)                                                      |
+| Current location / Grid location | `current_location` + `current_location_statement` | `current_location`, `current_location_statement_content`                                                                                                    | location resource link + free-text description                                                                                                                                               |
+| Chemical formula                 | `chemical_material`                               | `chemical_material_name_content`                                                                                                                            | nodegroup consolidation: `chemical_material_name` is no longer its own nodegroup                                                                                                             |
+| Chemical name                    | `material_data_assignment_name`                   | `material_data_assignment_name_content`                                                                                                                     | per GCI crosswalk                                                                                                                                                                            |
+| CAS number                       | `chemical_material`                               | `chemical_material_identifier_content`                                                                                                                      | filtered: `chemical_material_identifier_type` = CAS RN (`c543795f-d9a3-4091-939d-fdfa7ea55824`)                                                                                              |
+| Elementals found                 | `elements_found`                                  | `elements_found`, `…_data_assignment_classification`, `…_data_assignment_assigner`                                                                          |                                                                                                                                                                                              |
+| Safety classifications           | `safety_classification`                           | `ghs_safety_classification_type`, `ghs_safety_classification_classification`, `nfpa_safety_classifcation_type`, `nfpa_safety_classification_classification` | NB: `nfpa_safety_classifcation_type` is a typo alias in the graph — intentional verbatim copy                                                                                                |
+| Safety statements                | `safety_classification_statement`                 | content + type                                                                                                                                              |                                                                                                                                                                                              |
+| Safety documents (SDS/MSDS)      | `safety_classification_reference`                 | `safety_classification_source_reference`, `…_type`                                                                                                          |                                                                                                                                                                                              |
+| Mixture type                     | `mixture_type`                                    | `mixture_type`                                                                                                                                              |                                                                                                                                                                                              |
+| Mixture components               | `has_part`                                        | `part_name_content`, `part_type`, `part_removed_from`                                                                                                       | nodegroup consolidation: `part_name` is no longer its own nodegroup; component dimensions live in child nodegroup `part_dimension`                                                           |
+| Available data                   | `digital_reference`                               | `digital_reference_type`                                                                                                                                    | images come from related `digital_resources` resources (`file` node)                                                                                                                         |
+
+## Still unmapped (no home in the current model)
+
+From the FileMaker crosswalk, these remain NOT MAPPED and are omitted from reports:
+Mass or volume, Compound type, Preparation (needs new statement type), MSDS
+yes/no flag (documents are linked instead), Color Index number, Contact
+name/phone/email (would require related-resource traversal), Barcode prefix /
+Full barcode, Formulation, Mixture pigment, Warning field.
+
+## Filter syntax
+
+Reference-datatype filters use JSONB containment (position- and URI-independent):
+
+```json
+{
+    "alias": "identifier_type",
+    "value": [{ "labels": [{ "list_item_id": "<uuid>" }] }],
+    "field_lookup": "contains"
+}
+```
+
+List item ids above were verified against the running database (lists:
+"Identifier Types - Physical Thing", "Name Types - Physical Thing",
+"Statement Types - Physical Thing", "Chemical Material Identifiers").
