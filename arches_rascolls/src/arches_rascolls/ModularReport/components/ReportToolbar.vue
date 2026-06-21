@@ -63,7 +63,7 @@ function exportData(exportFormat: ExportFormat) {
 <template>
     <div class="export-links">
         <div class="export-links-label">
-            {{ $gettext("Export as:") }}
+            {{ $gettext("Export:") }}
         </div>
         <Button
             v-for="exportFormat in exportFormats"
@@ -90,6 +90,10 @@ function exportData(exportFormat: ExportFormat) {
 .export-links-label {
     padding: 10px;
     color: var(--p-text-color);
+}
+
+.export-links :deep(.p-button-label) {
+    text-transform: uppercase;
 }
 @media print {
     .export-links {

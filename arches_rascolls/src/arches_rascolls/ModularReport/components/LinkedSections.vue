@@ -120,12 +120,28 @@ button.back-to-top {
     font-size: 1.2rem;
 }
 
+.linked-section-container :deep(.p-panel) {
+    border: 1px solid var(--p-content-border-color, #e2e8f0);
+    border-radius: 10px;
+    background: var(--p-content-background, #fff);
+}
+
+.linked-section-container :deep(.p-panel-header) {
+    padding: 1rem 1.25rem 0.25rem 1.25rem;
+}
+
+.linked-section-container :deep(.p-panel-content) {
+    padding: 0.25rem 1.25rem 1rem 1.25rem;
+}
+
 .linked-section-container .p-panel:not(:last-child) {
     margin-bottom: 1.5rem;
 }
 
 .linked-section-container h3 {
     margin: 10px 0px;
+    font-size: 1.7rem;
+    font-weight: 600;
 }
 
 @media print {
