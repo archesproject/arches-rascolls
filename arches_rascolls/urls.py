@@ -15,6 +15,7 @@ from arches_rascolls.views.map_api import (
     ResourceGeoJSONAPI,
 )
 from arches_rascolls.views.rascoll_search import RascollSearchView
+from arches_rascolls.views.resource_api import ResourceLastEditedAPI
 
 uuid_regex = settings.UUID_REGEX
 
@@ -35,6 +36,11 @@ urlpatterns = [
         "api-resource-geojson/(?P<resource_id>%s)$" % (uuid_regex),
         ResourceGeoJSONAPI.as_view(),
         name="api-resource-geojson",
+    ),
+    re_path(
+        "api-resource-last-edited/(?P<resourceid>%s)$" % (uuid_regex),
+        ResourceLastEditedAPI.as_view(),
+        name="api-resource-last-edited",
     ),
     re_path(
         r"^api-reference-collection-mvt/(?P<zoom>[0-9]+|\{z\})/(?P<x>[0-9]+|\{x\})/(?P<y>[0-9]+|\{y\}).pbf$",
