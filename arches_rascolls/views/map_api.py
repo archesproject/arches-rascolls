@@ -18,6 +18,7 @@ from arches.app.utils.file_validator import FileValidator
 from arches.app.utils.response import JSONResponse, JSONErrorResponse
 from arches.app.utils.permission_backend import user_can_read_map_layers
 from arches_rascolls.utils.geo_utils import GeoUtils
+from arches_rascolls.utils.node_lookup import get_node_id
 
 searchresults_cache = caches["searchresults"]
 
@@ -180,13 +181,16 @@ class ReferenceCollectionSearchMVT(View):
                             false
                         ) geom
                     FROM geojson_geometries gg
-                    WHERE nodeid='bda54e4a-d376-11ef-a239-0275dc2ded29' and resourceinstanceid != %s and resourceinstanceid in %s and (gg.geom && ST_TileEnvelope(%s, %s, %s, margin => (64.0 / 4096)))
+                    WHERE nodeid=%s and resourceinstanceid != %s and resourceinstanceid in %s and (gg.geom && ST_TileEnvelope(%s, %s, %s, margin => (64.0 / 4096)))
                     ) tile
                     """,
                     [
                         zoom,
                         x,
                         y,
+                        get_node_id(
+                            settings.COLLECTIONS_GRAPH_SLUG, "production_location_geo"
+                        ),
                         system_settings_resourceid,
                         tuple(resource_ids),
                         zoom,
@@ -221,13 +225,16 @@ class ReferenceCollectionMVT(View):
                         false
                     ) geom
                 FROM geojson_geometries gg
-                WHERE nodeid='bda54e4a-d376-11ef-a239-0275dc2ded29' and resourceinstanceid != %s and (gg.geom && ST_TileEnvelope(%s, %s, %s, margin => (64.0 / 4096)))
+                WHERE nodeid=%s and resourceinstanceid != %s and (gg.geom && ST_TileEnvelope(%s, %s, %s, margin => (64.0 / 4096)))
                 ) tile
                 """,
                 [
                     zoom,
                     x,
                     y,
+                    get_node_id(
+                        settings.COLLECTIONS_GRAPH_SLUG, "production_location_geo"
+                    ),
                     system_settings_resourceid,
                     zoom,
                     x,

@@ -37,6 +37,7 @@ from arches.app.utils.response import JSONResponse
 from arches.app.models.system_settings import settings
 
 from arches_rascolls.utils.geo_utils import GeoUtils
+from arches_rascolls.utils.node_lookup import get_node_id, get_nodegroup_id
 
 logger = logging.getLogger(__name__)
 
@@ -71,7 +72,12 @@ class SearchAPI(View):
                         spatial_filters |= Q(geom__intersects=geom)
 
             resourceids_in_buffer = GeoJSONGeometry.objects.filter(
-                spatial_filters, Q(node_id="bda54e4a-d376-11ef-a239-0275dc2ded29")
+                spatial_filters,
+                Q(
+                    node_id=get_node_id(
+                        settings.COLLECTIONS_GRAPH_SLUG, "production_location_geo"
+                    )
+                ),
             ).values_list("resourceinstance_id")
 
             results = set(resourceids_in_buffer).intersection(set(results))
@@ -122,7 +128,9 @@ class SearchAPI(View):
 def get_current_location(resource):
     try:
         place = (
-            resource.from_resxres.filter(node_id="bda4a954-d376-11ef-a239-0275dc2ded29")
+            resource.from_resxres.filter(
+                node_id=get_node_id(settings.COLLECTIONS_GRAPH_SLUG, "current_location")
+            )
             .first()
             .to_resource.name
         )
@@ -130,17 +138,17 @@ def get_current_location(resource):
         place = None
 
     try:
-        TileModel.objects.filter(resourceinstance_id=resource.pk)
+        statement_node_id = get_node_id(
+            settings.COLLECTIONS_GRAPH_SLUG, "current_location_statement_content"
+        )
         statement_value = (
             TileModel.objects.filter(
                 resourceinstance_id=resource.pk,
-                nodegroup_id="c7ab9e8a-08e1-11f0-a3e8-0275dc2ded29",
+                nodegroup_id=get_nodegroup_id(
+                    settings.COLLECTIONS_GRAPH_SLUG, "current_location_statement"
+                ),
             )
-            .annotate(
-                location_description=KT(
-                    f'data__{"c7abb924-08e1-11f0-a3e8-0275dc2ded29"}'
-                )
-            )
+            .annotate(location_description=KT(f"data__{statement_node_id}"))
             .values_list("location_description", flat=True)
             .first()
         )
