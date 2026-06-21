@@ -37,15 +37,15 @@ DATABASES = {
         "AUTOCOMMIT": True,
         "CONN_MAX_AGE": 0,
         "ENGINE": "django.contrib.gis.db.backends.postgis",
-        "HOST": "localhost",
-        "NAME": "arches_rascolls",
+        "HOST": os.getenv("PGHOST", "localhost"),
+        "NAME": os.getenv("PGDBNAME", "arches_rascolls"),
         "OPTIONS": {},
-        "PASSWORD": "postgis",
-        "PORT": "5432",
+        "PASSWORD": os.getenv("PGPASSWORD", "postgis"),
+        "PORT": os.getenv("PGPORT", "5432"),
         "POSTGIS_TEMPLATE": "template_postgis",
         "TEST": {"CHARSET": None, "COLLATION": None, "MIRROR": None, "NAME": None},
         "TIME_ZONE": None,
-        "USER": "postgres",
+        "USER": os.getenv("PGUSERNAME", "postgres"),
     }
 }
 
@@ -72,5 +72,9 @@ SILENCED_SYSTEM_CHECKS.append(
 )
 
 ELASTICSEARCH_HOSTS = [
-    {"scheme": "http", "host": "localhost", "port": ELASTICSEARCH_HTTP_PORT}
+    {
+        "scheme": "http",
+        "host": os.getenv("ARCHES_ESHOST", "localhost"),
+        "port": int(os.getenv("ARCHES_ESPORT", ELASTICSEARCH_HTTP_PORT)),
+    }
 ]
