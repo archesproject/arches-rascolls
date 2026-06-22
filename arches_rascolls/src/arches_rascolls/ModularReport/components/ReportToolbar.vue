@@ -85,7 +85,6 @@ function exportData(exportFormat: ExportFormat) {
     justify-content: flex-end;
     padding-inline-end: 20px;
     background-color: #f8fafc;
-    /* background-color: var(--p-panel-background); */
 }
 .export-links-label {
     padding: 10px;
