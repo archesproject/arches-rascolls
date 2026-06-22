@@ -11,13 +11,11 @@ const cssOverrides = {
         "font-family":
             '-apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, sans-serif',
     },
-    // comp: .data-table td { font-size: 0.85rem; color: #101828 }
     ".modular-report-mounting-point .p-datatable-tbody > tr > td": {
         "font-size": "1.36rem",
     },
-    // comp: .data-table th { font-size: 0.68rem; uppercase; 0.05em; #475467;
-    // background: #fafbfc } — background forced here because arches core
-    // table styles outrank the datatable headerCell token
+    // background forced with !important: arches core's table styles outrank
+    // the PrimeVue datatable headerCell token
     ".modular-report-mounting-point .p-datatable-thead > tr > th": {
         "font-size": "1.1rem",
         "font-weight": "600",
@@ -26,12 +24,10 @@ const cssOverrides = {
         color: "var(--p-text-muted-color, #475467)",
         background: "#fafbfc !important",
     },
-    // lifecycle chip and other tags read correctly at 10px root
     ".modular-report-mounting-point .p-tag": {
         "font-size": "1.2rem",
         padding: "0.35rem 0.9rem",
     },
-    // comp: .section-card .p-button { font-size: 0.8rem }
     ".modular-report-mounting-point .p-button": {
         "font-size": "1.28rem",
     },
@@ -92,7 +88,6 @@ const RascollsReportPreset = definePreset(Aura, {
             colorScheme: {
                 light: {
                     headerCell: {
-                        // comp: .data-table th background: #fafbfc (--empty-bg)
                         background: "#fafbfc",
                         hoverBackground: "{surface-100}",
                     },
