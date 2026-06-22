@@ -3,9 +3,6 @@ import Aura from "@primeuix/themes/aura";
 
 import { compileGlobalCss } from "@/arches_modular_reports/utils.ts";
 
-// The comps render at the browser-default 16px root font; arches sets
-// html { font-size: 10px }, so the comps' rem values are restated here
-// at 10px-root scale, scoped to the report mounting point.
 const cssOverrides = {
     ".modular-report-mounting-point": {
         "font-family":
@@ -33,7 +30,6 @@ const cssOverrides = {
     },
 };
 
-// Teal palette matching the RaSColls report comps (primary #0d9488 = teal-600).
 const RascollsReportPreset = definePreset(Aura, {
     semantic: {
         primary: {
