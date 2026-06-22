@@ -494,8 +494,7 @@ function initiateSoftDelete(tileId: string) {
             :first="first"
             :row-class="rowClass"
             :always-show-paginator="
-                searchResultsTotalCount >
-                Math.min(rowsPerPage, ROWS_PER_PAGE_OPTIONS[0])
+                searchResultsTotalCount > ROWS_PER_PAGE_OPTIONS[0]
             "
             :lazy="true"
             :rows="rowsPerPage"
@@ -510,7 +509,10 @@ function initiateSoftDelete(tileId: string) {
             @update:sort-order="onUpdateSortOrder"
         >
             <template
-                v-if="cardinality === CARDINALITY_N && unfilteredTotalCount > 5"
+                v-if="
+                    cardinality === CARDINALITY_N &&
+                    unfilteredTotalCount > ROWS_PER_PAGE_OPTIONS[0]
+                "
                 #header
             >
                 <div class="field-group-table-functions">
