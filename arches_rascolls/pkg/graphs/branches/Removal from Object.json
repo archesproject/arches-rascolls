@@ -1,0 +1,1388 @@
+{
+    "graph": [
+        {
+            "author": "",
+            "cards": [
+                {
+                    "active": true,
+                    "cardid": "4d7466b1-9555-41bf-8585-f823bd1025a5",
+                    "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
+                    "config": null,
+                    "constraints": [],
+                    "cssclass": null,
+                    "description": {
+                        "en": ""
+                    },
+                    "graph_id": "ab25c327-e091-498e-81f1-b683d3e1d618",
+                    "helpenabled": false,
+                    "helptext": {
+                        "en": ""
+                    },
+                    "helptitle": {
+                        "en": ""
+                    },
+                    "instructions": {
+                        "en": "(Should not be used at the same time as Production)"
+                    },
+                    "name": {
+                        "en": "Removal from Object"
+                    },
+                    "nodegroup_id": "c91c57d6-8750-43f1-a31b-9a19c4aef56c",
+                    "sortorder": 22,
+                    "source_identifier_id": null,
+                    "visible": true
+                }
+            ],
+            "cards_x_nodes_x_widgets": [
+                {
+                    "card_id": "4d7466b1-9555-41bf-8585-f823bd1025a5",
+                    "config": {
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Removal from Object_Statement_language",
+                        "placeholder": {
+                            "en": "Select an option"
+                        }
+                    },
+                    "id": "04dd61f6-fbbd-4114-8075-295a6f10bb01",
+                    "label": {
+                        "en": "Removal from Object_Statement_language"
+                    },
+                    "node_id": "08edc7ab-05bc-409c-ba69-127e28abd84b",
+                    "sortorder": 4,
+                    "source_identifier_id": null,
+                    "visible": false,
+                    "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
+                },
+                {
+                    "card_id": "4d7466b1-9555-41bf-8585-f823bd1025a5",
+                    "config": {
+                        "defaultResourceInstance": [],
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Physical Object used in Part Removal Event",
+                        "placeholder": {
+                            "en": ""
+                        }
+                    },
+                    "id": "06b8c91c-d843-4110-8592-73fd64200ecc",
+                    "label": {
+                        "en": "Physical Object used in Part Removal Event"
+                    },
+                    "node_id": "eb78b18f-acb4-4b86-92f4-b492672e879c",
+                    "sortorder": 14,
+                    "source_identifier_id": null,
+                    "visible": false,
+                    "widget_id": "ff3c400a-76ec-11e7-a793-784f435179ea"
+                },
+                {
+                    "card_id": "4d7466b1-9555-41bf-8585-f823bd1025a5",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Date of Sample Removal",
+                        "placeholder": {
+                            "en": ""
+                        }
+                    },
+                    "id": "0a48707e-b9e4-4694-8b16-734a077e64c6",
+                    "label": {
+                        "en": "Date of Sample Removal"
+                    },
+                    "node_id": "cd1e248f-2abe-443c-9197-ad6eda8b6698",
+                    "sortorder": 10,
+                    "source_identifier_id": null,
+                    "visible": true,
+                    "widget_id": "adfd15ce-dbab-11e7-86d1-0fcf08612b27"
+                },
+                {
+                    "card_id": "4d7466b1-9555-41bf-8585-f823bd1025a5",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Statement about Sample Removal",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "0ac735d2-0cfc-4e0c-bfbd-011c4acd2c1e",
+                    "label": {
+                        "en": "Statement about Sample Removal"
+                    },
+                    "node_id": "d13baac7-b040-4ffe-b5bb-a6e407ce5097",
+                    "sortorder": 11,
+                    "source_identifier_id": null,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000005"
+                },
+                {
+                    "card_id": "4d7466b1-9555-41bf-8585-f823bd1025a5",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Sample Removal Technique",
+                        "placeholder": {
+                            "en": "Select an option"
+                        }
+                    },
+                    "id": "1632b0cc-fce8-4f75-bd01-fa5ab4316de4",
+                    "label": {
+                        "en": "Sample Removal Technique"
+                    },
+                    "node_id": "5f2a3927-6c3e-4cbd-983a-b02d2e817aae",
+                    "sortorder": 9,
+                    "source_identifier_id": null,
+                    "visible": true,
+                    "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
+                },
+                {
+                    "card_id": "4d7466b1-9555-41bf-8585-f823bd1025a5",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Removal from Object_time_label",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "2ef6ca60-21b9-4858-97d1-2ad841c70dac",
+                    "label": {
+                        "en": "Removal from Object_time_label"
+                    },
+                    "node_id": "9628b7cf-8f57-4b04-9c37-b1fc0885837e",
+                    "sortorder": 1,
+                    "source_identifier_id": null,
+                    "visible": false,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "4d7466b1-9555-41bf-8585-f823bd1025a5",
+                    "config": {
+                        "defaultResourceInstance": [],
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Sample Removal Location",
+                        "placeholder": {
+                            "en": ""
+                        }
+                    },
+                    "id": "353850fc-27ff-4ea2-a1e9-38a8f9b16dda",
+                    "label": {
+                        "en": "Sample Removal Location"
+                    },
+                    "node_id": "8d726a3e-4df2-4ffd-a6e8-aa588f66f34b",
+                    "sortorder": 13,
+                    "source_identifier_id": null,
+                    "visible": false,
+                    "widget_id": "ff3c400a-76ec-11e7-a793-784f435179ea"
+                },
+                {
+                    "card_id": "4d7466b1-9555-41bf-8585-f823bd1025a5",
+                    "config": {
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Removal from Object_time_type",
+                        "placeholder": {
+                            "en": "Select an option"
+                        }
+                    },
+                    "id": "54e37c2b-ad8d-4284-a81e-3a07224aa207",
+                    "label": {
+                        "en": "Removal from Object_time_type"
+                    },
+                    "node_id": "2c20c37f-61c7-42a5-adb9-c15333947b2a",
+                    "sortorder": 5,
+                    "source_identifier_id": null,
+                    "visible": false,
+                    "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
+                },
+                {
+                    "card_id": "4d7466b1-9555-41bf-8585-f823bd1025a5",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Part Removal Event Type",
+                        "placeholder": {
+                            "en": "Select an option"
+                        }
+                    },
+                    "id": "644e1a1a-032b-46a3-82ab-6f031922aadf",
+                    "label": {
+                        "en": "Part Removal Event Type"
+                    },
+                    "node_id": "ab694473-cc13-4429-b334-2d093058540e",
+                    "sortorder": 7,
+                    "source_identifier_id": null,
+                    "visible": false,
+                    "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
+                },
+                {
+                    "card_id": "4d7466b1-9555-41bf-8585-f823bd1025a5",
+                    "config": {
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Removal from Object_Statement_type_metatype",
+                        "placeholder": {
+                            "en": "Select an option"
+                        }
+                    },
+                    "id": "75dae646-5349-4f4f-9153-88d65fa1f0f7",
+                    "label": {
+                        "en": "Removal from Object_Statement_type_metatype"
+                    },
+                    "node_id": "8d453c38-0b42-4a72-9e3d-f56667e96fcf",
+                    "sortorder": 0,
+                    "source_identifier_id": null,
+                    "visible": false,
+                    "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
+                },
+                {
+                    "card_id": "4d7466b1-9555-41bf-8585-f823bd1025a5",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Part Removal Event Label",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "7628b9d9-c6b1-4f2d-ba55-a9fde0ef9a36",
+                    "label": {
+                        "en": "Part Removal Event Label"
+                    },
+                    "node_id": "bd442bc6-a9db-42be-8a75-91b0d973ee1e",
+                    "sortorder": 16,
+                    "source_identifier_id": null,
+                    "visible": false,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "4d7466b1-9555-41bf-8585-f823bd1025a5",
+                    "config": {
+                        "defaultResourceInstance": [],
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Removal from Object_Statement_source",
+                        "placeholder": {
+                            "en": ""
+                        }
+                    },
+                    "id": "a02aa5c7-af18-45ac-a9a5-e5abe42484b4",
+                    "label": {
+                        "en": "Removal from Object_Statement_source"
+                    },
+                    "node_id": "b44f297f-80d7-466d-8522-9857bf5dc2fc",
+                    "sortorder": 12,
+                    "source_identifier_id": null,
+                    "visible": false,
+                    "widget_id": "ff3c400a-76ec-11e7-a793-784f435179ea"
+                },
+                {
+                    "card_id": "4d7466b1-9555-41bf-8585-f823bd1025a5",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Removal from Object_Statement_label",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "b2f6f21c-9905-4b22-91d6-fd53193a3549",
+                    "label": {
+                        "en": "Removal from Object_Statement_label"
+                    },
+                    "node_id": "f455a474-e08e-41bc-8167-c03cee9e930f",
+                    "sortorder": 2,
+                    "source_identifier_id": null,
+                    "visible": false,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "4d7466b1-9555-41bf-8585-f823bd1025a5",
+                    "config": {
+                        "defaultResourceInstance": [],
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Sampler",
+                        "placeholder": {
+                            "en": ""
+                        }
+                    },
+                    "id": "c80e60f9-61c9-4e6f-ab6f-cd3d5e4edf4f",
+                    "label": {
+                        "en": "Sampler"
+                    },
+                    "node_id": "db17da42-47bf-49f6-9422-09afd547ffd7",
+                    "sortorder": 8,
+                    "source_identifier_id": null,
+                    "visible": true,
+                    "widget_id": "ff3c400a-76ec-11e7-a793-784f435179ea"
+                },
+                {
+                    "card_id": "4d7466b1-9555-41bf-8585-f823bd1025a5",
+                    "config": {
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Removal from Object_Statement_type",
+                        "placeholder": {
+                            "en": "Select an option"
+                        }
+                    },
+                    "id": "cd6a07b9-9f5d-443a-8117-29e141b0d156",
+                    "label": {
+                        "en": "Removal from Object_Statement_type"
+                    },
+                    "node_id": "cc54ce6c-108c-4706-bfb1-ad6282cd5b20",
+                    "sortorder": 3,
+                    "source_identifier_id": null,
+                    "visible": false,
+                    "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
+                },
+                {
+                    "card_id": "4d7466b1-9555-41bf-8585-f823bd1025a5",
+                    "config": {
+                        "defaultResourceInstance": [],
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Physical Thing/Item Sample Removed From",
+                        "placeholder": {
+                            "en": ""
+                        }
+                    },
+                    "id": "d7b8f563-1326-4bad-a5f7-9cdb15154afc",
+                    "label": {
+                        "en": "Physical Thing/Item Sample Removed From"
+                    },
+                    "node_id": "2165ea3e-162a-4146-b32b-bddae6eca6c1",
+                    "sortorder": 6,
+                    "source_identifier_id": null,
+                    "visible": true,
+                    "widget_id": "31f3728c-7613-11e7-a139-784f435179ea"
+                },
+                {
+                    "card_id": "4d7466b1-9555-41bf-8585-f823bd1025a5",
+                    "config": {
+                        "defaultResourceInstance": [],
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Source Reference Work for Part Removal Event",
+                        "placeholder": {
+                            "en": ""
+                        }
+                    },
+                    "id": "f422922b-e1ee-422f-8c85-0b92882e995f",
+                    "label": {
+                        "en": "Source Reference Work for Part Removal Event"
+                    },
+                    "node_id": "4f09bde2-59a3-46e5-b73e-64a640a87802",
+                    "sortorder": 15,
+                    "source_identifier_id": null,
+                    "visible": false,
+                    "widget_id": "ff3c400a-76ec-11e7-a793-784f435179ea"
+                }
+            ],
+            "color": "rgba(42,157,143,0.5)",
+            "config": {
+                "activeTabIndex": 0,
+                "basemap": "streets",
+                "bearing": 0,
+                "centerX": -122.3979693,
+                "centerY": 37.79,
+                "featureColor": "#FF0000",
+                "featureEditingDisabled": true,
+                "featureLineWidth": 1,
+                "featurePointSize": 3,
+                "geocodePlaceholder": "Search",
+                "geocodeProvider": "10000000-0000-0000-0000-010000000000",
+                "geocoderVisible": true,
+                "geometryTypes": [
+                    {
+                        "id": "Point",
+                        "text": "Point"
+                    },
+                    {
+                        "id": "Line",
+                        "text": "Line"
+                    },
+                    {
+                        "id": "Polygon",
+                        "text": "Polygon"
+                    }
+                ],
+                "mapControlsHidden": false,
+                "maxZoom": 20,
+                "minZoom": 0,
+                "overlayConfigs": [],
+                "overlayOpacity": 0,
+                "pitch": 0,
+                "tabs": [
+                    {
+                        "icon": "fa fa-info",
+                        "name": "Identity",
+                        "nodegroup_ids": [
+                            "b9c1ced7-b497-11e9-a4da-a4d18cec433a",
+                            "8ddfe3ab-b31d-11e9-aff0-a4d18cec433a",
+                            "1952bb0a-b498-11e9-a679-a4d18cec433a",
+                            "22c150ca-b498-11e9-9adc-a4d18cec433a",
+                            "0b7f8d0a-b498-11e9-a189-a4d18cec433a",
+                            "cbf9ba14-b31d-11e9-8529-a4d18cec433a"
+                        ]
+                    },
+                    {
+                        "icon": "fa fa-chain",
+                        "name": "Links",
+                        "nodegroup_ids": [
+                            "f8d5fe4c-b31d-11e9-9625-a4d18cec433a",
+                            "63e49254-c444-11e9-afbe-a4d18cec433a",
+                            "2fe9f066-b31e-11e9-b3be-a4d18cec433a",
+                            "23bf9ca1-b31e-11e9-8dd7-a4d18cec433a",
+                            "b008dacc-b31d-11e9-84af-a4d18cec433a",
+                            "a030e34f-b31d-11e9-8c0b-a4d18cec433a",
+                            "4869c09e-b31e-11e9-ba58-a4d18cec433a",
+                            "fec59582-8593-11ea-97eb-acde48001122"
+                        ]
+                    },
+                    {
+                        "icon": "fa fa-calendar",
+                        "name": "Events",
+                        "nodegroup_ids": [
+                            "cc15650c-b497-11e9-a64d-a4d18cec433a",
+                            "fc651451-b497-11e9-9d7b-a4d18cec433a",
+                            "b11f217a-d2bc-11e9-8dfa-a4d18cec433a",
+                            "57f25133-d2bd-11e9-9131-a4d18cec433a",
+                            "a1490580-d2bd-11e9-af41-a4d18cec433a"
+                        ]
+                    }
+                ],
+                "zoom": 10
+            },
+            "deploymentdate": null,
+            "deploymentfile": null,
+            "description": {
+                "en": ""
+            },
+            "edges": [
+                {
+                    "description": null,
+                    "domainnode_id": "c91c57d6-8750-43f1-a31b-9a19c4aef56c",
+                    "edgeid": "3287cae9-6724-4fcd-895b-a398c6da2950",
+                    "graph_id": "ab25c327-e091-498e-81f1-b683d3e1d618",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by",
+                    "rangenode_id": "4f09bde2-59a3-46e5-b73e-64a640a87802",
+                    "source_identifier_id": null
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "cc54ce6c-108c-4706-bfb1-ad6282cd5b20",
+                    "edgeid": "49585398-5ca7-40fe-8d6e-8c6c1ae1d4b3",
+                    "graph_id": "ab25c327-e091-498e-81f1-b683d3e1d618",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
+                    "rangenode_id": "8d453c38-0b42-4a72-9e3d-f56667e96fcf",
+                    "source_identifier_id": null
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "84ab3d73-b358-4bde-870d-116f6419faaf",
+                    "edgeid": "5fe85d7a-c360-4ba1-83bd-695a01785c1d",
+                    "graph_id": "ab25c327-e091-498e-81f1-b683d3e1d618",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P72_has_language",
+                    "rangenode_id": "08edc7ab-05bc-409c-ba69-127e28abd84b",
+                    "source_identifier_id": null
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "c91c57d6-8750-43f1-a31b-9a19c4aef56c",
+                    "edgeid": "67eff1a0-707b-4228-8d29-00f4fa7b0bf4",
+                    "graph_id": "ab25c327-e091-498e-81f1-b683d3e1d618",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
+                    "rangenode_id": "ab694473-cc13-4429-b334-2d093058540e",
+                    "source_identifier_id": null
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "c91c57d6-8750-43f1-a31b-9a19c4aef56c",
+                    "edgeid": "6e801bea-520d-4d21-9d2f-003edcea0579",
+                    "graph_id": "ab25c327-e091-498e-81f1-b683d3e1d618",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P32_used_general_technique",
+                    "rangenode_id": "5f2a3927-6c3e-4cbd-983a-b02d2e817aae",
+                    "source_identifier_id": null
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "c91c57d6-8750-43f1-a31b-9a19c4aef56c",
+                    "edgeid": "95e94ed4-2a9c-48a1-a68b-dd34b046407c",
+                    "graph_id": "ab25c327-e091-498e-81f1-b683d3e1d618",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P112_diminished",
+                    "rangenode_id": "2165ea3e-162a-4146-b32b-bddae6eca6c1",
+                    "source_identifier_id": null
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "84ab3d73-b358-4bde-870d-116f6419faaf",
+                    "edgeid": "a8a7a6bd-e855-4dbc-ab1d-684a9535043a",
+                    "graph_id": "ab25c327-e091-498e-81f1-b683d3e1d618",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by",
+                    "rangenode_id": "b44f297f-80d7-466d-8522-9857bf5dc2fc",
+                    "source_identifier_id": null
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "c91c57d6-8750-43f1-a31b-9a19c4aef56c",
+                    "edgeid": "aa39645a-d1a3-457b-820b-aaa1519e2492",
+                    "graph_id": "ab25c327-e091-498e-81f1-b683d3e1d618",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by",
+                    "rangenode_id": "84ab3d73-b358-4bde-870d-116f6419faaf",
+                    "source_identifier_id": null
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "84ab3d73-b358-4bde-870d-116f6419faaf",
+                    "edgeid": "af42de86-2530-4125-bb84-f2591a6ab2bb",
+                    "graph_id": "ab25c327-e091-498e-81f1-b683d3e1d618",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P190_has_symbolic_content",
+                    "rangenode_id": "d13baac7-b040-4ffe-b5bb-a6e407ce5097",
+                    "source_identifier_id": null
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "c91c57d6-8750-43f1-a31b-9a19c4aef56c",
+                    "edgeid": "b1855e6c-b156-4fa7-96d2-ee9f265ae838",
+                    "graph_id": "ab25c327-e091-498e-81f1-b683d3e1d618",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P16_used_specific_object",
+                    "rangenode_id": "eb78b18f-acb4-4b86-92f4-b492672e879c",
+                    "source_identifier_id": null
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "c91c57d6-8750-43f1-a31b-9a19c4aef56c",
+                    "edgeid": "b747f7bb-7d81-49d1-92a2-572fa3a3a501",
+                    "graph_id": "ab25c327-e091-498e-81f1-b683d3e1d618",
+                    "name": null,
+                    "ontologyproperty": "http://www.w3.org/2000/01/rdf-schema#label",
+                    "rangenode_id": "bd442bc6-a9db-42be-8a75-91b0d973ee1e",
+                    "source_identifier_id": null
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "0793113c-ddb6-4604-a54b-56aad0f1ccad",
+                    "edgeid": "bf06b506-25c6-4e2e-9638-6e2b3785182e",
+                    "graph_id": "ab25c327-e091-498e-81f1-b683d3e1d618",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
+                    "rangenode_id": "2c20c37f-61c7-42a5-adb9-c15333947b2a",
+                    "source_identifier_id": null
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "c91c57d6-8750-43f1-a31b-9a19c4aef56c",
+                    "edgeid": "c28f752a-ba1f-4f7a-abfc-98997d018b08",
+                    "graph_id": "ab25c327-e091-498e-81f1-b683d3e1d618",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by",
+                    "rangenode_id": "db17da42-47bf-49f6-9422-09afd547ffd7",
+                    "source_identifier_id": null
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "c91c57d6-8750-43f1-a31b-9a19c4aef56c",
+                    "edgeid": "c53d6a60-7b1f-4b76-aea6-a1a21616da85",
+                    "graph_id": "ab25c327-e091-498e-81f1-b683d3e1d618",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at",
+                    "rangenode_id": "8d726a3e-4df2-4ffd-a6e8-aa588f66f34b",
+                    "source_identifier_id": null
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "84ab3d73-b358-4bde-870d-116f6419faaf",
+                    "edgeid": "cf4b7f94-f8ac-4896-96ff-0f3e03773431",
+                    "graph_id": "ab25c327-e091-498e-81f1-b683d3e1d618",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
+                    "rangenode_id": "cc54ce6c-108c-4706-bfb1-ad6282cd5b20",
+                    "source_identifier_id": null
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "0793113c-ddb6-4604-a54b-56aad0f1ccad",
+                    "edgeid": "d4993d01-3f82-41dc-9327-78c68cf618cd",
+                    "graph_id": "ab25c327-e091-498e-81f1-b683d3e1d618",
+                    "name": null,
+                    "ontologyproperty": "http://www.w3.org/2000/01/rdf-schema#label",
+                    "rangenode_id": "9628b7cf-8f57-4b04-9c37-b1fc0885837e",
+                    "source_identifier_id": null
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "0793113c-ddb6-4604-a54b-56aad0f1ccad",
+                    "edgeid": "e0fc5234-6eb8-4f53-95f9-0cb03774599d",
+                    "graph_id": "ab25c327-e091-498e-81f1-b683d3e1d618",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P82_at_some_time_within",
+                    "rangenode_id": "cd1e248f-2abe-443c-9197-ad6eda8b6698",
+                    "source_identifier_id": null
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "84ab3d73-b358-4bde-870d-116f6419faaf",
+                    "edgeid": "eaeaddf3-d4df-496c-bf2a-07604d5b0347",
+                    "graph_id": "ab25c327-e091-498e-81f1-b683d3e1d618",
+                    "name": null,
+                    "ontologyproperty": "http://www.w3.org/2000/01/rdf-schema#label",
+                    "rangenode_id": "f455a474-e08e-41bc-8167-c03cee9e930f",
+                    "source_identifier_id": null
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "c91c57d6-8750-43f1-a31b-9a19c4aef56c",
+                    "edgeid": "ee0aeb9c-ef0c-4061-b77f-d3949fd0e2a5",
+                    "graph_id": "ab25c327-e091-498e-81f1-b683d3e1d618",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span",
+                    "rangenode_id": "0793113c-ddb6-4604-a54b-56aad0f1ccad",
+                    "source_identifier_id": null
+                }
+            ],
+            "functions_x_graphs": [
+                {
+                    "config": {
+                        "descriptor_types": {
+                            "description": {
+                                "nodegroup_id": "",
+                                "string_template": "<statement_content>"
+                            },
+                            "map_popup": {
+                                "nodegroup_id": "",
+                                "string_template": "<statement_content>"
+                            },
+                            "name": {
+                                "nodegroup_id": "",
+                                "string_template": "<name_content>  #<identifier_content>"
+                            }
+                        },
+                        "triggering_nodegroups": []
+                    },
+                    "function_id": "00b2d15a-fda0-4578-b79a-784e4138664b",
+                    "graph_id": "ab25c327-e091-498e-81f1-b683d3e1d618",
+                    "id": "b975a2bd-e363-4bd0-92c2-c79c9d7d6aa3"
+                }
+            ],
+            "graphid": "ab25c327-e091-498e-81f1-b683d3e1d618",
+            "group_permissions": {},
+            "has_unpublished_changes": true,
+            "iconclass": "fa fa-asterisk",
+            "is_active": true,
+            "is_copy_immutable": false,
+            "isresource": false,
+            "jsonldcontext": "https://linked.art/ns/v1/linked-art.json",
+            "name": {
+                "en": "Removal from Object"
+            },
+            "nodegroups": [
+                {
+                    "cardinality": "1",
+                    "grouping_node_id": "c91c57d6-8750-43f1-a31b-9a19c4aef56c",
+                    "legacygroupid": null,
+                    "nodegroupid": "c91c57d6-8750-43f1-a31b-9a19c4aef56c",
+                    "parentnodegroup_id": null
+                }
+            ],
+            "nodes": [
+                {
+                    "alias": "removal_from_object_time",
+                    "config": {},
+                    "datatype": "semantic",
+                    "description": "# Specific:\n\n\n# General:\nTimeSpan is used to record a span of time between two, possibly fuzzy, points. It can also have a known duration between those points.  For example, a 1 week activity might occur sometime between the first and third quarters of the year. See: https://linked.art/model/base/#time-span-details\n\n# Arches Note:\n\n\n* BranchId: la-timespan\n* FieldId: \n",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "ab25c327-e091-498e-81f1-b683d3e1d618",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Removal from Object_time",
+                    "nodegroup_id": "c91c57d6-8750-43f1-a31b-9a19c4aef56c",
+                    "nodeid": "0793113c-ddb6-4604-a54b-56aad0f1ccad",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span",
+                    "sortorder": 8,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "removal_from_object_statement_language",
+                    "config": {
+                        "controlledList": "f7fc4f6d-fd46-4881-846f-4a08bc1a3fef",
+                        "multiValue": true
+                    },
+                    "datatype": "reference",
+                    "description": "# Specific:\n\n\n# General:\nThis is the language of the statement, drawn from a controlled vocabulary.\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "ab25c327-e091-498e-81f1-b683d3e1d618",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": false,
+                    "istopnode": false,
+                    "name": "Removal from Object_Statement_language",
+                    "nodegroup_id": "c91c57d6-8750-43f1-a31b-9a19c4aef56c",
+                    "nodeid": "08edc7ab-05bc-409c-ba69-127e28abd84b",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E56_Language",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P72_has_language",
+                    "sortorder": 3,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "removal_from_object_removed_from",
+                    "config": {
+                        "graphs": [
+                            {
+                                "graphid": "c08bae61-9726-47d8-9751-2dd04d20a7b4",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Physical Thing",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "useOntologyRelationship": false
+                            },
+                            {
+                                "graphid": "bda239c6-d376-11ef-a239-0275dc2ded29",
+                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "name": "Reference and Sample Collection Item",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "useOntologyRelationship": false
+                            }
+                        ],
+                        "searchDsl": "",
+                        "searchString": ""
+                    },
+                    "datatype": "resource-instance",
+                    "description": "# Specific:\n\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "ab25c327-e091-498e-81f1-b683d3e1d618",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "is_immutable": false,
+                    "isrequired": true,
+                    "issearchable": false,
+                    "istopnode": false,
+                    "name": "Removal from Object_Removed From",
+                    "nodegroup_id": "c91c57d6-8750-43f1-a31b-9a19c4aef56c",
+                    "nodeid": "2165ea3e-162a-4146-b32b-bddae6eca6c1",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E22_Human-Made_Object",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P112_diminished",
+                    "sortorder": 2,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "removal_from_object_time_type",
+                    "config": {
+                        "controlledList": "c53d3557-e033-4aa1-b020-0dc2b690025f",
+                        "multiValue": true
+                    },
+                    "datatype": "reference",
+                    "description": "# Specific:\n\n\n# General:\nIn order to make data both consistent and able to be customized to specific scenarios, nodes can be classified with terms from controlled vocabularies. This field gives a way to be more specific about the sort of entity, while maintaining the core information using the ontology class. See: https://linked.art/model/base/#types-and-classifications\n\n# Arches Note:\n\n\n* BranchId: la-classification\n* FieldId: \n",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "ab25c327-e091-498e-81f1-b683d3e1d618",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": false,
+                    "istopnode": false,
+                    "name": "Removal from Object_time_type",
+                    "nodegroup_id": "c91c57d6-8750-43f1-a31b-9a19c4aef56c",
+                    "nodeid": "2c20c37f-61c7-42a5-adb9-c15333947b2a",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E55_Type",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
+                    "sortorder": 1,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "removal_from_object_source",
+                    "config": {
+                        "graphs": [
+                            {
+                                "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
+                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "name": "Textual Work",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "useOntologyRelationship": false
+                            }
+                        ],
+                        "searchDsl": "",
+                        "searchString": ""
+                    },
+                    "datatype": "resource-instance-list",
+                    "description": "# Specific:\n\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "ab25c327-e091-498e-81f1-b683d3e1d618",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": false,
+                    "istopnode": false,
+                    "name": "Removal from Object_source",
+                    "nodegroup_id": "c91c57d6-8750-43f1-a31b-9a19c4aef56c",
+                    "nodeid": "4f09bde2-59a3-46e5-b73e-64a640a87802",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by",
+                    "sortorder": 6,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "removal_from_object_technique",
+                    "config": {
+                        "controlledList": "af4360a2-0809-44a3-a72a-8a5f3c15ab31",
+                        "multiValue": true
+                    },
+                    "datatype": "reference",
+                    "description": "# Specific:\n\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "ab25c327-e091-498e-81f1-b683d3e1d618",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": false,
+                    "istopnode": false,
+                    "name": "Removal from Object_technique",
+                    "nodegroup_id": "c91c57d6-8750-43f1-a31b-9a19c4aef56c",
+                    "nodeid": "5f2a3927-6c3e-4cbd-983a-b02d2e817aae",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E55_Type",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P32_used_general_technique",
+                    "sortorder": 4,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "removal_from_object_statement",
+                    "config": {},
+                    "datatype": "semantic",
+                    "description": "# Specific:\n\n\n# General:\nIn many cases, current data does not support the level of specificity that the full ontology allows, or the information is simply best expressed in human-readable form. For example, instead of a completely modeled set of parts with materials, many museum collection management systems allow only a single human-readable string for the \"medium\" or \"materials statement\".  Any time that there is a description of the resource, with or without qualification as to the type of description, then this branch can be used to record the descriptive text. See: https://linked.art/model/base/#statements-about-a-resource\n\n# Arches Note:\n\n\n* BranchId: la-statement\n* FieldId: \n",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "ab25c327-e091-498e-81f1-b683d3e1d618",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Removal from Object_Statement",
+                    "nodegroup_id": "c91c57d6-8750-43f1-a31b-9a19c4aef56c",
+                    "nodeid": "84ab3d73-b358-4bde-870d-116f6419faaf",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by",
+                    "sortorder": 9,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "removal_from_object_statement_type_metatype",
+                    "config": {
+                        "controlledList": "c82d6f85-ae67-4c28-b07a-c114f6d6ba50",
+                        "multiValue": false
+                    },
+                    "datatype": "reference",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "ab25c327-e091-498e-81f1-b683d3e1d618",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": false,
+                    "istopnode": false,
+                    "name": "Removal from Object_Statement_type_metatype",
+                    "nodegroup_id": "c91c57d6-8750-43f1-a31b-9a19c4aef56c",
+                    "nodeid": "8d453c38-0b42-4a72-9e3d-f56667e96fcf",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E55_Type",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
+                    "sortorder": 0,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "removal_from_object_location",
+                    "config": {
+                        "graphs": [
+                            {
+                                "graphid": "3dda9f54-d771-11ef-825b-0275dc2ded29",
+                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "name": "Place",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "useOntologyRelationship": false
+                            }
+                        ],
+                        "searchDsl": "",
+                        "searchString": ""
+                    },
+                    "datatype": "resource-instance-list",
+                    "description": "# Specific:\n\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "ab25c327-e091-498e-81f1-b683d3e1d618",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": false,
+                    "istopnode": false,
+                    "name": "Removal from Object_location",
+                    "nodegroup_id": "c91c57d6-8750-43f1-a31b-9a19c4aef56c",
+                    "nodeid": "8d726a3e-4df2-4ffd-a6e8-aa588f66f34b",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at",
+                    "sortorder": 7,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "removal_from_object_time_label",
+                    "config": {},
+                    "datatype": "string",
+                    "description": "# Specific:\n\n\n# General:\nEvery node should have a _label that provides a human-readable summary label for the node. This is intended not for end users, but for developers looking at the data. See:  https://linked.art/model/base/#core-properties\n\n# Arches Note:\n\n\n* BranchId: la-label\n* FieldId: \n",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "ab25c327-e091-498e-81f1-b683d3e1d618",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": false,
+                    "istopnode": false,
+                    "name": "Removal from Object_time_label",
+                    "nodegroup_id": "c91c57d6-8750-43f1-a31b-9a19c4aef56c",
+                    "nodeid": "9628b7cf-8f57-4b04-9c37-b1fc0885837e",
+                    "ontologyclass": "http://www.w3.org/2001/XMLSchema#string",
+                    "parentproperty": "http://www.w3.org/2000/01/rdf-schema#label",
+                    "sortorder": 0,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "removal_from_object_type",
+                    "config": {
+                        "controlledList": "00000000-0000-0000-0000-000000000005",
+                        "multiValue": true
+                    },
+                    "datatype": "reference",
+                    "description": "# Specific:\n\n\n# General:\nIn order to make data both consistent and able to be customized to specific scenarios, nodes can be classified with terms from controlled vocabularies. This field gives a way to be more specific about the sort of entity, while maintaining the core information using the ontology class. See: https://linked.art/model/base/#types-and-classifications\n\n# Arches Note:\n\n\n* BranchId: la-classification\n* FieldId: \n",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "ab25c327-e091-498e-81f1-b683d3e1d618",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": false,
+                    "istopnode": false,
+                    "name": "Removal from Object_type",
+                    "nodegroup_id": "c91c57d6-8750-43f1-a31b-9a19c4aef56c",
+                    "nodeid": "ab694473-cc13-4429-b334-2d093058540e",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E55_Type",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
+                    "sortorder": 1,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "removal_from_object_statement_source",
+                    "config": {
+                        "graphs": [
+                            {
+                                "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
+                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "name": "Textual Work",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "useOntologyRelationship": false
+                            }
+                        ],
+                        "searchDsl": "",
+                        "searchString": ""
+                    },
+                    "datatype": "resource-instance-list",
+                    "description": "# Specific:\n\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "ab25c327-e091-498e-81f1-b683d3e1d618",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": false,
+                    "istopnode": false,
+                    "name": "Removal from Object_Statement_source",
+                    "nodegroup_id": "c91c57d6-8750-43f1-a31b-9a19c4aef56c",
+                    "nodeid": "b44f297f-80d7-466d-8522-9857bf5dc2fc",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by",
+                    "sortorder": 4,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "removal_from_object_label",
+                    "config": {},
+                    "datatype": "string",
+                    "description": "# Specific:\n\n\n# General:\nEvery node should have a _label that provides a human-readable summary label for the node. This is intended not for end users, but for developers looking at the data. See:  https://linked.art/model/base/#core-properties\n\n# Arches Note:\n\n\n* BranchId: la-label\n* FieldId: \n",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "ab25c327-e091-498e-81f1-b683d3e1d618",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": false,
+                    "istopnode": false,
+                    "name": "Removal from Object_label",
+                    "nodegroup_id": "c91c57d6-8750-43f1-a31b-9a19c4aef56c",
+                    "nodeid": "bd442bc6-a9db-42be-8a75-91b0d973ee1e",
+                    "ontologyclass": "http://www.w3.org/2001/XMLSchema#string",
+                    "parentproperty": "http://www.w3.org/2000/01/rdf-schema#label",
+                    "sortorder": 0,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "removal_from_object",
+                    "config": {},
+                    "datatype": "semantic",
+                    "description": "# Specific:\nThis branch can be used for activities associated with other entities, such as the production of an object, or the professional activity of a group or person.\nThe class and relating property should be customized if possible.\n\n* BranchId: la-activity-base\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "ab25c327-e091-498e-81f1-b683d3e1d618",
+                    "hascustomalias": false,
+                    "is_collector": true,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": true,
+                    "name": "Removal from Object",
+                    "nodegroup_id": "c91c57d6-8750-43f1-a31b-9a19c4aef56c",
+                    "nodeid": "c91c57d6-8750-43f1-a31b-9a19c4aef56c",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E80_Part_Removal",
+                    "parentproperty": "",
+                    "sortorder": 26,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "removal_from_object_statement_type",
+                    "config": {
+                        "controlledList": "1adae7ea-4884-432f-af44-c9aea3a48a3d",
+                        "multiValue": true
+                    },
+                    "datatype": "reference",
+                    "description": "# Specific:\n\n\n# General:\nThis branch allows the classifications themselves to be classified in order to know what sort of type it is, without recognizing all of them individually. This is important when the set of first degree types is not easily enumerable, such as classifications for the type of object or work.  See: https://linked.art/model/base/#types-of-types\n\n# Arches Note:\nNote that the metatype is hidden from view. Ensure that it has a default set when imported into another branch or model.\n\n* BranchId: la-meta-classification\n* FieldId: \n",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "ab25c327-e091-498e-81f1-b683d3e1d618",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": false,
+                    "istopnode": false,
+                    "name": "Removal from Object_Statement_type",
+                    "nodegroup_id": "c91c57d6-8750-43f1-a31b-9a19c4aef56c",
+                    "nodeid": "cc54ce6c-108c-4706-bfb1-ad6282cd5b20",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E55_Type",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
+                    "sortorder": 1,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "removal_from_object_time_edtf",
+                    "config": {
+                        "fuzzy_day_padding": 1,
+                        "fuzzy_month_padding": 1,
+                        "fuzzy_season_padding": 12,
+                        "fuzzy_year_padding": 1,
+                        "multiplier_if_approximate": 1,
+                        "multiplier_if_both": 1,
+                        "multiplier_if_uncertain": 1
+                    },
+                    "datatype": "edtf",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "ab25c327-e091-498e-81f1-b683d3e1d618",
+                    "hascustomalias": true,
+                    "is_collector": false,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": false,
+                    "istopnode": false,
+                    "name": "Removal from Object_time_edtf",
+                    "nodegroup_id": "c91c57d6-8750-43f1-a31b-9a19c4aef56c",
+                    "nodeid": "cd1e248f-2abe-443c-9197-ad6eda8b6698",
+                    "ontologyclass": "http://www.w3.org/2000/01/rdf-schema#Literal",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P82_at_some_time_within",
+                    "sortorder": 2,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "removal_from_object_statement_content",
+                    "config": {},
+                    "datatype": "string",
+                    "description": "# Specific:\n\n\n# General:\nThis field records the string content of the statement.\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "ab25c327-e091-498e-81f1-b683d3e1d618",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": false,
+                    "istopnode": false,
+                    "name": "Removal from Object_Statement_content",
+                    "nodegroup_id": "c91c57d6-8750-43f1-a31b-9a19c4aef56c",
+                    "nodeid": "d13baac7-b040-4ffe-b5bb-a6e407ce5097",
+                    "ontologyclass": "http://www.w3.org/2001/XMLSchema#string",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P190_has_symbolic_content",
+                    "sortorder": 2,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "removal_from_object_carried_out_by",
+                    "config": {
+                        "graphs": [
+                            {
+                                "graphid": "36956e50-d770-11ef-8f5d-0275dc2ded29",
+                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "name": "Group",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "useOntologyRelationship": false
+                            },
+                            {
+                                "graphid": "e1d0ea1a-d770-11ef-8c40-0275dc2ded29",
+                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "name": "Person",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "useOntologyRelationship": false
+                            }
+                        ],
+                        "searchDsl": "",
+                        "searchString": ""
+                    },
+                    "datatype": "resource-instance-list",
+                    "description": "# Specific:\n\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "ab25c327-e091-498e-81f1-b683d3e1d618",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": false,
+                    "istopnode": false,
+                    "name": "Removal from Object_carried out by",
+                    "nodegroup_id": "c91c57d6-8750-43f1-a31b-9a19c4aef56c",
+                    "nodeid": "db17da42-47bf-49f6-9422-09afd547ffd7",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E39_Actor",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by",
+                    "sortorder": 3,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "removal_from_object_used_object",
+                    "config": {
+                        "graphs": [
+                            {
+                                "graphid": "bda239c6-d376-11ef-a239-0275dc2ded29",
+                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "name": "Reference and Sample Collection Item",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "useOntologyRelationship": false
+                            }
+                        ],
+                        "searchDsl": "",
+                        "searchString": ""
+                    },
+                    "datatype": "resource-instance-list",
+                    "description": "# Specific:\n\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "ab25c327-e091-498e-81f1-b683d3e1d618",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": false,
+                    "istopnode": false,
+                    "name": "Removal from Object_used object",
+                    "nodegroup_id": "c91c57d6-8750-43f1-a31b-9a19c4aef56c",
+                    "nodeid": "eb78b18f-acb4-4b86-92f4-b492672e879c",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E22_Human-Made_Object",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P16_used_specific_object",
+                    "sortorder": 5,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "removal_from_object_statement_label",
+                    "config": {},
+                    "datatype": "string",
+                    "description": "# Specific:\n\n\n# General:\nEvery node should have a _label that provides a human-readable summary label for the node. This is intended not for end users, but for developers looking at the data. See:  https://linked.art/model/base/#core-properties\n\n# Arches Note:\n\n\n* BranchId: la-label\n* FieldId: \n",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "ab25c327-e091-498e-81f1-b683d3e1d618",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": false,
+                    "istopnode": false,
+                    "name": "Removal from Object_Statement_label",
+                    "nodegroup_id": "c91c57d6-8750-43f1-a31b-9a19c4aef56c",
+                    "nodeid": "f455a474-e08e-41bc-8167-c03cee9e930f",
+                    "ontologyclass": "http://www.w3.org/2001/XMLSchema#string",
+                    "parentproperty": "http://www.w3.org/2000/01/rdf-schema#label",
+                    "sortorder": 0,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": null
+                }
+            ],
+            "ontology_id": "0b1f5462-faa7-11e9-8f09-3af9d3b32b71",
+            "publication": {
+                "graph_id": "ab25c327-e091-498e-81f1-b683d3e1d618",
+                "most_recent_edit_id": null,
+                "notes": null,
+                "publicationid": "dbe6586b-5785-4391-b406-9469a32b30c2",
+                "published_time": "2026-04-13T17:29:45.139"
+            },
+            "relatable_resource_model_ids": [],
+            "resource_2_resource_constraints": [],
+            "resource_instance_lifecycle": null,
+            "root": {
+                "alias": "removal_from_object",
+                "config": {},
+                "datatype": "semantic",
+                "description": "# Specific:\nThis branch can be used for activities associated with other entities, such as the production of an object, or the professional activity of a group or person.\nThe class and relating property should be customized if possible.\n\n* BranchId: la-activity-base\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
+                "exportable": false,
+                "fieldname": null,
+                "graph_id": "ab25c327-e091-498e-81f1-b683d3e1d618",
+                "hascustomalias": false,
+                "is_collector": true,
+                "is_immutable": false,
+                "isrequired": false,
+                "issearchable": true,
+                "istopnode": true,
+                "name": "Removal from Object",
+                "nodegroup_id": "c91c57d6-8750-43f1-a31b-9a19c4aef56c",
+                "nodeid": "c91c57d6-8750-43f1-a31b-9a19c4aef56c",
+                "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E80_Part_Removal",
+                "sortorder": 26,
+                "source_identifier_id": null,
+                "sourcebranchpublication_id": null
+            },
+            "slug": "reference_and_sample_collection_item_9_3",
+            "source_identifier_id": null,
+            "spatial_views": [],
+            "subtitle": {
+                "en": ""
+            },
+            "template_id": "b0908227-ecc2-48dd-931b-314a9031caa0",
+            "user_permissions": {},
+            "version": ""
+        }
+    ],
+    "metadata": {
+        "db": "PostgreSQL 16.13 on aarch64-unknown-linux-gnu, compiled by aarch64-unknown-linux-gnu-gcc (GCC) 12.4.0, 64-bit",
+        "git hash": "fatal: not a git repository (or any of the parent directories): .git",
+        "os": "Linux",
+        "os version": "6.17.0-1017-aws"
+    }
+}

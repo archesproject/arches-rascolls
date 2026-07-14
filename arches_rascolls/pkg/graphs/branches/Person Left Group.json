@@ -1,0 +1,1764 @@
+{
+    "graph": [
+        {
+            "author": "",
+            "cards": [
+                {
+                    "active": true,
+                    "cardid": "130e225a-d29c-4bf8-9d23-311108ec4075",
+                    "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
+                    "config": null,
+                    "constraints": [],
+                    "cssclass": null,
+                    "description": {
+                        "en": "# Specific:\n\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n"
+                    },
+                    "graph_id": "2695a9ac-1ab4-4187-99c4-f39aedd45992",
+                    "helpenabled": false,
+                    "helptext": {
+                        "en": ""
+                    },
+                    "helptitle": {
+                        "en": ""
+                    },
+                    "instructions": {
+                        "en": ""
+                    },
+                    "name": {
+                        "en": "Name for Group Leaving Event"
+                    },
+                    "nodegroup_id": "7aaf25c7-7dfb-4eb5-a494-16ebc0b7de6d",
+                    "sortorder": 1,
+                    "source_identifier_id": null,
+                    "visible": true
+                },
+                {
+                    "active": true,
+                    "cardid": "a7da1f68-b2fc-46f6-9d93-df7ffae1d51b",
+                    "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
+                    "config": null,
+                    "constraints": [],
+                    "cssclass": null,
+                    "description": {
+                        "en": "# Specific:\n\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n"
+                    },
+                    "graph_id": "2695a9ac-1ab4-4187-99c4-f39aedd45992",
+                    "helpenabled": false,
+                    "helptext": {
+                        "en": ""
+                    },
+                    "helptitle": {
+                        "en": ""
+                    },
+                    "instructions": {
+                        "en": ""
+                    },
+                    "name": {
+                        "en": "TimeSpan of Group Leaving Event"
+                    },
+                    "nodegroup_id": "959adc64-8376-4fda-bb1b-6abf7f57b0c5",
+                    "sortorder": 0,
+                    "source_identifier_id": null,
+                    "visible": true
+                },
+                {
+                    "active": true,
+                    "cardid": "ba0e72b6-f024-453f-be37-4d65930669c7",
+                    "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
+                    "config": null,
+                    "constraints": [],
+                    "cssclass": null,
+                    "description": {
+                        "en": "# Specific:\n\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n"
+                    },
+                    "graph_id": "2695a9ac-1ab4-4187-99c4-f39aedd45992",
+                    "helpenabled": false,
+                    "helptext": {
+                        "en": ""
+                    },
+                    "helptitle": {
+                        "en": ""
+                    },
+                    "instructions": {
+                        "en": ""
+                    },
+                    "name": {
+                        "en": "Statement about Group Leaving Event"
+                    },
+                    "nodegroup_id": "8750d49b-7a9e-41cf-a788-5bc5e4fdc0f0",
+                    "sortorder": 2,
+                    "source_identifier_id": null,
+                    "visible": true
+                },
+                {
+                    "active": true,
+                    "cardid": "ec90a1c9-43fc-4fed-a2aa-d0a21cdff94d",
+                    "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
+                    "config": null,
+                    "constraints": [],
+                    "cssclass": null,
+                    "description": {
+                        "en": ""
+                    },
+                    "graph_id": "2695a9ac-1ab4-4187-99c4-f39aedd45992",
+                    "helpenabled": false,
+                    "helptext": {
+                        "en": ""
+                    },
+                    "helptitle": {
+                        "en": ""
+                    },
+                    "instructions": {
+                        "en": ""
+                    },
+                    "name": {
+                        "en": "Person Left Group"
+                    },
+                    "nodegroup_id": "b6255ba9-50e2-4ba8-9b6a-e94b12a2d18f",
+                    "sortorder": 7,
+                    "source_identifier_id": null,
+                    "visible": true
+                }
+            ],
+            "cards_x_nodes_x_widgets": [
+                {
+                    "card_id": "ba0e72b6-f024-453f-be37-4d65930669c7",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Statement Type Metatype",
+                        "placeholder": {
+                            "en": "Select an option"
+                        }
+                    },
+                    "id": "27319271-e049-42da-8ee8-949df6fe0793",
+                    "label": {
+                        "en": "Statement Type Metatype"
+                    },
+                    "node_id": "d3155869-52aa-4d8c-9a5e-f4cdeac9dd9e",
+                    "sortorder": 2,
+                    "source_identifier_id": null,
+                    "visible": true,
+                    "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
+                },
+                {
+                    "card_id": "ec90a1c9-43fc-4fed-a2aa-d0a21cdff94d",
+                    "config": {
+                        "defaultResourceInstance": [],
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Physical Object used in Group Leaving Event",
+                        "placeholder": {
+                            "en": ""
+                        }
+                    },
+                    "id": "4527e7f0-9f7c-42c0-b525-caa9fbd273c2",
+                    "label": {
+                        "en": "Physical Object used in Group Leaving Event"
+                    },
+                    "node_id": "7d7efb01-ea50-4517-b845-878ad90d2f23",
+                    "sortorder": 5,
+                    "source_identifier_id": null,
+                    "visible": false,
+                    "widget_id": "ff3c400a-76ec-11e7-a793-784f435179ea"
+                },
+                {
+                    "card_id": "a7da1f68-b2fc-46f6-9d93-df7ffae1d51b",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "TimeSpan Label",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "46d92ae8-ec7b-4fd7-8f1c-1216398b2649",
+                    "label": {
+                        "en": "TimeSpan Label"
+                    },
+                    "node_id": "adf98081-7d2b-496d-875e-049e47d89802",
+                    "sortorder": 5,
+                    "source_identifier_id": null,
+                    "visible": false,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "ba0e72b6-f024-453f-be37-4d65930669c7",
+                    "config": {
+                        "defaultValue": [
+                            {
+                                "labels": [
+                                    {
+                                        "id": "1149efe3-87cd-4557-9e18-04ceb3fdeec6",
+                                        "language_id": "en",
+                                        "list_item_id": "52946693-29d9-4292-a223-b20465e187ea",
+                                        "value": "brief text",
+                                        "valuetype_id": "prefLabel"
+                                    }
+                                ],
+                                "list_id": "1adae7ea-4884-432f-af44-c9aea3a48a3d",
+                                "uri": "http://localhost:8000/plugins/controlled-list-manager/item/b2f45594-6c10-49d7-a4b7-24e5ca839838"
+                            }
+                        ],
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Statement Type",
+                        "placeholder": {
+                            "en": "Select an option"
+                        }
+                    },
+                    "id": "49bbb64f-a188-497c-9493-301d31d1c96a",
+                    "label": {
+                        "en": "Statement Type"
+                    },
+                    "node_id": "90273a65-0236-4221-958f-019805433406",
+                    "sortorder": 1,
+                    "source_identifier_id": null,
+                    "visible": true,
+                    "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
+                },
+                {
+                    "card_id": "130e225a-d29c-4bf8-9d23-311108ec4075",
+                    "config": {
+                        "defaultValue": [],
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Name Type",
+                        "placeholder": {
+                            "en": "Select an option"
+                        }
+                    },
+                    "id": "53f23c80-3203-4ef8-9efd-6461d256556c",
+                    "label": {
+                        "en": "Name Type"
+                    },
+                    "node_id": "6b9aa0aa-3bd4-44cb-8d3a-85987242575d",
+                    "sortorder": 1,
+                    "source_identifier_id": null,
+                    "visible": true,
+                    "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
+                },
+                {
+                    "card_id": "ec90a1c9-43fc-4fed-a2aa-d0a21cdff94d",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Group Leaving Event Technique",
+                        "placeholder": {
+                            "en": "Select an option"
+                        }
+                    },
+                    "id": "56ac1622-2c34-4d84-95d5-3c66ef424e69",
+                    "label": {
+                        "en": "Group Leaving Event Technique"
+                    },
+                    "node_id": "ccc6dc17-93ac-44af-9c4a-ac9d3c486842",
+                    "sortorder": 3,
+                    "source_identifier_id": null,
+                    "visible": false,
+                    "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
+                },
+                {
+                    "card_id": "ec90a1c9-43fc-4fed-a2aa-d0a21cdff94d",
+                    "config": {
+                        "defaultResourceInstance": [],
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Source Reference Work for Group Leaving Event",
+                        "placeholder": {
+                            "en": ""
+                        }
+                    },
+                    "id": "56b56742-0a34-4708-bbbd-c61d1f18c9bd",
+                    "label": {
+                        "en": "Source Reference Work for Group Leaving Event"
+                    },
+                    "node_id": "0e00149b-7949-410a-ad67-00122ecaf0ea",
+                    "sortorder": 11,
+                    "source_identifier_id": null,
+                    "visible": false,
+                    "widget_id": "ff3c400a-76ec-11e7-a793-784f435179ea"
+                },
+                {
+                    "card_id": "ec90a1c9-43fc-4fed-a2aa-d0a21cdff94d",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Group Leaving Event Label",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "6347a178-921c-4f0b-a65a-4ecc9eac888f",
+                    "label": {
+                        "en": "Group Leaving Event Label"
+                    },
+                    "node_id": "29f15e60-56ad-43b0-ae31-752703f4049d",
+                    "sortorder": 12,
+                    "source_identifier_id": null,
+                    "visible": false,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "ba0e72b6-f024-453f-be37-4d65930669c7",
+                    "config": {
+                        "defaultValue": [
+                            {
+                                "labels": [
+                                    {
+                                        "id": "bf48b2c6-3485-470c-be5d-37e53f76bade",
+                                        "language_id": "fr",
+                                        "list_item_id": "38729dbe-6d1c-48ce-bf47-e2a18945600e",
+                                        "value": "anglais",
+                                        "valuetype_id": "prefLabel"
+                                    },
+                                    {
+                                        "id": "e32d8c6d-319a-4382-8c26-06e4afb153bf",
+                                        "language_id": "de",
+                                        "list_item_id": "38729dbe-6d1c-48ce-bf47-e2a18945600e",
+                                        "value": "Englisch",
+                                        "valuetype_id": "prefLabel"
+                                    },
+                                    {
+                                        "id": "bc35776b-996f-4fc1-bd25-9f6432c1f349",
+                                        "language_id": "en",
+                                        "list_item_id": "38729dbe-6d1c-48ce-bf47-e2a18945600e",
+                                        "value": "English (language)",
+                                        "valuetype_id": "prefLabel"
+                                    }
+                                ],
+                                "list_id": "f7fc4f6d-fd46-4881-846f-4a08bc1a3fef",
+                                "uri": "http://localhost:8000/plugins/controlled-list-manager/item/38729dbe-6d1c-48ce-bf47-e2a18945600e"
+                            }
+                        ],
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Statement Language",
+                        "placeholder": {
+                            "en": "Select an option"
+                        }
+                    },
+                    "id": "85e3870a-9a65-46ca-a430-286e9ae3988e",
+                    "label": {
+                        "en": "Statement Language"
+                    },
+                    "node_id": "e38cb29b-a8c4-4340-8a8b-2dec2c021ad3",
+                    "sortorder": 3,
+                    "source_identifier_id": null,
+                    "visible": true,
+                    "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
+                },
+                {
+                    "card_id": "ba0e72b6-f024-453f-be37-4d65930669c7",
+                    "config": {
+                        "defaultResourceInstance": [],
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Source Reference Work for Statement about Group Leaving Event",
+                        "placeholder": {
+                            "en": ""
+                        }
+                    },
+                    "id": "864accd4-7ef3-47f5-9707-548ed080f6c0",
+                    "label": {
+                        "en": "Source Reference Work for Statement about Group Leaving Event"
+                    },
+                    "node_id": "5968125b-0bc2-4e2b-8233-931412358f3c",
+                    "sortorder": 4,
+                    "source_identifier_id": null,
+                    "visible": false,
+                    "widget_id": "ff3c400a-76ec-11e7-a793-784f435179ea"
+                },
+                {
+                    "card_id": "130e225a-d29c-4bf8-9d23-311108ec4075",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Name",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "9012cef2-b013-404a-b118-ea9a311b6840",
+                    "label": {
+                        "en": "Name"
+                    },
+                    "node_id": "b1c97a26-ea44-4374-b546-a42f589a96a6",
+                    "sortorder": 0,
+                    "source_identifier_id": null,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "ec90a1c9-43fc-4fed-a2aa-d0a21cdff94d",
+                    "config": {
+                        "defaultResourceInstance": [],
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Group Left ",
+                        "placeholder": {
+                            "en": ""
+                        }
+                    },
+                    "id": "99073ba9-e06a-4ab3-808f-3422e7638715",
+                    "label": {
+                        "en": "Group Left "
+                    },
+                    "node_id": "be3482fd-8a22-4423-b582-0d8b289e3530",
+                    "sortorder": 0,
+                    "source_identifier_id": null,
+                    "visible": true,
+                    "widget_id": "31f3728c-7613-11e7-a139-784f435179ea"
+                },
+                {
+                    "card_id": "ec90a1c9-43fc-4fed-a2aa-d0a21cdff94d",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Group Leaving Event Type",
+                        "placeholder": {
+                            "en": "Select an option"
+                        }
+                    },
+                    "id": "a33bc349-fe4f-4b1e-b731-d7b013d3b233",
+                    "label": {
+                        "en": "Group Leaving Event Type"
+                    },
+                    "node_id": "30593833-2b44-4d4d-8b3e-9d71790db069",
+                    "sortorder": 1,
+                    "source_identifier_id": null,
+                    "visible": true,
+                    "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
+                },
+                {
+                    "card_id": "130e225a-d29c-4bf8-9d23-311108ec4075",
+                    "config": {
+                        "defaultValue": [
+                            {
+                                "labels": [
+                                    {
+                                        "id": "bf48b2c6-3485-470c-be5d-37e53f76bade",
+                                        "language_id": "fr",
+                                        "list_item_id": "38729dbe-6d1c-48ce-bf47-e2a18945600e",
+                                        "value": "anglais",
+                                        "valuetype_id": "prefLabel"
+                                    },
+                                    {
+                                        "id": "e32d8c6d-319a-4382-8c26-06e4afb153bf",
+                                        "language_id": "de",
+                                        "list_item_id": "38729dbe-6d1c-48ce-bf47-e2a18945600e",
+                                        "value": "Englisch",
+                                        "valuetype_id": "prefLabel"
+                                    },
+                                    {
+                                        "id": "bc35776b-996f-4fc1-bd25-9f6432c1f349",
+                                        "language_id": "en",
+                                        "list_item_id": "38729dbe-6d1c-48ce-bf47-e2a18945600e",
+                                        "value": "English (language)",
+                                        "valuetype_id": "prefLabel"
+                                    }
+                                ],
+                                "list_id": "f7fc4f6d-fd46-4881-846f-4a08bc1a3fef",
+                                "uri": "http://localhost:8000/plugins/controlled-list-manager/item/38729dbe-6d1c-48ce-bf47-e2a18945600e"
+                            }
+                        ],
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Name Language",
+                        "placeholder": {
+                            "en": "Select an option"
+                        }
+                    },
+                    "id": "a62a16e2-c6a2-44d2-bfb8-3b72318492a3",
+                    "label": {
+                        "en": "Name Language"
+                    },
+                    "node_id": "904e3d03-32aa-414b-873e-cc4bea424877",
+                    "sortorder": 2,
+                    "source_identifier_id": null,
+                    "visible": true,
+                    "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
+                },
+                {
+                    "card_id": "a7da1f68-b2fc-46f6-9d93-df7ffae1d51b",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "TimeSpan Type",
+                        "placeholder": {
+                            "en": "Select an option"
+                        }
+                    },
+                    "id": "b4bbdcd4-3b9f-486b-97f0-f71b530272d6",
+                    "label": {
+                        "en": "TimeSpan Type"
+                    },
+                    "node_id": "0df91ef3-2016-48e7-8451-58a8f5f5c297",
+                    "sortorder": 4,
+                    "source_identifier_id": null,
+                    "visible": false,
+                    "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
+                },
+                {
+                    "card_id": "ba0e72b6-f024-453f-be37-4d65930669c7",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Statement",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "bec2a100-c402-4b0c-af68-6ab66259bbd9",
+                    "label": {
+                        "en": "Statement"
+                    },
+                    "node_id": "bbc2ee4b-32fa-4e7b-af61-acfad8dfcd52",
+                    "sortorder": 0,
+                    "source_identifier_id": null,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000005"
+                },
+                {
+                    "card_id": "130e225a-d29c-4bf8-9d23-311108ec4075",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Name Label",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "c8e24869-3123-4d7c-8638-95e02459baad",
+                    "label": {
+                        "en": "Name Label"
+                    },
+                    "node_id": "c9357044-9d9c-4162-aae4-b37963ef6716",
+                    "sortorder": 4,
+                    "source_identifier_id": null,
+                    "visible": false,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "130e225a-d29c-4bf8-9d23-311108ec4075",
+                    "config": {
+                        "defaultResourceInstance": [],
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Source Reference Work for Name for Group Leaving Event",
+                        "placeholder": {
+                            "en": ""
+                        }
+                    },
+                    "id": "d4bc103b-2871-41c6-9e93-0377e5d7a9e6",
+                    "label": {
+                        "en": "Source Reference Work for Name for Group Leaving Event"
+                    },
+                    "node_id": "b7d01d37-bb55-4ece-a3fe-4a4da3b3c96b",
+                    "sortorder": 3,
+                    "source_identifier_id": null,
+                    "visible": false,
+                    "widget_id": "ff3c400a-76ec-11e7-a793-784f435179ea"
+                },
+                {
+                    "card_id": "ba0e72b6-f024-453f-be37-4d65930669c7",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Statement Label",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "ef26b706-a331-404d-8bb8-50badf2650a4",
+                    "label": {
+                        "en": "Statement Label"
+                    },
+                    "node_id": "b905bbb8-7b86-4458-8213-ca975a8baf10",
+                    "sortorder": 5,
+                    "source_identifier_id": null,
+                    "visible": false,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "ec90a1c9-43fc-4fed-a2aa-d0a21cdff94d",
+                    "config": {
+                        "defaultResourceInstance": [],
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Location of Group Leaving Event",
+                        "placeholder": {
+                            "en": ""
+                        }
+                    },
+                    "id": "f617e798-6bed-46d5-ab60-0381b147cf65",
+                    "label": {
+                        "en": "Location of Group Leaving Event"
+                    },
+                    "node_id": "0ca913a6-b638-4570-8424-d12f97faa480",
+                    "sortorder": 2,
+                    "source_identifier_id": null,
+                    "visible": true,
+                    "widget_id": "ff3c400a-76ec-11e7-a793-784f435179ea"
+                }
+            ],
+            "color": "rgba(244,162,97,0.75)",
+            "config": {
+                "activeTabIndex": 0,
+                "tabs": [
+                    {
+                        "icon": "fa-info",
+                        "name": "Identity",
+                        "nodegroup_ids": [
+                            "1ed5519e-bfb2-11e9-b995-a4d18cec433a",
+                            "2d4b4c23-bfb2-11e9-ba92-a4d18cec433a",
+                            "2a9fea8c-bfb2-11e9-b057-a4d18cec433a",
+                            "eaeb2d35-bfb3-11e9-8964-a4d18cec433a",
+                            "b3026e1c-b31f-11e9-aa4a-a4d18cec433a",
+                            "f1604d68-bfb4-11e9-a503-a4d18cec433a",
+                            "83cf1bdc-bfb4-11e9-8f51-a4d18cec433a",
+                            "741d3687-bfb4-11e9-bcc1-a4d18cec433a",
+                            "9f14d3b3-bfb4-11e9-a539-a4d18cec433a"
+                        ]
+                    },
+                    {
+                        "icon": "fa-calendar",
+                        "name": "Events",
+                        "nodegroup_ids": [
+                            "2d53536b-d286-11e9-a29b-a4d18cec433a",
+                            "c93b21c2-d286-11e9-8788-a4d18cec433a",
+                            "e86387b8-d288-11e9-bfd3-a4d18cec433a",
+                            "110fac30-d289-11e9-a8dd-a4d18cec433a",
+                            "08dca39e-d287-11e9-aa00-a4d18cec433a"
+                        ]
+                    }
+                ]
+            },
+            "deploymentdate": null,
+            "deploymentfile": null,
+            "description": {
+                "en": ""
+            },
+            "edges": [
+                {
+                    "description": null,
+                    "domainnode_id": "b6255ba9-50e2-4ba8-9b6a-e94b12a2d18f",
+                    "edgeid": "086ce0a4-a859-491f-8f48-910dc4cec749",
+                    "graph_id": "2695a9ac-1ab4-4187-99c4-f39aedd45992",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P32_used_general_technique",
+                    "rangenode_id": "ccc6dc17-93ac-44af-9c4a-ac9d3c486842",
+                    "source_identifier_id": null
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "b6255ba9-50e2-4ba8-9b6a-e94b12a2d18f",
+                    "edgeid": "08a2a0b5-d8ff-446d-94cb-25a67854ba13",
+                    "graph_id": "2695a9ac-1ab4-4187-99c4-f39aedd45992",
+                    "name": null,
+                    "ontologyproperty": "http://www.w3.org/2000/01/rdf-schema#label",
+                    "rangenode_id": "29f15e60-56ad-43b0-ae31-752703f4049d",
+                    "source_identifier_id": null
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "7aaf25c7-7dfb-4eb5-a494-16ebc0b7de6d",
+                    "edgeid": "116243f2-9118-4263-a1bc-fa6e3367694d",
+                    "graph_id": "2695a9ac-1ab4-4187-99c4-f39aedd45992",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
+                    "rangenode_id": "6b9aa0aa-3bd4-44cb-8d3a-85987242575d",
+                    "source_identifier_id": null
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "7aaf25c7-7dfb-4eb5-a494-16ebc0b7de6d",
+                    "edgeid": "17d29a31-5e30-43b1-ab0b-570f66d41123",
+                    "graph_id": "2695a9ac-1ab4-4187-99c4-f39aedd45992",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P72_has_language",
+                    "rangenode_id": "904e3d03-32aa-414b-873e-cc4bea424877",
+                    "source_identifier_id": null
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "959adc64-8376-4fda-bb1b-6abf7f57b0c5",
+                    "edgeid": "3b10b304-3b42-40bf-be1f-bfd78d260dc2",
+                    "graph_id": "2695a9ac-1ab4-4187-99c4-f39aedd45992",
+                    "name": null,
+                    "ontologyproperty": "http://www.w3.org/2000/01/rdf-schema#label",
+                    "rangenode_id": "adf98081-7d2b-496d-875e-049e47d89802",
+                    "source_identifier_id": null
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "90273a65-0236-4221-958f-019805433406",
+                    "edgeid": "3e7a0a84-ed7d-47da-81fe-ea7cdb056746",
+                    "graph_id": "2695a9ac-1ab4-4187-99c4-f39aedd45992",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
+                    "rangenode_id": "d3155869-52aa-4d8c-9a5e-f4cdeac9dd9e",
+                    "source_identifier_id": null
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "8750d49b-7a9e-41cf-a788-5bc5e4fdc0f0",
+                    "edgeid": "46171199-6fbe-4726-b52c-9d2449a46172",
+                    "graph_id": "2695a9ac-1ab4-4187-99c4-f39aedd45992",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P190_has_symbolic_content",
+                    "rangenode_id": "bbc2ee4b-32fa-4e7b-af61-acfad8dfcd52",
+                    "source_identifier_id": null
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "8750d49b-7a9e-41cf-a788-5bc5e4fdc0f0",
+                    "edgeid": "5a6babff-f201-4b07-b3c7-b22109ce2db2",
+                    "graph_id": "2695a9ac-1ab4-4187-99c4-f39aedd45992",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P72_has_language",
+                    "rangenode_id": "e38cb29b-a8c4-4340-8a8b-2dec2c021ad3",
+                    "source_identifier_id": null
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "8750d49b-7a9e-41cf-a788-5bc5e4fdc0f0",
+                    "edgeid": "649a4d00-c57b-4970-a816-f30ccad1cf2e",
+                    "graph_id": "2695a9ac-1ab4-4187-99c4-f39aedd45992",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by",
+                    "rangenode_id": "5968125b-0bc2-4e2b-8233-931412358f3c",
+                    "source_identifier_id": null
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "7aaf25c7-7dfb-4eb5-a494-16ebc0b7de6d",
+                    "edgeid": "67699ca5-393f-491f-b801-af42515f3d28",
+                    "graph_id": "2695a9ac-1ab4-4187-99c4-f39aedd45992",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P190_has_symbolic_content",
+                    "rangenode_id": "b1c97a26-ea44-4374-b546-a42f589a96a6",
+                    "source_identifier_id": null
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "b6255ba9-50e2-4ba8-9b6a-e94b12a2d18f",
+                    "edgeid": "6cc800c4-1930-48a8-a9da-b2258d29cfed",
+                    "graph_id": "2695a9ac-1ab4-4187-99c4-f39aedd45992",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by",
+                    "rangenode_id": "0e00149b-7949-410a-ad67-00122ecaf0ea",
+                    "source_identifier_id": null
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "8750d49b-7a9e-41cf-a788-5bc5e4fdc0f0",
+                    "edgeid": "7505d6f3-bc3c-46bc-b2a3-09400ec5130f",
+                    "graph_id": "2695a9ac-1ab4-4187-99c4-f39aedd45992",
+                    "name": null,
+                    "ontologyproperty": "http://www.w3.org/2000/01/rdf-schema#label",
+                    "rangenode_id": "b905bbb8-7b86-4458-8213-ca975a8baf10",
+                    "source_identifier_id": null
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "8750d49b-7a9e-41cf-a788-5bc5e4fdc0f0",
+                    "edgeid": "7ff37490-222a-4b9e-9dd1-2e941e2d81e0",
+                    "graph_id": "2695a9ac-1ab4-4187-99c4-f39aedd45992",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
+                    "rangenode_id": "90273a65-0236-4221-958f-019805433406",
+                    "source_identifier_id": null
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "959adc64-8376-4fda-bb1b-6abf7f57b0c5",
+                    "edgeid": "863617cd-965f-4f39-81a8-6fcf2e21549f",
+                    "graph_id": "2695a9ac-1ab4-4187-99c4-f39aedd45992",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P82_at_some_time_within",
+                    "rangenode_id": "c9db052e-4cfa-4a5b-9f96-d1dfef30eab0",
+                    "source_identifier_id": null
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "b6255ba9-50e2-4ba8-9b6a-e94b12a2d18f",
+                    "edgeid": "8a3c24ea-d3f2-4219-a842-c16b1718da55",
+                    "graph_id": "2695a9ac-1ab4-4187-99c4-f39aedd45992",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P146_separated_from",
+                    "rangenode_id": "be3482fd-8a22-4423-b582-0d8b289e3530",
+                    "source_identifier_id": null
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "b6255ba9-50e2-4ba8-9b6a-e94b12a2d18f",
+                    "edgeid": "982db119-6086-4482-8c1e-763ff7f26e40",
+                    "graph_id": "2695a9ac-1ab4-4187-99c4-f39aedd45992",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span",
+                    "rangenode_id": "959adc64-8376-4fda-bb1b-6abf7f57b0c5",
+                    "source_identifier_id": null
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "b6255ba9-50e2-4ba8-9b6a-e94b12a2d18f",
+                    "edgeid": "9dda130e-2ec5-414a-ace3-a54ea4edff50",
+                    "graph_id": "2695a9ac-1ab4-4187-99c4-f39aedd45992",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at",
+                    "rangenode_id": "0ca913a6-b638-4570-8424-d12f97faa480",
+                    "source_identifier_id": null
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "959adc64-8376-4fda-bb1b-6abf7f57b0c5",
+                    "edgeid": "b925da8b-c7e6-4c27-b9b9-2085385907e1",
+                    "graph_id": "2695a9ac-1ab4-4187-99c4-f39aedd45992",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
+                    "rangenode_id": "0df91ef3-2016-48e7-8451-58a8f5f5c297",
+                    "source_identifier_id": null
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "b6255ba9-50e2-4ba8-9b6a-e94b12a2d18f",
+                    "edgeid": "bc5e8028-6dfb-4683-a171-dc61de67638c",
+                    "graph_id": "2695a9ac-1ab4-4187-99c4-f39aedd45992",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
+                    "rangenode_id": "7aaf25c7-7dfb-4eb5-a494-16ebc0b7de6d",
+                    "source_identifier_id": null
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "b6255ba9-50e2-4ba8-9b6a-e94b12a2d18f",
+                    "edgeid": "c43b9d1a-7447-4d24-b855-b6323f4ac47c",
+                    "graph_id": "2695a9ac-1ab4-4187-99c4-f39aedd45992",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P16_used_specific_object",
+                    "rangenode_id": "7d7efb01-ea50-4517-b845-878ad90d2f23",
+                    "source_identifier_id": null
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "b6255ba9-50e2-4ba8-9b6a-e94b12a2d18f",
+                    "edgeid": "d345d3b5-b779-425c-8ebd-f58c4895c1da",
+                    "graph_id": "2695a9ac-1ab4-4187-99c4-f39aedd45992",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
+                    "rangenode_id": "30593833-2b44-4d4d-8b3e-9d71790db069",
+                    "source_identifier_id": null
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "7aaf25c7-7dfb-4eb5-a494-16ebc0b7de6d",
+                    "edgeid": "dc6956bd-86b8-4019-bac6-313c5a353e6c",
+                    "graph_id": "2695a9ac-1ab4-4187-99c4-f39aedd45992",
+                    "name": null,
+                    "ontologyproperty": "http://www.w3.org/2000/01/rdf-schema#label",
+                    "rangenode_id": "c9357044-9d9c-4162-aae4-b37963ef6716",
+                    "source_identifier_id": null
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "7aaf25c7-7dfb-4eb5-a494-16ebc0b7de6d",
+                    "edgeid": "e90e4774-3146-4d8c-aa6d-2568e4254251",
+                    "graph_id": "2695a9ac-1ab4-4187-99c4-f39aedd45992",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by",
+                    "rangenode_id": "b7d01d37-bb55-4ece-a3fe-4a4da3b3c96b",
+                    "source_identifier_id": null
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "b6255ba9-50e2-4ba8-9b6a-e94b12a2d18f",
+                    "edgeid": "ebb177de-66ea-4af3-94e0-d7480ef6315e",
+                    "graph_id": "2695a9ac-1ab4-4187-99c4-f39aedd45992",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by",
+                    "rangenode_id": "8750d49b-7a9e-41cf-a788-5bc5e4fdc0f0",
+                    "source_identifier_id": null
+                }
+            ],
+            "functions_x_graphs": [
+                {
+                    "config": {
+                        "descriptor_types": {
+                            "description": {
+                                "nodegroup_id": "e1d1aba8-d770-11ef-8c40-0275dc2ded29",
+                                "string_template": "<Statement_content>"
+                            },
+                            "map_popup": {
+                                "nodegroup_id": "",
+                                "string_template": ""
+                            },
+                            "name": {
+                                "nodegroup_id": "e1d0f244-d770-11ef-8c40-0275dc2ded29",
+                                "string_template": "<Name_content>"
+                            }
+                        },
+                        "triggering_nodegroups": []
+                    },
+                    "function_id": "60000000-0000-0000-0000-000000000001",
+                    "graph_id": "2695a9ac-1ab4-4187-99c4-f39aedd45992",
+                    "id": "8708b12d-8ae3-4b2f-b5e3-1ee6bb0714ea"
+                }
+            ],
+            "graphid": "2695a9ac-1ab4-4187-99c4-f39aedd45992",
+            "group_permissions": {},
+            "has_unpublished_changes": true,
+            "iconclass": "fa fa-user",
+            "is_active": true,
+            "is_copy_immutable": false,
+            "isresource": false,
+            "jsonldcontext": "https://linked.art/ns/v1/linked-art.json",
+            "name": {
+                "en": "Person Left Group"
+            },
+            "nodegroups": [
+                {
+                    "cardinality": "1",
+                    "grouping_node_id": "7aaf25c7-7dfb-4eb5-a494-16ebc0b7de6d",
+                    "legacygroupid": null,
+                    "nodegroupid": "7aaf25c7-7dfb-4eb5-a494-16ebc0b7de6d",
+                    "parentnodegroup_id": "b6255ba9-50e2-4ba8-9b6a-e94b12a2d18f"
+                },
+                {
+                    "cardinality": "1",
+                    "grouping_node_id": "8750d49b-7a9e-41cf-a788-5bc5e4fdc0f0",
+                    "legacygroupid": null,
+                    "nodegroupid": "8750d49b-7a9e-41cf-a788-5bc5e4fdc0f0",
+                    "parentnodegroup_id": "b6255ba9-50e2-4ba8-9b6a-e94b12a2d18f"
+                },
+                {
+                    "cardinality": "1",
+                    "grouping_node_id": "959adc64-8376-4fda-bb1b-6abf7f57b0c5",
+                    "legacygroupid": null,
+                    "nodegroupid": "959adc64-8376-4fda-bb1b-6abf7f57b0c5",
+                    "parentnodegroup_id": "b6255ba9-50e2-4ba8-9b6a-e94b12a2d18f"
+                },
+                {
+                    "cardinality": "1",
+                    "grouping_node_id": "b6255ba9-50e2-4ba8-9b6a-e94b12a2d18f",
+                    "legacygroupid": null,
+                    "nodegroupid": "b6255ba9-50e2-4ba8-9b6a-e94b12a2d18f",
+                    "parentnodegroup_id": null
+                }
+            ],
+            "nodes": [
+                {
+                    "alias": "left_group_location",
+                    "config": {
+                        "graphs": [
+                            {
+                                "graphid": "3dda9f54-d771-11ef-825b-0275dc2ded29",
+                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "name": "Place",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "useOntologyRelationship": false
+                            }
+                        ],
+                        "searchDsl": "",
+                        "searchString": ""
+                    },
+                    "datatype": "resource-instance-list",
+                    "description": "# Specific:\n\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "2695a9ac-1ab4-4187-99c4-f39aedd45992",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": false,
+                    "istopnode": false,
+                    "name": "Left Group_location",
+                    "nodegroup_id": "b6255ba9-50e2-4ba8-9b6a-e94b12a2d18f",
+                    "nodeid": "0ca913a6-b638-4570-8424-d12f97faa480",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at",
+                    "sortorder": 0,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "left_group_time_type",
+                    "config": {
+                        "controlledList": "c53d3557-e033-4aa1-b020-0dc2b690025f",
+                        "multiValue": true
+                    },
+                    "datatype": "reference",
+                    "description": "# Specific:\n\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "2695a9ac-1ab4-4187-99c4-f39aedd45992",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": false,
+                    "istopnode": false,
+                    "name": "Left Group_time_type",
+                    "nodegroup_id": "959adc64-8376-4fda-bb1b-6abf7f57b0c5",
+                    "nodeid": "0df91ef3-2016-48e7-8451-58a8f5f5c297",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E55_Type",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
+                    "sortorder": 0,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "left_group_source",
+                    "config": {
+                        "graphs": [
+                            {
+                                "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
+                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "name": "Textual Work",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "useOntologyRelationship": false
+                            }
+                        ],
+                        "searchDsl": "",
+                        "searchString": ""
+                    },
+                    "datatype": "resource-instance-list",
+                    "description": "# Specific:\n\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "2695a9ac-1ab4-4187-99c4-f39aedd45992",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": false,
+                    "istopnode": false,
+                    "name": "Left Group_source",
+                    "nodegroup_id": "b6255ba9-50e2-4ba8-9b6a-e94b12a2d18f",
+                    "nodeid": "0e00149b-7949-410a-ad67-00122ecaf0ea",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by",
+                    "sortorder": 0,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "left_group_label",
+                    "config": {},
+                    "datatype": "string",
+                    "description": "# Specific:\n\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "2695a9ac-1ab4-4187-99c4-f39aedd45992",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": false,
+                    "istopnode": false,
+                    "name": "Left Group_label",
+                    "nodegroup_id": "b6255ba9-50e2-4ba8-9b6a-e94b12a2d18f",
+                    "nodeid": "29f15e60-56ad-43b0-ae31-752703f4049d",
+                    "ontologyclass": "http://www.w3.org/2001/XMLSchema#string",
+                    "parentproperty": "http://www.w3.org/2000/01/rdf-schema#label",
+                    "sortorder": 0,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "left_group_type",
+                    "config": {
+                        "controlledList": "07e8d7a0-551f-4200-8c71-8a03e1f02d36",
+                        "multiValue": true
+                    },
+                    "datatype": "reference",
+                    "description": "# Specific:\n\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "2695a9ac-1ab4-4187-99c4-f39aedd45992",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": false,
+                    "istopnode": false,
+                    "name": "Left Group_type",
+                    "nodegroup_id": "b6255ba9-50e2-4ba8-9b6a-e94b12a2d18f",
+                    "nodeid": "30593833-2b44-4d4d-8b3e-9d71790db069",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E55_Type",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
+                    "sortorder": 0,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "left_group_statement_source",
+                    "config": {
+                        "graphs": [
+                            {
+                                "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
+                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "name": "Textual Work",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "useOntologyRelationship": false
+                            }
+                        ],
+                        "searchDsl": "",
+                        "searchString": ""
+                    },
+                    "datatype": "resource-instance-list",
+                    "description": "# Specific:\n\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "2695a9ac-1ab4-4187-99c4-f39aedd45992",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": false,
+                    "istopnode": false,
+                    "name": "Left Group_Statement_source",
+                    "nodegroup_id": "8750d49b-7a9e-41cf-a788-5bc5e4fdc0f0",
+                    "nodeid": "5968125b-0bc2-4e2b-8233-931412358f3c",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by",
+                    "sortorder": 0,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "left_group_name_type",
+                    "config": {
+                        "controlledList": "9f1cf9a8-ce65-455f-ab1e-a9b36e9e23ce",
+                        "multiValue": true
+                    },
+                    "datatype": "reference",
+                    "description": "# Specific:\n\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "2695a9ac-1ab4-4187-99c4-f39aedd45992",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": false,
+                    "istopnode": false,
+                    "name": "Left Group_name_type",
+                    "nodegroup_id": "7aaf25c7-7dfb-4eb5-a494-16ebc0b7de6d",
+                    "nodeid": "6b9aa0aa-3bd4-44cb-8d3a-85987242575d",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E55_Type",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
+                    "sortorder": 0,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "left_group_name",
+                    "config": {},
+                    "datatype": "semantic",
+                    "description": "# Specific:\n\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "2695a9ac-1ab4-4187-99c4-f39aedd45992",
+                    "hascustomalias": false,
+                    "is_collector": true,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": false,
+                    "istopnode": false,
+                    "name": "Left Group_name",
+                    "nodegroup_id": "7aaf25c7-7dfb-4eb5-a494-16ebc0b7de6d",
+                    "nodeid": "7aaf25c7-7dfb-4eb5-a494-16ebc0b7de6d",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E33_E41_Linguistic_Appellation",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
+                    "sortorder": 0,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "left_group_used_object",
+                    "config": {
+                        "graphs": [
+                            {
+                                "graphid": "bda239c6-d376-11ef-a239-0275dc2ded29",
+                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "name": "Reference and Sample Collection Item",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "useOntologyRelationship": false
+                            }
+                        ],
+                        "searchDsl": "",
+                        "searchString": ""
+                    },
+                    "datatype": "resource-instance-list",
+                    "description": "# Specific:\n\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "2695a9ac-1ab4-4187-99c4-f39aedd45992",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": false,
+                    "istopnode": false,
+                    "name": "Left Group_used object",
+                    "nodegroup_id": "b6255ba9-50e2-4ba8-9b6a-e94b12a2d18f",
+                    "nodeid": "7d7efb01-ea50-4517-b845-878ad90d2f23",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E22_Human-Made_Object",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P16_used_specific_object",
+                    "sortorder": 0,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "left_group_statement",
+                    "config": {},
+                    "datatype": "semantic",
+                    "description": "# Specific:\n\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "2695a9ac-1ab4-4187-99c4-f39aedd45992",
+                    "hascustomalias": false,
+                    "is_collector": true,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": false,
+                    "istopnode": false,
+                    "name": "Left Group_Statement",
+                    "nodegroup_id": "8750d49b-7a9e-41cf-a788-5bc5e4fdc0f0",
+                    "nodeid": "8750d49b-7a9e-41cf-a788-5bc5e4fdc0f0",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by",
+                    "sortorder": 0,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "left_group_statement_type",
+                    "config": {
+                        "controlledList": "1adae7ea-4884-432f-af44-c9aea3a48a3d",
+                        "multiValue": true
+                    },
+                    "datatype": "reference",
+                    "description": "# Specific:\n\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "2695a9ac-1ab4-4187-99c4-f39aedd45992",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": false,
+                    "istopnode": false,
+                    "name": "Left Group_Statement_type",
+                    "nodegroup_id": "8750d49b-7a9e-41cf-a788-5bc5e4fdc0f0",
+                    "nodeid": "90273a65-0236-4221-958f-019805433406",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E55_Type",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
+                    "sortorder": 0,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "left_group_name_language",
+                    "config": {
+                        "controlledList": "f7fc4f6d-fd46-4881-846f-4a08bc1a3fef",
+                        "multiValue": true
+                    },
+                    "datatype": "reference",
+                    "description": "# Specific:\n\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "2695a9ac-1ab4-4187-99c4-f39aedd45992",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": false,
+                    "istopnode": false,
+                    "name": "Left Group_name_language",
+                    "nodegroup_id": "7aaf25c7-7dfb-4eb5-a494-16ebc0b7de6d",
+                    "nodeid": "904e3d03-32aa-414b-873e-cc4bea424877",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E56_Language",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P72_has_language",
+                    "sortorder": 0,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "left_group_time",
+                    "config": {},
+                    "datatype": "semantic",
+                    "description": "# Specific:\n\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "2695a9ac-1ab4-4187-99c4-f39aedd45992",
+                    "hascustomalias": false,
+                    "is_collector": true,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": false,
+                    "istopnode": false,
+                    "name": "Left Group_time",
+                    "nodegroup_id": "959adc64-8376-4fda-bb1b-6abf7f57b0c5",
+                    "nodeid": "959adc64-8376-4fda-bb1b-6abf7f57b0c5",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span",
+                    "sortorder": 0,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "left_group_time_label",
+                    "config": {},
+                    "datatype": "string",
+                    "description": "# Specific:\n\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "2695a9ac-1ab4-4187-99c4-f39aedd45992",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": false,
+                    "istopnode": false,
+                    "name": "Left Group_time_label",
+                    "nodegroup_id": "959adc64-8376-4fda-bb1b-6abf7f57b0c5",
+                    "nodeid": "adf98081-7d2b-496d-875e-049e47d89802",
+                    "ontologyclass": "http://www.w3.org/2001/XMLSchema#string",
+                    "parentproperty": "http://www.w3.org/2000/01/rdf-schema#label",
+                    "sortorder": 1,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "left_group_name_content",
+                    "config": {},
+                    "datatype": "string",
+                    "description": "# Specific:\n\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "2695a9ac-1ab4-4187-99c4-f39aedd45992",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": false,
+                    "istopnode": false,
+                    "name": "Left Group_name_content",
+                    "nodegroup_id": "7aaf25c7-7dfb-4eb5-a494-16ebc0b7de6d",
+                    "nodeid": "b1c97a26-ea44-4374-b546-a42f589a96a6",
+                    "ontologyclass": "http://www.w3.org/2001/XMLSchema#string",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P190_has_symbolic_content",
+                    "sortorder": 0,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "left_group",
+                    "config": {},
+                    "datatype": "semantic",
+                    "description": "# Specific:\n\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "2695a9ac-1ab4-4187-99c4-f39aedd45992",
+                    "hascustomalias": false,
+                    "is_collector": true,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": false,
+                    "istopnode": true,
+                    "name": "Person Left Group",
+                    "nodegroup_id": "b6255ba9-50e2-4ba8-9b6a-e94b12a2d18f",
+                    "nodeid": "b6255ba9-50e2-4ba8-9b6a-e94b12a2d18f",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E86_Leaving",
+                    "parentproperty": "",
+                    "sortorder": 1,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "left_group_name_source",
+                    "config": {
+                        "graphs": [
+                            {
+                                "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
+                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "name": "Textual Work",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "useOntologyRelationship": false
+                            }
+                        ],
+                        "searchDsl": "",
+                        "searchString": ""
+                    },
+                    "datatype": "resource-instance-list",
+                    "description": "# Specific:\n\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "2695a9ac-1ab4-4187-99c4-f39aedd45992",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": false,
+                    "istopnode": false,
+                    "name": "Left Group_name_source",
+                    "nodegroup_id": "7aaf25c7-7dfb-4eb5-a494-16ebc0b7de6d",
+                    "nodeid": "b7d01d37-bb55-4ece-a3fe-4a4da3b3c96b",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by",
+                    "sortorder": 0,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "left_group_statement_label",
+                    "config": {},
+                    "datatype": "string",
+                    "description": "# Specific:\n\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "2695a9ac-1ab4-4187-99c4-f39aedd45992",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": false,
+                    "istopnode": false,
+                    "name": "Left Group_Statement_label",
+                    "nodegroup_id": "8750d49b-7a9e-41cf-a788-5bc5e4fdc0f0",
+                    "nodeid": "b905bbb8-7b86-4458-8213-ca975a8baf10",
+                    "ontologyclass": "http://www.w3.org/2001/XMLSchema#string",
+                    "parentproperty": "http://www.w3.org/2000/01/rdf-schema#label",
+                    "sortorder": 0,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "left_group_statement_content",
+                    "config": {},
+                    "datatype": "string",
+                    "description": "# Specific:\n\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "2695a9ac-1ab4-4187-99c4-f39aedd45992",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": false,
+                    "istopnode": false,
+                    "name": "Left Group_Statement_content",
+                    "nodegroup_id": "8750d49b-7a9e-41cf-a788-5bc5e4fdc0f0",
+                    "nodeid": "bbc2ee4b-32fa-4e7b-af61-acfad8dfcd52",
+                    "ontologyclass": "http://www.w3.org/2001/XMLSchema#string",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P190_has_symbolic_content",
+                    "sortorder": 0,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "left_group_left_group",
+                    "config": {
+                        "graphs": [
+                            {
+                                "graphid": "36956e50-d770-11ef-8f5d-0275dc2ded29",
+                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "name": "Group",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "useOntologyRelationship": false
+                            }
+                        ],
+                        "searchDsl": "",
+                        "searchString": ""
+                    },
+                    "datatype": "resource-instance",
+                    "description": "# Specific:\n\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "2695a9ac-1ab4-4187-99c4-f39aedd45992",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "is_immutable": false,
+                    "isrequired": true,
+                    "issearchable": false,
+                    "istopnode": false,
+                    "name": "Left Group_Left Group",
+                    "nodegroup_id": "b6255ba9-50e2-4ba8-9b6a-e94b12a2d18f",
+                    "nodeid": "be3482fd-8a22-4423-b582-0d8b289e3530",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E74_Group",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P146_separated_from",
+                    "sortorder": 0,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "left_group_name_label",
+                    "config": {},
+                    "datatype": "string",
+                    "description": "# Specific:\n\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "2695a9ac-1ab4-4187-99c4-f39aedd45992",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": false,
+                    "istopnode": false,
+                    "name": "Left Group_name_label",
+                    "nodegroup_id": "7aaf25c7-7dfb-4eb5-a494-16ebc0b7de6d",
+                    "nodeid": "c9357044-9d9c-4162-aae4-b37963ef6716",
+                    "ontologyclass": "http://www.w3.org/2001/XMLSchema#string",
+                    "parentproperty": "http://www.w3.org/2000/01/rdf-schema#label",
+                    "sortorder": 0,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "left_group_time_edtf",
+                    "config": {
+                        "fuzzy_day_padding": 1,
+                        "fuzzy_month_padding": 1,
+                        "fuzzy_season_padding": 12,
+                        "fuzzy_year_padding": 1,
+                        "multiplier_if_approximate": 1,
+                        "multiplier_if_both": 1,
+                        "multiplier_if_uncertain": 1
+                    },
+                    "datatype": "edtf",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "2695a9ac-1ab4-4187-99c4-f39aedd45992",
+                    "hascustomalias": true,
+                    "is_collector": false,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Left Group_time_edtf",
+                    "nodegroup_id": "959adc64-8376-4fda-bb1b-6abf7f57b0c5",
+                    "nodeid": "c9db052e-4cfa-4a5b-9f96-d1dfef30eab0",
+                    "ontologyclass": "http://www.w3.org/2000/01/rdf-schema#Literal",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P82_at_some_time_within",
+                    "sortorder": 2,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "left_group_technique",
+                    "config": {
+                        "controlledList": "35ed167d-ab89-4f38-b046-3349256be725",
+                        "multiValue": true
+                    },
+                    "datatype": "reference",
+                    "description": "# Specific:\n\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "2695a9ac-1ab4-4187-99c4-f39aedd45992",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": false,
+                    "istopnode": false,
+                    "name": "Left Group_technique",
+                    "nodegroup_id": "b6255ba9-50e2-4ba8-9b6a-e94b12a2d18f",
+                    "nodeid": "ccc6dc17-93ac-44af-9c4a-ac9d3c486842",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E55_Type",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P32_used_general_technique",
+                    "sortorder": 0,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "left_group_statement_type_metatype",
+                    "config": {
+                        "controlledList": "c82d6f85-ae67-4c28-b07a-c114f6d6ba50",
+                        "multiValue": false
+                    },
+                    "datatype": "reference",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "2695a9ac-1ab4-4187-99c4-f39aedd45992",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": false,
+                    "istopnode": false,
+                    "name": "Left Group_Statement_type_metatype",
+                    "nodegroup_id": "8750d49b-7a9e-41cf-a788-5bc5e4fdc0f0",
+                    "nodeid": "d3155869-52aa-4d8c-9a5e-f4cdeac9dd9e",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E55_Type",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
+                    "sortorder": 0,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "left_group_statement_language",
+                    "config": {
+                        "controlledList": "f7fc4f6d-fd46-4881-846f-4a08bc1a3fef",
+                        "multiValue": true
+                    },
+                    "datatype": "reference",
+                    "description": "# Specific:\n\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "2695a9ac-1ab4-4187-99c4-f39aedd45992",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": false,
+                    "istopnode": false,
+                    "name": "Left Group_Statement_language",
+                    "nodegroup_id": "8750d49b-7a9e-41cf-a788-5bc5e4fdc0f0",
+                    "nodeid": "e38cb29b-a8c4-4340-8a8b-2dec2c021ad3",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E56_Language",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P72_has_language",
+                    "sortorder": 0,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": null
+                }
+            ],
+            "ontology_id": "0b1f5462-faa7-11e9-8f09-3af9d3b32b71",
+            "publication": {
+                "graph_id": "2695a9ac-1ab4-4187-99c4-f39aedd45992",
+                "most_recent_edit_id": null,
+                "notes": "Change time to EDTF",
+                "publicationid": "290e7368-e266-47e3-9ac7-9784ee4cc9bc",
+                "published_time": "2026-04-23T09:33:46.492"
+            },
+            "relatable_resource_model_ids": [],
+            "resource_2_resource_constraints": [],
+            "resource_instance_lifecycle": null,
+            "root": {
+                "alias": "left_group",
+                "config": {},
+                "datatype": "semantic",
+                "description": "# Specific:\n\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
+                "exportable": false,
+                "fieldname": null,
+                "graph_id": "2695a9ac-1ab4-4187-99c4-f39aedd45992",
+                "hascustomalias": false,
+                "is_collector": true,
+                "is_immutable": false,
+                "isrequired": false,
+                "issearchable": false,
+                "istopnode": true,
+                "name": "Person Left Group",
+                "nodegroup_id": "b6255ba9-50e2-4ba8-9b6a-e94b12a2d18f",
+                "nodeid": "b6255ba9-50e2-4ba8-9b6a-e94b12a2d18f",
+                "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E86_Leaving",
+                "sortorder": 1,
+                "source_identifier_id": null,
+                "sourcebranchpublication_id": null
+            },
+            "slug": "person_1",
+            "source_identifier_id": null,
+            "spatial_views": [],
+            "subtitle": {
+                "en": ""
+            },
+            "template_id": "50000000-0000-0000-0000-000000000001",
+            "user_permissions": {},
+            "version": ""
+        }
+    ],
+    "metadata": {
+        "db": "PostgreSQL 16.13 on aarch64-unknown-linux-gnu, compiled by aarch64-unknown-linux-gnu-gcc (GCC) 12.4.0, 64-bit",
+        "git hash": "fatal: not a git repository (or any of the parent directories): .git",
+        "os": "Linux",
+        "os version": "6.17.0-1017-aws"
+    }
+}

@@ -1,0 +1,319 @@
+{
+    "graph": [
+        {
+            "author": "",
+            "cards": [
+                {
+                    "active": true,
+                    "cardid": "f00742ed-49bc-4b0c-9b10-e67062767c28",
+                    "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
+                    "config": null,
+                    "constraints": [],
+                    "cssclass": null,
+                    "description": {
+                        "en": ""
+                    },
+                    "graph_id": "7f98ded9-49e0-4179-aae4-d8a8176e2c48",
+                    "helpenabled": false,
+                    "helptext": {
+                        "en": ""
+                    },
+                    "helptitle": {
+                        "en": ""
+                    },
+                    "instructions": {
+                        "en": ""
+                    },
+                    "name": {
+                        "en": "Textual Reference"
+                    },
+                    "nodegroup_id": "26bed749-de64-4f8e-852b-f30e45ef9db0",
+                    "sortorder": 9,
+                    "source_identifier_id": null,
+                    "visible": true
+                }
+            ],
+            "cards_x_nodes_x_widgets": [
+                {
+                    "card_id": "f00742ed-49bc-4b0c-9b10-e67062767c28",
+                    "config": {
+                        "defaultResourceInstance": [],
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Textual Source",
+                        "placeholder": {
+                            "en": ""
+                        }
+                    },
+                    "id": "04978d7e-a1f9-44a0-bb65-66573365ec7c",
+                    "label": {
+                        "en": "Textual Source"
+                    },
+                    "node_id": "53aa8e76-59ef-4d25-bf5a-bbeaa48f21a0",
+                    "sortorder": 0,
+                    "source_identifier_id": null,
+                    "visible": true,
+                    "widget_id": "31f3728c-7613-11e7-a139-784f435179ea"
+                },
+                {
+                    "card_id": "f00742ed-49bc-4b0c-9b10-e67062767c28",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Textual Reference Type",
+                        "placeholder": {
+                            "en": "Select an option"
+                        }
+                    },
+                    "id": "71c0a2c0-17b5-4934-a837-d16b361f4a8b",
+                    "label": {
+                        "en": "Textual Reference Type"
+                    },
+                    "node_id": "542d1db0-204d-4e33-b8da-6703fb3f910b",
+                    "sortorder": 1,
+                    "source_identifier_id": null,
+                    "visible": true,
+                    "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
+                }
+            ],
+            "color": "rgba(231,111,81,0.75)",
+            "config": {
+                "activeTabIndex": 0,
+                "tabs": [
+                    {
+                        "icon": "fa fa-info",
+                        "name": "Identity and Description",
+                        "nodegroup_ids": [
+                            "12707705-c05e-11e9-8177-a4d18cec433a",
+                            "97f2c366-b323-11e9-98a8-a4d18cec433a",
+                            "32db94f8-c05e-11e9-a2c1-a4d18cec433a",
+                            "cadbc433-b323-11e9-a4ba-a4d18cec433a",
+                            "20003a33-c05e-11e9-8646-a4d18cec433a",
+                            "280201ae-c05e-11e9-b285-a4d18cec433a",
+                            "bc2bfc4a-c061-11e9-bfe8-a4d18cec433a"
+                        ]
+                    },
+                    {
+                        "icon": "fa fa-calendar",
+                        "name": "Events",
+                        "nodegroup_ids": [
+                            "bda20e7a-b323-11e9-b758-a4d18cec433a",
+                            "d3a51166-c061-11e9-9820-a4d18cec433a",
+                            "3b5f674f-c05e-11e9-88f2-a4d18cec433a",
+                            "ae7d576b-d284-11e9-a0e5-a4d18cec433a"
+                        ]
+                    }
+                ]
+            },
+            "deploymentdate": null,
+            "deploymentfile": null,
+            "description": {
+                "en": ""
+            },
+            "edges": [
+                {
+                    "description": null,
+                    "domainnode_id": "26bed749-de64-4f8e-852b-f30e45ef9db0",
+                    "edgeid": "111b64b5-cec2-4bfb-a34b-1e0a469862a2",
+                    "graph_id": "7f98ded9-49e0-4179-aae4-d8a8176e2c48",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P67.1_has_type",
+                    "rangenode_id": "542d1db0-204d-4e33-b8da-6703fb3f910b",
+                    "source_identifier_id": null
+                },
+                {
+                    "description": null,
+                    "domainnode_id": "26bed749-de64-4f8e-852b-f30e45ef9db0",
+                    "edgeid": "6d22ce71-0362-4de2-a57e-7bb069f9ef46",
+                    "graph_id": "7f98ded9-49e0-4179-aae4-d8a8176e2c48",
+                    "name": null,
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P01_has_domain",
+                    "rangenode_id": "53aa8e76-59ef-4d25-bf5a-bbeaa48f21a0",
+                    "source_identifier_id": null
+                }
+            ],
+            "functions_x_graphs": [
+                {
+                    "config": {
+                        "descriptor_types": {
+                            "description": {
+                                "nodegroup_id": "3695a01e-d770-11ef-8f5d-0275dc2ded29",
+                                "string_template": "<Statement_content>"
+                            },
+                            "map_popup": {
+                                "nodegroup_id": "",
+                                "string_template": ""
+                            },
+                            "name": {
+                                "nodegroup_id": "3695cff8-d770-11ef-8f5d-0275dc2ded29",
+                                "string_template": "<Name_content>"
+                            }
+                        },
+                        "triggering_nodegroups": []
+                    },
+                    "function_id": "60000000-0000-0000-0000-000000000001",
+                    "graph_id": "7f98ded9-49e0-4179-aae4-d8a8176e2c48",
+                    "id": "7ffb3359-04b8-4214-b48d-8642ed663d8a"
+                }
+            ],
+            "graphid": "7f98ded9-49e0-4179-aae4-d8a8176e2c48",
+            "group_permissions": {},
+            "has_unpublished_changes": true,
+            "iconclass": "fa fa-users",
+            "is_active": true,
+            "is_copy_immutable": false,
+            "isresource": false,
+            "jsonldcontext": "https://linked.art/ns/v1/linked-art.json",
+            "name": {
+                "en": "Textual Reference"
+            },
+            "nodegroups": [
+                {
+                    "cardinality": "1",
+                    "grouping_node_id": "26bed749-de64-4f8e-852b-f30e45ef9db0",
+                    "legacygroupid": null,
+                    "nodegroupid": "26bed749-de64-4f8e-852b-f30e45ef9db0",
+                    "parentnodegroup_id": null
+                }
+            ],
+            "nodes": [
+                {
+                    "alias": "textual_reference",
+                    "config": {},
+                    "datatype": "semantic",
+                    "description": "",
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "7f98ded9-49e0-4179-aae4-d8a8176e2c48",
+                    "hascustomalias": false,
+                    "is_collector": true,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": true,
+                    "name": "Textual Reference",
+                    "nodegroup_id": "26bed749-de64-4f8e-852b-f30e45ef9db0",
+                    "nodeid": "26bed749-de64-4f8e-852b-f30e45ef9db0",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/PC67_refers_to",
+                    "parentproperty": "",
+                    "sortorder": 0,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "textual_source",
+                    "config": {
+                        "graphs": [
+                            {
+                                "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
+                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "name": "Textual Work",
+                                "relationshipCollection": "00000000-0000-0000-0000-000000000005",
+                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "useOntologyRelationship": false
+                            }
+                        ],
+                        "searchDsl": "",
+                        "searchString": ""
+                    },
+                    "datatype": "resource-instance",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "7f98ded9-49e0-4179-aae4-d8a8176e2c48",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Textual Source",
+                    "nodegroup_id": "26bed749-de64-4f8e-852b-f30e45ef9db0",
+                    "nodeid": "53aa8e76-59ef-4d25-bf5a-bbeaa48f21a0",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P01_has_domain",
+                    "sortorder": 0,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": null
+                },
+                {
+                    "alias": "textual_reference_type",
+                    "config": {
+                        "controlledList": "8b7faa16-3846-4360-b767-bb2c823b6550",
+                        "multiValue": false
+                    },
+                    "datatype": "reference",
+                    "description": null,
+                    "exportable": false,
+                    "fieldname": null,
+                    "graph_id": "7f98ded9-49e0-4179-aae4-d8a8176e2c48",
+                    "hascustomalias": false,
+                    "is_collector": false,
+                    "is_immutable": false,
+                    "isrequired": false,
+                    "issearchable": true,
+                    "istopnode": false,
+                    "name": "Textual Reference Type",
+                    "nodegroup_id": "26bed749-de64-4f8e-852b-f30e45ef9db0",
+                    "nodeid": "542d1db0-204d-4e33-b8da-6703fb3f910b",
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E55_Type",
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P67.1_has_type",
+                    "sortorder": 0,
+                    "source_identifier_id": null,
+                    "sourcebranchpublication_id": null
+                }
+            ],
+            "ontology_id": "0b1f5462-faa7-11e9-8f09-3af9d3b32b71",
+            "publication": {
+                "graph_id": "7f98ded9-49e0-4179-aae4-d8a8176e2c48",
+                "most_recent_edit_id": null,
+                "notes": null,
+                "publicationid": "9ba31c97-7b4c-41c6-97a0-f7e6aacede45",
+                "published_time": "2026-04-23T07:57:01.840"
+            },
+            "relatable_resource_model_ids": [],
+            "resource_2_resource_constraints": [],
+            "resource_instance_lifecycle": null,
+            "root": {
+                "alias": "textual_reference",
+                "config": {},
+                "datatype": "semantic",
+                "description": "",
+                "exportable": false,
+                "fieldname": null,
+                "graph_id": "7f98ded9-49e0-4179-aae4-d8a8176e2c48",
+                "hascustomalias": false,
+                "is_collector": true,
+                "is_immutable": false,
+                "isrequired": false,
+                "issearchable": true,
+                "istopnode": true,
+                "name": "Textual Reference",
+                "nodegroup_id": "26bed749-de64-4f8e-852b-f30e45ef9db0",
+                "nodeid": "26bed749-de64-4f8e-852b-f30e45ef9db0",
+                "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/PC67_refers_to",
+                "sortorder": 0,
+                "source_identifier_id": null,
+                "sourcebranchpublication_id": null
+            },
+            "slug": "group_1",
+            "source_identifier_id": null,
+            "spatial_views": [],
+            "subtitle": {
+                "en": ""
+            },
+            "template_id": "50000000-0000-0000-0000-000000000001",
+            "user_permissions": {},
+            "version": ""
+        }
+    ],
+    "metadata": {
+        "db": "PostgreSQL 16.13 on aarch64-unknown-linux-gnu, compiled by aarch64-unknown-linux-gnu-gcc (GCC) 12.4.0, 64-bit",
+        "git hash": "fatal: not a git repository (or any of the parent directories): .git",
+        "os": "Linux",
+        "os version": "6.17.0-1017-aws"
+    }
+}
