@@ -316,7 +316,7 @@ INSTALLED_APPS = (
     "arches_modular_reports",
     "rest_framework",
     "arches_querysets",
-    "arches_component_lab",
+    "arches_vue_components",
     "arches_search",
     "pgtrigger",
 )

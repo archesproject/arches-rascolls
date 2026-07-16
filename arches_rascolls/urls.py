@@ -57,7 +57,7 @@ urlpatterns = [
 
 urlpatterns.append(path("", include("arches_modular_reports.urls")))
 urlpatterns.append(path("", include("arches_controlled_lists.urls")))
-urlpatterns.append(path("", include("arches_component_lab.urls")))
+urlpatterns.append(path("", include("arches_vue_components.urls")))
 urlpatterns.append(path("", include("arches_search.urls")))
 
 # Ensure Arches core urls are superseded by project-level urls

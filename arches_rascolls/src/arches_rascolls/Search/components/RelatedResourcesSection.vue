@@ -10,7 +10,7 @@ import {
 } from "@/arches_modular_reports/constants.ts";
 import { fetchRelatedResourceData } from "@/arches_modular_reports/ModularReport/api.ts";
 import FileListViewer from "@/arches_modular_reports/ModularReport/components/FileListViewer.vue";
-import type { FileReference } from "@/arches_component_lab/datatypes/file-list/types";
+import type { FileReference } from "@/arches_vue_components/datatypes/file-list/types";
 
 type FileLink = FileReference & { is_file?: boolean };
 type DataCell = { display_value: string; links?: FileLink[] };
