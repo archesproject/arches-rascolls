@@ -25,7 +25,7 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Name of Person"
+                        "en": "Person Name"
                     },
                     "nodegroup_id": "e1d0f244-d770-11ef-8c40-0275dc2ded29",
                     "sortorder": 0,
@@ -54,10 +54,10 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Identifier for Person"
+                        "en": "Person Identifier"
                     },
                     "nodegroup_id": "e1d0fea6-d770-11ef-8c40-0275dc2ded29",
-                    "sortorder": 3,
+                    "sortorder": 1,
                     "source_identifier_id": null,
                     "visible": true
                 },
@@ -86,7 +86,7 @@
                         "en": "Group Person is Member of"
                     },
                     "nodegroup_id": "e1d13f2e-d770-11ef-8c40-0275dc2ded29",
-                    "sortorder": 5,
+                    "sortorder": 3,
                     "source_identifier_id": null,
                     "visible": true
                 },
@@ -112,10 +112,10 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Internal Label for Person"
+                        "en": "Person Label"
                     },
                     "nodegroup_id": "e1d14eb0-d770-11ef-8c40-0275dc2ded29",
-                    "sortorder": 15,
+                    "sortorder": 11,
                     "source_identifier_id": null,
                     "visible": false
                 },
@@ -141,10 +141,10 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "External URI for Person"
+                        "en": "Person External URI"
                     },
                     "nodegroup_id": "e1d15388-d770-11ef-8c40-0275dc2ded29",
-                    "sortorder": 4,
+                    "sortorder": 2,
                     "source_identifier_id": null,
                     "visible": true
                 },
@@ -173,7 +173,7 @@
                         "en": "Professional Activity of Person"
                     },
                     "nodegroup_id": "e1d15860-d770-11ef-8c40-0275dc2ded29",
-                    "sortorder": 14,
+                    "sortorder": 9,
                     "source_identifier_id": null,
                     "visible": true
                 },
@@ -197,7 +197,7 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Digital Reference for Person"
+                        "en": "Digital Reference to Person"
                     },
                     "nodegroup_id": "e1d15d74-d770-11ef-8c40-0275dc2ded29",
                     "sortorder": 10,
@@ -226,7 +226,7 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Statement about Professional Activity"
+                        "en": "Professional Activity Statement"
                     },
                     "nodegroup_id": "e1d1624c-d770-11ef-8c40-0275dc2ded29",
                     "sortorder": 1,
@@ -255,7 +255,7 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "TimeSpan of Professional Activity"
+                        "en": "Professional Activity Date"
                     },
                     "nodegroup_id": "e1d16cec-d770-11ef-8c40-0275dc2ded29",
                     "sortorder": 0,
@@ -284,10 +284,10 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Contact Information for Person"
+                        "en": "Person Contact Information"
                     },
                     "nodegroup_id": "e1d19dac-d770-11ef-8c40-0275dc2ded29",
-                    "sortorder": 2,
+                    "sortorder": 4,
                     "source_identifier_id": null,
                     "visible": true
                 },
@@ -313,10 +313,10 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Ethnicity of Person"
+                        "en": "Person Ethnicity"
                     },
                     "nodegroup_id": "e1d1a252-d770-11ef-8c40-0275dc2ded29",
-                    "sortorder": 11,
+                    "sortorder": 6,
                     "source_identifier_id": null,
                     "visible": false
                 },
@@ -342,7 +342,7 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Part of Name"
+                        "en": "Person Name Part"
                     },
                     "nodegroup_id": "e1d1a70c-d770-11ef-8c40-0275dc2ded29",
                     "sortorder": null,
@@ -374,7 +374,7 @@
                         "en": "Statement about Person"
                     },
                     "nodegroup_id": "e1d1aba8-d770-11ef-8c40-0275dc2ded29",
-                    "sortorder": 1,
+                    "sortorder": 8,
                     "source_identifier_id": null,
                     "visible": true
                 },
@@ -400,10 +400,10 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Nationality of Person"
+                        "en": "Person Nationality"
                     },
                     "nodegroup_id": "e1d1b058-d770-11ef-8c40-0275dc2ded29",
-                    "sortorder": 9,
+                    "sortorder": 5,
                     "source_identifier_id": null,
                     "visible": false
                 },
@@ -432,10 +432,10 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Core Attributes of Person"
+                        "en": "Person Attributes"
                     },
                     "nodegroup_id": "e1d1ba58-d770-11ef-8c40-0275dc2ded29",
-                    "sortorder": 8,
+                    "sortorder": 7,
                     "source_identifier_id": null,
                     "visible": true
                 }
@@ -448,17 +448,17 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Extended Date Time Format",
+                        "label": "Professional Activity Date",
                         "placeholder": {
                             "en": ""
                         }
                     },
                     "id": "2241297d-b08c-465c-97eb-e5e0db427c3d",
                     "label": {
-                        "en": "Extended Date Time Format"
+                        "en": "Professional Activity Date"
                     },
                     "node_id": "f77bf9b0-0a8a-467e-bba9-0f819919f399",
-                    "sortorder": 2,
+                    "sortorder": 0,
                     "source_identifier_id": null,
                     "visible": true,
                     "widget_id": "adfd15ce-dbab-11e7-86d1-0fcf08612b27"
@@ -569,7 +569,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Name",
+                        "label": "Person Name Part",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -579,7 +579,7 @@
                     },
                     "id": "e1d2742a-d770-11ef-8c40-0275dc2ded29",
                     "label": {
-                        "en": "Name"
+                        "en": "Person Name Part"
                     },
                     "node_id": "e1d221aa-d770-11ef-8c40-0275dc2ded29",
                     "sortorder": 0,
@@ -745,7 +745,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Name",
+                        "label": "Person Name",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -755,7 +755,7 @@
                     },
                     "id": "e1d276be-d770-11ef-8c40-0275dc2ded29",
                     "label": {
-                        "en": "Name"
+                        "en": "Person Name"
                     },
                     "node_id": "e1d1ddda-d770-11ef-8c40-0275dc2ded29",
                     "sortorder": 0,
@@ -770,14 +770,14 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Source Reference Work for Name",
+                        "label": "Source Reference Work for Person Name",
                         "placeholder": {
                             "en": ""
                         }
                     },
                     "id": "e1d27740-d770-11ef-8c40-0275dc2ded29",
                     "label": {
-                        "en": "Source Reference Work for Name"
+                        "en": "Source Reference Work for Person Name"
                     },
                     "node_id": "e1d1d7ea-d770-11ef-8c40-0275dc2ded29",
                     "sortorder": 3,
@@ -804,7 +804,7 @@
                     "node_id": "e1d1e7b2-d770-11ef-8c40-0275dc2ded29",
                     "sortorder": 2,
                     "source_identifier_id": null,
-                    "visible": true,
+                    "visible": false,
                     "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
                 },
                 {
@@ -819,7 +819,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Statement",
+                        "label": "Professional Activity Statement",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -829,7 +829,7 @@
                     },
                     "id": "e1d28f1e-d770-11ef-8c40-0275dc2ded29",
                     "label": {
-                        "en": "Statement"
+                        "en": "Professional Activity Statement"
                     },
                     "node_id": "e1d1f770-d770-11ef-8c40-0275dc2ded29",
                     "sortorder": 0,
@@ -1007,7 +1007,7 @@
                     "node_id": "e1d1c462-d770-11ef-8c40-0275dc2ded29",
                     "sortorder": 2,
                     "source_identifier_id": null,
-                    "visible": true,
+                    "visible": false,
                     "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
                 },
                 {
@@ -1102,7 +1102,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Statement",
+                        "label": "Statement about Person",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -1112,7 +1112,7 @@
                     },
                     "id": "e1d296c6-d770-11ef-8c40-0275dc2ded29",
                     "label": {
-                        "en": "Statement"
+                        "en": "Statement about Person"
                     },
                     "node_id": "e1d20ecc-d770-11ef-8c40-0275dc2ded29",
                     "sortorder": 0,
@@ -1181,7 +1181,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Contact Information",
+                        "label": "Person Contact Information",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -1191,10 +1191,10 @@
                     },
                     "id": "e1d2a634-d770-11ef-8c40-0275dc2ded29",
                     "label": {
-                        "en": "Contact Information"
+                        "en": "Person Contact Information"
                     },
                     "node_id": "e1d200f8-d770-11ef-8c40-0275dc2ded29",
-                    "sortorder": 1,
+                    "sortorder": 0,
                     "source_identifier_id": null,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
@@ -1216,7 +1216,7 @@
                         "en": "Contact Information Type"
                     },
                     "node_id": "e1d1d448-d770-11ef-8c40-0275dc2ded29",
-                    "sortorder": 0,
+                    "sortorder": 1,
                     "source_identifier_id": null,
                     "visible": true,
                     "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
@@ -1290,7 +1290,7 @@
                         "en": "Identifier Type"
                     },
                     "node_id": "e1d22524-d770-11ef-8c40-0275dc2ded29",
-                    "sortorder": 0,
+                    "sortorder": 1,
                     "source_identifier_id": null,
                     "visible": true,
                     "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
@@ -1329,7 +1329,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Identifier Label",
+                        "label": "Person Identifier Label",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -1339,7 +1339,7 @@
                     },
                     "id": "e1d2acc4-d770-11ef-8c40-0275dc2ded29",
                     "label": {
-                        "en": "Identifier Label"
+                        "en": "Person Identifier Label"
                     },
                     "node_id": "e1d2260a-d770-11ef-8c40-0275dc2ded29",
                     "sortorder": 3,
@@ -1359,7 +1359,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Identifier",
+                        "label": "Person Identifier",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -1369,10 +1369,10 @@
                     },
                     "id": "e1d2ad5a-d770-11ef-8c40-0275dc2ded29",
                     "label": {
-                        "en": "Identifier"
+                        "en": "Person Identifier"
                     },
                     "node_id": "e1d24158-d770-11ef-8c40-0275dc2ded29",
-                    "sortorder": 1,
+                    "sortorder": 0,
                     "source_identifier_id": null,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
@@ -1394,7 +1394,7 @@
                         "en": "TimeSpan Type"
                     },
                     "node_id": "e1d2123c-d770-11ef-8c40-0275dc2ded29",
-                    "sortorder": 0,
+                    "sortorder": 1,
                     "source_identifier_id": null,
                     "visible": false,
                     "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
@@ -1424,7 +1424,7 @@
                         "en": "TimeSpan Label"
                     },
                     "node_id": "e1d214da-d770-11ef-8c40-0275dc2ded29",
-                    "sortorder": 1,
+                    "sortorder": 2,
                     "source_identifier_id": null,
                     "visible": false,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
@@ -1441,7 +1441,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "External URI",
+                        "label": "Person External URI",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -1451,7 +1451,7 @@
                     },
                     "id": "e1d2b804-d770-11ef-8c40-0275dc2ded29",
                     "label": {
-                        "en": "External URI"
+                        "en": "Person External URI"
                     },
                     "node_id": "e1d15388-d770-11ef-8c40-0275dc2ded29",
                     "sortorder": 0,
@@ -1466,14 +1466,14 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Group",
+                        "label": "Group Person is Member of",
                         "placeholder": {
                             "en": ""
                         }
                     },
                     "id": "e1d2b890-d770-11ef-8c40-0275dc2ded29",
                     "label": {
-                        "en": "Group"
+                        "en": "Group Person is Member of"
                     },
                     "node_id": "e1d13f2e-d770-11ef-8c40-0275dc2ded29",
                     "sortorder": 0,
@@ -1488,14 +1488,14 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Gender",
+                        "label": "Person Gender",
                         "placeholder": {
                             "en": "Select an option"
                         }
                     },
                     "id": "e1d2c0c4-d770-11ef-8c40-0275dc2ded29",
                     "label": {
-                        "en": "Gender"
+                        "en": "Person Gender"
                     },
                     "node_id": "e1d1ba58-d770-11ef-8c40-0275dc2ded29",
                     "sortorder": 0,
@@ -1510,14 +1510,14 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Meta Type",
+                        "label": "Person Gender Metatype",
                         "placeholder": {
                             "en": "Select an option"
                         }
                     },
                     "id": "e1d2c146-d770-11ef-8c40-0275dc2ded29",
                     "label": {
-                        "en": "Meta Type"
+                        "en": "Person Gender Metatype"
                     },
                     "node_id": "e1d1e212-d770-11ef-8c40-0275dc2ded29",
                     "sortorder": 1,
@@ -1546,14 +1546,14 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Meta Type",
+                        "label": "Person Nationality Metatype",
                         "placeholder": {
                             "en": "Select an option"
                         }
                     },
                     "id": "e1d2c2d6-d770-11ef-8c40-0275dc2ded29",
                     "label": {
-                        "en": "Meta Type"
+                        "en": "Person Nationality Metatype"
                     },
                     "node_id": "e1d24f90-d770-11ef-8c40-0275dc2ded29",
                     "sortorder": 1,
@@ -1568,14 +1568,14 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Nationality",
+                        "label": "Person Nationality",
                         "placeholder": {
                             "en": "Select an option"
                         }
                     },
                     "id": "e1d2c362-d770-11ef-8c40-0275dc2ded29",
                     "label": {
-                        "en": "Nationality"
+                        "en": "Person Nationality"
                     },
                     "node_id": "e1d1b058-d770-11ef-8c40-0275dc2ded29",
                     "sortorder": 0,
@@ -1634,14 +1634,14 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Ethnicity",
+                        "label": "Person Ethnicity",
                         "placeholder": {
                             "en": "Select an option"
                         }
                     },
                     "id": "e1d2c4fc-d770-11ef-8c40-0275dc2ded29",
                     "label": {
-                        "en": "Ethnicity"
+                        "en": "Person Ethnicity"
                     },
                     "node_id": "e1d1a252-d770-11ef-8c40-0275dc2ded29",
                     "sortorder": 0,
@@ -1700,14 +1700,14 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Particular Professional Activity Technique",
+                        "label": "Professional Activity Technique",
                         "placeholder": {
                             "en": "Select an option"
                         }
                     },
                     "id": "e1d2caf6-d770-11ef-8c40-0275dc2ded29",
                     "label": {
-                        "en": "Particular Professional Activity Technique"
+                        "en": "Professional Activity Technique"
                     },
                     "node_id": "e1d1ed02-d770-11ef-8c40-0275dc2ded29",
                     "sortorder": 1,
@@ -1796,14 +1796,14 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Location of Professional Activity",
+                        "label": "Professional Activity Location ",
                         "placeholder": {
                             "en": ""
                         }
                     },
                     "id": "e1d2cdbc-d770-11ef-8c40-0275dc2ded29",
                     "label": {
-                        "en": "Location of Professional Activity"
+                        "en": "Professional Activity Location "
                     },
                     "node_id": "e1d21bce-d770-11ef-8c40-0275dc2ded29",
                     "sortorder": 2,
@@ -1823,7 +1823,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Internal Label",
+                        "label": "Person Label",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -1833,7 +1833,7 @@
                     },
                     "id": "e1d2ce3e-d770-11ef-8c40-0275dc2ded29",
                     "label": {
-                        "en": "Internal Label"
+                        "en": "Person Label"
                     },
                     "node_id": "e1d14eb0-d770-11ef-8c40-0275dc2ded29",
                     "sortorder": 0,
@@ -2623,7 +2623,7 @@
                     "nodeid": "e1d0f244-d770-11ef-8c40-0275dc2ded29",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E33_E41_Linguistic_Appellation",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
-                    "sortorder": 1,
+                    "sortorder": 0,
                     "source_identifier_id": null,
                     "sourcebranchpublication_id": null
                 },
@@ -2646,13 +2646,14 @@
                     "nodeid": "e1d0fea6-d770-11ef-8c40-0275dc2ded29",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E42_Identifier",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
-                    "sortorder": 2,
+                    "sortorder": 1,
                     "source_identifier_id": null,
                     "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "member_of",
                     "config": {
+                        "defaultValue": [],
                         "graphs": [
                             {
                                 "graphid": "36956e50-d770-11ef-8f5d-0275dc2ded29",
@@ -2682,7 +2683,7 @@
                     "nodeid": "e1d13f2e-d770-11ef-8c40-0275dc2ded29",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E74_Group",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P107i_is_current_or_former_member_of",
-                    "sortorder": 12,
+                    "sortorder": 3,
                     "source_identifier_id": null,
                     "sourcebranchpublication_id": null
                 },
@@ -2705,7 +2706,7 @@
                     "nodeid": "e1d14eb0-d770-11ef-8c40-0275dc2ded29",
                     "ontologyclass": "http://www.w3.org/2001/XMLSchema#string",
                     "parentproperty": "http://www.w3.org/2000/01/rdf-schema#label",
-                    "sortorder": 0,
+                    "sortorder": 11,
                     "source_identifier_id": null,
                     "sourcebranchpublication_id": null
                 },
@@ -2728,7 +2729,7 @@
                     "nodeid": "e1d15388-d770-11ef-8c40-0275dc2ded29",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E55_Type",
                     "parentproperty": "http://www.w3.org/2004/02/skos/core#exactMatch",
-                    "sortorder": 14,
+                    "sortorder": 2,
                     "source_identifier_id": null,
                     "sourcebranchpublication_id": null
                 },
@@ -2751,7 +2752,7 @@
                     "nodeid": "e1d15860-d770-11ef-8c40-0275dc2ded29",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P14i_performed",
-                    "sortorder": 13,
+                    "sortorder": 9,
                     "source_identifier_id": null,
                     "sourcebranchpublication_id": null
                 },
@@ -2774,7 +2775,7 @@
                     "nodeid": "e1d15d74-d770-11ef-8c40-0275dc2ded29",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/PC67_refers_to",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P01i_is_domain_of",
-                    "sortorder": 3,
+                    "sortorder": 10,
                     "source_identifier_id": null,
                     "sourcebranchpublication_id": null
                 },
@@ -2797,7 +2798,7 @@
                     "nodeid": "e1d1624c-d770-11ef-8c40-0275dc2ded29",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by",
-                    "sortorder": 6,
+                    "sortorder": 5,
                     "source_identifier_id": null,
                     "sourcebranchpublication_id": null
                 },
@@ -2820,7 +2821,7 @@
                     "nodeid": "e1d16cec-d770-11ef-8c40-0275dc2ded29",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span",
-                    "sortorder": 2,
+                    "sortorder": 4,
                     "source_identifier_id": null,
                     "sourcebranchpublication_id": null
                 },
@@ -2843,7 +2844,7 @@
                     "nodeid": "e1d19dac-d770-11ef-8c40-0275dc2ded29",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E42_Identifier",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
-                    "sortorder": 5,
+                    "sortorder": 4,
                     "source_identifier_id": null,
                     "sourcebranchpublication_id": null
                 },
@@ -2869,7 +2870,7 @@
                     "nodeid": "e1d1a252-d770-11ef-8c40-0275dc2ded29",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E55_Type",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
-                    "sortorder": 4,
+                    "sortorder": 5,
                     "source_identifier_id": null,
                     "sourcebranchpublication_id": null
                 },
@@ -2915,7 +2916,7 @@
                     "nodeid": "e1d1aba8-d770-11ef-8c40-0275dc2ded29",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by",
-                    "sortorder": 6,
+                    "sortorder": 8,
                     "source_identifier_id": null,
                     "sourcebranchpublication_id": null
                 },
@@ -2941,7 +2942,7 @@
                     "nodeid": "e1d1b058-d770-11ef-8c40-0275dc2ded29",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E55_Type",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
-                    "sortorder": 11,
+                    "sortorder": 7,
                     "source_identifier_id": null,
                     "sourcebranchpublication_id": null
                 },
@@ -2967,7 +2968,7 @@
                     "nodeid": "e1d1ba58-d770-11ef-8c40-0275dc2ded29",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E55_Type",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
-                    "sortorder": 8,
+                    "sortorder": 6,
                     "source_identifier_id": null,
                     "sourcebranchpublication_id": null
                 },
@@ -2990,7 +2991,7 @@
                     "nodeid": "e1d1c28c-d770-11ef-8c40-0275dc2ded29",
                     "ontologyclass": "http://www.w3.org/2001/XMLSchema#string",
                     "parentproperty": "http://www.w3.org/2000/01/rdf-schema#label",
-                    "sortorder": 0,
+                    "sortorder": 4,
                     "source_identifier_id": null,
                     "sourcebranchpublication_id": null
                 },
@@ -3042,7 +3043,7 @@
                     "nodeid": "e1d1cb88-d770-11ef-8c40-0275dc2ded29",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E56_Language",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P72_has_language",
-                    "sortorder": 3,
+                    "sortorder": 2,
                     "source_identifier_id": null,
                     "sourcebranchpublication_id": null
                 },
@@ -3065,7 +3066,7 @@
                     "nodeid": "e1d1cc64-d770-11ef-8c40-0275dc2ded29",
                     "ontologyclass": "http://www.w3.org/2001/XMLSchema#string",
                     "parentproperty": "http://www.w3.org/2000/01/rdf-schema#label",
-                    "sortorder": 0,
+                    "sortorder": 4,
                     "source_identifier_id": null,
                     "sourcebranchpublication_id": null
                 },
@@ -3124,6 +3125,7 @@
                 {
                     "alias": "name_source",
                     "config": {
+                        "defaultValue": [],
                         "graphs": [
                             {
                                 "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
@@ -3153,7 +3155,7 @@
                     "nodeid": "e1d1d7ea-d770-11ef-8c40-0275dc2ded29",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by",
-                    "sortorder": 4,
+                    "sortorder": 3,
                     "source_identifier_id": null,
                     "sourcebranchpublication_id": null
                 },
@@ -3199,7 +3201,7 @@
                     "nodeid": "e1d1ddda-d770-11ef-8c40-0275dc2ded29",
                     "ontologyclass": "http://www.w3.org/2001/XMLSchema#string",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P190_has_symbolic_content",
-                    "sortorder": 2,
+                    "sortorder": 0,
                     "source_identifier_id": null,
                     "sourcebranchpublication_id": null
                 },
@@ -3277,7 +3279,7 @@
                     "nodeid": "e1d1ed02-d770-11ef-8c40-0275dc2ded29",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E55_Type",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P32_used_general_technique",
-                    "sortorder": 4,
+                    "sortorder": 2,
                     "source_identifier_id": null,
                     "sourcebranchpublication_id": null
                 },
@@ -3300,7 +3302,7 @@
                     "nodeid": "e1d1edf2-d770-11ef-8c40-0275dc2ded29",
                     "ontologyclass": "http://www.w3.org/2001/XMLSchema#string",
                     "parentproperty": "http://www.w3.org/2000/01/rdf-schema#label",
-                    "sortorder": 0,
+                    "sortorder": 4,
                     "source_identifier_id": null,
                     "sourcebranchpublication_id": null
                 },
@@ -3323,7 +3325,7 @@
                     "nodeid": "e1d1f770-d770-11ef-8c40-0275dc2ded29",
                     "ontologyclass": "http://www.w3.org/2001/XMLSchema#string",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P190_has_symbolic_content",
-                    "sortorder": 2,
+                    "sortorder": 0,
                     "source_identifier_id": null,
                     "sourcebranchpublication_id": null
                 },
@@ -3385,7 +3387,7 @@
                     "nodeid": "e1d1fd60-d770-11ef-8c40-0275dc2ded29",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E56_Language",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P72_has_language",
-                    "sortorder": 3,
+                    "sortorder": 2,
                     "source_identifier_id": null,
                     "sourcebranchpublication_id": null
                 },
@@ -3408,7 +3410,7 @@
                     "nodeid": "e1d20008-d770-11ef-8c40-0275dc2ded29",
                     "ontologyclass": "http://www.w3.org/2001/XMLSchema#string",
                     "parentproperty": "http://www.w3.org/2000/01/rdf-schema#label",
-                    "sortorder": 0,
+                    "sortorder": 3,
                     "source_identifier_id": null,
                     "sourcebranchpublication_id": null
                 },
@@ -3431,7 +3433,7 @@
                     "nodeid": "e1d200f8-d770-11ef-8c40-0275dc2ded29",
                     "ontologyclass": "http://www.w3.org/2001/XMLSchema#string",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P190_has_symbolic_content",
-                    "sortorder": 2,
+                    "sortorder": 0,
                     "source_identifier_id": null,
                     "sourcebranchpublication_id": null
                 },
@@ -3509,7 +3511,7 @@
                     "nodeid": "e1d20df0-d770-11ef-8c40-0275dc2ded29",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E56_Language",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P72_has_language",
-                    "sortorder": 3,
+                    "sortorder": 2,
                     "source_identifier_id": null,
                     "sourcebranchpublication_id": null
                 },
@@ -3532,7 +3534,7 @@
                     "nodeid": "e1d20ecc-d770-11ef-8c40-0275dc2ded29",
                     "ontologyclass": "http://www.w3.org/2001/XMLSchema#string",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P190_has_symbolic_content",
-                    "sortorder": 2,
+                    "sortorder": 1,
                     "source_identifier_id": null,
                     "sourcebranchpublication_id": null
                 },
@@ -3568,7 +3570,7 @@
                     "nodeid": "e1d20f9e-d770-11ef-8c40-0275dc2ded29",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by",
-                    "sortorder": 4,
+                    "sortorder": 3,
                     "source_identifier_id": null,
                     "sourcebranchpublication_id": null
                 },
@@ -3604,7 +3606,7 @@
                     "nodeid": "e1d21160-d770-11ef-8c40-0275dc2ded29",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by",
-                    "sortorder": 4,
+                    "sortorder": 3,
                     "source_identifier_id": null,
                     "sourcebranchpublication_id": null
                 },
@@ -3666,7 +3668,7 @@
                     "nodeid": "e1d21318-d770-11ef-8c40-0275dc2ded29",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by",
-                    "sortorder": 7,
+                    "sortorder": 6,
                     "source_identifier_id": null,
                     "sourcebranchpublication_id": null
                 },
@@ -3692,7 +3694,7 @@
                     "nodeid": "e1d21408-d770-11ef-8c40-0275dc2ded29",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E55_Type",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
-                    "sortorder": 1,
+                    "sortorder": 0,
                     "source_identifier_id": null,
                     "sourcebranchpublication_id": null
                 },
@@ -3715,7 +3717,7 @@
                     "nodeid": "e1d214da-d770-11ef-8c40-0275dc2ded29",
                     "ontologyclass": "http://www.w3.org/2001/XMLSchema#string",
                     "parentproperty": "http://www.w3.org/2000/01/rdf-schema#label",
-                    "sortorder": 0,
+                    "sortorder": 2,
                     "source_identifier_id": null,
                     "sourcebranchpublication_id": null
                 },
@@ -3777,7 +3779,7 @@
                     "nodeid": "e1d2191c-d770-11ef-8c40-0275dc2ded29",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E22_Human-Made_Object",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P16_used_specific_object",
-                    "sortorder": 5,
+                    "sortorder": 3,
                     "source_identifier_id": null,
                     "sourcebranchpublication_id": null
                 },
@@ -3800,13 +3802,14 @@
                     "nodeid": "e1d21a20-d770-11ef-8c40-0275dc2ded29",
                     "ontologyclass": "http://www.w3.org/2001/XMLSchema#string",
                     "parentproperty": "http://www.w3.org/2000/01/rdf-schema#label",
-                    "sortorder": 0,
+                    "sortorder": 7,
                     "source_identifier_id": null,
                     "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "profession_activity_location",
                     "config": {
+                        "defaultValue": [],
                         "graphs": [
                             {
                                 "graphid": "3dda9f54-d771-11ef-825b-0275dc2ded29",
@@ -3836,7 +3839,7 @@
                     "nodeid": "e1d21bce-d770-11ef-8c40-0275dc2ded29",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at",
-                    "sortorder": 3,
+                    "sortorder": 1,
                     "source_identifier_id": null,
                     "sourcebranchpublication_id": null
                 },
@@ -3859,7 +3862,7 @@
                     "nodeid": "e1d221aa-d770-11ef-8c40-0275dc2ded29",
                     "ontologyclass": "http://www.w3.org/2001/XMLSchema#string",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P190_has_symbolic_content",
-                    "sortorder": 2,
+                    "sortorder": 0,
                     "source_identifier_id": null,
                     "sourcebranchpublication_id": null
                 },
@@ -3957,13 +3960,14 @@
                     "nodeid": "e1d2260a-d770-11ef-8c40-0275dc2ded29",
                     "ontologyclass": "http://www.w3.org/2001/XMLSchema#string",
                     "parentproperty": "http://www.w3.org/2000/01/rdf-schema#label",
-                    "sortorder": 0,
+                    "sortorder": 2,
                     "source_identifier_id": null,
                     "sourcebranchpublication_id": null
                 },
                 {
                     "alias": "digital_source",
                     "config": {
+                        "defaultValue": [],
                         "graphs": [
                             {
                                 "graphid": "8713965e-d860-11ef-98f5-0275dc2ded29",
@@ -4016,7 +4020,7 @@
                     "nodeid": "e1d24158-d770-11ef-8c40-0275dc2ded29",
                     "ontologyclass": "http://www.w3.org/2001/XMLSchema#string",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P190_has_symbolic_content",
-                    "sortorder": 2,
+                    "sortorder": 0,
                     "source_identifier_id": null,
                     "sourcebranchpublication_id": null
                 },
@@ -4052,7 +4056,7 @@
                     "nodeid": "e1d24ad6-d770-11ef-8c40-0275dc2ded29",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by",
-                    "sortorder": 3,
+                    "sortorder": 2,
                     "source_identifier_id": null,
                     "sourcebranchpublication_id": null
                 },
@@ -4130,7 +4134,7 @@
                     "nodeid": "e1d25b34-d770-11ef-8c40-0275dc2ded29",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E55_Type",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
-                    "sortorder": 1,
+                    "sortorder": 2,
                     "source_identifier_id": null,
                     "sourcebranchpublication_id": null
                 },
@@ -4161,7 +4165,7 @@
                     "nodeid": "f77bf9b0-0a8a-467e-bba9-0f819919f399",
                     "ontologyclass": "http://www.w3.org/2000/01/rdf-schema#Literal",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P82_at_some_time_within",
-                    "sortorder": 2,
+                    "sortorder": 0,
                     "source_identifier_id": null,
                     "sourcebranchpublication_id": null
                 }
@@ -4170,28 +4174,28 @@
             "publication": {
                 "graph_id": "e1d0ea1a-d770-11ef-8c40-0275dc2ded29",
                 "most_recent_edit_id": null,
-                "notes": "Branches removed and nodes exposed to advanced search according to https://docs.google.com/spreadsheets/d/1mT-VbXfnU980nAzJXRzxBXtBsykxwAzWRAFcM-By8OY/edit?gid=415934223#gid=415934223",
-                "publicationid": "41f51d97-e246-44df-ae14-194c05c056c7",
-                "published_time": "2026-04-23T12:04:56.689"
+                "notes": "Part 3",
+                "publicationid": "de62cd07-cc5a-4b42-a9ee-8c11618969ab",
+                "published_time": "2026-07-10T10:50:42.628"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
             "resource_instance_lifecycle": {
                 "id": "7e3cce56-fbfb-4a4b-8e83-59b9f9e7cb75",
                 "name": {
-                    "en": "Standard"
+                    "null": "Standard"
                 },
                 "resource_instance_lifecycle_states": [
                     {
                         "action_label": {
-                            "en": "Revert to Draft"
+                            "null": "Revert to Draft"
                         },
                         "can_delete_resource_instances": true,
                         "can_edit_resource_instances": true,
                         "id": "9375c9a7-dad2-4f14-a5c1-d7e329fdde4f",
                         "is_initial_state": true,
                         "name": {
-                            "en": "Draft"
+                            "null": "Draft"
                         },
                         "next_resource_instance_lifecycle_states": [
                             "f75bb034-36e3-4ab4-8167-f520cf0b4c58"
@@ -4201,14 +4205,14 @@
                     },
                     {
                         "action_label": {
-                            "en": "Make Active"
+                            "null": "Make Active"
                         },
                         "can_delete_resource_instances": false,
                         "can_edit_resource_instances": true,
                         "id": "f75bb034-36e3-4ab4-8167-f520cf0b4c58",
                         "is_initial_state": false,
                         "name": {
-                            "en": "Active"
+                            "null": "Active"
                         },
                         "next_resource_instance_lifecycle_states": [
                             "d95d9c0e-0e2c-4450-93a3-d788b91abcc8"
@@ -4220,14 +4224,14 @@
                     },
                     {
                         "action_label": {
-                            "en": "Retire"
+                            "null": "Retire"
                         },
                         "can_delete_resource_instances": false,
                         "can_edit_resource_instances": false,
                         "id": "d95d9c0e-0e2c-4450-93a3-d788b91abcc8",
                         "is_initial_state": false,
                         "name": {
-                            "en": "Retired"
+                            "null": "Retired"
                         },
                         "next_resource_instance_lifecycle_states": [],
                         "previous_resource_instance_lifecycle_states": [
@@ -4265,15 +4269,15 @@
             "subtitle": {
                 "en": "An individual, named human person"
             },
-            "template_id": "50000000-0000-0000-0000-000000000001",
+            "template_id": "b0908227-ecc2-48dd-931b-314a9031caa0",
             "user_permissions": {},
             "version": ""
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 16.8 on aarch64-unknown-linux-gnu, compiled by gcc (GCC) 7.3.1 20180712 (Red Hat 7.3.1-17), 64-bit",
+        "db": "PostgreSQL 16.13 on aarch64-unknown-linux-gnu, compiled by aarch64-unknown-linux-gnu-gcc (GCC) 12.4.0, 64-bit",
         "git hash": "fatal: not a git repository (or any of the parent directories): .git",
         "os": "Linux",
-        "os version": "6.17.0-1009-aws"
+        "os version": "6.1.174"
     }
 }

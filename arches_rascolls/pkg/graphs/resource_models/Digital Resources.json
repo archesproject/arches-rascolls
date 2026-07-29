@@ -131,7 +131,7 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Name for Digital Service"
+                        "en": "Digital Service Name"
                     },
                     "nodegroup_id": "8713bc60-d860-11ef-98f5-0275dc2ded29",
                     "sortorder": 0,
@@ -158,7 +158,7 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Type of Digital Resource"
+                        "en": "Digital Resource Type"
                     },
                     "nodegroup_id": "8713c124-d860-11ef-98f5-0275dc2ded29",
                     "sortorder": 2,
@@ -212,7 +212,7 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Parent Digital Resource"
+                        "en": "Broader Digital Resource"
                     },
                     "nodegroup_id": "8713c9a8-d860-11ef-98f5-0275dc2ded29",
                     "sortorder": 10,
@@ -268,7 +268,7 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Name for Dimension"
+                        "en": "Digital Resource Dimension Name"
                     },
                     "nodegroup_id": "8713d5d8-d860-11ef-98f5-0275dc2ded29",
                     "sortorder": null,
@@ -430,7 +430,7 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Name of Digital Resource"
+                        "en": "Digital Resource Name"
                     },
                     "nodegroup_id": "8713f270-d860-11ef-98f5-0275dc2ded29",
                     "sortorder": 0,
@@ -484,7 +484,7 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Identifier for Digital Service"
+                        "en": "Digital Service Identifier"
                     },
                     "nodegroup_id": "8713fa40-d860-11ef-98f5-0275dc2ded29",
                     "sortorder": 1,
@@ -511,7 +511,7 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Dimension of Digital Resource"
+                        "en": "Digital Resource Dimension"
                     },
                     "nodegroup_id": "8713fe14-d860-11ef-98f5-0275dc2ded29",
                     "sortorder": 4,
@@ -538,7 +538,7 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Identifier of Digital Resource"
+                        "en": "Digital Resource Identifier"
                     },
                     "nodegroup_id": "871405ee-d860-11ef-98f5-0275dc2ded29",
                     "sortorder": 1,
@@ -637,14 +637,14 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Date of Creation",
+                        "label": "Digital Resource Creation Date",
                         "placeholder": {
                             "en": ""
                         }
                     },
                     "id": "2a2f0b4b-e241-4458-a20a-5aa63e9d68c0",
                     "label": {
-                        "en": "Date of Creation"
+                        "en": "Digital Resource Creation Date"
                     },
                     "node_id": "68320902-7300-4e22-880c-5a379c019a76",
                     "sortorder": 1,
@@ -790,7 +790,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Statement",
+                        "label": "Statement about Creation Event",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -800,7 +800,7 @@
                     },
                     "id": "5de70771-9911-426f-89a9-b05e16d99242",
                     "label": {
-                        "en": "Statement"
+                        "en": "Statement about Creation Event"
                     },
                     "node_id": "6db4172c-9647-4211-9787-cde16b3de8ec",
                     "sortorder": 0,
@@ -987,7 +987,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Name ",
+                        "label": "Digital Resource Dimension Name",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -997,7 +997,7 @@
                     },
                     "id": "871463c2-d860-11ef-98f5-0275dc2ded29",
                     "label": {
-                        "en": "Name "
+                        "en": "Digital Resource Dimension Name"
                     },
                     "node_id": "87141b2e-d860-11ef-98f5-0275dc2ded29",
                     "sortorder": 0,
@@ -1243,7 +1243,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Text of Name",
+                        "label": "Digital Resource Name",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -1253,7 +1253,7 @@
                     },
                     "id": "87146886-d860-11ef-98f5-0275dc2ded29",
                     "label": {
-                        "en": "Text of Name"
+                        "en": "Digital Resource Name"
                     },
                     "node_id": "87143b9a-d860-11ef-98f5-0275dc2ded29",
                     "sortorder": 0,
@@ -1397,7 +1397,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Name",
+                        "label": "Digital Service Name",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -1407,7 +1407,7 @@
                     },
                     "id": "87146b74-d860-11ef-98f5-0275dc2ded29",
                     "label": {
-                        "en": "Name"
+                        "en": "Digital Service Name"
                     },
                     "node_id": "871415a2-d860-11ef-98f5-0275dc2ded29",
                     "sortorder": 0,
@@ -1529,7 +1529,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Statement",
+                        "label": "Statement about Digital Service",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -1539,7 +1539,7 @@
                     },
                     "id": "87146d90-d860-11ef-98f5-0275dc2ded29",
                     "label": {
-                        "en": "Statement"
+                        "en": "Statement about Digital Service"
                     },
                     "node_id": "87142e34-d860-11ef-98f5-0275dc2ded29",
                     "sortorder": 0,
@@ -1704,7 +1704,7 @@
                     "node_id": "87141872-d860-11ef-98f5-0275dc2ded29",
                     "sortorder": 2,
                     "source_identifier_id": null,
-                    "visible": true,
+                    "visible": false,
                     "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
                 },
                 {
@@ -1958,7 +1958,7 @@
                     "node_id": "87144d6a-d860-11ef-98f5-0275dc2ded29",
                     "sortorder": 2,
                     "source_identifier_id": null,
-                    "visible": true,
+                    "visible": false,
                     "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
                 },
                 {
@@ -1973,7 +1973,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Statement",
+                        "label": "Statement about Digital Resource",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -1983,7 +1983,7 @@
                     },
                     "id": "87148168-d860-11ef-98f5-0275dc2ded29",
                     "label": {
-                        "en": "Statement"
+                        "en": "Statement about Digital Resource"
                     },
                     "node_id": "87144c84-d860-11ef-98f5-0275dc2ded29",
                     "sortorder": 0,
@@ -2146,14 +2146,14 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Collection",
+                        "label": "Collection that includes Digital Resource",
                         "placeholder": {
                             "en": ""
                         }
                     },
                     "id": "871484c4-d860-11ef-98f5-0275dc2ded29",
                     "label": {
-                        "en": "Collection"
+                        "en": "Collection that includes Digital Resource"
                     },
                     "node_id": "8713eab4-d860-11ef-98f5-0275dc2ded29",
                     "sortorder": 0,
@@ -2280,14 +2280,14 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Part of Digital Resource",
+                        "label": "Broader Digital Resource",
                         "placeholder": {
                             "en": ""
                         }
                     },
                     "id": "87148776-d860-11ef-98f5-0275dc2ded29",
                     "label": {
-                        "en": "Part of Digital Resource"
+                        "en": "Broader Digital Resource"
                     },
                     "node_id": "8713c9a8-d860-11ef-98f5-0275dc2ded29",
                     "sortorder": 0,
@@ -2329,7 +2329,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Identifier",
+                        "label": "Digital Resource Identifier",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -2339,7 +2339,7 @@
                     },
                     "id": "87148898-d860-11ef-98f5-0275dc2ded29",
                     "label": {
-                        "en": "Identifier"
+                        "en": "Digital Resource Identifier"
                     },
                     "node_id": "871424d4-d860-11ef-98f5-0275dc2ded29",
                     "sortorder": 0,
@@ -2455,7 +2455,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Identifier",
+                        "label": "Digital Service Identifier",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -2465,7 +2465,7 @@
                     },
                     "id": "87148b86-d860-11ef-98f5-0275dc2ded29",
                     "label": {
-                        "en": "Identifier"
+                        "en": "Digital Service Identifier"
                     },
                     "node_id": "8714176e-d860-11ef-98f5-0275dc2ded29",
                     "sortorder": 0,
@@ -2628,14 +2628,14 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Type",
+                        "label": "Digital Resource Type",
                         "placeholder": {
                             "en": "Select an option"
                         }
                     },
                     "id": "87148f6e-d860-11ef-98f5-0275dc2ded29",
                     "label": {
-                        "en": "Type"
+                        "en": "Digital Resource Type"
                     },
                     "node_id": "8713c124-d860-11ef-98f5-0275dc2ded29",
                     "sortorder": 0,
@@ -2899,7 +2899,7 @@
                     "node_id": "500fa067-02d7-4a94-a1c3-677377453870",
                     "sortorder": 2,
                     "source_identifier_id": null,
-                    "visible": true,
+                    "visible": false,
                     "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
                 },
                 {
@@ -2909,14 +2909,14 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Technique",
+                        "label": "Creation Technique",
                         "placeholder": {
                             "en": "Select an option"
                         }
                     },
                     "id": "b073bb05-c88a-428d-bae3-bfbe4218bfff",
                     "label": {
-                        "en": "Technique"
+                        "en": "Creation Technique"
                     },
                     "node_id": "b0c1f85d-6f7b-403e-8c67-172bf8c7e934",
                     "sortorder": 12,
@@ -4463,7 +4463,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "digital_resource_creation_label",
                     "nodegroup_id": "28cba406-84d0-44a5-be1e-c26446baf27b",
@@ -4499,7 +4499,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "digital_resource_creation_location",
                     "nodegroup_id": "28cba406-84d0-44a5-be1e-c26446baf27b",
@@ -4522,7 +4522,7 @@
                     "is_collector": true,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "digital_resource_creation_Statement",
                     "nodegroup_id": "17b13ebd-7a19-44ea-b02a-d8cbb1e61652",
@@ -4547,7 +4547,7 @@
                     "is_collector": true,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "digital_resource_creation",
                     "nodegroup_id": "28cba406-84d0-44a5-be1e-c26446baf27b",
@@ -4574,7 +4574,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "digital_resource_creation_used object",
                     "nodegroup_id": "28cba406-84d0-44a5-be1e-c26446baf27b",
@@ -4600,7 +4600,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "digital_resource_creation_time_type",
                     "nodegroup_id": "28cba406-84d0-44a5-be1e-c26446baf27b",
@@ -4623,7 +4623,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "digital_resource_creation_used object_Name",
                     "nodegroup_id": "28cba406-84d0-44a5-be1e-c26446baf27b",
@@ -4649,7 +4649,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "digital_resource_creation_Statement_type_metatype",
                     "nodegroup_id": "17b13ebd-7a19-44ea-b02a-d8cbb1e61652",
@@ -4685,7 +4685,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "digital_resource_creation_Statement_source",
                     "nodegroup_id": "17b13ebd-7a19-44ea-b02a-d8cbb1e61652",
@@ -4764,7 +4764,7 @@
                     "is_collector": true,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "file_name",
                     "nodegroup_id": "87139870-d860-11ef-98f5-0275dc2ded29",
@@ -4803,6 +4803,7 @@
                 {
                     "alias": "carries_text",
                     "config": {
+                        "defaultValue": [],
                         "graphs": [
                             {
                                 "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
@@ -4850,7 +4851,7 @@
                     "is_collector": true,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "service",
                     "nodegroup_id": "8713b6de-d860-11ef-98f5-0275dc2ded29",
@@ -4875,7 +4876,7 @@
                     "is_collector": true,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "service_name",
                     "nodegroup_id": "8713bc60-d860-11ef-98f5-0275dc2ded29",
@@ -4926,7 +4927,7 @@
                     "is_collector": true,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "service_statement",
                     "nodegroup_id": "8713c548-d860-11ef-98f5-0275dc2ded29",
@@ -4940,6 +4941,7 @@
                 {
                     "alias": "part_of",
                     "config": {
+                        "defaultValue": [],
                         "graphs": [
                             {
                                 "graphid": "8713965e-d860-11ef-98f5-0275dc2ded29",
@@ -4987,7 +4989,7 @@
                     "is_collector": true,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "file_creation",
                     "nodegroup_id": "8713d1dc-d860-11ef-98f5-0275dc2ded29",
@@ -5012,7 +5014,7 @@
                     "is_collector": true,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "dimension_name",
                     "nodegroup_id": "8713d5d8-d860-11ef-98f5-0275dc2ded29",
@@ -5040,7 +5042,7 @@
                     "is_collector": true,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "file",
                     "nodegroup_id": "8713d9ca-d860-11ef-98f5-0275dc2ded29",
@@ -5065,7 +5067,7 @@
                     "is_collector": true,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "file_statement",
                     "nodegroup_id": "8713ddc6-d860-11ef-98f5-0275dc2ded29",
@@ -5090,7 +5092,7 @@
                     "is_collector": true,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "label",
                     "nodegroup_id": "8713e6cc-d860-11ef-98f5-0275dc2ded29",
@@ -5104,6 +5106,7 @@
                 {
                     "alias": "member_of_set",
                     "config": {
+                        "defaultValue": [],
                         "graphs": [
                             {
                                 "graphid": "da0ed58e-d771-11ef-af99-0275dc2ded29",
@@ -5151,7 +5154,7 @@
                     "is_collector": true,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "file_identifier",
                     "nodegroup_id": "8713ee88-d860-11ef-98f5-0275dc2ded29",
@@ -5176,7 +5179,7 @@
                     "is_collector": true,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "name",
                     "nodegroup_id": "8713f270-d860-11ef-98f5-0275dc2ded29",
@@ -5201,7 +5204,7 @@
                     "is_collector": true,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "textual_reference",
                     "nodegroup_id": "8713f66c-d860-11ef-98f5-0275dc2ded29",
@@ -5226,7 +5229,7 @@
                     "is_collector": true,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "service_identifier",
                     "nodegroup_id": "8713fa40-d860-11ef-98f5-0275dc2ded29",
@@ -5251,7 +5254,7 @@
                     "is_collector": true,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "dimension",
                     "nodegroup_id": "8713fe14-d860-11ef-98f5-0275dc2ded29",
@@ -5276,7 +5279,7 @@
                     "is_collector": true,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "identifier",
                     "nodegroup_id": "871405ee-d860-11ef-98f5-0275dc2ded29",
@@ -5301,7 +5304,7 @@
                     "is_collector": true,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "statement",
                     "nodegroup_id": "87140a94-d860-11ef-98f5-0275dc2ded29",
@@ -5327,7 +5330,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "file_name_language",
                     "nodegroup_id": "87139870-d860-11ef-98f5-0275dc2ded29",
@@ -5352,7 +5355,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "file_name_content",
                     "nodegroup_id": "87139870-d860-11ef-98f5-0275dc2ded29",
@@ -5378,7 +5381,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "service_type",
                     "nodegroup_id": "8713b6de-d860-11ef-98f5-0275dc2ded29",
@@ -5429,7 +5432,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "service_statement_language",
                     "nodegroup_id": "8713c548-d860-11ef-98f5-0275dc2ded29",
@@ -5480,7 +5483,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "service_statement_type_metatype",
                     "nodegroup_id": "8713c548-d860-11ef-98f5-0275dc2ded29",
@@ -5519,7 +5522,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "service_name_source",
                     "nodegroup_id": "8713bc60-d860-11ef-98f5-0275dc2ded29",
@@ -5544,7 +5547,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "dimension_name_content",
                     "nodegroup_id": "8713d5d8-d860-11ef-98f5-0275dc2ded29",
@@ -5569,7 +5572,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "dimension_highest possible value",
                     "nodegroup_id": "8713fe14-d860-11ef-98f5-0275dc2ded29",
@@ -5608,7 +5611,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "dimension_source",
                     "nodegroup_id": "8713fe14-d860-11ef-98f5-0275dc2ded29",
@@ -5634,7 +5637,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "dimension_name_type",
                     "nodegroup_id": "8713d5d8-d860-11ef-98f5-0275dc2ded29",
@@ -5659,7 +5662,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "dimension_value",
                     "nodegroup_id": "8713fe14-d860-11ef-98f5-0275dc2ded29",
@@ -5685,7 +5688,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "dimension_name_language",
                     "nodegroup_id": "8713d5d8-d860-11ef-98f5-0275dc2ded29",
@@ -5710,7 +5713,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "dimension_name_label",
                     "nodegroup_id": "8713d5d8-d860-11ef-98f5-0275dc2ded29",
@@ -5735,7 +5738,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "file_conforms_to",
                     "nodegroup_id": "8713d9ca-d860-11ef-98f5-0275dc2ded29",
@@ -5758,7 +5761,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "_label",
                     "nodegroup_id": "871405ee-d860-11ef-98f5-0275dc2ded29",
@@ -5807,7 +5810,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "file_statement_type",
                     "nodegroup_id": "8713ddc6-d860-11ef-98f5-0275dc2ded29",
@@ -5833,7 +5836,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "file_statement_language",
                     "nodegroup_id": "8713ddc6-d860-11ef-98f5-0275dc2ded29",
@@ -5858,7 +5861,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "file_statement_content",
                     "nodegroup_id": "8713ddc6-d860-11ef-98f5-0275dc2ded29",
@@ -5883,7 +5886,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "service_conforms to",
                     "nodegroup_id": "8713b6de-d860-11ef-98f5-0275dc2ded29",
@@ -5909,7 +5912,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "file_name_type",
                     "nodegroup_id": "87139870-d860-11ef-98f5-0275dc2ded29",
@@ -5934,7 +5937,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "service_statement_label",
                     "nodegroup_id": "8713c548-d860-11ef-98f5-0275dc2ded29",
@@ -5985,7 +5988,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "service_name_type",
                     "nodegroup_id": "8713bc60-d860-11ef-98f5-0275dc2ded29",
@@ -6011,7 +6014,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "service_statement_type",
                     "nodegroup_id": "8713c548-d860-11ef-98f5-0275dc2ded29",
@@ -6037,7 +6040,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "service_name_language",
                     "nodegroup_id": "8713bc60-d860-11ef-98f5-0275dc2ded29",
@@ -6062,7 +6065,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "service_identifier_label",
                     "nodegroup_id": "8713fa40-d860-11ef-98f5-0275dc2ded29",
@@ -6101,7 +6104,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "dimension_name_source",
                     "nodegroup_id": "8713d5d8-d860-11ef-98f5-0275dc2ded29",
@@ -6127,7 +6130,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "language",
                     "nodegroup_id": "87140a94-d860-11ef-98f5-0275dc2ded29",
@@ -6176,7 +6179,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "type",
                     "nodegroup_id": "8713f270-d860-11ef-98f5-0275dc2ded29",
@@ -6202,7 +6205,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "language",
                     "nodegroup_id": "8713f270-d860-11ef-98f5-0275dc2ded29",
@@ -6241,7 +6244,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "source",
                     "nodegroup_id": "8713f270-d860-11ef-98f5-0275dc2ded29",
@@ -6266,7 +6269,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": true,
                     "name": "Digital Resources",
                     "nodegroup_id": null,
@@ -6291,7 +6294,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "dimension_label",
                     "nodegroup_id": "8713fe14-d860-11ef-98f5-0275dc2ded29",
@@ -6330,7 +6333,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "source",
                     "nodegroup_id": "871405ee-d860-11ef-98f5-0275dc2ded29",
@@ -6356,7 +6359,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "file_statement_type_metatype",
                     "nodegroup_id": "8713ddc6-d860-11ef-98f5-0275dc2ded29",
@@ -6382,7 +6385,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "type",
                     "nodegroup_id": "871405ee-d860-11ef-98f5-0275dc2ded29",
@@ -6407,7 +6410,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "file_identifier_content",
                     "nodegroup_id": "8713ee88-d860-11ef-98f5-0275dc2ded29",
@@ -6433,7 +6436,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "file_identifier_type",
                     "nodegroup_id": "8713ee88-d860-11ef-98f5-0275dc2ded29",
@@ -6459,7 +6462,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "type",
                     "nodegroup_id": "87140a94-d860-11ef-98f5-0275dc2ded29",
@@ -6508,7 +6511,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "statement_type_metatype",
                     "nodegroup_id": "87140a94-d860-11ef-98f5-0275dc2ded29",
@@ -6533,7 +6536,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "service_name_label",
                     "nodegroup_id": "8713bc60-d860-11ef-98f5-0275dc2ded29",
@@ -6559,7 +6562,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "dimension_unit",
                     "nodegroup_id": "8713fe14-d860-11ef-98f5-0275dc2ded29",
@@ -6582,7 +6585,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "_label",
                     "nodegroup_id": "87140a94-d860-11ef-98f5-0275dc2ded29",
@@ -6607,7 +6610,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "service_label",
                     "nodegroup_id": "8713b6de-d860-11ef-98f5-0275dc2ded29",
@@ -6646,7 +6649,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "service_statement_source",
                     "nodegroup_id": "8713c548-d860-11ef-98f5-0275dc2ded29",
@@ -6682,7 +6685,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "file_creation_used instrument",
                     "nodegroup_id": "8713d1dc-d860-11ef-98f5-0275dc2ded29",
@@ -6708,7 +6711,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "file_type",
                     "nodegroup_id": "8713d9ca-d860-11ef-98f5-0275dc2ded29",
@@ -6733,7 +6736,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "format_of_file",
                     "nodegroup_id": "8713d9ca-d860-11ef-98f5-0275dc2ded29",
@@ -6769,7 +6772,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "textual _source",
                     "nodegroup_id": "8713f66c-d860-11ef-98f5-0275dc2ded29",
@@ -6795,7 +6798,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "textual_reference_type",
                     "nodegroup_id": "8713f66c-d860-11ef-98f5-0275dc2ded29",
@@ -6809,6 +6812,7 @@
                 {
                     "alias": "source_n2",
                     "config": {
+                        "defaultValue": [],
                         "graphid": [
                             "a7b1a7c5-b25b-11e9-8a4e-a4d18cec433a"
                         ],
@@ -6834,7 +6838,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "source",
                     "nodegroup_id": "87140a94-d860-11ef-98f5-0275dc2ded29",
@@ -6857,7 +6861,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "_label",
                     "nodegroup_id": "8713f270-d860-11ef-98f5-0275dc2ded29",
@@ -6883,7 +6887,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "service_identifier_type",
                     "nodegroup_id": "8713fa40-d860-11ef-98f5-0275dc2ded29",
@@ -6922,7 +6926,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "service_identifier_source",
                     "nodegroup_id": "8713fa40-d860-11ef-98f5-0275dc2ded29",
@@ -6948,7 +6952,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "dimension_type",
                     "nodegroup_id": "8713fe14-d860-11ef-98f5-0275dc2ded29",
@@ -6973,7 +6977,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "dimension_lowest possible value",
                     "nodegroup_id": "8713fe14-d860-11ef-98f5-0275dc2ded29",
@@ -6987,6 +6991,7 @@
                 {
                     "alias": "digital_resource_creation_carried_out_by",
                     "config": {
+                        "defaultValue": [],
                         "graphs": [
                             {
                                 "graphid": "36956e50-d770-11ef-8f5d-0275dc2ded29",
@@ -7017,7 +7022,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "digital_resource_creation_carried out by",
                     "nodegroup_id": "28cba406-84d0-44a5-be1e-c26446baf27b",
@@ -7040,7 +7045,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "digital_resource_creation_time_label",
                     "nodegroup_id": "28cba406-84d0-44a5-be1e-c26446baf27b",
@@ -7063,7 +7068,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "digital_resource_creation_time",
                     "nodegroup_id": "28cba406-84d0-44a5-be1e-c26446baf27b",
@@ -7086,7 +7091,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "digital_resource_creation_Statement_label",
                     "nodegroup_id": "17b13ebd-7a19-44ea-b02a-d8cbb1e61652",
@@ -7112,7 +7117,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "digital_resource_creation_Statement_type",
                     "nodegroup_id": "17b13ebd-7a19-44ea-b02a-d8cbb1e61652",
@@ -7148,7 +7153,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "digital_resource_creation_source",
                     "nodegroup_id": "28cba406-84d0-44a5-be1e-c26446baf27b",
@@ -7174,7 +7179,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "digital_resource_creation_used object_Name_type ",
                     "nodegroup_id": "28cba406-84d0-44a5-be1e-c26446baf27b",
@@ -7200,7 +7205,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "digital_resource_creation_used object_Name_language ",
                     "nodegroup_id": "28cba406-84d0-44a5-be1e-c26446baf27b",
@@ -7226,7 +7231,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "digital_resource_creation_technique",
                     "nodegroup_id": "28cba406-84d0-44a5-be1e-c26446baf27b",
@@ -7278,7 +7283,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "digital_resource_creation_type",
                     "nodegroup_id": "28cba406-84d0-44a5-be1e-c26446baf27b",
@@ -7304,7 +7309,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "digital_resource_creation_Statement_language",
                     "nodegroup_id": "17b13ebd-7a19-44ea-b02a-d8cbb1e61652",
@@ -7363,7 +7368,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "digital_resource_creation_used object_Name_source ",
                     "nodegroup_id": "28cba406-84d0-44a5-be1e-c26446baf27b",
@@ -7386,7 +7391,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "digital_resource_creation_used object_Name_label ",
                     "nodegroup_id": "28cba406-84d0-44a5-be1e-c26446baf27b",
@@ -7454,7 +7459,7 @@
                     "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
-                    "issearchable": true,
+                    "issearchable": false,
                     "istopnode": false,
                     "name": "digital_resource_creation_caused by",
                     "nodegroup_id": "28cba406-84d0-44a5-be1e-c26446baf27b",
@@ -7470,28 +7475,28 @@
             "publication": {
                 "graph_id": "8713965e-d860-11ef-98f5-0275dc2ded29",
                 "most_recent_edit_id": null,
-                "notes": "added digital_resource_creation branch, removed old creation branch",
-                "publicationid": "cc9ab0cc-ca8f-486c-932c-94a46f7ba699",
-                "published_time": "2026-04-13T19:00:26.989"
+                "notes": "Part 1 - update widget labels for advanced search",
+                "publicationid": "8e13a552-4669-487c-92d2-2a45293fa905",
+                "published_time": "2026-07-10T12:22:58.090"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
             "resource_instance_lifecycle": {
                 "id": "7e3cce56-fbfb-4a4b-8e83-59b9f9e7cb75",
                 "name": {
-                    "en": "Standard"
+                    "null": "Standard"
                 },
                 "resource_instance_lifecycle_states": [
                     {
                         "action_label": {
-                            "en": "Revert to Draft"
+                            "null": "Revert to Draft"
                         },
                         "can_delete_resource_instances": true,
                         "can_edit_resource_instances": true,
                         "id": "9375c9a7-dad2-4f14-a5c1-d7e329fdde4f",
                         "is_initial_state": true,
                         "name": {
-                            "en": "Draft"
+                            "null": "Draft"
                         },
                         "next_resource_instance_lifecycle_states": [
                             "f75bb034-36e3-4ab4-8167-f520cf0b4c58"
@@ -7501,14 +7506,14 @@
                     },
                     {
                         "action_label": {
-                            "en": "Make Active"
+                            "null": "Make Active"
                         },
                         "can_delete_resource_instances": false,
                         "can_edit_resource_instances": true,
                         "id": "f75bb034-36e3-4ab4-8167-f520cf0b4c58",
                         "is_initial_state": false,
                         "name": {
-                            "en": "Active"
+                            "null": "Active"
                         },
                         "next_resource_instance_lifecycle_states": [
                             "d95d9c0e-0e2c-4450-93a3-d788b91abcc8"
@@ -7520,14 +7525,14 @@
                     },
                     {
                         "action_label": {
-                            "en": "Retire"
+                            "null": "Retire"
                         },
                         "can_delete_resource_instances": false,
                         "can_edit_resource_instances": false,
                         "id": "d95d9c0e-0e2c-4450-93a3-d788b91abcc8",
                         "is_initial_state": false,
                         "name": {
-                            "en": "Retired"
+                            "null": "Retired"
                         },
                         "next_resource_instance_lifecycle_states": [],
                         "previous_resource_instance_lifecycle_states": [
@@ -7551,7 +7556,7 @@
                 "is_collector": false,
                 "is_immutable": false,
                 "isrequired": false,
-                "issearchable": true,
+                "issearchable": false,
                 "istopnode": true,
                 "name": "Digital Resources",
                 "nodegroup_id": null,
@@ -7567,15 +7572,15 @@
             "subtitle": {
                 "en": ""
             },
-            "template_id": "50000000-0000-0000-0000-000000000001",
+            "template_id": "b0908227-ecc2-48dd-931b-314a9031caa0",
             "user_permissions": {},
             "version": ""
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 16.8 on aarch64-unknown-linux-gnu, compiled by gcc (GCC) 7.3.1 20180712 (Red Hat 7.3.1-17), 64-bit",
+        "db": "PostgreSQL 16.13 on aarch64-unknown-linux-gnu, compiled by aarch64-unknown-linux-gnu-gcc (GCC) 12.4.0, 64-bit",
         "git hash": "fatal: not a git repository (or any of the parent directories): .git",
         "os": "Linux",
-        "os version": "6.17.0-1009-aws"
+        "os version": "6.1.174"
     }
 }
