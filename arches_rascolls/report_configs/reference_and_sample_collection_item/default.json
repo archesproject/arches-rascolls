@@ -240,20 +240,34 @@
                                                 {
                                                     "component": "arches_rascolls/ModularReport/components/DataSection",
                                                     "config": {
-                                                        "nodegroup_alias": "chemical_material",
+                                                        "nodegroup_alias": "chemical_material_name",
                                                         "node_aliases": [
-                                                            "chemical_material",
-                                                            "chemical_material_type",
                                                             "chemical_material_name_content",
+                                                            "chemical_material_name_type_"
+                                                        ],
+                                                        "custom_labels": {
+                                                            "chemical_material_name_content": "Chemical Formula"
+                                                        },
+                                                        "custom_card_name": "Chemical Name",
+                                                        "has_write_permission": true,
+                                                        "filters": [],
+                                                        "empty_state_icon": "pi pi-chart-bar",
+                                                        "empty_state_message": "Record chemical analysis data — including chemical material types, identifiers, and supporting data assignments."
+                                                    }
+                                                },
+                                                                                                {
+                                                    "component": "arches_rascolls/ModularReport/components/DataSection",
+                                                    "config": {
+                                                        "nodegroup_alias": "chemical_material_identifier",
+                                                        "node_aliases": [
                                                             "chemical_material_identifier_content",
                                                             "chemical_material_identifier_type"
                                                         ],
                                                         "custom_labels": {
-                                                            "chemical_material_name_content": "Chemical Formula",
                                                             "chemical_material_identifier_content": "CAS Number",
                                                             "chemical_material_identifier_type": "Identifier Type"
                                                         },
-                                                        "custom_card_name": "Chemical Information",
+                                                        "custom_card_name": "Chemical Identifier",
                                                         "has_write_permission": true,
                                                         "filters": [],
                                                         "empty_state_icon": "pi pi-chart-bar",
@@ -318,26 +332,42 @@
                                                 {
                                                     "component": "arches_rascolls/ModularReport/components/DataSection",
                                                     "config": {
-                                                        "nodegroup_alias": "safety_classification",
+                                                        "nodegroup_alias": "nfpa_safety_classification",
                                                         "node_aliases": [
-                                                            "ghs_safety_classification_type",
-                                                            "ghs_safety_classification_classification",
                                                             "nfpa_safety_classifcation_type",
                                                             "nfpa_safety_classification_classification"
                                                         ],
                                                         "custom_labels": {
-                                                            "ghs_safety_classification_type": "GHS Type",
-                                                            "ghs_safety_classification_classification": "GHS Classification",
                                                             "nfpa_safety_classifcation_type": "NFPA Type",
                                                             "nfpa_safety_classification_classification": "NFPA Classification"
                                                         },
-                                                        "custom_card_name": "Safety Classifications",
+                                                        "custom_card_name": "NFPA Safety Classifications",
                                                         "has_write_permission": true,
                                                         "filters": [],
                                                         "empty_state_icon": "pi pi-shield",
-                                                        "empty_state_message": "Record GHS (Globally Harmonized System) and NFPA hazard classifications applicable to this item."
+                                                        "empty_state_message": "NFPA hazard classifications applicable to this item."
                                                     }
                                                 },
+                                                {
+                                                    "component": "arches_rascolls/ModularReport/components/DataSection",
+                                                    "config": {
+                                                        "nodegroup_alias": "ghs_safety_classification",
+                                                        "node_aliases": [
+                                                            "ghs_safety_classification_type",
+                                                            "ghs_safety_classification_classification"
+                                                        ],
+                                                        "custom_labels": {
+                                                            "ghs_safety_classification_type": "GHS Type",
+                                                            "ghs_safety_classification_classification": "GHS Classification"
+                                                        },
+                                                        "custom_card_name": "GHS Safety Classifications",
+                                                        "has_write_permission": true,
+                                                        "filters": [],
+                                                        "empty_state_icon": "pi pi-shield",
+                                                        "empty_state_message": "Record GHS (Globally Harmonized System)."
+                                                    }
+                                                },
+                                                
                                                 {
                                                     "component": "arches_rascolls/ModularReport/components/DataSection",
                                                     "config": {
