@@ -28,7 +28,7 @@
                         "en": "Internal Label of Collection"
                     },
                     "nodegroup_id": "da0ed73c-d771-11ef-af99-0275dc2ded29",
-                    "sortorder": 6,
+                    "sortorder": 7,
                     "source_identifier_id": null,
                     "visible": false
                 },
@@ -52,10 +52,10 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Digital Reference to Collection"
+                        "en": "Digital Reference to Collection or Set"
                     },
                     "nodegroup_id": "da0edf48-d771-11ef-af99-0275dc2ded29",
-                    "sortorder": 8,
+                    "sortorder": 5,
                     "source_identifier_id": null,
                     "visible": true
                 },
@@ -81,7 +81,7 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Type of Collection"
+                        "en": "Collection or Set Type"
                     },
                     "nodegroup_id": "da0ee2e0-d771-11ef-af99-0275dc2ded29",
                     "sortorder": 2,
@@ -110,7 +110,7 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Statement about Creation Event"
+                        "en": "Statement about Collection or Set Creation"
                     },
                     "nodegroup_id": "da0ee9fc-d771-11ef-af99-0275dc2ded29",
                     "sortorder": 1,
@@ -139,7 +139,7 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Name of Collection"
+                        "en": "Collection or Set Name"
                     },
                     "nodegroup_id": "da0ef9d8-d771-11ef-af99-0275dc2ded29",
                     "sortorder": 0,
@@ -168,10 +168,10 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Statement about Collection"
+                        "en": "Statement about Collection or Set"
                     },
                     "nodegroup_id": "da0efd3e-d771-11ef-af99-0275dc2ded29",
-                    "sortorder": 1,
+                    "sortorder": 4,
                     "source_identifier_id": null,
                     "visible": true
                 },
@@ -197,7 +197,7 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "TimeSpan of Creation Event"
+                        "en": "Collection or Set Creation Date"
                     },
                     "nodegroup_id": "da0f00b8-d771-11ef-af99-0275dc2ded29",
                     "sortorder": 0,
@@ -226,10 +226,10 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Creation Event of Collection"
+                        "en": "Collection or Set Creation"
                     },
                     "nodegroup_id": "da0f0766-d771-11ef-af99-0275dc2ded29",
-                    "sortorder": 4,
+                    "sortorder": 3,
                     "source_identifier_id": null,
                     "visible": true
                 },
@@ -255,10 +255,10 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Identifier of Collection"
+                        "en": "Collection or Set Identifier"
                     },
                     "nodegroup_id": "da0f0afe-d771-11ef-af99-0275dc2ded29",
-                    "sortorder": 3,
+                    "sortorder": 1,
                     "source_identifier_id": null,
                     "visible": true
                 },
@@ -287,7 +287,7 @@
                         "en": "Related Project of Collection"
                     },
                     "nodegroup_id": "da0f117a-d771-11ef-af99-0275dc2ded29",
-                    "sortorder": 7,
+                    "sortorder": 6,
                     "source_identifier_id": null,
                     "visible": false
                 }
@@ -443,7 +443,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Name",
+                        "label": "Collection or Set Name",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -453,7 +453,7 @@
                     },
                     "id": "da0f5b4e-d771-11ef-af99-0275dc2ded29",
                     "label": {
-                        "en": "Name"
+                        "en": "Collection or Set Name"
                     },
                     "node_id": "da0f5676-d771-11ef-af99-0275dc2ded29",
                     "sortorder": 0,
@@ -523,7 +523,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Statement",
+                        "label": "Statement about Collection or Set Creation",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -533,7 +533,7 @@
                     },
                     "id": "da0f5c5c-d771-11ef-af99-0275dc2ded29",
                     "label": {
-                        "en": "Statement"
+                        "en": "Statement about Collection or Set Creation"
                     },
                     "node_id": "da0f50fe-d771-11ef-af99-0275dc2ded29",
                     "sortorder": 0,
@@ -661,7 +661,7 @@
                     "node_id": "da0f3e3e-d771-11ef-af99-0275dc2ded29",
                     "sortorder": 2,
                     "source_identifier_id": null,
-                    "visible": true,
+                    "visible": false,
                     "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
                 },
                 {
@@ -706,7 +706,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Statement",
+                        "label": "Statement about Collection or Set",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -716,7 +716,7 @@
                     },
                     "id": "da0f6ada-d771-11ef-af99-0275dc2ded29",
                     "label": {
-                        "en": "Statement"
+                        "en": "Statement about Collection or Set"
                     },
                     "node_id": "da0f2bec-d771-11ef-af99-0275dc2ded29",
                     "sortorder": 0,
@@ -842,7 +842,7 @@
                     "node_id": "da0f2e80-d771-11ef-af99-0275dc2ded29",
                     "sortorder": 2,
                     "source_identifier_id": null,
-                    "visible": true,
+                    "visible": false,
                     "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
                 },
                 {
@@ -852,14 +852,14 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Type",
+                        "label": "Collection or Set Type",
                         "placeholder": {
                             "en": "Select an option"
                         }
                     },
                     "id": "da0f6fd0-d771-11ef-af99-0275dc2ded29",
                     "label": {
-                        "en": "Type"
+                        "en": "Collection or Set Type"
                     },
                     "node_id": "da0ee2e0-d771-11ef-af99-0275dc2ded29",
                     "sortorder": null,
@@ -931,7 +931,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Identifier",
+                        "label": "Collection or Set Identifier",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -941,7 +941,7 @@
                     },
                     "id": "da0f7386-d771-11ef-af99-0275dc2ded29",
                     "label": {
-                        "en": "Identifier"
+                        "en": "Collection or Set Identifier"
                     },
                     "node_id": "da0f3826-d771-11ef-af99-0275dc2ded29",
                     "sortorder": 0,
@@ -1030,17 +1030,17 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Creation Event Location",
+                        "label": "Collection or Set Creation Location",
                         "placeholder": {
                             "en": ""
                         }
                     },
                     "id": "da0f7890-d771-11ef-af99-0275dc2ded29",
                     "label": {
-                        "en": "Creation Event Location"
+                        "en": "Collection or Set Creation Location"
                     },
                     "node_id": "da0f2da4-d771-11ef-af99-0275dc2ded29",
-                    "sortorder": 1,
+                    "sortorder": 2,
                     "source_identifier_id": null,
                     "visible": true,
                     "widget_id": "ff3c400a-76ec-11e7-a793-784f435179ea"
@@ -1052,17 +1052,17 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Creator",
+                        "label": "Collection or Set Creator",
                         "placeholder": {
                             "en": ""
                         }
                     },
                     "id": "da0f7908-d771-11ef-af99-0275dc2ded29",
                     "label": {
-                        "en": "Creator"
+                        "en": "Collection or Set Creator"
                     },
                     "node_id": "da0f32d6-d771-11ef-af99-0275dc2ded29",
-                    "sortorder": 0,
+                    "sortorder": 1,
                     "source_identifier_id": null,
                     "visible": true,
                     "widget_id": "ff3c400a-76ec-11e7-a793-784f435179ea"
@@ -1074,17 +1074,17 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Creation Event Type",
+                        "label": "Collection or Set Creation Type",
                         "placeholder": {
                             "en": "Select an option"
                         }
                     },
                     "id": "da0f798a-d771-11ef-af99-0275dc2ded29",
                     "label": {
-                        "en": "Creation Event Type"
+                        "en": "Collection or Set Creation Type"
                     },
                     "node_id": "da0f2f66-d771-11ef-af99-0275dc2ded29",
-                    "sortorder": 2,
+                    "sortorder": 0,
                     "source_identifier_id": null,
                     "visible": true,
                     "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
@@ -1106,7 +1106,7 @@
                         "en": "Source Reference Work for Creation Event"
                     },
                     "node_id": "da0f4f50-d771-11ef-af99-0275dc2ded29",
-                    "sortorder": 10,
+                    "sortorder": 4,
                     "source_identifier_id": null,
                     "visible": false,
                     "widget_id": "ff3c400a-76ec-11e7-a793-784f435179ea"
@@ -1128,7 +1128,7 @@
                         "en": "Related Event causal to Creation Event"
                     },
                     "node_id": "da0f3d6c-d771-11ef-af99-0275dc2ded29",
-                    "sortorder": 9,
+                    "sortorder": 3,
                     "source_identifier_id": null,
                     "visible": false,
                     "widget_id": "ff3c400a-76ec-11e7-a793-784f435179ea"
@@ -1158,7 +1158,7 @@
                         "en": "Creation Event Label"
                     },
                     "node_id": "da0f48b6-d771-11ef-af99-0275dc2ded29",
-                    "sortorder": 11,
+                    "sortorder": 5,
                     "source_identifier_id": null,
                     "visible": false,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
@@ -1190,7 +1190,7 @@
                     "node_id": "da0ed73c-d771-11ef-af99-0275dc2ded29",
                     "sortorder": null,
                     "source_identifier_id": null,
-                    "visible": true,
+                    "visible": false,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
                 {
@@ -1266,14 +1266,14 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Extended Date Time Format",
+                        "label": "Collection or Set Creation Date",
                         "placeholder": {
                             "en": ""
                         }
                     },
                     "id": "ee7a04fe-9d19-4c7a-8c30-9639dc406468",
                     "label": {
-                        "en": "Extended Date Time Format"
+                        "en": "Collection or Set Creation Date"
                     },
                     "node_id": "a166e322-3d68-43f2-bec3-4c5d6a0b47e5",
                     "sortorder": null,
@@ -2076,6 +2076,7 @@
                 {
                     "alias": "used_in",
                     "config": {
+                        "defaultValue": [],
                         "graphs": [
                             {
                                 "graphid": "eaac4efa-d832-11ef-a368-0275dc2ded29",
@@ -2112,6 +2113,7 @@
                 {
                     "alias": "digital_source",
                     "config": {
+                        "defaultValue": [],
                         "graphs": [
                             {
                                 "graphid": "8713965e-d860-11ef-98f5-0275dc2ded29",
@@ -2282,6 +2284,7 @@
                 {
                     "alias": "creation_location",
                     "config": {
+                        "defaultValue": [],
                         "graphs": [
                             {
                                 "graphid": "3dda9f54-d771-11ef-825b-0275dc2ded29",
@@ -2393,11 +2396,12 @@
                 {
                     "alias": "creation_carried_out_by",
                     "config": {
+                        "defaultValue": [],
                         "graphs": [
                             {
                                 "graphid": "36956e50-d770-11ef-8f5d-0275dc2ded29",
                                 "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
-                                "name": "Group",
+                                "name": "Group ",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
                                 "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "useOntologyRelationship": false
@@ -2658,6 +2662,7 @@
                 {
                     "alias": "name_source",
                     "config": {
+                        "defaultValue": [],
                         "graphs": [
                             {
                                 "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
@@ -3007,28 +3012,28 @@
             "publication": {
                 "graph_id": "da0ed58e-d771-11ef-af99-0275dc2ded29",
                 "most_recent_edit_id": null,
-                "notes": "Branches removed and nodes exposed to advanced search according to https://docs.google.com/spreadsheets/d/1mT-VbXfnU980nAzJXRzxBXtBsykxwAzWRAFcM-By8OY/edit?gid=415934223#gid=415934223",
-                "publicationid": "7d63a0b5-4c0a-4581-b6bf-70e284adb154",
-                "published_time": "2026-04-23T11:07:10.617"
+                "notes": "Part 1",
+                "publicationid": "eaf8b303-8bd3-430a-8606-3d830bca7294",
+                "published_time": "2026-07-10T12:15:51.588"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
             "resource_instance_lifecycle": {
                 "id": "7e3cce56-fbfb-4a4b-8e83-59b9f9e7cb75",
                 "name": {
-                    "en": "Standard"
+                    "null": "Standard"
                 },
                 "resource_instance_lifecycle_states": [
                     {
                         "action_label": {
-                            "en": "Revert to Draft"
+                            "null": "Revert to Draft"
                         },
                         "can_delete_resource_instances": true,
                         "can_edit_resource_instances": true,
                         "id": "9375c9a7-dad2-4f14-a5c1-d7e329fdde4f",
                         "is_initial_state": true,
                         "name": {
-                            "en": "Draft"
+                            "null": "Draft"
                         },
                         "next_resource_instance_lifecycle_states": [
                             "f75bb034-36e3-4ab4-8167-f520cf0b4c58"
@@ -3038,14 +3043,14 @@
                     },
                     {
                         "action_label": {
-                            "en": "Make Active"
+                            "null": "Make Active"
                         },
                         "can_delete_resource_instances": false,
                         "can_edit_resource_instances": true,
                         "id": "f75bb034-36e3-4ab4-8167-f520cf0b4c58",
                         "is_initial_state": false,
                         "name": {
-                            "en": "Active"
+                            "null": "Active"
                         },
                         "next_resource_instance_lifecycle_states": [
                             "d95d9c0e-0e2c-4450-93a3-d788b91abcc8"
@@ -3057,14 +3062,14 @@
                     },
                     {
                         "action_label": {
-                            "en": "Retire"
+                            "null": "Retire"
                         },
                         "can_delete_resource_instances": false,
                         "can_edit_resource_instances": false,
                         "id": "d95d9c0e-0e2c-4450-93a3-d788b91abcc8",
                         "is_initial_state": false,
                         "name": {
-                            "en": "Retired"
+                            "null": "Retired"
                         },
                         "next_resource_instance_lifecycle_states": [],
                         "previous_resource_instance_lifecycle_states": [
@@ -3102,15 +3107,15 @@
             "subtitle": {
                 "en": "Set of Objects, typically for study or curation"
             },
-            "template_id": "50000000-0000-0000-0000-000000000001",
+            "template_id": "b0908227-ecc2-48dd-931b-314a9031caa0",
             "user_permissions": {},
             "version": ""
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 16.8 on aarch64-unknown-linux-gnu, compiled by gcc (GCC) 7.3.1 20180712 (Red Hat 7.3.1-17), 64-bit",
+        "db": "PostgreSQL 16.13 on aarch64-unknown-linux-gnu, compiled by aarch64-unknown-linux-gnu-gcc (GCC) 12.4.0, 64-bit",
         "git hash": "fatal: not a git repository (or any of the parent directories): .git",
         "os": "Linux",
-        "os version": "6.17.0-1009-aws"
+        "os version": "6.1.174"
     }
 }

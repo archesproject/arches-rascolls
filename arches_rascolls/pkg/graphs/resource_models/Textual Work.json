@@ -25,10 +25,10 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Source Reference Work of Textual Work"
+                        "en": "Reference and Sample Collection Item or Physical Thing Referenced by Textual Work"
                     },
                     "nodegroup_id": "7ce1a782-d772-11ef-825b-0275dc2ded29",
-                    "sortorder": 11,
+                    "sortorder": 8,
                     "source_identifier_id": null,
                     "visible": true
                 },
@@ -54,10 +54,10 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Creation Event of Textual Work"
+                        "en": "Textual Work Creation"
                     },
                     "nodegroup_id": "7ce1adc2-d772-11ef-825b-0275dc2ded29",
-                    "sortorder": 8,
+                    "sortorder": 6,
                     "source_identifier_id": null,
                     "visible": true
                 },
@@ -83,10 +83,10 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "TimeSpan for Creation Event"
+                        "en": "Textual Work Creation Date"
                     },
                     "nodegroup_id": "7ce1bf4c-d772-11ef-825b-0275dc2ded29",
-                    "sortorder": 3,
+                    "sortorder": 0,
                     "source_identifier_id": null,
                     "visible": true
                 },
@@ -112,10 +112,10 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Content of Textual Work"
+                        "en": "Text Content of Textual Work"
                     },
                     "nodegroup_id": "7ce1c7e4-d772-11ef-825b-0275dc2ded29",
-                    "sortorder": 12,
+                    "sortorder": 10,
                     "source_identifier_id": null,
                     "visible": true
                 },
@@ -141,7 +141,7 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Name of Textual Work"
+                        "en": "Textual Work Dimension Name"
                     },
                     "nodegroup_id": "7ce1d19e-d772-11ef-825b-0275dc2ded29",
                     "sortorder": null,
@@ -170,7 +170,7 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Name of Textual Work"
+                        "en": "Textual Work Name"
                     },
                     "nodegroup_id": "7ce1d612-d772-11ef-825b-0275dc2ded29",
                     "sortorder": 0,
@@ -199,7 +199,7 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Dimension of Textual Work"
+                        "en": "Textual Work Dimension"
                     },
                     "nodegroup_id": "7ce1da72-d772-11ef-825b-0275dc2ded29",
                     "sortorder": 5,
@@ -228,7 +228,7 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Statement about Creation"
+                        "en": "Statement about Textual Work Creation"
                     },
                     "nodegroup_id": "7ce1deb4-d772-11ef-825b-0275dc2ded29",
                     "sortorder": 1,
@@ -260,7 +260,7 @@
                         "en": "Statement about Textual Work"
                     },
                     "nodegroup_id": "7ce1e2ec-d772-11ef-825b-0275dc2ded29",
-                    "sortorder": 1,
+                    "sortorder": 11,
                     "source_identifier_id": null,
                     "visible": true
                 },
@@ -286,10 +286,10 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Language of Textual Work"
+                        "en": "Textual Work Language"
                     },
                     "nodegroup_id": "7ce1eb70-d772-11ef-825b-0275dc2ded29",
-                    "sortorder": 6,
+                    "sortorder": 4,
                     "source_identifier_id": null,
                     "visible": true
                 },
@@ -316,7 +316,7 @@
                         "en": "Digital Reference to Textual Work"
                     },
                     "nodegroup_id": "7ce1ef9e-d772-11ef-825b-0275dc2ded29",
-                    "sortorder": 21,
+                    "sortorder": 12,
                     "source_identifier_id": null,
                     "visible": true
                 },
@@ -339,13 +339,13 @@
                         "en": ""
                     },
                     "instructions": {
-                        "en": ""
+                        "en": "Subject this work is about"
                     },
                     "name": {
-                        "en": "Subject(s) of Textual Work"
+                        "en": "Textual Work Subject(s)"
                     },
                     "nodegroup_id": "7ce1fd90-d772-11ef-825b-0275dc2ded29",
-                    "sortorder": 10,
+                    "sortorder": 9,
                     "source_identifier_id": null,
                     "visible": true
                 },
@@ -371,10 +371,10 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "External URI of Textual Work"
+                        "en": "Textual Work External URI"
                     },
                     "nodegroup_id": "7ce201c8-d772-11ef-825b-0275dc2ded29",
-                    "sortorder": 4,
+                    "sortorder": 3,
                     "source_identifier_id": null,
                     "visible": true
                 },
@@ -400,10 +400,10 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Type of Textual Work"
+                        "en": "Textual Work Type"
                     },
                     "nodegroup_id": "7ce205f6-d772-11ef-825b-0275dc2ded29",
-                    "sortorder": 2,
+                    "sortorder": 1,
                     "source_identifier_id": null,
                     "visible": true
                 },
@@ -458,7 +458,7 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Parent Textual Work"
+                        "en": "Broader Textual Work"
                     },
                     "nodegroup_id": "7ce20e2a-d772-11ef-825b-0275dc2ded29",
                     "sortorder": 7,
@@ -487,10 +487,10 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Identifier of Textual Work"
+                        "en": "Textual Work Identifier"
                     },
                     "nodegroup_id": "7ce2124e-d772-11ef-825b-0275dc2ded29",
-                    "sortorder": 3,
+                    "sortorder": 2,
                     "source_identifier_id": null,
                     "visible": true
                 }
@@ -503,14 +503,14 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Extended Date Time Format",
+                        "label": "Textual Work Creation Date",
                         "placeholder": {
                             "en": ""
                         }
                     },
                     "id": "68cb8009-4d08-444e-a57d-a7e2e9828425",
                     "label": {
-                        "en": "Extended Date Time Format"
+                        "en": "Textual Work Creation Date"
                     },
                     "node_id": "557af24e-47e9-4f1e-9a66-9cfbb87b7a08",
                     "sortorder": null,
@@ -530,7 +530,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Name",
+                        "label": "Textual Work Name",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -540,7 +540,7 @@
                     },
                     "id": "7ce29444-d772-11ef-825b-0275dc2ded29",
                     "label": {
-                        "en": "Name"
+                        "en": "Textual Work Name"
                     },
                     "node_id": "7ce26758-d772-11ef-825b-0275dc2ded29",
                     "sortorder": 0,
@@ -822,7 +822,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Name",
+                        "label": "Textual Work Dimension Name",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -832,7 +832,7 @@
                     },
                     "id": "7ce29f16-d772-11ef-825b-0275dc2ded29",
                     "label": {
-                        "en": "Name"
+                        "en": "Textual Work Dimension Name"
                     },
                     "node_id": "7ce26d70-d772-11ef-825b-0275dc2ded29",
                     "sortorder": 0,
@@ -852,7 +852,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Statement",
+                        "label": "Statement about Textual Work",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -862,7 +862,7 @@
                     },
                     "id": "7ce2a29a-d772-11ef-825b-0275dc2ded29",
                     "label": {
-                        "en": "Statement"
+                        "en": "Statement about Textual Work"
                     },
                     "node_id": "7ce2317a-d772-11ef-825b-0275dc2ded29",
                     "sortorder": 0,
@@ -1018,7 +1018,7 @@
                     "node_id": "7ce23986-d772-11ef-825b-0275dc2ded29",
                     "sortorder": 2,
                     "source_identifier_id": null,
-                    "visible": true,
+                    "visible": false,
                     "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
                 },
                 {
@@ -1033,7 +1033,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Statement",
+                        "label": "Statement about Textual Work Creation",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -1043,7 +1043,7 @@
                     },
                     "id": "7ce2a880-d772-11ef-825b-0275dc2ded29",
                     "label": {
-                        "en": "Statement"
+                        "en": "Statement about Textual Work Creation"
                     },
                     "node_id": "7ce28af8-d772-11ef-825b-0275dc2ded29",
                     "sortorder": 0,
@@ -1119,7 +1119,7 @@
                     "node_id": "7ce24624-d772-11ef-825b-0275dc2ded29",
                     "sortorder": 2,
                     "source_identifier_id": null,
-                    "visible": true,
+                    "visible": false,
                     "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
                 },
                 {
@@ -1231,14 +1231,14 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Type",
+                        "label": "Textual Work Type",
                         "placeholder": {
                             "en": "Select an option"
                         }
                     },
                     "id": "7ce2abdc-d772-11ef-825b-0275dc2ded29",
                     "label": {
-                        "en": "Type"
+                        "en": "Textual Work Type"
                     },
                     "node_id": "7ce205f6-d772-11ef-825b-0275dc2ded29",
                     "sortorder": null,
@@ -1310,7 +1310,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Identifier",
+                        "label": "Textual Work Identifier",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -1320,7 +1320,7 @@
                     },
                     "id": "7ce2b0aa-d772-11ef-825b-0275dc2ded29",
                     "label": {
-                        "en": "Identifier"
+                        "en": "Textual Work Identifier"
                     },
                     "node_id": "7ce22720-d772-11ef-825b-0275dc2ded29",
                     "sortorder": 0,
@@ -1414,7 +1414,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "External URI",
+                        "label": "Textual Work External URI",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -1424,7 +1424,7 @@
                     },
                     "id": "7ce2c2ac-d772-11ef-825b-0275dc2ded29",
                     "label": {
-                        "en": "External URI"
+                        "en": "Textual Work External URI"
                     },
                     "node_id": "7ce201c8-d772-11ef-825b-0275dc2ded29",
                     "sortorder": null,
@@ -1646,14 +1646,14 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Language",
+                        "label": "Textual Work Language",
                         "placeholder": {
                             "en": "Select an option"
                         }
                     },
                     "id": "7ce2c716-d772-11ef-825b-0275dc2ded29",
                     "label": {
-                        "en": "Language"
+                        "en": "Textual Work Language"
                     },
                     "node_id": "7ce1eb70-d772-11ef-825b-0275dc2ded29",
                     "sortorder": null,
@@ -1668,14 +1668,14 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Textual Work",
+                        "label": "Broader Textual Work",
                         "placeholder": {
                             "en": ""
                         }
                     },
                     "id": "7ce2c798-d772-11ef-825b-0275dc2ded29",
                     "label": {
-                        "en": "Textual Work"
+                        "en": "Broader Textual Work"
                     },
                     "node_id": "7ce20e2a-d772-11ef-825b-0275dc2ded29",
                     "sortorder": null,
@@ -1700,7 +1700,7 @@
                         "en": "Source"
                     },
                     "node_id": "7ce2764e-d772-11ef-825b-0275dc2ded29",
-                    "sortorder": 13,
+                    "sortorder": 8,
                     "source_identifier_id": null,
                     "visible": false,
                     "widget_id": "ff3c400a-76ec-11e7-a793-784f435179ea"
@@ -1722,7 +1722,7 @@
                         "en": "Used Object"
                     },
                     "node_id": "7ce254f2-d772-11ef-825b-0275dc2ded29",
-                    "sortorder": 5,
+                    "sortorder": 4,
                     "source_identifier_id": null,
                     "visible": false,
                     "widget_id": "ff3c400a-76ec-11e7-a793-784f435179ea"
@@ -1734,14 +1734,14 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Creator of Textual Work",
+                        "label": "Textual Work Creator",
                         "placeholder": {
                             "en": ""
                         }
                     },
                     "id": "7ce2cafe-d772-11ef-825b-0275dc2ded29",
                     "label": {
-                        "en": "Creator of Textual Work"
+                        "en": "Textual Work Creator"
                     },
                     "node_id": "7ce25326-d772-11ef-825b-0275dc2ded29",
                     "sortorder": 1,
@@ -1766,7 +1766,7 @@
                         "en": "During"
                     },
                     "node_id": "7ce264ce-d772-11ef-825b-0275dc2ded29",
-                    "sortorder": 6,
+                    "sortorder": 5,
                     "source_identifier_id": null,
                     "visible": false,
                     "widget_id": "ff3c400a-76ec-11e7-a793-784f435179ea"
@@ -1796,7 +1796,7 @@
                         "en": "Label"
                     },
                     "node_id": "7ce22fcc-d772-11ef-825b-0275dc2ded29",
-                    "sortorder": 12,
+                    "sortorder": 7,
                     "source_identifier_id": null,
                     "visible": false,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
@@ -1830,14 +1830,14 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Creation Event Type",
+                        "label": "Textual Work Creation Type",
                         "placeholder": {
                             "en": "Select an option"
                         }
                     },
                     "id": "7ce2cdba-d772-11ef-825b-0275dc2ded29",
                     "label": {
-                        "en": "Creation Event Type"
+                        "en": "Textual Work Creation Type"
                     },
                     "node_id": "7ce27568-d772-11ef-825b-0275dc2ded29",
                     "sortorder": 0,
@@ -1862,7 +1862,7 @@
                         "en": "Caused by"
                     },
                     "node_id": "7ce256be-d772-11ef-825b-0275dc2ded29",
-                    "sortorder": 11,
+                    "sortorder": 6,
                     "source_identifier_id": null,
                     "visible": false,
                     "widget_id": "ff3c400a-76ec-11e7-a793-784f435179ea"
@@ -1874,14 +1874,14 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Creation Event Location",
+                        "label": "Textual Work Creation Location",
                         "placeholder": {
                             "en": ""
                         }
                     },
                     "id": "7ce2ced2-d772-11ef-825b-0275dc2ded29",
                     "label": {
-                        "en": "Creation Event Location"
+                        "en": "Textual Work Creation Location"
                     },
                     "node_id": "7ce21cee-d772-11ef-825b-0275dc2ded29",
                     "sortorder": 2,
@@ -1896,14 +1896,14 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Subject this work is about",
+                        "label": "Textual Work Subject(s)",
                         "placeholder": {
                             "en": "Select an option"
                         }
                     },
                     "id": "7ce2d3be-d772-11ef-825b-0275dc2ded29",
                     "label": {
-                        "en": "Subject this work is about"
+                        "en": "Textual Work Subject(s)"
                     },
                     "node_id": "7ce1fd90-d772-11ef-825b-0275dc2ded29",
                     "sortorder": null,
@@ -1918,17 +1918,17 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Source Reference Work",
+                        "label": "Reference and Sample Collection Item or Physical Thing Referenced by Textual Work",
                         "placeholder": {
                             "en": ""
                         }
                     },
                     "id": "7ce2d440-d772-11ef-825b-0275dc2ded29",
                     "label": {
-                        "en": "Source Reference Work"
+                        "en": "Reference and Sample Collection Item or Physical Thing Referenced by Textual Work"
                     },
                     "node_id": "7ce1a782-d772-11ef-825b-0275dc2ded29",
-                    "sortorder": null,
+                    "sortorder": 0,
                     "source_identifier_id": null,
                     "visible": true,
                     "widget_id": "ff3c400a-76ec-11e7-a793-784f435179ea"
@@ -1945,7 +1945,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Text Content",
+                        "label": "Textual Work Text Content",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -1955,7 +1955,7 @@
                     },
                     "id": "7ce2d4e0-d772-11ef-825b-0275dc2ded29",
                     "label": {
-                        "en": "Text Content"
+                        "en": "Textual Work Text Content"
                     },
                     "node_id": "7ce1c7e4-d772-11ef-825b-0275dc2ded29",
                     "sortorder": null,
@@ -2903,21 +2903,22 @@
                 {
                     "alias": "is_about",
                     "config": {
+                        "defaultValue": [],
                         "graphs": [
                             {
-                                "graphid": "eaac4efa-d832-11ef-a368-0275dc2ded29",
-                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
-                                "name": "!! Referenced model does not exist -- Delete and select a new model !!",
+                                "graphid": "c08bae61-9726-47d8-9751-2dd04d20a7b4",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Physical Thing",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
-                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
                             },
                             {
-                                "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
-                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
-                                "name": "Textual Work",
+                                "graphid": "d4e956f7-9fad-4fd2-94e3-563a3b2c3585",
+                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "name": "Reference and Sample Collection Item",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
-                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "useOntologyRelationship": false
                             }
                         ],
@@ -3278,6 +3279,7 @@
                 {
                     "alias": "part_of",
                     "config": {
+                        "defaultValue": [],
                         "graphs": [
                             {
                                 "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
@@ -3363,6 +3365,7 @@
                 {
                     "alias": "creation_location",
                     "config": {
+                        "defaultValue": [],
                         "graphs": [
                             {
                                 "graphid": "3dda9f54-d771-11ef-825b-0275dc2ded29",
@@ -3866,6 +3869,7 @@
                 {
                     "alias": "creation_carried_out_by",
                     "config": {
+                        "defaultValue": [],
                         "graphs": [
                             {
                                 "graphid": "36956e50-d770-11ef-8f5d-0275dc2ded29",
@@ -4644,28 +4648,28 @@
             "publication": {
                 "graph_id": "7ce192f6-d772-11ef-825b-0275dc2ded29",
                 "most_recent_edit_id": null,
-                "notes": "Branches removed and nodes exposed to advanced search according to https://docs.google.com/spreadsheets/d/1mT-VbXfnU980nAzJXRzxBXtBsykxwAzWRAFcM-By8OY/edit?gid=415934223#gid=415934223",
-                "publicationid": "ed299233-7bbc-485e-849d-6a3de008cc28",
-                "published_time": "2026-04-23T12:06:22.710"
+                "notes": "Part 1",
+                "publicationid": "faafdc5b-048f-4ae5-b4d6-aa1f1e1a8f1a",
+                "published_time": "2026-07-10T11:55:13.830"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
             "resource_instance_lifecycle": {
                 "id": "7e3cce56-fbfb-4a4b-8e83-59b9f9e7cb75",
                 "name": {
-                    "en": "Standard"
+                    "null": "Standard"
                 },
                 "resource_instance_lifecycle_states": [
                     {
                         "action_label": {
-                            "en": "Revert to Draft"
+                            "null": "Revert to Draft"
                         },
                         "can_delete_resource_instances": true,
                         "can_edit_resource_instances": true,
                         "id": "9375c9a7-dad2-4f14-a5c1-d7e329fdde4f",
                         "is_initial_state": true,
                         "name": {
-                            "en": "Draft"
+                            "null": "Draft"
                         },
                         "next_resource_instance_lifecycle_states": [
                             "f75bb034-36e3-4ab4-8167-f520cf0b4c58"
@@ -4675,14 +4679,14 @@
                     },
                     {
                         "action_label": {
-                            "en": "Make Active"
+                            "null": "Make Active"
                         },
                         "can_delete_resource_instances": false,
                         "can_edit_resource_instances": true,
                         "id": "f75bb034-36e3-4ab4-8167-f520cf0b4c58",
                         "is_initial_state": false,
                         "name": {
-                            "en": "Active"
+                            "null": "Active"
                         },
                         "next_resource_instance_lifecycle_states": [
                             "d95d9c0e-0e2c-4450-93a3-d788b91abcc8"
@@ -4694,14 +4698,14 @@
                     },
                     {
                         "action_label": {
-                            "en": "Retire"
+                            "null": "Retire"
                         },
                         "can_delete_resource_instances": false,
                         "can_edit_resource_instances": false,
                         "id": "d95d9c0e-0e2c-4450-93a3-d788b91abcc8",
                         "is_initial_state": false,
                         "name": {
-                            "en": "Retired"
+                            "null": "Retired"
                         },
                         "next_resource_instance_lifecycle_states": [],
                         "previous_resource_instance_lifecycle_states": [
@@ -4745,9 +4749,9 @@
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 16.8 on aarch64-unknown-linux-gnu, compiled by gcc (GCC) 7.3.1 20180712 (Red Hat 7.3.1-17), 64-bit",
+        "db": "PostgreSQL 16.13 on aarch64-unknown-linux-gnu, compiled by aarch64-unknown-linux-gnu-gcc (GCC) 12.4.0, 64-bit",
         "git hash": "fatal: not a git repository (or any of the parent directories): .git",
         "os": "Linux",
-        "os version": "6.17.0-1009-aws"
+        "os version": "6.1.174"
     }
 }

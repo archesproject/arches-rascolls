@@ -5462,19 +5462,19 @@
             "resource_instance_lifecycle": {
                 "id": "7e3cce56-fbfb-4a4b-8e83-59b9f9e7cb75",
                 "name": {
-                    "en": "Standard"
+                    "null": "Standard"
                 },
                 "resource_instance_lifecycle_states": [
                     {
                         "action_label": {
-                            "en": "Revert to Draft"
+                            "null": "Revert to Draft"
                         },
                         "can_delete_resource_instances": true,
                         "can_edit_resource_instances": true,
                         "id": "9375c9a7-dad2-4f14-a5c1-d7e329fdde4f",
                         "is_initial_state": true,
                         "name": {
-                            "en": "Draft"
+                            "null": "Draft"
                         },
                         "next_resource_instance_lifecycle_states": [
                             "f75bb034-36e3-4ab4-8167-f520cf0b4c58"
@@ -5484,14 +5484,14 @@
                     },
                     {
                         "action_label": {
-                            "en": "Make Active"
+                            "null": "Make Active"
                         },
                         "can_delete_resource_instances": false,
                         "can_edit_resource_instances": true,
                         "id": "f75bb034-36e3-4ab4-8167-f520cf0b4c58",
                         "is_initial_state": false,
                         "name": {
-                            "en": "Active"
+                            "null": "Active"
                         },
                         "next_resource_instance_lifecycle_states": [
                             "d95d9c0e-0e2c-4450-93a3-d788b91abcc8"
@@ -5503,14 +5503,14 @@
                     },
                     {
                         "action_label": {
-                            "en": "Retire"
+                            "null": "Retire"
                         },
                         "can_delete_resource_instances": false,
                         "can_edit_resource_instances": false,
                         "id": "d95d9c0e-0e2c-4450-93a3-d788b91abcc8",
                         "is_initial_state": false,
                         "name": {
-                            "en": "Retired"
+                            "null": "Retired"
                         },
                         "next_resource_instance_lifecycle_states": [],
                         "previous_resource_instance_lifecycle_states": [
@@ -5554,9 +5554,9 @@
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 16.8 on aarch64-unknown-linux-gnu, compiled by gcc (GCC) 7.3.1 20180712 (Red Hat 7.3.1-17), 64-bit",
+        "db": "PostgreSQL 16.13 on aarch64-unknown-linux-gnu, compiled by aarch64-unknown-linux-gnu-gcc (GCC) 12.4.0, 64-bit",
         "git hash": "fatal: not a git repository (or any of the parent directories): .git",
         "os": "Linux",
-        "os version": "6.17.0-1009-aws"
+        "os version": "6.1.174"
     }
 }
