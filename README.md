@@ -18,6 +18,18 @@ python manage.py packages -o load_package -a arches_rascolls -db -y -dev
 python manage.py report_configs load
 ```
 
+To import resource data from a directory of `.xlsx` files and rebuild descriptors, search index, and report configs:
+
+```bash
+python manage.py load_rascolls_data <path-to-data-pkg>
+```
+
+Use `--format branch-excel` for branch-excel formatted files (default is `tile-excel`):
+
+```bash
+python manage.py load_rascolls_data <path-to-data-pkg> --format branch-excel
+```
+
 If you load in sample data, be sure to index for arches-search-extension:
 
 ```bash

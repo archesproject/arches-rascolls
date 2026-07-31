@@ -161,7 +161,7 @@
                             {
                                 "component": "arches_rascolls/Search/components/DataSection",
                                 "config": {
-                                    "nodegroup_alias": "chemical_material",
+                                    "nodegroup_alias": "chemical_material_name",
                                     "node_aliases": [
                                         "chemical_material_name_content"
                                     ],
@@ -191,7 +191,7 @@
                             {
                                 "component": "arches_rascolls/Search/components/DataSection",
                                 "config": {
-                                    "nodegroup_alias": "chemical_material",
+                                    "nodegroup_alias": "chemical_material_identifier",
                                     "node_aliases": [
                                         "chemical_material_identifier_content"
                                     ],
