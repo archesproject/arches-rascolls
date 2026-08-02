@@ -27,9 +27,6 @@
         "arches-search": "archesproject/arches-search#main",
         "maplibre-gl": "^4.6.0"
     },
-    "devDependencies": {
-        "arches-dev-dependencies": "archesproject/arches-dev-dependencies#dev/8.1.x"
-    },
     "nodeModulesPaths": {},
     "overrides": {
         "moment-timezone": "^0.5.45",
