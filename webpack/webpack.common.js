@@ -358,12 +358,8 @@ module.exports = () => {
             module: {
                 rules: [
                     {
-                        test: /\.(d\.ts|(spec|test)\.tsx?)$/,
-                        type: "asset/source",
-                    },
-                    {
                         test: /\.tsx?$/,
-                        exclude: [/node_modules/, /\.d\.ts$/, /\.(spec|test)\.tsx?$/],
+                        exclude: /node_modules/,
                         loader: Path.join(PROJECT_RELATIVE_NODE_MODULES_PATH, 'ts-loader'),
                         options: {
                             appendTsSuffixTo: [/\.vue$/],
