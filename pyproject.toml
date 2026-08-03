@@ -29,7 +29,7 @@ dependencies = [
     "arches>=8.1.3,<9.0.0",
     "django_csp==3.8",
     "arches_modular_reports>=2.0.0",
-    "arches_search>=0.1.0a11",
+    "arches_search @ git+https://github.com/archesproject/arches-search.git@main",
     "arches-controlled-lists>=1.2.0",
     "arches-vue-components>=2.0.0",
 ]
