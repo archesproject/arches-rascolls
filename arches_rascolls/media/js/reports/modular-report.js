@@ -1,6 +1,6 @@
 import ko from 'knockout';
 import ModularReport from '@/arches_modular_reports/ModularReport/ModularReport.vue';
-import createVueApplication from 'utils/create-vue-application';
+import { createVueApplication } from '@/arches_vue_components/application';
 import ModularReportTemplate from 'templates/views/report-templates/modular-report.htm';
 import { fetchGraphSlugFromId } from '@/arches_modular_reports/ModularReport/api.ts';
 import ModularReportTheme from '@/arches_rascolls/report_themes/rascolls_theme.ts';
@@ -24,7 +24,7 @@ ko.components.register('modular-report', {
             graphSlug = data.graph_slug;
         }
 
-        createVueApplication(ModularReport, ModularReportTheme, { graphSlug, resourceInstanceId, reportConfigSlug }).then(vueApp => {
+        createVueApplication({ component: ModularReport, themeConfiguration: ModularReportTheme, initialProps: { graphSlug, resourceInstanceId, reportConfigSlug } }).then(vueApp => {
             // RaSColls reports are light-only: the legacy Arches chrome does not
             // support dark mode, so a report that flips to dark (when the browser
             // reports prefers-color-scheme: dark, e.g. Firefox's "Website

@@ -24,7 +24,9 @@ export const fetchGeoJSONBounds = async (features: FeatureCollection) => {
         }
         throw new Error(responseJson.message);
     } catch (error) {
-        throw new Error((error as Error).message || response.statusText);
+        throw new Error((error as Error).message || response.statusText, {
+            cause: error,
+        });
     }
 };
 
@@ -41,7 +43,9 @@ export const fetchDrawnFeaturesBuffer = async (features: FeatureCollection) => {
         }
         throw new Error(responseJson.message);
     } catch (error) {
-        throw new Error((error as Error).message || response.statusText);
+        throw new Error((error as Error).message || response.statusText, {
+            cause: error,
+        });
     }
 };
 
@@ -55,7 +59,9 @@ export const createRequest = (url: string) => {
             }
             throw new Error(responseJson.message);
         } catch (error) {
-            throw new Error((error as Error).message || response.statusText);
+            throw new Error((error as Error).message || response.statusText, {
+                cause: error,
+            });
         }
     };
 };

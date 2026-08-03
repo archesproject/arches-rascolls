@@ -21,14 +21,11 @@
     },
     "dependencies": {
         "arches": "archesproject/arches#dev/8.2.x",
-        "arches-component-lab": "archesproject/arches-component-lab#main",
-        "arches-controlled-lists": "archesproject/arches-controlled-lists#dev/1.3.x",
-        "arches-modular-reports": "archesproject/arches-modular-reports#main",
+        "arches-vue-components": "archesproject/arches-vue-components#stable/2.0.2",
+        "arches-controlled-lists": "archesproject/arches-controlled-lists#stable/1.2.0",
+        "arches-modular-reports": "archesproject/arches-modular-reports#stable/2.0.0",
         "arches-search": "archesproject/arches-search#main",
         "maplibre-gl": "^4.6.0"
-    },
-    "devDependencies": {
-        "arches-dev-dependencies": "archesproject/arches-dev-dependencies#dev/8.1.x"
     },
     "nodeModulesPaths": {},
     "overrides": {

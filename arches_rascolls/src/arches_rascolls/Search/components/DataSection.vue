@@ -14,7 +14,7 @@ import FileListViewer from "@/arches_modular_reports/ModularReport/components/Fi
 
 import type { Ref } from "vue";
 import type { NodePresentationLookup } from "@/arches_modular_reports/ModularReport/types";
-import type { FileReference } from "@/arches_component_lab/datatypes/file-list/types";
+import type { FileReference } from "@/arches_vue_components/datatypes/file-list/types";
 
 const props = defineProps<{
     component: {

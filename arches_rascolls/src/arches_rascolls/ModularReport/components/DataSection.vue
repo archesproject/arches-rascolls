@@ -2,6 +2,8 @@
 import { computed, inject, onMounted, ref, watch } from "vue";
 import { useGettext } from "vue3-gettext";
 
+import DOMPurify from "dompurify";
+
 import Button from "primevue/button";
 import Column from "primevue/column";
 import DataTable from "primevue/datatable";
@@ -358,6 +360,13 @@ function initiateSoftDelete(tileId: string) {
     initiateEdit(tileId);
     requestSoftDeleteTile(props.component.config.nodegroup_alias, tileId);
 }
+
+function sanitizeRichText(richText: string | undefined): string {
+    if (!richText) {
+        return "";
+    }
+    return DOMPurify.sanitize(richText, { USE_PROFILES: { html: true } });
+}
 </script>
 
 <template>
@@ -579,10 +588,17 @@ function initiateSoftDelete(tileId: string) {
                             :file-data="data[field as string].file_data"
                         />
                         <template v-else-if="columnDatum.is_rich_text">
+                            <!-- eslint-disable vue/no-v-html -->
                             <span
                                 class="rich-text-container"
-                                v-html="data[field as string]?.display_value"
+                                v-html="
+                                    sanitizeRichText(
+                                        data[field as string]
+                                            ?.display_value as string,
+                                    )
+                                "
                             ></span>
+                            <!-- eslint-enable vue/no-v-html -->
                         </template>
                         <template v-else-if="columnDatum.is_numeric">
                             {{

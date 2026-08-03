@@ -1,5 +1,5 @@
 import ko from 'knockout';
-import createVueApplication from 'arches/arches/app/media/js/utils/create-vue-application';
+import { createVueApplication } from '@/arches_vue_components/application';
 
 import { definePreset } from '@primeuix/themes';
 import { DEFAULT_THEME } from "@/arches/themes/default.ts";
@@ -40,7 +40,7 @@ export default ko.components.register('arches-rascolls-search', {
                 preset: RascollsThemePreset, ...DEFAULT_THEME.theme,
             },
         };
-        createVueApplication(Search, EditableReportTheme).then(vueApp => {
+        createVueApplication({ component: Search, themeConfiguration: EditableReportTheme }).then(vueApp => {
             vueApp.mount('#search-mounting-point');
         });
     },
