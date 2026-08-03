@@ -73,11 +73,11 @@ import type {
 } from "@/arches_rascolls/Search/types.ts";
 
 interface Props {
-    settings: Settings | null;
-    basemap: Basemap | null;
-    overlays: MapLayer[];
-    query: GenericObject[];
-    sources: MapSource[];
+    settings?: Settings | null;
+    basemap?: Basemap | null;
+    overlays?: MapLayer[];
+    query?: GenericObject[];
+    sources?: MapSource[];
     isDrawingEnabled?: boolean;
     drawnFeatures?: Feature[];
     drawnFeaturesBuffer?: Buffer;

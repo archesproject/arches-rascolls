@@ -1,5 +1,8 @@
 <script setup lang="ts">
-const { resourceId } = defineProps<{ resourceId?: string }>();
+const props = withDefaults(defineProps<{ resourceId?: string }>(), {
+    resourceId: undefined,
+});
+const { resourceId } = props;
 </script>
 
 <template>
