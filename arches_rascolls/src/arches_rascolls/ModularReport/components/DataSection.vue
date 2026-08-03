@@ -579,6 +579,7 @@ function initiateSoftDelete(tileId: string) {
                             :file-data="data[field as string].file_data"
                         />
                         <template v-else-if="columnDatum.is_rich_text">
+                            <!-- eslint-disable-next-line vue/no-v-html -->
                             <span
                                 class="rich-text-container"
                                 v-html="data[field as string]?.display_value"
