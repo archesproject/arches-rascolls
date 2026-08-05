@@ -2,6 +2,10 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.conf.urls.i18n import i18n_patterns
 from django.urls import include, path, re_path
+from arches_rascolls.views.resource import (
+    ModularReportAddResourceView,
+    ModularReportUpdateResourceView,
+)
 from arches_rascolls.views.file_api import FileAPI
 from arches_rascolls.views.settings_api import SettingsAPI
 from arches_rascolls.views.search_api import SearchAPI
@@ -53,6 +57,16 @@ urlpatterns = [
         name="api-reference-collection-search-mvt",
     ),
     re_path(r"^rascoll-search$", RascollSearchView.as_view(), name="rascoll-search"),
+    path(
+        "resource/<uuid:resourceid>",
+        ModularReportUpdateResourceView.as_view(),
+        name="resource_editor",
+    ),
+    path(
+        "add-resource/<uuid:graphid>",
+        ModularReportAddResourceView.as_view(),
+        name="add_resource",
+    ),
 ]
 
 urlpatterns.append(path("", include("arches_modular_reports.urls")))
