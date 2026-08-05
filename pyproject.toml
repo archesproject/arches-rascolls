@@ -30,7 +30,7 @@ dependencies = [
     "django_csp==3.8",
     "arches_modular_reports>=2.0.0",
     "arches_search>=0.1.0a11",
-    "arches-controlled-lists>=1.3.0a0",
+    "arches-controlled-lists>=1.3.0a1",
     "arches-vue-components>=2.0.0",
 ]
 version = "0.0.1"
