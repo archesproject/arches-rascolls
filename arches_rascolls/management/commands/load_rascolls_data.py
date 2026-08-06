@@ -34,6 +34,9 @@ class Command(BaseCommand):
         if not data_dir.is_dir():
             raise CommandError(f"'{data_dir}' is not a directory.")
 
+        self.stdout.write("\n>>> report_configs load")
+        call_command("report_configs", "load")
+
         xlsx_files = sorted(data_dir.glob("*.xlsx"))
         if not xlsx_files:
             raise CommandError(f"No *.xlsx files found in '{data_dir}'.")
@@ -48,8 +51,5 @@ class Command(BaseCommand):
 
         self.stdout.write("\n>>> arches_search reindex_database -mp -mxp 5")
         call_command("arches_search", "reindex_database", "-mp", "-mxp", "5")
-
-        self.stdout.write("\n>>> report_configs load")
-        call_command("report_configs", "load")
 
         self.stdout.write(self.style.SUCCESS("\nDone."))
