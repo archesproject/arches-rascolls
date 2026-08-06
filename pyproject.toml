@@ -27,6 +27,7 @@ classifiers = [
 requires-python = ">=3.12"
 dependencies = [
     "arches>=8.2.0a8,<9.0.0",
+    "Django==6.0.7",
     "django_csp==3.8",
     "arches_modular_reports>=2.0.0",
     "arches_search>=0.1.0a11",
