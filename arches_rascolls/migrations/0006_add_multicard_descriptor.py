@@ -3,7 +3,6 @@
 from django.db import migrations
 from django.utils.translation import gettext_lazy as _
 
-
 STRING_TEMPLATE_REPLACEMENTS = {
     "Statement_content": "statement_content",
     "Name_content": "name_content",
