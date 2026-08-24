@@ -43,8 +43,10 @@ class Command(BaseCommand):
 
         subcommand = IMPORTER_SUBCOMMANDS[options["format"]]
         for xlsx in xlsx_files:
-            self.stdout.write(f"\n>>> etl {subcommand} -s {xlsx} -mp -mxp 3")
-            call_command("etl", subcommand, "-s", str(xlsx), "-mp", "-mxp", "3")
+            self.stdout.write(f"\n>>> etl {subcommand} -s {xlsx} -mp -mxp 3 --no-index")
+            call_command(
+                "etl", subcommand, "-s", str(xlsx), "-mp", "-mxp", "3", "--no-index"
+            )
 
         self.stdout.write("\n>>> resources calculate_descriptors")
         call_command("resources", "calculate_descriptors", "-y")
