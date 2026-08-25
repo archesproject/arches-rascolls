@@ -51,6 +51,9 @@ if [ "$FETCH_PRIVATE_DATA" = "true" ]; then
 		if command -v apk &>/dev/null; then apk add openssh-client; fi
 		git clone "git@github.com:archesproject/rascolls-data-pkg.git" /tmp/rascolls-data-pkg
 	fi
+	
+	chown -R arches:root /tmp/rascolls-data-pkg
+	chmod -R 770 /tmp/rascolls-data-pkg
 
 	echo "[post_load] Repository contents:"
 	ls -la /tmp/rascolls-data-pkg/
