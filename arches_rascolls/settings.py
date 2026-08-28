@@ -317,7 +317,6 @@ INSTALLED_APPS = (
     "rest_framework",
     "arches_querysets",
     "arches_vue_components",
-    "arches_resource_sets",
     "arches_search",
     "pgtrigger",
 )
