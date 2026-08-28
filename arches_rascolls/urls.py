@@ -20,6 +20,7 @@ from arches_rascolls.views.map_api import (
 )
 from arches_rascolls.views.rascoll_search import RascollSearchView
 from arches_rascolls.views.resource_api import ResourceLastEditedAPI
+from arches_rascolls.views.featured_items_api import FeaturedItemsAPI
 
 uuid_regex = settings.UUID_REGEX
 
@@ -27,6 +28,7 @@ urlpatterns = [
     # project-level urls
     path("api-search", SearchAPI.as_view(), name="api-search"),
     path("api-settings", SettingsAPI.as_view(), name="api-settings"),
+    path("api-featured-items", FeaturedItemsAPI.as_view(), name="api-featured-items"),
     path("api-map-data", MapDataAPI.as_view(), name="api-map-data"),
     path("api-file-data", FileAPI.as_view(), name="api-file-data"),
     path("api-feature-buffer", FeatureBufferAPI.as_view(), name="api-feature-buffer"),
