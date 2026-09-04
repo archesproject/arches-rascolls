@@ -30,27 +30,6 @@ class Migration(migrations.Migration):
             }
         )
 
-    def hide_old_search(apps, schema_editor):
-        bdm = apps.get_model("models", "Plugin")
-        bdm.objects.filter(pluginid=Migration.old_search_plugin_id).update(
-            config={
-                "show": False,
-                "description": {"en": None},
-                "i18n_properties": ["description"],
-            }
-        )
-
-    def show_old_search(apps, schema_editor):
-        bdm = apps.get_model("models", "Plugin")
-        bdm.objects.filter(pluginid=Migration.old_search_plugin_id).update(
-            config={
-                "show": True,
-                "description": {"en": None},
-                "i18n_properties": ["description"],
-            }
-        )
-
     operations = [
         migrations.RunPython(make_bdm_visible, hide_bdm),
-        migrations.RunPython(hide_old_search, show_old_search),
     ]
