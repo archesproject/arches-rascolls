@@ -11,10 +11,10 @@ class FeaturedSearchItem(models.Model):
         related_name="featured_items",
         limit_choices_to={"creator__is_staff": True},
     )
-    presentation = models.JSONField(default=dict)
-    sort_order = models.PositiveIntegerField(default=0)
-    is_active = models.BooleanField(default=True)
-    created_at = models.DateTimeField(auto_now_add=True)
+    presentation = models.JSONField(default=dict, null=False)
+    sort_order = models.PositiveIntegerField(default=0, null=False)
+    is_active = models.BooleanField(default=True, null=False)
+    created_at = models.DateTimeField(auto_now_add=True, null=False)
 
     class Meta:
         managed = True
