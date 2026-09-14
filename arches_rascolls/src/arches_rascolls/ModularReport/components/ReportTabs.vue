@@ -2,12 +2,12 @@
 import { computed, ref, watch, watchEffect } from "vue";
 import { useGettext } from "vue3-gettext";
 
-import Select from "primevue/select";
-import Tab from "primevue/tab";
-import Tabs from "primevue/tabs";
-import TabList from "primevue/tablist";
-import TabPanel from "primevue/tabpanel";
-import TabPanels from "primevue/tabpanels";
+import Select from "openvue/select";
+import Tab from "openvue/tab";
+import Tabs from "openvue/tabs";
+import TabList from "openvue/tablist";
+import TabPanel from "openvue/tabpanel";
+import TabPanels from "openvue/tabpanels";
 
 import {
     importComponents,
