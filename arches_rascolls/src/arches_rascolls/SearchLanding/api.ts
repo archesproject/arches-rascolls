@@ -34,7 +34,8 @@ export async function fetchFeaturedItemCounts(
                     query: buildRequestQuery(
                         Object.values(searchDefinition.queries),
                     ),
-                    graphIds: searchDefinition.graphIds,
+                    dateRange: null,
+                    graphSlugs: searchDefinition.graphSlugs,
                     mapFilter: searchDefinition.mapFilter,
                 },
             };
