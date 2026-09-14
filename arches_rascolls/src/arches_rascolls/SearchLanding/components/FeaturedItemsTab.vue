@@ -27,7 +27,7 @@ const featuredItems = ref<FeaturedItem[]>([]);
 const hasLoadError = ref(false);
 const featuredItemCounts = ref<Record<string, number | null>>({});
 const featuredItemCountsLoaded = ref(false);
-const resourceTypesById = ref<Record<string, GraphModel>>({});
+const resourceTypesBySlug = ref<Record<string, GraphModel>>({});
 
 const featuredItemGraphs = computed<Record<string, GraphModel[]>>(() =>
     Object.fromEntries(
@@ -35,8 +35,8 @@ const featuredItemGraphs = computed<Record<string, GraphModel[]>>(() =>
             featuredItem.id,
             parseSearchDefinition(
                 featuredItem.search_definition,
-            ).graphIds.flatMap((graphId) => {
-                const resourceType = resourceTypesById.value[graphId];
+            ).graphSlugs.flatMap((graphSlug) => {
+                const resourceType = resourceTypesBySlug.value[graphSlug];
                 return resourceType ? [resourceType] : [];
             }),
         ]),
@@ -78,8 +78,8 @@ async function loadFeaturedItemCounts(): Promise<void> {
 async function loadResourceTypes(): Promise<void> {
     try {
         const graphs: GraphModel[] = await getGraphs();
-        resourceTypesById.value = Object.fromEntries(
-            graphs.map((graph) => [graph.graphid, graph]),
+        resourceTypesBySlug.value = Object.fromEntries(
+            graphs.map((graph) => [graph.slug, graph]),
         );
     } catch (error) {
         console.error(error);
