@@ -3,8 +3,8 @@ import { computed, onMounted, ref } from "vue";
 import { useGettext } from "vue3-gettext";
 import { useRouter } from "vue-router";
 
-import Button from "primevue/button";
-import Skeleton from "primevue/skeleton";
+import Button from "openvue/button";
+import Skeleton from "openvue/skeleton";
 
 import { getGraphs } from "@/arches_search/AdvancedSearch/api.ts";
 import {

@@ -2,9 +2,9 @@
 import { computed, inject, onMounted, ref } from "vue";
 import { useGettext } from "vue3-gettext";
 
-import Button from "primevue/button";
-import Message from "primevue/message";
-import Tag from "primevue/tag";
+import Button from "openvue/button";
+import Message from "openvue/message";
+import Tag from "openvue/tag";
 
 import { fetchNodeTileData } from "@/arches_modular_reports/ModularReport/api.ts";
 import { truncateDisplayData } from "@/arches_modular_reports/ModularReport/utils.ts";
