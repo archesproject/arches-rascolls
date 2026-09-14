@@ -1,5 +1,5 @@
-import { definePreset } from "@primeuix/themes";
-import Aura from "@primeuix/themes/aura";
+import { definePreset } from "@openvue/themes";
+import Aura from "@openvue/themes/aura";
 
 import { compileGlobalCss } from "@/arches_modular_reports/utils.ts";
 
@@ -12,7 +12,7 @@ const cssOverrides = {
         "font-size": "1.36rem",
     },
     // background forced with !important: arches core's table styles outrank
-    // the PrimeVue datatable headerCell token
+    // the OpenVue datatable headerCell token
     ".modular-report-mounting-point .p-datatable-thead > tr > th": {
         "font-size": "1.1rem",
         "font-weight": "600",
