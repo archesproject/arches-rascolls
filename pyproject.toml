@@ -28,11 +28,11 @@ requires-python = ">=3.12"
 dependencies = [
     "arches>=8.2.0a9,<9.0.0",
     "django_csp==3.8",
-    "arches_modular_reports>=2.1.0a1",
-    "arches_search>=0.1.0a16",
+    "arches_modular_reports>=2.1.0a2",
+    "arches_search>=0.1.0a18",
     "arches_resource_sets>=0.1.0a1",
     "arches-controlled-lists>=1.3.0a2",
-    "arches-vue-components>=2.1.0a1",
+    "arches-vue-components>=2.1.0a2",
 ]
 version = "0.0.1"
 
