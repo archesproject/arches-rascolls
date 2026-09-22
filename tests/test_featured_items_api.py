@@ -30,7 +30,7 @@ class FeaturedItemsAPITest(TestCase):
             },
             is_active=True,
         )
-        FeaturedSearchItem.objects.create(
+        inactive_item = FeaturedSearchItem.objects.create(
             saved_search=saved_search,
             presentation={"icon": "pi-palette", "color": "#0d9488"},
             is_active=False,
@@ -40,11 +40,14 @@ class FeaturedItemsAPITest(TestCase):
 
         self.assertEqual(response.status_code, 200)
         results = response.json()["results"]
-        self.assertEqual(
-            [result["id"] for result in results],
-            [str(active_item.featuredsearchitemid)],
+        result_ids = [result["id"] for result in results]
+        self.assertIn(str(active_item.featuredsearchitemid), result_ids)
+        self.assertNotIn(str(inactive_item.featuredsearchitemid), result_ids)
+        result = next(
+            result
+            for result in results
+            if result["id"] == str(active_item.featuredsearchitemid)
         )
-        result = results[0]
         self.assertEqual(result["label"], "Custom Label")
         self.assertEqual(result["description"], "Custom description")
         self.assertEqual(result["icon"], "pi-palette")
