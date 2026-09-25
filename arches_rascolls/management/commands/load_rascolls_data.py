@@ -3,6 +3,8 @@ from pathlib import Path
 from django.core.management import call_command
 from django.core.management.base import BaseCommand, CommandError
 
+SOURCE_FILE_PATTERNS = ("*.xlsx", "*.zip")
+
 IMPORTER_SUBCOMMANDS = {
     "tile-excel": "tile-excel-importer",
     "branch-excel": "branch-excel-importer",
@@ -11,7 +13,7 @@ IMPORTER_SUBCOMMANDS = {
 
 class Command(BaseCommand):
     help = (
-        "Import RaSColls *.xlsx files and rebuild descriptors, search index, and report configs.\n\n"
+        "Import RaSColls *.xlsx and *.zip files and rebuild descriptors, search index, and report configs.\n\n"
         "Examples:\n"
         "  python manage.py load_rascolls_data ../rascolls-data-pkg\n"
         "  python manage.py load_rascolls_data ../rascolls-data-pkg --format branch-excel"
@@ -20,7 +22,7 @@ class Command(BaseCommand):
     def add_arguments(self, parser):
         parser.add_argument(
             "data_dir",
-            help="Path to the rascolls-data-pkg directory containing *.xlsx files.",
+            help="Path to the rascolls-data-pkg directory containing *.xlsx and/or *.zip files.",
         )
         parser.add_argument(
             "--format",
@@ -37,14 +39,17 @@ class Command(BaseCommand):
         self.stdout.write("\n>>> report_configs load")
         call_command("report_configs", "load")
 
-        xlsx_files = sorted(data_dir.glob("*.xlsx"))
-        if not xlsx_files:
-            raise CommandError(f"No *.xlsx files found in '{data_dir}'.")
+        source_files = sorted(
+            path for pattern in SOURCE_FILE_PATTERNS for path in data_dir.glob(pattern)
+        )
+        if not source_files:
+            patterns = ", ".join(SOURCE_FILE_PATTERNS)
+            raise CommandError(f"No {patterns} files found in '{data_dir}'.")
 
         subcommand = IMPORTER_SUBCOMMANDS[options["format"]]
-        for xlsx in xlsx_files:
-            self.stdout.write(f"\n>>> etl {subcommand} -s {xlsx} -mp --no-index")
-            call_command("etl", subcommand, "-s", str(xlsx), "-mp", "--no-index")
+        for source_file in source_files:
+            self.stdout.write(f"\n>>> etl {subcommand} -s {source_file} -mp --no-index")
+            call_command("etl", subcommand, "-s", str(source_file), "-mp", "--no-index")
 
         self.stdout.write("\n>>> resources calculate_descriptors")
         call_command("resources", "calculate_descriptors", "-y")
