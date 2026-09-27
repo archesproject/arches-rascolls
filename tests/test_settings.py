@@ -60,6 +60,18 @@ CACHES = {
     "searchresults": {
         "BACKEND": "django.core.cache.backends.locmem.LocMemCache",
     },
+    "querysets_concepts": {
+        "BACKEND": "django.core.cache.backends.locmem.LocMemCache",
+        "LOCATION": "querysets_concepts_cache",
+        "TIMEOUT": 86400,  # one day in seconds
+        "OPTIONS": {"MAX_ENTRIES": 1000},
+    },
+    "querysets_resource_instances": {
+        "BACKEND": "django.core.cache.backends.locmem.LocMemCache",
+        "LOCATION": "querysets_resource_instances_cache",
+        "TIMEOUT": 86400,  # one day in seconds
+        "OPTIONS": {"MAX_ENTRIES": 1000},
+    },
 }
 
 LOGGING["loggers"]["arches"]["level"] = "ERROR"

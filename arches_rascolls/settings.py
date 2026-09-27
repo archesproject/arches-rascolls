@@ -300,7 +300,7 @@ INSTALLED_APPS = (
     "django.contrib.staticfiles",
     "django.contrib.gis",
     "django_hosts",
-    "arches_controlled_lists",
+    "arches.extensions.controlled_lists",
     "arches",
     "arches.app.models",
     "arches.management",
@@ -315,8 +315,8 @@ INSTALLED_APPS = (
     "django.contrib.postgres",
     "arches_modular_reports",
     "rest_framework",
-    "arches_querysets",
-    "arches_vue_components",
+    "arches.extensions.querysets",
+    "arches.extensions.vue_components",
     "arches_search",
     "arches_resource_sets",
     "pgtrigger",
@@ -454,6 +454,18 @@ CACHES = {
     },
     "searchresults": {
         "BACKEND": "django.core.cache.backends.locmem.LocMemCache",
+    },
+    "querysets_concepts": {
+        "BACKEND": "django.core.cache.backends.locmem.LocMemCache",
+        "LOCATION": "querysets_concepts_cache",
+        "TIMEOUT": 86400,  # one day in seconds
+        "OPTIONS": {"MAX_ENTRIES": 1000},
+    },
+    "querysets_resource_instances": {
+        "BACKEND": "django.core.cache.backends.locmem.LocMemCache",
+        "LOCATION": "querysets_resource_instances_cache",
+        "TIMEOUT": 86400,  # one day in seconds
+        "OPTIONS": {"MAX_ENTRIES": 1000},
     },
 }
 
