@@ -26,6 +26,7 @@ classifiers = [
 ]
 requires-python = ">=3.12"
 dependencies = [
+    "arches @ git+ssh://git@github.com/archesproject/arches#cnh/map_errors"
     "arches>=8.2.0a10,<9.0.0",
     "django_csp==3.8",
     "arches_modular_reports>=2.1.0a2",
