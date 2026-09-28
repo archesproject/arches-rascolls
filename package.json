@@ -20,9 +20,9 @@
         "vitest": "vitest --run --coverage"
     },
     "dependencies": {
-        "arches": "archesproject/arches#dev/8.2.x",
-        "arches-modular-reports": "archesproject/arches-modular-reports#cnh/arches_82_compat",
-        "arches-search": "archesproject/arches-search#cnh/update_for_82x",
+        "arches": "archesproject/arches#semver:^v8.2.0-alpha.11",
+        "arches-modular-reports": "archesproject/arches-modular-reports#semver:^v2.1.0-alpha.3",
+        "arches-search": "archesproject/arches-search#semver:^v0.1.0-alpha.19",
         "maplibre-gl": "6.9.0"
     },
     "nodeModulesPaths": {},
