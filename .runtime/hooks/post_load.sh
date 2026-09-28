@@ -3,6 +3,9 @@
 
 set -euo pipefail
 
+DATA_PKG_DIR=/tmp/rascolls-data-pkg
+DATA_BRANCH="${DATA_BRANCH:-main}"
+
 IMPORT_ERRORS=0
 
 run_import() {
@@ -45,26 +48,27 @@ if [ "$FETCH_PRIVATE_DATA" = "true" ]; then
 	echo "[post_load] Cloning private repository..."
 	if [ -n "$GITHUB_TOKEN" ]; then
 		echo "[post_load] Using token-based auth"
-		git clone "https://x-access-token:${GITHUB_TOKEN}@github.com/archesproject/rascolls-data-pkg.git" /tmp/rascolls-data-pkg
+		git clone "https://x-access-token:${GITHUB_TOKEN}@github.com/archesproject/rascolls-data-pkg.git" "${DATA_PKG_DIR}"
 	else
 		echo "[post_load] WARNING: No GitHub token found, falling back to SSH"
 		if command -v apk &>/dev/null; then apk add openssh-client; fi
-		git clone "git@github.com:archesproject/rascolls-data-pkg.git" /tmp/rascolls-data-pkg
+		git clone "git@github.com:archesproject/rascolls-data-pkg.git" "${DATA_PKG_DIR}"
+		git -C "${DATA_PKG_DIR}" switch "$DATA_BRANCH"
 	fi
 	
-	chown -R arches:root /tmp/rascolls-data-pkg
-	chmod -R 770 /tmp/rascolls-data-pkg
+	chown -R arches:root "${DATA_PKG_DIR}"
+	chmod -R 770 "${DATA_PKG_DIR}"
 
 	echo "[post_load] Repository contents:"
-	ls -la /tmp/rascolls-data-pkg/
+	ls -la "${DATA_PKG_DIR}"/
 
 	echo "[post_load] Starting tile-excel imports..."
 
-	run_import /tmp/rascolls-data-pkg/Reference_and_Sample_Collection_Item.xlsx
-	run_import /tmp/rascolls-data-pkg/Place.xlsx
-	run_import /tmp/rascolls-data-pkg/Person.xlsx
-	run_import /tmp/rascolls-data-pkg/Group.xlsx
-	run_import /tmp/rascolls-data-pkg/Collection_or_Set.xlsx
+	run_import "${DATA_PKG_DIR}/Reference_and_Sample_Collection_Item.xlsx"
+	run_import "${DATA_PKG_DIR}/Place.xlsx"
+	run_import "${DATA_PKG_DIR}/Person.xlsx"
+	run_import "${DATA_PKG_DIR}/Group.xlsx"
+	run_import "${DATA_PKG_DIR}/Collection_or_Set.xlsx"
 	${WEB_ROOT}/ENV/bin/python manage.py report_configs load
 
 	echo "============================================"
