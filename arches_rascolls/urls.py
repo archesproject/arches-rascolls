@@ -72,8 +72,8 @@ urlpatterns = [
 ]
 
 urlpatterns.append(path("", include("arches_modular_reports.urls")))
-urlpatterns.append(path("", include("arches_controlled_lists.urls")))
-urlpatterns.append(path("", include("arches_vue_components.urls")))
+urlpatterns.append(path("", include("arches.extensions.controlled_lists.urls")))
+urlpatterns.append(path("", include("arches.extensions.vue_components.urls")))
 urlpatterns.append(path("", include("arches_search.urls")))
 urlpatterns.append(path("", include("arches_resource_sets.urls")))
 
