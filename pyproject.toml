@@ -26,10 +26,10 @@ classifiers = [
 ]
 requires-python = ">=3.12"
 dependencies = [
-    "arches @ git+https://github.com/archesproject/arches.git@cbyrd/12934-migrate-to-openvue",
+    "arches>=8.2.0a12,<9.0.0",
     "django_csp==3.8",
-    "arches_modular_reports @ git+https://github.com/archesproject/arches-modular-reports.git@cbyrd/migrate-to-openvue",
-    "arches_search @ git+https://github.com/archesproject/arches-search.git@cbyrd/migrate-to-openvue",
+    "arches_modular_reports>=2.1.0a4",
+    "arches_search>=0.1.0a20",
     "arches_resource_sets>=0.1.0a1",
 ]
 version = "0.0.1"
