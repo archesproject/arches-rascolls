@@ -180,6 +180,13 @@ FILE_TYPES = [
     "xlsx",
     "csv",
     "zip",
+    "txt",
+    "dx",
+    "spx",
+    "bcf",
+    "raw",
+    "rpl",
+    "wxd",
 ]
 FILENAME_GENERATOR = "arches.app.utils.storage_filename_generator.generate_filename"
 UPLOADED_FILES_DIR = "uploadedfiles"
