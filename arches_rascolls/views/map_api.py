@@ -160,12 +160,11 @@ class GeoJSONParseIntoCollectionAPI(View):
 class ReferenceCollectionSearchMVT(View):
     def get(self, request, zoom, x, y):
         system_settings_resourceid = settings.SYSTEM_SETTINGS_RESOURCE_ID
-        result = None
         with connection.cursor() as cursor:
             session_id = request.session.session_key
             resource_ids = searchresults_cache.get(session_id, [])
             if resource_ids:
-                result = cursor.execute(
+                cursor.execute(
                     """
                     SELECT ST_AsMVT(tile, 'rascolls-search', 4096, 'geom', 'id')
                     FROM (
@@ -198,7 +197,7 @@ class ReferenceCollectionSearchMVT(View):
                         y,
                     ],
                 )
-                result = bytes(cursor.fetchone()[0]) if result is None else result
+                result = bytes(cursor.fetchone()[0])
             else:
                 raise Http404("No search results found")
         return HttpResponse(result, content_type="application/x-protobuf")
@@ -207,9 +206,8 @@ class ReferenceCollectionSearchMVT(View):
 class ReferenceCollectionMVT(View):
     def get(self, request, zoom, x, y):
         system_settings_resourceid = settings.SYSTEM_SETTINGS_RESOURCE_ID
-        result = None
         with connection.cursor() as cursor:
-            result = cursor.execute(
+            cursor.execute(
                 """
                 SELECT ST_AsMVT(tile, 'referencecollections', 4096, 'geom', 'id')
                 FROM (
@@ -241,5 +239,5 @@ class ReferenceCollectionMVT(View):
                     y,
                 ],
             )
-            result = bytes(cursor.fetchone()[0]) if result is None else result
+            result = bytes(cursor.fetchone()[0])
         return HttpResponse(result, content_type="application/x-protobuf")
