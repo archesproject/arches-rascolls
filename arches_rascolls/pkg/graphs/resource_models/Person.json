@@ -25,7 +25,7 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Person Name"
+                        "en": "Name"
                     },
                     "nodegroup_id": "e1d0f244-d770-11ef-8c40-0275dc2ded29",
                     "sortorder": 0,
@@ -54,7 +54,7 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Person Identifier"
+                        "en": "Identifier"
                     },
                     "nodegroup_id": "e1d0fea6-d770-11ef-8c40-0275dc2ded29",
                     "sortorder": 1,
@@ -83,7 +83,7 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Group Person is Member of"
+                        "en": "Group Membership"
                     },
                     "nodegroup_id": "e1d13f2e-d770-11ef-8c40-0275dc2ded29",
                     "sortorder": 3,
@@ -112,7 +112,7 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Person Label"
+                        "en": "Label"
                     },
                     "nodegroup_id": "e1d14eb0-d770-11ef-8c40-0275dc2ded29",
                     "sortorder": 11,
@@ -141,7 +141,7 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Person External URI"
+                        "en": "External URI"
                     },
                     "nodegroup_id": "e1d15388-d770-11ef-8c40-0275dc2ded29",
                     "sortorder": 2,
@@ -170,12 +170,12 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Professional Activity of Person"
+                        "en": "Professional Activity"
                     },
                     "nodegroup_id": "e1d15860-d770-11ef-8c40-0275dc2ded29",
                     "sortorder": 9,
                     "source_identifier_id": null,
-                    "visible": true
+                    "visible": false
                 },
                 {
                     "active": true,
@@ -197,7 +197,7 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Digital Reference to Person"
+                        "en": "Digital Reference"
                     },
                     "nodegroup_id": "e1d15d74-d770-11ef-8c40-0275dc2ded29",
                     "sortorder": 10,
@@ -284,7 +284,7 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Person Contact Information"
+                        "en": "Contact Information"
                     },
                     "nodegroup_id": "e1d19dac-d770-11ef-8c40-0275dc2ded29",
                     "sortorder": 4,
@@ -313,7 +313,7 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Person Ethnicity"
+                        "en": "Ethnicity"
                     },
                     "nodegroup_id": "e1d1a252-d770-11ef-8c40-0275dc2ded29",
                     "sortorder": 6,
@@ -342,12 +342,12 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Person Name Part"
+                        "en": "Name Part"
                     },
                     "nodegroup_id": "e1d1a70c-d770-11ef-8c40-0275dc2ded29",
                     "sortorder": null,
                     "source_identifier_id": null,
-                    "visible": true
+                    "visible": false
                 },
                 {
                     "active": true,
@@ -371,7 +371,7 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Statement about Person"
+                        "en": "Statement"
                     },
                     "nodegroup_id": "e1d1aba8-d770-11ef-8c40-0275dc2ded29",
                     "sortorder": 8,
@@ -400,7 +400,7 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Person Nationality"
+                        "en": "Nationality"
                     },
                     "nodegroup_id": "e1d1b058-d770-11ef-8c40-0275dc2ded29",
                     "sortorder": 5,
@@ -432,12 +432,12 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Person Attributes"
+                        "en": "Attributes"
                     },
                     "nodegroup_id": "e1d1ba58-d770-11ef-8c40-0275dc2ded29",
                     "sortorder": 7,
                     "source_identifier_id": null,
-                    "visible": true
+                    "visible": false
                 }
             ],
             "cards_x_nodes_x_widgets": [
@@ -569,7 +569,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Person Name Part",
+                        "label": "Name Part",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -579,7 +579,7 @@
                     },
                     "id": "e1d2742a-d770-11ef-8c40-0275dc2ded29",
                     "label": {
-                        "en": "Person Name Part"
+                        "en": "Name Part"
                     },
                     "node_id": "e1d221aa-d770-11ef-8c40-0275dc2ded29",
                     "sortorder": 0,
@@ -730,7 +730,7 @@
                     "node_id": "e1d1cb88-d770-11ef-8c40-0275dc2ded29",
                     "sortorder": 2,
                     "source_identifier_id": null,
-                    "visible": true,
+                    "visible": false,
                     "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
                 },
                 {
@@ -745,7 +745,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Person Name",
+                        "label": "Name",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -755,7 +755,7 @@
                     },
                     "id": "e1d276be-d770-11ef-8c40-0275dc2ded29",
                     "label": {
-                        "en": "Person Name"
+                        "en": "Name"
                     },
                     "node_id": "e1d1ddda-d770-11ef-8c40-0275dc2ded29",
                     "sortorder": 0,
@@ -1057,7 +1057,7 @@
                     "node_id": "e1d25a62-d770-11ef-8c40-0275dc2ded29",
                     "sortorder": 3,
                     "source_identifier_id": null,
-                    "visible": true,
+                    "visible": false,
                     "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
                 },
                 {
@@ -1102,7 +1102,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Statement about Person",
+                        "label": "Statement",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -1112,7 +1112,7 @@
                     },
                     "id": "e1d296c6-d770-11ef-8c40-0275dc2ded29",
                     "label": {
-                        "en": "Statement about Person"
+                        "en": "Statement"
                     },
                     "node_id": "e1d20ecc-d770-11ef-8c40-0275dc2ded29",
                     "sortorder": 0,
@@ -1181,7 +1181,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Person Contact Information",
+                        "label": "Contact Information",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -1191,7 +1191,7 @@
                     },
                     "id": "e1d2a634-d770-11ef-8c40-0275dc2ded29",
                     "label": {
-                        "en": "Person Contact Information"
+                        "en": "Contact Information"
                     },
                     "node_id": "e1d200f8-d770-11ef-8c40-0275dc2ded29",
                     "sortorder": 0,
@@ -1359,7 +1359,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Person Identifier",
+                        "label": "Identifier",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -1369,7 +1369,7 @@
                     },
                     "id": "e1d2ad5a-d770-11ef-8c40-0275dc2ded29",
                     "label": {
-                        "en": "Person Identifier"
+                        "en": "Identifier"
                     },
                     "node_id": "e1d24158-d770-11ef-8c40-0275dc2ded29",
                     "sortorder": 0,
@@ -1441,7 +1441,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Person External URI",
+                        "label": "External URI",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -1451,7 +1451,7 @@
                     },
                     "id": "e1d2b804-d770-11ef-8c40-0275dc2ded29",
                     "label": {
-                        "en": "Person External URI"
+                        "en": "External URI"
                     },
                     "node_id": "e1d15388-d770-11ef-8c40-0275dc2ded29",
                     "sortorder": 0,
@@ -1466,14 +1466,14 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Group Person is Member of",
+                        "label": "Group is Member of",
                         "placeholder": {
                             "en": ""
                         }
                     },
                     "id": "e1d2b890-d770-11ef-8c40-0275dc2ded29",
                     "label": {
-                        "en": "Group Person is Member of"
+                        "en": "Group is Member of"
                     },
                     "node_id": "e1d13f2e-d770-11ef-8c40-0275dc2ded29",
                     "sortorder": 0,
@@ -1488,19 +1488,19 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Person Gender",
+                        "label": "Gender",
                         "placeholder": {
                             "en": "Select an option"
                         }
                     },
                     "id": "e1d2c0c4-d770-11ef-8c40-0275dc2ded29",
                     "label": {
-                        "en": "Person Gender"
+                        "en": "Gender"
                     },
                     "node_id": "e1d1ba58-d770-11ef-8c40-0275dc2ded29",
                     "sortorder": 0,
                     "source_identifier_id": null,
-                    "visible": true,
+                    "visible": false,
                     "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
                 },
                 {
@@ -1568,14 +1568,14 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Person Nationality",
+                        "label": "Nationality",
                         "placeholder": {
                             "en": "Select an option"
                         }
                     },
                     "id": "e1d2c362-d770-11ef-8c40-0275dc2ded29",
                     "label": {
-                        "en": "Person Nationality"
+                        "en": "Nationality"
                     },
                     "node_id": "e1d1b058-d770-11ef-8c40-0275dc2ded29",
                     "sortorder": 0,
@@ -1634,14 +1634,14 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Person Ethnicity",
+                        "label": "Ethnicity",
                         "placeholder": {
                             "en": "Select an option"
                         }
                     },
                     "id": "e1d2c4fc-d770-11ef-8c40-0275dc2ded29",
                     "label": {
-                        "en": "Person Ethnicity"
+                        "en": "Ethnicity"
                     },
                     "node_id": "e1d1a252-d770-11ef-8c40-0275dc2ded29",
                     "sortorder": 0,
@@ -1774,14 +1774,14 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Professional Activity Type",
+                        "label": "Professional Activity",
                         "placeholder": {
                             "en": "Select an option"
                         }
                     },
                     "id": "e1d2cd30-d770-11ef-8c40-0275dc2ded29",
                     "label": {
-                        "en": "Professional Activity Type"
+                        "en": "Professional Activity"
                     },
                     "node_id": "e1d21408-d770-11ef-8c40-0275dc2ded29",
                     "sortorder": 0,
@@ -1823,7 +1823,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Person Label",
+                        "label": "Label",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -1833,7 +1833,7 @@
                     },
                     "id": "e1d2ce3e-d770-11ef-8c40-0275dc2ded29",
                     "label": {
-                        "en": "Person Label"
+                        "en": "Label"
                     },
                     "node_id": "e1d14eb0-d770-11ef-8c40-0275dc2ded29",
                     "sortorder": 0,
@@ -2498,7 +2498,7 @@
             },
             "nodegroups": [
                 {
-                    "cardinality": "1",
+                    "cardinality": "n",
                     "grouping_node_id": "e1d0f244-d770-11ef-8c40-0275dc2ded29",
                     "legacygroupid": null,
                     "nodegroupid": "e1d0f244-d770-11ef-8c40-0275dc2ded29",
@@ -2512,7 +2512,7 @@
                     "parentnodegroup_id": null
                 },
                 {
-                    "cardinality": "1",
+                    "cardinality": "n",
                     "grouping_node_id": "e1d13f2e-d770-11ef-8c40-0275dc2ded29",
                     "legacygroupid": null,
                     "nodegroupid": "e1d13f2e-d770-11ef-8c40-0275dc2ded29",
@@ -2526,21 +2526,21 @@
                     "parentnodegroup_id": null
                 },
                 {
-                    "cardinality": "1",
+                    "cardinality": "n",
                     "grouping_node_id": "e1d15388-d770-11ef-8c40-0275dc2ded29",
                     "legacygroupid": null,
                     "nodegroupid": "e1d15388-d770-11ef-8c40-0275dc2ded29",
                     "parentnodegroup_id": null
                 },
                 {
-                    "cardinality": "1",
+                    "cardinality": "n",
                     "grouping_node_id": "e1d15860-d770-11ef-8c40-0275dc2ded29",
                     "legacygroupid": null,
                     "nodegroupid": "e1d15860-d770-11ef-8c40-0275dc2ded29",
                     "parentnodegroup_id": null
                 },
                 {
-                    "cardinality": "1",
+                    "cardinality": "n",
                     "grouping_node_id": "e1d15d74-d770-11ef-8c40-0275dc2ded29",
                     "legacygroupid": null,
                     "nodegroupid": "e1d15d74-d770-11ef-8c40-0275dc2ded29",
@@ -2582,7 +2582,7 @@
                     "parentnodegroup_id": "e1d0f244-d770-11ef-8c40-0275dc2ded29"
                 },
                 {
-                    "cardinality": "1",
+                    "cardinality": "n",
                     "grouping_node_id": "e1d1aba8-d770-11ef-8c40-0275dc2ded29",
                     "legacygroupid": null,
                     "nodegroupid": "e1d1aba8-d770-11ef-8c40-0275dc2ded29",
@@ -4174,9 +4174,9 @@
             "publication": {
                 "graph_id": "e1d0ea1a-d770-11ef-8c40-0275dc2ded29",
                 "most_recent_edit_id": null,
-                "notes": "Part 3",
-                "publicationid": "de62cd07-cc5a-4b42-a9ee-8c11618969ab",
-                "published_time": "2026-07-10T10:50:42.628"
+                "notes": null,
+                "publicationid": "3d28b9c3-edbc-4628-9ab8-c8811482a952",
+                "published_time": "2026-10-14T13:38:13.459"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -4278,6 +4278,6 @@
         "db": "PostgreSQL 16.13 on aarch64-unknown-linux-gnu, compiled by aarch64-unknown-linux-gnu-gcc (GCC) 12.4.0, 64-bit",
         "git hash": "fatal: not a git repository (or any of the parent directories): .git",
         "os": "Linux",
-        "os version": "6.1.174"
+        "os version": "6.1.186"
     }
 }

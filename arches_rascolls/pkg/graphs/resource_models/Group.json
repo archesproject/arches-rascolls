@@ -25,12 +25,12 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Professional Activity Group Known For"
+                        "en": "Professional Activity Known For"
                     },
                     "nodegroup_id": "369574ae-d770-11ef-8f5d-0275dc2ded29",
                     "sortorder": 8,
                     "source_identifier_id": null,
-                    "visible": true
+                    "visible": false
                 },
                 {
                     "active": true,
@@ -81,7 +81,7 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Digital Reference to Group"
+                        "en": "Digital Reference"
                     },
                     "nodegroup_id": "36957c88-d770-11ef-8f5d-0275dc2ded29",
                     "sortorder": 9,
@@ -110,7 +110,7 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Group External URI"
+                        "en": "External URI"
                     },
                     "nodegroup_id": "36958048-d770-11ef-8f5d-0275dc2ded29",
                     "sortorder": 2,
@@ -139,7 +139,7 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Group Residence or Associated Location"
+                        "en": "Residence or Associated Location"
                     },
                     "nodegroup_id": "36958d18-d770-11ef-8f5d-0275dc2ded29",
                     "sortorder": 5,
@@ -168,7 +168,7 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Group Type"
+                        "en": "Type"
                     },
                     "nodegroup_id": "369590ec-d770-11ef-8f5d-0275dc2ded29",
                     "sortorder": 3,
@@ -197,7 +197,7 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Group Identifier"
+                        "en": "Identifier"
                     },
                     "nodegroup_id": "369594b6-d770-11ef-8f5d-0275dc2ded29",
                     "sortorder": 1,
@@ -226,7 +226,7 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Statement about Group"
+                        "en": "Statement"
                     },
                     "nodegroup_id": "3695a01e-d770-11ef-8f5d-0275dc2ded29",
                     "sortorder": 7,
@@ -284,7 +284,7 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Group Address or Contact Point"
+                        "en": "Address or Contact Point"
                     },
                     "nodegroup_id": "3695bdce-d770-11ef-8f5d-0275dc2ded29",
                     "sortorder": 6,
@@ -342,7 +342,7 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Group Name"
+                        "en": "Name"
                     },
                     "nodegroup_id": "3695cff8-d770-11ef-8f5d-0275dc2ded29",
                     "sortorder": 0,
@@ -449,7 +449,7 @@
                     "node_id": "36962ade-d770-11ef-8f5d-0275dc2ded29",
                     "sortorder": 3,
                     "source_identifier_id": null,
-                    "visible": true,
+                    "visible": false,
                     "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
                 },
                 {
@@ -520,7 +520,7 @@
                     "node_id": "369624f8-d770-11ef-8f5d-0275dc2ded29",
                     "sortorder": 1,
                     "source_identifier_id": null,
-                    "visible": true,
+                    "visible": false,
                     "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
                 },
                 {
@@ -669,7 +669,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Group Name",
+                        "label": "Name",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -679,7 +679,7 @@
                     },
                     "id": "36964316-d770-11ef-8f5d-0275dc2ded29",
                     "label": {
-                        "en": "Group Name"
+                        "en": "Name"
                     },
                     "node_id": "3696194a-d770-11ef-8f5d-0275dc2ded29",
                     "sortorder": 0,
@@ -734,7 +734,7 @@
                     "node_id": "3696269c-d770-11ef-8f5d-0275dc2ded29",
                     "sortorder": 2,
                     "source_identifier_id": null,
-                    "visible": true,
+                    "visible": false,
                     "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
                 },
                 {
@@ -810,14 +810,14 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Group Type",
+                        "label": "Type",
                         "placeholder": {
                             "en": "Select an option"
                         }
                     },
                     "id": "36964c4e-d770-11ef-8f5d-0275dc2ded29",
                     "label": {
-                        "en": "Group Type"
+                        "en": "Type"
                     },
                     "node_id": "369590ec-d770-11ef-8f5d-0275dc2ded29",
                     "sortorder": null,
@@ -924,7 +924,7 @@
                     "node_id": "3695f140-d770-11ef-8f5d-0275dc2ded29",
                     "sortorder": 3,
                     "source_identifier_id": null,
-                    "visible": true,
+                    "visible": false,
                     "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
                 },
                 {
@@ -988,7 +988,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Statement about Group",
+                        "label": "Statement",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -998,7 +998,7 @@
                     },
                     "id": "36964ff0-d770-11ef-8f5d-0275dc2ded29",
                     "label": {
-                        "en": "Statement about Group"
+                        "en": "Statement"
                     },
                     "node_id": "3695eed4-d770-11ef-8f5d-0275dc2ded29",
                     "sortorder": 0,
@@ -1114,7 +1114,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Group Address or Contact Point",
+                        "label": "Address or Contact Point",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -1124,7 +1124,7 @@
                     },
                     "id": "36965568-d770-11ef-8f5d-0275dc2ded29",
                     "label": {
-                        "en": "Group Address or Contact Point"
+                        "en": "Address or Contact Point"
                     },
                     "node_id": "3695f550-d770-11ef-8f5d-0275dc2ded29",
                     "sortorder": 0,
@@ -1218,7 +1218,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Group Identifier",
+                        "label": "Identifier",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -1228,7 +1228,7 @@
                     },
                     "id": "3696575c-d770-11ef-8f5d-0275dc2ded29",
                     "label": {
-                        "en": "Group Identifier"
+                        "en": "Identifier"
                     },
                     "node_id": "3695ebbe-d770-11ef-8f5d-0275dc2ded29",
                     "sortorder": 0,
@@ -1248,7 +1248,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Group External URI",
+                        "label": "External URI",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -1258,7 +1258,7 @@
                     },
                     "id": "369657de-d770-11ef-8f5d-0275dc2ded29",
                     "label": {
-                        "en": "Group External URI"
+                        "en": "External URI"
                     },
                     "node_id": "36958048-d770-11ef-8f5d-0275dc2ded29",
                     "sortorder": null,
@@ -1303,14 +1303,14 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Group Residence or Associated Location",
+                        "label": "Residence or Associated Location",
                         "placeholder": {
                             "en": ""
                         }
                     },
                     "id": "369659fa-d770-11ef-8f5d-0275dc2ded29",
                     "label": {
-                        "en": "Group Residence or Associated Location"
+                        "en": "Residence or Associated Location"
                     },
                     "node_id": "36958d18-d770-11ef-8f5d-0275dc2ded29",
                     "sortorder": null,
@@ -1425,7 +1425,7 @@
                     "node_id": "3695eaf6-d770-11ef-8f5d-0275dc2ded29",
                     "sortorder": 1,
                     "source_identifier_id": null,
-                    "visible": true,
+                    "visible": false,
                     "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
                 },
                 {
@@ -1477,7 +1477,7 @@
                     "node_id": "36960ef0-d770-11ef-8f5d-0275dc2ded29",
                     "sortorder": 1,
                     "source_identifier_id": null,
-                    "visible": true,
+                    "visible": false,
                     "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
                 },
                 {
@@ -2078,7 +2078,7 @@
             },
             "nodegroups": [
                 {
-                    "cardinality": "1",
+                    "cardinality": "n",
                     "grouping_node_id": "369574ae-d770-11ef-8f5d-0275dc2ded29",
                     "legacygroupid": null,
                     "nodegroupid": "369574ae-d770-11ef-8f5d-0275dc2ded29",
@@ -2092,14 +2092,14 @@
                     "parentnodegroup_id": null
                 },
                 {
-                    "cardinality": "1",
+                    "cardinality": "n",
                     "grouping_node_id": "36957c88-d770-11ef-8f5d-0275dc2ded29",
                     "legacygroupid": null,
                     "nodegroupid": "36957c88-d770-11ef-8f5d-0275dc2ded29",
                     "parentnodegroup_id": null
                 },
                 {
-                    "cardinality": "1",
+                    "cardinality": "n",
                     "grouping_node_id": "36958048-d770-11ef-8f5d-0275dc2ded29",
                     "legacygroupid": null,
                     "nodegroupid": "36958048-d770-11ef-8f5d-0275dc2ded29",
@@ -2120,28 +2120,28 @@
                     "parentnodegroup_id": null
                 },
                 {
-                    "cardinality": "1",
+                    "cardinality": "n",
                     "grouping_node_id": "369594b6-d770-11ef-8f5d-0275dc2ded29",
                     "legacygroupid": null,
                     "nodegroupid": "369594b6-d770-11ef-8f5d-0275dc2ded29",
                     "parentnodegroup_id": null
                 },
                 {
-                    "cardinality": "1",
+                    "cardinality": "n",
                     "grouping_node_id": "3695a01e-d770-11ef-8f5d-0275dc2ded29",
                     "legacygroupid": null,
                     "nodegroupid": "3695a01e-d770-11ef-8f5d-0275dc2ded29",
                     "parentnodegroup_id": null
                 },
                 {
-                    "cardinality": "1",
+                    "cardinality": "n",
                     "grouping_node_id": "3695ae4c-d770-11ef-8f5d-0275dc2ded29",
                     "legacygroupid": null,
                     "nodegroupid": "3695ae4c-d770-11ef-8f5d-0275dc2ded29",
                     "parentnodegroup_id": null
                 },
                 {
-                    "cardinality": "1",
+                    "cardinality": "n",
                     "grouping_node_id": "3695bdce-d770-11ef-8f5d-0275dc2ded29",
                     "legacygroupid": null,
                     "nodegroupid": "3695bdce-d770-11ef-8f5d-0275dc2ded29",
@@ -2155,7 +2155,7 @@
                     "parentnodegroup_id": "369574ae-d770-11ef-8f5d-0275dc2ded29"
                 },
                 {
-                    "cardinality": "1",
+                    "cardinality": "n",
                     "grouping_node_id": "3695cff8-d770-11ef-8f5d-0275dc2ded29",
                     "legacygroupid": null,
                     "nodegroupid": "3695cff8-d770-11ef-8f5d-0275dc2ded29",
@@ -3492,9 +3492,9 @@
             "publication": {
                 "graph_id": "36956e50-d770-11ef-8f5d-0275dc2ded29",
                 "most_recent_edit_id": null,
-                "notes": "Part 5",
-                "publicationid": "c6ff0864-3261-4861-a206-a1a716ce3891",
-                "published_time": "2026-07-10T14:44:07.748"
+                "notes": null,
+                "publicationid": "63727b4d-14ff-4135-aaaf-0ecb7bcaf7f4",
+                "published_time": "2026-10-14T13:35:08.000"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -3596,6 +3596,6 @@
         "db": "PostgreSQL 16.13 on aarch64-unknown-linux-gnu, compiled by aarch64-unknown-linux-gnu-gcc (GCC) 12.4.0, 64-bit",
         "git hash": "fatal: not a git repository (or any of the parent directories): .git",
         "os": "Linux",
-        "os version": "6.1.174"
+        "os version": "6.1.186"
     }
 }
