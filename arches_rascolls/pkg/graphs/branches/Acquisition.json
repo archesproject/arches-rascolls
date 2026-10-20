@@ -130,6 +130,7 @@
                         "maxDate": false,
                         "minDate": false,
                         "placeholder": "Enter date",
+                        "uneditable": false,
                         "viewMode": "days"
                     },
                     "id": "06e92293-3cc0-443b-8861-167330c4ada4",
@@ -152,7 +153,8 @@
                         "label": "Object that Changed Ownership",
                         "placeholder": {
                             "en": ""
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "1dbf6964-5928-4687-b8cf-b7abe232f074",
                     "label": {
@@ -173,6 +175,7 @@
                         "maxDate": false,
                         "minDate": false,
                         "placeholder": "Enter date",
+                        "uneditable": false,
                         "viewMode": "days"
                     },
                     "id": "211b3c1e-7c0b-4770-a2d5-ae8287b8683f",
@@ -225,7 +228,8 @@
                         "label": "Statement Type Metatype",
                         "placeholder": {
                             "en": "Select an option"
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "23b05d56-40f3-4bbe-b67d-a346751709ec",
                     "label": {
@@ -246,6 +250,7 @@
                         "maxDate": false,
                         "minDate": false,
                         "placeholder": "Enter date",
+                        "uneditable": false,
                         "viewMode": "days"
                     },
                     "id": "241ec623-2fc8-4e19-b404-38de709423e3",
@@ -296,7 +301,8 @@
                         "label": "Language of Text",
                         "placeholder": {
                             "en": "Select an option"
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "28f79032-cc49-4e79-a39c-47dcfc906d50",
                     "label": {
@@ -348,7 +354,8 @@
                         "label": "Person relinquishing (or ceding) Ownership",
                         "placeholder": {
                             "en": ""
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "425e1158-3334-4637-8a7f-e7cf45aff545",
                     "label": {
@@ -370,7 +377,8 @@
                         "label": "Source Reference Work for Statement",
                         "placeholder": {
                             "en": ""
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "46a56e83-259f-4a58-9f3e-69a3314a5b14",
                     "label": {
@@ -392,7 +400,8 @@
                         "label": "Type of Name",
                         "placeholder": {
                             "en": "Select an option"
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "48fd9ce8-d2f5-4e27-abac-aab6d3550546",
                     "label": {
@@ -442,7 +451,8 @@
                         "label": "Language of Text",
                         "placeholder": {
                             "en": "Select an option"
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "4a64d229-ce85-45a3-be7b-a3715046b1d2",
                     "label": {
@@ -494,7 +504,8 @@
                         "label": "Type of Acquisition",
                         "placeholder": {
                             "en": "Select an option"
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "73b1a570-e2c5-4cfb-8f6e-ec296c95767e",
                     "label": {
@@ -576,7 +587,8 @@
                         "label": "Timespan Type",
                         "placeholder": {
                             "en": "Select an option"
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "a2a522a4-77e8-4f8e-a063-99b85c8fda78",
                     "label": {
@@ -598,7 +610,8 @@
                         "label": "Location of Acquisition",
                         "placeholder": {
                             "en": ""
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "aabf4c18-cb53-4cbb-a1c9-b6b16d6f0016",
                     "label": {
@@ -620,7 +633,8 @@
                         "label": "Person(s) / Group(s) Involved in Transfer",
                         "placeholder": {
                             "en": ""
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "ab671e36-10b3-4f8b-a575-dc8030e533de",
                     "label": {
@@ -642,7 +656,8 @@
                         "label": "Source Reference Work ",
                         "placeholder": {
                             "en": ""
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "baaf9274-2cb2-4b06-87c8-2da8645be1fb",
                     "label": {
@@ -694,7 +709,8 @@
                         "label": "Source Reference Work for Name",
                         "placeholder": {
                             "en": ""
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "e378589e-e549-4e78-bf5c-066f8aa81613",
                     "label": {
@@ -715,6 +731,7 @@
                         "maxDate": false,
                         "minDate": false,
                         "placeholder": "Enter date",
+                        "uneditable": false,
                         "viewMode": "days"
                     },
                     "id": "eac86fd3-fdfd-40e1-a54e-0d34767cddb4",
@@ -737,7 +754,8 @@
                         "label": "Person taking Ownership",
                         "placeholder": {
                             "en": ""
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "f38d7565-6a35-4eeb-8f06-d1653db89a56",
                     "label": {
@@ -773,7 +791,8 @@
                         "label": "Type of Statement",
                         "placeholder": {
                             "en": "Select an option"
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "f9442712-6663-4597-beeb-847bc1376b33",
                     "label": {
@@ -1154,11 +1173,11 @@
                         "graphs": [
                             {
                                 "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
-                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "inverseRelationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "name": "Textual Work",
+                                "relationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
-                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
-                                "useOntologyRelationship": false
+                                "relationshipSource": "reference"
                             }
                         ],
                         "searchDsl": "",
@@ -1190,19 +1209,19 @@
                         "graphs": [
                             {
                                 "graphid": "e1d0ea1a-d770-11ef-8c40-0275dc2ded29",
-                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "inverseRelationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "name": "Person",
+                                "relationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
-                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
-                                "useOntologyRelationship": false
+                                "relationshipSource": "reference"
                             },
                             {
                                 "graphid": "36956e50-d770-11ef-8f5d-0275dc2ded29",
-                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "inverseRelationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "name": "Group",
+                                "relationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
-                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
-                                "useOntologyRelationship": false
+                                "relationshipSource": "reference"
                             }
                         ],
                         "searchDsl": "",
@@ -1397,7 +1416,7 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "_label_n5",
+                    "alias": "label_n5",
                     "config": {},
                     "datatype": "string",
                     "description": "# Specific:\n\n\n# General:\nEvery node should have a _label that provides a human-readable summary label for the node. This is intended not for end users, but for developers looking at the data. See:  https://linked.art/model/base/#core-properties\n\n# Arches Note:\n\n\n* BranchId: la-label\n* FieldId: \n",
@@ -1425,11 +1444,11 @@
                         "graphs": [
                             {
                                 "graphid": "3dda9f54-d771-11ef-825b-0275dc2ded29",
-                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "inverseRelationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "name": "Place",
+                                "relationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
-                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
-                                "useOntologyRelationship": false
+                                "relationshipSource": "reference"
                             }
                         ],
                         "searchDsl": "",
@@ -1512,19 +1531,19 @@
                         "graphs": [
                             {
                                 "graphid": "36956e50-d770-11ef-8f5d-0275dc2ded29",
-                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "inverseRelationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "name": "Group",
+                                "relationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
-                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
-                                "useOntologyRelationship": false
+                                "relationshipSource": "reference"
                             },
                             {
                                 "graphid": "e1d0ea1a-d770-11ef-8c40-0275dc2ded29",
-                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "inverseRelationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "name": "Person",
+                                "relationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
-                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
-                                "useOntologyRelationship": false
+                                "relationshipSource": "reference"
                             }
                         ],
                         "searchDsl": "",
@@ -1600,7 +1619,7 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "_label_n6",
+                    "alias": "label_n6",
                     "config": {},
                     "datatype": "string",
                     "description": "# Specific:\n\n\n# General:\nEvery node should have a _label that provides a human-readable summary label for the node. This is intended not for end users, but for developers looking at the data. See:  https://linked.art/model/base/#core-properties\n\n# Arches Note:\n\n\n* BranchId: la-label\n* FieldId: \n",
@@ -1674,7 +1693,7 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "_label_n35",
+                    "alias": "label_n35",
                     "config": {},
                     "datatype": "string",
                     "description": "# Specific:\n\n\n# General:\nEvery node should have a _label that provides a human-readable summary label for the node. This is intended not for end users, but for developers looking at the data. See:  https://linked.art/model/base/#core-properties\n\n# Arches Note:\n\n\n* BranchId: la-label\n* FieldId: \n",
@@ -1697,7 +1716,7 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "_label_n27",
+                    "alias": "label_n27",
                     "config": {},
                     "datatype": "string",
                     "description": "# Specific:\n\n\n# General:\nEvery node should have a _label that provides a human-readable summary label for the node. This is intended not for end users, but for developers looking at the data. See:  https://linked.art/model/base/#core-properties\n\n# Arches Note:\n\n\n* BranchId: la-label\n* FieldId: \n",
@@ -1725,11 +1744,11 @@
                         "graphs": [
                             {
                                 "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
-                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "inverseRelationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "name": "Textual Work",
+                                "relationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
-                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
-                                "useOntologyRelationship": false
+                                "relationshipSource": "reference"
                             }
                         ],
                         "searchDsl": "",
@@ -1761,11 +1780,11 @@
                         "graphs": [
                             {
                                 "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
-                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "inverseRelationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "name": "Textual Work",
+                                "relationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
-                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
-                                "useOntologyRelationship": false
+                                "relationshipSource": "reference"
                             }
                         ],
                         "searchDsl": "",
@@ -1797,11 +1816,11 @@
                         "graphs": [
                             {
                                 "graphid": "bda239c6-d376-11ef-a239-0275dc2ded29",
-                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "inverseRelationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "name": "Reference and Sample Collection Item",
+                                "relationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
-                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
-                                "useOntologyRelationship": false
+                                "relationshipSource": "reference"
                             }
                         ],
                         "searchDsl": "",
@@ -1885,19 +1904,19 @@
                         "graphs": [
                             {
                                 "graphid": "e1d0ea1a-d770-11ef-8c40-0275dc2ded29",
-                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "inverseRelationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "name": "Person",
+                                "relationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
-                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
-                                "useOntologyRelationship": false
+                                "relationshipSource": "reference"
                             },
                             {
                                 "graphid": "36956e50-d770-11ef-8f5d-0275dc2ded29",
-                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "inverseRelationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "name": "Group",
+                                "relationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
-                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
-                                "useOntologyRelationship": false
+                                "relationshipSource": "reference"
                             }
                         ],
                         "searchDsl": "",
@@ -2018,11 +2037,5 @@
             "user_permissions": {},
             "version": ""
         }
-    ],
-    "metadata": {
-        "db": "PostgreSQL 16.13 on aarch64-unknown-linux-gnu, compiled by aarch64-unknown-linux-gnu-gcc (GCC) 12.4.0, 64-bit",
-        "git hash": "fatal: not a git repository (or any of the parent directories): .git",
-        "os": "Linux",
-        "os version": "6.17.0-1017-aws"
-    }
+    ]
 }

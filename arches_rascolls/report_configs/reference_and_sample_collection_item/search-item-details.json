@@ -45,7 +45,7 @@
                                     "has_write_permission": false,
                                     "filters": [
                                         {
-                                            "alias": "name_type_",
+                                            "alias": "name_type",
                                             "value": [
                                                 {
                                                     "labels": [
@@ -66,7 +66,7 @@
                                     "nodegroup_alias": "name",
                                     "node_aliases": [
                                         "name_content",
-                                        "name_type_"
+                                        "name_type"
                                     ],
                                     "custom_labels": {},
                                     "custom_card_name": "Additional Names",
@@ -280,7 +280,7 @@
                             {
                                 "component": "arches_rascolls/Search/components/DataSection",
                                 "config": {
-                                    "nodegroup_alias": "production_",
+                                    "nodegroup_alias": "production",
                                     "node_aliases": ["production_location"],
                                     "custom_labels": {
                                         "production_location": "Geographic Origin"
@@ -306,7 +306,7 @@
                             {
                                 "component": "arches_rascolls/Search/components/DataSection",
                                 "config": {
-                                    "nodegroup_alias": "production_",
+                                    "nodegroup_alias": "production",
                                     "node_aliases": [
                                         "production_carried_out_by"
                                     ],

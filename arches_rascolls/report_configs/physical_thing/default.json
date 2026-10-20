@@ -44,8 +44,8 @@
                                                     "config": {
                                                         "node_aliases": [
                                                             "name_content",
-                                                            "name_type_",
-                                                            "name_language_"
+                                                            "name_type",
+                                                            "name_language"
                                                         ],
                                                         "custom_labels": {},
                                                         "nodegroup_alias": "name",
@@ -63,7 +63,7 @@
                                                         "node_aliases": [
                                                             "statement_content",
                                                             "statement_type",
-                                                            "statement_language_"
+                                                            "statement_language"
                                                         ],
                                                         "custom_labels": {},
                                                         "nodegroup_alias": "statement",
@@ -112,8 +112,8 @@
                                                 {
                                                     "config": {
                                                         "node_aliases": [
-                                                            "dimension_type_",
-                                                            "dimension_value_",
+                                                            "dimension_type",
+                                                            "dimension_value",
                                                             "dimension_unit",
                                                             "dimension_statement_content"
                                                         ],
@@ -163,10 +163,10 @@
                                                 {
                                                     "config": {
                                                         "node_aliases": [
-                                                            "_label"
+                                                            "label"
                                                         ],
                                                         "custom_labels": {},
-                                                        "nodegroup_alias": "_label",
+                                                        "nodegroup_alias": "label",
                                                         "custom_card_name": null
                                                     },
                                                     "component": "arches_modular_reports/ModularReport/components/DataSection"
@@ -218,7 +218,7 @@
                                                             "production_technique"
                                                         ],
                                                         "custom_labels": {},
-                                                        "nodegroup_alias": "production_",
+                                                        "nodegroup_alias": "production",
                                                         "custom_card_name": null
                                                     },
                                                     "component": "arches_modular_reports/ModularReport/components/DataSection"

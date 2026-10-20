@@ -530,7 +530,8 @@
                         "label": "Type of Name",
                         "placeholder": {
                             "en": "Select an option"
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "0b427843-6805-473c-92ee-1b2cb7f61cd8",
                     "label": {
@@ -580,7 +581,8 @@
                         "label": "Language of Text",
                         "placeholder": {
                             "en": "Select an option"
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "0c90d8fd-8cd4-468e-a708-82ce2e615875",
                     "label": {
@@ -722,7 +724,8 @@
                         "label": "Material(s)",
                         "placeholder": {
                             "en": "Select an option"
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "22e86b5e-3cf8-45a6-bbf5-254f72c11a18",
                     "label": {
@@ -744,7 +747,8 @@
                         "label": "chemical_material_identifier_source ",
                         "placeholder": {
                             "en": ""
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "23b2cd93-95fa-4cdc-b2f8-9a940f7b062a",
                     "label": {
@@ -856,7 +860,8 @@
                         "label": "Source Reference Work for Name",
                         "placeholder": {
                             "en": ""
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "286836de-f0c1-4105-9de7-6bc542f406f0",
                     "label": {
@@ -877,6 +882,7 @@
                         "maxDate": false,
                         "minDate": false,
                         "placeholder": "Enter date",
+                        "uneditable": false,
                         "viewMode": "days"
                     },
                     "id": "2f1c137a-0a75-46a4-ac1b-183dd8fab694",
@@ -928,7 +934,8 @@
                         "label": "chemical_material_type",
                         "placeholder": {
                             "en": "Select an option"
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "32586881-0c30-48b5-a1d9-6985c75c1116",
                     "label": {
@@ -950,7 +957,8 @@
                         "label": "chemical_material_name_source ",
                         "placeholder": {
                             "en": ""
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "36939444-5ddc-49e5-9ac9-e7675566d463",
                     "label": {
@@ -972,7 +980,8 @@
                         "label": "Assigner",
                         "placeholder": {
                             "en": ""
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "3e5481af-fdd1-4810-9d6b-b67372e75330",
                     "label": {
@@ -1024,7 +1033,8 @@
                         "label": "Timespan Type",
                         "placeholder": {
                             "en": "Select an option"
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "4722579f-67dc-4c21-9a62-0212cf6220b0",
                     "label": {
@@ -1074,7 +1084,8 @@
                         "label": "Language of Text",
                         "placeholder": {
                             "en": "Select an option"
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "4c38018e-9af8-4ab5-8a66-0e08c2cb7ebe",
                     "label": {
@@ -1110,7 +1121,8 @@
                         "label": "chemical_material_name_type ",
                         "placeholder": {
                             "en": "Select an option"
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "4e78ce23-9952-468c-b631-751c014e3f2b",
                     "label": {
@@ -1132,7 +1144,8 @@
                         "label": "Source Reference Work for Name",
                         "placeholder": {
                             "en": ""
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "56a7699e-a03d-4005-a570-edb9466f5f93",
                     "label": {
@@ -1182,7 +1195,8 @@
                         "label": "Language of Text",
                         "placeholder": {
                             "en": "Select an option"
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "588eb153-b15d-4d6a-8cbb-bb0d68cd4066",
                     "label": {
@@ -1204,7 +1218,8 @@
                         "label": "Identifier Data Assignment Assigner",
                         "placeholder": {
                             "en": ""
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "590d6043-9230-4b01-a0a2-096fc6f8311d",
                     "label": {
@@ -1256,7 +1271,8 @@
                         "label": "Source Reference Work for Name",
                         "placeholder": {
                             "en": ""
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "60416916-6259-4011-96c0-0a8bbf17b1bb",
                     "label": {
@@ -1308,7 +1324,8 @@
                         "label": "Type of Name",
                         "placeholder": {
                             "en": "Select an option"
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "67f1ea0e-01eb-4d21-b104-d35831c5c662",
                     "label": {
@@ -1330,7 +1347,8 @@
                         "label": "Type of Name",
                         "placeholder": {
                             "en": "Select an option"
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "6ca74d76-3c16-4c4d-8bb9-2e47fc65559f",
                     "label": {
@@ -1380,7 +1398,8 @@
                         "label": "Language of Text",
                         "placeholder": {
                             "en": "Select an option"
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "75ca7b56-250c-4dc1-b76d-99bedf5c1ad2",
                     "label": {
@@ -1430,7 +1449,8 @@
                         "label": "Language of Text",
                         "placeholder": {
                             "en": "Select an option"
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "78e4ba94-1182-4059-ba2e-48c072f7757a",
                     "label": {
@@ -1496,7 +1516,8 @@
                         "label": "Statement Type Metatype",
                         "placeholder": {
                             "en": "Select an option"
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "81732ff5-49e2-465a-baef-0b782391680e",
                     "label": {
@@ -1546,7 +1567,8 @@
                         "label": "Language of Text",
                         "placeholder": {
                             "en": "Select an option"
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "8606d3e0-ec82-4365-8e68-6006ed9cc1ee",
                     "label": {
@@ -1626,7 +1648,8 @@
                         "label": "Language of Text",
                         "placeholder": {
                             "en": "Select an option"
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "89bd7769-63b8-446d-957f-3f5e8a40ee54",
                     "label": {
@@ -1647,7 +1670,8 @@
                         "label": "chemical_material_name_language ",
                         "placeholder": {
                             "en": "Select an option"
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "8aeba28f-2536-4e06-90ce-7160c745a851",
                     "label": {
@@ -1698,6 +1722,7 @@
                         "maxDate": false,
                         "minDate": false,
                         "placeholder": "Enter date",
+                        "uneditable": false,
                         "viewMode": "days"
                     },
                     "id": "946ac718-a710-446c-bedf-093b0913464d",
@@ -1749,6 +1774,7 @@
                         "maxDate": false,
                         "minDate": false,
                         "placeholder": "Enter date",
+                        "uneditable": false,
                         "viewMode": "days"
                     },
                     "id": "9c548a9e-c7ae-48b3-9c96-ecc84e54cf49",
@@ -1830,6 +1856,7 @@
                         "maxDate": false,
                         "minDate": false,
                         "placeholder": "Enter date",
+                        "uneditable": false,
                         "viewMode": "days"
                     },
                     "id": "a4e73c1f-a422-4ee8-863e-2f36909231e8",
@@ -1851,6 +1878,7 @@
                         "maxDate": false,
                         "minDate": false,
                         "placeholder": "Enter date",
+                        "uneditable": false,
                         "viewMode": "days"
                     },
                     "id": "a5787c5c-14c1-4c57-97b2-198c1946d95a",
@@ -1873,7 +1901,8 @@
                         "label": "Source Reference Work for Name",
                         "placeholder": {
                             "en": ""
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "a6a6ed5a-6fb6-4bd8-91c5-37a705de4bef",
                     "label": {
@@ -1894,7 +1923,8 @@
                         "label": "Elements Found",
                         "placeholder": {
                             "en": "Select an option"
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "a6f6b108-c0fe-4522-b446-f7a4733319e0",
                     "label": {
@@ -1916,7 +1946,8 @@
                         "label": "Classification",
                         "placeholder": {
                             "en": "Select an option"
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "a74ba722-443a-4905-a7a6-e96ea9505486",
                     "label": {
@@ -1937,6 +1968,7 @@
                         "maxDate": false,
                         "minDate": false,
                         "placeholder": "Enter date",
+                        "uneditable": false,
                         "viewMode": "days"
                     },
                     "id": "a7b1a30e-1ea9-4504-9672-0db965d3f460",
@@ -1959,7 +1991,8 @@
                         "label": "Assigner",
                         "placeholder": {
                             "en": ""
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "a7ed30b6-598e-41d0-b57f-648544311e93",
                     "label": {
@@ -1981,7 +2014,8 @@
                         "label": "Timespan Type",
                         "placeholder": {
                             "en": "Select an option"
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "a8113dbc-3d00-4daa-9f87-d2ecd90c5974",
                     "label": {
@@ -2033,7 +2067,8 @@
                         "label": "Elements",
                         "placeholder": {
                             "en": "Select an option"
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "a96a900f-eb3f-4a12-b5a0-af170ac0d6d1",
                     "label": {
@@ -2054,6 +2089,7 @@
                         "maxDate": false,
                         "minDate": false,
                         "placeholder": "Enter date",
+                        "uneditable": false,
                         "viewMode": "days"
                     },
                     "id": "ac4b8d5a-83cc-4756-87c1-a5241206da5e",
@@ -2075,6 +2111,7 @@
                         "maxDate": false,
                         "minDate": false,
                         "placeholder": "Enter date",
+                        "uneditable": false,
                         "viewMode": "days"
                     },
                     "id": "b060bf31-c14a-4b51-a40c-7a289c0f08e5",
@@ -2097,7 +2134,8 @@
                         "label": "Type of Name",
                         "placeholder": {
                             "en": "Select an option"
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "b1077bae-f2e5-47e4-987a-bd1414c48a22",
                     "label": {
@@ -2119,7 +2157,8 @@
                         "label": "Type of Name",
                         "placeholder": {
                             "en": "Select an option"
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "b1244e15-9066-4985-a319-062d31d6c488",
                     "label": {
@@ -2155,7 +2194,8 @@
                         "label": "chemical_material_identifier_type",
                         "placeholder": {
                             "en": "Select an option"
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "b3ec7671-f72e-4359-9ffb-19ba7b05c5da",
                     "label": {
@@ -2176,6 +2216,7 @@
                         "maxDate": false,
                         "minDate": false,
                         "placeholder": "Enter date",
+                        "uneditable": false,
                         "viewMode": "days"
                     },
                     "id": "b47f0a7d-a904-48e7-98ab-00e15b119730",
@@ -2228,7 +2269,8 @@
                         "label": "Statement Type Metatype",
                         "placeholder": {
                             "en": "Select an option"
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "bb0232d6-0a60-468a-a307-e8257f030232",
                     "label": {
@@ -2250,7 +2292,8 @@
                         "label": "Source Reference Work for Statement ",
                         "placeholder": {
                             "en": ""
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "bc377d78-32d6-4e0f-beec-5b16f7683069",
                     "label": {
@@ -2286,7 +2329,8 @@
                         "label": "Type of Statement",
                         "placeholder": {
                             "en": "Select an option"
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "be5ef174-599f-4d7f-b005-39c879eb48ff",
                     "label": {
@@ -2308,7 +2352,8 @@
                         "label": "Source Reference Work for Statement ",
                         "placeholder": {
                             "en": ""
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "befac13f-36fc-4158-8e19-c636764f54e3",
                     "label": {
@@ -2389,6 +2434,7 @@
                         "maxDate": false,
                         "minDate": false,
                         "placeholder": "Enter date",
+                        "uneditable": false,
                         "viewMode": "days"
                     },
                     "id": "c9ae00ae-6742-4b52-afce-f4200c969bd1",
@@ -2411,7 +2457,8 @@
                         "label": "Source Reference Work for Name",
                         "placeholder": {
                             "en": ""
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "cdc242f5-89de-4830-a42d-c8a301a5b336",
                     "label": {
@@ -2433,7 +2480,8 @@
                         "label": "Type of Name",
                         "placeholder": {
                             "en": "Select an option"
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "ce9f09e7-34b6-4f1f-a4d8-8d727186d9c8",
                     "label": {
@@ -2499,7 +2547,8 @@
                         "label": "Type of Statement",
                         "placeholder": {
                             "en": "Select an option"
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "d5d92137-5277-4aee-9727-2c7e059710b5",
                     "label": {
@@ -2520,6 +2569,7 @@
                         "maxDate": false,
                         "minDate": false,
                         "placeholder": "Enter date",
+                        "uneditable": false,
                         "viewMode": "days"
                     },
                     "id": "d81f96d6-a11c-4189-ac82-d94b85c8b4d2",
@@ -2570,7 +2620,8 @@
                         "label": "Language of Text",
                         "placeholder": {
                             "en": "Select an option"
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "d839661e-aa07-4fff-8f82-7144576ff2b2",
                     "label": {
@@ -2606,7 +2657,8 @@
                         "label": "Type of Statement",
                         "placeholder": {
                             "en": "Select an option"
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "d91538db-91b6-4218-8db9-287c533b4585",
                     "label": {
@@ -2628,7 +2680,8 @@
                         "label": "Timespan Type",
                         "placeholder": {
                             "en": "Select an option"
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "da04a13a-1d08-4002-89c0-c92c14de19e1",
                     "label": {
@@ -2675,7 +2728,8 @@
                         "label": "Identifier Data Assignment Classification",
                         "placeholder": {
                             "en": "Select an option"
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "dfa17334-9988-4e29-9ad2-22c1faa6d8fa",
                     "label": {
@@ -2726,6 +2780,7 @@
                         "maxDate": false,
                         "minDate": false,
                         "placeholder": "Enter date",
+                        "uneditable": false,
                         "viewMode": "days"
                     },
                     "id": "e5bc6112-ad48-487f-be1f-011c7623f607",
@@ -2748,7 +2803,8 @@
                         "label": "Classification",
                         "placeholder": {
                             "en": "Select an option"
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "e608ad23-e7a7-49e2-b929-23a6c9c0f513",
                     "label": {
@@ -2784,7 +2840,8 @@
                         "label": "Statement Type Metatype",
                         "placeholder": {
                             "en": "Select an option"
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "eb6f99cf-1dd6-4321-b337-ae21516c0605",
                     "label": {
@@ -2866,7 +2923,8 @@
                         "label": "Source Reference Work for Name",
                         "placeholder": {
                             "en": ""
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "f81fc149-5ea9-4467-851d-4db7c825bba2",
                     "label": {
@@ -2888,7 +2946,8 @@
                         "label": "Source Reference Work for Statement",
                         "placeholder": {
                             "en": ""
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "fab9515a-17e8-4156-82d8-c634b4b29855",
                     "label": {
@@ -2968,7 +3027,8 @@
                         "label": "Language of Text",
                         "placeholder": {
                             "en": "Select an option"
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "ff590d79-a211-43aa-8b2f-55168de4b025",
                     "label": {
@@ -4472,11 +4532,11 @@
                         "graphs": [
                             {
                                 "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
-                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "inverseRelationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "name": "Textual Work",
+                                "relationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
-                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
-                                "useOntologyRelationship": false
+                                "relationshipSource": "reference"
                             }
                         ],
                         "searchDsl": "",
@@ -4817,11 +4877,11 @@
                         "graphs": [
                             {
                                 "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
-                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "inverseRelationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "name": "Textual Work",
+                                "relationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
-                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
-                                "useOntologyRelationship": false
+                                "relationshipSource": "reference"
                             }
                         ],
                         "searchDsl": "",
@@ -4899,7 +4959,7 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "chemical_material_name_language_",
+                    "alias": "chemical_material_name_language",
                     "config": {
                         "controlledList": "f7fc4f6d-fd46-4881-846f-4a08bc1a3fef",
                         "multiValue": true
@@ -5035,19 +5095,19 @@
                         "graphs": [
                             {
                                 "graphid": "36956e50-d770-11ef-8f5d-0275dc2ded29",
-                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "inverseRelationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "name": "Group ",
+                                "relationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
-                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
-                                "useOntologyRelationship": false
+                                "relationshipSource": "reference"
                             },
                             {
                                 "graphid": "e1d0ea1a-d770-11ef-8c40-0275dc2ded29",
-                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "inverseRelationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "name": "Person",
+                                "relationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
-                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
-                                "useOntologyRelationship": false
+                                "relationshipSource": "reference"
                             }
                         ],
                         "searchDsl": "",
@@ -5150,7 +5210,7 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "chemical_material_name_type_",
+                    "alias": "chemical_material_name_type",
                     "config": {
                         "controlledList": "c6b8b496-ff23-49e4-a001-464c1934eb47",
                         "multiValue": false
@@ -5234,11 +5294,11 @@
                         "graphs": [
                             {
                                 "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
-                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "inverseRelationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "name": "Textual Work",
+                                "relationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
-                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
-                                "useOntologyRelationship": false
+                                "relationshipSource": "reference"
                             }
                         ],
                         "searchDsl": "",
@@ -5526,11 +5586,11 @@
                         "graphs": [
                             {
                                 "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
-                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "inverseRelationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "name": "Textual Work",
+                                "relationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
-                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
-                                "useOntologyRelationship": false
+                                "relationshipSource": "reference"
                             }
                         ],
                         "searchDsl": "",
@@ -5565,11 +5625,11 @@
                         "graphs": [
                             {
                                 "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
-                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "inverseRelationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "name": "Textual Work",
+                                "relationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
-                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
-                                "useOntologyRelationship": false
+                                "relationshipSource": "reference"
                             }
                         ],
                         "searchDsl": "",
@@ -5596,7 +5656,7 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "chemical_material_name_label_",
+                    "alias": "chemical_material_name_label",
                     "config": {},
                     "datatype": "string",
                     "description": "# Specific:\n\n\n# General:\nEvery node should have a _label that provides a human-readable summary label for the node. This is intended not for end users, but for developers looking at the data. See:  https://linked.art/model/base/#core-properties\n\n# Arches Note:\n\n\n* BranchId: la-label\n* FieldId: \n",
@@ -5803,19 +5863,19 @@
                         "graphs": [
                             {
                                 "graphid": "36956e50-d770-11ef-8f5d-0275dc2ded29",
-                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "inverseRelationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "name": "Group",
+                                "relationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
-                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
-                                "useOntologyRelationship": false
+                                "relationshipSource": "reference"
                             },
                             {
                                 "graphid": "e1d0ea1a-d770-11ef-8c40-0275dc2ded29",
-                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "inverseRelationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "name": "Person",
+                                "relationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
-                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
-                                "useOntologyRelationship": false
+                                "relationshipSource": "reference"
                             }
                         ],
                         "searchDsl": "",
@@ -5951,11 +6011,11 @@
                         "graphs": [
                             {
                                 "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
-                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "inverseRelationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "name": "Textual Work",
+                                "relationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
-                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
-                                "useOntologyRelationship": false
+                                "relationshipSource": "reference"
                             }
                         ],
                         "searchDsl": "",
@@ -6016,11 +6076,11 @@
                         "graphs": [
                             {
                                 "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
-                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "inverseRelationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "name": "Textual Work",
+                                "relationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
-                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
-                                "useOntologyRelationship": false
+                                "relationshipSource": "reference"
                             }
                         ],
                         "searchDsl": "",
@@ -6073,16 +6133,16 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "chemical_material_name_source_",
+                    "alias": "chemical_material_name_source",
                     "config": {
                         "graphs": [
                             {
                                 "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
-                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "inverseRelationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "name": "Textual Work",
+                                "relationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
-                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
-                                "useOntologyRelationship": false
+                                "relationshipSource": "reference"
                             }
                         ],
                         "searchDsl": "",
@@ -6266,11 +6326,11 @@
                         "graphs": [
                             {
                                 "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
-                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "inverseRelationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "name": "Textual Work",
+                                "relationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
-                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
-                                "useOntologyRelationship": false
+                                "relationshipSource": "reference"
                             }
                         ],
                         "searchDsl": "",
@@ -6536,19 +6596,19 @@
                         "graphs": [
                             {
                                 "graphid": "36956e50-d770-11ef-8f5d-0275dc2ded29",
-                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "inverseRelationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "name": "Group ",
+                                "relationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
-                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
-                                "useOntologyRelationship": false
+                                "relationshipSource": "reference"
                             },
                             {
                                 "graphid": "e1d0ea1a-d770-11ef-8c40-0275dc2ded29",
-                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "inverseRelationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "name": "Person",
+                                "relationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
-                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
-                                "useOntologyRelationship": false
+                                "relationshipSource": "reference"
                             }
                         ],
                         "searchDsl": "",
@@ -6827,16 +6887,16 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "chemical_material_identifier_source_",
+                    "alias": "chemical_material_identifier_source",
                     "config": {
                         "graphs": [
                             {
                                 "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
-                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "inverseRelationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "name": "Textual Work",
+                                "relationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
-                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
-                                "useOntologyRelationship": false
+                                "relationshipSource": "reference"
                             }
                         ],
                         "searchDsl": "",
@@ -7046,11 +7106,11 @@
                         "graphs": [
                             {
                                 "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
-                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "inverseRelationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "name": "Textual Work",
+                                "relationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
-                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
-                                "useOntologyRelationship": false
+                                "relationshipSource": "reference"
                             }
                         ],
                         "searchDsl": "",
@@ -7148,11 +7208,5 @@
             "user_permissions": {},
             "version": ""
         }
-    ],
-    "metadata": {
-        "db": "PostgreSQL 16.13 on aarch64-unknown-linux-gnu, compiled by aarch64-unknown-linux-gnu-gcc (GCC) 12.4.0, 64-bit",
-        "git hash": "fatal: not a git repository (or any of the parent directories): .git",
-        "os": "Linux",
-        "os version": "6.17.0-1017-aws"
-    }
+    ]
 }

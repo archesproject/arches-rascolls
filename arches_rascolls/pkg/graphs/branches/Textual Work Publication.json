@@ -131,7 +131,8 @@
                         "label": "Starts After",
                         "placeholder": {
                             "en": ""
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "06ae9c5c-e02b-4ee9-8001-ee0c80abf1b8",
                     "label": {
@@ -153,7 +154,8 @@
                         "label": "Publication Event Location",
                         "placeholder": {
                             "en": ""
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "097dff1a-a10c-4719-a86b-490e9b1f9056",
                     "label": {
@@ -203,7 +205,8 @@
                         "label": "Statement Language",
                         "placeholder": {
                             "en": "Select an option"
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "12f5a2e2-39c3-42aa-9f77-f1b2328404e8",
                     "label": {
@@ -225,7 +228,8 @@
                         "label": "Statement Type Metatype",
                         "placeholder": {
                             "en": "Select an option"
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "1bb10ad4-1d4d-42b3-b1c5-0c4a231112e7",
                     "label": {
@@ -367,7 +371,8 @@
                         "label": "Ends Before",
                         "placeholder": {
                             "en": ""
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "604e55bc-0617-49ac-9715-4d9c48aac92e",
                     "label": {
@@ -389,7 +394,8 @@
                         "label": "Name Type",
                         "placeholder": {
                             "en": "Select an option"
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "61c50fdb-8b1d-47c3-a4b7-89b2e1baf6c1",
                     "label": {
@@ -410,6 +416,7 @@
                         "maxDate": false,
                         "minDate": false,
                         "placeholder": "Enter date",
+                        "uneditable": false,
                         "viewMode": "days"
                     },
                     "id": "73274290-7117-4e18-b202-e6550ac67b63",
@@ -432,7 +439,8 @@
                         "label": "Reference",
                         "placeholder": {
                             "en": ""
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "7cb72301-45ce-492d-94eb-1712ceae817d",
                     "label": {
@@ -483,6 +491,7 @@
                         "maxDate": false,
                         "minDate": false,
                         "placeholder": "Enter date",
+                        "uneditable": false,
                         "viewMode": "days"
                     },
                     "id": "886feb56-fcd1-4d30-b7aa-f154716720e6",
@@ -504,6 +513,7 @@
                         "maxDate": false,
                         "minDate": false,
                         "placeholder": "Enter date",
+                        "uneditable": false,
                         "viewMode": "days"
                     },
                     "id": "8d296dd6-e685-414f-be28-9fbb7e87ac91",
@@ -526,7 +536,8 @@
                         "label": "Particular Technique",
                         "placeholder": {
                             "en": "Select an option"
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "a295c729-920b-4e12-b031-1e8717235cf3",
                     "label": {
@@ -547,6 +558,7 @@
                         "maxDate": false,
                         "minDate": false,
                         "placeholder": "Enter date",
+                        "uneditable": false,
                         "viewMode": "days"
                     },
                     "id": "cbcb4aaa-c95d-47f6-8529-d58a1e3267a6",
@@ -569,7 +581,8 @@
                         "label": "Publication Event Type",
                         "placeholder": {
                             "en": "Select an option"
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "cd68f007-5ce5-4528-a654-7265b5872178",
                     "label": {
@@ -591,7 +604,8 @@
                         "label": "Name Language",
                         "placeholder": {
                             "en": "Select an option"
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "ce10d73b-5a77-4ce6-807c-b0aab0b322c7",
                     "label": {
@@ -613,7 +627,8 @@
                         "label": "Timespan Type",
                         "placeholder": {
                             "en": "Select an option"
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "d10034d1-e4ac-4394-aa62-7c99e7847c74",
                     "label": {
@@ -635,7 +650,8 @@
                         "label": "Used Object",
                         "placeholder": {
                             "en": ""
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "d8dd5555-dac9-4ecd-8d99-1b832a1c5b9c",
                     "label": {
@@ -657,7 +673,8 @@
                         "label": "Source Reference Work for Statement",
                         "placeholder": {
                             "en": ""
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "e1611940-e67b-46a8-92f2-aabc40b5427f",
                     "label": {
@@ -679,7 +696,8 @@
                         "label": "Source Reference Work for Name for Timespan for Publication Event",
                         "placeholder": {
                             "en": ""
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "e7b9e755-ed61-460a-8ef4-1e7c9040a14e",
                     "label": {
@@ -758,7 +776,8 @@
                         "label": "Statement Type",
                         "placeholder": {
                             "en": "Select an option"
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "f60932df-c4c3-4ddb-8d16-4063e657e530",
                     "label": {
@@ -1167,11 +1186,11 @@
                         "graphs": [
                             {
                                 "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
-                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "inverseRelationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "name": "Textual Work",
+                                "relationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
-                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
-                                "useOntologyRelationship": false
+                                "relationshipSource": "reference"
                             }
                         ],
                         "searchDsl": "",
@@ -1399,11 +1418,11 @@
                         "graphs": [
                             {
                                 "graphid": "c7b359d8-d833-11ef-a368-0275dc2ded29",
-                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "inverseRelationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "name": "Period",
+                                "relationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
-                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
-                                "useOntologyRelationship": false
+                                "relationshipSource": "reference"
                             }
                         ],
                         "searchDsl": "",
@@ -1435,11 +1454,11 @@
                         "graphs": [
                             {
                                 "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
-                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "inverseRelationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "name": "Textual Work",
+                                "relationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
-                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
-                                "useOntologyRelationship": false
+                                "relationshipSource": "reference"
                             }
                         ],
                         "searchDsl": "",
@@ -1690,11 +1709,11 @@
                         "graphs": [
                             {
                                 "graphid": "c7b359d8-d833-11ef-a368-0275dc2ded29",
-                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "inverseRelationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "name": "Period",
+                                "relationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
-                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
-                                "useOntologyRelationship": false
+                                "relationshipSource": "reference"
                             }
                         ],
                         "searchDsl": "",
@@ -1752,11 +1771,11 @@
                         "graphs": [
                             {
                                 "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
-                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "inverseRelationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "name": "Textual Work",
+                                "relationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
-                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
-                                "useOntologyRelationship": false
+                                "relationshipSource": "reference"
                             }
                         ],
                         "searchDsl": "",
@@ -1814,11 +1833,11 @@
                         "graphs": [
                             {
                                 "graphid": "bda239c6-d376-11ef-a239-0275dc2ded29",
-                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "inverseRelationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "name": "Reference and Sample Collection Item",
+                                "relationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
-                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
-                                "useOntologyRelationship": false
+                                "relationshipSource": "reference"
                             }
                         ],
                         "searchDsl": "",
@@ -1921,11 +1940,11 @@
                         "graphs": [
                             {
                                 "graphid": "3dda9f54-d771-11ef-825b-0275dc2ded29",
-                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "inverseRelationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "name": "Place",
+                                "relationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
-                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
-                                "useOntologyRelationship": false
+                                "relationshipSource": "reference"
                             }
                         ],
                         "searchDsl": "",
@@ -1995,11 +2014,5 @@
             "user_permissions": {},
             "version": ""
         }
-    ],
-    "metadata": {
-        "db": "PostgreSQL 16.13 on aarch64-unknown-linux-gnu, compiled by aarch64-unknown-linux-gnu-gcc (GCC) 12.4.0, 64-bit",
-        "git hash": "fatal: not a git repository (or any of the parent directories): .git",
-        "os": "Linux",
-        "os version": "6.17.0-1017-aws"
-    }
+    ]
 }

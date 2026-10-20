@@ -113,10 +113,10 @@
                         {
                           "config": {
                             "node_aliases": [
-                              "_label"
+                              "label"
                             ],
                             "custom_labels": {},
-                            "nodegroup_alias": "_label",
+                            "nodegroup_alias": "label",
                             "custom_card_name": null
                           },
                           "component": "arches_modular_reports/ModularReport/components/DataSection"

@@ -44,7 +44,8 @@
                         "label": "Dimension_statement_type_metatype",
                         "placeholder": {
                             "en": "Select an option"
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "4281ef47-2ed1-4d95-9f6c-b9f819e92a9c",
                     "label": {
@@ -94,7 +95,8 @@
                         "label": "Dimension_statement_language ",
                         "placeholder": {
                             "en": "Select an option"
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "880d1c2c-591b-4632-96b4-7587f3abab9c",
                     "label": {
@@ -176,7 +178,8 @@
                         "label": "Dimension_statement_type",
                         "placeholder": {
                             "en": "Select an option"
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "c3c790f2-2e5f-46a9-9385-c79c98e72df2",
                     "label": {
@@ -198,7 +201,8 @@
                         "label": "Dimension_statement_source",
                         "placeholder": {
                             "en": ""
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "d8c48401-f36f-481d-af40-ed8a440969e5",
                     "label": {
@@ -474,7 +478,7 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "dimension_statement_language_",
+                    "alias": "dimension_statement_language",
                     "config": {
                         "controlledList": "f7fc4f6d-fd46-4881-846f-4a08bc1a3fef",
                         "multiValue": true
@@ -593,11 +597,5 @@
             "user_permissions": {},
             "version": ""
         }
-    ],
-    "metadata": {
-        "db": "PostgreSQL 16.13 on aarch64-unknown-linux-gnu, compiled by aarch64-unknown-linux-gnu-gcc (GCC) 12.4.0, 64-bit",
-        "git hash": "fatal: not a git repository (or any of the parent directories): .git",
-        "os": "Linux",
-        "os version": "6.17.0-1017-aws"
-    }
+    ]
 }
