@@ -33,6 +33,8 @@ def get_optional_env_variable(var_name, default=None) -> str:
 
 APP_NAME = "arches_rascolls"
 
+ELASTICSEARCH_ENABLED = False
+
 # GDAL/GEOS library paths — needed on Alpine/musl where ctypes can't auto-discover them.
 _gdal_path = get_optional_env_variable("GDAL_LIBRARY_PATH")
 if _gdal_path:
