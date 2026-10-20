@@ -25,7 +25,7 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Reference and Sample Collection Item or Physical Thing Referenced by Textual Work"
+                        "en": "Referenced by"
                     },
                     "nodegroup_id": "7ce1a782-d772-11ef-825b-0275dc2ded29",
                     "sortorder": 8,
@@ -54,39 +54,10 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Textual Work Creation"
+                        "en": "Creation"
                     },
                     "nodegroup_id": "7ce1adc2-d772-11ef-825b-0275dc2ded29",
                     "sortorder": 6,
-                    "source_identifier_id": null,
-                    "visible": true
-                },
-                {
-                    "active": true,
-                    "cardid": "7ce1c186-d772-11ef-825b-0275dc2ded29",
-                    "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
-                    "config": null,
-                    "constraints": [],
-                    "cssclass": null,
-                    "description": {
-                        "en": "# Specific:\n\n\n# General:\nTimeSpan is used to record a span of time between two, possibly fuzzy, points. It can also have a known duration between those points.  For example, a 1 week activity might occur sometime between the first and third quarters of the year. See: https://linked.art/model/base/#time-span-details\n\n# Arches Note:\n\n\n* BranchId: la-timespan\n* FieldId: \n"
-                    },
-                    "graph_id": "7ce192f6-d772-11ef-825b-0275dc2ded29",
-                    "helpenabled": false,
-                    "helptext": {
-                        "en": ""
-                    },
-                    "helptitle": {
-                        "en": ""
-                    },
-                    "instructions": {
-                        "en": ""
-                    },
-                    "name": {
-                        "en": "Textual Work Creation Date"
-                    },
-                    "nodegroup_id": "7ce1bf4c-d772-11ef-825b-0275dc2ded29",
-                    "sortorder": 0,
                     "source_identifier_id": null,
                     "visible": true
                 },
@@ -112,39 +83,10 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Text Content of Textual Work"
+                        "en": "Text Content"
                     },
                     "nodegroup_id": "7ce1c7e4-d772-11ef-825b-0275dc2ded29",
                     "sortorder": 10,
-                    "source_identifier_id": null,
-                    "visible": true
-                },
-                {
-                    "active": true,
-                    "cardid": "7ce1d37e-d772-11ef-825b-0275dc2ded29",
-                    "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
-                    "config": null,
-                    "constraints": [],
-                    "cssclass": null,
-                    "description": {
-                        "en": "# Specific:\n\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n"
-                    },
-                    "graph_id": "7ce192f6-d772-11ef-825b-0275dc2ded29",
-                    "helpenabled": false,
-                    "helptext": {
-                        "en": ""
-                    },
-                    "helptitle": {
-                        "en": ""
-                    },
-                    "instructions": {
-                        "en": ""
-                    },
-                    "name": {
-                        "en": "Textual Work Dimension Name"
-                    },
-                    "nodegroup_id": "7ce1d19e-d772-11ef-825b-0275dc2ded29",
-                    "sortorder": null,
                     "source_identifier_id": null,
                     "visible": true
                 },
@@ -170,7 +112,7 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Textual Work Name"
+                        "en": "Name"
                     },
                     "nodegroup_id": "7ce1d612-d772-11ef-825b-0275dc2ded29",
                     "sortorder": 0,
@@ -199,41 +141,12 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Textual Work Dimension"
+                        "en": "Dimension"
                     },
                     "nodegroup_id": "7ce1da72-d772-11ef-825b-0275dc2ded29",
                     "sortorder": 5,
                     "source_identifier_id": null,
                     "visible": false
-                },
-                {
-                    "active": true,
-                    "cardid": "7ce1e09e-d772-11ef-825b-0275dc2ded29",
-                    "component_id": "f05e4d3a-53c1-11e8-b0ea-784f435179ea",
-                    "config": null,
-                    "constraints": [],
-                    "cssclass": null,
-                    "description": {
-                        "en": "# Specific:\n\n\n# General:\nIn many cases, current data does not support the level of specificity that the full ontology allows, or the information is simply best expressed in human-readable form. For example, instead of a completely modeled set of parts with materials, many museum collection management systems allow only a single human-readable string for the \"medium\" or \"materials statement\".  Any time that there is a description of the resource, with or without qualification as to the type of description, then this branch can be used to record the descriptive text. See: https://linked.art/model/base/#statements-about-a-resource\n\n# Arches Note:\n\n\n* BranchId: la-statement\n* FieldId: \n"
-                    },
-                    "graph_id": "7ce192f6-d772-11ef-825b-0275dc2ded29",
-                    "helpenabled": false,
-                    "helptext": {
-                        "en": ""
-                    },
-                    "helptitle": {
-                        "en": ""
-                    },
-                    "instructions": {
-                        "en": ""
-                    },
-                    "name": {
-                        "en": "Statement about Textual Work Creation"
-                    },
-                    "nodegroup_id": "7ce1deb4-d772-11ef-825b-0275dc2ded29",
-                    "sortorder": 1,
-                    "source_identifier_id": null,
-                    "visible": true
                 },
                 {
                     "active": true,
@@ -257,7 +170,7 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Statement about Textual Work"
+                        "en": "Statement"
                     },
                     "nodegroup_id": "7ce1e2ec-d772-11ef-825b-0275dc2ded29",
                     "sortorder": 11,
@@ -286,7 +199,7 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Textual Work Language"
+                        "en": "Language"
                     },
                     "nodegroup_id": "7ce1eb70-d772-11ef-825b-0275dc2ded29",
                     "sortorder": 4,
@@ -313,7 +226,7 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Digital Reference to Textual Work"
+                        "en": "Digital Reference"
                     },
                     "nodegroup_id": "7ce1ef9e-d772-11ef-825b-0275dc2ded29",
                     "sortorder": 12,
@@ -342,12 +255,12 @@
                         "en": "Subject this work is about"
                     },
                     "name": {
-                        "en": "Textual Work Subject(s)"
+                        "en": "Subject(s)"
                     },
                     "nodegroup_id": "7ce1fd90-d772-11ef-825b-0275dc2ded29",
                     "sortorder": 9,
                     "source_identifier_id": null,
-                    "visible": true
+                    "visible": false
                 },
                 {
                     "active": true,
@@ -371,7 +284,7 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Textual Work External URI"
+                        "en": "External URI"
                     },
                     "nodegroup_id": "7ce201c8-d772-11ef-825b-0275dc2ded29",
                     "sortorder": 3,
@@ -400,7 +313,7 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Textual Work Type"
+                        "en": "Type"
                     },
                     "nodegroup_id": "7ce205f6-d772-11ef-825b-0275dc2ded29",
                     "sortorder": 1,
@@ -429,7 +342,7 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Internal Label for Textual Work"
+                        "en": "Internal Label"
                     },
                     "nodegroup_id": "7ce20a1a-d772-11ef-825b-0275dc2ded29",
                     "sortorder": 13,
@@ -487,7 +400,7 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Textual Work Identifier"
+                        "en": "Identifier"
                     },
                     "nodegroup_id": "7ce2124e-d772-11ef-825b-0275dc2ded29",
                     "sortorder": 2,
@@ -497,26 +410,141 @@
             ],
             "cards_x_nodes_x_widgets": [
                 {
-                    "card_id": "7ce1c186-d772-11ef-825b-0275dc2ded29",
+                    "card_id": "7ce1b0ba-d772-11ef-825b-0275dc2ded29",
                     "config": {
-                        "defaultValue": "",
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Textual Work Creation Date",
+                        "label": "Creation Statement",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "02f529c4-58e6-4f5e-9426-b45716985eff",
+                    "label": {
+                        "en": "Creation Statement"
+                    },
+                    "node_id": "7ce28af8-d772-11ef-825b-0275dc2ded29",
+                    "sortorder": 10,
+                    "source_identifier_id": null,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000005"
+                },
+                {
+                    "card_id": "7ce1dcf2-d772-11ef-825b-0275dc2ded29",
+                    "config": {
+                        "defaultResourceInstance": [],
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Dimension_Name_source",
                         "placeholder": {
                             "en": ""
                         }
                     },
-                    "id": "68cb8009-4d08-444e-a57d-a7e2e9828425",
+                    "id": "11a49257-b6df-4b43-b42f-0251ecfac2cc",
                     "label": {
-                        "en": "Textual Work Creation Date"
+                        "en": "Dimension_Name_source"
                     },
-                    "node_id": "557af24e-47e9-4f1e-9a66-9cfbb87b7a08",
-                    "sortorder": null,
+                    "node_id": "7ce25ed4-d772-11ef-825b-0275dc2ded29",
+                    "sortorder": 5,
                     "source_identifier_id": null,
-                    "visible": true,
-                    "widget_id": "adfd15ce-dbab-11e7-86d1-0fcf08612b27"
+                    "visible": false,
+                    "widget_id": "ff3c400a-76ec-11e7-a793-784f435179ea"
+                },
+                {
+                    "card_id": "7ce1b0ba-d772-11ef-825b-0275dc2ded29",
+                    "config": {
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Creation_Statement_type",
+                        "placeholder": {
+                            "en": "Select an option"
+                        }
+                    },
+                    "id": "17835f5f-b415-4add-b135-0291516afb76",
+                    "label": {
+                        "en": "Creation_Statement_type"
+                    },
+                    "node_id": "7ce2579a-d772-11ef-825b-0275dc2ded29",
+                    "sortorder": 3,
+                    "source_identifier_id": null,
+                    "visible": false,
+                    "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
+                },
+                {
+                    "card_id": "7ce1b0ba-d772-11ef-825b-0275dc2ded29",
+                    "config": {
+                        "defaultResourceInstance": [],
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Creation_Statement_source",
+                        "placeholder": {
+                            "en": ""
+                        }
+                    },
+                    "id": "277d1d83-dfaf-4c98-8aa6-55a021256cf7",
+                    "label": {
+                        "en": "Creation_Statement_source"
+                    },
+                    "node_id": "7ce28940-d772-11ef-825b-0275dc2ded29",
+                    "sortorder": 11,
+                    "source_identifier_id": null,
+                    "visible": false,
+                    "widget_id": "ff3c400a-76ec-11e7-a793-784f435179ea"
+                },
+                {
+                    "card_id": "7ce1b0ba-d772-11ef-825b-0275dc2ded29",
+                    "config": {
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Creation_Statement_type_metatype",
+                        "placeholder": {
+                            "en": "Select an option"
+                        }
+                    },
+                    "id": "7624d41e-566a-4ce9-98ee-5c57097c2352",
+                    "label": {
+                        "en": "Creation_Statement_type_metatype"
+                    },
+                    "node_id": "7ce24624-d772-11ef-825b-0275dc2ded29",
+                    "sortorder": 0,
+                    "source_identifier_id": null,
+                    "visible": false,
+                    "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
+                },
+                {
+                    "card_id": "7ce1dcf2-d772-11ef-825b-0275dc2ded29",
+                    "config": {
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Dimension_Name_type",
+                        "placeholder": {
+                            "en": "Select an option"
+                        }
+                    },
+                    "id": "7a94d651-ba27-4307-9b52-447598a472ca",
+                    "label": {
+                        "en": "Dimension_Name_type"
+                    },
+                    "node_id": "7ce21870-d772-11ef-825b-0275dc2ded29",
+                    "sortorder": 2,
+                    "source_identifier_id": null,
+                    "visible": false,
+                    "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
                 },
                 {
                     "card_id": "7ce1d7a2-d772-11ef-825b-0275dc2ded29",
@@ -530,7 +558,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Textual Work Name",
+                        "label": "Name",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -540,7 +568,7 @@
                     },
                     "id": "7ce29444-d772-11ef-825b-0275dc2ded29",
                     "label": {
-                        "en": "Textual Work Name"
+                        "en": "Name"
                     },
                     "node_id": "7ce26758-d772-11ef-825b-0275dc2ded29",
                     "sortorder": 0,
@@ -595,7 +623,7 @@
                     "node_id": "7ce237c4-d772-11ef-825b-0275dc2ded29",
                     "sortorder": 2,
                     "source_identifier_id": null,
-                    "visible": true,
+                    "visible": false,
                     "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
                 },
                 {
@@ -687,160 +715,6 @@
                     "widget_id": "10000000-0000-0000-0000-000000000001"
                 },
                 {
-                    "card_id": "7ce1d37e-d772-11ef-825b-0275dc2ded29",
-                    "config": {
-                        "defaultValue": [],
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "Name Type",
-                        "placeholder": {
-                            "en": "Select an option"
-                        }
-                    },
-                    "id": "7ce29c50-d772-11ef-825b-0275dc2ded29",
-                    "label": {
-                        "en": "Name Type"
-                    },
-                    "node_id": "7ce21870-d772-11ef-825b-0275dc2ded29",
-                    "sortorder": 1,
-                    "source_identifier_id": null,
-                    "visible": true,
-                    "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
-                },
-                {
-                    "card_id": "7ce1d37e-d772-11ef-825b-0275dc2ded29",
-                    "config": {
-                        "defaultResourceInstance": [],
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "Source Reference Work for Name",
-                        "placeholder": {
-                            "en": ""
-                        }
-                    },
-                    "id": "7ce29cd2-d772-11ef-825b-0275dc2ded29",
-                    "label": {
-                        "en": "Source Reference Work for Name"
-                    },
-                    "node_id": "7ce25ed4-d772-11ef-825b-0275dc2ded29",
-                    "sortorder": 3,
-                    "source_identifier_id": null,
-                    "visible": false,
-                    "widget_id": "ff3c400a-76ec-11e7-a793-784f435179ea"
-                },
-                {
-                    "card_id": "7ce1d37e-d772-11ef-825b-0275dc2ded29",
-                    "config": {
-                        "defaultValue": {
-                            "en": {
-                                "direction": "ltr",
-                                "value": ""
-                            }
-                        },
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "Name label",
-                        "maxLength": null,
-                        "placeholder": {
-                            "en": "Enter text"
-                        },
-                        "uneditable": false,
-                        "width": "100%"
-                    },
-                    "id": "7ce29d54-d772-11ef-825b-0275dc2ded29",
-                    "label": {
-                        "en": "Name label"
-                    },
-                    "node_id": "7ce26e74-d772-11ef-825b-0275dc2ded29",
-                    "sortorder": 4,
-                    "source_identifier_id": null,
-                    "visible": false,
-                    "widget_id": "10000000-0000-0000-0000-000000000001"
-                },
-                {
-                    "card_id": "7ce1d37e-d772-11ef-825b-0275dc2ded29",
-                    "config": {
-                        "defaultValue": [
-                            {
-                                "labels": [
-                                    {
-                                        "id": "bf48b2c6-3485-470c-be5d-37e53f76bade",
-                                        "language_id": "fr",
-                                        "list_item_id": "38729dbe-6d1c-48ce-bf47-e2a18945600e",
-                                        "value": "anglais",
-                                        "valuetype_id": "prefLabel"
-                                    },
-                                    {
-                                        "id": "e32d8c6d-319a-4382-8c26-06e4afb153bf",
-                                        "language_id": "de",
-                                        "list_item_id": "38729dbe-6d1c-48ce-bf47-e2a18945600e",
-                                        "value": "Englisch",
-                                        "valuetype_id": "prefLabel"
-                                    },
-                                    {
-                                        "id": "bc35776b-996f-4fc1-bd25-9f6432c1f349",
-                                        "language_id": "en",
-                                        "list_item_id": "38729dbe-6d1c-48ce-bf47-e2a18945600e",
-                                        "value": "English (language)",
-                                        "valuetype_id": "prefLabel"
-                                    }
-                                ],
-                                "list_id": "f7fc4f6d-fd46-4881-846f-4a08bc1a3fef",
-                                "uri": "http://localhost:8000/plugins/controlled-list-manager/item/38729dbe-6d1c-48ce-bf47-e2a18945600e"
-                            }
-                        ],
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "Name Language",
-                        "placeholder": {
-                            "en": "Select an option"
-                        }
-                    },
-                    "id": "7ce29e76-d772-11ef-825b-0275dc2ded29",
-                    "label": {
-                        "en": "Name Language"
-                    },
-                    "node_id": "7ce21faa-d772-11ef-825b-0275dc2ded29",
-                    "sortorder": 2,
-                    "source_identifier_id": null,
-                    "visible": true,
-                    "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
-                },
-                {
-                    "card_id": "7ce1d37e-d772-11ef-825b-0275dc2ded29",
-                    "config": {
-                        "defaultValue": {
-                            "en": {
-                                "direction": "ltr",
-                                "value": ""
-                            }
-                        },
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "Textual Work Dimension Name",
-                        "maxLength": null,
-                        "placeholder": {
-                            "en": "Enter text"
-                        },
-                        "uneditable": false,
-                        "width": "100%"
-                    },
-                    "id": "7ce29f16-d772-11ef-825b-0275dc2ded29",
-                    "label": {
-                        "en": "Textual Work Dimension Name"
-                    },
-                    "node_id": "7ce26d70-d772-11ef-825b-0275dc2ded29",
-                    "sortorder": 0,
-                    "source_identifier_id": null,
-                    "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000001"
-                },
-                {
                     "card_id": "7ce1e4cc-d772-11ef-825b-0275dc2ded29",
                     "config": {
                         "defaultValue": {
@@ -852,7 +726,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Statement about Textual Work",
+                        "label": "Statement",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -862,7 +736,7 @@
                     },
                     "id": "7ce2a29a-d772-11ef-825b-0275dc2ded29",
                     "label": {
-                        "en": "Statement about Textual Work"
+                        "en": "Statement"
                     },
                     "node_id": "7ce2317a-d772-11ef-825b-0275dc2ded29",
                     "sortorder": 0,
@@ -996,7 +870,7 @@
                     "node_id": "7ce272ca-d772-11ef-825b-0275dc2ded29",
                     "sortorder": 3,
                     "source_identifier_id": null,
-                    "visible": true,
+                    "visible": false,
                     "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
                 },
                 {
@@ -1022,223 +896,20 @@
                     "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
                 },
                 {
-                    "card_id": "7ce1e09e-d772-11ef-825b-0275dc2ded29",
-                    "config": {
-                        "defaultValue": {
-                            "en": {
-                                "direction": "ltr",
-                                "value": ""
-                            }
-                        },
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "Statement about Textual Work Creation",
-                        "maxLength": null,
-                        "placeholder": {
-                            "en": "Enter text"
-                        },
-                        "uneditable": false,
-                        "width": "100%"
-                    },
-                    "id": "7ce2a880-d772-11ef-825b-0275dc2ded29",
-                    "label": {
-                        "en": "Statement about Textual Work Creation"
-                    },
-                    "node_id": "7ce28af8-d772-11ef-825b-0275dc2ded29",
-                    "sortorder": 0,
-                    "source_identifier_id": null,
-                    "visible": true,
-                    "widget_id": "10000000-0000-0000-0000-000000000005"
-                },
-                {
-                    "card_id": "7ce1e09e-d772-11ef-825b-0275dc2ded29",
-                    "config": {
-                        "defaultValue": [
-                            {
-                                "labels": [
-                                    {
-                                        "id": "1149efe3-87cd-4557-9e18-04ceb3fdeec6",
-                                        "language_id": "en",
-                                        "list_item_id": "52946693-29d9-4292-a223-b20465e187ea",
-                                        "value": "brief text",
-                                        "valuetype_id": "prefLabel"
-                                    }
-                                ],
-                                "list_id": "1adae7ea-4884-432f-af44-c9aea3a48a3d",
-                                "uri": "http://localhost:8000/plugins/controlled-list-manager/item/b2f45594-6c10-49d7-a4b7-24e5ca839838"
-                            },
-                            {
-                                "labels": [
-                                    {
-                                        "id": "bf78d0db-f540-4bd1-a846-96a2cde39181",
-                                        "language_id": "en",
-                                        "list_item_id": "36a049c5-1b61-4c79-b247-c04dfd2589b2",
-                                        "value": "description",
-                                        "valuetype_id": "prefLabel"
-                                    }
-                                ],
-                                "list_id": "1adae7ea-4884-432f-af44-c9aea3a48a3d",
-                                "uri": "http://localhost:8000/plugins/controlled-list-manager/item/9a51d30b-48e8-4f94-9344-cd2bb1d4b33a"
-                            }
-                        ],
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "Statement Type",
-                        "placeholder": {
-                            "en": "Select an option"
-                        }
-                    },
-                    "id": "7ce2a916-d772-11ef-825b-0275dc2ded29",
-                    "label": {
-                        "en": "Statement Type"
-                    },
-                    "node_id": "7ce2579a-d772-11ef-825b-0275dc2ded29",
-                    "sortorder": 1,
-                    "source_identifier_id": null,
-                    "visible": true,
-                    "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
-                },
-                {
-                    "card_id": "7ce1e09e-d772-11ef-825b-0275dc2ded29",
-                    "config": {
-                        "defaultValue": "",
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "Statement Type Metatype",
-                        "placeholder": {
-                            "en": "Select an option"
-                        }
-                    },
-                    "id": "7ce2a998-d772-11ef-825b-0275dc2ded29",
-                    "label": {
-                        "en": "Statement Type Metatype"
-                    },
-                    "node_id": "7ce24624-d772-11ef-825b-0275dc2ded29",
-                    "sortorder": 2,
-                    "source_identifier_id": null,
-                    "visible": false,
-                    "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
-                },
-                {
-                    "card_id": "7ce1e09e-d772-11ef-825b-0275dc2ded29",
-                    "config": {
-                        "defaultValue": {
-                            "en": {
-                                "direction": "ltr",
-                                "value": ""
-                            }
-                        },
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "Statement Label",
-                        "maxLength": null,
-                        "placeholder": {
-                            "en": "Enter text"
-                        },
-                        "uneditable": false,
-                        "width": "100%"
-                    },
-                    "id": "7ce2aa1a-d772-11ef-825b-0275dc2ded29",
-                    "label": {
-                        "en": "Statement Label"
-                    },
-                    "node_id": "7ce28a1c-d772-11ef-825b-0275dc2ded29",
-                    "sortorder": 5,
-                    "source_identifier_id": null,
-                    "visible": false,
-                    "widget_id": "10000000-0000-0000-0000-000000000001"
-                },
-                {
-                    "card_id": "7ce1e09e-d772-11ef-825b-0275dc2ded29",
-                    "config": {
-                        "defaultValue": [
-                            {
-                                "labels": [
-                                    {
-                                        "id": "bf48b2c6-3485-470c-be5d-37e53f76bade",
-                                        "language_id": "fr",
-                                        "list_item_id": "38729dbe-6d1c-48ce-bf47-e2a18945600e",
-                                        "value": "anglais",
-                                        "valuetype_id": "prefLabel"
-                                    },
-                                    {
-                                        "id": "e32d8c6d-319a-4382-8c26-06e4afb153bf",
-                                        "language_id": "de",
-                                        "list_item_id": "38729dbe-6d1c-48ce-bf47-e2a18945600e",
-                                        "value": "Englisch",
-                                        "valuetype_id": "prefLabel"
-                                    },
-                                    {
-                                        "id": "bc35776b-996f-4fc1-bd25-9f6432c1f349",
-                                        "language_id": "en",
-                                        "list_item_id": "38729dbe-6d1c-48ce-bf47-e2a18945600e",
-                                        "value": "English (language)",
-                                        "valuetype_id": "prefLabel"
-                                    }
-                                ],
-                                "list_id": "f7fc4f6d-fd46-4881-846f-4a08bc1a3fef",
-                                "uri": "http://localhost:8000/plugins/controlled-list-manager/item/38729dbe-6d1c-48ce-bf47-e2a18945600e"
-                            }
-                        ],
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "Statement Language",
-                        "placeholder": {
-                            "en": "Select an option"
-                        }
-                    },
-                    "id": "7ce2aaba-d772-11ef-825b-0275dc2ded29",
-                    "label": {
-                        "en": "Statement Language"
-                    },
-                    "node_id": "7ce28846-d772-11ef-825b-0275dc2ded29",
-                    "sortorder": 3,
-                    "source_identifier_id": null,
-                    "visible": true,
-                    "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
-                },
-                {
-                    "card_id": "7ce1e09e-d772-11ef-825b-0275dc2ded29",
-                    "config": {
-                        "defaultResourceInstance": [],
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "Source Reference Work for Statement about Creation",
-                        "placeholder": {
-                            "en": ""
-                        }
-                    },
-                    "id": "7ce2ab46-d772-11ef-825b-0275dc2ded29",
-                    "label": {
-                        "en": "Source Reference Work for Statement about Creation"
-                    },
-                    "node_id": "7ce28940-d772-11ef-825b-0275dc2ded29",
-                    "sortorder": 4,
-                    "source_identifier_id": null,
-                    "visible": false,
-                    "widget_id": "ff3c400a-76ec-11e7-a793-784f435179ea"
-                },
-                {
                     "card_id": "7ce207ea-d772-11ef-825b-0275dc2ded29",
                     "config": {
                         "defaultValue": "",
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Textual Work Type",
+                        "label": "Type",
                         "placeholder": {
                             "en": "Select an option"
                         }
                     },
                     "id": "7ce2abdc-d772-11ef-825b-0275dc2ded29",
                     "label": {
-                        "en": "Textual Work Type"
+                        "en": "Type"
                     },
                     "node_id": "7ce205f6-d772-11ef-825b-0275dc2ded29",
                     "sortorder": null,
@@ -1310,7 +981,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Textual Work Identifier",
+                        "label": "Identifier",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -1320,7 +991,7 @@
                     },
                     "id": "7ce2b0aa-d772-11ef-825b-0275dc2ded29",
                     "label": {
-                        "en": "Textual Work Identifier"
+                        "en": "Identifier"
                     },
                     "node_id": "7ce22720-d772-11ef-825b-0275dc2ded29",
                     "sortorder": 0,
@@ -1351,58 +1022,6 @@
                     "widget_id": "ff3c400a-76ec-11e7-a793-784f435179ea"
                 },
                 {
-                    "card_id": "7ce1c186-d772-11ef-825b-0275dc2ded29",
-                    "config": {
-                        "defaultValue": "",
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "Timespan Type",
-                        "placeholder": {
-                            "en": "Select an option"
-                        }
-                    },
-                    "id": "7ce2b6b8-d772-11ef-825b-0275dc2ded29",
-                    "label": {
-                        "en": "Timespan Type"
-                    },
-                    "node_id": "7ce22806-d772-11ef-825b-0275dc2ded29",
-                    "sortorder": 4,
-                    "source_identifier_id": null,
-                    "visible": false,
-                    "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
-                },
-                {
-                    "card_id": "7ce1c186-d772-11ef-825b-0275dc2ded29",
-                    "config": {
-                        "defaultValue": {
-                            "en": {
-                                "direction": "ltr",
-                                "value": ""
-                            }
-                        },
-                        "i18n_properties": [
-                            "placeholder"
-                        ],
-                        "label": "Timespan Label",
-                        "maxLength": null,
-                        "placeholder": {
-                            "en": "Enter text"
-                        },
-                        "uneditable": false,
-                        "width": "100%"
-                    },
-                    "id": "7ce2b7bc-d772-11ef-825b-0275dc2ded29",
-                    "label": {
-                        "en": "Timespan Label"
-                    },
-                    "node_id": "7ce22d2e-d772-11ef-825b-0275dc2ded29",
-                    "sortorder": 5,
-                    "source_identifier_id": null,
-                    "visible": false,
-                    "widget_id": "10000000-0000-0000-0000-000000000001"
-                },
-                {
                     "card_id": "7ce2042a-d772-11ef-825b-0275dc2ded29",
                     "config": {
                         "defaultValue": {
@@ -1414,7 +1033,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Textual Work External URI",
+                        "label": "External URI",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -1424,7 +1043,7 @@
                     },
                     "id": "7ce2c2ac-d772-11ef-825b-0275dc2ded29",
                     "label": {
-                        "en": "Textual Work External URI"
+                        "en": "External URI"
                     },
                     "node_id": "7ce201c8-d772-11ef-825b-0275dc2ded29",
                     "sortorder": null,
@@ -1464,7 +1083,7 @@
                         "en": "Lowest possible value"
                     },
                     "node_id": "7ce26b86-d772-11ef-825b-0275dc2ded29",
-                    "sortorder": 2,
+                    "sortorder": 7,
                     "source_identifier_id": null,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000008"
@@ -1501,7 +1120,7 @@
                         "en": "Value"
                     },
                     "node_id": "7ce25fb0-d772-11ef-825b-0275dc2ded29",
-                    "sortorder": 1,
+                    "sortorder": 6,
                     "source_identifier_id": null,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000008"
@@ -1523,7 +1142,7 @@
                         "en": "Dimension Type"
                     },
                     "node_id": "7ce27d60-d772-11ef-825b-0275dc2ded29",
-                    "sortorder": 0,
+                    "sortorder": 3,
                     "source_identifier_id": null,
                     "visible": true,
                     "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
@@ -1545,7 +1164,7 @@
                         "en": "Source Reference Work for Dimension"
                     },
                     "node_id": "7ce24a02-d772-11ef-825b-0275dc2ded29",
-                    "sortorder": 6,
+                    "sortorder": 11,
                     "source_identifier_id": null,
                     "visible": false,
                     "widget_id": "ff3c400a-76ec-11e7-a793-784f435179ea"
@@ -1567,7 +1186,7 @@
                         "en": "Unit"
                     },
                     "node_id": "7ce26f64-d772-11ef-825b-0275dc2ded29",
-                    "sortorder": 4,
+                    "sortorder": 9,
                     "source_identifier_id": null,
                     "visible": true,
                     "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
@@ -1597,7 +1216,7 @@
                         "en": "Dimension Label"
                     },
                     "node_id": "7ce27c84-d772-11ef-825b-0275dc2ded29",
-                    "sortorder": 5,
+                    "sortorder": 10,
                     "source_identifier_id": null,
                     "visible": false,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
@@ -1634,7 +1253,7 @@
                         "en": "Highest possible value"
                     },
                     "node_id": "7ce269e2-d772-11ef-825b-0275dc2ded29",
-                    "sortorder": 3,
+                    "sortorder": 8,
                     "source_identifier_id": null,
                     "visible": true,
                     "widget_id": "10000000-0000-0000-0000-000000000008"
@@ -1646,14 +1265,14 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Textual Work Language",
+                        "label": "Language",
                         "placeholder": {
                             "en": "Select an option"
                         }
                     },
                     "id": "7ce2c716-d772-11ef-825b-0275dc2ded29",
                     "label": {
-                        "en": "Textual Work Language"
+                        "en": "Language"
                     },
                     "node_id": "7ce1eb70-d772-11ef-825b-0275dc2ded29",
                     "sortorder": null,
@@ -1700,7 +1319,7 @@
                         "en": "Source"
                     },
                     "node_id": "7ce2764e-d772-11ef-825b-0275dc2ded29",
-                    "sortorder": 8,
+                    "sortorder": 17,
                     "source_identifier_id": null,
                     "visible": false,
                     "widget_id": "ff3c400a-76ec-11e7-a793-784f435179ea"
@@ -1722,7 +1341,7 @@
                         "en": "Used Object"
                     },
                     "node_id": "7ce254f2-d772-11ef-825b-0275dc2ded29",
-                    "sortorder": 4,
+                    "sortorder": 13,
                     "source_identifier_id": null,
                     "visible": false,
                     "widget_id": "ff3c400a-76ec-11e7-a793-784f435179ea"
@@ -1734,17 +1353,17 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Textual Work Creator",
+                        "label": "Creator",
                         "placeholder": {
                             "en": ""
                         }
                     },
                     "id": "7ce2cafe-d772-11ef-825b-0275dc2ded29",
                     "label": {
-                        "en": "Textual Work Creator"
+                        "en": "Creator"
                     },
                     "node_id": "7ce25326-d772-11ef-825b-0275dc2ded29",
-                    "sortorder": 1,
+                    "sortorder": 8,
                     "source_identifier_id": null,
                     "visible": true,
                     "widget_id": "ff3c400a-76ec-11e7-a793-784f435179ea"
@@ -1766,7 +1385,7 @@
                         "en": "During"
                     },
                     "node_id": "7ce264ce-d772-11ef-825b-0275dc2ded29",
-                    "sortorder": 5,
+                    "sortorder": 14,
                     "source_identifier_id": null,
                     "visible": false,
                     "widget_id": "ff3c400a-76ec-11e7-a793-784f435179ea"
@@ -1796,7 +1415,7 @@
                         "en": "Label"
                     },
                     "node_id": "7ce22fcc-d772-11ef-825b-0275dc2ded29",
-                    "sortorder": 7,
+                    "sortorder": 16,
                     "source_identifier_id": null,
                     "visible": false,
                     "widget_id": "10000000-0000-0000-0000-000000000001"
@@ -1818,7 +1437,7 @@
                         "en": "Creation Event Technique"
                     },
                     "node_id": "7ce279f0-d772-11ef-825b-0275dc2ded29",
-                    "sortorder": 3,
+                    "sortorder": 12,
                     "source_identifier_id": null,
                     "visible": false,
                     "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
@@ -1830,17 +1449,17 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Textual Work Creation Type",
+                        "label": "Creation Type",
                         "placeholder": {
                             "en": "Select an option"
                         }
                     },
                     "id": "7ce2cdba-d772-11ef-825b-0275dc2ded29",
                     "label": {
-                        "en": "Textual Work Creation Type"
+                        "en": "Creation Type"
                     },
                     "node_id": "7ce27568-d772-11ef-825b-0275dc2ded29",
-                    "sortorder": 0,
+                    "sortorder": 5,
                     "source_identifier_id": null,
                     "visible": true,
                     "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
@@ -1862,7 +1481,7 @@
                         "en": "Caused by"
                     },
                     "node_id": "7ce256be-d772-11ef-825b-0275dc2ded29",
-                    "sortorder": 6,
+                    "sortorder": 15,
                     "source_identifier_id": null,
                     "visible": false,
                     "widget_id": "ff3c400a-76ec-11e7-a793-784f435179ea"
@@ -1874,17 +1493,17 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Textual Work Creation Location",
+                        "label": "Creation Location",
                         "placeholder": {
                             "en": ""
                         }
                     },
                     "id": "7ce2ced2-d772-11ef-825b-0275dc2ded29",
                     "label": {
-                        "en": "Textual Work Creation Location"
+                        "en": "Creation Location"
                     },
                     "node_id": "7ce21cee-d772-11ef-825b-0275dc2ded29",
-                    "sortorder": 2,
+                    "sortorder": 9,
                     "source_identifier_id": null,
                     "visible": true,
                     "widget_id": "ff3c400a-76ec-11e7-a793-784f435179ea"
@@ -1896,19 +1515,19 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Textual Work Subject(s)",
+                        "label": "Subject(s)",
                         "placeholder": {
                             "en": "Select an option"
                         }
                     },
                     "id": "7ce2d3be-d772-11ef-825b-0275dc2ded29",
                     "label": {
-                        "en": "Textual Work Subject(s)"
+                        "en": "Subject(s)"
                     },
                     "node_id": "7ce1fd90-d772-11ef-825b-0275dc2ded29",
                     "sortorder": null,
                     "source_identifier_id": null,
-                    "visible": true,
+                    "visible": false,
                     "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
                 },
                 {
@@ -1918,14 +1537,14 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Reference and Sample Collection Item or Physical Thing Referenced by Textual Work",
+                        "label": "Referenced",
                         "placeholder": {
                             "en": ""
                         }
                     },
                     "id": "7ce2d440-d772-11ef-825b-0275dc2ded29",
                     "label": {
-                        "en": "Reference and Sample Collection Item or Physical Thing Referenced by Textual Work"
+                        "en": "Referenced"
                     },
                     "node_id": "7ce1a782-d772-11ef-825b-0275dc2ded29",
                     "sortorder": 0,
@@ -1945,7 +1564,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Textual Work Text Content",
+                        "label": "Text Content",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -1955,7 +1574,7 @@
                     },
                     "id": "7ce2d4e0-d772-11ef-825b-0275dc2ded29",
                     "label": {
-                        "en": "Textual Work Text Content"
+                        "en": "Text Content"
                     },
                     "node_id": "7ce1c7e4-d772-11ef-825b-0275dc2ded29",
                     "sortorder": null,
@@ -2036,6 +1655,211 @@
                     "source_identifier_id": null,
                     "visible": true,
                     "widget_id": "31f3728c-7613-11e7-a139-784f435179ea"
+                },
+                {
+                    "card_id": "7ce1dcf2-d772-11ef-825b-0275dc2ded29",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Dimension Name",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "a9364101-6c06-4a81-9e0f-dd6292c20d2d",
+                    "label": {
+                        "en": "Dimension Name"
+                    },
+                    "node_id": "7ce26d70-d772-11ef-825b-0275dc2ded29",
+                    "sortorder": 0,
+                    "source_identifier_id": null,
+                    "visible": true,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "7ce1dcf2-d772-11ef-825b-0275dc2ded29",
+                    "config": {
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Dimension_Name_language",
+                        "placeholder": {
+                            "en": "Select an option"
+                        }
+                    },
+                    "id": "aabad89f-9ac4-44f8-85b2-7911eaa85fae",
+                    "label": {
+                        "en": "Dimension_Name_language"
+                    },
+                    "node_id": "7ce21faa-d772-11ef-825b-0275dc2ded29",
+                    "sortorder": 4,
+                    "source_identifier_id": null,
+                    "visible": false,
+                    "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
+                },
+                {
+                    "card_id": "7ce1b0ba-d772-11ef-825b-0275dc2ded29",
+                    "config": {
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Creation_time_type",
+                        "placeholder": {
+                            "en": "Select an option"
+                        }
+                    },
+                    "id": "b2f3811e-c038-4a34-92a6-d79df05d3b31",
+                    "label": {
+                        "en": "Creation_time_type"
+                    },
+                    "node_id": "7ce22806-d772-11ef-825b-0275dc2ded29",
+                    "sortorder": 4,
+                    "source_identifier_id": null,
+                    "visible": false,
+                    "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
+                },
+                {
+                    "card_id": "7ce1b0ba-d772-11ef-825b-0275dc2ded29",
+                    "config": {
+                        "defaultValue": "",
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Creation Date",
+                        "placeholder": {
+                            "en": ""
+                        }
+                    },
+                    "id": "dcc56090-1740-42f1-a8b1-79a61b529f66",
+                    "label": {
+                        "en": "Creation Date"
+                    },
+                    "node_id": "557af24e-47e9-4f1e-9a66-9cfbb87b7a08",
+                    "sortorder": 6,
+                    "source_identifier_id": null,
+                    "visible": true,
+                    "widget_id": "adfd15ce-dbab-11e7-86d1-0fcf08612b27"
+                },
+                {
+                    "card_id": "7ce1b0ba-d772-11ef-825b-0275dc2ded29",
+                    "config": {
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Creation_Statement_language",
+                        "placeholder": {
+                            "en": "Select an option"
+                        }
+                    },
+                    "id": "dd18fc6b-c524-416f-9330-ffcc56978fb5",
+                    "label": {
+                        "en": "Creation_Statement_language"
+                    },
+                    "node_id": "7ce28846-d772-11ef-825b-0275dc2ded29",
+                    "sortorder": 7,
+                    "source_identifier_id": null,
+                    "visible": false,
+                    "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
+                },
+                {
+                    "card_id": "7ce1b0ba-d772-11ef-825b-0275dc2ded29",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Creation_time_label",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "e2f64056-90ab-40f5-a025-2bdf05723f7a",
+                    "label": {
+                        "en": "Creation_time_label"
+                    },
+                    "node_id": "7ce22d2e-d772-11ef-825b-0275dc2ded29",
+                    "sortorder": 2,
+                    "source_identifier_id": null,
+                    "visible": false,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "7ce1dcf2-d772-11ef-825b-0275dc2ded29",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Dimension label",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "e84b55aa-3424-44a0-8c43-f6e8175f99aa",
+                    "label": {
+                        "en": "Dimension label"
+                    },
+                    "node_id": "7ce26e74-d772-11ef-825b-0275dc2ded29",
+                    "sortorder": 1,
+                    "source_identifier_id": null,
+                    "visible": false,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "card_id": "7ce1b0ba-d772-11ef-825b-0275dc2ded29",
+                    "config": {
+                        "defaultValue": {
+                            "en": {
+                                "direction": "ltr",
+                                "value": ""
+                            }
+                        },
+                        "i18n_properties": [
+                            "placeholder"
+                        ],
+                        "label": "Creation_Statement_label",
+                        "maxLength": null,
+                        "placeholder": {
+                            "en": "Enter text"
+                        },
+                        "uneditable": false,
+                        "width": "100%"
+                    },
+                    "id": "ef58cef8-03c6-417f-a948-adf65c5bfa71",
+                    "label": {
+                        "en": "Creation_Statement_label"
+                    },
+                    "node_id": "7ce28a1c-d772-11ef-825b-0275dc2ded29",
+                    "sortorder": 1,
+                    "source_identifier_id": null,
+                    "visible": false,
+                    "widget_id": "10000000-0000-0000-0000-000000000001"
                 }
             ],
             "color": "rgba(165,50,20,0.75)",
@@ -2764,27 +2588,13 @@
                 },
                 {
                     "cardinality": "1",
-                    "grouping_node_id": "7ce1bf4c-d772-11ef-825b-0275dc2ded29",
-                    "legacygroupid": null,
-                    "nodegroupid": "7ce1bf4c-d772-11ef-825b-0275dc2ded29",
-                    "parentnodegroup_id": "7ce1adc2-d772-11ef-825b-0275dc2ded29"
-                },
-                {
-                    "cardinality": "1",
                     "grouping_node_id": "7ce1c7e4-d772-11ef-825b-0275dc2ded29",
                     "legacygroupid": null,
                     "nodegroupid": "7ce1c7e4-d772-11ef-825b-0275dc2ded29",
                     "parentnodegroup_id": null
                 },
                 {
-                    "cardinality": "1",
-                    "grouping_node_id": "7ce1d19e-d772-11ef-825b-0275dc2ded29",
-                    "legacygroupid": null,
-                    "nodegroupid": "7ce1d19e-d772-11ef-825b-0275dc2ded29",
-                    "parentnodegroup_id": "7ce1da72-d772-11ef-825b-0275dc2ded29"
-                },
-                {
-                    "cardinality": "1",
+                    "cardinality": "n",
                     "grouping_node_id": "7ce1d612-d772-11ef-825b-0275dc2ded29",
                     "legacygroupid": null,
                     "nodegroupid": "7ce1d612-d772-11ef-825b-0275dc2ded29",
@@ -2798,14 +2608,7 @@
                     "parentnodegroup_id": null
                 },
                 {
-                    "cardinality": "1",
-                    "grouping_node_id": "7ce1deb4-d772-11ef-825b-0275dc2ded29",
-                    "legacygroupid": null,
-                    "nodegroupid": "7ce1deb4-d772-11ef-825b-0275dc2ded29",
-                    "parentnodegroup_id": "7ce1adc2-d772-11ef-825b-0275dc2ded29"
-                },
-                {
-                    "cardinality": "1",
+                    "cardinality": "n",
                     "grouping_node_id": "7ce1e2ec-d772-11ef-825b-0275dc2ded29",
                     "legacygroupid": null,
                     "nodegroupid": "7ce1e2ec-d772-11ef-825b-0275dc2ded29",
@@ -2819,7 +2622,7 @@
                     "parentnodegroup_id": null
                 },
                 {
-                    "cardinality": "1",
+                    "cardinality": "n",
                     "grouping_node_id": "7ce1ef9e-d772-11ef-825b-0275dc2ded29",
                     "legacygroupid": null,
                     "nodegroupid": "7ce1ef9e-d772-11ef-825b-0275dc2ded29",
@@ -2861,7 +2664,7 @@
                     "parentnodegroup_id": null
                 },
                 {
-                    "cardinality": "1",
+                    "cardinality": "n",
                     "grouping_node_id": "7ce2124e-d772-11ef-825b-0275dc2ded29",
                     "legacygroupid": null,
                     "nodegroupid": "7ce2124e-d772-11ef-825b-0275dc2ded29",
@@ -2892,7 +2695,7 @@
                     "issearchable": true,
                     "istopnode": false,
                     "name": "Creation_time_edtf",
-                    "nodegroup_id": "7ce1bf4c-d772-11ef-825b-0275dc2ded29",
+                    "nodegroup_id": "7ce1adc2-d772-11ef-825b-0275dc2ded29",
                     "nodeid": "557af24e-47e9-4f1e-9a66-9cfbb87b7a08",
                     "ontologyclass": "http://www.w3.org/2000/01/rdf-schema#Literal",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P82_at_some_time_within",
@@ -2977,13 +2780,13 @@
                     "fieldname": null,
                     "graph_id": "7ce192f6-d772-11ef-825b-0275dc2ded29",
                     "hascustomalias": false,
-                    "is_collector": true,
+                    "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
                     "issearchable": false,
                     "istopnode": false,
                     "name": "Creation_time",
-                    "nodegroup_id": "7ce1bf4c-d772-11ef-825b-0275dc2ded29",
+                    "nodegroup_id": "7ce1adc2-d772-11ef-825b-0275dc2ded29",
                     "nodeid": "7ce1bf4c-d772-11ef-825b-0275dc2ded29",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span",
@@ -3023,13 +2826,13 @@
                     "fieldname": null,
                     "graph_id": "7ce192f6-d772-11ef-825b-0275dc2ded29",
                     "hascustomalias": false,
-                    "is_collector": true,
+                    "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
                     "issearchable": false,
                     "istopnode": false,
                     "name": "Dimension_Name",
-                    "nodegroup_id": "7ce1d19e-d772-11ef-825b-0275dc2ded29",
+                    "nodegroup_id": "7ce1da72-d772-11ef-825b-0275dc2ded29",
                     "nodeid": "7ce1d19e-d772-11ef-825b-0275dc2ded29",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E33_E41_Linguistic_Appellation",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by",
@@ -3092,13 +2895,13 @@
                     "fieldname": null,
                     "graph_id": "7ce192f6-d772-11ef-825b-0275dc2ded29",
                     "hascustomalias": false,
-                    "is_collector": true,
+                    "is_collector": false,
                     "is_immutable": false,
                     "isrequired": false,
                     "issearchable": false,
                     "istopnode": false,
                     "name": "Creation_Statement",
-                    "nodegroup_id": "7ce1deb4-d772-11ef-825b-0275dc2ded29",
+                    "nodegroup_id": "7ce1adc2-d772-11ef-825b-0275dc2ded29",
                     "nodeid": "7ce1deb4-d772-11ef-825b-0275dc2ded29",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by",
@@ -3354,7 +3157,7 @@
                     "issearchable": false,
                     "istopnode": false,
                     "name": "Dimension_Name_type",
-                    "nodegroup_id": "7ce1d19e-d772-11ef-825b-0275dc2ded29",
+                    "nodegroup_id": "7ce1da72-d772-11ef-825b-0275dc2ded29",
                     "nodeid": "7ce21870-d772-11ef-825b-0275dc2ded29",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E55_Type",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
@@ -3417,7 +3220,7 @@
                     "issearchable": false,
                     "istopnode": false,
                     "name": "Dimension_Name_language",
-                    "nodegroup_id": "7ce1d19e-d772-11ef-825b-0275dc2ded29",
+                    "nodegroup_id": "7ce1da72-d772-11ef-825b-0275dc2ded29",
                     "nodeid": "7ce21faa-d772-11ef-825b-0275dc2ded29",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E56_Language",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P72_has_language",
@@ -3492,7 +3295,7 @@
                     "issearchable": false,
                     "istopnode": false,
                     "name": "Creation_time_type",
-                    "nodegroup_id": "7ce1bf4c-d772-11ef-825b-0275dc2ded29",
+                    "nodegroup_id": "7ce1adc2-d772-11ef-825b-0275dc2ded29",
                     "nodeid": "7ce22806-d772-11ef-825b-0275dc2ded29",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E55_Type",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
@@ -3538,7 +3341,7 @@
                     "issearchable": false,
                     "istopnode": false,
                     "name": "Creation_time_label",
-                    "nodegroup_id": "7ce1bf4c-d772-11ef-825b-0275dc2ded29",
+                    "nodegroup_id": "7ce1adc2-d772-11ef-825b-0275dc2ded29",
                     "nodeid": "7ce22d2e-d772-11ef-825b-0275dc2ded29",
                     "ontologyclass": "http://www.w3.org/2001/XMLSchema#string",
                     "parentproperty": "http://www.w3.org/2000/01/rdf-schema#label",
@@ -3822,7 +3625,7 @@
                     "issearchable": false,
                     "istopnode": false,
                     "name": "Creation_Statement_type_metatype",
-                    "nodegroup_id": "7ce1deb4-d772-11ef-825b-0275dc2ded29",
+                    "nodegroup_id": "7ce1adc2-d772-11ef-825b-0275dc2ded29",
                     "nodeid": "7ce24624-d772-11ef-825b-0275dc2ded29",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E55_Type",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
@@ -4069,7 +3872,7 @@
                     "issearchable": false,
                     "istopnode": false,
                     "name": "Creation_Statement_type",
-                    "nodegroup_id": "7ce1deb4-d772-11ef-825b-0275dc2ded29",
+                    "nodegroup_id": "7ce1adc2-d772-11ef-825b-0275dc2ded29",
                     "nodeid": "7ce2579a-d772-11ef-825b-0275dc2ded29",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E55_Type",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
@@ -4080,6 +3883,7 @@
                 {
                     "alias": "dimension_name_source",
                     "config": {
+                        "defaultValue": [],
                         "graphs": [
                             {
                                 "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
@@ -4105,7 +3909,7 @@
                     "issearchable": false,
                     "istopnode": false,
                     "name": "Dimension_Name_source",
-                    "nodegroup_id": "7ce1d19e-d772-11ef-825b-0275dc2ded29",
+                    "nodegroup_id": "7ce1da72-d772-11ef-825b-0275dc2ded29",
                     "nodeid": "7ce25ed4-d772-11ef-825b-0275dc2ded29",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by",
@@ -4292,7 +4096,7 @@
                     "issearchable": false,
                     "istopnode": false,
                     "name": "Dimension_Name_content",
-                    "nodegroup_id": "7ce1d19e-d772-11ef-825b-0275dc2ded29",
+                    "nodegroup_id": "7ce1da72-d772-11ef-825b-0275dc2ded29",
                     "nodeid": "7ce26d70-d772-11ef-825b-0275dc2ded29",
                     "ontologyclass": "http://www.w3.org/2001/XMLSchema#string",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P190_has_symbolic_content",
@@ -4315,7 +4119,7 @@
                     "issearchable": false,
                     "istopnode": false,
                     "name": "Dimension_Name_label",
-                    "nodegroup_id": "7ce1d19e-d772-11ef-825b-0275dc2ded29",
+                    "nodegroup_id": "7ce1da72-d772-11ef-825b-0275dc2ded29",
                     "nodeid": "7ce26e74-d772-11ef-825b-0275dc2ded29",
                     "ontologyclass": "http://www.w3.org/2001/XMLSchema#string",
                     "parentproperty": "http://www.w3.org/2000/01/rdf-schema#label",
@@ -4553,7 +4357,7 @@
                     "issearchable": false,
                     "istopnode": false,
                     "name": "Creation_Statement_language",
-                    "nodegroup_id": "7ce1deb4-d772-11ef-825b-0275dc2ded29",
+                    "nodegroup_id": "7ce1adc2-d772-11ef-825b-0275dc2ded29",
                     "nodeid": "7ce28846-d772-11ef-825b-0275dc2ded29",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E56_Language",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P72_has_language",
@@ -4564,6 +4368,7 @@
                 {
                     "alias": "creation_statement_source",
                     "config": {
+                        "defaultValue": [],
                         "graphs": [
                             {
                                 "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
@@ -4589,7 +4394,7 @@
                     "issearchable": false,
                     "istopnode": false,
                     "name": "Creation_Statement_source",
-                    "nodegroup_id": "7ce1deb4-d772-11ef-825b-0275dc2ded29",
+                    "nodegroup_id": "7ce1adc2-d772-11ef-825b-0275dc2ded29",
                     "nodeid": "7ce28940-d772-11ef-825b-0275dc2ded29",
                     "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by",
@@ -4612,7 +4417,7 @@
                     "issearchable": false,
                     "istopnode": false,
                     "name": "Creation_Statement_label",
-                    "nodegroup_id": "7ce1deb4-d772-11ef-825b-0275dc2ded29",
+                    "nodegroup_id": "7ce1adc2-d772-11ef-825b-0275dc2ded29",
                     "nodeid": "7ce28a1c-d772-11ef-825b-0275dc2ded29",
                     "ontologyclass": "http://www.w3.org/2001/XMLSchema#string",
                     "parentproperty": "http://www.w3.org/2000/01/rdf-schema#label",
@@ -4635,7 +4440,7 @@
                     "issearchable": true,
                     "istopnode": false,
                     "name": "Creation_Statement_content",
-                    "nodegroup_id": "7ce1deb4-d772-11ef-825b-0275dc2ded29",
+                    "nodegroup_id": "7ce1adc2-d772-11ef-825b-0275dc2ded29",
                     "nodeid": "7ce28af8-d772-11ef-825b-0275dc2ded29",
                     "ontologyclass": "http://www.w3.org/2001/XMLSchema#string",
                     "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P190_has_symbolic_content",
@@ -4648,9 +4453,9 @@
             "publication": {
                 "graph_id": "7ce192f6-d772-11ef-825b-0275dc2ded29",
                 "most_recent_edit_id": null,
-                "notes": "Part 1",
-                "publicationid": "faafdc5b-048f-4ae5-b4d6-aa1f1e1a8f1a",
-                "published_time": "2026-07-10T11:55:13.830"
+                "notes": null,
+                "publicationid": "fce526c7-12f2-471e-b467-4d985ef1a466",
+                "published_time": "2026-10-14T13:49:22.737"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
@@ -4743,7 +4548,7 @@
             "subtitle": {
                 "en": "A conceptual, text-based work"
             },
-            "template_id": "50000000-0000-0000-0000-000000000001",
+            "template_id": "b0908227-ecc2-48dd-931b-314a9031caa0",
             "user_permissions": {},
             "version": ""
         }
@@ -4752,6 +4557,6 @@
         "db": "PostgreSQL 16.13 on aarch64-unknown-linux-gnu, compiled by aarch64-unknown-linux-gnu-gcc (GCC) 12.4.0, 64-bit",
         "git hash": "fatal: not a git repository (or any of the parent directories): .git",
         "os": "Linux",
-        "os version": "6.1.174"
+        "os version": "6.1.186"
     }
 }

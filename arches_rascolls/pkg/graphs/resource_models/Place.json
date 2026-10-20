@@ -28,7 +28,7 @@
                         "en": "Broader Place"
                     },
                     "nodegroup_id": "3ddaa562-d771-11ef-825b-0275dc2ded29",
-                    "sortorder": 3,
+                    "sortorder": 4,
                     "source_identifier_id": null,
                     "visible": true
                 },
@@ -54,7 +54,7 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Place External URI"
+                        "en": "External URI"
                     },
                     "nodegroup_id": "3ddaa8e6-d771-11ef-825b-0275dc2ded29",
                     "sortorder": 6,
@@ -83,7 +83,7 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Internal Label for Place"
+                        "en": "Internal Label"
                     },
                     "nodegroup_id": "3ddaade6-d771-11ef-825b-0275dc2ded29",
                     "sortorder": 9,
@@ -112,7 +112,7 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Place Name"
+                        "en": "Name"
                     },
                     "nodegroup_id": "3ddab19c-d771-11ef-825b-0275dc2ded29",
                     "sortorder": 0,
@@ -141,12 +141,12 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Place Type"
+                        "en": "Type"
                     },
                     "nodegroup_id": "3ddab4e4-d771-11ef-825b-0275dc2ded29",
-                    "sortorder": 1,
+                    "sortorder": 2,
                     "source_identifier_id": null,
-                    "visible": true
+                    "visible": false
                 },
                 {
                     "active": true,
@@ -170,10 +170,10 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Place Identifier"
+                        "en": "Identifier"
                     },
                     "nodegroup_id": "3ddab854-d771-11ef-825b-0275dc2ded29",
-                    "sortorder": 5,
+                    "sortorder": 1,
                     "source_identifier_id": null,
                     "visible": true
                 },
@@ -199,10 +199,10 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Approximate Place Location"
+                        "en": "Approximate Location"
                     },
                     "nodegroup_id": "3ddabb9c-d771-11ef-825b-0275dc2ded29",
-                    "sortorder": 2,
+                    "sortorder": 3,
                     "source_identifier_id": null,
                     "visible": true
                 },
@@ -228,10 +228,10 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Geospatial Definition of Place"
+                        "en": "Geospatial Definition"
                     },
                     "nodegroup_id": "3ddabeda-d771-11ef-825b-0275dc2ded29",
-                    "sortorder": 4,
+                    "sortorder": 5,
                     "source_identifier_id": null,
                     "visible": true
                 },
@@ -255,7 +255,7 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Digital Reference to Place"
+                        "en": "Digital Reference"
                     },
                     "nodegroup_id": "3ddac218-d771-11ef-825b-0275dc2ded29",
                     "sortorder": 8,
@@ -284,7 +284,7 @@
                         "en": ""
                     },
                     "name": {
-                        "en": "Statement about Place"
+                        "en": "Statement"
                     },
                     "nodegroup_id": "3ddac588-d771-11ef-825b-0275dc2ded29",
                     "sortorder": 7,
@@ -362,7 +362,7 @@
                     "node_id": "3ddadcee-d771-11ef-825b-0275dc2ded29",
                     "sortorder": 2,
                     "source_identifier_id": null,
-                    "visible": true,
+                    "visible": false,
                     "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
                 },
                 {
@@ -377,7 +377,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Place Name",
+                        "label": "Name",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -387,7 +387,7 @@
                     },
                     "id": "3ddae900-d771-11ef-825b-0275dc2ded29",
                     "label": {
-                        "en": "Place Name"
+                        "en": "Name"
                     },
                     "node_id": "3ddacdf8-d771-11ef-825b-0275dc2ded29",
                     "sortorder": 0,
@@ -525,7 +525,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Statement about Place",
+                        "label": "Statement",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -535,7 +535,7 @@
                     },
                     "id": "3ddaf152-d771-11ef-825b-0275dc2ded29",
                     "label": {
-                        "en": "Statement about Place"
+                        "en": "Statement"
                     },
                     "node_id": "3ddacee8-d771-11ef-825b-0275dc2ded29",
                     "sortorder": 0,
@@ -590,7 +590,7 @@
                     "node_id": "3ddad744-d771-11ef-825b-0275dc2ded29",
                     "sortorder": 3,
                     "source_identifier_id": null,
-                    "visible": true,
+                    "visible": false,
                     "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
                 },
                 {
@@ -649,19 +649,19 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Place Type",
+                        "label": "Type",
                         "placeholder": {
                             "en": "Select an option"
                         }
                     },
                     "id": "3ddaf314-d771-11ef-825b-0275dc2ded29",
                     "label": {
-                        "en": "Place Type"
+                        "en": "Type"
                     },
                     "node_id": "3ddab4e4-d771-11ef-825b-0275dc2ded29",
                     "sortorder": null,
                     "source_identifier_id": null,
-                    "visible": true,
+                    "visible": false,
                     "widget_id": "19e56148-82b8-47eb-b66e-f6243639a1a8"
                 },
                 {
@@ -728,7 +728,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Place Identifier",
+                        "label": "Identifier",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -738,7 +738,7 @@
                     },
                     "id": "3ddaf4cc-d771-11ef-825b-0275dc2ded29",
                     "label": {
-                        "en": "Place Identifier"
+                        "en": "Identifier"
                     },
                     "node_id": "3ddae18a-d771-11ef-825b-0275dc2ded29",
                     "sortorder": 0,
@@ -780,7 +780,7 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Place External URI",
+                        "label": "External URI",
                         "maxLength": null,
                         "placeholder": {
                             "en": "Enter text"
@@ -790,7 +790,7 @@
                     },
                     "id": "3ddaf5ee-d771-11ef-825b-0275dc2ded29",
                     "label": {
-                        "en": "Place External URI"
+                        "en": "External URI"
                     },
                     "node_id": "3ddaa8e6-d771-11ef-825b-0275dc2ded29",
                     "sortorder": 0,
@@ -827,14 +827,14 @@
                         "i18n_properties": [
                             "placeholder"
                         ],
-                        "label": "Approximate Place Location",
+                        "label": "Approximate Location",
                         "placeholder": {
                             "en": ""
                         }
                     },
                     "id": "3ddaf71a-d771-11ef-825b-0275dc2ded29",
                     "label": {
-                        "en": "Approximate Place Location"
+                        "en": "Approximate Location"
                     },
                     "node_id": "3ddabb9c-d771-11ef-825b-0275dc2ded29",
                     "sortorder": null,
@@ -1337,7 +1337,7 @@
                     "parentnodegroup_id": null
                 },
                 {
-                    "cardinality": "1",
+                    "cardinality": "n",
                     "grouping_node_id": "3ddaa8e6-d771-11ef-825b-0275dc2ded29",
                     "legacygroupid": null,
                     "nodegroupid": "3ddaa8e6-d771-11ef-825b-0275dc2ded29",
@@ -1351,7 +1351,7 @@
                     "parentnodegroup_id": null
                 },
                 {
-                    "cardinality": "1",
+                    "cardinality": "n",
                     "grouping_node_id": "3ddab19c-d771-11ef-825b-0275dc2ded29",
                     "legacygroupid": null,
                     "nodegroupid": "3ddab19c-d771-11ef-825b-0275dc2ded29",
@@ -1365,7 +1365,7 @@
                     "parentnodegroup_id": null
                 },
                 {
-                    "cardinality": "1",
+                    "cardinality": "n",
                     "grouping_node_id": "3ddab854-d771-11ef-825b-0275dc2ded29",
                     "legacygroupid": null,
                     "nodegroupid": "3ddab854-d771-11ef-825b-0275dc2ded29",
@@ -1386,14 +1386,14 @@
                     "parentnodegroup_id": null
                 },
                 {
-                    "cardinality": "1",
+                    "cardinality": "n",
                     "grouping_node_id": "3ddac218-d771-11ef-825b-0275dc2ded29",
                     "legacygroupid": null,
                     "nodegroupid": "3ddac218-d771-11ef-825b-0275dc2ded29",
                     "parentnodegroup_id": null
                 },
                 {
-                    "cardinality": "1",
+                    "cardinality": "n",
                     "grouping_node_id": "3ddac588-d771-11ef-825b-0275dc2ded29",
                     "legacygroupid": null,
                     "nodegroupid": "3ddac588-d771-11ef-825b-0275dc2ded29",
@@ -2143,28 +2143,28 @@
             "publication": {
                 "graph_id": "3dda9f54-d771-11ef-825b-0275dc2ded29",
                 "most_recent_edit_id": null,
-                "notes": "Part 1",
-                "publicationid": "59c5da36-b3ed-42bd-b47b-fa08b19b152b",
-                "published_time": "2026-07-10T11:23:53.201"
+                "notes": null,
+                "publicationid": "77e8b119-01f7-4620-a4d0-170def17907d",
+                "published_time": "2026-10-14T13:40:58.914"
             },
             "relatable_resource_model_ids": [],
             "resource_2_resource_constraints": [],
             "resource_instance_lifecycle": {
                 "id": "7e3cce56-fbfb-4a4b-8e83-59b9f9e7cb75",
                 "name": {
-                    "en": "Standard"
+                    "null": "Standard"
                 },
                 "resource_instance_lifecycle_states": [
                     {
                         "action_label": {
-                            "en": "Revert to Draft"
+                            "null": "Revert to Draft"
                         },
                         "can_delete_resource_instances": true,
                         "can_edit_resource_instances": true,
                         "id": "9375c9a7-dad2-4f14-a5c1-d7e329fdde4f",
                         "is_initial_state": true,
                         "name": {
-                            "en": "Draft"
+                            "null": "Draft"
                         },
                         "next_resource_instance_lifecycle_states": [
                             "f75bb034-36e3-4ab4-8167-f520cf0b4c58"
@@ -2174,14 +2174,14 @@
                     },
                     {
                         "action_label": {
-                            "en": "Make Active"
+                            "null": "Make Active"
                         },
                         "can_delete_resource_instances": false,
                         "can_edit_resource_instances": true,
                         "id": "f75bb034-36e3-4ab4-8167-f520cf0b4c58",
                         "is_initial_state": false,
                         "name": {
-                            "en": "Active"
+                            "null": "Active"
                         },
                         "next_resource_instance_lifecycle_states": [
                             "d95d9c0e-0e2c-4450-93a3-d788b91abcc8"
@@ -2193,14 +2193,14 @@
                     },
                     {
                         "action_label": {
-                            "en": "Retire"
+                            "null": "Retire"
                         },
                         "can_delete_resource_instances": false,
                         "can_edit_resource_instances": false,
                         "id": "d95d9c0e-0e2c-4450-93a3-d788b91abcc8",
                         "is_initial_state": false,
                         "name": {
-                            "en": "Retired"
+                            "null": "Retired"
                         },
                         "next_resource_instance_lifecycle_states": [],
                         "previous_resource_instance_lifecycle_states": [
@@ -2244,9 +2244,9 @@
         }
     ],
     "metadata": {
-        "db": "PostgreSQL 18.4 (Debian 18.4-1.pgdg13+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit",
-        "git hash": "1e55cecf94 2026-07-28 15:08:09 -0700",
-        "os": "Darwin",
-        "os version": "24.6.0"
+        "db": "PostgreSQL 16.13 on aarch64-unknown-linux-gnu, compiled by aarch64-unknown-linux-gnu-gcc (GCC) 12.4.0, 64-bit",
+        "git hash": "fatal: not a git repository (or any of the parent directories): .git",
+        "os": "Linux",
+        "os version": "6.1.186"
     }
 }
