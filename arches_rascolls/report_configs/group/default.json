@@ -116,7 +116,7 @@
                               "contact_point_type"
                             ],
                             "custom_labels": {},
-                            "nodegroup_alias": "contact_point_",
+                            "nodegroup_alias": "contact_point",
                             "custom_card_name": null
                           },
                           "component": "arches_modular_reports/ModularReport/components/DataSection"
@@ -162,10 +162,10 @@
                         {
                           "config": {
                             "node_aliases": [
-                              "_label"
+                              "label"
                             ],
                             "custom_labels": {},
-                            "nodegroup_alias": "_label",
+                            "nodegroup_alias": "label",
                             "custom_card_name": null
                           },
                           "component": "arches_modular_reports/ModularReport/components/DataSection"

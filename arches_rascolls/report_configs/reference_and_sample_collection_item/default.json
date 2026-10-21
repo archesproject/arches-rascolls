@@ -70,7 +70,7 @@
                                                         "has_write_permission": true,
                                                         "filters": [
                                                             {
-                                                                "alias": "name_type_",
+                                                                "alias": "name_type",
                                                                 "value": [
                                                                     {
                                                                         "labels": [
@@ -93,7 +93,7 @@
                                                         "nodegroup_alias": "name",
                                                         "node_aliases": [
                                                             "name_content",
-                                                            "name_type_"
+                                                            "name_type"
                                                         ],
                                                         "custom_labels": {},
                                                         "custom_card_name": "Additional Names",
@@ -157,7 +157,7 @@
                                                 {
                                                     "component": "arches_rascolls/ModularReport/components/DataSection",
                                                     "config": {
-                                                        "nodegroup_alias": "production_",
+                                                        "nodegroup_alias": "production",
                                                         "node_aliases": [
                                                             "production_location"
                                                         ],
@@ -174,7 +174,7 @@
                                                 {
                                                     "component": "arches_rascolls/ModularReport/components/DataSection",
                                                     "config": {
-                                                        "nodegroup_alias": "production_",
+                                                        "nodegroup_alias": "production",
                                                         "node_aliases": [
                                                             "production_carried_out_by"
                                                         ],
@@ -243,7 +243,7 @@
                                                         "nodegroup_alias": "chemical_material_name",
                                                         "node_aliases": [
                                                             "chemical_material_name_content",
-                                                            "chemical_material_name_type_"
+                                                            "chemical_material_name_type"
                                                         ],
                                                         "custom_labels": {
                                                             "chemical_material_name_content": "Chemical Formula"
@@ -464,8 +464,8 @@
                                                         "nodegroup_alias": "name",
                                                         "node_aliases": [
                                                             "name_content",
-                                                            "name_type_",
-                                                            "name_language_"
+                                                            "name_type",
+                                                            "name_language"
                                                         ],
                                                         "custom_labels": {},
                                                         "custom_card_name": "Common & Additional Names",
@@ -597,8 +597,8 @@
                                                     "config": {
                                                         "nodegroup_alias": "dimension",
                                                         "node_aliases": [
-                                                            "dimension_type_",
-                                                            "dimension_value_",
+                                                            "dimension_type",
+                                                            "dimension_value",
                                                             "dimension_unit"
                                                         ],
                                                         "custom_labels": {},
@@ -779,7 +779,7 @@
                                                 {
                                                     "component": "arches_rascolls/ModularReport/components/DataSection",
                                                     "config": {
-                                                        "nodegroup_alias": "production_",
+                                                        "nodegroup_alias": "production",
                                                         "node_aliases": [
                                                             "production_type",
                                                             "production_carried_out_by",
