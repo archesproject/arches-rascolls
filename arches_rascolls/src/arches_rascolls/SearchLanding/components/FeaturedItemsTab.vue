@@ -89,6 +89,7 @@ async function loadResourceTypes(): Promise<void> {
 function onSelectFeaturedItem(featuredItem: FeaturedItem): void {
     usePendingSearchStore().set({
         searchDefinition: featuredItem.search_definition,
+        searchName: featuredItem.saved_search_name,
     });
     router.push({ name: routeNames.simpleSearch });
 }

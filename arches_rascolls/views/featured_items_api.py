@@ -19,6 +19,7 @@ class FeaturedItemsAPI(View):
                         "description": item.display_description,
                         "icon": item.presentation.get("icon"),
                         "color": item.presentation.get("color"),
+                        "saved_search_name": item.saved_search.name,
                         "search_definition": item.saved_search.query_definition,
                     }
                     for item in items

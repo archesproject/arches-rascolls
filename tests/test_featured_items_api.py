@@ -52,4 +52,5 @@ class FeaturedItemsAPITest(TestCase):
         self.assertEqual(result["description"], "Custom description")
         self.assertEqual(result["icon"], "pi-palette")
         self.assertEqual(result["color"], "#0d9488")
+        self.assertEqual(result["saved_search_name"], saved_search.name)
         self.assertEqual(result["search_definition"], saved_search.query_definition)

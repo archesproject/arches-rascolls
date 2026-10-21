@@ -4,5 +4,6 @@ export interface FeaturedItem {
     description: string;
     icon: string | null;
     color: string | null;
+    saved_search_name: string;
     search_definition: Record<string, unknown>;
 }
