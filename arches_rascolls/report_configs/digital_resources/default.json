@@ -6,8 +6,10 @@
         "header": {
           "summary": [
             {
-              "label": null,
-              "node_alias": "content"
+              "label": {
+                "en": "Statement about Digital Resource"
+              },
+              "node_alias": "content_n1"
             }
           ],
           "export_formats": [
@@ -36,6 +38,7 @@
                       "fr": "Edit History",
                       "pt": "Edit History"
                     },
+                    "config": {},
                     "component": "EditHistoryPanel"
                   },
                   {
@@ -45,6 +48,14 @@
                       "en": "Images",
                       "fr": "Images",
                       "pt": "Images"
+                    },
+                    "config": {
+                      "images": [
+                        {
+                          "node": "file",
+                          "model": "digital_resources"
+                        }
+                      ]
                     },
                     "component": "ImagesPanel"
                   },
@@ -56,6 +67,18 @@
                       "fr": "Ressources associ\u00e9es",
                       "pt": "Related Resources"
                     },
+                    "config": {
+                      "graphs": [
+                        "collection_or_set",
+                        "digital_resources",
+                        "group",
+                        "person",
+                        "physical_thing",
+                        "place",
+                        "reference_and_sample_collection_item",
+                        "textual_work"
+                      ]
+                    },
                     "component": "RelatedResourcesPanel"
                   },
                   {
@@ -66,13 +89,22 @@
                       "fr": "Gestion",
                       "pt": "Manage"
                     },
+                    "config": {},
                     "component": "ManagePanel"
                   }
                 ],
                 "summary": [
                   {
-                    "label": null,
-                    "node_alias": "content"
+                    "label": {
+                      "en": "Digital Resource Name"
+                    },
+                    "node_alias": "content_n2"
+                  },
+                  {
+                    "label": {
+                      "en": "Statement about Digital Resource"
+                    },
+                    "node_alias": "content_n1"
                   }
                 ]
               },
@@ -86,6 +118,8 @@
                   },
                   "sections": [
                     {
+                      "icon": null,
+                      "label": null,
                       "folios": [
                         {
                           "nodegroup_alias": "name"
@@ -151,6 +185,7 @@
               "fr": "Data",
               "pt": "Data"
             },
+            "config": {},
             "component": "DataWorkspace",
             "description": {
               "de": "Browse and edit every field recorded on this resource",
@@ -167,6 +202,7 @@
               "fr": "Graphe",
               "pt": "Graph"
             },
+            "config": {},
             "component": "GraphWorkspace",
             "description": {
               "de": "A visual overview of how this resource connects to its data",

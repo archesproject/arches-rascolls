@@ -6,7 +6,9 @@
         "header": {
           "summary": [
             {
-              "label": null,
+              "label": {
+                "en": "Statement about Person"
+              },
               "node_alias": "statement_content"
             }
           ],
@@ -36,6 +38,7 @@
                       "fr": "Edit History",
                       "pt": "Edit History"
                     },
+                    "config": {},
                     "component": "EditHistoryPanel"
                   },
                   {
@@ -45,6 +48,14 @@
                       "en": "Images",
                       "fr": "Images",
                       "pt": "Images"
+                    },
+                    "config": {
+                      "images": [
+                        {
+                          "node": "file",
+                          "model": "digital_resources"
+                        }
+                      ]
                     },
                     "component": "ImagesPanel"
                   },
@@ -56,6 +67,17 @@
                       "fr": "Ressources associ\u00e9es",
                       "pt": "Related Resources"
                     },
+                    "config": {
+                      "graphs": [
+                        "collection_or_set",
+                        "digital_resources",
+                        "group",
+                        "physical_thing",
+                        "place",
+                        "reference_and_sample_collection_item",
+                        "textual_work"
+                      ]
+                    },
                     "component": "RelatedResourcesPanel"
                   },
                   {
@@ -66,16 +88,21 @@
                       "fr": "Gestion",
                       "pt": "Manage"
                     },
+                    "config": {},
                     "component": "ManagePanel"
                   }
                 ],
                 "summary": [
                   {
-                    "label": null,
+                    "label": {
+                      "en": "Person Name"
+                    },
                     "node_alias": "name_content"
                   },
                   {
-                    "label": null,
+                    "label": {
+                      "en": "Statement about Person"
+                    },
                     "node_alias": "statement_content"
                   }
                 ]
@@ -90,6 +117,8 @@
                   },
                   "sections": [
                     {
+                      "icon": null,
+                      "label": null,
                       "folios": [
                         {
                           "nodegroup_alias": "name"
@@ -140,6 +169,7 @@
               "fr": "Data",
               "pt": "Data"
             },
+            "config": {},
             "component": "DataWorkspace",
             "description": {
               "de": "Browse and edit every field recorded on this resource",
@@ -156,6 +186,7 @@
               "fr": "Graphe",
               "pt": "Graph"
             },
+            "config": {},
             "component": "GraphWorkspace",
             "description": {
               "de": "A visual overview of how this resource connects to its data",
