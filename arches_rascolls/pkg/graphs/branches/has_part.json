@@ -71,7 +71,8 @@
                         "label": "Source Reference Work for Dimension",
                         "placeholder": {
                             "en": ""
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "07480ab1-876e-4085-9b07-838a00b17c9a",
                     "label": {
@@ -92,7 +93,8 @@
                         "label": "part_Dimension_statement_language ",
                         "placeholder": {
                             "en": "Select an option"
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "1164d5ae-11b0-4aef-a479-655e816b8577",
                     "label": {
@@ -114,7 +116,8 @@
                         "label": "part_Name_source",
                         "placeholder": {
                             "en": ""
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "165a327a-37ff-4b92-8644-5b7d20cdebe3",
                     "label": {
@@ -166,7 +169,8 @@
                         "label": "Dimension Type",
                         "placeholder": {
                             "en": "Select an option"
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "1fc68279-6681-48c9-a8eb-dc72cf59544e",
                     "label": {
@@ -225,7 +229,8 @@
                         "label": "Mixture Component Statement Source",
                         "placeholder": {
                             "en": ""
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "2de550f0-7a3c-41e4-b7d8-8c1358a5b926",
                     "label": {
@@ -284,7 +289,8 @@
                         "label": "Unit",
                         "placeholder": {
                             "en": "Select an option"
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "528db37f-dabd-4980-beb2-eb52bcd29831",
                     "label": {
@@ -335,7 +341,8 @@
                         "label": "part_Dimension_statement_type_metatype",
                         "placeholder": {
                             "en": "Select an option"
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "5ad298ba-99fe-42a3-b3c6-6a2a82a80e0c",
                     "label": {
@@ -356,7 +363,8 @@
                         "label": "Mixture Component Statement Type",
                         "placeholder": {
                             "en": "Select an option"
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "5e05609b-341f-43d9-a287-6c47081891f5",
                     "label": {
@@ -378,7 +386,8 @@
                         "label": "part_Dimension_statement_source",
                         "placeholder": {
                             "en": ""
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "5fe720d2-51b1-4989-b549-7d217e79fa27",
                     "label": {
@@ -430,7 +439,8 @@
                         "label": "Component Name Type",
                         "placeholder": {
                             "en": "Select an option"
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "70b23b93-aded-4ff8-8464-4ac9fedc059d",
                     "label": {
@@ -489,7 +499,8 @@
                         "label": "Physical Thing/Item Mixture Component From",
                         "placeholder": {
                             "en": ""
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "87b0203a-4617-4911-8307-077cf3664596",
                     "label": {
@@ -532,7 +543,8 @@
                         "label": "Mixture Component Type",
                         "placeholder": {
                             "en": "Select an option"
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "abfc23a6-c2cc-439b-9491-e1bbffb13828",
                     "label": {
@@ -584,7 +596,8 @@
                         "label": "Component Name Language",
                         "placeholder": {
                             "en": "Select an option"
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "c34ca958-c112-4832-8afe-964524c9c276",
                     "label": {
@@ -635,7 +648,8 @@
                         "label": "Statement Type",
                         "placeholder": {
                             "en": "Select an option"
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "ef7a9e9a-3253-44a3-afa9-542bd6450de8",
                     "label": {
@@ -716,7 +730,8 @@
                         "label": "part_Statement_language",
                         "placeholder": {
                             "en": "Select an option"
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "f981fbc7-157c-4cb5-82e3-bc82bb607e4a",
                     "label": {
@@ -1169,27 +1184,27 @@
                         "graphs": [
                             {
                                 "graphid": "c08bae61-9726-47d8-9751-2dd04d20a7b4",
-                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "inverseRelationship": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "name": "Physical Thing",
+                                "relationship": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
-                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
-                                "useOntologyRelationship": false
+                                "relationshipSource": "concept"
                             },
                             {
                                 "graphid": "bb9dd74b-063c-4401-a04c-6f05f877c269",
-                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "inverseRelationship": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "name": "Reference and Sample Collection Item - Extended",
+                                "relationship": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
-                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
-                                "useOntologyRelationship": false
+                                "relationshipSource": "concept"
                             },
                             {
                                 "graphid": "d4e956f7-9fad-4fd2-94e3-563a3b2c3585",
-                                "inverseRelationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
+                                "inverseRelationship": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "name": "Reference and Sample Collection Item - Streamlined",
+                                "relationship": "ac41d9be-79db-4256-b368-2f4559cfbe55",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
-                                "relationshipConcept": "ac41d9be-79db-4256-b368-2f4559cfbe55",
-                                "useOntologyRelationship": false
+                                "relationshipSource": "concept"
                             }
                         ],
                         "searchDsl": "",
@@ -1315,7 +1330,7 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "part_dimension_value_",
+                    "alias": "part_dimension_value",
                     "config": {
                         "en": ""
                     },
@@ -1370,11 +1385,11 @@
                         "graphs": [
                             {
                                 "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
-                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "inverseRelationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "name": "Textual Work",
+                                "relationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
-                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
-                                "useOntologyRelationship": false
+                                "relationshipSource": "reference"
                             }
                         ],
                         "searchDsl": "",
@@ -1729,7 +1744,7 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "part_dimension_type_",
+                    "alias": "part_dimension_type",
                     "config": {
                         "controlledList": "792e80fe-a092-43b5-9ccf-4dcd7bbcbe86",
                         "multiValue": false
@@ -2036,11 +2051,5 @@
             "user_permissions": {},
             "version": ""
         }
-    ],
-    "metadata": {
-        "db": "PostgreSQL 16.13 on aarch64-unknown-linux-gnu, compiled by aarch64-unknown-linux-gnu-gcc (GCC) 12.4.0, 64-bit",
-        "git hash": "fatal: not a git repository (or any of the parent directories): .git",
-        "os": "Linux",
-        "os version": "6.17.0-1017-aws"
-    }
+    ]
 }

@@ -72,7 +72,8 @@
                         "label": "Name Language",
                         "placeholder": {
                             "en": "Select an option"
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "50565a36-a056-4ea4-9683-a3394aaa2e42",
                     "label": {
@@ -168,7 +169,8 @@
                         "label": "Name Type",
                         "placeholder": {
                             "en": "Select an option"
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "7dde5230-687f-41a8-a9b5-0d1b20d2ff77",
                     "label": {
@@ -190,7 +192,8 @@
                         "label": "Source Reference Work for Name",
                         "placeholder": {
                             "en": ""
-                        }
+                        },
+                        "uneditable": false
                     },
                     "id": "ea39294f-7feb-4edb-8f51-b5f68cdebfb7",
                     "label": {
@@ -358,7 +361,7 @@
             ],
             "nodes": [
                 {
-                    "alias": "name_label_",
+                    "alias": "name_label",
                     "config": {},
                     "datatype": "string",
                     "description": "# Specific:\n\n\n# General:\nEvery node should have a _label that provides a human-readable summary label for the node. This is intended not for end users, but for developers looking at the data. See:  https://linked.art/model/base/#core-properties\n\n# Arches Note:\n\n\n* BranchId: la-label\n* FieldId: \n",
@@ -404,16 +407,16 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "name_source_",
+                    "alias": "name_source",
                     "config": {
                         "graphs": [
                             {
                                 "graphid": "7ce192f6-d772-11ef-825b-0275dc2ded29",
-                                "inverseRelationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
+                                "inverseRelationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "name": "Textual Work",
+                                "relationship": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
                                 "relationshipCollection": "00000000-0000-0000-0000-000000000005",
-                                "relationshipConcept": "http://localhost:8000/plugins/controlled-list-manager/item/00000000-0000-0000-0000-000000000007",
-                                "useOntologyRelationship": false
+                                "relationshipSource": "reference"
                             }
                         ],
                         "searchDsl": "",
@@ -440,7 +443,7 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "name_language_",
+                    "alias": "name_language",
                     "config": {
                         "controlledList": "f7fc4f6d-fd46-4881-846f-4a08bc1a3fef",
                         "multiValue": true
@@ -489,7 +492,7 @@
                     "sourcebranchpublication_id": null
                 },
                 {
-                    "alias": "name_type_",
+                    "alias": "name_type",
                     "config": {
                         "controlledList": "9f1cf9a8-ce65-455f-ab1e-a9b36e9e23ce",
                         "multiValue": true
@@ -558,11 +561,5 @@
             "user_permissions": {},
             "version": ""
         }
-    ],
-    "metadata": {
-        "db": "PostgreSQL 16.13 on aarch64-unknown-linux-gnu, compiled by aarch64-unknown-linux-gnu-gcc (GCC) 12.4.0, 64-bit",
-        "git hash": "fatal: not a git repository (or any of the parent directories): .git",
-        "os": "Linux",
-        "os version": "6.17.0-1017-aws"
-    }
+    ]
 }
