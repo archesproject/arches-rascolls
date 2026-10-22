@@ -1,372 +1,189 @@
 {
-    "name": "Untitled Report",
-    "theme": "",
-    "components": [
-        {
-            "config": {
-                "descriptor": "Physical Thing descriptor template",
-                "node_alias_options": {}
-            },
-            "component": "arches_modular_reports/ModularReport/components/ReportHeader"
+  "name": "Default",
+  "components": [
+    {
+      "config": {
+        "header": {
+          "summary": [],
+          "export_formats": [
+            "json-ld",
+            "json",
+            "csv"
+          ]
         },
-        {
-            "config": {
-                "lists": true,
-                "export_formats": [
-                    "csv",
-                    "json-ld",
-                    "json"
-                ]
+        "workspaces": [
+          {
+            "id": "report",
+            "label": {
+              "de": "Report",
+              "en": "Report",
+              "fr": "Signaler",
+              "pt": "Report"
             },
-            "component": "arches_modular_reports/ModularReport/components/ReportToolbar"
-        },
-        {
             "config": {
-                "node_aliases": [],
-                "custom_labels": {},
-                "image_node_alias": null
-            },
-            "component": "arches_modular_reports/ModularReport/components/ReportTombstone"
-        },
-        {
-            "config": {
-                "tabs": [
-                    {
-                        "name": "Data",
-                        "components": [
-                            {
-                                "config": {
-                                    "sections": [
-                                        {
-                                            "name": "Name of Reference or Sample Collection Item",
-                                            "components": [
-                                                {
-                                                    "config": {
-                                                        "node_aliases": [
-                                                            "name_content",
-                                                            "name_type",
-                                                            "name_language"
-                                                        ],
-                                                        "custom_labels": {},
-                                                        "nodegroup_alias": "name",
-                                                        "custom_card_name": null
-                                                    },
-                                                    "component": "arches_modular_reports/ModularReport/components/DataSection"
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "name": "Statement or Interpretation about Reference or Sample Collection Item",
-                                            "components": [
-                                                {
-                                                    "config": {
-                                                        "node_aliases": [
-                                                            "statement_content",
-                                                            "statement_type",
-                                                            "statement_language"
-                                                        ],
-                                                        "custom_labels": {},
-                                                        "nodegroup_alias": "statement",
-                                                        "custom_card_name": null
-                                                    },
-                                                    "component": "arches_modular_reports/ModularReport/components/DataSection"
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "name": "Type of Reference or Sample Collection Item",
-                                            "components": [
-                                                {
-                                                    "config": {
-                                                        "node_aliases": [
-                                                            "object_type"
-                                                        ],
-                                                        "custom_labels": {},
-                                                        "nodegroup_alias": "object_type",
-                                                        "custom_card_name": null
-                                                    },
-                                                    "component": "arches_modular_reports/ModularReport/components/DataSection"
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "name": "Identifier of Reference or Sample Collection Item",
-                                            "components": [
-                                                {
-                                                    "config": {
-                                                        "node_aliases": [
-                                                            "identifier_content",
-                                                            "identifier_type"
-                                                        ],
-                                                        "custom_labels": {},
-                                                        "nodegroup_alias": "identifier",
-                                                        "custom_card_name": null
-                                                    },
-                                                    "component": "arches_modular_reports/ModularReport/components/DataSection"
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "name": "Dimension of Reference or Sample Collection Item",
-                                            "components": [
-                                                {
-                                                    "config": {
-                                                        "node_aliases": [
-                                                            "dimension_type",
-                                                            "dimension_value",
-                                                            "dimension_unit",
-                                                            "dimension_statement_content"
-                                                        ],
-                                                        "custom_labels": {},
-                                                        "nodegroup_alias": "dimension",
-                                                        "custom_card_name": null
-                                                    },
-                                                    "component": "arches_modular_reports/ModularReport/components/DataSection"
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "name": "Parent Reference or Sample Collection Item",
-                                            "components": [
-                                                {
-                                                    "config": {
-                                                        "node_aliases": [
-                                                            "part_of"
-                                                        ],
-                                                        "custom_labels": {},
-                                                        "nodegroup_alias": "part_of",
-                                                        "custom_card_name": null
-                                                    },
-                                                    "component": "arches_modular_reports/ModularReport/components/DataSection"
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "name": "Collection Reference or Sample Collection Item is Part of ",
-                                            "components": [
-                                                {
-                                                    "config": {
-                                                        "node_aliases": [
-                                                            "member_of"
-                                                        ],
-                                                        "custom_labels": {},
-                                                        "nodegroup_alias": "member_of",
-                                                        "custom_card_name": null
-                                                    },
-                                                    "component": "arches_modular_reports/ModularReport/components/DataSection"
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "name": "Label of Reference and Sample Collection Item",
-                                            "components": [
-                                                {
-                                                    "config": {
-                                                        "node_aliases": [
-                                                            "label"
-                                                        ],
-                                                        "custom_labels": {},
-                                                        "nodegroup_alias": "label",
-                                                        "custom_card_name": null
-                                                    },
-                                                    "component": "arches_modular_reports/ModularReport/components/DataSection"
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "name": "Current Owner of Reference or Sample Collection Item",
-                                            "components": [
-                                                {
-                                                    "config": {
-                                                        "node_aliases": [
-                                                            "current_owner"
-                                                        ],
-                                                        "custom_labels": {},
-                                                        "nodegroup_alias": "current_owner",
-                                                        "custom_card_name": null
-                                                    },
-                                                    "component": "arches_modular_reports/ModularReport/components/DataSection"
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "name": "Current Location of Reference or Sample Collection Item",
-                                            "components": [
-                                                {
-                                                    "config": {
-                                                        "node_aliases": [
-                                                            "current_location"
-                                                        ],
-                                                        "custom_labels": {},
-                                                        "nodegroup_alias": "current_location",
-                                                        "custom_card_name": null
-                                                    },
-                                                    "component": "arches_modular_reports/ModularReport/components/DataSection"
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "name": "Production Event of Reference or Sample Collection Item",
-                                            "components": [
-                                                {
-                                                    "config": {
-                                                        "node_aliases": [
-                                                            "production_type",
-                                                            "production_carried_out_by",
-                                                            "production_location",
-                                                            "production_used_object",
-                                                            "production_technique"
-                                                        ],
-                                                        "custom_labels": {},
-                                                        "nodegroup_alias": "production",
-                                                        "custom_card_name": null
-                                                    },
-                                                    "component": "arches_modular_reports/ModularReport/components/DataSection"
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "name": "Digital Reference to Reference or Sample Collection Item",
-                                            "components": [
-                                                {
-                                                    "config": {
-                                                        "node_aliases": [
-                                                            "digital_source",
-                                                            "digital_reference_type"
-                                                        ],
-                                                        "custom_labels": {},
-                                                        "nodegroup_alias": "digital_reference",
-                                                        "custom_card_name": null
-                                                    },
-                                                    "component": "arches_modular_reports/ModularReport/components/DataSection"
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                },
-                                "component": "arches_modular_reports/ModularReport/components/LinkedSections"
-                            }
-                        ]
+              "home": {
+                "drawer": [
+                  {
+                    "icon": "pi pi-clock",
+                    "label": {
+                      "de": "Edit History",
+                      "en": "Edit History",
+                      "fr": "Edit History",
+                      "pt": "Edit History"
                     },
+                    "config": {},
+                    "component": "EditHistoryPanel"
+                  },
+                  {
+                    "icon": "pi pi-image",
+                    "label": {
+                      "de": "Images",
+                      "en": "Images",
+                      "fr": "Images",
+                      "pt": "Images"
+                    },
+                    "config": {
+                      "images": [
+                        {
+                          "node": "file",
+                          "model": "digital_resources"
+                        }
+                      ]
+                    },
+                    "component": "ImagesPanel"
+                  },
+                  {
+                    "icon": "pi pi-link",
+                    "label": {
+                      "de": "Related Resources",
+                      "en": "Related Resources",
+                      "fr": "Ressources associ\u00e9es",
+                      "pt": "Related Resources"
+                    },
+                    "config": {
+                      "graphs": [
+                        "collection_or_set",
+                        "digital_resources",
+                        "group",
+                        "person",
+                        "place",
+                        "reference_and_sample_collection_item",
+                        "textual_work"
+                      ]
+                    },
+                    "component": "RelatedResourcesPanel"
+                  },
+                  {
+                    "icon": "pi pi-cog",
+                    "label": {
+                      "de": "Manage",
+                      "en": "Manage",
+                      "fr": "Gestion",
+                      "pt": "Manage"
+                    },
+                    "config": {},
+                    "component": "ManagePanel"
+                  }
+                ],
+                "summary": []
+              },
+              "tabs": [
+                {
+                  "label": {
+                    "de": "Overview",
+                    "en": "Overview",
+                    "fr": "Aper\u00e7u",
+                    "pt": "Overview"
+                  },
+                  "sections": [
                     {
-                        "name": "Related Resources",
-                        "components": [
-                            {
-                                "config": {
-                                    "sections": [
-                                        {
-                                            "name": "Group ",
-                                            "components": [
-                                                {
-                                                    "config": {
-                                                        "graph_slug": "group",
-                                                        "node_aliases": [],
-                                                        "custom_labels": {}
-                                                    },
-                                                    "component": "arches_modular_reports/ModularReport/components/RelatedResourcesSection"
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "name": "Person",
-                                            "components": [
-                                                {
-                                                    "config": {
-                                                        "graph_slug": "person",
-                                                        "node_aliases": [],
-                                                        "custom_labels": {}
-                                                    },
-                                                    "component": "arches_modular_reports/ModularReport/components/RelatedResourcesSection"
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "name": "Collection or Set",
-                                            "components": [
-                                                {
-                                                    "config": {
-                                                        "graph_slug": "collection_or_set",
-                                                        "node_aliases": [],
-                                                        "custom_labels": {}
-                                                    },
-                                                    "component": "arches_modular_reports/ModularReport/components/RelatedResourcesSection"
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "name": "Digital Resources",
-                                            "components": [
-                                                {
-                                                    "config": {
-                                                        "graph_slug": "digital_resources",
-                                                        "node_aliases": [],
-                                                        "custom_labels": {}
-                                                    },
-                                                    "component": "arches_modular_reports/ModularReport/components/RelatedResourcesSection"
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "name": "Physical Thing",
-                                            "components": [
-                                                {
-                                                    "config": {
-                                                        "graph_slug": "physical_thing",
-                                                        "node_aliases": [],
-                                                        "custom_labels": {}
-                                                    },
-                                                    "component": "arches_modular_reports/ModularReport/components/RelatedResourcesSection"
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "name": "Reference and Sample Collection Item",
-                                            "components": [
-                                                {
-                                                    "config": {
-                                                        "graph_slug": "reference_and_sample_collection_item",
-                                                        "node_aliases": [],
-                                                        "custom_labels": {}
-                                                    },
-                                                    "component": "arches_modular_reports/ModularReport/components/RelatedResourcesSection"
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "name": "Place",
-                                            "components": [
-                                                {
-                                                    "config": {
-                                                        "graph_slug": "place",
-                                                        "node_aliases": [],
-                                                        "custom_labels": {}
-                                                    },
-                                                    "component": "arches_modular_reports/ModularReport/components/RelatedResourcesSection"
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "name": "Textual Work",
-                                            "components": [
-                                                {
-                                                    "config": {
-                                                        "graph_slug": "textual_work",
-                                                        "node_aliases": [],
-                                                        "custom_labels": {}
-                                                    },
-                                                    "component": "arches_modular_reports/ModularReport/components/RelatedResourcesSection"
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                },
-                                "component": "arches_modular_reports/ModularReport/components/LinkedSections"
-                            }
-                        ]
+                      "icon": null,
+                      "label": null,
+                      "folios": [
+                        {
+                          "nodegroup_alias": "name"
+                        },
+                        {
+                          "nodegroup_alias": "statement"
+                        },
+                        {
+                          "nodegroup_alias": "object_type"
+                        },
+                        {
+                          "nodegroup_alias": "identifier"
+                        },
+                        {
+                          "nodegroup_alias": "dimension"
+                        },
+                        {
+                          "nodegroup_alias": "part_of"
+                        },
+                        {
+                          "nodegroup_alias": "member_of"
+                        },
+                        {
+                          "nodegroup_alias": "current_owner"
+                        },
+                        {
+                          "nodegroup_alias": "current_location"
+                        },
+                        {
+                          "nodegroup_alias": "production"
+                        },
+                        {
+                          "nodegroup_alias": "digital_reference"
+                        }
+                      ]
                     }
-                ]
+                  ]
+                }
+              ]
             },
-            "component": "arches_modular_reports/ModularReport/components/ReportTabs"
-        }
-    ]
+            "component": "ReportWorkspace",
+            "description": {
+              "de": "A curated summary of this resource's data",
+              "en": "A curated summary of this resource's data",
+              "fr": "A curated summary of this resource's data",
+              "pt": "A curated summary of this resource's data"
+            }
+          },
+          {
+            "id": "data",
+            "label": {
+              "de": "Data",
+              "en": "Data",
+              "fr": "Data",
+              "pt": "Data"
+            },
+            "config": {},
+            "component": "DataWorkspace",
+            "description": {
+              "de": "Browse and edit every field recorded on this resource",
+              "en": "Browse and edit every field recorded on this resource",
+              "fr": "Browse and edit every field recorded on this resource",
+              "pt": "Browse and edit every field recorded on this resource"
+            }
+          },
+          {
+            "id": "graph",
+            "label": {
+              "de": "Graph",
+              "en": "Graph",
+              "fr": "Graphe",
+              "pt": "Graph"
+            },
+            "config": {},
+            "component": "GraphWorkspace",
+            "description": {
+              "de": "A visual overview of how this resource connects to its data",
+              "en": "A visual overview of how this resource connects to its data",
+              "fr": "A visual overview of how this resource connects to its data",
+              "pt": "A visual overview of how this resource connects to its data"
+            }
+          }
+        ]
+      },
+      "component": "arches_modular_reports/ResourceReport/ResourceReport"
+    }
+  ]
 }
