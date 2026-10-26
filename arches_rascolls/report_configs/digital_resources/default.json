@@ -3,213 +3,325 @@
   "components": [
     {
       "config": {
-        "header": {
-          "summary": [
-            {
-              "label": {
-                "en": "Statement about Digital Resource"
-              },
-              "node_alias": "content_n1"
-            }
-          ],
-          "export_formats": [
-            "json-ld",
-            "json",
-            "csv"
-          ]
-        },
-        "workspaces": [
+        "components": [
           {
-            "id": "report",
-            "label": {
-              "de": "Report",
-              "en": "Report",
-              "fr": "Signaler",
-              "pt": "Report"
-            },
             "config": {
-              "home": {
-                "drawer": [
-                  {
-                    "icon": "pi pi-clock",
-                    "label": {
-                      "de": "Edit History",
-                      "en": "Edit History",
-                      "fr": "Edit History",
-                      "pt": "Edit History"
-                    },
-                    "config": {},
-                    "component": "EditHistoryPanel"
-                  },
-                  {
-                    "icon": "pi pi-image",
-                    "label": {
-                      "de": "Images",
-                      "en": "Images",
-                      "fr": "Images",
-                      "pt": "Images"
-                    },
-                    "config": {
-                      "images": [
-                        {
-                          "node": "file",
-                          "model": "digital_resources"
-                        }
-                      ]
-                    },
-                    "component": "ImagesPanel"
-                  },
-                  {
-                    "icon": "pi pi-link",
-                    "label": {
-                      "de": "Related Resources",
-                      "en": "Related Resources",
-                      "fr": "Ressources associ\u00e9es",
-                      "pt": "Related Resources"
-                    },
-                    "config": {
-                      "graphs": [
-                        "collection_or_set",
-                        "digital_resources",
-                        "group",
-                        "person",
-                        "physical_thing",
-                        "place",
-                        "reference_and_sample_collection_item",
-                        "textual_work"
-                      ]
-                    },
-                    "component": "RelatedResourcesPanel"
-                  },
-                  {
-                    "icon": "pi pi-cog",
-                    "label": {
-                      "de": "Manage",
-                      "en": "Manage",
-                      "fr": "Gestion",
-                      "pt": "Manage"
-                    },
-                    "config": {},
-                    "component": "ManagePanel"
-                  }
-                ],
-                "summary": [
-                  {
-                    "label": {
-                      "en": "Digital Resource Name"
-                    },
-                    "node_alias": "content_n2"
-                  },
-                  {
-                    "label": {
-                      "en": "Statement about Digital Resource"
-                    },
-                    "node_alias": "content_n1"
-                  }
-                ]
-              },
-              "tabs": [
+              "banner": [
                 {
-                  "label": {
-                    "de": "Overview",
-                    "en": "Overview",
-                    "fr": "Aper\u00e7u",
-                    "pt": "Overview"
+                  "config": {
+                    "summary": [
+                      {
+                        "label": {
+                          "en": "Statement about Digital Resource"
+                        },
+                        "node_alias": "content_n1"
+                      }
+                    ],
+                    "export_formats": [
+                      "json-ld",
+                      "json",
+                      "csv"
+                    ]
                   },
-                  "sections": [
-                    {
-                      "icon": null,
-                      "label": null,
-                      "folios": [
-                        {
-                          "nodegroup_alias": "name"
+                  "component": "arches_modular_reports/ResourceReport/components/ReportHeader"
+                }
+              ],
+              "components": [
+                {
+                  "config": {
+                    "main": [
+                      {
+                        "config": {
+                          "components": [
+                            {
+                              "config": {
+                                "label": {
+                                  "de": "Overview",
+                                  "en": "Overview",
+                                  "fr": "Aper\u00e7u",
+                                  "pt": "Overview"
+                                },
+                                "components": [
+                                  {
+                                    "config": {
+                                      "nodegroup_alias": "name"
+                                    },
+                                    "component": "arches_modular_reports/ResourceReport/components/ReportFolio"
+                                  },
+                                  {
+                                    "config": {
+                                      "nodegroup_alias": "identifier"
+                                    },
+                                    "component": "arches_modular_reports/ResourceReport/components/ReportFolio"
+                                  },
+                                  {
+                                    "config": {
+                                      "nodegroup_alias": "type_n2"
+                                    },
+                                    "component": "arches_modular_reports/ResourceReport/components/FieldFolio"
+                                  },
+                                  {
+                                    "config": {
+                                      "nodegroup_alias": "statement"
+                                    },
+                                    "component": "arches_modular_reports/ResourceReport/components/ReportFolio"
+                                  },
+                                  {
+                                    "config": {
+                                      "nodegroup_alias": "dimension"
+                                    },
+                                    "component": "arches_modular_reports/ResourceReport/components/ReportFolio"
+                                  },
+                                  {
+                                    "config": {
+                                      "nodegroup_alias": "conforms_to"
+                                    },
+                                    "component": "arches_modular_reports/ResourceReport/components/FieldFolio"
+                                  },
+                                  {
+                                    "config": {
+                                      "nodegroup_alias": "carries_text"
+                                    },
+                                    "component": "arches_modular_reports/ResourceReport/components/FieldFolio"
+                                  },
+                                  {
+                                    "config": {
+                                      "nodegroup_alias": "textual_reference"
+                                    },
+                                    "component": "arches_modular_reports/ResourceReport/components/ReportFolio"
+                                  },
+                                  {
+                                    "config": {
+                                      "nodegroup_alias": "service"
+                                    },
+                                    "component": "arches_modular_reports/ResourceReport/components/ReportFolio"
+                                  },
+                                  {
+                                    "config": {
+                                      "nodegroup_alias": "member_of_set"
+                                    },
+                                    "component": "arches_modular_reports/ResourceReport/components/FieldFolio"
+                                  },
+                                  {
+                                    "config": {
+                                      "nodegroup_alias": "part_of"
+                                    },
+                                    "component": "arches_modular_reports/ResourceReport/components/FieldFolio"
+                                  },
+                                  {
+                                    "config": {
+                                      "nodegroup_alias": "digital_resource_creation"
+                                    },
+                                    "component": "arches_modular_reports/ResourceReport/components/ReportFolio"
+                                  },
+                                  {
+                                    "config": {
+                                      "nodegroup_alias": "file"
+                                    },
+                                    "component": "arches_modular_reports/ResourceReport/components/ReportFolio"
+                                  },
+                                  {
+                                    "config": {
+                                      "nodegroup_alias": "label"
+                                    },
+                                    "component": "arches_modular_reports/ResourceReport/components/FieldFolio"
+                                  }
+                                ]
+                              },
+                              "component": "arches_modular_reports/ResourceReport/components/ReportStack"
+                            }
+                          ]
                         },
-                        {
-                          "nodegroup_alias": "identifier"
+                        "component": "arches_modular_reports/ResourceReport/components/ReportTabs"
+                      }
+                    ],
+                    "aside": [
+                      {
+                        "config": {},
+                        "component": "arches_modular_reports/ResourceReport/components/EditorPanel/EditorPanel"
+                      },
+                      {
+                        "config": {
+                          "panels": [
+                            {
+                              "config": {
+                                "icon": "pi pi-clock",
+                                "label": {
+                                  "de": "Edit History",
+                                  "en": "Edit History",
+                                  "fr": "Edit History",
+                                  "pt": "Edit History"
+                                },
+                                "requires_edit": true
+                              },
+                              "component": "arches_modular_reports/ResourceReport/components/EditHistoryPanel"
+                            },
+                            {
+                              "config": {
+                                "icon": "pi pi-image",
+                                "label": {
+                                  "de": "Images",
+                                  "en": "Images",
+                                  "fr": "Images",
+                                  "pt": "Images"
+                                },
+                                "images": [
+                                  {
+                                    "node": "file",
+                                    "model": "digital_resources"
+                                  }
+                                ]
+                              },
+                              "component": "arches_modular_reports/ResourceReport/components/ImagesPanel"
+                            },
+                            {
+                              "config": {
+                                "icon": "pi pi-link",
+                                "label": {
+                                  "de": "Related Resources",
+                                  "en": "Related Resources",
+                                  "fr": "Ressources associ\u00e9es",
+                                  "pt": "Related Resources"
+                                },
+                                "graphs": [
+                                  "collection_or_set",
+                                  "digital_resources",
+                                  "group",
+                                  "person",
+                                  "physical_thing",
+                                  "place",
+                                  "reference_and_sample_collection_item",
+                                  "textual_work"
+                                ]
+                              },
+                              "component": "arches_modular_reports/ResourceReport/components/RelatedResourcesPanel"
+                            },
+                            {
+                              "config": {
+                                "icon": "pi pi-cog",
+                                "label": {
+                                  "de": "Manage",
+                                  "en": "Manage",
+                                  "fr": "Gestion",
+                                  "pt": "Manage"
+                                }
+                              },
+                              "component": "arches_modular_reports/ResourceReport/components/ManagePanel"
+                            }
+                          ],
+                          "components": [
+                            {
+                              "config": {
+                                "summary": [
+                                  {
+                                    "label": {
+                                      "en": "Digital Resource Name"
+                                    },
+                                    "node_alias": "content_n2"
+                                  },
+                                  {
+                                    "label": {
+                                      "en": "Statement about Digital Resource"
+                                    },
+                                    "node_alias": "content_n1"
+                                  }
+                                ]
+                              },
+                              "component": "arches_modular_reports/ResourceReport/components/KeyDataSummary"
+                            }
+                          ]
                         },
-                        {
-                          "nodegroup_alias": "type_n2"
-                        },
-                        {
-                          "nodegroup_alias": "statement"
-                        },
-                        {
-                          "nodegroup_alias": "dimension"
-                        },
-                        {
-                          "nodegroup_alias": "conforms_to"
-                        },
-                        {
-                          "nodegroup_alias": "carries_text"
-                        },
-                        {
-                          "nodegroup_alias": "textual_reference"
-                        },
-                        {
-                          "nodegroup_alias": "service"
-                        },
-                        {
-                          "nodegroup_alias": "member_of_set"
-                        },
-                        {
-                          "nodegroup_alias": "part_of"
-                        },
-                        {
-                          "nodegroup_alias": "digital_resource_creation"
-                        },
-                        {
-                          "nodegroup_alias": "file"
-                        },
-                        {
-                          "nodegroup_alias": "label"
-                        }
-                      ]
+                        "component": "arches_modular_reports/ResourceReport/components/ReportDrawer"
+                      }
+                    ],
+                    "label": {
+                      "de": "Report",
+                      "en": "Report",
+                      "fr": "Signaler",
+                      "pt": "Report"
+                    },
+                    "description": {
+                      "de": "A curated summary of this resource's data",
+                      "en": "A curated summary of this resource's data",
+                      "fr": "A curated summary of this resource's data",
+                      "pt": "A curated summary of this resource's data"
                     }
-                  ]
+                  },
+                  "component": "arches_modular_reports/ResourceReport/components/SplitPane"
+                },
+                {
+                  "config": {
+                    "main": [
+                      {
+                        "config": {},
+                        "component": "arches_modular_reports/ResourceReport/components/DataBrowser/DataBrowser"
+                      }
+                    ],
+                    "aside": [
+                      {
+                        "config": {},
+                        "component": "arches_modular_reports/ResourceReport/components/EditorPanel/EditorPanel"
+                      },
+                      {
+                        "config": {
+                          "icon": "pi pi-pencil",
+                          "message": {
+                            "de": "Select an entry in the data browser to begin editing.",
+                            "en": "Select an entry in the data browser to begin editing.",
+                            "fr": "Select an entry in the data browser to begin editing.",
+                            "pt": "Select an entry in the data browser to begin editing."
+                          }
+                        },
+                        "component": "arches_modular_reports/ResourceReport/components/ReportPlaceholder"
+                      }
+                    ],
+                    "label": {
+                      "de": "Data",
+                      "en": "Data",
+                      "fr": "Data",
+                      "pt": "Data"
+                    },
+                    "description": {
+                      "de": "Browse and edit every field recorded on this resource",
+                      "en": "Browse and edit every field recorded on this resource",
+                      "fr": "Browse and edit every field recorded on this resource",
+                      "pt": "Browse and edit every field recorded on this resource"
+                    },
+                    "requires_edit": true
+                  },
+                  "component": "arches_modular_reports/ResourceReport/components/SplitPane"
+                },
+                {
+                  "config": {
+                    "icon": "pi pi-sitemap",
+                    "label": {
+                      "de": "Graph",
+                      "en": "Graph",
+                      "fr": "Graphe",
+                      "pt": "Graph"
+                    },
+                    "message": {
+                      "de": "Graph view \u2014 coming soon",
+                      "en": "Graph view \u2014 coming soon",
+                      "fr": "Graph view \u2014 coming soon",
+                      "pt": "Graph view \u2014 coming soon"
+                    },
+                    "description": {
+                      "de": "A visual overview of how this resource connects to its data",
+                      "en": "A visual overview of how this resource connects to its data",
+                      "fr": "A visual overview of how this resource connects to its data",
+                      "pt": "A visual overview of how this resource connects to its data"
+                    }
+                  },
+                  "component": "arches_modular_reports/ResourceReport/components/ReportPlaceholder"
                 }
               ]
             },
-            "component": "ReportWorkspace",
-            "description": {
-              "de": "A curated summary of this resource's data",
-              "en": "A curated summary of this resource's data",
-              "fr": "A curated summary of this resource's data",
-              "pt": "A curated summary of this resource's data"
-            }
+            "component": "arches_modular_reports/ResourceReport/components/WorkspaceTabs"
           },
           {
-            "id": "data",
-            "label": {
-              "de": "Data",
-              "en": "Data",
-              "fr": "Data",
-              "pt": "Data"
-            },
             "config": {},
-            "component": "DataWorkspace",
-            "description": {
-              "de": "Browse and edit every field recorded on this resource",
-              "en": "Browse and edit every field recorded on this resource",
-              "fr": "Browse and edit every field recorded on this resource",
-              "pt": "Browse and edit every field recorded on this resource"
-            }
-          },
-          {
-            "id": "graph",
-            "label": {
-              "de": "Graph",
-              "en": "Graph",
-              "fr": "Graphe",
-              "pt": "Graph"
-            },
-            "config": {},
-            "component": "GraphWorkspace",
-            "description": {
-              "de": "A visual overview of how this resource connects to its data",
-              "en": "A visual overview of how this resource connects to its data",
-              "fr": "A visual overview of how this resource connects to its data",
-              "pt": "A visual overview of how this resource connects to its data"
-            }
+            "component": "arches_modular_reports/ResourceReport/components/EditListTray"
           }
         ]
       },
