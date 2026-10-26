@@ -9,12 +9,7 @@
               "banner": [
                 {
                   "config": {
-                    "summary": [],
-                    "export_formats": [
-                      "json-ld",
-                      "json",
-                      "csv"
-                    ]
+                    "summary": []
                   },
                   "component": "arches_modular_reports/ResourceReport/components/ReportHeader"
                 }

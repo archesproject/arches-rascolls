@@ -16,11 +16,6 @@
                         },
                         "node_alias": "statement_content"
                       }
-                    ],
-                    "export_formats": [
-                      "json-ld",
-                      "json",
-                      "csv"
                     ]
                   },
                   "component": "arches_modular_reports/ResourceReport/components/ReportHeader"
