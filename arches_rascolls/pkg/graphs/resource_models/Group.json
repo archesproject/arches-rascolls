@@ -3586,7 +3586,7 @@
                 ]
             },
             "root": {
-                "alias": "group",
+                "alias": "groups",
                 "config": {},
                 "datatype": "semantic",
                 "description": "# Specific:\n\n\n# General:\n\n\n# Arches Note:\n\n\n* BranchId: \n* FieldId: \n",
@@ -3599,7 +3599,7 @@
                 "isrequired": false,
                 "issearchable": false,
                 "istopnode": true,
-                "name": "Group ",
+                "name": "Group",
                 "nodegroup_id": null,
                 "nodeid": "3695ea42-d770-11ef-8f5d-0275dc2ded29",
                 "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E74_Group",
@@ -3607,7 +3607,7 @@
                 "source_identifier_id": null,
                 "sourcebranchpublication_id": null
             },
-            "slug": "group",
+            "slug": "groups",
             "source_identifier_id": null,
             "spatial_views": [],
             "subtitle": {

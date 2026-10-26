@@ -343,6 +343,7 @@ INSTALLED_APPS = (
     "arches.extensions.vue_components",
     "arches_search",
     "arches_resource_sets",
+    "arches_abac_permissions",
     "pgtrigger",
 )
 
