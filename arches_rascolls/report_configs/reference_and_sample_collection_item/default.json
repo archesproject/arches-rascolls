@@ -1,847 +1,602 @@
 {
-    "name": "Reference and Sample Collection Item",
-    "theme": "",
-    "components": [
-        {
-            "component": "arches_rascolls/ModularReport/components/ReportHeader",
+  "name": "Default",
+  "components": [
+    {
+      "config": {
+        "components": [
+          {
             "config": {
-                "descriptor": "<name_content>",
-                "node_alias_options": {},
-                "location_node_aliases": ["current_location_statement_content"],
-                "subtitle": "Reference and Sample Collection Item"
-            }
-        },
-        {
-            "component": "arches_rascolls/ModularReport/components/ReportTabs",
-            "config": {
-                "tabs": [
-                    {
-                        "name": "Summary",
-                        "components": [
+              "banner": [
+                {
+                  "config": {
+                    "summary": []
+                  },
+                  "component": "arches_modular_reports/ResourceReport/components/ReportHeader"
+                }
+              ],
+              "components": [
+                {
+                  "config": {
+                    "main": [
+                      {
+                        "config": {
+                          "components": [
                             {
-                                "component": "arches_rascolls/ModularReport/components/LinkedSections",
-                                "config": {
-                                    "sections": [
+                              "config": {
+                                "label": {
+                                  "de": "Overview",
+                                  "en": "Overview",
+                                  "fr": "Aper\u00e7u",
+                                  "pt": "Overview"
+                                },
+                                "components": [
+                                  {
+                                    "config": {
+                                      "icon": "pi pi-tags",
+                                      "label": {
+                                        "de": "Classification",
+                                        "en": "Classification",
+                                        "fr": "Classification",
+                                        "pt": "Classification"
+                                      },
+                                      "components": [
                                         {
-                                            "name": "Summary",
-                                            "components": [
-                                                {
-                                                    "component": "arches_rascolls/ModularReport/components/DataSection",
-                                                    "config": {
-                                                        "nodegroup_alias": "identifier",
-                                                        "node_aliases": [
-                                                            "identifier_content"
-                                                        ],
-                                                        "custom_labels": {
-                                                            "identifier_content": "Barcode"
-                                                        },
-                                                        "custom_card_name": "Barcode",
-                                                        "has_write_permission": true,
-                                                        "filters": [
-                                                            {
-                                                                "alias": "identifier_type",
-                                                                "value": [
-                                                                    {
-                                                                        "labels": [
-                                                                            {
-                                                                                "list_item_id": "5b7771f0-ec01-4d87-bac4-0efbafe5a802"
-                                                                            }
-                                                                        ]
-                                                                    }
-                                                                ],
-                                                                "field_lookup": "contains"
-                                                            }
-                                                        ],
-                                                        "empty_state_icon": "pi pi-hashtag",
-                                                        "empty_state_message": "Record the item's barcode identifier."
-                                                    }
-                                                },
-                                                {
-                                                    "component": "arches_rascolls/ModularReport/components/DataSection",
-                                                    "config": {
-                                                        "nodegroup_alias": "name",
-                                                        "node_aliases": [
-                                                            "name_content"
-                                                        ],
-                                                        "custom_labels": {
-                                                            "name_content": "Name"
-                                                        },
-                                                        "custom_card_name": "Common Name",
-                                                        "has_write_permission": true,
-                                                        "filters": [
-                                                            {
-                                                                "alias": "name_type",
-                                                                "value": [
-                                                                    {
-                                                                        "labels": [
-                                                                            {
-                                                                                "list_item_id": "09c5997e-86f4-4689-bc6e-169e299acb9b"
-                                                                            }
-                                                                        ]
-                                                                    }
-                                                                ],
-                                                                "field_lookup": "contains"
-                                                            }
-                                                        ],
-                                                        "empty_state_icon": "pi pi-tag",
-                                                        "empty_state_message": "Record the primary (common) name for this item."
-                                                    }
-                                                },
-                                                {
-                                                    "component": "arches_rascolls/ModularReport/components/DataSection",
-                                                    "config": {
-                                                        "nodegroup_alias": "name",
-                                                        "node_aliases": [
-                                                            "name_content",
-                                                            "name_type"
-                                                        ],
-                                                        "custom_labels": {},
-                                                        "custom_card_name": "Additional Names",
-                                                        "has_write_permission": true,
-                                                        "filters": [],
-                                                        "empty_state_icon": "pi pi-tag",
-                                                        "empty_state_message": "Record alternative names for this item."
-                                                    }
-                                                },
-                                                {
-                                                    "component": "arches_rascolls/ModularReport/components/DataSection",
-                                                    "config": {
-                                                        "nodegroup_alias": "material",
-                                                        "node_aliases": [
-                                                            "material"
-                                                        ],
-                                                        "custom_labels": {
-                                                            "material": "Sample Type"
-                                                        },
-                                                        "custom_card_name": "Sample Type",
-                                                        "has_write_permission": true,
-                                                        "filters": [],
-                                                        "empty_state_icon": "pi pi-box",
-                                                        "empty_state_message": "Record the material or substance composition of this item (e.g., pigment, mineral, organic compound)."
-                                                    }
-                                                },
-                                                {
-                                                    "component": "arches_rascolls/ModularReport/components/DataSection",
-                                                    "config": {
-                                                        "nodegroup_alias": "production_time",
-                                                        "node_aliases": [
-                                                            "production_time_edtf"
-                                                        ],
-                                                        "custom_labels": {
-                                                            "production_time_edtf": "Origination Date"
-                                                        },
-                                                        "custom_card_name": "Origination Date",
-                                                        "has_write_permission": true,
-                                                        "filters": [],
-                                                        "empty_state_icon": "pi pi-calendar",
-                                                        "empty_state_message": "Record the origination date of this item (EDTF)."
-                                                    }
-                                                },
-                                                {
-                                                    "component": "arches_rascolls/ModularReport/components/DataSection",
-                                                    "config": {
-                                                        "nodegroup_alias": "acquisition_timespan",
-                                                        "node_aliases": [
-                                                            "acquisition_timespan_production_time_edtf"
-                                                        ],
-                                                        "custom_labels": {
-                                                            "acquisition_timespan_production_time_edtf": "Acquisition Date"
-                                                        },
-                                                        "custom_card_name": "Acquisition Date",
-                                                        "has_write_permission": true,
-                                                        "filters": [],
-                                                        "empty_state_icon": "pi pi-calendar",
-                                                        "empty_state_message": "Record the date this item was acquired (EDTF)."
-                                                    }
-                                                },
-                                                {
-                                                    "component": "arches_rascolls/ModularReport/components/DataSection",
-                                                    "config": {
-                                                        "nodegroup_alias": "production",
-                                                        "node_aliases": [
-                                                            "production_location"
-                                                        ],
-                                                        "custom_labels": {
-                                                            "production_location": "Geographic Origin"
-                                                        },
-                                                        "custom_card_name": "Geographic Origin",
-                                                        "has_write_permission": true,
-                                                        "filters": [],
-                                                        "empty_state_icon": "pi pi-globe",
-                                                        "empty_state_message": "Record the geographic origin of this item."
-                                                    }
-                                                },
-                                                {
-                                                    "component": "arches_rascolls/ModularReport/components/DataSection",
-                                                    "config": {
-                                                        "nodegroup_alias": "production",
-                                                        "node_aliases": [
-                                                            "production_carried_out_by"
-                                                        ],
-                                                        "custom_labels": {
-                                                            "production_carried_out_by": "Manufacturer"
-                                                        },
-                                                        "custom_card_name": "Manufacturer",
-                                                        "has_write_permission": true,
-                                                        "filters": [],
-                                                        "empty_state_icon": "pi pi-cog",
-                                                        "empty_state_message": "Record the manufacturer of this item."
-                                                    }
-                                                },
-                                                {
-                                                    "component": "arches_rascolls/ModularReport/components/DataSection",
-                                                    "config": {
-                                                        "nodegroup_alias": "current_location",
-                                                        "node_aliases": [
-                                                            "current_location"
-                                                        ],
-                                                        "custom_labels": {},
-                                                        "custom_card_name": "Current Location",
-                                                        "has_write_permission": true,
-                                                        "filters": [],
-                                                        "empty_state_icon": "pi pi-map-marker",
-                                                        "empty_state_message": "Record where this item is currently stored or located (e.g., storage room, cabinet, shelf, or external repository)."
-                                                    }
-                                                },
-                                                {
-                                                    "component": "arches_rascolls/ModularReport/components/DataSection",
-                                                    "config": {
-                                                        "nodegroup_alias": "current_location_statement",
-                                                        "node_aliases": [
-                                                            "current_location_statement_content"
-                                                        ],
-                                                        "custom_labels": {
-                                                            "current_location_statement_content": "Description"
-                                                        },
-                                                        "custom_card_name": "Current Location Description",
-                                                        "has_write_permission": true,
-                                                        "filters": [],
-                                                        "empty_state_icon": "pi pi-map-marker",
-                                                        "empty_state_message": "Describe the current storage location, such as a grid location."
-                                                    }
-                                                }
-                                            ]
+                                          "config": {
+                                            "nodegroup_alias": "attribute_type"
+                                          },
+                                          "component": "arches_modular_reports/ResourceReport/components/FieldFolio"
+                                        },
+                                        {
+                                          "config": {
+                                            "nodegroup_alias": "object_type"
+                                          },
+                                          "component": "arches_modular_reports/ResourceReport/components/FieldFolio"
+                                        },
+                                        {
+                                          "config": {
+                                            "nodegroup_alias": "facet_type"
+                                          },
+                                          "component": "arches_modular_reports/ResourceReport/components/FieldFolio"
+                                        },
+                                        {
+                                          "config": {
+                                            "nodegroup_alias": "standard_type"
+                                          },
+                                          "component": "arches_modular_reports/ResourceReport/components/FieldFolio"
                                         }
-                                    ]
-                                }
+                                      ]
+                                    },
+                                    "component": "arches_modular_reports/ResourceReport/components/ReportSection"
+                                  },
+                                  {
+                                    "config": {
+                                      "icon": "pi pi-id-card",
+                                      "label": {
+                                        "de": "Names & Identifiers",
+                                        "en": "Names & Identifiers",
+                                        "fr": "Names & Identifiers",
+                                        "pt": "Names & Identifiers"
+                                      },
+                                      "components": [
+                                        {
+                                          "config": {
+                                            "nodegroup_alias": "name"
+                                          },
+                                          "component": "arches_modular_reports/ResourceReport/components/ReportFolio"
+                                        },
+                                        {
+                                          "config": {
+                                            "nodegroup_alias": "identifier"
+                                          },
+                                          "component": "arches_modular_reports/ResourceReport/components/ReportFolio"
+                                        }
+                                      ]
+                                    },
+                                    "component": "arches_modular_reports/ResourceReport/components/ReportSection"
+                                  },
+                                  {
+                                    "config": {
+                                      "icon": "pi pi-align-left",
+                                      "label": {
+                                        "de": "Descriptions & Statements",
+                                        "en": "Descriptions & Statements",
+                                        "fr": "Descriptions & Statements",
+                                        "pt": "Descriptions & Statements"
+                                      },
+                                      "components": [
+                                        {
+                                          "config": {
+                                            "nodegroup_alias": "statement"
+                                          },
+                                          "component": "arches_modular_reports/ResourceReport/components/ReportFolio"
+                                        }
+                                      ]
+                                    },
+                                    "component": "arches_modular_reports/ResourceReport/components/ReportSection"
+                                  }
+                                ]
+                              },
+                              "component": "arches_modular_reports/ResourceReport/components/ReportStack"
+                            },
+                            {
+                              "config": {
+                                "label": {
+                                  "de": "Physical",
+                                  "en": "Physical",
+                                  "fr": "Physical",
+                                  "pt": "Physical"
+                                },
+                                "components": [
+                                  {
+                                    "config": {
+                                      "icon": "pi pi-palette",
+                                      "label": {
+                                        "de": "Materials & Color",
+                                        "en": "Materials & Color",
+                                        "fr": "Materials & Color",
+                                        "pt": "Materials & Color"
+                                      },
+                                      "components": [
+                                        {
+                                          "config": {
+                                            "nodegroup_alias": "material"
+                                          },
+                                          "component": "arches_modular_reports/ResourceReport/components/ReportFolio"
+                                        },
+                                        {
+                                          "config": {
+                                            "nodegroup_alias": "has_color"
+                                          },
+                                          "component": "arches_modular_reports/ResourceReport/components/ReportFolio"
+                                        }
+                                      ]
+                                    },
+                                    "component": "arches_modular_reports/ResourceReport/components/ReportSection"
+                                  },
+                                  {
+                                    "config": {
+                                      "icon": "pi pi-arrows-h",
+                                      "label": {
+                                        "de": "Dimensions",
+                                        "en": "Dimensions",
+                                        "fr": "Dimensions",
+                                        "pt": "Dimensions"
+                                      },
+                                      "components": [
+                                        {
+                                          "config": {
+                                            "nodegroup_alias": "dimension"
+                                          },
+                                          "component": "arches_modular_reports/ResourceReport/components/ReportFolio"
+                                        }
+                                      ]
+                                    },
+                                    "component": "arches_modular_reports/ResourceReport/components/ReportSection"
+                                  },
+                                  {
+                                    "config": {
+                                      "icon": "pi pi-box",
+                                      "label": {
+                                        "de": "Composition",
+                                        "en": "Composition",
+                                        "fr": "Composition",
+                                        "pt": "Composition"
+                                      },
+                                      "components": [
+                                        {
+                                          "config": {
+                                            "nodegroup_alias": "mixture"
+                                          },
+                                          "component": "arches_modular_reports/ResourceReport/components/ReportFolio"
+                                        }
+                                      ]
+                                    },
+                                    "component": "arches_modular_reports/ResourceReport/components/ReportSection"
+                                  }
+                                ]
+                              },
+                              "component": "arches_modular_reports/ResourceReport/components/ReportStack"
+                            },
+                            {
+                              "config": {
+                                "label": {
+                                  "de": "Chemical",
+                                  "en": "Chemical",
+                                  "fr": "Chemical",
+                                  "pt": "Chemical"
+                                },
+                                "components": [
+                                  {
+                                    "config": {
+                                      "icon": "pi pi-flask",
+                                      "label": {
+                                        "de": "Chemical Information",
+                                        "en": "Chemical Information",
+                                        "fr": "Chemical Information",
+                                        "pt": "Chemical Information"
+                                      },
+                                      "components": [
+                                        {
+                                          "config": {
+                                            "nodegroup_alias": "chemical_material"
+                                          },
+                                          "component": "arches_modular_reports/ResourceReport/components/ReportFolio"
+                                        }
+                                      ]
+                                    },
+                                    "component": "arches_modular_reports/ResourceReport/components/ReportSection"
+                                  },
+                                  {
+                                    "config": {
+                                      "icon": "pi pi-table",
+                                      "label": {
+                                        "de": "Elements Found",
+                                        "en": "Elements Found",
+                                        "fr": "Elements Found",
+                                        "pt": "Elements Found"
+                                      },
+                                      "components": [
+                                        {
+                                          "config": {
+                                            "nodegroup_alias": "elements_found"
+                                          },
+                                          "component": "arches_modular_reports/ResourceReport/components/ReportFolio"
+                                        }
+                                      ]
+                                    },
+                                    "component": "arches_modular_reports/ResourceReport/components/ReportSection"
+                                  }
+                                ]
+                              },
+                              "component": "arches_modular_reports/ResourceReport/components/ReportStack"
+                            },
+                            {
+                              "config": {
+                                "label": {
+                                  "de": "Provenance",
+                                  "en": "Provenance",
+                                  "fr": "Provenance",
+                                  "pt": "Provenance"
+                                },
+                                "components": [
+                                  {
+                                    "config": {
+                                      "icon": "pi pi-cog",
+                                      "label": {
+                                        "de": "Production",
+                                        "en": "Production",
+                                        "fr": "Production",
+                                        "pt": "Production"
+                                      },
+                                      "components": [
+                                        {
+                                          "config": {
+                                            "node_alias": "production_location_geo",
+                                            "nodegroup_alias": "production"
+                                          },
+                                          "component": "arches_modular_reports/ResourceReport/components/MapFolio"
+                                        }
+                                      ]
+                                    },
+                                    "component": "arches_modular_reports/ResourceReport/components/ReportSection"
+                                  },
+                                  {
+                                    "config": {
+                                      "icon": "pi pi-truck",
+                                      "label": {
+                                        "de": "Acquisition & Transfer",
+                                        "en": "Acquisition & Transfer",
+                                        "fr": "Acquisition & Transfer",
+                                        "pt": "Acquisition & Transfer"
+                                      },
+                                      "components": [
+                                        {
+                                          "config": {
+                                            "nodegroup_alias": "acquisition"
+                                          },
+                                          "component": "arches_modular_reports/ResourceReport/components/ReportFolio"
+                                        },
+                                        {
+                                          "config": {
+                                            "nodegroup_alias": "removal_from_object_n1"
+                                          },
+                                          "component": "arches_modular_reports/ResourceReport/components/ReportFolio"
+                                        }
+                                      ]
+                                    },
+                                    "component": "arches_modular_reports/ResourceReport/components/ReportSection"
+                                  },
+                                  {
+                                    "config": {
+                                      "icon": "pi pi-map-marker",
+                                      "label": {
+                                        "de": "Location & Ownership",
+                                        "en": "Location & Ownership",
+                                        "fr": "Location & Ownership",
+                                        "pt": "Location & Ownership"
+                                      },
+                                      "components": [
+                                        {
+                                          "config": {
+                                            "nodegroup_alias": "current_location"
+                                          },
+                                          "component": "arches_modular_reports/ResourceReport/components/FieldFolio"
+                                        },
+                                        {
+                                          "config": {
+                                            "nodegroup_alias": "current_owner"
+                                          },
+                                          "component": "arches_modular_reports/ResourceReport/components/FieldFolio"
+                                        },
+                                        {
+                                          "config": {
+                                            "nodegroup_alias": "part_of"
+                                          },
+                                          "component": "arches_modular_reports/ResourceReport/components/FieldFolio"
+                                        },
+                                        {
+                                          "config": {
+                                            "nodegroup_alias": "member_of"
+                                          },
+                                          "component": "arches_modular_reports/ResourceReport/components/FieldFolio"
+                                        }
+                                      ]
+                                    },
+                                    "component": "arches_modular_reports/ResourceReport/components/ReportSection"
+                                  }
+                                ]
+                              },
+                              "component": "arches_modular_reports/ResourceReport/components/ReportStack"
+                            },
+                            {
+                              "config": {
+                                "label": {
+                                  "de": "Safety",
+                                  "en": "Safety",
+                                  "fr": "Safety",
+                                  "pt": "Safety"
+                                },
+                                "components": [
+                                  {
+                                    "config": {
+                                      "icon": "pi pi-shield",
+                                      "label": {
+                                        "de": "Safety Classification",
+                                        "en": "Safety Classification",
+                                        "fr": "Safety Classification",
+                                        "pt": "Safety Classification"
+                                      },
+                                      "components": [
+                                        {
+                                          "config": {
+                                            "nodegroup_alias": "safety_classification"
+                                          },
+                                          "component": "arches_modular_reports/ResourceReport/components/ReportFolio"
+                                        }
+                                      ]
+                                    },
+                                    "component": "arches_modular_reports/ResourceReport/components/ReportSection"
+                                  }
+                                ]
+                              },
+                              "component": "arches_modular_reports/ResourceReport/components/ReportStack"
+                            },
+                            {
+                              "config": {
+                                "label": {
+                                  "de": "Documents",
+                                  "en": "Documents",
+                                  "fr": "Documents",
+                                  "pt": "Documents"
+                                },
+                                "components": [
+                                  {
+                                    "config": {
+                                      "icon": "pi pi-globe",
+                                      "label": {
+                                        "de": "Digital References",
+                                        "en": "Digital References",
+                                        "fr": "Digital References",
+                                        "pt": "Digital References"
+                                      },
+                                      "components": [
+                                        {
+                                          "config": {
+                                            "nodegroup_alias": "digital_reference"
+                                          },
+                                          "component": "arches_modular_reports/ResourceReport/components/ReportFolio"
+                                        }
+                                      ]
+                                    },
+                                    "component": "arches_modular_reports/ResourceReport/components/ReportSection"
+                                  }
+                                ]
+                              },
+                              "component": "arches_modular_reports/ResourceReport/components/ReportStack"
                             }
-                        ]
+                          ]
+                        },
+                        "component": "arches_modular_reports/ResourceReport/components/ReportTabs"
+                      }
+                    ],
+                    "aside": [
+                      {
+                        "config": {},
+                        "component": "arches_modular_reports/ResourceReport/components/EditorPanel/EditorPanel"
+                      },
+                      {
+                        "config": {
+                          "panels": [
+                            {
+                              "config": {
+                                "icon": "pi pi-clock",
+                                "label": {
+                                  "de": "Edit History",
+                                  "en": "Edit History",
+                                  "fr": "Edit History",
+                                  "pt": "Edit History"
+                                },
+                                "requires_edit": true
+                              },
+                              "component": "arches_modular_reports/ResourceReport/components/EditHistoryPanel"
+                            },
+                            {
+                              "config": {
+                                "icon": "pi pi-image",
+                                "label": {
+                                  "de": "Images",
+                                  "en": "Images",
+                                  "fr": "Images",
+                                  "pt": "Images"
+                                },
+                                "images": [
+                                  {
+                                    "node": "file",
+                                    "model": "digital_resources"
+                                  }
+                                ]
+                              },
+                              "component": "arches_modular_reports/ResourceReport/components/ImagesPanel"
+                            },
+                            {
+                              "config": {
+                                "icon": "pi pi-link",
+                                "label": {
+                                  "de": "Related Resources",
+                                  "en": "Related Resources",
+                                  "fr": "Ressources associ\u00e9es",
+                                  "pt": "Related Resources"
+                                },
+                                "graphs": [
+                                  "collection_or_set",
+                                  "digital_resources",
+                                  "group",
+                                  "person",
+                                  "physical_thing",
+                                  "place",
+                                  "reference_and_sample_collection_item",
+                                  "textual_work"
+                                ]
+                              },
+                              "component": "arches_modular_reports/ResourceReport/components/RelatedResourcesPanel"
+                            },
+                            {
+                              "config": {
+                                "icon": "pi pi-cog",
+                                "label": {
+                                  "de": "Manage",
+                                  "en": "Manage",
+                                  "fr": "Gestion",
+                                  "pt": "Manage"
+                                }
+                              },
+                              "component": "arches_modular_reports/ResourceReport/components/ManagePanel"
+                            }
+                          ],
+                          "components": [
+                            {
+                              "config": {
+                                "summary": []
+                              },
+                              "component": "arches_modular_reports/ResourceReport/components/KeyDataSummary"
+                            }
+                          ]
+                        },
+                        "component": "arches_modular_reports/ResourceReport/components/ReportDrawer"
+                      }
+                    ],
+                    "label": {
+                      "de": "Report",
+                      "en": "Report",
+                      "fr": "Signaler",
+                      "pt": "Report"
                     },
-                    {
-                        "name": "Analysis",
-                        "components": [
-                            {
-                                "component": "arches_rascolls/ModularReport/components/LinkedSections",
-                                "config": {
-                                    "sections": [
-                                        {
-                                            "name": "Chemical Analysis",
-                                            "components": [
-                                                {
-                                                    "component": "arches_rascolls/ModularReport/components/DataSection",
-                                                    "config": {
-                                                        "nodegroup_alias": "chemical_material_name",
-                                                        "node_aliases": [
-                                                            "chemical_material_name_content",
-                                                            "chemical_material_name_type"
-                                                        ],
-                                                        "custom_labels": {
-                                                            "chemical_material_name_content": "Chemical Formula"
-                                                        },
-                                                        "custom_card_name": "Chemical Name",
-                                                        "has_write_permission": true,
-                                                        "filters": [],
-                                                        "empty_state_icon": "pi pi-chart-bar",
-                                                        "empty_state_message": "Record chemical analysis data — including chemical material types, identifiers, and supporting data assignments."
-                                                    }
-                                                },
-                                                                                                {
-                                                    "component": "arches_rascolls/ModularReport/components/DataSection",
-                                                    "config": {
-                                                        "nodegroup_alias": "chemical_material_identifier",
-                                                        "node_aliases": [
-                                                            "chemical_material_identifier_content",
-                                                            "chemical_material_identifier_type"
-                                                        ],
-                                                        "custom_labels": {
-                                                            "chemical_material_identifier_content": "CAS Number",
-                                                            "chemical_material_identifier_type": "Identifier Type"
-                                                        },
-                                                        "custom_card_name": "Chemical Identifier",
-                                                        "has_write_permission": true,
-                                                        "filters": [],
-                                                        "empty_state_icon": "pi pi-chart-bar",
-                                                        "empty_state_message": "Record chemical analysis data — including chemical material types, identifiers, and supporting data assignments."
-                                                    }
-                                                },
-                                                {
-                                                    "component": "arches_rascolls/ModularReport/components/DataSection",
-                                                    "config": {
-                                                        "nodegroup_alias": "material_data_assignment_name",
-                                                        "node_aliases": [
-                                                            "material_data_assignment_name_content"
-                                                        ],
-                                                        "custom_labels": {
-                                                            "material_data_assignment_name_content": "Chemical Name"
-                                                        },
-                                                        "custom_card_name": "Chemical Name",
-                                                        "has_write_permission": true,
-                                                        "filters": [],
-                                                        "empty_state_icon": "pi pi-chart-bar",
-                                                        "empty_state_message": "Record the chemical name of the material."
-                                                    }
-                                                },
-                                                {
-                                                    "component": "arches_rascolls/ModularReport/components/DataSection",
-                                                    "config": {
-                                                        "nodegroup_alias": "elements_found",
-                                                        "node_aliases": [
-                                                            "elements_found",
-                                                            "elements_found_data_assignment_classification",
-                                                            "elements_found_data_assignment_assigner"
-                                                        ],
-                                                        "custom_labels": {
-                                                            "elements_found": "Elements",
-                                                            "elements_found_data_assignment_classification": "Analysis Type",
-                                                            "elements_found_data_assignment_assigner": "Assigned By"
-                                                        },
-                                                        "custom_card_name": "Elementals Found",
-                                                        "has_write_permission": true,
-                                                        "filters": [],
-                                                        "empty_state_icon": "pi pi-search",
-                                                        "empty_state_message": "Record elements detected through chemical or spectrometric analysis of this item, along with the analysis event and supporting references."
-                                                    }
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Chemical & Safety",
-                        "components": [
-                            {
-                                "component": "arches_rascolls/ModularReport/components/LinkedSections",
-                                "config": {
-                                    "sections": [
-                                        {
-                                            "name": "Safety",
-                                            "components": [
-                                                {
-                                                    "component": "arches_rascolls/ModularReport/components/DataSection",
-                                                    "config": {
-                                                        "nodegroup_alias": "nfpa_safety_classification",
-                                                        "node_aliases": [
-                                                            "nfpa_safety_classifcation_type",
-                                                            "nfpa_safety_classification_classification"
-                                                        ],
-                                                        "custom_labels": {
-                                                            "nfpa_safety_classifcation_type": "NFPA Type",
-                                                            "nfpa_safety_classification_classification": "NFPA Classification"
-                                                        },
-                                                        "custom_card_name": "NFPA Safety Classifications",
-                                                        "has_write_permission": true,
-                                                        "filters": [],
-                                                        "empty_state_icon": "pi pi-shield",
-                                                        "empty_state_message": "NFPA hazard classifications applicable to this item."
-                                                    }
-                                                },
-                                                {
-                                                    "component": "arches_rascolls/ModularReport/components/DataSection",
-                                                    "config": {
-                                                        "nodegroup_alias": "ghs_safety_classification",
-                                                        "node_aliases": [
-                                                            "ghs_safety_classification_type",
-                                                            "ghs_safety_classification_classification"
-                                                        ],
-                                                        "custom_labels": {
-                                                            "ghs_safety_classification_type": "GHS Type",
-                                                            "ghs_safety_classification_classification": "GHS Classification"
-                                                        },
-                                                        "custom_card_name": "GHS Safety Classifications",
-                                                        "has_write_permission": true,
-                                                        "filters": [],
-                                                        "empty_state_icon": "pi pi-shield",
-                                                        "empty_state_message": "Record GHS (Globally Harmonized System)."
-                                                    }
-                                                },
-                                                
-                                                {
-                                                    "component": "arches_rascolls/ModularReport/components/DataSection",
-                                                    "config": {
-                                                        "nodegroup_alias": "safety_classification_statement",
-                                                        "node_aliases": [
-                                                            "safety_classification_statement_content",
-                                                            "safety_classification_statement_type"
-                                                        ],
-                                                        "custom_labels": {},
-                                                        "custom_card_name": "Safety Information Statements",
-                                                        "has_write_permission": true,
-                                                        "filters": [],
-                                                        "empty_state_icon": "pi pi-exclamation-triangle",
-                                                        "empty_state_message": "Add free-text hazard descriptions, handling precautions, or other safety notes for this item."
-                                                    }
-                                                },
-                                                {
-                                                    "component": "arches_rascolls/ModularReport/components/DataSection",
-                                                    "config": {
-                                                        "nodegroup_alias": "safety_classification_reference",
-                                                        "node_aliases": [
-                                                            "safety_classification_source_reference",
-                                                            "safety_classification_source_reference_type"
-                                                        ],
-                                                        "custom_labels": {},
-                                                        "custom_card_name": "Safety Information Documents",
-                                                        "has_write_permission": true,
-                                                        "filters": [],
-                                                        "empty_state_icon": "pi pi-file",
-                                                        "empty_state_message": "Link Safety Data Sheets (SDS), MSDS files, or other official safety documents related to this item."
-                                                    }
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "name": "Composition",
-                                            "components": [
-                                                {
-                                                    "component": "arches_rascolls/ModularReport/components/DataSection",
-                                                    "config": {
-                                                        "nodegroup_alias": "mixture_type",
-                                                        "node_aliases": [
-                                                            "mixture_type"
-                                                        ],
-                                                        "custom_labels": {},
-                                                        "custom_card_name": "Type of Mixture",
-                                                        "has_write_permission": true,
-                                                        "filters": [],
-                                                        "empty_state_icon": "pi pi-sliders-h",
-                                                        "empty_state_message": "If this item is a mixture or composite material, record the type of mixture (e.g., solution, suspension, alloy)."
-                                                    }
-                                                },
-                                                {
-                                                    "component": "arches_rascolls/ModularReport/components/DataSection",
-                                                    "config": {
-                                                        "nodegroup_alias": "has_part",
-                                                        "node_aliases": [
-                                                            "part_name_content",
-                                                            "part_type",
-                                                            "part_removed_from"
-                                                        ],
-                                                        "custom_labels": {
-                                                            "part_name_content": "Name",
-                                                            "part_type": "Type",
-                                                            "part_removed_from": "Removed From"
-                                                        },
-                                                        "custom_card_name": "Mixture Components",
-                                                        "has_write_permission": true,
-                                                        "filters": [],
-                                                        "empty_state_icon": "pi pi-list-check",
-                                                        "empty_state_message": "Record the individual components that make up this mixture, including their materials and proportional dimensions."
-                                                    }
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Full",
-                        "components": [
-                            {
-                                "component": "arches_rascolls/ModularReport/components/LinkedSections",
-                                "config": {
-                                    "sections": [
-                                        {
-                                            "name": "General",
-                                            "components": [
-                                                {
-                                                    "component": "arches_rascolls/ModularReport/components/DataSection",
-                                                    "config": {
-                                                        "nodegroup_alias": "name",
-                                                        "node_aliases": [
-                                                            "name_content",
-                                                            "name_type",
-                                                            "name_language"
-                                                        ],
-                                                        "custom_labels": {},
-                                                        "custom_card_name": "Common & Additional Names",
-                                                        "has_write_permission": true,
-                                                        "filters": [],
-                                                        "empty_state_icon": "pi pi-tag",
-                                                        "empty_state_message": "This resource has no names yet. Add at least a primary name so it can be located in search and citations."
-                                                    }
-                                                },
-                                                {
-                                                    "component": "arches_rascolls/ModularReport/components/DataSection",
-                                                    "config": {
-                                                        "nodegroup_alias": "facet_type",
-                                                        "node_aliases": [
-                                                            "facet_type"
-                                                        ],
-                                                        "custom_labels": {},
-                                                        "custom_card_name": "Item Category",
-                                                        "has_write_permission": true,
-                                                        "filters": [],
-                                                        "empty_state_icon": "pi pi-folder",
-                                                        "empty_state_message": "Record the item category to classify this resource (e.g., sample, reference standard, archive material)."
-                                                    }
-                                                },
-                                                {
-                                                    "component": "arches_rascolls/ModularReport/components/DataSection",
-                                                    "config": {
-                                                        "nodegroup_alias": "object_type",
-                                                        "node_aliases": [
-                                                            "object_type"
-                                                        ],
-                                                        "custom_labels": {},
-                                                        "custom_card_name": "Type of Reference or Sample Collection Item",
-                                                        "has_write_permission": true,
-                                                        "filters": [],
-                                                        "empty_state_icon": "pi pi-list",
-                                                        "empty_state_message": "Assign a type to clarify what kind of reference or sample collection item this represents."
-                                                    }
-                                                },
-                                                {
-                                                    "component": "arches_rascolls/ModularReport/components/DataSection",
-                                                    "config": {
-                                                        "nodegroup_alias": "standard_type",
-                                                        "node_aliases": [
-                                                            "standard_type"
-                                                        ],
-                                                        "custom_labels": {},
-                                                        "custom_card_name": "Type of Standard",
-                                                        "has_write_permission": true,
-                                                        "filters": [],
-                                                        "empty_state_icon": "pi pi-verified",
-                                                        "empty_state_message": "If this item is a reference standard (e.g., NIST, museum reference), record the standard type here."
-                                                    }
-                                                },
-                                                {
-                                                    "component": "arches_rascolls/ModularReport/components/DataSection",
-                                                    "config": {
-                                                        "nodegroup_alias": "attribute_type",
-                                                        "node_aliases": [
-                                                            "attribute_type"
-                                                        ],
-                                                        "custom_labels": {},
-                                                        "custom_card_name": "Attribute Type",
-                                                        "has_write_permission": true,
-                                                        "filters": [],
-                                                        "empty_state_icon": "pi pi-database",
-                                                        "empty_state_message": "Record the attribute type that further qualifies the classification of this item."
-                                                    }
-                                                },
-                                                {
-                                                    "component": "arches_rascolls/ModularReport/components/DataSection",
-                                                    "config": {
-                                                        "nodegroup_alias": "statement",
-                                                        "node_aliases": [
-                                                            "statement_content",
-                                                            "statement_type"
-                                                        ],
-                                                        "custom_labels": {},
-                                                        "custom_card_name": "Statements & Interpretations",
-                                                        "has_write_permission": true,
-                                                        "filters": [],
-                                                        "empty_state_icon": "pi pi-file-edit",
-                                                        "empty_state_message": "Descriptive statements or interpretive notes about this resource (e.g., physical description, condition, remarks) appear here."
-                                                    }
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "name": "Identifiers",
-                                            "components": [
-                                                {
-                                                    "component": "arches_rascolls/ModularReport/components/DataSection",
-                                                    "config": {
-                                                        "nodegroup_alias": "identifier",
-                                                        "node_aliases": [
-                                                            "identifier_content",
-                                                            "identifier_type"
-                                                        ],
-                                                        "custom_labels": {},
-                                                        "custom_card_name": "Identifiers",
-                                                        "has_write_permission": true,
-                                                        "filters": [],
-                                                        "empty_state_icon": "pi pi-hashtag",
-                                                        "empty_state_message": "Add accession numbers, catalog IDs, lot numbers, or other system identifiers for this item."
-                                                    }
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "name": "Physical Properties",
-                                            "components": [
-                                                {
-                                                    "component": "arches_rascolls/ModularReport/components/DataSection",
-                                                    "config": {
-                                                        "nodegroup_alias": "material",
-                                                        "node_aliases": [
-                                                            "material"
-                                                        ],
-                                                        "custom_labels": {},
-                                                        "custom_card_name": "Material(s)",
-                                                        "has_write_permission": true,
-                                                        "filters": [],
-                                                        "empty_state_icon": "pi pi-box",
-                                                        "empty_state_message": "Record the material or substance composition of this item (e.g., pigment, mineral, organic compound)."
-                                                    }
-                                                },
-                                                {
-                                                    "component": "arches_rascolls/ModularReport/components/DataSection",
-                                                    "config": {
-                                                        "nodegroup_alias": "dimension",
-                                                        "node_aliases": [
-                                                            "dimension_type",
-                                                            "dimension_value",
-                                                            "dimension_unit"
-                                                        ],
-                                                        "custom_labels": {},
-                                                        "custom_card_name": "Dimensions",
-                                                        "has_write_permission": true,
-                                                        "filters": [],
-                                                        "empty_state_icon": "pi pi-arrows-alt",
-                                                        "empty_state_message": "Record physical measurements for this item — weight, volume, quantity, or other numeric dimensions with units."
-                                                    }
-                                                },
-                                                {
-                                                    "component": "arches_rascolls/ModularReport/components/DataSection",
-                                                    "config": {
-                                                        "nodegroup_alias": "has_color",
-                                                        "node_aliases": [
-                                                            "color_type",
-                                                            "color_value",
-                                                            "color_unit"
-                                                        ],
-                                                        "custom_labels": {},
-                                                        "custom_card_name": "Color",
-                                                        "has_write_permission": true,
-                                                        "filters": [],
-                                                        "empty_state_icon": "pi pi-palette",
-                                                        "empty_state_message": "Record the color or colorimetric measurements of this item, including any color space values and additional notes."
-                                                    }
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "name": "Provenance & Collection",
-                                            "components": [
-                                                {
-                                                    "component": "arches_rascolls/ModularReport/components/DataSection",
-                                                    "config": {
-                                                        "nodegroup_alias": "part_of",
-                                                        "node_aliases": [
-                                                            "part_of"
-                                                        ],
-                                                        "custom_labels": {},
-                                                        "custom_card_name": "Parent Reference or Sample Collection Item",
-                                                        "has_write_permission": true,
-                                                        "filters": [],
-                                                        "empty_state_icon": "pi pi-sitemap",
-                                                        "empty_state_message": "If this item is a sub-sample or portion derived from a larger specimen, link the parent reference or sample collection item here."
-                                                    }
-                                                },
-                                                {
-                                                    "component": "arches_rascolls/ModularReport/components/DataSection",
-                                                    "config": {
-                                                        "nodegroup_alias": "member_of",
-                                                        "node_aliases": [
-                                                            "member_of"
-                                                        ],
-                                                        "custom_labels": {},
-                                                        "custom_card_name": "Part of Collection or Set",
-                                                        "has_write_permission": true,
-                                                        "filters": [],
-                                                        "empty_state_icon": "pi pi-objects-column",
-                                                        "empty_state_message": "Link the collection or set that this item belongs to."
-                                                    }
-                                                },
-                                                {
-                                                    "component": "arches_rascolls/ModularReport/components/DataSection",
-                                                    "config": {
-                                                        "nodegroup_alias": "current_owner",
-                                                        "node_aliases": [
-                                                            "current_owner"
-                                                        ],
-                                                        "custom_labels": {},
-                                                        "custom_card_name": "Current Owner",
-                                                        "has_write_permission": true,
-                                                        "filters": [],
-                                                        "empty_state_icon": "pi pi-building",
-                                                        "empty_state_message": "Record the institution or individual who currently holds legal ownership of this item."
-                                                    }
-                                                },
-                                                {
-                                                    "component": "arches_rascolls/ModularReport/components/DataSection",
-                                                    "config": {
-                                                        "nodegroup_alias": "acquisition",
-                                                        "node_aliases": [
-                                                            "acquisition_type",
-                                                            "acquisition_carried_out_by",
-                                                            "acquisition_transferred_title_from",
-                                                            "acquisition_transferred_title_to"
-                                                        ],
-                                                        "custom_labels": {},
-                                                        "custom_card_name": "Acquisition",
-                                                        "has_write_permission": true,
-                                                        "filters": [],
-                                                        "empty_state_icon": "pi pi-arrow-right-arrow-left",
-                                                        "empty_state_message": "Document how and when this item was acquired — including acquisition type, transferring parties, date, and source references."
-                                                    }
-                                                },
-                                                {
-                                                    "component": "arches_rascolls/ModularReport/components/DataSection",
-                                                    "config": {
-                                                        "nodegroup_alias": "acquisition_timespan",
-                                                        "node_aliases": [
-                                                            "acquisition_timespan_production_time_edtf"
-                                                        ],
-                                                        "custom_labels": {
-                                                            "acquisition_timespan_production_time_edtf": "Date"
-                                                        },
-                                                        "custom_card_name": "Acquisition Date",
-                                                        "has_write_permission": true,
-                                                        "filters": [],
-                                                        "empty_state_icon": "pi pi-calendar",
-                                                        "empty_state_message": "Record the date this item was acquired (EDTF)."
-                                                    }
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "name": "Location",
-                                            "components": [
-                                                {
-                                                    "component": "arches_rascolls/ModularReport/components/DataSection",
-                                                    "config": {
-                                                        "nodegroup_alias": "current_location",
-                                                        "node_aliases": [
-                                                            "current_location"
-                                                        ],
-                                                        "custom_labels": {},
-                                                        "custom_card_name": "Current Location",
-                                                        "has_write_permission": true,
-                                                        "filters": [],
-                                                        "empty_state_icon": "pi pi-map-marker",
-                                                        "empty_state_message": "Record where this item is currently stored or located (e.g., storage room, cabinet, shelf, or external repository)."
-                                                    }
-                                                },
-                                                {
-                                                    "component": "arches_rascolls/ModularReport/components/DataSection",
-                                                    "config": {
-                                                        "nodegroup_alias": "current_location_statement",
-                                                        "node_aliases": [
-                                                            "current_location_statement_content"
-                                                        ],
-                                                        "custom_labels": {
-                                                            "current_location_statement_content": "Description"
-                                                        },
-                                                        "custom_card_name": "Current Location Description",
-                                                        "has_write_permission": true,
-                                                        "filters": [],
-                                                        "empty_state_icon": "pi pi-map-marker",
-                                                        "empty_state_message": "Describe the current storage location, such as a grid location."
-                                                    }
-                                                },
-                                                {
-                                                    "component": "arches_rascolls/ModularReport/components/DataSection",
-                                                    "config": {
-                                                        "nodegroup_alias": "removal_from_object_n1",
-                                                        "node_aliases": [
-                                                            "removal_from_object_removed_from",
-                                                            "removal_from_object_type",
-                                                            "removal_from_object_time_edtf",
-                                                            "removal_from_object_carried_out_by"
-                                                        ],
-                                                        "custom_labels": {
-                                                            "removal_from_object_removed_from": "Removed From",
-                                                            "removal_from_object_type": "Type",
-                                                            "removal_from_object_time_edtf": "Date",
-                                                            "removal_from_object_carried_out_by": "Carried Out By"
-                                                        },
-                                                        "custom_card_name": "Removal from Object",
-                                                        "has_write_permission": true,
-                                                        "filters": [],
-                                                        "empty_state_icon": "pi pi-sign-out",
-                                                        "empty_state_message": "If this is a sample removed from a larger object, record the sampling event — including the source object, technique, carried-out-by, and date."
-                                                    }
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "name": "Production Event",
-                                            "components": [
-                                                {
-                                                    "component": "arches_rascolls/ModularReport/components/DataSection",
-                                                    "config": {
-                                                        "nodegroup_alias": "production",
-                                                        "node_aliases": [
-                                                            "production_type",
-                                                            "production_carried_out_by",
-                                                            "production_location",
-                                                            "production_technique",
-                                                            "production_caused_by"
-                                                        ],
-                                                        "custom_labels": {},
-                                                        "custom_card_name": "Production Event",
-                                                        "has_write_permission": true,
-                                                        "filters": [],
-                                                        "empty_state_icon": "pi pi-cog",
-                                                        "empty_state_message": "Record when and by whom this item was made, synthesized, collected, or otherwise produced — including timespan, location, and causative factors."
-                                                    }
-                                                },
-                                                {
-                                                    "component": "arches_rascolls/ModularReport/components/DataSection",
-                                                    "config": {
-                                                        "nodegroup_alias": "production_time",
-                                                        "node_aliases": [
-                                                            "production_time_edtf"
-                                                        ],
-                                                        "custom_labels": {
-                                                            "production_time_edtf": "Date"
-                                                        },
-                                                        "custom_card_name": "Production Date",
-                                                        "has_write_permission": true,
-                                                        "filters": [],
-                                                        "empty_state_icon": "pi pi-calendar",
-                                                        "empty_state_message": "Record the origination date of this item (EDTF)."
-                                                    }
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "name": "Digital References",
-                                            "components": [
-                                                {
-                                                    "component": "arches_rascolls/ModularReport/components/DataSection",
-                                                    "config": {
-                                                        "nodegroup_alias": "digital_reference",
-                                                        "node_aliases": [
-                                                            "digital_source",
-                                                            "digital_reference_type"
-                                                        ],
-                                                        "custom_labels": {},
-                                                        "custom_card_name": "Digital References",
-                                                        "has_write_permission": true,
-                                                        "filters": [],
-                                                        "empty_state_icon": "pi pi-link",
-                                                        "empty_state_message": "Link to images, documents, data files, or other digital resources associated with this item."
-                                                    }
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                }
-                            }
-                        ]
+                    "description": {
+                      "de": "A curated summary of this resource's data",
+                      "en": "A curated summary of this resource's data",
+                      "fr": "A curated summary of this resource's data",
+                      "pt": "A curated summary of this resource's data"
                     }
-                ]
-            }
-        }
-    ]
+                  },
+                  "component": "arches_modular_reports/ResourceReport/components/SplitPane"
+                },
+                {
+                  "config": {
+                    "main": [
+                      {
+                        "config": {},
+                        "component": "arches_modular_reports/ResourceReport/components/DataBrowser/DataBrowser"
+                      }
+                    ],
+                    "aside": [
+                      {
+                        "config": {},
+                        "component": "arches_modular_reports/ResourceReport/components/EditorPanel/EditorPanel"
+                      },
+                      {
+                        "config": {
+                          "icon": "pi pi-pencil",
+                          "message": {
+                            "de": "Select an entry in the data browser to begin editing.",
+                            "en": "Select an entry in the data browser to begin editing.",
+                            "fr": "Select an entry in the data browser to begin editing.",
+                            "pt": "Select an entry in the data browser to begin editing."
+                          }
+                        },
+                        "component": "arches_modular_reports/ResourceReport/components/ReportPlaceholder"
+                      }
+                    ],
+                    "label": {
+                      "de": "Data",
+                      "en": "Data",
+                      "fr": "Data",
+                      "pt": "Data"
+                    },
+                    "description": {
+                      "de": "Browse and edit every field recorded on this resource",
+                      "en": "Browse and edit every field recorded on this resource",
+                      "fr": "Browse and edit every field recorded on this resource",
+                      "pt": "Browse and edit every field recorded on this resource"
+                    },
+                    "requires_edit": true
+                  },
+                  "component": "arches_modular_reports/ResourceReport/components/SplitPane"
+                },
+                {
+                  "config": {
+                    "icon": "pi pi-sitemap",
+                    "label": {
+                      "de": "Graph",
+                      "en": "Graph",
+                      "fr": "Graphe",
+                      "pt": "Graph"
+                    },
+                    "message": {
+                      "de": "Graph view \u2014 coming soon",
+                      "en": "Graph view \u2014 coming soon",
+                      "fr": "Graph view \u2014 coming soon",
+                      "pt": "Graph view \u2014 coming soon"
+                    },
+                    "description": {
+                      "de": "A visual overview of how this resource connects to its data",
+                      "en": "A visual overview of how this resource connects to its data",
+                      "fr": "A visual overview of how this resource connects to its data",
+                      "pt": "A visual overview of how this resource connects to its data"
+                    }
+                  },
+                  "component": "arches_modular_reports/ResourceReport/components/ReportPlaceholder"
+                }
+              ]
+            },
+            "component": "arches_modular_reports/ResourceReport/components/WorkspaceTabs"
+          },
+          {
+            "config": {},
+            "component": "arches_modular_reports/ResourceReport/components/EditListTray"
+          }
+        ]
+      },
+      "component": "arches_modular_reports/ResourceReport/ResourceReport"
+    }
+  ]
 }
