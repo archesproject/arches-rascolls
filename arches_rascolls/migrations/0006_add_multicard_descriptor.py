@@ -20,25 +20,21 @@ def add_multicard_resource_descriptor(apps, schema_editor):
     Function = apps.get_model("models", "Function")
     primary_descriptor_fn = Function.objects.get(pk=ORIGINAL_DESCRIPTOR_FUNCTION_PK)
 
-    # create multi-card function
-    Function.objects.create(
+    # Arches core (models 12779) now ships this function with the same pk.
+    Function.objects.get_or_create(
         pk=MULTICARD_DESCRIPTOR_FUNCTION_PK,
-        modulename="multicard_resource_descriptor.py",
-        classname="MulticardResourceDescriptor",
-        functiontype="primarydescriptors",
-        name=_("Multi-card Resource Descriptor"),
-        description=_("Configure the name, description, and map popup of a resource"),
-        defaultconfig=primary_descriptor_fn.defaultconfig,
-        component="views/components/functions/multicard-resource-descriptor",
+        defaults={
+            "modulename": "multicard_resource_descriptor.py",
+            "classname": "MulticardResourceDescriptor",
+            "functiontype": "primarydescriptors",
+            "name": _("Multi-card Resource Descriptor"),
+            "description": _(
+                "Configure the name, description, and map popup of a resource"
+            ),
+            "defaultconfig": primary_descriptor_fn.defaultconfig,
+            "component": "views/components/functions/multicard-resource-descriptor",
+        },
     )
-
-
-def remove_multicard_resource_descriptor(apps, schema_editor):
-    Function = apps.get_model("models", "Function")
-
-    multi_card_fn = Function.objects.get(pk=MULTICARD_DESCRIPTOR_FUNCTION_PK)
-
-    multi_card_fn.delete()
 
 
 class Migration(migrations.Migration):
@@ -49,6 +45,7 @@ class Migration(migrations.Migration):
     operations = [
         migrations.RunPython(
             add_multicard_resource_descriptor,
-            remove_multicard_resource_descriptor,
+            # Function is owned by arches core; don't delete on reverse.
+            migrations.RunPython.noop,
         )
     ]
