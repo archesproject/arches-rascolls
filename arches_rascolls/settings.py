@@ -6,6 +6,7 @@ import os
 import inspect
 import semantic_version
 from datetime import datetime, timedelta
+from django.core.exceptions import ImproperlyConfigured
 from django.utils.translation import gettext_lazy as _
 from django.utils.crypto import get_random_string
 
@@ -29,6 +30,17 @@ def get_optional_env_variable(var_name, default=None) -> str:
         return os.environ[var_name]
     except KeyError:
         return default
+
+
+def get_int_env_variable(var_name, default, minimum=0) -> int:
+    raw_value = get_optional_env_variable(var_name, str(default))
+    try:
+        value = int(raw_value)
+    except ValueError:
+        raise ImproperlyConfigured(f"{var_name} must be an integer.")
+    if value < minimum:
+        raise ImproperlyConfigured(f"{var_name} must be >= {minimum}.")
+    return value
 
 
 APP_NAME = "arches_rascolls"
@@ -277,15 +289,39 @@ LOAD_PACKAGE_ONTOLOGIES = True
 # Make sure to use a trailing slash
 ARCHES_NAMESPACE_FOR_DATA_EXPORT = "http://localhost:8000/"
 
+# Pool is per process and opens lazily, but must be closed before any fork
+# (see celery.py; gunicorn --preload needs an equivalent pre-fork close). Budget:
+# (gunicorn workers + celery processes) * DB_POOL_MAX_SIZE <= max_connections.
+# Pool requires CONN_MAX_AGE = 0. Threads beyond max_size wait DB_POOL_TIMEOUT s.
+DB_POOL_ENABLED = get_optional_env_variable("ARCHES_DB_POOL", "True").lower() not in (
+    "false",
+    "0",
+    "no",
+    "off",
+)
+DB_POOL_MIN_SIZE = get_int_env_variable("ARCHES_DB_POOL_MIN_SIZE", 2)
+DB_POOL_MAX_SIZE = get_int_env_variable("ARCHES_DB_POOL_MAX_SIZE", 10, minimum=1)
+DB_POOL_TIMEOUT = get_int_env_variable("ARCHES_DB_POOL_TIMEOUT", 30, minimum=1)
+if DB_POOL_MIN_SIZE > DB_POOL_MAX_SIZE:
+    raise ImproperlyConfigured(
+        "ARCHES_DB_POOL_MIN_SIZE must not exceed ARCHES_DB_POOL_MAX_SIZE."
+    )
+
+_db_options = {"options": "-c cursor_tuple_fraction=1"}
+if DB_POOL_ENABLED:
+    _db_options["pool"] = {
+        "min_size": DB_POOL_MIN_SIZE,
+        "max_size": DB_POOL_MAX_SIZE,
+        "timeout": DB_POOL_TIMEOUT,
+    }
+
 DATABASES = {
     "default": {
         "ATOMIC_REQUESTS": False,
         "AUTOCOMMIT": True,
         "CONN_MAX_AGE": 0,
         "ENGINE": "django.contrib.gis.db.backends.postgis",
-        "OPTIONS": {
-            "options": "-c cursor_tuple_fraction=1",
-        },
+        "OPTIONS": _db_options,
         "HOST": DB_HOST,
         "NAME": DB_NAME,
         "PASSWORD": DB_PASSWORD,
@@ -557,7 +593,7 @@ CELERY_BEAT_SCHEDULE = {
 # This might be necessary if the worker pool is regulary fully active, with no idle workers, or if
 # you need to run the celery task using solo pool (e.g. on Windows). You may need to provide another
 # way of monitoring celery so you can detect the background task not being available.
-CELERY_CHECK_ONLY_INSPECT_BROKER = False
+CELERY_CHECK_ONLY_INSPECT_BROKER = True
 
 CANTALOUPE_DIR = os.path.join(ROOT_DIR, UPLOADED_FILES_DIR)
 CANTALOUPE_HTTP_ENDPOINT = "http://localhost:8182/"
