@@ -232,7 +232,7 @@ ELASTICSEARCH_PREFIX = get_optional_env_variable("ARCHES_ES_INDEX_PREFIX", APP_N
 REFERENCES_INDEX_NAME = "references"
 ELASTICSEARCH_CUSTOM_INDEXES = [
     {
-        "module": "arches_controlled_lists.search_indexes.reference_index.ReferenceIndex",
+        "module": "arches.extensions.controlled_lists.search_indexes.reference_index.ReferenceIndex",
         "name": REFERENCES_INDEX_NAME,
         "should_update_asynchronously": True,
     }
@@ -254,12 +254,12 @@ TERM_SEARCH_TYPES = [
         "type": "reference",
         "label": _("References"),
         "key": REFERENCES_INDEX_NAME,
-        "module": "arches_controlled_lists.search_indexes.reference_index.ReferenceIndex",
+        "module": "arches.extensions.controlled_lists.search_indexes.reference_index.ReferenceIndex",
     },
 ]
 
 ES_MAPPING_MODIFIER_CLASSES = [
-    "arches_controlled_lists.search.references_es_mapping_modifier.ReferencesEsMappingModifier"
+    "arches.extensions.controlled_lists.search.references_es_mapping_modifier.ReferencesEsMappingModifier"
 ]
 
 LOAD_DEFAULT_ONTOLOGY = False
@@ -360,8 +360,6 @@ INSTALLED_APPS = (
     "django.contrib.staticfiles",
     "django.contrib.gis",
     "django_hosts",
-    "arches.extensions.controlled_lists",
-    "arches",
     "arches.app.models",
     "arches.management",
     "guardian",
@@ -377,6 +375,7 @@ INSTALLED_APPS = (
     "rest_framework",
     "arches.extensions.querysets",
     "arches.extensions.vue_components",
+    "arches.extensions.controlled_lists",
     "arches_search",
     "arches_resource_sets",
     "arches_abac_permissions",
@@ -386,6 +385,7 @@ INSTALLED_APPS = (
 # Placing this last ensures any templates provided by Arches Applications
 # take precedence over core arches templates in arches/app/templates.
 INSTALLED_APPS += (
+    "arches",
     "arches.app",
     "django.contrib.admin",
 )
@@ -482,12 +482,16 @@ LOGGING = {
             "level": "WARNING",
             "propagate": True,
         },
+        "arches_rascolls": {
+            "handlers": ["file", "console"],
+            "level": "WARNING",
+            "propagate": True,
+        },
         "django.request": {
             "handlers": ["file", "console"],
             "level": "WARNING",  # or consider ERROR if this is too noisy
             "propagate": True,
         },
-        # consider adding your own project here if it logs
     },
 }
 
