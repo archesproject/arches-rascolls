@@ -57,3 +57,7 @@ Makefile
 celerybeat-schedule
 celerybeat-schedule-*
 celerybeat.pid
+
+# Packaging
+build/
+dist/
