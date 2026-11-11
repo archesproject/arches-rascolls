@@ -453,7 +453,10 @@ FORCE_SCRIPT_NAME = None
 RESOURCE_IMPORT_LOG = os.path.join(APP_ROOT, "logs", "resource_import.log")
 DEFAULT_RESOURCE_IMPORT_USER = {"username": "admin", "userid": 1}
 
-PERMISSION_FRAMEWORK = "arches_default_deny.ArchesDefaultDenyPermissionFramework"
+PERMISSION_FRAMEWORK = "arches_abac_permission_framework.ArchesAbacPermissionFramework"
+
+# Rules dirs of installed apps are searched automatically; add extra dotted paths here.
+RULE_LOCATIONS = []
 
 LOGGING = {
     "version": 1,
