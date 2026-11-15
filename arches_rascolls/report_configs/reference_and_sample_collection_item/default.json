@@ -9,7 +9,17 @@
               "banner": [
                 {
                   "config": {
-                    "summary": []
+                    "summary": [
+                      {
+                        "node_alias": "current_location_statement_content",
+                        "label": {
+                          "de": "Current Drawer Location",
+                          "en": "Current Drawer Location",
+                          "fr": "Current Drawer Location",
+                          "pt": "Current Drawer Location"
+                        }
+                      }
+                    ]
                   },
                   "component": "arches_modular_reports/ResourceReport/components/ReportHeader"
                 }
@@ -272,7 +282,8 @@
                                         {
                                           "config": {
                                             "node_alias": "production_location_geo",
-                                            "nodegroup_alias": "production"
+                                            "nodegroup_alias": "production",
+                                            "header_note": "Optional. header_tools lists the map header panels to show in the report: basemap, overlays, legend, settings. Omit it to show only basemap; use [] for none. header_actions lists the header buttons for editors: edit, delete (delete turns into Undo delete once used). Omit it to show both; use [] for none."
                                           },
                                           "component": "arches_modular_reports/ResourceReport/components/MapFolio"
                                         }
@@ -496,7 +507,38 @@
                           "components": [
                             {
                               "config": {
-                                "summary": []
+                                "summary": [
+                                  {
+                                    "label": {
+                                      "en": "Chemical Formula CAS Registry Number"
+                                    },
+                                    "node_alias": "chemical_material_identifier_content"
+                                  },
+                                  {
+                                    "label": {
+                                      "en": "Chemical Formula or Name"
+                                    },
+                                    "node_alias": "chemical_material_name_content"
+                                  },
+                                  {
+                                    "label": {
+                                      "en": "Place of Creation"
+                                    },
+                                    "node_alias": "production_location"
+                                  },
+                                  {
+                                    "label": {
+                                      "en": "NFPA Safety Classification"
+                                    },
+                                    "node_alias": "nfpa_safety_classifcation_type"
+                                  },
+                                  {
+                                    "label": {
+                                      "en": "GHS Safety Classification"
+                                    },
+                                    "node_alias": "ghs_safety_classification_type"
+                                  }
+                                ]
                               },
                               "component": "arches_modular_reports/ResourceReport/components/KeyDataSummary"
                             }
@@ -511,12 +553,13 @@
                       "fr": "Signaler",
                       "pt": "Report"
                     },
-                    "description": {
-                      "de": "A curated summary of this resource's data",
-                      "en": "A curated summary of this resource's data",
-                      "fr": "A curated summary of this resource's data",
-                      "pt": "A curated summary of this resource's data"
-                    }
+                    "description_note": "Optional. Omit description, or leave it blank in every language, to hide the caption under the workspace tab strip.",
+                    "aside_footer": [
+                      {
+                        "config": {},
+                        "component": "arches_modular_reports/ResourceReport/components/EditListTray"
+                      }
+                    ]
                   },
                   "component": "arches_modular_reports/ResourceReport/components/SplitPane"
                 },
@@ -534,16 +577,8 @@
                         "component": "arches_modular_reports/ResourceReport/components/EditorPanel/EditorPanel"
                       },
                       {
-                        "config": {
-                          "icon": "pi pi-pencil",
-                          "message": {
-                            "de": "Select an entry in the data browser to begin editing.",
-                            "en": "Select an entry in the data browser to begin editing.",
-                            "fr": "Select an entry in the data browser to begin editing.",
-                            "pt": "Select an entry in the data browser to begin editing."
-                          }
-                        },
-                        "component": "arches_modular_reports/ResourceReport/components/ReportPlaceholder"
+                        "config": {},
+                        "component": "arches_modular_reports/ResourceReport/components/RecordSummaryPanel"
                       }
                     ],
                     "label": {
@@ -552,13 +587,16 @@
                       "fr": "Data",
                       "pt": "Data"
                     },
-                    "description": {
-                      "de": "Browse and edit every field recorded on this resource",
-                      "en": "Browse and edit every field recorded on this resource",
-                      "fr": "Browse and edit every field recorded on this resource",
-                      "pt": "Browse and edit every field recorded on this resource"
-                    },
-                    "requires_edit": true
+                    "description_note": "Optional. Omit description, or leave it blank in every language, to hide the caption under the workspace tab strip.",
+                    "requires_edit": true,
+                    "aside_size": 60,
+                    "aside_size_note": "Optional. The editor and record summary column's starting share of the width, as a percentage (default 40).",
+                    "aside_footer": [
+                      {
+                        "config": {},
+                        "component": "arches_modular_reports/ResourceReport/components/EditListTray"
+                      }
+                    ]
                   },
                   "component": "arches_modular_reports/ResourceReport/components/SplitPane"
                 },
@@ -577,22 +615,13 @@
                       "fr": "Graph view \u2014 coming soon",
                       "pt": "Graph view \u2014 coming soon"
                     },
-                    "description": {
-                      "de": "A visual overview of how this resource connects to its data",
-                      "en": "A visual overview of how this resource connects to its data",
-                      "fr": "A visual overview of how this resource connects to its data",
-                      "pt": "A visual overview of how this resource connects to its data"
-                    }
+                    "description_note": "Optional. Omit description, or leave it blank in every language, to hide the caption under the workspace tab strip."
                   },
                   "component": "arches_modular_reports/ResourceReport/components/ReportPlaceholder"
                 }
               ]
             },
             "component": "arches_modular_reports/ResourceReport/components/WorkspaceTabs"
-          },
-          {
-            "config": {},
-            "component": "arches_modular_reports/ResourceReport/components/EditListTray"
           }
         ]
       },
