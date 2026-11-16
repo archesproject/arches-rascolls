@@ -171,7 +171,7 @@
                                           "config": {
                                             "node_alias": "production_location_geo",
                                             "nodegroup_alias": "production",
-                                            "header_note": "Optional. header_tools lists the map header panels to show in the report: basemap, overlays, legend, settings. Omit it to show only basemap; use [] for none. header_actions lists the header buttons for editors: edit, delete (delete turns into Undo delete once used). Omit it to show both; use [] for none."
+                                            "header_note": "Optional. header_tools lists the map header panels to show in the report: basemap, overlays, legend, settings. Omit it to show basemap and overlays; use [] for none. header_actions lists the header buttons for editors: edit, delete (delete turns into Undo delete once used). Omit it to show both; use [] for none."
                                           },
                                           "component": "arches_modular_reports/ResourceReport/components/MapFolio"
                                         },
