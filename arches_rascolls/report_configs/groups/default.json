@@ -283,6 +283,7 @@
                       "fr": "Signaler",
                       "pt": "Report"
                     },
+                    "aside_size": 40,
                     "aside_footer": [
                       {
                         "config": {},
@@ -318,7 +319,6 @@
                     },
                     "requires_edit": true,
                     "aside_size": 60,
-                    "aside_size_note": "Optional. The editor and record summary column's starting share of the width, as a percentage (default 40).",
                     "aside_footer": [
                       {
                         "config": {},

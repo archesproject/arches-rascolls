@@ -282,8 +282,7 @@
                                         {
                                           "config": {
                                             "node_alias": "production_location_geo",
-                                            "nodegroup_alias": "production",
-                                            "header_note": "Optional. header_tools lists the map header panels to show in the report: basemap, overlays, legend, settings. Omit it to show basemap and overlays; use [] for none. header_actions lists the header buttons for editors: edit, delete (delete turns into Undo delete once used). Omit it to show both; use [] for none."
+                                            "nodegroup_alias": "production"
                                           },
                                           "component": "arches_modular_reports/ResourceReport/components/MapFolio"
                                         }
@@ -553,7 +552,7 @@
                       "fr": "Signaler",
                       "pt": "Report"
                     },
-                    "description_note": "Optional. Omit description, or leave it blank in every language, to hide the caption under the workspace tab strip.",
+                    "aside_size": 40,
                     "aside_footer": [
                       {
                         "config": {},
@@ -587,10 +586,8 @@
                       "fr": "Data",
                       "pt": "Data"
                     },
-                    "description_note": "Optional. Omit description, or leave it blank in every language, to hide the caption under the workspace tab strip.",
                     "requires_edit": true,
                     "aside_size": 60,
-                    "aside_size_note": "Optional. The editor and record summary column's starting share of the width, as a percentage (default 40).",
                     "aside_footer": [
                       {
                         "config": {},
@@ -614,8 +611,7 @@
                       "en": "Graph view \u2014 coming soon",
                       "fr": "Graph view \u2014 coming soon",
                       "pt": "Graph view \u2014 coming soon"
-                    },
-                    "description_note": "Optional. Omit description, or leave it blank in every language, to hide the caption under the workspace tab strip."
+                    }
                   },
                   "component": "arches_modular_reports/ResourceReport/components/ReportPlaceholder"
                 }

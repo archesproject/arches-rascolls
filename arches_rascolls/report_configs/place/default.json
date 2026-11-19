@@ -111,8 +111,7 @@
                                         {
                                           "config": {
                                             "node_alias": "defined_by",
-                                            "nodegroup_alias": "defined_by",
-                                            "header_note": "Optional. header_tools lists the map header panels to show in the report: basemap, overlays, legend, settings. Omit it to show basemap and overlays; use [] for none. header_actions lists the header buttons for editors: edit, delete (delete turns into Undo delete once used). Omit it to show both; use [] for none."
+                                            "nodegroup_alias": "defined_by"
                                           },
                                           "component": "arches_modular_reports/ResourceReport/components/MapFolio"
                                         },
@@ -305,6 +304,7 @@
                       "fr": "Signaler",
                       "pt": "Report"
                     },
+                    "aside_size": 40,
                     "aside_footer": [
                       {
                         "config": {},
@@ -340,7 +340,6 @@
                     },
                     "requires_edit": true,
                     "aside_size": 60,
-                    "aside_size_note": "Optional. The editor and record summary column's starting share of the width, as a percentage (default 40).",
                     "aside_footer": [
                       {
                         "config": {},
