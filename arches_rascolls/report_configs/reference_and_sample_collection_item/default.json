@@ -13,10 +13,7 @@
                       {
                         "node_alias": "current_location_statement_content",
                         "label": {
-                          "de": "Current Drawer Location",
-                          "en": "Current Drawer Location",
-                          "fr": "Current Drawer Location",
-                          "pt": "Current Drawer Location"
+                          "en": "Current Drawer Location"
                         }
                       }
                     ]
@@ -34,20 +31,15 @@
                             {
                               "config": {
                                 "label": {
-                                  "de": "Overview",
                                   "en": "Overview",
-                                  "fr": "Aper\u00e7u",
-                                  "pt": "Overview"
+                                  "fr": "Aper\u00e7u"
                                 },
                                 "components": [
                                   {
                                     "config": {
                                       "icon": "pi pi-tags",
                                       "label": {
-                                        "de": "Classification",
-                                        "en": "Classification",
-                                        "fr": "Classification",
-                                        "pt": "Classification"
+                                        "en": "Classification"
                                       },
                                       "components": [
                                         {
@@ -82,10 +74,7 @@
                                     "config": {
                                       "icon": "pi pi-id-card",
                                       "label": {
-                                        "de": "Names & Identifiers",
-                                        "en": "Names & Identifiers",
-                                        "fr": "Names & Identifiers",
-                                        "pt": "Names & Identifiers"
+                                        "en": "Names & Identifiers"
                                       },
                                       "components": [
                                         {
@@ -108,10 +97,7 @@
                                     "config": {
                                       "icon": "pi pi-align-left",
                                       "label": {
-                                        "de": "Descriptions & Statements",
-                                        "en": "Descriptions & Statements",
-                                        "fr": "Descriptions & Statements",
-                                        "pt": "Descriptions & Statements"
+                                        "en": "Descriptions & Statements"
                                       },
                                       "components": [
                                         {
@@ -131,20 +117,14 @@
                             {
                               "config": {
                                 "label": {
-                                  "de": "Physical",
-                                  "en": "Physical",
-                                  "fr": "Physical",
-                                  "pt": "Physical"
+                                  "en": "Physical"
                                 },
                                 "components": [
                                   {
                                     "config": {
                                       "icon": "pi pi-palette",
                                       "label": {
-                                        "de": "Materials & Color",
-                                        "en": "Materials & Color",
-                                        "fr": "Materials & Color",
-                                        "pt": "Materials & Color"
+                                        "en": "Materials & Color"
                                       },
                                       "components": [
                                         {
@@ -167,10 +147,7 @@
                                     "config": {
                                       "icon": "pi pi-arrows-h",
                                       "label": {
-                                        "de": "Dimensions",
-                                        "en": "Dimensions",
-                                        "fr": "Dimensions",
-                                        "pt": "Dimensions"
+                                        "en": "Dimensions"
                                       },
                                       "components": [
                                         {
@@ -187,10 +164,7 @@
                                     "config": {
                                       "icon": "pi pi-box",
                                       "label": {
-                                        "de": "Composition",
-                                        "en": "Composition",
-                                        "fr": "Composition",
-                                        "pt": "Composition"
+                                        "en": "Composition"
                                       },
                                       "components": [
                                         {
@@ -210,20 +184,14 @@
                             {
                               "config": {
                                 "label": {
-                                  "de": "Chemical",
-                                  "en": "Chemical",
-                                  "fr": "Chemical",
-                                  "pt": "Chemical"
+                                  "en": "Chemical"
                                 },
                                 "components": [
                                   {
                                     "config": {
                                       "icon": "pi pi-flask",
                                       "label": {
-                                        "de": "Chemical Information",
-                                        "en": "Chemical Information",
-                                        "fr": "Chemical Information",
-                                        "pt": "Chemical Information"
+                                        "en": "Chemical Information"
                                       },
                                       "components": [
                                         {
@@ -240,10 +208,7 @@
                                     "config": {
                                       "icon": "pi pi-table",
                                       "label": {
-                                        "de": "Elements Found",
-                                        "en": "Elements Found",
-                                        "fr": "Elements Found",
-                                        "pt": "Elements Found"
+                                        "en": "Elements Found"
                                       },
                                       "components": [
                                         {
@@ -263,20 +228,14 @@
                             {
                               "config": {
                                 "label": {
-                                  "de": "Provenance",
-                                  "en": "Provenance",
-                                  "fr": "Provenance",
-                                  "pt": "Provenance"
+                                  "en": "Provenance"
                                 },
                                 "components": [
                                   {
                                     "config": {
                                       "icon": "pi pi-cog",
                                       "label": {
-                                        "de": "Production",
-                                        "en": "Production",
-                                        "fr": "Production",
-                                        "pt": "Production"
+                                        "en": "Production"
                                       },
                                       "components": [
                                         {
@@ -294,10 +253,7 @@
                                     "config": {
                                       "icon": "pi pi-truck",
                                       "label": {
-                                        "de": "Acquisition & Transfer",
-                                        "en": "Acquisition & Transfer",
-                                        "fr": "Acquisition & Transfer",
-                                        "pt": "Acquisition & Transfer"
+                                        "en": "Acquisition & Transfer"
                                       },
                                       "components": [
                                         {
@@ -320,10 +276,7 @@
                                     "config": {
                                       "icon": "pi pi-map-marker",
                                       "label": {
-                                        "de": "Location & Ownership",
-                                        "en": "Location & Ownership",
-                                        "fr": "Location & Ownership",
-                                        "pt": "Location & Ownership"
+                                        "en": "Location & Ownership"
                                       },
                                       "components": [
                                         {
@@ -361,20 +314,14 @@
                             {
                               "config": {
                                 "label": {
-                                  "de": "Safety",
-                                  "en": "Safety",
-                                  "fr": "Safety",
-                                  "pt": "Safety"
+                                  "en": "Safety"
                                 },
                                 "components": [
                                   {
                                     "config": {
                                       "icon": "pi pi-shield",
                                       "label": {
-                                        "de": "Safety Classification",
-                                        "en": "Safety Classification",
-                                        "fr": "Safety Classification",
-                                        "pt": "Safety Classification"
+                                        "en": "Safety Classification"
                                       },
                                       "components": [
                                         {
@@ -394,20 +341,14 @@
                             {
                               "config": {
                                 "label": {
-                                  "de": "Documents",
-                                  "en": "Documents",
-                                  "fr": "Documents",
-                                  "pt": "Documents"
+                                  "en": "Documents"
                                 },
                                 "components": [
                                   {
                                     "config": {
                                       "icon": "pi pi-globe",
                                       "label": {
-                                        "de": "Digital References",
-                                        "en": "Digital References",
-                                        "fr": "Digital References",
-                                        "pt": "Digital References"
+                                        "en": "Digital References"
                                       },
                                       "components": [
                                         {
@@ -441,10 +382,7 @@
                               "config": {
                                 "icon": "pi pi-clock",
                                 "label": {
-                                  "de": "Edit History",
-                                  "en": "Edit History",
-                                  "fr": "Edit History",
-                                  "pt": "Edit History"
+                                  "en": "Edit History"
                                 },
                                 "requires_edit": true
                               },
@@ -454,10 +392,7 @@
                               "config": {
                                 "icon": "pi pi-image",
                                 "label": {
-                                  "de": "Images",
-                                  "en": "Images",
-                                  "fr": "Images",
-                                  "pt": "Images"
+                                  "en": "Images"
                                 },
                                 "images": [
                                   {
@@ -472,10 +407,8 @@
                               "config": {
                                 "icon": "pi pi-link",
                                 "label": {
-                                  "de": "Related Resources",
                                   "en": "Related Resources",
-                                  "fr": "Ressources associ\u00e9es",
-                                  "pt": "Related Resources"
+                                  "fr": "Ressources associ\u00e9es"
                                 },
                                 "graphs": [
                                   "collection_or_set",
@@ -494,10 +427,8 @@
                               "config": {
                                 "icon": "pi pi-cog",
                                 "label": {
-                                  "de": "Manage",
                                   "en": "Manage",
-                                  "fr": "Gestion",
-                                  "pt": "Manage"
+                                  "fr": "Gestion"
                                 }
                               },
                               "component": "arches_modular_reports/ResourceReport/components/ManagePanel"
@@ -547,10 +478,8 @@
                       }
                     ],
                     "label": {
-                      "de": "Report",
                       "en": "Report",
-                      "fr": "Signaler",
-                      "pt": "Report"
+                      "fr": "Signaler"
                     },
                     "aside_size": 40,
                     "aside_footer": [
@@ -581,10 +510,7 @@
                       }
                     ],
                     "label": {
-                      "de": "Data",
-                      "en": "Data",
-                      "fr": "Data",
-                      "pt": "Data"
+                      "en": "Data"
                     },
                     "requires_edit": true,
                     "aside_size": 60,
@@ -601,16 +527,11 @@
                   "config": {
                     "icon": "pi pi-sitemap",
                     "label": {
-                      "de": "Graph",
                       "en": "Graph",
-                      "fr": "Graphe",
-                      "pt": "Graph"
+                      "fr": "Graphe"
                     },
                     "message": {
-                      "de": "Graph view \u2014 coming soon",
-                      "en": "Graph view \u2014 coming soon",
-                      "fr": "Graph view \u2014 coming soon",
-                      "pt": "Graph view \u2014 coming soon"
+                      "en": "Graph view \u2014 coming soon"
                     }
                   },
                   "component": "arches_modular_reports/ResourceReport/components/ReportPlaceholder"
