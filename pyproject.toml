@@ -25,10 +25,10 @@ classifiers = [
 ]
 requires-python = ">=3.12"
 dependencies = [
-    "arches>=8.2.0a25,<9.0.0",
+    "arches>=8.2.0a26,<9.0.0",
     "django_csp==3.8",
     "psycopg[pool]>=3.3.6",
-    "arches_modular_reports>=2.1.0a5",
+    "arches_modular_reports>=2.1.0a6",
     "arches_search>=0.1.0a23",
     "arches_resource_sets>=0.1.0a4",
     "arches_abac_permissions>=0.1.0a1",
