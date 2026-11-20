@@ -2,6 +2,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.conf.urls.i18n import i18n_patterns
 from django.urls import include, path, re_path
+from django.views.generic import RedirectView
 from arches_rascolls.views.resource import (
     ModularReportAddResourceView,
     ModularReportUpdateResourceView,
@@ -68,6 +69,12 @@ urlpatterns = [
         "add-resource/<uuid:graphid>",
         ModularReportAddResourceView.as_view(),
         name="add_resource",
+    ),
+    path(
+        "search",
+        RedirectView.as_view(pattern_name="plugins", query_string=True),
+        {"slug": "arches-search"},
+        name="search_home",
     ),
 ]
 
