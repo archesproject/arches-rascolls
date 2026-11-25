@@ -79,13 +79,18 @@
                                       "components": [
                                         {
                                           "config": {
-                                            "nodegroup_alias": "name"
+                                            "nodegroup_alias": "name",
+                                            "primary_node": "name_content",
+                                            "single_line": true,
+                                            "hide_field_labels": true
                                           },
                                           "component": "arches_modular_reports/ResourceReport/components/ReportFolio"
                                         },
                                         {
                                           "config": {
-                                            "nodegroup_alias": "identifier"
+                                            "nodegroup_alias": "identifier",
+                                            "primary_node": "identifier_content",
+                                            "single_line": true
                                           },
                                           "component": "arches_modular_reports/ResourceReport/components/ReportFolio"
                                         }
@@ -135,7 +140,8 @@
                                         },
                                         {
                                           "config": {
-                                            "nodegroup_alias": "has_color"
+                                            "nodegroup_alias": "has_color",
+                                            "page_size": 5
                                           },
                                           "component": "arches_modular_reports/ResourceReport/components/ReportFolio"
                                         }
