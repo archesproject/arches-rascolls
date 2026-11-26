@@ -2,6 +2,10 @@ from pathlib import Path
 
 from django.core.management import call_command
 from django.core.management.base import BaseCommand, CommandError
+from django.db.models import Count
+from django.utils import timezone
+
+from arches.app.models.models import LoadErrors, LoadEvent
 
 SOURCE_FILE_PATTERNS = ("*.xlsx", "*.zip")
 
@@ -50,9 +54,14 @@ class Command(BaseCommand):
             raise CommandError(f"No {patterns} files found in '{data_dir}'.")
 
         subcommand = IMPORTER_SUBCOMMANDS[options["format"]]
+        failed_files = []
         for source_file in source_files:
             self.stdout.write(f"\n>>> etl {subcommand} -s {source_file} -mp --no-index")
+            started = timezone.now()
             call_command("etl", subcommand, "-s", str(source_file), "-mp", "--no-index")
+            # etl does not raise when a load fails validation, so check the load event.
+            if not self.load_succeeded(subcommand, started):
+                failed_files.append(source_file.name)
 
         self.stdout.write("\n>>> resources calculate_descriptors")
         call_command("resources", "calculate_descriptors", "-y")
@@ -60,4 +69,36 @@ class Command(BaseCommand):
         self.stdout.write("\n>>> arches_search reindex_database -mp")
         call_command("arches_search", "reindex_database", "-mp")
 
+        if failed_files:
+            raise CommandError(f"Failed to load: {', '.join(failed_files)}")
+
         self.stdout.write(self.style.SUCCESS("\nDone."))
+
+    def load_succeeded(self, subcommand, started):
+        load_event = (
+            LoadEvent.objects.filter(
+                etl_module__componentname=subcommand, load_start_time__gte=started
+            )
+            .order_by("-load_start_time")
+            .first()
+        )
+        if load_event is None:
+            self.stderr.write("No load event was recorded.")
+            return False
+        if load_event.status == "completed":
+            return True
+
+        self.stderr.write(
+            f"Load {load_event.loadid} {load_event.status}. {load_event.error_message or ''}"
+        )
+        errors = (
+            LoadErrors.objects.filter(load_event=load_event)
+            .values("error", "node__name", "value")
+            .annotate(count=Count("*"))
+            .order_by("-count")
+        )
+        for error in errors:
+            self.stderr.write(
+                f"  {error['count']} x {error['error']} ({error['node__name']}): {error['value']}"
+            )
+        return False
