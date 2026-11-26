@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "label": "Type",
+      "sortable": true,
+      "sortorder": 0,
+      "filterable": true,
+      "node_alias": "object_type"
+    },
+    {
+      "label": "Dimension Type",
+      "sortable": true,
+      "sortorder": 1,
+      "filterable": true,
+      "node_alias": "dimension_type"
+    },
+    {
+      "label": "Unit",
+      "sortable": true,
+      "sortorder": 2,
+      "filterable": true,
+      "node_alias": "dimension_unit"
+    },
+    {
+      "label": "Value",
+      "sortable": true,
+      "sortorder": 3,
+      "filterable": true,
+      "node_alias": "dimension_value"
+    }
+  ]
+}

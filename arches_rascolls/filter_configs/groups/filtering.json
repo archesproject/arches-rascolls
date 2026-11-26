@@ -1,0 +1,18 @@
+{
+  "nodes": [
+    {
+      "label": "Type",
+      "sortable": true,
+      "sortorder": 0,
+      "filterable": true,
+      "node_alias": "type"
+    },
+    {
+      "label": "Professional Activity Type",
+      "sortable": true,
+      "sortorder": 1,
+      "filterable": true,
+      "node_alias": "professional_activity_type"
+    }
+  ]
+}

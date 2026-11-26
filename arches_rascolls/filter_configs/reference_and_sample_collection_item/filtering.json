@@ -1,0 +1,60 @@
+{
+  "nodes": [
+    {
+      "label": "Organizational Category",
+      "sortable": true,
+      "sortorder": 0,
+      "filterable": true,
+      "node_alias": "facet_type"
+    },
+    {
+      "label": "Type",
+      "sortable": true,
+      "sortorder": 1,
+      "filterable": true,
+      "node_alias": "object_type"
+    },
+    {
+      "label": "Standard Type",
+      "sortable": true,
+      "sortorder": 2,
+      "filterable": true,
+      "node_alias": "standard_type"
+    },
+    {
+      "label": "Material(s)",
+      "sortable": true,
+      "sortorder": 3,
+      "filterable": true,
+      "node_alias": "material"
+    },
+    {
+      "label": "Natural or Synthetic",
+      "sortable": true,
+      "sortorder": 4,
+      "filterable": true,
+      "node_alias": "attribute_type"
+    },
+    {
+      "label": "Mixture Type",
+      "sortable": true,
+      "sortorder": 5,
+      "filterable": true,
+      "node_alias": "mixture_type"
+    },
+    {
+      "label": "Color Family",
+      "sortable": true,
+      "sortorder": 6,
+      "filterable": true,
+      "node_alias": "color_type"
+    },
+    {
+      "label": "Element(s) Found",
+      "sortable": true,
+      "sortorder": 10,
+      "filterable": true,
+      "node_alias": "elements_found"
+    }
+  ]
+}

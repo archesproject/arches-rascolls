@@ -1,0 +1,25 @@
+{
+  "nodes": [
+    {
+      "label": "Nationality",
+      "sortable": true,
+      "sortorder": 0,
+      "filterable": true,
+      "node_alias": "nationality"
+    },
+    {
+      "label": "Ethnicity",
+      "sortable": true,
+      "sortorder": 1,
+      "filterable": true,
+      "node_alias": "ethnicity"
+    },
+    {
+      "label": "Professional Activity",
+      "sortable": true,
+      "sortorder": 2,
+      "filterable": true,
+      "node_alias": "profession_activity_type"
+    }
+  ]
+}

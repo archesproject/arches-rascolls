@@ -1,0 +1,25 @@
+{
+  "nodes": [
+    {
+      "label": "Type",
+      "sortable": true,
+      "sortorder": 0,
+      "filterable": true,
+      "node_alias": "type"
+    },
+    {
+      "label": "Language",
+      "sortable": true,
+      "sortorder": 1,
+      "filterable": true,
+      "node_alias": "language"
+    },
+    {
+      "label": "Creation Type",
+      "sortable": true,
+      "sortorder": 2,
+      "filterable": true,
+      "node_alias": "creation_type"
+    }
+  ]
+}
