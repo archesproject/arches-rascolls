@@ -39,6 +39,9 @@ class Command(BaseCommand):
         self.stdout.write("\n>>> report_configs load")
         call_command("report_configs", "load")
 
+        self.stdout.write("\n>>> filter_configs load")
+        call_command("filter_configs", "load")
+
         source_files = sorted(
             path for pattern in SOURCE_FILE_PATTERNS for path in data_dir.glob(pattern)
         )
