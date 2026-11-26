@@ -2,12 +2,14 @@ from pathlib import Path
 
 from django.core.management import call_command
 from django.core.management.base import BaseCommand, CommandError
-from django.db.models import Count
+from django.db.models import Count, Min
 from django.utils import timezone
 
 from arches.app.models.models import LoadErrors, LoadEvent
 
 SOURCE_FILE_PATTERNS = ("*.xlsx", "*.zip")
+
+MAX_REPORTED_ERRORS = 20
 
 IMPORTER_SUBCOMMANDS = {
     "tile-excel": "tile-excel-importer",
@@ -85,20 +87,27 @@ class Command(BaseCommand):
         if load_event is None:
             self.stderr.write("No load event was recorded.")
             return False
-        if load_event.status == "completed":
+        if load_event.successful:
             return True
 
         self.stderr.write(
-            f"Load {load_event.loadid} {load_event.status}. {load_event.error_message or ''}"
+            self.style.ERROR(
+                f"Load {load_event.loadid} did not complete (status: {load_event.status}). "
+                f"{load_event.error_message or ''}"
+            )
         )
         errors = (
             LoadErrors.objects.filter(load_event=load_event)
-            .values("error", "node__name", "value")
-            .annotate(count=Count("*"))
+            .values("error", "node__name", "message")
+            .annotate(count=Count("*"), example_value=Min("value"))
             .order_by("-count")
         )
-        for error in errors:
+        for error in errors[:MAX_REPORTED_ERRORS]:
             self.stderr.write(
-                f"  {error['count']} x {error['error']} ({error['node__name']}): {error['value']}"
+                f"  {error['count']} x {error['error']} ({error['node__name']}): "
+                f"{error['message'] or ''} e.g. {error['example_value']!r}"
             )
+        remaining = errors.count() - MAX_REPORTED_ERRORS
+        if remaining > 0:
+            self.stderr.write(f"  ...and {remaining} more error type(s).")
         return False
